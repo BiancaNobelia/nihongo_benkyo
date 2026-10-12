@@ -10,6 +10,9 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 - 2.378 kanji memiliki contoh kata; 5 karakter langka menampilkan keterangan
   belum ada contoh dan tidak masuk kuis bacaan kata.
 - Pencarian kanji/arti/bacaan, filter level, simpanan, dan status penguasaan.
+- Kanji Mirip: 48 kelompok pilihan berisi 117 kanji, dengan filter kemiripan,
+  pencarian, perbandingan berdampingan, ciri pembeda, dan tips mengingat.
+- Latihan bentuk per kelompok dan tautan pasangan mirip dari detail kanji.
 - Flashcard dengan penilaian mandiri dan pilihan koleksi.
 - Kuis arti, kanji, atau bacaan kata; 5/10/20 soal dan timer opsional.
 - Hasil kuis, progres penguasaan, dan hari belajar di `localStorage`.
@@ -41,6 +44,8 @@ JavaScript memakai ES modules, sehingga halaman perlu disajikan lewat HTTP.
 
 Jalankan `npm test` (Node.js 20+) untuk memeriksa kelengkapan data, pencarian,
 pilihan kuis, validasi progres, tanggal belajar lokal, dan regresi terjemahan.
+Pengujian Kanji Mirip memeriksa rujukan karakter, filter yang mempertahankan
+pasangan beda level, jumlah goresan, dan pilihan latihan setiap kelompok.
 Jalankan `python -m unittest discover -s tests -p "test_*.py"` untuk memastikan
 build menolak data baru atau berubah yang belum ditinjau.
 

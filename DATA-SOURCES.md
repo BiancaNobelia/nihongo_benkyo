@@ -81,6 +81,25 @@ menampilkan keterangan tersebut, dan dilewati dalam kuis bacaan kata.
 
 ## Reproduksi dan pembaruan
 
+### Kelompok Kanji Mirip
+
+`similar-data.js` berisi **48 kelompok pilihan dengan 117 karakter unik**
+dari koleksi yang sama. Kelompok disusun secara editorial berdasarkan bentuk
+visual: goresan tambahan, panjang/posisi garis, atau komponen yang berbeda.
+Ini bukan daftar lengkap seluruh hubungan kemiripan dalam 2.383 kanji.
+Arti, level, bacaan, dan jumlah goresan selalu mengambil data dari katalog
+yang telah ditinjau, sehingga tidak ada salinan arti terpisah.
+
+Petunjuk pembeda menjelaskan bentuk cetak yang ditampilkan; tips merupakan
+alat bantu ingatan, bukan klaim asal-usul karakter. Variasi cetak dan tulisan
+tangan tetap dimungkinkan. Acuan bentuk termasuk
+[Kanjipedia: 未](https://www.kanjipedia.jp/kanji/0006595900) dan
+[pedoman bentuk kanji Badan Urusan Kebudayaan Jepang](https://www.bunka.go.jp/seisaku/kokugo_nihongo/kokugo_shisaku/joyokanjihyo_sakuin/pdf/3-2.pdf),
+yang juga menjelaskan bahwa panjang garis 土/士 sebagai komponen dapat bervariasi.
+Tidak ada gambar atau dataset diagram goresan eksternal yang disalin.
+
+### Membangun katalog
+
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau
 terjemahan ketika pengguna belajar.
 
