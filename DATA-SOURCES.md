@@ -42,11 +42,38 @@ dengan [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org
 
 Perubahan dari sumber: struktur disederhanakan, satu contoh kata kamus dipilih
 per kanji, tambahan contoh dari kanjiapi.dev, arti Indonesia ditambahkan,
-dan 110 kartu lama dipertahankan. Arti Indonesia baru menggunakan terjemahan
-otomatis Google Translate yang disimpan saat penyusunan data, dengan koreksi
-manual terpilih di `data/translation-overrides.json`. Arti Inggris asli tampil
-pada detail sebagai pembanding. Terjemahan belum seluruhnya ditinjau oleh
-pengajar; konteks dan nuansa tetap perlu dirujuk pada kamus.
+dan 110 kartu lama dipertahankan.
+
+## Tinjauan bahasa Indonesia — 13 Oktober 2026
+
+Seluruh **2.383 arti kanji dan 2.378 contoh kata** telah dibaca dan ditinjau
+ulang secara editorial oleh AI. Draf awal berasal dari Google Translate dan
+materi awal situs; hasil tinjauan lengkap kini menjadi sumber utama di
+`data/reviewed-id.json`. Ini bukan pemeriksaan tersertifikasi oleh pengajar.
+
+Pembetulan mencakup **1.203 kartu**, dengan **831 arti kanji** dan **837 arti
+contoh kata** berubah. Satu kartu dapat memiliki kedua jenis perubahan.
+Fokusnya adalah memilih makna sesuai kata Jepang dan bacaannya, memperjelas
+kata kerja serta istilah khusus, memperbaiki ejaan, dan menyamakan arti kata
+yang digunakan di beberapa kartu. Catatan sebelum/sesudah tersedia di
+`data/translation-review.json`.
+
+Contoh pembetulan: 時計 menjadi *jam*, 寝坊 menjadi *bangun kesiangan*, 心臓
+menjadi *jantung*, dan 乾杯 menjadi *bersulang*. Contoh yang tidak cocok dengan
+bacaannya atau kurang berguna diganti, antara lain 溝（みぞ）, 甲板（かんぱん）,
+彦星（ひこぼし）, 楓（かえで）, dan 𠮟る（しかる）.
+
+Kasus tersebut diperiksa terhadap JMdict melalui kanjiapi.dev. Makna terpilih
+juga dibandingkan dengan [Kanjipedia](https://www.kanjipedia.jp/), termasuk
+[鵬](https://www.kanjipedia.jp/kanji/0006413300),
+[璧](https://www.kanjipedia.jp/kanji/0006235900),
+[挫傷](https://www.kanjipedia.jp/kotoba/0002486900), dan
+[溝](https://www.kanjipedia.jp/kanji/0002288700).
+Rujukan dan cuplikan data JMdict disimpan di `data/review-references.json`.
+Arti Inggris tersedia sebagai pembanding; arti Inggris yang salah memilih
+makna turut diperbaiki pada kasus tersebut. Sumber asli tetap disimpan utuh
+di `catalog-source.json`. Arti pada kartu diringkas untuk belajar dan tidak
+mencakup seluruh kemungkinan makna dalam semua konteks.
 
 Sebanyak **2.378** kanji memiliki contoh kata. Karakter **赳, 舜, 彪, 崚, 晟**
 belum memiliki contoh dalam sumber yang digunakan. Kartu tetap tersedia,
@@ -62,17 +89,27 @@ Untuk membangun ulang hasil yang sama tanpa jaringan (Python 3):
 ```sh
 python scripts/build_data.py
 npm test
+python -m unittest discover -s tests -p "test_*.py"
 ```
 
 `data/source-lock.json` mengunci versi OpenJLPT; `catalog-source.json` menyimpan
-data sumber yang digunakan, `translations-id.json` menyimpan terjemahan,
-`curated.json` mempertahankan materi awal, dan `catalog-manifest.json`
-menyimpan jumlah serta daftar karakter per level untuk audit kelengkapan.
+data sumber yang digunakan. `reviewed-id.json` menyimpan seluruh hasil tinjauan
+beserta hash sumber agar pembaruan kamus tidak melewati pemeriksaan arti.
+`translations-id.json`, `translation-overrides.json`, dan `curated.json`
+dipertahankan sebagai riwayat draf; ketiganya tidak menggantikan hasil tinjauan
+arti saat build. Urutan 110 kartu awal tetap mengikuti `curated.json`.
+`catalog-manifest.json` menyimpan jumlah, daftar karakter per level, dan
+cakupan tinjauan.
 
 Untuk mengambil ulang sumber: `python scripts/import_catalog.py`, kemudian
 `python scripts/prepare_catalog.py`. `python scripts/translate_catalog.py`
-mengisi terjemahan yang belum tersedia melalui layanan Google Translate.
-Periksa hasil, perbarui koreksi manual, bangun ulang, lalu jalankan pengujian.
+mengisi draf terjemahan yang belum tersedia melalui layanan Google Translate.
+Tinjau arti, bacaan, dan contoh yang baru atau berubah; perbarui
+`reviewed-id.json` beserta tanggal dan hash SHA-256 `catalog-source.json`
+(UTF-8 dengan akhir baris LF) hanya
+setelah tinjauan selesai. Build menolak cakupan yang tidak lengkap, sumber
+yang berubah tanpa tinjauan, atau terjemahan kata identik yang tidak konsisten.
+Bangun ulang, lalu jalankan pengujian sebelum deployment.
 Jika mengganti commit sumber, bersihkan cache `.cache/openjlpt` sebelumnya.
 Tinjau versi sumber secara berkala, setidaknya bulanan selama data ini
 didistribusikan, agar mengikuti pembaruan kamus EDRDG.

@@ -17,8 +17,10 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 Progres hanya tersedia di browser/perangkat yang sama, tanpa akun atau server.
 Koleksi mencakup seluruh snapshot OpenJLPT yang dikunci di repositori, dengan
 level komunitas dan kanji tambahan. JLPT tidak menerbitkan daftar kanji resmi.
-Arti Indonesia tambahan memakai terjemahan otomatis dengan koreksi terpilih;
-arti sumber Inggris tersedia pada detail. Atribusi, batasan, dan prosedur
+Seluruh arti Indonesia dan contoh kata telah ditinjau ulang secara editorial
+oleh AI pada 13 Oktober 2026, dengan pembetulan pada 1.203 kartu. Hasil tinjauan
+disimpan di `data/reviewed-id.json`; build menolak sumber baru yang belum ditinjau.
+Arti Inggris tersedia pada detail. Atribusi, batasan, dan prosedur
 pembaruan tersedia di [DATA-SOURCES.md](DATA-SOURCES.md).
 
 ## Website
@@ -38,7 +40,9 @@ JavaScript memakai ES modules, sehingga halaman perlu disajikan lewat HTTP.
 ## Pemeriksaan
 
 Jalankan `npm test` (Node.js 20+) untuk memeriksa kelengkapan data, pencarian,
-pilihan kuis, validasi progres, dan tanggal belajar lokal.
+pilihan kuis, validasi progres, tanggal belajar lokal, dan regresi terjemahan.
+Jalankan `python -m unittest discover -s tests -p "test_*.py"` untuk memastikan
+build menolak data baru atau berubah yang belum ditinjau.
 
 Font DM Sans dan Noto Serif JP dimuat dari Google Fonts dengan font sistem
 sebagai cadangan. Semua fitur belajar menggunakan data lokal.

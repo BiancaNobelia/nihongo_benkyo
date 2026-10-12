@@ -1,0 +1,658 @@
+{
+  "retrieved": "2026-10-13",
+  "dictionary": "JMdict via kanjiapi.dev",
+  "examples": [
+    {
+      "char": "陸",
+      "word": "陸",
+      "reading": "りく",
+      "url": "https://kanjiapi.dev/v1/words/陸",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "land",
+              "shore"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [
+              "ichi1",
+              "news1",
+              "nf05"
+            ],
+            "pronounced": "りく",
+            "written": "陸"
+          },
+          {
+            "priorities": [],
+            "pronounced": "おか",
+            "written": "陸"
+          }
+        ]
+      }
+    },
+    {
+      "char": "帯",
+      "word": "帯",
+      "reading": "おび",
+      "url": "https://kanjiapi.dev/v1/words/帯",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "obi (kimono sash)"
+            ]
+          },
+          {
+            "glosses": [
+              "obi (strip of paper looped around a book, CD, etc. containing information about the product)"
+            ]
+          },
+          {
+            "glosses": [
+              "band",
+              "belt",
+              "strip"
+            ]
+          },
+          {
+            "glosses": [
+              "cingulum"
+            ]
+          },
+          {
+            "glosses": [
+              "radio or television program broadcast in the same time slot on all or most days"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [
+              "ichi1"
+            ],
+            "pronounced": "おび",
+            "written": "帯"
+          },
+          {
+            "priorities": [],
+            "pronounced": "おび",
+            "written": "帶"
+          }
+        ]
+      }
+    },
+    {
+      "char": "郡",
+      "word": "郡",
+      "reading": "ぐん",
+      "url": "https://kanjiapi.dev/v1/words/郡",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "district",
+              "county"
+            ]
+          },
+          {
+            "glosses": [
+              "district (of 2-20 50-home neighbourhoods or townships, in the ritsuryō period)"
+            ]
+          },
+          {
+            "glosses": [
+              "commandery (in China)"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [
+              "ichi1",
+              "news1",
+              "nf19"
+            ],
+            "pronounced": "ぐん",
+            "written": "郡"
+          },
+          {
+            "priorities": [],
+            "pronounced": "こおり",
+            "written": "郡"
+          }
+        ]
+      }
+    },
+    {
+      "char": "彦",
+      "word": "彦星",
+      "reading": "ひこぼし",
+      "url": "https://kanjiapi.dev/v1/words/彦",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "Altair (star in the constellation Aquila)",
+              "Alpha Aquilae"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [],
+            "pronounced": "ひこぼし",
+            "written": "彦星"
+          },
+          {
+            "priorities": [],
+            "pronounced": "ひこぼし",
+            "written": "ひこ星"
+          }
+        ]
+      }
+    },
+    {
+      "char": "甲",
+      "word": "甲板",
+      "reading": "かんぱん",
+      "url": "https://kanjiapi.dev/v1/words/甲",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "deck (of a ship)"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [
+              "ichi1",
+              "news1",
+              "nf24"
+            ],
+            "pronounced": "かんぱん",
+            "written": "甲板"
+          },
+          {
+            "priorities": [
+              "ichi1",
+              "news1",
+              "nf24"
+            ],
+            "pronounced": "こうはん",
+            "written": "甲板"
+          }
+        ]
+      }
+    },
+    {
+      "char": "溝",
+      "word": "溝",
+      "reading": "みぞ",
+      "url": "https://kanjiapi.dev/v1/words/溝",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "ditch",
+              "drain",
+              "gutter",
+              "trench"
+            ]
+          },
+          {
+            "glosses": [
+              "groove",
+              "tread",
+              "indentation"
+            ]
+          },
+          {
+            "glosses": [
+              "gap (between people, countries, etc.)",
+              "gulf",
+              "rift"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [
+              "ichi1",
+              "news1",
+              "nf09"
+            ],
+            "pronounced": "みぞ",
+            "written": "溝"
+          }
+        ]
+      }
+    },
+    {
+      "char": "楓",
+      "word": "楓",
+      "reading": "かえで",
+      "url": "https://kanjiapi.dev/v1/words/楓",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "maple (Acer spp.)",
+              "maple tree"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [],
+            "pronounced": "かえで",
+            "written": "楓"
+          },
+          {
+            "priorities": [],
+            "pronounced": "カエデ",
+            "written": "楓"
+          },
+          {
+            "priorities": [],
+            "pronounced": "かえで",
+            "written": "槭樹"
+          },
+          {
+            "priorities": [],
+            "pronounced": "カエデ",
+            "written": "槭樹"
+          }
+        ]
+      }
+    },
+    {
+      "char": "𠮟",
+      "word": "𠮟る",
+      "reading": "しかる",
+      "url": "https://kanjiapi.dev/v1/words/𠮟",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "to scold",
+              "to chide",
+              "to rebuke",
+              "to reprimand"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [
+              "ichi1"
+            ],
+            "pronounced": "しかる",
+            "written": "叱る"
+          },
+          {
+            "priorities": [],
+            "pronounced": "しかる",
+            "written": "𠮟る"
+          },
+          {
+            "priorities": [],
+            "pronounced": "しかる",
+            "written": "呵る"
+          }
+        ]
+      }
+    },
+    {
+      "char": "搾",
+      "word": "搾る",
+      "reading": "しぼる",
+      "url": "https://kanjiapi.dev/v1/words/搾",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "to wring (towel, rag)",
+              "to squeeze"
+            ]
+          },
+          {
+            "glosses": [
+              "to squeeze (fruit to extract juice)",
+              "to press",
+              "to extract",
+              "to milk",
+              "to express milk"
+            ]
+          },
+          {
+            "glosses": [
+              "to rack (one's brains)",
+              "to strain (one's voice)"
+            ]
+          },
+          {
+            "glosses": [
+              "to extort",
+              "to exploit"
+            ]
+          },
+          {
+            "glosses": [
+              "to chew out",
+              "to reprimand severely",
+              "to rake over the coals",
+              "to give a sound scolding",
+              "to tell someone off",
+              "to scold",
+              "to rebuke"
+            ]
+          },
+          {
+            "glosses": [
+              "to drill into",
+              "to train"
+            ]
+          },
+          {
+            "glosses": [
+              "to narrow down (one's focus)",
+              "to whittle down"
+            ]
+          },
+          {
+            "glosses": [
+              "to gather up (curtain, etc.)",
+              "to tighten (drawstring)"
+            ]
+          },
+          {
+            "glosses": [
+              "to stop down (lens)"
+            ]
+          },
+          {
+            "glosses": [
+              "to turn down (e.g. radio)"
+            ]
+          },
+          {
+            "glosses": [
+              "to bend (bow)",
+              "to draw"
+            ]
+          },
+          {
+            "glosses": [
+              "to hold down",
+              "to constrict",
+              "to immobilize"
+            ]
+          },
+          {
+            "glosses": [
+              "to squeeze"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [
+              "ichi1",
+              "news1",
+              "nf12"
+            ],
+            "pronounced": "しぼる",
+            "written": "絞る"
+          },
+          {
+            "priorities": [],
+            "pronounced": "シボる",
+            "written": "絞る"
+          },
+          {
+            "priorities": [
+              "ichi1",
+              "news1",
+              "nf12"
+            ],
+            "pronounced": "しぼる",
+            "written": "搾る"
+          },
+          {
+            "priorities": [],
+            "pronounced": "シボる",
+            "written": "搾る"
+          }
+        ]
+      }
+    },
+    {
+      "char": "弁",
+      "word": "弁償",
+      "reading": "べんしょう",
+      "url": "https://kanjiapi.dev/v1/words/弁",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "compensation",
+              "indemnification",
+              "reparation",
+              "restitution",
+              "recompense"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [
+              "ichi1",
+              "news2",
+              "nf43"
+            ],
+            "pronounced": "べんしょう",
+            "written": "弁償"
+          },
+          {
+            "priorities": [],
+            "pronounced": "べんしょう",
+            "written": "辨償"
+          }
+        ]
+      }
+    },
+    {
+      "char": "亜",
+      "word": "亜科",
+      "reading": "あか",
+      "url": "https://kanjiapi.dev/v1/words/亜",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "subfamily"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [],
+            "pronounced": "あか",
+            "written": "亜科"
+          }
+        ]
+      }
+    },
+    {
+      "char": "亘",
+      "word": "亘古",
+      "reading": "こうこ",
+      "url": "https://kanjiapi.dev/v1/words/亘",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "for ever",
+              "from ancient times"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [],
+            "pronounced": "こうこ",
+            "written": "亘古"
+          }
+        ]
+      }
+    },
+    {
+      "char": "民",
+      "word": "民俗",
+      "reading": "みんぞく",
+      "url": "https://kanjiapi.dev/v1/words/民",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "folk customs",
+              "folkways",
+              "ethnic customs"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [
+              "ichi1"
+            ],
+            "pronounced": "みんぞく",
+            "written": "民俗"
+          }
+        ]
+      }
+    },
+    {
+      "char": "湧",
+      "word": "湧く",
+      "reading": "わく",
+      "url": "https://kanjiapi.dev/v1/words/湧",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "to well (up)",
+              "to gush out (of water)",
+              "to spring out",
+              "to surge"
+            ]
+          },
+          {
+            "glosses": [
+              "to appear (esp. suddenly) (sweat, tears, etc.)",
+              "to sweat",
+              "to cry"
+            ]
+          },
+          {
+            "glosses": [
+              "to feel emotions (e.g. joy, bravery, etc.)",
+              "to spring up (e.g. an idea, emotions, clouds)",
+              "to well up",
+              "to arise"
+            ]
+          },
+          {
+            "glosses": [
+              "to hatch",
+              "to breed",
+              "to propagate",
+              "to be infested (esp. of parasitic insects, etc.)"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [
+              "ichi1"
+            ],
+            "pronounced": "わく",
+            "written": "湧く"
+          },
+          {
+            "priorities": [],
+            "pronounced": "わく",
+            "written": "涌く"
+          }
+        ]
+      }
+    },
+    {
+      "char": "臼",
+      "word": "臼",
+      "reading": "うす",
+      "url": "https://kanjiapi.dev/v1/words/臼",
+      "entry": {
+        "meanings": [
+          {
+            "glosses": [
+              "millstone",
+              "mortar"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "priorities": [
+              "news2",
+              "nf31"
+            ],
+            "pronounced": "うす",
+            "written": "臼"
+          },
+          {
+            "priorities": [],
+            "pronounced": "うす",
+            "written": "碓"
+          },
+          {
+            "priorities": [],
+            "pronounced": "うす",
+            "written": "碾"
+          },
+          {
+            "priorities": [],
+            "pronounced": "うす",
+            "written": "舂"
+          }
+        ]
+      }
+    }
+  ],
+  "kanji": [
+    {
+      "char": "鵬",
+      "url": "https://www.kanjipedia.jp/kanji/0006413300"
+    },
+    {
+      "char": "璧",
+      "url": "https://www.kanjipedia.jp/kanji/0006235900"
+    }
+  ],
+  "additional": [
+    {
+      "word": "挫傷",
+      "url": "https://www.kanjipedia.jp/kotoba/0002486900"
+    },
+    {
+      "char": "溝",
+      "url": "https://www.kanjipedia.jp/kanji/0002288700"
+    }
+  ]
+}
