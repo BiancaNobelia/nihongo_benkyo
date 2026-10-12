@@ -1,0 +1,882 @@
+{
+  "日": {
+    "meaning": "Matahari; hari",
+    "example": {
+      "word": "日本",
+      "reading": "にほん",
+      "meaning": "Jepang"
+    }
+  },
+  "月": {
+    "meaning": "Bulan",
+    "example": {
+      "word": "月曜日",
+      "reading": "げつようび",
+      "meaning": "Senin"
+    }
+  },
+  "火": {
+    "meaning": "Api",
+    "example": {
+      "word": "火山",
+      "reading": "かざん",
+      "meaning": "Gunung berapi"
+    }
+  },
+  "水": {
+    "meaning": "Air",
+    "example": {
+      "word": "水曜日",
+      "reading": "すいようび",
+      "meaning": "Rabu"
+    }
+  },
+  "木": {
+    "meaning": "Pohon; kayu",
+    "example": {
+      "word": "木曜日",
+      "reading": "もくようび",
+      "meaning": "Kamis"
+    }
+  },
+  "金": {
+    "meaning": "Emas; uang",
+    "example": {
+      "word": "お金",
+      "reading": "おかね",
+      "meaning": "Uang"
+    }
+  },
+  "土": {
+    "meaning": "Tanah",
+    "example": {
+      "word": "土曜日",
+      "reading": "どようび",
+      "meaning": "Sabtu"
+    }
+  },
+  "山": {
+    "meaning": "Gunung",
+    "example": {
+      "word": "富士山",
+      "reading": "ふじさん",
+      "meaning": "Gunung Fuji"
+    }
+  },
+  "川": {
+    "meaning": "Sungai",
+    "example": {
+      "word": "川",
+      "reading": "かわ",
+      "meaning": "Sungai"
+    }
+  },
+  "田": {
+    "meaning": "Sawah",
+    "example": {
+      "word": "田んぼ",
+      "reading": "たんぼ",
+      "meaning": "Sawah"
+    }
+  },
+  "人": {
+    "meaning": "Orang",
+    "example": {
+      "word": "日本人",
+      "reading": "にほんじん",
+      "meaning": "Orang Jepang"
+    }
+  },
+  "口": {
+    "meaning": "Mulut",
+    "example": {
+      "word": "入口",
+      "reading": "いりぐち",
+      "meaning": "Pintu masuk"
+    }
+  },
+  "目": {
+    "meaning": "Mata",
+    "example": {
+      "word": "目",
+      "reading": "め",
+      "meaning": "Mata"
+    }
+  },
+  "耳": {
+    "meaning": "Telinga",
+    "example": {
+      "word": "耳",
+      "reading": "みみ",
+      "meaning": "Telinga"
+    }
+  },
+  "手": {
+    "meaning": "Tangan",
+    "example": {
+      "word": "手紙",
+      "reading": "てがみ",
+      "meaning": "Surat"
+    }
+  },
+  "足": {
+    "meaning": "Kaki; cukup",
+    "example": {
+      "word": "足",
+      "reading": "あし",
+      "meaning": "Kaki"
+    }
+  },
+  "力": {
+    "meaning": "Tenaga",
+    "example": {
+      "word": "力",
+      "reading": "ちから",
+      "meaning": "Tenaga"
+    }
+  },
+  "男": {
+    "meaning": "Laki-laki",
+    "example": {
+      "word": "男の子",
+      "reading": "おとこのこ",
+      "meaning": "Anak laki-laki"
+    }
+  },
+  "女": {
+    "meaning": "Perempuan",
+    "example": {
+      "word": "女の子",
+      "reading": "おんなのこ",
+      "meaning": "Anak perempuan"
+    }
+  },
+  "子": {
+    "meaning": "Anak",
+    "example": {
+      "word": "子ども",
+      "reading": "こども",
+      "meaning": "Anak"
+    }
+  },
+  "学": {
+    "meaning": "Belajar",
+    "example": {
+      "word": "学生",
+      "reading": "がくせい",
+      "meaning": "Pelajar"
+    }
+  },
+  "生": {
+    "meaning": "Hidup; lahir",
+    "example": {
+      "word": "先生",
+      "reading": "せんせい",
+      "meaning": "Guru"
+    }
+  },
+  "先": {
+    "meaning": "Sebelum; lebih dahulu",
+    "example": {
+      "word": "先月",
+      "reading": "せんげつ",
+      "meaning": "Bulan lalu"
+    }
+  },
+  "本": {
+    "meaning": "Buku; asal",
+    "example": {
+      "word": "本",
+      "reading": "ほん",
+      "meaning": "Buku"
+    }
+  },
+  "大": {
+    "meaning": "Besar",
+    "example": {
+      "word": "大学",
+      "reading": "だいがく",
+      "meaning": "Universitas"
+    }
+  },
+  "小": {
+    "meaning": "Kecil",
+    "example": {
+      "word": "小さい",
+      "reading": "ちいさい",
+      "meaning": "Kecil"
+    }
+  },
+  "中": {
+    "meaning": "Tengah; dalam",
+    "example": {
+      "word": "中学校",
+      "reading": "ちゅうがっこう",
+      "meaning": "SMP"
+    }
+  },
+  "上": {
+    "meaning": "Atas",
+    "example": {
+      "word": "上",
+      "reading": "うえ",
+      "meaning": "Atas"
+    }
+  },
+  "下": {
+    "meaning": "Bawah",
+    "example": {
+      "word": "下",
+      "reading": "した",
+      "meaning": "Bawah"
+    }
+  },
+  "左": {
+    "meaning": "Kiri",
+    "example": {
+      "word": "左",
+      "reading": "ひだり",
+      "meaning": "Kiri"
+    }
+  },
+  "右": {
+    "meaning": "Kanan",
+    "example": {
+      "word": "右",
+      "reading": "みぎ",
+      "meaning": "Kanan"
+    }
+  },
+  "一": {
+    "meaning": "Satu",
+    "example": {
+      "word": "一月",
+      "reading": "いちがつ",
+      "meaning": "Januari"
+    }
+  },
+  "二": {
+    "meaning": "Dua",
+    "example": {
+      "word": "二月",
+      "reading": "にがつ",
+      "meaning": "Februari"
+    }
+  },
+  "三": {
+    "meaning": "Tiga",
+    "example": {
+      "word": "三月",
+      "reading": "さんがつ",
+      "meaning": "Maret"
+    }
+  },
+  "四": {
+    "meaning": "Empat",
+    "example": {
+      "word": "四月",
+      "reading": "しがつ",
+      "meaning": "April"
+    }
+  },
+  "五": {
+    "meaning": "Lima",
+    "example": {
+      "word": "五月",
+      "reading": "ごがつ",
+      "meaning": "Mei"
+    }
+  },
+  "六": {
+    "meaning": "Enam",
+    "example": {
+      "word": "六月",
+      "reading": "ろくがつ",
+      "meaning": "Juni"
+    }
+  },
+  "七": {
+    "meaning": "Tujuh",
+    "example": {
+      "word": "七月",
+      "reading": "しちがつ",
+      "meaning": "Juli"
+    }
+  },
+  "八": {
+    "meaning": "Delapan",
+    "example": {
+      "word": "八月",
+      "reading": "はちがつ",
+      "meaning": "Agustus"
+    }
+  },
+  "九": {
+    "meaning": "Sembilan",
+    "example": {
+      "word": "九月",
+      "reading": "くがつ",
+      "meaning": "September"
+    }
+  },
+  "十": {
+    "meaning": "Sepuluh",
+    "example": {
+      "word": "十月",
+      "reading": "じゅうがつ",
+      "meaning": "Oktober"
+    }
+  },
+  "百": {
+    "meaning": "Seratus",
+    "example": {
+      "word": "百円",
+      "reading": "ひゃくえん",
+      "meaning": "Seratus yen"
+    }
+  },
+  "千": {
+    "meaning": "Seribu",
+    "example": {
+      "word": "千円",
+      "reading": "せんえん",
+      "meaning": "Seribu yen"
+    }
+  },
+  "万": {
+    "meaning": "Sepuluh ribu",
+    "example": {
+      "word": "一万円",
+      "reading": "いちまんえん",
+      "meaning": "Sepuluh ribu yen"
+    }
+  },
+  "円": {
+    "meaning": "Yen; lingkaran",
+    "example": {
+      "word": "円",
+      "reading": "えん",
+      "meaning": "Yen"
+    }
+  },
+  "年": {
+    "meaning": "Tahun",
+    "example": {
+      "word": "今年",
+      "reading": "ことし",
+      "meaning": "Tahun ini"
+    }
+  },
+  "今": {
+    "meaning": "Sekarang",
+    "example": {
+      "word": "今",
+      "reading": "いま",
+      "meaning": "Sekarang"
+    }
+  },
+  "時": {
+    "meaning": "Waktu; jam",
+    "example": {
+      "word": "時間",
+      "reading": "じかん",
+      "meaning": "Waktu"
+    }
+  },
+  "分": {
+    "meaning": "Bagian; menit",
+    "example": {
+      "word": "十分",
+      "reading": "じゅっぷん",
+      "meaning": "Sepuluh menit"
+    }
+  },
+  "半": {
+    "meaning": "Setengah",
+    "example": {
+      "word": "半年",
+      "reading": "はんとし",
+      "meaning": "Setengah tahun"
+    }
+  },
+  "毎": {
+    "meaning": "Setiap",
+    "example": {
+      "word": "毎日",
+      "reading": "まいにち",
+      "meaning": "Setiap hari"
+    }
+  },
+  "何": {
+    "meaning": "Apa",
+    "example": {
+      "word": "何",
+      "reading": "なに",
+      "meaning": "Apa"
+    }
+  },
+  "行": {
+    "meaning": "Pergi",
+    "example": {
+      "word": "行く",
+      "reading": "いく",
+      "meaning": "Pergi"
+    }
+  },
+  "来": {
+    "meaning": "Datang",
+    "example": {
+      "word": "来る",
+      "reading": "くる",
+      "meaning": "Datang"
+    }
+  },
+  "帰": {
+    "meaning": "Pulang",
+    "example": {
+      "word": "帰る",
+      "reading": "かえる",
+      "meaning": "Pulang"
+    }
+  },
+  "食": {
+    "meaning": "Makan",
+    "example": {
+      "word": "食べる",
+      "reading": "たべる",
+      "meaning": "Makan"
+    }
+  },
+  "飲": {
+    "meaning": "Minum",
+    "example": {
+      "word": "飲む",
+      "reading": "のむ",
+      "meaning": "Minum"
+    }
+  },
+  "見": {
+    "meaning": "Melihat",
+    "example": {
+      "word": "見る",
+      "reading": "みる",
+      "meaning": "Melihat"
+    }
+  },
+  "聞": {
+    "meaning": "Mendengar",
+    "example": {
+      "word": "聞く",
+      "reading": "きく",
+      "meaning": "Mendengar"
+    }
+  },
+  "読": {
+    "meaning": "Membaca",
+    "example": {
+      "word": "読む",
+      "reading": "よむ",
+      "meaning": "Membaca"
+    }
+  },
+  "書": {
+    "meaning": "Menulis",
+    "example": {
+      "word": "書く",
+      "reading": "かく",
+      "meaning": "Menulis"
+    }
+  },
+  "話": {
+    "meaning": "Berbicara; cerita",
+    "example": {
+      "word": "話す",
+      "reading": "はなす",
+      "meaning": "Berbicara"
+    }
+  },
+  "語": {
+    "meaning": "Bahasa",
+    "example": {
+      "word": "日本語",
+      "reading": "にほんご",
+      "meaning": "Bahasa Jepang"
+    }
+  },
+  "買": {
+    "meaning": "Membeli",
+    "example": {
+      "word": "買う",
+      "reading": "かう",
+      "meaning": "Membeli"
+    }
+  },
+  "休": {
+    "meaning": "Istirahat",
+    "example": {
+      "word": "休む",
+      "reading": "やすむ",
+      "meaning": "Beristirahat"
+    }
+  },
+  "会": {
+    "meaning": "Bertemu",
+    "example": {
+      "word": "会う",
+      "reading": "あう",
+      "meaning": "Bertemu"
+    }
+  },
+  "国": {
+    "meaning": "Negara",
+    "example": {
+      "word": "外国",
+      "reading": "がいこく",
+      "meaning": "Luar negeri"
+    }
+  },
+  "外": {
+    "meaning": "Luar",
+    "example": {
+      "word": "外",
+      "reading": "そと",
+      "meaning": "Luar"
+    }
+  },
+  "天": {
+    "meaning": "Langit",
+    "example": {
+      "word": "天気",
+      "reading": "てんき",
+      "meaning": "Cuaca"
+    }
+  },
+  "気": {
+    "meaning": "Semangat; suasana",
+    "example": {
+      "word": "元気",
+      "reading": "げんき",
+      "meaning": "Sehat; bersemangat"
+    }
+  },
+  "雨": {
+    "meaning": "Hujan",
+    "example": {
+      "word": "雨",
+      "reading": "あめ",
+      "meaning": "Hujan"
+    }
+  },
+  "電": {
+    "meaning": "Listrik",
+    "example": {
+      "word": "電車",
+      "reading": "でんしゃ",
+      "meaning": "Kereta listrik"
+    }
+  },
+  "車": {
+    "meaning": "Kendaraan",
+    "example": {
+      "word": "車",
+      "reading": "くるま",
+      "meaning": "Mobil"
+    }
+  },
+  "駅": {
+    "meaning": "Stasiun",
+    "example": {
+      "word": "駅",
+      "reading": "えき",
+      "meaning": "Stasiun"
+    }
+  },
+  "白": {
+    "meaning": "Putih",
+    "example": {
+      "word": "白い",
+      "reading": "しろい",
+      "meaning": "Putih"
+    }
+  },
+  "花": {
+    "meaning": "Bunga",
+    "example": {
+      "word": "花",
+      "reading": "はな",
+      "meaning": "Bunga"
+    }
+  },
+  "空": {
+    "meaning": "Langit; kosong",
+    "example": {
+      "word": "空",
+      "reading": "そら",
+      "meaning": "Langit"
+    }
+  },
+  "海": {
+    "meaning": "Laut",
+    "example": {
+      "word": "海",
+      "reading": "うみ",
+      "meaning": "Laut"
+    }
+  },
+  "春": {
+    "meaning": "Musim semi",
+    "example": {
+      "word": "春",
+      "reading": "はる",
+      "meaning": "Musim semi"
+    }
+  },
+  "夏": {
+    "meaning": "Musim panas",
+    "example": {
+      "word": "夏",
+      "reading": "なつ",
+      "meaning": "Musim panas"
+    }
+  },
+  "秋": {
+    "meaning": "Musim gugur",
+    "example": {
+      "word": "秋",
+      "reading": "あき",
+      "meaning": "Musim gugur"
+    }
+  },
+  "冬": {
+    "meaning": "Musim dingin",
+    "example": {
+      "word": "冬",
+      "reading": "ふゆ",
+      "meaning": "Musim dingin"
+    }
+  },
+  "朝": {
+    "meaning": "Pagi",
+    "example": {
+      "word": "朝",
+      "reading": "あさ",
+      "meaning": "Pagi"
+    }
+  },
+  "昼": {
+    "meaning": "Siang",
+    "example": {
+      "word": "昼",
+      "reading": "ひる",
+      "meaning": "Siang"
+    }
+  },
+  "夜": {
+    "meaning": "Malam",
+    "example": {
+      "word": "夜",
+      "reading": "よる",
+      "meaning": "Malam"
+    }
+  },
+  "心": {
+    "meaning": "Hati; pikiran",
+    "example": {
+      "word": "心",
+      "reading": "こころ",
+      "meaning": "Hati"
+    }
+  },
+  "思": {
+    "meaning": "Berpikir",
+    "example": {
+      "word": "思う",
+      "reading": "おもう",
+      "meaning": "Berpikir"
+    }
+  },
+  "知": {
+    "meaning": "Mengetahui",
+    "example": {
+      "word": "知る",
+      "reading": "しる",
+      "meaning": "Mengetahui"
+    }
+  },
+  "新": {
+    "meaning": "Baru",
+    "example": {
+      "word": "新しい",
+      "reading": "あたらしい",
+      "meaning": "Baru"
+    }
+  },
+  "古": {
+    "meaning": "Lama; tua",
+    "example": {
+      "word": "古い",
+      "reading": "ふるい",
+      "meaning": "Lama; tua"
+    }
+  },
+  "好": {
+    "meaning": "Suka",
+    "example": {
+      "word": "好き",
+      "reading": "すき",
+      "meaning": "Suka"
+    }
+  },
+  "旅": {
+    "meaning": "Perjalanan",
+    "example": {
+      "word": "旅行",
+      "reading": "りょこう",
+      "meaning": "Wisata"
+    }
+  },
+  "勉": {
+    "meaning": "Usaha; tekun",
+    "example": {
+      "word": "勉強",
+      "reading": "べんきょう",
+      "meaning": "Belajar"
+    }
+  },
+  "強": {
+    "meaning": "Kuat",
+    "example": {
+      "word": "強い",
+      "reading": "つよい",
+      "meaning": "Kuat"
+    }
+  },
+  "持": {
+    "meaning": "Memegang; membawa",
+    "example": {
+      "word": "持つ",
+      "reading": "もつ",
+      "meaning": "Membawa"
+    }
+  },
+  "待": {
+    "meaning": "Menunggu",
+    "example": {
+      "word": "待つ",
+      "reading": "まつ",
+      "meaning": "Menunggu"
+    }
+  },
+  "使": {
+    "meaning": "Menggunakan",
+    "example": {
+      "word": "使う",
+      "reading": "つかう",
+      "meaning": "Menggunakan"
+    }
+  },
+  "働": {
+    "meaning": "Bekerja",
+    "example": {
+      "word": "働く",
+      "reading": "はたらく",
+      "meaning": "Bekerja"
+    }
+  },
+  "楽": {
+    "meaning": "Nyaman; menyenangkan",
+    "example": {
+      "word": "楽しい",
+      "reading": "たのしい",
+      "meaning": "Menyenangkan"
+    }
+  },
+  "意": {
+    "meaning": "Maksud; pikiran",
+    "example": {
+      "word": "意味",
+      "reading": "いみ",
+      "meaning": "Arti"
+    }
+  },
+  "味": {
+    "meaning": "Rasa",
+    "example": {
+      "word": "味",
+      "reading": "あじ",
+      "meaning": "Rasa"
+    }
+  },
+  "夢": {
+    "meaning": "Mimpi",
+    "example": {
+      "word": "夢",
+      "reading": "ゆめ",
+      "meaning": "Mimpi"
+    }
+  },
+  "愛": {
+    "meaning": "Cinta",
+    "example": {
+      "word": "愛",
+      "reading": "あい",
+      "meaning": "Cinta"
+    }
+  },
+  "感": {
+    "meaning": "Perasaan",
+    "example": {
+      "word": "感謝",
+      "reading": "かんしゃ",
+      "meaning": "Rasa terima kasih"
+    }
+  },
+  "想": {
+    "meaning": "Gagasan; memikirkan",
+    "example": {
+      "word": "感想",
+      "reading": "かんそう",
+      "meaning": "Kesan"
+    }
+  },
+  "続": {
+    "meaning": "Berlanjut",
+    "example": {
+      "word": "続く",
+      "reading": "つづく",
+      "meaning": "Berlanjut"
+    }
+  },
+  "選": {
+    "meaning": "Memilih",
+    "example": {
+      "word": "選ぶ",
+      "reading": "えらぶ",
+      "meaning": "Memilih"
+    }
+  },
+  "達": {
+    "meaning": "Mencapai",
+    "example": {
+      "word": "友達",
+      "reading": "ともだち",
+      "meaning": "Teman"
+    }
+  },
+  "深": {
+    "meaning": "Dalam",
+    "example": {
+      "word": "深い",
+      "reading": "ふかい",
+      "meaning": "Dalam"
+    }
+  },
+  "真": {
+    "meaning": "Kebenaran; sejati",
+    "example": {
+      "word": "写真",
+      "reading": "しゃしん",
+      "meaning": "Foto"
+    }
+  }
+}

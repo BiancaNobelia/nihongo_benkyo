@@ -12,13 +12,26 @@ export function filterKanji(data, { query = '', level = 'all', collection = 'all
     && (collection !== 'saved' || saved.includes(k.char))
     && (collection !== 'known' || known.includes(k.char))
     && (collection !== 'new' || !known.includes(k.char))
-    && (!search || [k.char, k.meaning, ...k.on, ...k.kun, ...k.kun.map(r => r.replaceAll('.', '')), k.example.word, k.example.reading, k.example.meaning].join(' ').toLocaleLowerCase('id').includes(search)));
+    && (!search || [k.char, k.meaning, ...(k.meaningsEn || []), ...k.on, ...k.kun, ...k.kun.map(r => r.replaceAll('.', '')), k.example?.word, k.example?.reading, k.example?.meaning].join(' ').toLocaleLowerCase('id').includes(search)));
+}
+export function eligibleQuizCards(pool, mode) {
+  return pool.filter(k => mode !== 'reading' || (k.example?.word && k.example?.reading));
+}
+function meanings(k) {
+  return new Set([...(k.meaningsEn || []), ...k.meaning.split(';')]
+    .map(s => s.toLowerCase().replace(/\([^)]*\)/g, '').replace(/^to /, '').trim()).filter(Boolean));
 }
 export function createQuiz(pool, mode, count, random = Math.random) {
+  const eligible = eligibleQuizCards(pool, mode);
   const getAnswer = k => mode === 'meaning' ? k.meaning : mode === 'kanji' ? k.char : k.example.reading;
-  return shuffle(pool, random).slice(0, Math.min(count, pool.length)).map(k => {
+  const meaningSets = new Map(eligible.map(k => [k.char, meanings(k)]));
+  return shuffle(eligible, random).slice(0, Math.min(count, eligible.length)).map(k => {
     const answer = getAnswer(k);
-    const distractors = [...new Set(pool.map(getAnswer))].filter(a => a !== answer);
+    const accepted = new Set(mode === 'reading' ? [answer, ...(k.example.readings || [])] : [answer]);
+    const candidates = eligible.filter(other => other.char !== k.char && (mode === 'reading'
+      ? !accepted.has(getAnswer(other))
+      : ![...meaningSets.get(k.char)].some(sense => meaningSets.get(other.char).has(sense))));
+    const distractors = [...new Set(candidates.map(getAnswer))].filter(a => !accepted.has(a));
     return { kanji: k, prompt: mode === 'kanji' ? k.meaning : mode === 'reading' ? k.example.word : k.char,
       answer, options: shuffle([answer, ...shuffle(distractors, random).slice(0, 3)], random) };
   });

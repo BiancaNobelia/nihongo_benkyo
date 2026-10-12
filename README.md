@@ -5,14 +5,20 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 
 ## Fitur
 
-- 110 kanji pilihan, kelompok belajar N5–N3, beserta arti, bacaan, dan contoh kata.
+- 2.383 kanji N5–N1 dengan arti Indonesia, bacaan on/kun, dan jumlah goresan.
+- N5: 84 · N4: 169 · N3: 387 · N2: 398 · N1: 1.345.
+- 2.378 kanji memiliki contoh kata; 5 karakter langka menampilkan keterangan
+  belum ada contoh dan tidak masuk kuis bacaan kata.
 - Pencarian kanji/arti/bacaan, filter level, simpanan, dan status penguasaan.
 - Flashcard dengan penilaian mandiri dan pilihan koleksi.
 - Kuis arti, kanji, atau bacaan kata; 5/10/20 soal dan timer opsional.
 - Hasil kuis, progres penguasaan, dan hari belajar di `localStorage`.
 
 Progres hanya tersedia di browser/perangkat yang sama, tanpa akun atau server.
-Koleksi adalah materi pilihan, bukan silabus JLPT lengkap. Detail atribusi dan
+Koleksi mencakup seluruh snapshot OpenJLPT yang dikunci di repositori, dengan
+level komunitas dan kanji tambahan. JLPT tidak menerbitkan daftar kanji resmi.
+Arti Indonesia tambahan memakai terjemahan otomatis dengan koreksi terpilih;
+arti sumber Inggris tersedia pada detail. Atribusi, batasan, dan prosedur
 pembaruan tersedia di [DATA-SOURCES.md](DATA-SOURCES.md).
 
 ## Website
