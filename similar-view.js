@@ -1,4 +1,6 @@
-import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261013-writing';
+import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261013-radicals';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-radicals';
+import { createRadicalView } from './radical-view.js?v=20261013-radicals';
 
 export function createSimilarView({root, kanji, groups, categories, levels, escape, icon, activity}) {
   const byChar = new Map(kanji.map(k => [k.char, k]));
@@ -8,6 +10,8 @@ export function createSimilarView({root, kanji, groups, categories, levels, esca
   let page = 1;
   let selected = null;
   let practice = null;
+  let section = 'families';
+  const radicalView = createRadicalView({root,kanji,levels,escape,icon});
   const glyphs = group => group.members.map(m => m.char).join(' · ');
   const badge = k => `<span class="similar-level ${k.level.toLowerCase()}">${k.level}</span>`;
 
@@ -19,6 +23,17 @@ export function createSimilarView({root, kanji, groups, categories, levels, esca
       <div class="similar-filters"><label class="search-wrap">${icon('search')}<input id="similar-search" type="search" autocomplete="off" aria-label="Cari kelompok kanji mirip" placeholder="Cari kanji, arti, atau bacaan..." value="${escape(filters.query)}"></label><div class="field"><label for="similar-level">Kelompok dengan kanji level</label><select id="similar-level"><option value="all">Semua level</option>${levels.map(level => `<option value="${level}" ${filters.level === level ? 'selected' : ''}>${level}</option>`).join('')}</select></div></div>
       <p class="similar-filter-note">Filter level memilih kelompok yang memuat level tersebut. Semua pasangannya tetap ditampilkan agar bisa dibandingkan.</p><div id="similar-results"></div></section>
       <p class="similar-footnote">Kelompok pilihan berdasarkan bentuk, bukan kesamaan arti atau bacaan. Tips adalah alat bantu ingatan, bukan penjelasan asal-usul kanji. Detail goresan bisa sedikit berbeda menurut jenis huruf.</p>`;
+    root.querySelector('.similar-hero p').textContent = 'Kenali kanji melalui radikal yang sama, lalu bandingkan bentuk yang mudah tertukar. Mulai dari keluarga air dan perjalanan, hingga perbedaan satu garis.';
+    root.querySelector('.similar-stats').insertAdjacentHTML('afterbegin', `<span><strong>${RADICAL_FAMILIES.length}</strong> keluarga radikal</span>`);
+    root.querySelector('.similar-library').insertAdjacentHTML('beforebegin', `<div class="similar-section-tabs" role="group" aria-label="Cara menjelajahi kanji mirip"><button data-similar-section="families" aria-pressed="${section === 'families'}" class="${section === 'families' ? 'active' : ''}">Radikal & komponen <span>${RADICAL_FAMILIES.length}</span></button><button data-similar-section="pairs" aria-pressed="${section === 'pairs'}" class="${section === 'pairs' ? 'active' : ''}">Bentuk mirip <span>${groups.length}</span></button></div>`);
+    if (section === 'families') {
+      const familyCount = new Set(RADICAL_FAMILIES.flatMap(f => f.members)).size;
+      root.querySelector('.similar-stats').innerHTML = `<span><strong>${RADICAL_FAMILIES.length}</strong> keluarga radikal</span><span><strong>${familyCount}</strong> kanji dalam keluarga</span><span><strong>${groups.length}</strong> perbandingan bentuk</span>`;
+      root.querySelector('.similar-hero-pair').innerHTML = `<div><span lang="ja">水</span><small>BENTUK DASAR</small></div><span class="similar-versus">→</span><div><span lang="ja">氵</span><small>BENTUK SAMPING</small></div>`;
+      root.querySelector('.similar-footnote').remove();
+      radicalView.renderOverview(root.querySelector('.similar-library'));
+      return;
+    }
     root.querySelector('#similar-search').addEventListener('input', e => {filters.query = e.target.value; page = 1; renderResults();});
     root.querySelector('#similar-level').addEventListener('change', e => {filters.level = e.target.value; page = 1; renderResults();});
     renderResults();
@@ -56,6 +71,7 @@ export function createSimilarView({root, kanji, groups, categories, levels, esca
   root.addEventListener('click', e => {
     const target = e.target.closest('button');
     if (!target || target.disabled) return;
+    if (target.dataset.similarSection) {section=target.dataset.similarSection;renderList();root.querySelector(`[data-similar-section="${section}"]`).focus({preventScroll:true});return;}
     if (target.dataset.similarCategory) {
       filters.category = target.dataset.similarCategory; page = 1;
       root.querySelectorAll('[data-similar-category]').forEach(b => {const active = b.dataset.similarCategory === filters.category;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
@@ -90,8 +106,9 @@ export function createSimilarView({root, kanji, groups, categories, levels, esca
 
   return {
     render(id) {
+      if (RADICAL_FAMILIES.some(f => f.id === id)) {section='families';selected=null;practice=null;radicalView.renderFamily(id);return;}
       selected = groups.find(g => g.id === id);
-      if (selected) renderGroup();
+      if (selected) {section='pairs';renderGroup();}
       else if (id) root.innerHTML = `<div class="empty"><h1>Kelompok tidak ditemukan.</h1><p>Pilih kembali kelompok yang ingin dibandingkan.</p><a class="primary" href="#mirip">Lihat semua kelompok</a></div>`;
       else renderList();
     },

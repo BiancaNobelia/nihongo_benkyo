@@ -13,6 +13,11 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 - Kanji Mirip: 48 kelompok pilihan berisi 117 kanji, dengan filter kemiripan,
   pencarian, perbandingan berdampingan, ciri pembeda, dan tips mengingat.
 - Latihan bentuk per kelompok dan tautan pasangan mirip dari detail kanji.
+- Kanji Mirip juga menyediakan 10 keluarga radikal/komponen dengan 824 kanji
+  unik: air, perjalanan, kayu, tangan, hati, ucapan, benang, tumbuhan, orang,
+  dan logam. Keluarga air berisi 130 kanji (123 dengan 氵), perjalanan 55.
+  Contoh pembeda, pencarian (termasuk romaji contoh), filter level/bentuk,
+  pagination, dan tautan dari detail tersedia di `#mirip`.
 - Flashcard dengan penilaian mandiri dan pilihan koleksi.
 - Kuis arti, kanji, atau bacaan kata; 5/10/20 soal dan timer opsional.
 - Bacaan ala JLPT: 100 soal kosakata (20 per level N5–N1) dengan pilihan hiragana
@@ -58,6 +63,8 @@ Pengujian penulisan juga memeriksa kesesuaian hiragana–katakana, bentuk kanji,
 okurigana, penempatan target kalimat, serta batas jumlah soal per level.
 Pengujian Kanji Mirip memeriksa rujukan karakter, filter yang mempertahankan
 pasangan beda level, jumlah goresan, dan pilihan latihan setiap kelompok.
+Pengujian radikal memeriksa cakupan keluarga, bentuk yang tidak boleh tertukar,
+pencarian, gabungan filter, dan pagination seluruh anggota.
 Jalankan `python -m unittest discover -s tests -p "test_*.py"` untuk memastikan
 build menolak data baru atau berubah yang belum ditinjau.
 

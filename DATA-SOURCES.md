@@ -98,6 +98,43 @@ tangan tetap dimungkinkan. Acuan bentuk termasuk
 yang juga menjelaskan bahwa panjang garis 土/士 sebagai komponen dapat bervariasi.
 Tidak ada gambar atau dataset diagram goresan eksternal yang disalin.
 
+### Keluarga radikal dan komponen
+
+Tab Kanji Mirip juga memiliki **10 keluarga dengan 824 karakter unik** dari
+katalog yang sama. `radical-members.js` mengambil label komponen utama dari
+[KanjiVG r20260714](https://github.com/KanjiVG/kanjivg/releases/tag/r20260714),
+© 2009–2026 Ulrich Apel dan kontributor, dengan
+[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+[Atribusi dan perubahan](data/licenses/KanjiVG-NOTICE.md) disertakan.
+Lisensi 3.0 ini berlaku untuk ekstrak komponen; data kamus lain tetap mengikuti
+lisensi yang dijelaskan sebelumnya. Tidak ada diagram atau path SVG yang disalin.
+
+Ekstraksi memeriksa bentuk utuh dan komponen langsungnya pada seluruh 2.383
+kanji; seluruhnya ditemukan pada sumber. Komponen bertanda parsial dan bagian
+yang lebih dalam tidak dipakai agar 木 di dalam 禾 atau 亻 di dalam 彳 tidak
+menjadi anggota yang menyesatkan. Komponen visual tidak harus sama dengan
+radikal kamus: 酒 tetap termasuk 氵. Batas ini berarti daftar bukan pencarian
+semua subkomponen tersembunyi, misalnya 氵 di dalam 落. Cakupan juga terbatas
+pada katalog situs, bukan seluruh karakter Jepang.
+
+Keluarga air memuat 130 kanji: 123 dengan 氵, 5 dengan 水, dan 2 dengan 氺.
+Keluarga perjalanan memuat 55 kanji dengan ⻌ atau 辶. Keluarga lain: 木, 扌/手,
+忄/心/⺗, 言, 糸, 艹, 亻 (ditambah bentuk dasar 人), dan 金. Satu kanji dapat
+masuk beberapa keluarga, seperti 休 pada orang dan kayu.
+
+`radical-data.js` memuat tema, contoh, dan petunjuk Indonesia yang disusun
+secara editorial. Tema hanya alat bantu ingatan, bukan klaim bahwa setiap
+anggota bermakna sama atau penjelasan etimologi. Arti dan bacaan daftar
+menggunakan katalog Indonesia yang sudah ditinjau. Contoh utama 水, 洗う,
+注意, 道, 毎週, dan 通る menjelaskan perbedaan bentuk dasar dan bentuk samping,
+serta perluasan makna seperti 注 pada 注意 dan 週 untuk pekan.
+
+`data/radical-source.json` mengunci URL rilis dan SHA-256 sumber. Untuk
+mereproduksi ekstraksi: `python scripts/build_radicals.py --download`, lalu
+`npm test`. Setelah cache tersedia, jalankan tanpa `--download` untuk bekerja
+tanpa jaringan. Perubahan arsip dengan versi yang sama ditolak sampai sumber
+ditinjau ulang. Semua data yang dipakai browser tersedia lokal.
+
 ### Kuis bacaan ala JLPT
 
 `jlpt-reading-data.js` berisi 100 soal latihan buatan, masing-masing 20 kosakata

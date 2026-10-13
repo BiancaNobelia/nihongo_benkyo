@@ -1,15 +1,17 @@
-import { KANJI } from './kanji-data.js?v=20261013-writing';
-import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261013-writing';
-import { shuffle, filterKanji, createQuiz, eligibleQuizCards, cleanProgress, localDay } from './core.js?v=20261013-writing';
-import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261013-writing';
-import { groupsForCharacter } from './similar-core.js?v=20261013-writing';
-import { createSimilarView } from './similar-view.js?v=20261013-writing';
+import { KANJI } from './kanji-data.js?v=20261013-radicals';
+import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261013-radicals';
+import { shuffle, filterKanji, createQuiz, eligibleQuizCards, cleanProgress, localDay } from './core.js?v=20261013-radicals';
+import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261013-radicals';
+import { groupsForCharacter } from './similar-core.js?v=20261013-radicals';
+import { createSimilarView } from './similar-view.js?v=20261013-radicals';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-radicals';
+import { familiesForCharacter } from './radical-core.js?v=20261013-radicals';
 
-import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261013-writing';
-import { filterReadingQuestions, createReadingQuiz } from './jlpt-reading-core.js?v=20261013-writing';
+import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261013-radicals';
+import { filterReadingQuestions, createReadingQuiz } from './jlpt-reading-core.js?v=20261013-radicals';
 
-import { KANJI_WRITING, KATAKANA_WRITING } from './writing-data.js?v=20261013-writing';
-import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261013-writing';
+import { KANJI_WRITING, KATAKANA_WRITING } from './writing-data.js?v=20261013-radicals';
+import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261013-radicals';
 
 const practiceBanks = {'jlpt-reading':JLPT_READINGS, 'hiragana-kanji':KANJI_WRITING, 'hiragana-katakana':KATAKANA_WRITING};
 
@@ -117,12 +119,14 @@ function openModal(html) { modalContent.innerHTML = html; modalContent.dataset.c
 function detail(char, record = true) {
   const k = KANJI.find(k => k.char === char); if (!k) return;
   const related = groupsForCharacter(SIMILAR_GROUPS, char);
+  const families = familiesForCharacter(RADICAL_FAMILIES,char);
   if (record) activity();
   openModal(`<div class="detail-hero"><span class="detail-glyph" lang="ja">${k.char}</span><h2 id="modal-title">${escape(k.meaning)}</h2><div class="detail-meta">${k.level} · ${levelNames[k.level]} <span class="footer-separator">/</span> ${k.strokes} goresan</div>${k.meaningsEn ? `<p class="source-gloss" lang="en">${escape(k.meaningsEn.join('; '))}</p>` : ''}</div>
     <div class="reading-grid"><div><small>ONYOMI · BACAAN ON</small><p lang="ja">${escape(k.on.join('、') || '—')}</p></div><div><small>KUNYOMI · BACAAN KUN</small><p lang="ja">${escape(k.kun.join('、') || '—')}</p></div></div>
     <p class="reading-note">Titik memisahkan bacaan kanji dan akhiran hiragana (okurigana).</p>
     <div class="example-box"><span class="example-title">TEMUKAN DALAM KATA</span>${k.example ? `<ruby lang="ja">${escape(k.example.word)}<rt>${escape(k.example.reading)}</rt></ruby><p>${escape(k.example.meaning)}</p>${k.example.meaningEn ? `<small class="source-gloss" lang="en">${escape(k.example.meaningEn)}</small>` : ''}` : '<p>Contoh kosakata belum tersedia untuk karakter ini. Bacaan on dan kun tetap dapat dipelajari.</p>'}</div>
     ${related.length ? `<div class="similar-related"><h3>Jangan tertukar dengan...</h3>${related.map(group => `<a href="#mirip/${group.id}" class="similar-related-link"><span lang="ja">${group.members.map(m => m.char).join(' · ')}</span><span>Bandingkan ${icon('arrow')}</span></a>`).join('')}</div>` : ''}
+    ${families.length ? `<div class="similar-related"><h3>Keluarga radikal & komponen</h3>${families.map(f => `<a href="#mirip/${f.id}" class="radical-related-link"><span lang="ja">${f.symbol}</span><span>${escape(f.title)}<small>${f.members.length} kanji dalam keluarga</small></span>${icon('arrow')}</a>`).join('')}</div>` : ''}
     <div class="modal-actions"><button class="secondary" data-save="${k.char}">${icon('bookmark')} ${progress.saved.includes(char) ? 'Tersimpan' : 'Simpan kanji'}</button><button class="primary" data-known="${k.char}">${icon('check')} ${progress.known.includes(char) ? 'Sudah dikuasai' : 'Tandai dikuasai'}</button></div>`);
   modalContent.dataset.char = char;
 }
@@ -324,7 +328,7 @@ document.addEventListener('click', e => {
   if (action === 'quiz-exit') openModal(`<div class="prose"><h2 id="modal-title">Akhiri latihan ini?</h2><p>Hasil sesi yang belum selesai tidak akan masuk ke riwayat kuis. Kamu bisa memulai sesi baru kapan saja.</p><div class="modal-actions"><button class="secondary" data-action="close">Lanjutkan kuis</button><button class="primary" data-action="quiz-confirm-exit">Akhiri latihan</button></div></div>`);
   if (action === 'quiz-confirm-exit') { modal.close(); renderQuizSetup(); }
   if (action === 'guide') openModal(`<div class="prose"><div class="section-kicker">BELAJAR DENGAN RITMEMU</div><h2 id="modal-title">Mulai dari satu kanji.</h2><ol><li><strong>Kenali.</strong> Buka Jelajahi Kanji, mulai dari level N5. Klik kartu untuk melihat arti, bacaan, dan contoh kata.</li><li><strong>Bedakan.</strong> Buka Kanji Mirip untuk membandingkan bentuk, melihat ciri pembeda, dan berlatih memilih kanji dari petunjuk visual.</li><li><strong>Ingat.</strong> Gunakan flashcard. Balik kartunya, lalu pilih “Sudah ingat” atau “Masih belajar”.</li><li><strong>Latih.</strong> Uji pemahaman lewat kuis arti atau bacaan kata. Mode Bacaan ala JLPT melatihmu membedakan pilihan hiragana yang mirip. Gunakan Hiragana → Kanji dan Hiragana → Katakana untuk melatih penulisan dengan pilihan bentuk yang mirip. Tinjau jawabanmu di akhir sesi.</li><li><strong>Ulangi.</strong> Simpan kanji yang ingin dipelajari lagi. Lihat perkembanganmu di Progres Saya.</li></ol><p>Onyomi adalah bacaan yang berasal dari bahasa Tionghoa. Kunyomi adalah bacaan asli Jepang. Bacaan yang digunakan bergantung pada kata, jadi selalu pelajari contoh penggunaannya.</p><button class="primary" data-action="close">Siap belajar ${icon('arrow')}</button></div>`);
-  if (action === 'sources') openModal(`<div class="prose"><div class="section-kicker">MATERI YANG KITA PELAJARI</div><h2 id="modal-title">Tentang koleksi kanji</h2><p>Koleksi mencakup seluruh ${KANJI.length.toLocaleString('id-ID')} kanji dalam snapshot OpenJLPT yang digunakan, dari N5 sampai N1. Pembagian level mengikuti daftar komunitas Jonathan Waller dan tambahan joyo dari OpenJLPT, bukan daftar resmi JLPT. Seluruh arti Indonesia dan contoh kata ditinjau ulang secara editorial oleh AI pada 13 Oktober 2026 agar lebih jelas dan sesuai konteks. Arti pada kartu diringkas untuk belajar; arti Inggris tersedia sebagai pembanding. Rincian tinjauan dan rujukan kamus tersedia dalam catatan data.</p><p>Bacaan dan jumlah goresan bersumber dari <a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project" target="_blank" rel="noopener">KANJIDIC2</a>, hak cipta James William Breen dan Electronic Dictionary Research and Development Group, melalui <a href="https://github.com/evanclan/OpenJLPT" target="_blank" rel="noopener">OpenJLPT</a>. Contoh kata berasal dari JMdict dan daftar Jonathan Waller melalui OpenJLPT serta <a href="https://kanjiapi.dev/" target="_blank" rel="noopener">kanjiapi.dev</a>.</p><p>Data adaptasi dalam koleksi ini tersedia dengan <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Lihat <a href="https://www.edrdg.org/edrdg/licence.html" target="_blank" rel="noopener">ketentuan sumber</a> dan <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">catatan data</a>.</p><p>Materi tersedia langsung di website. Progres dan simpanan disimpan di browser ini, tanpa akun.</p></div>`);
+  if (action === 'sources') openModal(`<div class="prose"><div class="section-kicker">MATERI YANG KITA PELAJARI</div><h2 id="modal-title">Tentang koleksi kanji</h2><p>Koleksi mencakup seluruh ${KANJI.length.toLocaleString('id-ID')} kanji dalam snapshot OpenJLPT yang digunakan, dari N5 sampai N1. Pembagian level mengikuti daftar komunitas Jonathan Waller dan tambahan joyo dari OpenJLPT, bukan daftar resmi JLPT. Seluruh arti Indonesia dan contoh kata ditinjau ulang secara editorial oleh AI pada 13 Oktober 2026 agar lebih jelas dan sesuai konteks. Arti pada kartu diringkas untuk belajar; arti Inggris tersedia sebagai pembanding. Rincian tinjauan dan rujukan kamus tersedia dalam catatan data.</p><p>Bacaan dan jumlah goresan bersumber dari <a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project" target="_blank" rel="noopener">KANJIDIC2</a>, hak cipta James William Breen dan Electronic Dictionary Research and Development Group, melalui <a href="https://github.com/evanclan/OpenJLPT" target="_blank" rel="noopener">OpenJLPT</a>. Contoh kata berasal dari JMdict dan daftar Jonathan Waller melalui OpenJLPT serta <a href="https://kanjiapi.dev/" target="_blank" rel="noopener">kanjiapi.dev</a>.</p><p>Data adaptasi dalam koleksi ini tersedia dengan <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Lihat <a href="https://www.edrdg.org/edrdg/licence.html" target="_blank" rel="noopener">ketentuan sumber</a> dan <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">catatan data</a>.</p><p>Keluarga radikal menggunakan label komponen dari <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> oleh Ulrich Apel dan kontributor. Ekstrak komponen ini memakai <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>. Pengelompokan dan penjelasan Indonesia ditambahkan untuk membantu belajar.</p><p>Materi tersedia langsung di website. Progres dan simpanan disimpan di browser ini, tanpa akun.</p></div>`);
 });
 modal.addEventListener('click', e => { if (e.target === modal) { const box = modal.getBoundingClientRect(); if (e.clientX < box.left || e.clientX > box.right || e.clientY < box.top || e.clientY > box.bottom) modal.close(); } });
 window.addEventListener('hashchange', route);

@@ -1,0 +1,28 @@
+{
+  "repository": "https://github.com/KanjiVG/kanjivg",
+  "version": "20260714",
+  "url": "https://github.com/KanjiVG/kanjivg/releases/download/r20260714/kanjivg-20260714.xml.gz",
+  "sha256": "d4a8e5e11533fe6a5d81a158b2c153964322641d2982c90a919461f3c06dca6b",
+  "retrieved": "2026-10-13",
+  "catalogCount": 2383,
+  "missing": [],
+  "counts": {
+    "水": 5,
+    "氵": 123,
+    "氺": 2,
+    "辶": 2,
+    "⻌": 53,
+    "木": 116,
+    "手": 8,
+    "扌": 89,
+    "心": 42,
+    "忄": 35,
+    "⺗": 2,
+    "言": 72,
+    "糸": 72,
+    "艹": 69,
+    "人": 15,
+    "亻": 100,
+    "金": 36
+  }
+}
