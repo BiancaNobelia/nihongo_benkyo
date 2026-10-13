@@ -18,6 +18,11 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 - Bacaan ala JLPT: 100 soal kosakata (20 per level N5–N1) dengan pilihan hiragana
   yang mirip, arti Indonesia, dan penjelasan bunyi panjang, dakuten, serta kana kecil.
   Buka langsung melalui `#kuis/jlpt`. Ini latihan buatan, bukan soal resmi ujian.
+- Hiragana → Kanji dan Hiragana → Katakana: masing-masing 50 soal (10 per level
+  N5–N1), kalimat dengan target bergaris bawah, empat pilihan bentuk mirip,
+  arti kalimat, dan penjelasan perbedaannya. Buka `#kuis/hiragana-kanji` atau
+  `#kuis/hiragana-katakana`. Pilih semua level untuk sesi 20 soal; satu level
+  menyediakan maksimal 10 soal tanpa pengulangan dalam satu sesi.
 - Hasil kuis, progres penguasaan, dan hari belajar di `localStorage`.
 
 Progres hanya tersedia di browser/perangkat yang sama, tanpa akun atau server.
@@ -49,6 +54,8 @@ Jalankan `npm test` (Node.js 20+) untuk memeriksa kelengkapan data, pencarian,
 pilihan kuis, validasi progres, tanggal belajar lokal, dan regresi terjemahan.
 Pengujian bacaan ala JLPT mencocokkan bank soal dengan snapshot sumber, memeriksa
 kemiripan pengecoh, pengacakan, cakupan level, dan kompatibilitas riwayat lama.
+Pengujian penulisan juga memeriksa kesesuaian hiragana–katakana, bentuk kanji,
+okurigana, penempatan target kalimat, serta batas jumlah soal per level.
 Pengujian Kanji Mirip memeriksa rujukan karakter, filter yang mempertahankan
 pasangan beda level, jumlah goresan, dan pilihan latihan setiap kelompok.
 Jalankan `python -m unittest discover -s tests -p "test_*.py"` untuk memastikan

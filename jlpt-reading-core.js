@@ -1,4 +1,4 @@
-import { shuffle } from './core.js?v=20261013-jlpt';
+import { shuffle } from './core.js?v=20261013-writing';
 
 export function filterReadingQuestions(bank, level = 'all') {
   return bank.filter(q => level === 'all' || q.level === level);

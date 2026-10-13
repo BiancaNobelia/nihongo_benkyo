@@ -1,0 +1,140 @@
+// Original contextual spelling exercises. Vocabulary: pinned OpenJLPT/JMdict.
+// See DATA-SOURCES.md for attribution and the distinction from official exams.
+// Rows: source word, hiragana prompt, answer, meaning, sentence with {target},
+// sentence translation, three visually similar distractors, explanation.
+const KANJI_BANK = {
+  N5: [
+    ['飲む','のみました','飲みました','Minum (bentuk lampau sopan)','みずを {target}。','Saya minum air.',['飯みました','飼みました','飾みました'],'飲 memakai bagian 欠 di sebelah kanan. 飯 memakai 反. Bacaan のみました ditulis 飲みました; akhiran みました tetap hiragana.'],
+    ['車','くるま','車','Mobil; kendaraan','あの {target} は あかいです。','Mobil itu berwarna merah.',['軍','東','申'],'車 memiliki bentuk kotak di tengah dan garis mendatar di bawahnya. Bedakan dengan 軍 yang memiliki penutup di atas, serta 東 dan 申.'],
+    ['本','ほん','本','Buku','この {target} を よみます。','Saya akan membaca buku ini.',['木','未','末'],'本 mirip 木, tetapi memiliki satu garis mendatar pendek tambahan di bagian bawah. Pada 未 dan 末, garis tambahan berada di atas.'],
+    ['半分','はんぶん','半分','Setengah','パンを {target} たべました。','Saya makan setengah roti.',['羊分','平分','牛分'],'半 memakai dua goresan pendek di atas garis mendatarnya. Jangan tertukar dengan 羊, 平, atau 牛. 分 tetap sama.'],
+    ['学校','がっこう','学校','Sekolah','まいにち {target} へ いきます。','Saya pergi ke sekolah setiap hari.',['学交','学効','字校'],'校 memiliki 木 di sebelah kiri dan 交 di kanan. 学 memakai bagian 子 di bawahnya; bedakan dengan 字.'],
+    ['先生','せんせい','先生','Guru','{target} に しつもんします。','Saya bertanya kepada guru.',['先牛','先主','失生'],'生 memiliki garis mendatar paling bawah yang tidak ada pada 牛. Kanji pertama adalah 先 dengan bagian 儿 di bawah, bukan 失.'],
+    ['会社','かいしゃ','会社','Perusahaan','あには {target} で はたらきます。','Kakak laki-laki saya bekerja di perusahaan.',['会杜','合社','会仕'],'社 memiliki 礻 di kiri dan 土 di kanan. 杜 memakai 木, sedangkan 仕 memakai 亻. Kanji pertamanya 会, bukan 合.'],
+    ['先週','せんしゅう','先週','Minggu lalu','{target}、ともだちに あいました。','Minggu lalu saya bertemu teman.',['先遇','先通','先過'],'週 memiliki bagian 周 di dalam 辶. 遇, 通, dan 過 juga memakai 辶, tetapi bagian dalamnya berbeda.'],
+    ['新しい','あたらしい','新しい','Baru','{target} かばんを かいました。','Saya membeli tas baru.',['親しい','薪しい','辛しい'],'新 memiliki 斤 di kanan. 親 memakai 見, dan 薪 menambahkan 艹 di atas 新. Untuk あたらしい, tulis 新しい.'],
+    ['右','みぎ','右','Kanan','つぎは {target} に まがります。','Selanjutnya saya akan berbelok ke kanan.',['石','古','若'],'右 memiliki 口 di bawah bagian ナ. Perhatikan bagian atasnya agar tidak tertukar dengan 石, 古, atau 若.'],
+  ],
+  N4: [
+    ['安心','あんしん','安心','Rasa tenang; lega','ぶじだと きいて、{target} しました。','Saya lega setelah mendengar bahwa semuanya selamat.',['安必','案心','安志'],'心 dan 必 berbeda pada goresan miring yang melintas di 必. 安 berakhir dengan 女; 案 masih memiliki 木 di bawahnya.'],
+    ['安全','あんぜん','安全','Aman; keselamatan','この みちは {target} です。','Jalan ini aman.',['安金','案全','安王'],'全 memiliki 人 di atas 王. Jangan memilih 金 yang memiliki goresan tambahan di bagian bawah.'],
+    ['運動','うんどう','運動','Olahraga; gerakan','あさ、こうえんで {target} します。','Pagi hari saya berolahraga di taman.',['運働','連動','運重'],'動 terdiri dari 重 dan 力. 働 menambahkan 亻 di kiri. Pada 運, bagian dalam 辶 adalah 軍, bukan 車 seperti pada 連.'],
+    ['住所','じゅうしょ','住所','Alamat','ここに {target} を かいてください。','Tolong tulis alamat di sini.',['住折','柱所','任所'],'住 memiliki 亻 di kiri dan 主 di kanan. 柱 memakai 木, sedangkan 任 memiliki 壬 di kanan.'],
+    ['卒業','そつぎょう','卒業','Kelulusan; lulus','らいねん、がっこうを {target} します。','Tahun depan saya akan lulus sekolah.',['率業','卒葉','卒菓'],'卒 memiliki dua 人 di bagian tengah. 業 berbeda dari 葉 dan 菓 yang memiliki 艹 di atas.'],
+    ['意見','いけん','意見','Pendapat','あなたの {target} を きかせてください。','Tolong sampaikan pendapatmu.',['意貝','音見','意具'],'見 berakhir dengan 儿, sedangkan 貝 berakhir dengan dua goresan yang terpisah. 意 memiliki 心 di bawah 音.'],
+    ['試験','しけん','試験','Ujian','あした、にほんごの {target} が あります。','Besok ada ujian bahasa Jepang.',['試検','持験','詩験'],'験 memakai 馬 di kiri; 検 memakai 木. 試 terdiri dari 言 dan 式, berbeda dari 詩 yang memakai 寺.'],
+    ['説明','せつめい','説明','Penjelasan','もういちど {target} してください。','Tolong jelaskan sekali lagi.',['説朋','悦明','説朗'],'説 memiliki 言 di kiri. 明 terdiri dari 日 dan 月; 朋 terdiri dari dua 月.'],
+    ['経験','けいけん','経験','Pengalaman','この しごとの {target} が あります。','Saya punya pengalaman dalam pekerjaan ini.',['経検','径験','経険'],'経 memakai 糸 di kiri, bukan 彳 seperti 径. 験 memakai 馬; 検 memakai 木 dan 険 memakai 阝.'],
+    ['約束','やくそく','約束','Janji','ともだちとの {target} を まもります。','Saya menepati janji kepada teman.',['約東','約朿','的束'],'束 memiliki bentuk kotak yang dilintasi garis tegak. Bedakan dengan 東 dan 朿. 約 memakai 糸 di kiri, bukan 白 seperti 的.'],
+  ],
+  N3: [
+    ['愛情','あいじょう','愛情','Kasih sayang','こどもに {target} を そそぎます。','Saya mencurahkan kasih sayang kepada anak.',['愛晴','受情','愛清'],'情 memakai 忄 di kiri 青. 晴 memakai 日, sedangkan 清 memakai 氵. 愛 memiliki 心 di bagian tengah.'],
+    ['環境','かんきょう','環境','Lingkungan','しぜんの {target} を まもりたいです。','Saya ingin melindungi lingkungan alam.',['環鏡','還境','環竟'],'境 memakai 土 di kiri, sedangkan 鏡 memakai 金. 環 memakai 王 di kiri, bukan 辶 seperti 還.'],
+    ['協力','きょうりょく','協力','Kerja sama','みんなで {target} して そうじします。','Kami bekerja sama untuk membersihkan tempat ini.',['協刀','脅力','協九'],'協 memiliki 十 di kiri dan tiga 力 di kanan. Kanji kedua adalah 力, bukan 刀 atau 九.'],
+    ['重要','じゅうよう','重要','Penting','これは とても {target} な もんだいです。','Ini persoalan yang sangat penting.',['重耍','動要','重票'],'要 memiliki 女 di bawahnya. 耍 memiliki 而 di atas, sedangkan 票 berakhir dengan 示.'],
+    ['成長','せいちょう','成長','Pertumbuhan','こどもの {target} が たのしみです。','Saya menantikan tumbuh kembang anak.',['成張','戌長','城長'],'成 berbeda dari 戌 pada bagian dalamnya. 長 tidak memiliki 弓 di kiri seperti 張.'],
+    ['責任','せきにん','責任','Tanggung jawab','じぶんの しごとに {target} を もちます。','Saya bertanggung jawab atas pekerjaan sendiri.',['責住','貴任','責仕'],'責 berakhir dengan 貝. 任 memiliki 壬 di kanan; 住 memiliki 主, dan 仕 memiliki 士.'],
+    ['判断','はんだん','判断','Penilaian; keputusan','じょうほうを あつめてから {target} します。','Saya akan memutuskan setelah mengumpulkan informasi.',['判折','伴断','半断'],'判 memiliki 刂 di kanan 半. 断 memakai 斤 di kanan; jangan tertukar dengan 折 yang memakai 扌.'],
+    ['表情','ひょうじょう','表情','Ekspresi wajah','かれの {target} が やわらかく なりました。','Ekspresi wajahnya menjadi lebih lembut.',['表晴','俵情','表精'],'表 tidak memiliki 亻 di kiri seperti 俵. 情 memakai 忄, sedangkan 晴 memakai 日 dan 精 memakai 米.'],
+    ['解釈','かいしゃく','解釈','Penafsiran','この ぶんには ふたつの {target} が あります。','Kalimat ini mempunyai dua penafsiran.',['解訳','触釈','解択'],'釈 memiliki 釆 di kiri. 訳 memakai 言, dan 択 memakai 扌. Kanji pertama 解, bukan 触.'],
+    ['一般','いっぱん','一般','Umum','この ことばは {target} に つかわれます。','Kata ini digunakan secara umum.',['一船','一盤','一搬'],'般 terdiri dari 舟 dan 殳. 盤 menambahkan 皿 di bawah 般, sedangkan 搬 menambahkan 扌 di kiri.'],
+  ],
+  N2: [
+    ['圧縮','あっしゅく','圧縮','Pemampatan; kompresi','ファイルを {target} して おくります。','Saya mengompres berkas lalu mengirimkannya.',['圧宿','圧緒','庄縮'],'縮 memakai 糸 di kiri dan 宿 di kanan. 圧 memiliki 厂 di atas 土, berbeda dari 庄.'],
+    ['育児','いくじ','育児','Pengasuhan anak','ふたりで {target} を ぶんたんします。','Kami berdua berbagi tugas mengasuh anak.',['育兄','育見','青児'],'児 memiliki 儿 di bawah bagian atasnya. Bedakan dengan 兄 yang memakai 口 di atas, serta 見.'],
+    ['一斉','いっせい','一斉','Serentak','ベルが なると、みんなが {target} に たちました。','Ketika bel berbunyi, semua orang berdiri serentak.',['一済','一斎','一剤'],'斉 tidak memiliki 氵 di kiri seperti 済 atau 刂 di kanan seperti 剤. Jangan tertukar dengan 斎 yang memiliki bagian bawah berbeda.'],
+    ['乾燥','かんそう','乾燥','Pengeringan; keadaan kering','ふゆは くうきが {target} します。','Pada musim dingin udara menjadi kering.',['乾操','乾躁','幹燥'],'燥 memiliki 火 di kiri. 操 memakai 扌, dan 躁 memakai 足. 乾 juga berbeda dari 幹 pada bagian kanannya.'],
+    ['教養','きょうよう','教養','Wawasan dan pengetahuan umum','どくしょを とおして {target} を ふかめます。','Saya memperluas wawasan melalui membaca.',['教様','孝養','教美'],'養 memiliki bagian yang menyerupai 食 di bawah. Bedakan dengan 様 dan 美. 教 memiliki 攵 di kanan 孝.'],
+    ['構造','こうぞう','構造','Struktur; susunan','この はしの {target} を しらべます。','Saya meneliti struktur jembatan ini.',['講造','構告','構浩'],'構 memakai 木 di kiri; 講 memakai 言. 造 memiliki 辶 yang membungkus 告, sedangkan 浩 memakai 氵.'],
+    ['寿命','じゅみょう','寿命','Jangka hidup; usia pakai','この でんちの {target} は ながいです。','Baterai ini memiliki usia pakai yang panjang.',['寿令','寺命','寿合'],'命 memiliki 口 dan 卩 di bawah bagian atasnya. Bedakan dengan 令 dan 合. Kanji pertama adalah 寿, bukan 寺.'],
+    ['出張','しゅっちょう','出張','Perjalanan dinas','らいしゅう、おおさかへ {target} します。','Minggu depan saya pergi dinas ke Osaka.',['出帳','出長','山張'],'張 memiliki 弓 di kiri 長. 帳 memakai 巾, dan 長 saja tidak memiliki bagian kiri tersebut.'],
+    ['純粋','じゅんすい','純粋','Murni','これは {target} な みずです。','Ini air murni.',['純砕','鈍粋','純枠'],'純 memiliki 糸 di kiri, bukan 金 seperti 鈍. 粋 memakai 米; 砕 memakai 石 dan 枠 memakai 木.'],
+    ['矛盾','むじゅん','矛盾','Pertentangan; kontradiksi','その せつめいには {target} が あります。','Ada kontradiksi dalam penjelasan itu.',['予盾','矛循','矛眉'],'矛 memiliki goresan miring tambahan yang membedakannya dari 予. 盾 tidak memiliki 彳 seperti 循 dan berbeda dari 眉.'],
+  ],
+  N1: [
+    ['圧迫','あっぱく','圧迫','Tekanan; penekanan','たかい やちんが かけいを {target} しています。','Biaya sewa yang tinggi membebani keuangan rumah tangga.',['圧拍','圧柏','庄迫'],'迫 memiliki 辶 di sisi 白. 拍 memakai 扌, sedangkan 柏 memakai 木.'],
+    ['衝撃','しょうげき','衝撃','Benturan; guncangan','その ニュースに {target} を うけました。','Saya terguncang oleh berita itu.',['衝繋','衡撃','銜撃'],'衝 memiliki 重 di tengah 行. 撃 berakhir dengan 手, sedangkan 繋 berakhir dengan 糸. 銜 memiliki 金 di tengah, bukan 重 seperti 衝.'],
+    ['頻繁','ひんぱん','頻繁','Sering; kerap','かのじょとは {target} に れんらくを とっています。','Saya sering berkomunikasi dengannya.',['頻緊','頓繁','瀕繁'],'頻 memiliki 歩 di kiri 頁. 繁 berakhir dengan 糸, dengan 敏 di bagian atasnya; bedakan dengan 緊.'],
+    ['繁栄','はんえい','繁栄','Kemakmuran','まちの {target} を ねがっています。','Saya berharap kota ini makmur.',['繁営','繁巣','緊栄'],'栄 memiliki 木 di bawah penutupnya. 営 berakhir dengan dua 口, sedangkan 巣 memiliki bagian tengah yang berbeda.'],
+    ['誠実','せいじつ','誠実','Tulus; jujur','かれは いつも {target} に たいおうします。','Dia selalu menanggapi dengan tulus.',['誠夫','城実','誠突'],'誠 memiliki 言 di kiri 成, sedangkan 城 memiliki 土. 実 memakai 宀 di atas bagian bawahnya, berbeda dari 突.'],
+    ['診療','しんりょう','診療','Pemeriksaan dan perawatan medis','この びょういんは どようびも {target} しています。','Rumah sakit ini juga melayani pemeriksaan pada hari Sabtu.',['診寮','珍療','診僚'],'療 memakai 疒 yang berkaitan dengan sakit. 寮 memakai 宀, dan 僚 memakai 亻. 診 memakai 言 di kiri.'],
+    ['領域','りょういき','領域','Wilayah; lingkup bidang','それは わたしの せんもんの {target} です。','Itu merupakan bidang keahlian saya.',['領城','頑域','領惑'],'域 memiliki 土 di kiri 或. 城 juga memakai 土, tetapi kanannya 成. 領 memiliki 令 di kiri 頁.'],
+    ['革新','かくしん','革新','Pembaruan; inovasi','ぎじゅつの {target} が せいかつを かえます。','Inovasi teknologi mengubah kehidupan.',['革親','華新','革薪'],'革 berbeda bentuk dari 華. 新 memiliki 斤 di kanan; 親 memiliki 見, sedangkan 薪 menambahkan 艹 di atas 新.'],
+    ['暗殺','あんさつ','暗殺','Pembunuhan terencana terhadap tokoh penting','その しょうせつは おうの {target} を えがいています。','Novel itu menggambarkan pembunuhan terhadap raja.',['闇殺','暗殻','諳殺'],'暗 memiliki 日 di kiri 音. 闇 menempatkan 音 di dalam 門, sedangkan 諳 memakai 言 di kiri.'],
+    ['措置','そち','措置','Langkah penanganan; tindakan','ひつような {target} を はやく とってください。','Tolong segera ambil langkah penanganan yang diperlukan.',['措直','錯置','措値'],'措 memiliki 扌 di kiri 昔, bukan 金 seperti 錯. 置 memiliki 罒 di atas 直; 値 memakai 亻.'],
+  ],
+};
+
+const KATAKANA_BANK = {
+  N5: [
+    ['シャワー','しゃわー','シャワー','Pancuran mandi','うんどうの あと、{target} を あびます。','Setelah berolahraga, saya mandi dengan pancuran.',['シャウー','ツャワー','ツャウー'],'シャ memakai シ dan ャ kecil, bukan ツ. ワ tidak memiliki goresan pendek tambahan di atas seperti ウ. Tanda ー memanjangkan bunyi.'],
+    ['コーヒー','こーひー','コーヒー','Kopi','あさは {target} を のみます。','Pagi hari saya minum kopi.',['ユーヒー','コービー','コーピー'],'コ dan ユ memiliki letak garis tegak yang berbeda. ヒ tidak memakai dakuten seperti ビ atau tanda lingkaran seperti ピ.'],
+    ['テレビ','てれび','テレビ','Televisi','よる、{target} を みます。','Pada malam hari saya menonton televisi.',['テレピ','テレヒ','テルビ'],'ビ memakai dakuten. ピ memakai lingkaran kecil, sedangkan ヒ tidak bertanda. レ berbeda dari ル yang memiliki dua goresan.'],
+    ['タクシー','たくしー','タクシー','Taksi','えきまで {target} で いきます。','Saya pergi ke stasiun naik taksi.',['タクツー','タワシー','タクジー'],'Perhatikan シ dan ツ yang mirip. シ tanpa dakuten; jika diberi dakuten, bentuknya menjadi ジ.'],
+    ['シャツ','しゃつ','シャツ','Kemeja','しろい {target} を きます。','Saya memakai kemeja putih.',['シヤツ','ツャツ','シャシ'],'シャ memakai ャ kecil, dan huruf terakhir adalah ツ besar. Bedakan シ di awal dengan ツ di akhir.'],
+    ['レストラン','れすとらん','レストラン','Restoran','この {target} は おいしいです。','Makanan di restoran ini enak.',['レストラソ','レスドラン','レズトラン'],'Huruf terakhir ン, bukan ソ. ス tidak memakai dakuten. ト tidak memakai dakuten seperti ド.'],
+    ['ホテル','ほてる','ホテル','Hotel','えきの ちかくの {target} に とまります。','Saya menginap di hotel dekat stasiun.',['ホテレ','ホデル','ポテル'],'ル memiliki dua goresan yang terpisah; レ hanya satu goresan. ホ tidak memakai tanda lingkaran seperti ポ.'],
+    ['カメラ','かめら','カメラ','Kamera','この {target} で しゃしんを とります。','Saya mengambil foto dengan kamera ini.',['カメフ','ガメラ','カヌラ'],'ラ memiliki garis pendek di atas bentuk yang mirip フ. カ tidak memakai dakuten; メ berbeda dari ヌ.'],
+    ['ノート','のーと','ノート','Buku catatan','{target} に なまえを かいてください。','Tolong tulis nama di buku catatan.',['ソート','メート','ノード'],'ノ hanya memiliki satu goresan miring. ソ dan メ memiliki goresan tambahan; ト tidak memakai dakuten.'],
+    ['ベッド','べっど','ベッド','Tempat tidur','へやに {target} が あります。','Ada tempat tidur di kamar.',['ベツド','ペッド','ベット'],'ッ ditulis kecil untuk jeda konsonan. ベ dan ド memakai dakuten; ペ memakai lingkaran kecil.'],
+  ],
+  N4: [
+    ['ガソリン','がそりん','ガソリン','Bensin','くるまに {target} を いれます。','Saya mengisi bensin ke mobil.',['ガンリン','ガソリソ','カソリン'],'ガ memakai dakuten. Bedakan ソ di tengah dengan ン di akhir; bentuknya mirip, tetapi arah goresannya berbeda.'],
+    ['スーツケース','すーつけーす','スーツケース','Koper','{target} に ふくを いれます。','Saya memasukkan pakaian ke dalam koper.',['スーシケース','スーツケーズ','スーツケーヌ'],'ツ ditulis besar, bukan シ. Ada dua tanda panjang ー, masing-masing setelah ス dan ケ.'],
+    ['パソコン','ぱそこん','パソコン','Komputer pribadi','{target} で メールを おくります。','Saya mengirim surel melalui komputer.',['バソコン','パンコン','パソコソ'],'パ memakai lingkaran kecil. Bedakan ソ di bagian tengah dengan ン di akhir.'],
+    ['アルバイト','あるばいと','アルバイト','Pekerjaan paruh waktu','しゅうまつは {target} を しています。','Pada akhir pekan saya bekerja paruh waktu.',['アルパイト','アルバィト','アレバイト'],'バ memakai dakuten, dan ル memiliki dua goresan. Jangan tertukar dengan パ atau レ.'],
+    ['エスカレーター','えすかれーたー','エスカレーター','Eskalator','{target} で にかいへ あがります。','Saya naik ke lantai dua dengan eskalator.',['エスカレークー','エスカレーダー','エスカレーヌー'],'レー dan ター memakai tanda panjang. タ tidak memakai dakuten; bedakan bentuknya dengan ク dan ヌ.'],
+    ['スクリーン','すくりーん','スクリーン','Layar','{target} に しゃしんが うつっています。','Foto terlihat di layar.',['スクリーソ','スクソーン','スワリーン'],'Huruf terakhir adalah ン, bukan ソ. リ berbeda dari ソ, dan ク berbeda dari ワ pada bentuk bagian atasnya.'],
+    ['ステーキ','すてーき','ステーキ','Steik','ばんごはんに {target} を たべます。','Saya makan steik untuk makan malam.',['ステーギ','スチーキ','ズテーキ'],'テ berbeda dari チ pada garis bagian atasnya. ス dan キ tidak memakai dakuten.'],
+    ['プレゼント','ぷれぜんと','プレゼント','Hadiah','ともだちに {target} を おくります。','Saya mengirim hadiah kepada teman.',['ブレゼント','プレゼソト','プレセント'],'プ memakai lingkaran kecil, ゼ memakai dakuten, dan ン tidak sama dengan ソ.'],
+    ['タイプ','たいぷ','タイプ','Tipe; jenis','どの {target} が すきですか。','Tipe mana yang kamu sukai?',['タイブ','タィプ','タイル'],'プ memakai lingkaran kecil, bukan dakuten seperti ブ. イ di tengah ditulis besar.'],
+    ['ステレオ','すてれお','ステレオ','Perangkat audio stereo','{target} で おんがくを ききます。','Saya mendengarkan musik dengan perangkat stereo.',['ステルオ','ステレホ','ズテレオ'],'レ berbeda dari ル yang memiliki dua goresan. オ berbeda dari ホ pada bagian bawahnya; ス tidak memakai dakuten.'],
+  ],
+  N3: [
+    ['サービス','さーびす','サービス','Layanan','この みせの {target} は ていねいです。','Pelayanan di toko ini ramah dan teliti.',['サーピス','サービズ','ザービス'],'ビ memakai dakuten, sedangkan ス tidak. Gunakan tanda panjang ー setelah サ.'],
+    ['チャンス','ちゃんす','チャンス','Kesempatan','これは よい {target} です。','Ini kesempatan yang baik.',['チヤンス','チャンズ','チャソス'],'チャ memakai ャ kecil. Bedakan ン dengan ソ, dan ス tidak memakai dakuten.'],
+    ['スピーチ','すぴーち','スピーチ','Pidato','みんなの まえで {target} を します。','Saya akan berpidato di depan semua orang.',['スビーチ','スピーテ','ズピーチ'],'ピ memakai lingkaran kecil. Huruf terakhir チ, bukan テ; ス di awal tidak memakai dakuten.'],
+    ['パスポート','ぱすぽーと','パスポート','Paspor','りょこうの まえに {target} を かくにんします。','Saya memeriksa paspor sebelum bepergian.',['バスポート','パスボート','パスポード'],'パ dan ポ sama-sama memakai lingkaran kecil. ポー memakai tanda panjang.'],
+    ['エネルギー','えねるぎー','エネルギー','Energi','たいようの {target} を りようします。','Kami memanfaatkan energi matahari.',['エネルキー','エネレギー','エヌルギー'],'ギ memakai dakuten, dan ル memiliki dua goresan. Tanda terakhir adalah ー untuk bunyi panjang.'],
+    ['プラス','ぷらす','プラス','Tambah; positif','けいけんが しごとに {target} に なります。','Pengalaman menjadi nilai tambah bagi pekerjaan.',['ブラス','プラズ','プフス'],'プ memakai lingkaran kecil. ラ memiliki garis pendek di atasnya; ス tidak memakai dakuten.'],
+    ['ジュース','じゅーす','ジュース','Jus; minuman ringan','オレンジの {target} を のみます。','Saya minum jus jeruk.',['ジユース','ヅュース','シュース'],'ジュ memakai ジ dan ュ kecil. ジ berasal dari シ dengan dakuten, berbeda dari ヅ yang berasal dari ツ.'],
+    ['サイン','さいん','サイン','Tanda tangan','ここに {target} を おねがいします。','Mohon tanda tangan di sini.',['サイソ','サィン','ザイン'],'イ ditulis besar. Huruf terakhir ン, bukan ソ, dan サ tidak memakai dakuten.'],
+    ['メンバー','めんばー','メンバー','Anggota','あたらしい {target} を しょうかいします。','Saya memperkenalkan anggota baru.',['メソバー','メンパー','ヌンバー'],'メ berbeda dari ヌ. Gunakan ン, bukan ソ; バ memakai dakuten, bukan lingkaran kecil.'],
+    ['スタイル','すたいる','スタイル','Gaya','じぶんに あう {target} を さがします。','Saya mencari gaya yang cocok untuk diri sendiri.',['スタイレ','ズタイル','スタィル'],'イ ditulis besar, dan ル memiliki dua goresan, berbeda dari レ. ス tidak memakai dakuten.'],
+  ],
+  N2: [
+    ['アンテナ','あんてな','アンテナ','Antena','やねに {target} を とりつけます。','Saya memasang antena di atap.',['アソテナ','アンチナ','アソチナ'],'Huruf kedua adalah ン, bukan ソ. テ berbeda dari チ pada bentuk garis bagian atasnya.'],
+    ['インタビュー','いんたびゅー','インタビュー','Wawancara','せんしゅに {target} を しました。','Saya mewawancarai atlet.',['イソタビュー','インタビユー','インタピュー'],'ン tidak sama dengan ソ. ビュ memakai ビ dengan dakuten dan ュ kecil.'],
+    ['コレクション','これくしょん','コレクション','Koleksi','きっての {target} を みせてもらいました。','Saya diperlihatkan koleksi perangko.',['コレクツョン','コレクシヨン','コレクショソ'],'ション memakai シ, ョ kecil, dan ン. Perhatikan pasangan シ・ツ dan ン・ソ.'],
+    ['コンクリート','こんくりーと','コンクリート','Beton','この かべは {target} で できています。','Dinding ini terbuat dari beton.',['コソクリート','コンクソート','コンクリード'],'ン berbeda dari ソ, dan リ memiliki bentuk berbeda dari ソ. リー memakai tanda panjang.'],
+    ['サンプル','さんぷる','サンプル','Sampel; contoh','まず {target} を おくってください。','Tolong kirim sampelnya terlebih dahulu.',['サソプル','サンブル','サンプレ'],'ン bukan ソ, プ memakai lingkaran kecil, dan ル berbeda dari レ yang hanya memiliki satu goresan.'],
+    ['リズム','りずむ','リズム','Irama','おんがくの {target} に あわせて おどります。','Saya menari mengikuti irama musik.',['リスム','ソズム','リズマ'],'ズ memakai dakuten. リ berbeda dari ソ, dan ム berbeda dari マ pada bagian bawahnya.'],
+    ['レンズ','れんず','レンズ','Lensa','カメラの {target} を ふきます。','Saya mengelap lensa kamera.',['レソズ','レンス','ルンズ'],'ン bukan ソ, dan ズ memakai dakuten. レ memiliki satu goresan, berbeda dari ル.'],
+    ['サークル','さーくる','サークル','Kelompok kegiatan; klub','だいがくの {target} に はいりました。','Saya bergabung dengan klub di kampus.',['サーワル','サークレ','ザークル'],'ク berbeda dari ワ, dan ル berbeda dari レ. Gunakan tanda panjang ー setelah サ.'],
+    ['コンセント','こんせんと','コンセント','Stopkontak','プラグを {target} に さします。','Saya mencolokkan steker ke stopkontak.',['コンセソト','コソセント','コンゼント'],'Kedua bunyi ん ditulis ン, bukan ソ. セ tidak memakai dakuten.'],
+    ['スケジュール','すけじゅーる','スケジュール','Jadwal','らいしゅうの {target} を かくにんします。','Saya memeriksa jadwal minggu depan.',['スケジユール','スケヂュール','スケジューレ'],'ジュ memakai ジ dan ュ kecil. Bedakan ジ dari ヂ, dan ル dari レ.'],
+  ],
+  N1: [
+    ['メッセージ','めっせーじ','メッセージ','Pesan','かれから {target} が とどきました。','Saya menerima pesan darinya.',['メツセージ','メッセーヂ','メッセーツ'],'ッ ditulis kecil. Huruf terakhir ジ berasal dari シ dengan dakuten, bukan ヂ atau ツ.'],
+    ['コミュニケーション','こみゅにけーしょん','コミュニケーション','Komunikasi','ちーむないの {target} を たいせつにします。','Kami mengutamakan komunikasi di dalam tim.',['コミユニケーション','コミュニケーシヨン','コミュニケーショソ'],'ミュ dan ショ memakai ュ serta ョ kecil. Huruf terakhir ン, bukan ソ.'],
+    ['レクリエーション','れくりえーしょん','レクリエーション','Rekreasi','しゅうまつに {target} を たのしみます。','Kami menikmati rekreasi pada akhir pekan.',['レクリエーシヨン','レクリエーツョン','レクリエーショソ'],'ション memakai シ, ョ kecil, dan ン. Jangan tertukar dengan ツ atau ソ.'],
+    ['レギュラー','れぎゅらー','レギュラー','Anggota tetap; pemain inti','かれは ちーむの {target} です。','Dia adalah pemain inti tim.',['レキュラー','レギユラー','レギュフー'],'ギ memakai dakuten dan diikuti ュ kecil. ラ memiliki garis pendek di atas, berbeda dari フ.'],
+    ['デッサン','でっさん','デッサン','Sketsa; gambar studi','びじゅつの じゅぎょうで {target} を かきます。','Saya membuat sketsa dalam pelajaran seni.',['デツサン','テッサン','デッサソ'],'デ memakai dakuten, ッ ditulis kecil, dan huruf terakhir adalah ン, bukan ソ.'],
+    ['オリエンテーション','おりえんてーしょん','オリエンテーション','Orientasi; pengenalan awal','にゅうしゃごに {target} を うけます。','Saya mengikuti orientasi setelah bergabung dengan perusahaan.',['オリエソテーション','オリエンテーシヨン','オリエンテーツョン'],'Perhatikan ン dan ソ. Bagian ショ memakai シ dan ョ kecil, bukan ツ atau ヨ besar.'],
+    ['ニュアンス','にゅあんす','ニュアンス','Nuansa; perbedaan makna yang halus','ことばの {target} の ちがいを せつめいします。','Saya menjelaskan perbedaan nuansa makna kata.',['ニユアンス','ニュアソス','ニュアンズ'],'ニュ memakai ュ kecil, sedangkan ア ditulis besar. ン berbeda dari ソ; ス tidak memakai dakuten.'],
+    ['ジャンル','じゃんる','ジャンル','Genre; jenis karya','いろいろな {target} の ほんを よみます。','Saya membaca buku dari berbagai genre.',['ジヤンル','ヅャンル','ジャンレ'],'ジャ memakai ジ dan ャ kecil. Huruf terakhir ル, bukan レ; ジ berbeda dari ヅ.'],
+    ['シナリオ','しなりお','シナリオ','Skenario','えいがの {target} を かいています。','Saya sedang menulis skenario film.',['ツナリオ','シナソオ','シナリホ'],'Huruf pertama シ, bukan ツ. リ berbeda dari ソ, dan オ berbeda dari ホ pada bagian bawahnya.'],
+    ['ショック','しょっく','ショック','Keterkejutan; guncangan','その しらせに {target} を うけました。','Saya terkejut oleh kabar itu.',['シヨック','ショツク','ツョック'],'ショ memakai ョ kecil, dan ッ juga kecil untuk jeda konsonan. Huruf pertamanya シ, bukan ツ.'],
+  ],
+};
+
+function expand(bank, mode) {
+  return Object.entries(bank).flatMap(([level, rows]) => rows.map(
+    ([sourceWord, prompt, answer, meaning, sentence, sentenceMeaning, distractors, explanation]) => ({
+      id:`${mode}:${answer}`, mode, level, sourceWord, prompt, answer, meaning,
+      sentence, sentenceMeaning, distractors, explanation,
+    })
+  ));
+}
+export const KANJI_WRITING = expand(KANJI_BANK, 'hiragana-kanji');
+export const KATAKANA_WRITING = expand(KATAKANA_BANK, 'hiragana-katakana');

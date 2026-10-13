@@ -120,6 +120,30 @@ ujian resmi**. Formatnya merujuk latihan membaca kanji pada
 [bagian kosakata JLPT](https://www.jlpt.jp/e/guideline/testsections.html).
 Tidak ada kalimat contoh Tatoeba atau soal resmi yang disalin.
 
+### Kuis penulisan kanji dan katakana
+
+`writing-data.js` menambahkan 50 soal Hiragana → Kanji dan 50 soal Hiragana →
+Katakana, masing-masing 10 per level N5–N1. `data/writing-source.json` menyimpan
+bacaan, kosakata, level, dan ID sumber dari snapshot OpenJLPT yang sama.
+Level ini mengikuti daftar komunitas sumber dan tidak menyatakan tingkat
+kesulitan setiap kalimat atau batas resmi materi JLPT.
+
+Kalimat, terjemahan Indonesia, pengecoh, dan pembahasan ditulis khusus untuk
+website ini. Format target bergaris bawah mengikuti contoh visual dari pengguna;
+kalimat latihan tidak menyalin workbook. Untuk 飲む, soal memakai bentuk sopan
+lampau 飲みました / のみました. Bentuk lain mengikuti ejaan sumber. Terjemahan
+dirumuskan sesuai konteks, termasuk 半分 sebagai “setengah”, bukan arti Inggris
+“half minute” yang keliru pada entri sumber tersebut.
+
+Pilihan salah mengganti bagian kanji yang mirip atau membedakan katakana seperti
+シ・ツ, ン・ソ, レ・ル, dakuten, dan huruf kecil. Pilihan kanji mempertahankan
+okurigana; pilihan katakana hanya berisi katakana dan tanda panjang ー. Pemeriksaan
+otomatis memastikan satu jawaban, empat pilihan unik, kedekatan ejaan, serta
+kesesuaian bacaan dengan sumber. Varian ejaan yang benar dikecualikan dari pilihan pengecoh. Semua arti dan penjelasan ditampilkan setelah jawaban dikunci.
+
+Materi ini merupakan latihan buatan, bukan soal resmi atau seluruh kosakata JLPT.
+Atribusi dan CC BY-SA 4.0 untuk data adaptasi tetap berlaku sebagaimana di atas.
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau

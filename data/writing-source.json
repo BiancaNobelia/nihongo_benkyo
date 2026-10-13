@@ -1,0 +1,1175 @@
+{
+  "source": "https://github.com/evanclan/OpenJLPT",
+  "commit": "0d1d3410bec90bd4098a7c72de820543cb4f707c",
+  "date": "2026-10-13",
+  "note": "Vocabulary metadata only. Sentences, Indonesian explanations, and distractors are original practice material.",
+  "words": [
+    {
+      "id": "hiragana-kanji:飲みました",
+      "sourceWord": "飲む",
+      "reading": "のむ",
+      "level": "N5",
+      "sourceId": "e0bcec9bd9",
+      "jmdictId": 1169870,
+      "meaningsEn": [
+        "to drink"
+      ],
+      "note": "飲む → 飲みました: original inflected practice form; reading のみました."
+    },
+    {
+      "id": "hiragana-kanji:車",
+      "sourceWord": "車",
+      "reading": "くるま",
+      "level": "N5",
+      "sourceId": "d6b85573f3",
+      "jmdictId": 1323080,
+      "meaningsEn": [
+        "car",
+        "vehicle"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:本",
+      "sourceWord": "本",
+      "reading": "ほん",
+      "level": "N5",
+      "sourceId": "0e8f798dbf",
+      "jmdictId": 1522150,
+      "meaningsEn": [
+        "book"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:半分",
+      "sourceWord": "半分",
+      "reading": "はんぶん",
+      "level": "N5",
+      "sourceId": "a1cda8cb11",
+      "jmdictId": 1479890,
+      "meaningsEn": [
+        "half minute"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:学校",
+      "sourceWord": "学校",
+      "reading": "がっこう",
+      "level": "N5",
+      "sourceId": "dd8ac16bd2",
+      "jmdictId": 1206730,
+      "meaningsEn": [
+        "school"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:先生",
+      "sourceWord": "先生",
+      "reading": "せんせい",
+      "level": "N5",
+      "sourceId": "814bdc2cec",
+      "jmdictId": 1387990,
+      "meaningsEn": [
+        "teacher",
+        "doctor"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:会社",
+      "sourceWord": "会社",
+      "reading": "かいしゃ",
+      "level": "N5",
+      "sourceId": "2120ff505c",
+      "jmdictId": 1198550,
+      "meaningsEn": [
+        "company"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:先週",
+      "sourceWord": "先週",
+      "reading": "せんしゅう",
+      "level": "N5",
+      "sourceId": "b8c4cd80db",
+      "jmdictId": 1387870,
+      "meaningsEn": [
+        "last week"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:新しい",
+      "sourceWord": "新しい",
+      "reading": "あたらしい",
+      "level": "N5",
+      "sourceId": "8ae27e3b51",
+      "jmdictId": 1361490,
+      "meaningsEn": [
+        "new"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:右",
+      "sourceWord": "右",
+      "reading": "みぎ",
+      "level": "N5",
+      "sourceId": "f1046f3190",
+      "jmdictId": 1171010,
+      "meaningsEn": [
+        "right side"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:安心",
+      "sourceWord": "安心",
+      "reading": "あんしん",
+      "level": "N4",
+      "sourceId": "d06643e4e1",
+      "jmdictId": 1153890,
+      "meaningsEn": [
+        "relief"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:安全",
+      "sourceWord": "安全",
+      "reading": "あんぜん",
+      "level": "N4",
+      "sourceId": "160a8399af",
+      "jmdictId": 1153930,
+      "meaningsEn": [
+        "safety"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:運動",
+      "sourceWord": "運動",
+      "reading": "うんどう",
+      "level": "N4",
+      "sourceId": "47487b1e85",
+      "jmdictId": 1172910,
+      "meaningsEn": [
+        "to exercise"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:住所",
+      "sourceWord": "住所",
+      "reading": "じゅうしょ",
+      "level": "N4",
+      "sourceId": "47593d1123",
+      "jmdictId": 1334080,
+      "meaningsEn": [
+        "an address",
+        "a residence"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:卒業",
+      "sourceWord": "卒業",
+      "reading": "そつぎょう",
+      "level": "N4",
+      "sourceId": "6a89d1feee",
+      "jmdictId": 1405890,
+      "meaningsEn": [
+        "graduation"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:意見",
+      "sourceWord": "意見",
+      "reading": "いけん",
+      "level": "N4",
+      "sourceId": "ba5a03baf1",
+      "jmdictId": 1156530,
+      "meaningsEn": [
+        "opinion"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:試験",
+      "sourceWord": "試験",
+      "reading": "しけん",
+      "level": "N4",
+      "sourceId": "7855de335f",
+      "jmdictId": 1312350,
+      "meaningsEn": [
+        "examination"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:説明",
+      "sourceWord": "説明",
+      "reading": "せつめい",
+      "level": "N4",
+      "sourceId": "123ee74d43",
+      "jmdictId": 1386460,
+      "meaningsEn": [
+        "explanation"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:経験",
+      "sourceWord": "経験",
+      "reading": "けいけん",
+      "level": "N4",
+      "sourceId": "9746b57413",
+      "jmdictId": 1251270,
+      "meaningsEn": [
+        "to experience"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:約束",
+      "sourceWord": "約束",
+      "reading": "やくそく",
+      "level": "N4",
+      "sourceId": "2ef2e06612",
+      "jmdictId": 1538130,
+      "meaningsEn": [
+        "promise"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:愛情",
+      "sourceWord": "愛情",
+      "reading": "あいじょう",
+      "level": "N3",
+      "sourceId": "0cb7e80d4c",
+      "jmdictId": 1150860,
+      "meaningsEn": [
+        "love",
+        "affection"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:環境",
+      "sourceWord": "環境",
+      "reading": "かんきょう",
+      "level": "N3",
+      "sourceId": "c8ca17553a",
+      "jmdictId": 1213280,
+      "meaningsEn": [
+        "environment",
+        "circumstance"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:協力",
+      "sourceWord": "協力",
+      "reading": "きょうりょく",
+      "level": "N3",
+      "sourceId": "23ba87bda6",
+      "jmdictId": 1591720,
+      "meaningsEn": [
+        "cooperation",
+        "collaboration"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:重要",
+      "sourceWord": "重要",
+      "reading": "じゅうよう",
+      "level": "N3",
+      "sourceId": "bc3d5a165c",
+      "jmdictId": 1336820,
+      "meaningsEn": [
+        "important",
+        "momentous",
+        "essential",
+        "principal",
+        "major"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:成長",
+      "sourceWord": "成長",
+      "reading": "せいちょう",
+      "level": "N3",
+      "sourceId": "ed4e8d935d",
+      "jmdictId": 1375790,
+      "meaningsEn": [
+        "growth",
+        "grow to adulthood"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:責任",
+      "sourceWord": "責任",
+      "reading": "せきにん",
+      "level": "N3",
+      "sourceId": "4c29ad3233",
+      "jmdictId": 1383180,
+      "meaningsEn": [
+        "duty",
+        "responsibility"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:判断",
+      "sourceWord": "判断",
+      "reading": "はんだん",
+      "level": "N3",
+      "sourceId": "3b88931b34",
+      "jmdictId": 1478620,
+      "meaningsEn": [
+        "judgement",
+        "decision"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:表情",
+      "sourceWord": "表情",
+      "reading": "ひょうじょう",
+      "level": "N3",
+      "sourceId": "58e01c0b72",
+      "jmdictId": 1489700,
+      "meaningsEn": [
+        "facial expression"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:解釈",
+      "sourceWord": "解釈",
+      "reading": "かいしゃく",
+      "level": "N3",
+      "sourceId": "bb3089103b",
+      "jmdictId": 1199010,
+      "meaningsEn": [
+        "explanation",
+        "interpretation"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:一般",
+      "sourceWord": "一般",
+      "reading": "いっぱん",
+      "level": "N3",
+      "sourceId": "b65151eaec",
+      "jmdictId": 1165790,
+      "meaningsEn": [
+        "general",
+        "liberal",
+        "universal",
+        "ordinary",
+        "average"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:圧縮",
+      "sourceWord": "圧縮",
+      "reading": "あっしゅく",
+      "level": "N2",
+      "sourceId": "869960843c",
+      "jmdictId": 1153080,
+      "meaningsEn": [
+        "compression",
+        "condensation",
+        "pressure"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:育児",
+      "sourceWord": "育児",
+      "reading": "いくじ",
+      "level": "N2",
+      "sourceId": "3308b2d953",
+      "jmdictId": 1160630,
+      "meaningsEn": [
+        "childcare",
+        "nursing",
+        "upbringing"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:一斉",
+      "sourceWord": "一斉",
+      "reading": "いっせい",
+      "level": "N2",
+      "sourceId": "b1205d9b83",
+      "jmdictId": 1164040,
+      "meaningsEn": [
+        "simultaneous",
+        "all at once"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:乾燥",
+      "sourceWord": "乾燥",
+      "reading": "かんそう",
+      "level": "N2",
+      "sourceId": "ad1e1c4b93",
+      "jmdictId": 1209920,
+      "meaningsEn": [
+        "dry",
+        "arid",
+        "insipid",
+        "dehydrated"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:教養",
+      "sourceWord": "教養",
+      "reading": "きょうよう",
+      "level": "N2",
+      "sourceId": "cbc70409ad",
+      "jmdictId": 1237370,
+      "meaningsEn": [
+        "culture",
+        "education",
+        "refinement",
+        "cultivation"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:構造",
+      "sourceWord": "構造",
+      "reading": "こうぞう",
+      "level": "N2",
+      "sourceId": "fd699d42d8",
+      "jmdictId": 1279790,
+      "meaningsEn": [
+        "structure",
+        "construction"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:寿命",
+      "sourceWord": "寿命",
+      "reading": "じゅみょう",
+      "level": "N2",
+      "sourceId": "772e03ca49",
+      "jmdictId": 1330240,
+      "meaningsEn": [
+        "life span"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:出張",
+      "sourceWord": "出張",
+      "reading": "しゅっちょう",
+      "level": "N2",
+      "sourceId": "aac5075190",
+      "jmdictId": 1339660,
+      "meaningsEn": [
+        "official tour",
+        "business trip"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:純粋",
+      "sourceWord": "純粋",
+      "reading": "じゅんすい",
+      "level": "N2",
+      "sourceId": "2cd84ea8b4",
+      "jmdictId": 1341930,
+      "meaningsEn": [
+        "pure",
+        "true",
+        "genuine",
+        "unmixed"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:矛盾",
+      "sourceWord": "矛盾",
+      "reading": "むじゅん",
+      "level": "N2",
+      "sourceId": "af01900899",
+      "jmdictId": 1531090,
+      "meaningsEn": [
+        "contradiction",
+        "inconsistency"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:圧迫",
+      "sourceWord": "圧迫",
+      "reading": "あっぱく",
+      "level": "N1",
+      "sourceId": "eab33fad07",
+      "jmdictId": 1153310,
+      "meaningsEn": [
+        "pressure",
+        "coercion",
+        "oppression"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:衝撃",
+      "sourceWord": "衝撃",
+      "reading": "しょうげき",
+      "level": "N1",
+      "sourceId": "6ea8615b30",
+      "jmdictId": 1351510,
+      "meaningsEn": [
+        "shock",
+        "crash",
+        "impact",
+        "ballistic"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:頻繁",
+      "sourceWord": "頻繁",
+      "reading": "ひんぱん",
+      "level": "N1",
+      "sourceId": "d8165931bc",
+      "jmdictId": 1491050,
+      "meaningsEn": [
+        "frequency"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:繁栄",
+      "sourceWord": "繁栄",
+      "reading": "はんえい",
+      "level": "N1",
+      "sourceId": "8aea8207d5",
+      "jmdictId": 1481670,
+      "meaningsEn": [
+        "prospering",
+        "prosperity",
+        "thriving",
+        "flourishing"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:誠実",
+      "sourceWord": "誠実",
+      "reading": "せいじつ",
+      "level": "N1",
+      "sourceId": "4e718e1c73",
+      "jmdictId": 1381180,
+      "meaningsEn": [
+        "sincere",
+        "honest",
+        "faithful"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:診療",
+      "sourceWord": "診療",
+      "reading": "しんりょう",
+      "level": "N1",
+      "sourceId": "9e1b9872a7",
+      "jmdictId": 1365500,
+      "meaningsEn": [
+        "medical examination and treatment",
+        "diagnosis"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:領域",
+      "sourceWord": "領域",
+      "reading": "りょういき",
+      "level": "N1",
+      "sourceId": "3e37fcff5a",
+      "jmdictId": 1554720,
+      "meaningsEn": [
+        "area",
+        "domain",
+        "territory",
+        "field",
+        "region",
+        "regime"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:革新",
+      "sourceWord": "革新",
+      "reading": "かくしん",
+      "level": "N1",
+      "sourceId": "9b8758c027",
+      "jmdictId": 1206470,
+      "meaningsEn": [
+        "reform",
+        "innovation"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:暗殺",
+      "sourceWord": "暗殺",
+      "reading": "あんさつ",
+      "level": "N1",
+      "sourceId": "eda4f150bd",
+      "jmdictId": 1154520,
+      "meaningsEn": [
+        "assassination"
+      ]
+    },
+    {
+      "id": "hiragana-kanji:措置",
+      "sourceWord": "措置",
+      "reading": "そち",
+      "level": "N1",
+      "sourceId": "116afb9f88",
+      "jmdictId": 1396530,
+      "meaningsEn": [
+        "measure",
+        "step"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:シャワー",
+      "sourceWord": "シャワー",
+      "reading": "シャワー",
+      "level": "N5",
+      "sourceId": "d9c88143a2",
+      "jmdictId": 1061820,
+      "meaningsEn": [
+        "shower"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:コーヒー",
+      "sourceWord": "コーヒー",
+      "reading": "コーヒー",
+      "level": "N5",
+      "sourceId": "67126059f1",
+      "jmdictId": 1049180,
+      "meaningsEn": [
+        "coffee"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:テレビ",
+      "sourceWord": "テレビ",
+      "reading": "テレビ",
+      "level": "N5",
+      "sourceId": "c7e14d8454",
+      "jmdictId": 1080510,
+      "meaningsEn": [
+        "television"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:タクシー",
+      "sourceWord": "タクシー",
+      "reading": "タクシー",
+      "level": "N5",
+      "sourceId": "2d5a93eb11",
+      "jmdictId": 1076190,
+      "meaningsEn": [
+        "taxi"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:シャツ",
+      "sourceWord": "シャツ",
+      "reading": "シャツ",
+      "level": "N5",
+      "sourceId": "f71424e3ff",
+      "jmdictId": 1061520,
+      "meaningsEn": [
+        "shirt"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:レストラン",
+      "sourceWord": "レストラン",
+      "reading": "レストラン",
+      "level": "N5",
+      "sourceId": "31893e4378",
+      "jmdictId": 1145310,
+      "meaningsEn": [
+        "restaurant"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:ホテル",
+      "sourceWord": "ホテル",
+      "reading": "ホテル",
+      "level": "N5",
+      "sourceId": "23ec5a0b3d",
+      "jmdictId": 1122650,
+      "meaningsEn": [
+        "hotel"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:カメラ",
+      "sourceWord": "カメラ",
+      "reading": "カメラ",
+      "level": "N5",
+      "sourceId": "9d648d38ad",
+      "jmdictId": 1038350,
+      "meaningsEn": [
+        "camera"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:ノート",
+      "sourceWord": "ノート",
+      "reading": "ノート",
+      "level": "N5",
+      "sourceId": "278c1e0e04",
+      "jmdictId": 1093450,
+      "meaningsEn": [
+        "notebook",
+        "exercise book"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:ベッド",
+      "sourceWord": "ベッド",
+      "reading": "ベッド",
+      "level": "N5",
+      "sourceId": "91cf4ea2fd",
+      "jmdictId": 1119650,
+      "meaningsEn": [
+        "bed"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:ガソリン",
+      "sourceWord": "ガソリン",
+      "reading": "ガソリン",
+      "level": "N4",
+      "sourceId": "b3c360789e",
+      "jmdictId": 1040250,
+      "meaningsEn": [
+        "petrol"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:スーツケース",
+      "sourceWord": "スーツケース",
+      "reading": "スーツケース",
+      "level": "N4",
+      "sourceId": "8a13543a80",
+      "jmdictId": 1066690,
+      "meaningsEn": [
+        "suitcase"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:パソコン",
+      "sourceWord": "パソコン",
+      "reading": "パソコン",
+      "level": "N4",
+      "sourceId": "54a6f375d8",
+      "jmdictId": 1101570,
+      "meaningsEn": [
+        "personal computer"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:アルバイト",
+      "sourceWord": "アルバイト",
+      "reading": "アルバイト",
+      "level": "N4",
+      "sourceId": "88d4196563",
+      "jmdictId": 1019420,
+      "meaningsEn": [
+        "part-time job"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:エスカレーター",
+      "sourceWord": "エスカレーター",
+      "reading": "エスカレーター",
+      "level": "N4",
+      "sourceId": "3139c14254",
+      "jmdictId": 1028580,
+      "meaningsEn": [
+        "escalator"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:スクリーン",
+      "sourceWord": "スクリーン",
+      "reading": "スクリーン",
+      "level": "N4",
+      "sourceId": "270801de39",
+      "jmdictId": 1068550,
+      "meaningsEn": [
+        "screen"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:ステーキ",
+      "sourceWord": "ステーキ",
+      "reading": "ステーキ",
+      "level": "N4",
+      "sourceId": "d2937b2999",
+      "jmdictId": 1070280,
+      "meaningsEn": [
+        "steak"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:プレゼント",
+      "sourceWord": "プレゼント",
+      "reading": "プレゼント",
+      "level": "N4",
+      "sourceId": "cb716261e6",
+      "jmdictId": 1116840,
+      "meaningsEn": [
+        "present"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:タイプ",
+      "sourceWord": "タイプ",
+      "reading": "タイプ",
+      "level": "N4",
+      "sourceId": "a174ca4443",
+      "jmdictId": 1075940,
+      "meaningsEn": [
+        "type",
+        "style"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:ステレオ",
+      "sourceWord": "ステレオ",
+      "reading": "ステレオ",
+      "level": "N4",
+      "sourceId": "9071f08832",
+      "jmdictId": 1070650,
+      "meaningsEn": [
+        "stereo"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:サービス",
+      "sourceWord": "サービス",
+      "reading": "サービス",
+      "level": "N3",
+      "sourceId": "6a8da0f21f",
+      "jmdictId": 1055000,
+      "meaningsEn": [
+        "service",
+        "support system",
+        "goods or services without charge"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:チャンス",
+      "sourceWord": "チャンス",
+      "reading": "チャンス",
+      "level": "N3",
+      "sourceId": "c28e06990a",
+      "jmdictId": 1078040,
+      "meaningsEn": [
+        "chance",
+        "opportunity"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:スピーチ",
+      "sourceWord": "スピーチ",
+      "reading": "スピーチ",
+      "level": "N3",
+      "sourceId": "92387d38a4",
+      "jmdictId": 1072260,
+      "meaningsEn": [
+        "speech"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:パスポート",
+      "sourceWord": "パスポート",
+      "reading": "パスポート",
+      "level": "N3",
+      "sourceId": "c795debc35",
+      "jmdictId": 1101510,
+      "meaningsEn": [
+        "passport"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:エネルギー",
+      "sourceWord": "エネルギー",
+      "reading": "エネルギー",
+      "level": "N3",
+      "sourceId": "e06f642257",
+      "jmdictId": 1029430,
+      "meaningsEn": [
+        "energy (de: Energie)"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:プラス",
+      "sourceWord": "プラス",
+      "reading": "プラス",
+      "level": "N3",
+      "sourceId": "3fecda87cd",
+      "jmdictId": 1115630,
+      "meaningsEn": [
+        "plus"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:ジュース",
+      "sourceWord": "ジュース",
+      "reading": "ジュース",
+      "level": "N3",
+      "sourceId": "5d154c188d",
+      "jmdictId": 1065950,
+      "meaningsEn": [
+        "juice",
+        "soft drink",
+        "deuce"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:サイン",
+      "sourceWord": "サイン",
+      "reading": "サイン",
+      "level": "N3",
+      "sourceId": "2a04aa688d",
+      "jmdictId": 1056230,
+      "meaningsEn": [
+        "autograph",
+        "sign",
+        "sine"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:メンバー",
+      "sourceWord": "メンバー",
+      "reading": "メンバー",
+      "level": "N3",
+      "sourceId": "df62e316d7",
+      "jmdictId": 1134370,
+      "meaningsEn": [
+        "member"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:スタイル",
+      "sourceWord": "スタイル",
+      "reading": "スタイル",
+      "level": "N3",
+      "sourceId": "d6b975f68f",
+      "jmdictId": 1069520,
+      "meaningsEn": [
+        "style"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:アンテナ",
+      "sourceWord": "アンテナ",
+      "reading": "アンテナ",
+      "level": "N2",
+      "sourceId": "02304543b5",
+      "jmdictId": 1020410,
+      "meaningsEn": [
+        "antenna"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:インタビュー",
+      "sourceWord": "インタビュー",
+      "reading": "インタビュー",
+      "level": "N2",
+      "sourceId": "b1eb46ec35",
+      "jmdictId": 1023100,
+      "meaningsEn": [
+        "interview"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:コレクション",
+      "sourceWord": "コレクション",
+      "reading": "コレクション",
+      "level": "N2",
+      "sourceId": "5313e18e96",
+      "jmdictId": 1051540,
+      "meaningsEn": [
+        "collection",
+        "correction"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:コンクリート",
+      "sourceWord": "コンクリート",
+      "reading": "コンクリート",
+      "level": "N2",
+      "sourceId": "77d2529580",
+      "jmdictId": 1051860,
+      "meaningsEn": [
+        "concrete"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:サンプル",
+      "sourceWord": "サンプル",
+      "reading": "サンプル",
+      "level": "N2",
+      "sourceId": "958095fe66",
+      "jmdictId": 1058760,
+      "meaningsEn": [
+        "sample"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:リズム",
+      "sourceWord": "リズム",
+      "reading": "リズム",
+      "level": "N2",
+      "sourceId": "3c6f24a260",
+      "jmdictId": 1141620,
+      "meaningsEn": [
+        "rhythm"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:レンズ",
+      "sourceWord": "レンズ",
+      "reading": "レンズ",
+      "level": "N2",
+      "sourceId": "f98e192838",
+      "jmdictId": 1146140,
+      "meaningsEn": [
+        "lens"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:サークル",
+      "sourceWord": "サークル",
+      "reading": "サークル",
+      "level": "N2",
+      "sourceId": "584dcec54f",
+      "jmdictId": 1054850,
+      "meaningsEn": [
+        "circle",
+        "sports club (i.e. at a company)"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:コンセント",
+      "sourceWord": "コンセント",
+      "reading": "コンセント",
+      "level": "N2",
+      "sourceId": "dc94ba57ca",
+      "jmdictId": 1052330,
+      "meaningsEn": [
+        "electrical outlet",
+        "power point",
+        "socket"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:スケジュール",
+      "sourceWord": "スケジュール",
+      "reading": "スケジュール",
+      "level": "N2",
+      "sourceId": "07f5677ad2",
+      "jmdictId": 1068870,
+      "meaningsEn": [
+        "schedule"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:メッセージ",
+      "sourceWord": "メッセージ",
+      "reading": "メッセージ",
+      "level": "N1",
+      "sourceId": "012f6788c4",
+      "jmdictId": 1133570,
+      "meaningsEn": [
+        "message"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:コミュニケーション",
+      "sourceWord": "コミュニケーション",
+      "reading": "コミュニケーション",
+      "level": "N1",
+      "sourceId": "d21eb02cf1",
+      "jmdictId": 1050980,
+      "meaningsEn": [
+        "communication"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:レクリエーション",
+      "sourceWord": "レクリエーション",
+      "reading": "レクリエーション",
+      "level": "N1",
+      "sourceId": "669651e81b",
+      "jmdictId": 1144860,
+      "meaningsEn": [
+        "recreation"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:レギュラー",
+      "sourceWord": "レギュラー",
+      "reading": "レギュラー",
+      "level": "N1",
+      "sourceId": "4f878a51a9",
+      "jmdictId": 1144790,
+      "meaningsEn": [
+        "regular"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:デッサン",
+      "sourceWord": "デッサン",
+      "reading": "デッサン",
+      "level": "N1",
+      "sourceId": "20886c9138",
+      "jmdictId": 1083290,
+      "meaningsEn": [
+        "rough sketch (fr: dessin)"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:オリエンテーション",
+      "sourceWord": "オリエンテーション",
+      "reading": "オリエンテーション",
+      "level": "N1",
+      "sourceId": "280c350aaf",
+      "jmdictId": 1035550,
+      "meaningsEn": [
+        "orientation"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:ニュアンス",
+      "sourceWord": "ニュアンス",
+      "reading": "ニュアンス",
+      "level": "N1",
+      "sourceId": "35e0c31550",
+      "jmdictId": 1092110,
+      "meaningsEn": [
+        "nuance"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:ジャンル",
+      "sourceWord": "ジャンル",
+      "reading": "ジャンル",
+      "level": "N1",
+      "sourceId": "0fe3697d0a",
+      "jmdictId": 1065920,
+      "meaningsEn": [
+        "genre"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:シナリオ",
+      "sourceWord": "シナリオ",
+      "reading": "シナリオ",
+      "level": "N1",
+      "sourceId": "bb70fb905e",
+      "jmdictId": 1060830,
+      "meaningsEn": [
+        "scenario"
+      ]
+    },
+    {
+      "id": "hiragana-katakana:ショック",
+      "sourceWord": "ショック",
+      "reading": "ショック",
+      "level": "N1",
+      "sourceId": "318139be02",
+      "jmdictId": 1062660,
+      "meaningsEn": [
+        "shock"
+      ]
+    }
+  ]
+}
