@@ -181,6 +181,43 @@ kesesuaian bacaan dengan sumber. Varian ejaan yang benar dikecualikan dari pilih
 Materi ini merupakan latihan buatan, bukan soal resmi atau seluruh kosakata JLPT.
 Atribusi dan CC BY-SA 4.0 untuk data adaptasi tetap berlaku sebagaimana di atas.
 
+### Kuis dari kelompok Kanji Mirip
+
+`data/similar-quiz-editorial.json` menambahkan **82 kosakata dalam dua arah**:
+hiragana → kanji dan kanji → hiragana. Targetnya mencakup seluruh **48 kelompok
+bentuk mirip dan 10 keluarga radikal**. Ini bank pilihan, bukan soal untuk
+setiap anggota keluarga atau seluruh kosakata JLPT. Pembagian kosakata:
+N5 34, N4 15, N3 20, N2 8, N1 5. Level kosakata dapat berbeda dari level kanji
+tunggal pada halaman kelompok.
+
+Kata, bacaan, dan level dicocokkan dengan snapshot OpenJLPT/JMdict yang sama;
+metadata rujukannya ada di `data/similar-quiz-source.json`. Kalimat, arti
+Indonesia, penjelasan, dan pilihan salah ditulis khusus untuk situs ini.
+Tidak ada kalimat Tatoeba atau soal resmi yang disalin. Data adaptasi ini
+mengikuti CC BY-SA 4.0 dan atribusi EDRDG/OpenJLPT di atas.
+
+Setiap pengecoh kanji mengubah tepat satu karakter target dan mempertahankan
+okurigana. Jika target termasuk kelompok perbandingan, setidaknya satu pilihan
+salah memakai pasangannya yang sudah dikenal. Pengecoh hiragana berbeda satu
+atau dua perubahan dari jawaban. Bacaan alternatif dan ejaan lain dalam sumber
+dikecualikan dari jawaban salah. Kalimat disertakan pada kedua arah, antara lain
+untuk membedakan 縁（ふち）, 辛い（からい）, serta 郊外 dari homofon 校外.
+Penjelasan mencakup bunyi dan ciri visual; tautan kelompok baru muncul setelah
+menjawab dan pada ulasan hasil.
+
+`similar-quiz-core.js` menghubungkan target karakter ke kelompok lama dan
+keluarga radikal, menggabungkan bank tanpa mengulang kosakata yang sama, serta
+memfilter materi dan level. Bank gabungan yang tampil di aplikasi berisi
+**180 soal kanji → hiragana** dan **132 soal hiragana → kanji**. Dua kata yang
+sudah ada pada bank membaca memakai versi baru yang memiliki konteks kalimat.
+Bank katakana tetap berisi 50 soal. Kelompok kecil menyesuaikan jumlah soal
+dengan jumlah kata yang tersedia, dan tidak mengulang kata demi memenuhi kuota.
+
+Jalankan `python scripts/build_similar_quiz.py` setelah cache dari
+`scripts/import_catalog.py` tersedia. Generator memvalidasi rujukan, pilihan
+jawaban, dan target, lalu menulis `similar-quiz-data.js` serta metadata sumber.
+Jalankan `npm test` setelah mengubah materi atau pengelompokan.
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau

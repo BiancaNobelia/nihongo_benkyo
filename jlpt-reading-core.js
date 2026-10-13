@@ -1,4 +1,4 @@
-import { shuffle } from './core.js?v=20261013-radicals';
+import { shuffle } from './core.js?v=20261013-similar-quiz';
 
 export function filterReadingQuestions(bank, level = 'all') {
   return bank.filter(q => level === 'all' || q.level === level);
@@ -11,6 +11,8 @@ export function createReadingQuiz(pool, count, random = Math.random) {
     level: q.level,
     meaning: q.meaning,
     explanation: q.explanation,
+    sentence:q.sentence, sentenceMeaning:q.sentenceMeaning,
+    topicIds:q.topicIds, target:q.target,
     options: shuffle([q.reading, ...q.distractors], random),
   }));
 }

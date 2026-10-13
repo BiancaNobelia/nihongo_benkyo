@@ -20,14 +20,19 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
   pagination, dan tautan dari detail tersedia di `#mirip`.
 - Flashcard dengan penilaian mandiri dan pilihan koleksi.
 - Kuis arti, kanji, atau bacaan kata; 5/10/20 soal dan timer opsional.
-- Bacaan ala JLPT: 100 soal kosakata (20 per level N5–N1) dengan pilihan hiragana
+- Bacaan ala JLPT: 180 soal kosakata N5–N1 dengan pilihan hiragana
   yang mirip, arti Indonesia, dan penjelasan bunyi panjang, dakuten, serta kana kecil.
   Buka langsung melalui `#kuis/jlpt`. Ini latihan buatan, bukan soal resmi ujian.
-- Hiragana → Kanji dan Hiragana → Katakana: masing-masing 50 soal (10 per level
-  N5–N1), kalimat dengan target bergaris bawah, empat pilihan bentuk mirip,
+- Hiragana → Kanji: 132 soal; Hiragana → Katakana: 50 soal (10 per level).
+  Kalimat dengan target bergaris bawah, empat pilihan bentuk mirip,
   arti kalimat, dan penjelasan perbedaannya. Buka `#kuis/hiragana-kanji` atau
-  `#kuis/hiragana-katakana`. Pilih semua level untuk sesi 20 soal; satu level
-  menyediakan maksimal 10 soal tanpa pengulangan dalam satu sesi.
+  `#kuis/hiragana-katakana`. Jumlah soal disesuaikan dengan materi dan level
+  yang tersedia, tanpa mengulang kata dalam satu sesi.
+- Materi Kanji Mirip: 82 kosakata yang bisa dilatih dua arah, mencakup seluruh
+  48 kelompok perbandingan dan 10 keluarga radikal. Pilih materi di pengaturan
+  kuis atau mulai dari halaman kelompok. Pembahasan menautkan kembali ke
+  perbandingan bentuk. Contoh: `#kuis/hiragana-kanji/radikal-air`,
+  `#kuis/jlpt/radikal-perjalanan`, atau `#kuis/jlpt/similar`.
 - Hasil kuis, progres penguasaan, dan hari belajar di `localStorage`.
 
 Progres hanya tersedia di browser/perangkat yang sama, tanpa akun atau server.
@@ -65,6 +70,9 @@ Pengujian Kanji Mirip memeriksa rujukan karakter, filter yang mempertahankan
 pasangan beda level, jumlah goresan, dan pilihan latihan setiap kelompok.
 Pengujian radikal memeriksa cakupan keluarga, bentuk yang tidak boleh tertukar,
 pencarian, gabungan filter, dan pagination seluruh anggota.
+Pengujian soal Kanji Mirip memeriksa 82 rujukan kosakata, kedua arah latihan,
+pengecoh dan ejaan alternatif, konteks, cakupan 58 kelompok, penggabungan bank
+tanpa duplikasi, serta kombinasi materi dan level.
 Jalankan `python -m unittest discover -s tests -p "test_*.py"` untuk memastikan
 build menolak data baru atau berubah yang belum ditinjau.
 

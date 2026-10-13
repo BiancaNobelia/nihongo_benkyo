@@ -1,6 +1,7 @@
-import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261013-radicals';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-radicals';
-import { createRadicalView } from './radical-view.js?v=20261013-radicals';
+import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261013-similar-quiz';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-similar-quiz';
+import { createRadicalView } from './radical-view.js?v=20261013-similar-quiz';
+import { similarityQuizCallout } from './similar-quiz-view.js?v=20261013-similar-quiz';
 
 export function createSimilarView({root, kanji, groups, categories, levels, escape, icon, activity}) {
   const byChar = new Map(kanji.map(k => [k.char, k]));
@@ -56,6 +57,7 @@ export function createSimilarView({root, kanji, groups, categories, levels, esca
       <aside class="similar-memory"><span class="similar-memory-icon">${icon('leaf')}</span><div><h2>Cara mengingatnya</h2><p>${escape(group.tip)}</p></div></aside>
       <div class="similar-practice-callout"><div><h2>Sudah menemukan bedanya?</h2><p>Cocokkan petunjuk bentuk dengan kanjinya. ${group.members.length} soal singkat dari kelompok ini.</p></div><button class="primary" data-similar-action="practice">${icon('target')} Latih bedanya</button></div>
       <p class="similar-footnote">Amati bentuk, ucapkan artinya, lalu coba ingat tanpa melihat petunjuk. Tips visual dapat membantu ingatan; bentuk cetak bisa sedikit berbeda menurut jenis huruf.</p>`;
+    root.querySelector('.similar-footnote').insertAdjacentHTML('beforebegin',similarityQuizCallout(group.id));
   }
 
   function renderPractice() {

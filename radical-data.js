@@ -1,4 +1,4 @@
-import { RADICAL_MEMBERS } from './radical-members.js?v=20261013-radicals';
+import { RADICAL_MEMBERS } from './radical-members.js?v=20261013-similar-quiz';
 
 // Editorial teaching notes. Membership comes from complete main components
 // in KanjiVG; meanings and readings come from the reviewed local catalog.

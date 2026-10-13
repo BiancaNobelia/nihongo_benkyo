@@ -1,0 +1,1377 @@
+{
+  "source": "https://github.com/evanclan/OpenJLPT",
+  "commit": "0d1d3410bec90bd4098a7c72de820543cb4f707c",
+  "date": "2026-10-13",
+  "words": [
+    {
+      "word": "木曜日",
+      "reading": "もくようび",
+      "level": "N5",
+      "sourceId": "d10bb92f3e",
+      "jmdictId": 1534890,
+      "readings": [
+        "もくようび"
+      ],
+      "spellings": [
+        "木曜日"
+      ],
+      "meaningsEn": [
+        "Thursday"
+      ]
+    },
+    {
+      "word": "自己",
+      "reading": "じこ",
+      "level": "N1",
+      "sourceId": "e111d4b814",
+      "jmdictId": 1317580,
+      "readings": [
+        "じこ"
+      ],
+      "spellings": [
+        "自己"
+      ],
+      "meaningsEn": [
+        "self",
+        "oneself"
+      ]
+    },
+    {
+      "word": "洗う",
+      "reading": "あらう",
+      "level": "N5",
+      "sourceId": "f8fa96946f",
+      "jmdictId": 1390930,
+      "readings": [
+        "あらう"
+      ],
+      "spellings": [
+        "洗う"
+      ],
+      "meaningsEn": [
+        "to wash"
+      ]
+    },
+    {
+      "word": "泳ぐ",
+      "reading": "およぐ",
+      "level": "N5",
+      "sourceId": "3c5bb8f223",
+      "jmdictId": 1174340,
+      "readings": [
+        "およぐ"
+      ],
+      "spellings": [
+        "泳ぐ"
+      ],
+      "meaningsEn": [
+        "to swim"
+      ]
+    },
+    {
+      "word": "海",
+      "reading": "うみ",
+      "level": "N5",
+      "sourceId": "06ac21dc7d",
+      "jmdictId": 1201190,
+      "readings": [
+        "うみ"
+      ],
+      "spellings": [
+        "海"
+      ],
+      "meaningsEn": [
+        "sea"
+      ]
+    },
+    {
+      "word": "池",
+      "reading": "いけ",
+      "level": "N5",
+      "sourceId": "43c874a6c8",
+      "jmdictId": 1421700,
+      "readings": [
+        "いけ"
+      ],
+      "spellings": [
+        "池"
+      ],
+      "meaningsEn": [
+        "pond"
+      ]
+    },
+    {
+      "word": "注意",
+      "reading": "ちゅうい",
+      "level": "N4",
+      "sourceId": "4e6d200127",
+      "jmdictId": 1426530,
+      "readings": [
+        "ちゅうい"
+      ],
+      "spellings": [
+        "注意"
+      ],
+      "meaningsEn": [
+        "caution"
+      ]
+    },
+    {
+      "word": "注文",
+      "reading": "ちゅうもん",
+      "level": "N3",
+      "sourceId": "842b23c9fd",
+      "jmdictId": 1426650,
+      "readings": [
+        "ちゅうもん"
+      ],
+      "spellings": [
+        "注文"
+      ],
+      "meaningsEn": [
+        "order",
+        "request"
+      ]
+    },
+    {
+      "word": "清潔",
+      "reading": "せいけつ",
+      "level": "N3",
+      "sourceId": "ad0f14e0b8",
+      "jmdictId": 1378200,
+      "readings": [
+        "せいけつ"
+      ],
+      "spellings": [
+        "清潔"
+      ],
+      "meaningsEn": [
+        "clean"
+      ]
+    },
+    {
+      "word": "河川",
+      "reading": "かせん",
+      "level": "N1",
+      "sourceId": "9f60aaa2a3",
+      "jmdictId": 1193520,
+      "readings": [
+        "かせん"
+      ],
+      "spellings": [
+        "河川"
+      ],
+      "meaningsEn": [
+        "rivers"
+      ]
+    },
+    {
+      "word": "道",
+      "reading": "みち",
+      "level": "N5",
+      "sourceId": "dc29195f18",
+      "jmdictId": 1454080,
+      "readings": [
+        "みち"
+      ],
+      "spellings": [
+        "道"
+      ],
+      "meaningsEn": [
+        "street"
+      ]
+    },
+    {
+      "word": "毎週",
+      "reading": "まいしゅう",
+      "level": "N5",
+      "sourceId": "fd1c93832f",
+      "jmdictId": 1524690,
+      "readings": [
+        "まいしゅう"
+      ],
+      "spellings": [
+        "毎週"
+      ],
+      "meaningsEn": [
+        "every week"
+      ]
+    },
+    {
+      "word": "通る",
+      "reading": "とおる",
+      "level": "N4",
+      "sourceId": "e9c1a3ae2c",
+      "jmdictId": 1433030,
+      "readings": [
+        "とおる"
+      ],
+      "spellings": [
+        "通る"
+      ],
+      "meaningsEn": [
+        "to go through"
+      ]
+    },
+    {
+      "word": "近い",
+      "reading": "ちかい",
+      "level": "N5",
+      "sourceId": "a21ba677f2",
+      "jmdictId": 1242130,
+      "readings": [
+        "ちかい"
+      ],
+      "spellings": [
+        "近い"
+      ],
+      "meaningsEn": [
+        "near"
+      ]
+    },
+    {
+      "word": "遠い",
+      "reading": "とおい",
+      "level": "N5",
+      "sourceId": "f840779b9e",
+      "jmdictId": 1177800,
+      "readings": [
+        "とおい"
+      ],
+      "spellings": [
+        "遠い"
+      ],
+      "meaningsEn": [
+        "far"
+      ]
+    },
+    {
+      "word": "進む",
+      "reading": "すすむ",
+      "level": "N4",
+      "sourceId": "5c8702fe01",
+      "jmdictId": 1365980,
+      "readings": [
+        "すすむ"
+      ],
+      "spellings": [
+        "進む"
+      ],
+      "meaningsEn": [
+        "to make progress"
+      ]
+    },
+    {
+      "word": "遅れる",
+      "reading": "おくれる",
+      "level": "N4",
+      "sourceId": "ae8ce3986c",
+      "jmdictId": 1589040,
+      "readings": [
+        "おくれる"
+      ],
+      "spellings": [
+        "遅れる"
+      ],
+      "meaningsEn": [
+        "to be late"
+      ]
+    },
+    {
+      "word": "返す",
+      "reading": "かえす",
+      "level": "N5",
+      "sourceId": "8ea4b03d7f",
+      "jmdictId": 1512130,
+      "readings": [
+        "かえす"
+      ],
+      "spellings": [
+        "返す"
+      ],
+      "meaningsEn": [
+        "to return something"
+      ]
+    },
+    {
+      "word": "未満",
+      "reading": "みまん",
+      "level": "N2",
+      "sourceId": "6b94607e2f",
+      "jmdictId": 1528040,
+      "readings": [
+        "みまん"
+      ],
+      "spellings": [
+        "未満"
+      ],
+      "meaningsEn": [
+        "less than",
+        "insufficient"
+      ]
+    },
+    {
+      "word": "土",
+      "reading": "つち",
+      "level": "N3",
+      "sourceId": "8d3ff79d95",
+      "jmdictId": 1445270,
+      "readings": [
+        "つち"
+      ],
+      "spellings": [
+        "土"
+      ],
+      "meaningsEn": [
+        "earth",
+        "soil"
+      ]
+    },
+    {
+      "word": "日記",
+      "reading": "にっき",
+      "level": "N4",
+      "sourceId": "0ddf8d04c2",
+      "jmdictId": 1463930,
+      "readings": [
+        "にっき"
+      ],
+      "spellings": [
+        "日記"
+      ],
+      "meaningsEn": [
+        "journal"
+      ]
+    },
+    {
+      "word": "目標",
+      "reading": "もくひょう",
+      "level": "N3",
+      "sourceId": "5a93587f3a",
+      "jmdictId": 1535650,
+      "readings": [
+        "もくひょう"
+      ],
+      "spellings": [
+        "目標"
+      ],
+      "meaningsEn": [
+        "mark",
+        "objective",
+        "target"
+      ]
+    },
+    {
+      "word": "太い",
+      "reading": "ふとい",
+      "level": "N5",
+      "sourceId": "4162724f9a",
+      "jmdictId": 1408180,
+      "readings": [
+        "ふとい"
+      ],
+      "spellings": [
+        "太い"
+      ],
+      "meaningsEn": [
+        "fat"
+      ]
+    },
+    {
+      "word": "犬",
+      "reading": "いぬ",
+      "level": "N5",
+      "sourceId": "0df89f5010",
+      "jmdictId": 1258330,
+      "readings": [
+        "いぬ"
+      ],
+      "spellings": [
+        "犬"
+      ],
+      "meaningsEn": [
+        "dog"
+      ]
+    },
+    {
+      "word": "玉",
+      "reading": "たま",
+      "level": "N3",
+      "sourceId": "5ac33a4880",
+      "jmdictId": 1240530,
+      "readings": [
+        "ぎょく",
+        "たま"
+      ],
+      "spellings": [
+        "弾",
+        "玉"
+      ],
+      "meaningsEn": [
+        "ball",
+        "sphere",
+        "coin"
+      ]
+    },
+    {
+      "word": "入る",
+      "reading": "はいる",
+      "level": "N5",
+      "sourceId": "c428d02d43",
+      "jmdictId": 1465590,
+      "readings": [
+        "いる",
+        "はいる"
+      ],
+      "spellings": [
+        "入る"
+      ],
+      "meaningsEn": [
+        "to enter",
+        "to contain"
+      ]
+    },
+    {
+      "word": "刀",
+      "reading": "かたな",
+      "level": "N3",
+      "sourceId": "26c040c009",
+      "jmdictId": 1446420,
+      "readings": [
+        "かたな"
+      ],
+      "spellings": [
+        "刀"
+      ],
+      "meaningsEn": [
+        "sword",
+        "saber",
+        "knife",
+        "engraving tool"
+      ]
+    },
+    {
+      "word": "牛乳",
+      "reading": "ぎゅうにゅう",
+      "level": "N5",
+      "sourceId": "797ae8d562",
+      "jmdictId": 1231590,
+      "readings": [
+        "ぎゅうにゅう"
+      ],
+      "spellings": [
+        "牛乳"
+      ],
+      "meaningsEn": [
+        "milk"
+      ]
+    },
+    {
+      "word": "天気",
+      "reading": "てんき",
+      "level": "N5",
+      "sourceId": "679e34031e",
+      "jmdictId": 1438690,
+      "readings": [
+        "てんき"
+      ],
+      "spellings": [
+        "天気"
+      ],
+      "meaningsEn": [
+        "weather"
+      ]
+    },
+    {
+      "word": "千",
+      "reading": "せん",
+      "level": "N5",
+      "sourceId": "1729d60f09",
+      "jmdictId": 1388740,
+      "readings": [
+        "せん"
+      ],
+      "spellings": [
+        "千"
+      ],
+      "meaningsEn": [
+        "thousand"
+      ]
+    },
+    {
+      "word": "白い",
+      "reading": "しろい",
+      "level": "N5",
+      "sourceId": "8997f64f52",
+      "jmdictId": 1474910,
+      "readings": [
+        "しろい"
+      ],
+      "spellings": [
+        "白い"
+      ],
+      "meaningsEn": [
+        "white"
+      ]
+    },
+    {
+      "word": "鳥",
+      "reading": "とり",
+      "level": "N5",
+      "sourceId": "7e4fccba7f",
+      "jmdictId": 1430250,
+      "readings": [
+        "とり"
+      ],
+      "spellings": [
+        "鳥"
+      ],
+      "meaningsEn": [
+        "bird"
+      ]
+    },
+    {
+      "word": "石",
+      "reading": "いし",
+      "level": "N4",
+      "sourceId": "372ce69caf",
+      "jmdictId": 1382440,
+      "readings": [
+        "いし"
+      ],
+      "spellings": [
+        "石"
+      ],
+      "meaningsEn": [
+        "stone"
+      ]
+    },
+    {
+      "word": "見る",
+      "reading": "みる",
+      "level": "N5",
+      "sourceId": "85b37b6884",
+      "jmdictId": 1259290,
+      "readings": [
+        "みる"
+      ],
+      "spellings": [
+        "見る"
+      ],
+      "meaningsEn": [
+        "to see",
+        "to watch"
+      ]
+    },
+    {
+      "word": "自由",
+      "reading": "じゆう",
+      "level": "N4",
+      "sourceId": "d1805965ec",
+      "jmdictId": 1318720,
+      "readings": [
+        "じゆう"
+      ],
+      "spellings": [
+        "自由"
+      ],
+      "meaningsEn": [
+        "freedom"
+      ]
+    },
+    {
+      "word": "申請",
+      "reading": "しんせい",
+      "level": "N2",
+      "sourceId": "ced0ddb80e",
+      "jmdictId": 1363130,
+      "readings": [
+        "しんせい"
+      ],
+      "spellings": [
+        "申請"
+      ],
+      "meaningsEn": [
+        "application",
+        "request",
+        "petition"
+      ]
+    },
+    {
+      "word": "休む",
+      "reading": "やすむ",
+      "level": "N5",
+      "sourceId": "3e3efcb45f",
+      "jmdictId": 1227560,
+      "readings": [
+        "やすむ"
+      ],
+      "spellings": [
+        "休む"
+      ],
+      "meaningsEn": [
+        "to rest"
+      ]
+    },
+    {
+      "word": "体",
+      "reading": "からだ",
+      "level": "N5",
+      "sourceId": "a556e5edce",
+      "jmdictId": 1409140,
+      "readings": [
+        "からだ",
+        "てい"
+      ],
+      "spellings": [
+        "体"
+      ],
+      "meaningsEn": [
+        "body"
+      ]
+    },
+    {
+      "word": "待つ",
+      "reading": "まつ",
+      "level": "N5",
+      "sourceId": "6a39701228",
+      "jmdictId": 1410590,
+      "readings": [
+        "まつ"
+      ],
+      "spellings": [
+        "待つ"
+      ],
+      "meaningsEn": [
+        "to wait"
+      ]
+    },
+    {
+      "word": "持つ",
+      "reading": "もつ",
+      "level": "N5",
+      "sourceId": "16fda19d79",
+      "jmdictId": 1315720,
+      "readings": [
+        "もつ"
+      ],
+      "spellings": [
+        "持つ"
+      ],
+      "meaningsEn": [
+        "to hold"
+      ]
+    },
+    {
+      "word": "詩",
+      "reading": "し",
+      "level": "N3",
+      "sourceId": "f263ebe6ea",
+      "jmdictId": 1929950,
+      "readings": [
+        "し"
+      ],
+      "spellings": [
+        "詩"
+      ],
+      "meaningsEn": [
+        "poem",
+        "verse of poetry"
+      ]
+    },
+    {
+      "word": "晴れる",
+      "reading": "はれる",
+      "level": "N5",
+      "sourceId": "3be88666ba",
+      "jmdictId": 1376470,
+      "readings": [
+        "はれる"
+      ],
+      "spellings": [
+        "晴れる"
+      ],
+      "meaningsEn": [
+        "to be sunny"
+      ]
+    },
+    {
+      "word": "感情",
+      "reading": "かんじょう",
+      "level": "N3",
+      "sourceId": "c2dcadfe14",
+      "jmdictId": 1212410,
+      "readings": [
+        "かんじょう"
+      ],
+      "spellings": [
+        "感情"
+      ],
+      "meaningsEn": [
+        "emotion(s)",
+        "feeling(s)",
+        "sentiment"
+      ]
+    },
+    {
+      "word": "柱",
+      "reading": "はしら",
+      "level": "N1",
+      "sourceId": "fd0167bb1a",
+      "jmdictId": 1426480,
+      "readings": [
+        "はしら"
+      ],
+      "spellings": [
+        "柱"
+      ],
+      "meaningsEn": [
+        "pillar",
+        "post"
+      ]
+    },
+    {
+      "word": "荷物",
+      "reading": "にもつ",
+      "level": "N5",
+      "sourceId": "2e6c7d2d9d",
+      "jmdictId": 1195430,
+      "readings": [
+        "にもつ"
+      ],
+      "spellings": [
+        "荷物"
+      ],
+      "meaningsEn": [
+        "luggage"
+      ]
+    },
+    {
+      "word": "質問",
+      "reading": "しつもん",
+      "level": "N5",
+      "sourceId": "2c5c99977c",
+      "jmdictId": 1320760,
+      "readings": [
+        "しつもん"
+      ],
+      "spellings": [
+        "質問"
+      ],
+      "meaningsEn": [
+        "question"
+      ]
+    },
+    {
+      "word": "聞く",
+      "reading": "きく",
+      "level": "N5",
+      "sourceId": "dc19a213cd",
+      "jmdictId": 1591110,
+      "readings": [
+        "きく"
+      ],
+      "spellings": [
+        "聞く"
+      ],
+      "meaningsEn": [
+        "to hear",
+        "to listen to",
+        "to ask"
+      ]
+    },
+    {
+      "word": "閉める",
+      "reading": "しめる",
+      "level": "N5",
+      "sourceId": "95827b08e3",
+      "jmdictId": 1508590,
+      "readings": [
+        "しめる"
+      ],
+      "spellings": [
+        "閉める"
+      ],
+      "meaningsEn": [
+        "to close something"
+      ]
+    },
+    {
+      "word": "板",
+      "reading": "いた",
+      "level": "N3",
+      "sourceId": "4601135013",
+      "jmdictId": 1481350,
+      "readings": [
+        "いた"
+      ],
+      "spellings": [
+        "板"
+      ],
+      "meaningsEn": [
+        "board",
+        "plank"
+      ]
+    },
+    {
+      "word": "梅",
+      "reading": "うめ",
+      "level": "N3",
+      "sourceId": "8320d2162f",
+      "jmdictId": 1473460,
+      "readings": [
+        "うめ"
+      ],
+      "spellings": [
+        "梅"
+      ],
+      "meaningsEn": [
+        "plum",
+        "plum-tree",
+        "lowest (of a three-tier ranking system)"
+      ]
+    },
+    {
+      "word": "緑",
+      "reading": "みどり",
+      "level": "N5",
+      "sourceId": "85e4ba2f28",
+      "jmdictId": 1555300,
+      "readings": [
+        "みどり"
+      ],
+      "spellings": [
+        "緑"
+      ],
+      "meaningsEn": [
+        "green"
+      ]
+    },
+    {
+      "word": "録音",
+      "reading": "ろくおん",
+      "level": "N2",
+      "sourceId": "ee39a2f4d5",
+      "jmdictId": 1561590,
+      "readings": [
+        "ろくおん"
+      ],
+      "spellings": [
+        "録音"
+      ],
+      "meaningsEn": [
+        "(audio) recording"
+      ]
+    },
+    {
+      "word": "縁",
+      "reading": "ふち",
+      "level": "N3",
+      "sourceId": "7f83598742",
+      "jmdictId": 1177500,
+      "readings": [
+        "えん",
+        "ふち"
+      ],
+      "spellings": [
+        "縁"
+      ],
+      "meaningsEn": [
+        "rim",
+        "brim",
+        "edge",
+        "brink"
+      ]
+    },
+    {
+      "word": "織物",
+      "reading": "おりもの",
+      "level": "N1",
+      "sourceId": "e7af77b5ad",
+      "jmdictId": 1357450,
+      "readings": [
+        "おりもの"
+      ],
+      "spellings": [
+        "織物"
+      ],
+      "meaningsEn": [
+        "textile",
+        "fabric"
+      ]
+    },
+    {
+      "word": "知識",
+      "reading": "ちしき",
+      "level": "N3",
+      "sourceId": "ae8e7129b1",
+      "jmdictId": 1420590,
+      "readings": [
+        "ちしき"
+      ],
+      "spellings": [
+        "知識"
+      ],
+      "meaningsEn": [
+        "knowledge",
+        "information"
+      ]
+    },
+    {
+      "word": "危険",
+      "reading": "きけん",
+      "level": "N4",
+      "sourceId": "8bbbe3a9e8",
+      "jmdictId": 1218560,
+      "readings": [
+        "きけん"
+      ],
+      "spellings": [
+        "危険"
+      ],
+      "meaningsEn": [
+        "danger"
+      ]
+    },
+    {
+      "word": "合格",
+      "reading": "ごうかく",
+      "level": "N3",
+      "sourceId": "5075cd7c3a",
+      "jmdictId": 1284600,
+      "readings": [
+        "ごうかく"
+      ],
+      "spellings": [
+        "合格"
+      ],
+      "meaningsEn": [
+        "success",
+        "passing (e.g. exam)",
+        "eligibility"
+      ]
+    },
+    {
+      "word": "始める",
+      "reading": "はじめる",
+      "level": "N4",
+      "sourceId": "4610276c99",
+      "jmdictId": 1307550,
+      "readings": [
+        "はじめる"
+      ],
+      "spellings": [
+        "始める"
+      ],
+      "meaningsEn": [
+        "to begin"
+      ]
+    },
+    {
+      "word": "結婚",
+      "reading": "けっこん",
+      "level": "N5",
+      "sourceId": "2eb252da72",
+      "jmdictId": 1254790,
+      "readings": [
+        "けっこん"
+      ],
+      "spellings": [
+        "結婚"
+      ],
+      "meaningsEn": [
+        "marriage"
+      ]
+    },
+    {
+      "word": "詰める",
+      "reading": "つめる",
+      "level": "N3",
+      "sourceId": "236e0b11a0",
+      "jmdictId": 1226510,
+      "readings": [
+        "つめる"
+      ],
+      "spellings": [
+        "詰める"
+      ],
+      "meaningsEn": [
+        "to pack",
+        "to shorten",
+        "to work out (details)"
+      ]
+    },
+    {
+      "word": "郊外",
+      "reading": "こうがい",
+      "level": "N4",
+      "sourceId": "aa95e437a0",
+      "jmdictId": 1282490,
+      "readings": [
+        "こうがい"
+      ],
+      "spellings": [
+        "郊外"
+      ],
+      "meaningsEn": [
+        "outskirts"
+      ]
+    },
+    {
+      "word": "投げる",
+      "reading": "なげる",
+      "level": "N4",
+      "sourceId": "1b35adeae4",
+      "jmdictId": 1447000,
+      "readings": [
+        "なげる"
+      ],
+      "spellings": [
+        "投げる"
+      ],
+      "meaningsEn": [
+        "to throw or cast away"
+      ]
+    },
+    {
+      "word": "頂上",
+      "reading": "ちょうじょう",
+      "level": "N3",
+      "sourceId": "d19e1e7cb4",
+      "jmdictId": 1430220,
+      "readings": [
+        "ちょうじょう"
+      ],
+      "spellings": [
+        "頂上"
+      ],
+      "meaningsEn": [
+        "top",
+        "summit",
+        "peak"
+      ]
+    },
+    {
+      "word": "微妙",
+      "reading": "びみょう",
+      "level": "N3",
+      "sourceId": "233a387b5d",
+      "jmdictId": 1486170,
+      "readings": [
+        "びみょう"
+      ],
+      "spellings": [
+        "微妙"
+      ],
+      "meaningsEn": [
+        "delicate",
+        "subtle"
+      ]
+    },
+    {
+      "word": "捨てる",
+      "reading": "すてる",
+      "level": "N4",
+      "sourceId": "49ac3c55c7",
+      "jmdictId": 1322320,
+      "readings": [
+        "すてる"
+      ],
+      "spellings": [
+        "捨てる"
+      ],
+      "meaningsEn": [
+        "to throw away"
+      ]
+    },
+    {
+      "word": "水滴",
+      "reading": "すいてき",
+      "level": "N2",
+      "sourceId": "23d700213f",
+      "jmdictId": 1371880,
+      "readings": [
+        "すいてき"
+      ],
+      "spellings": [
+        "水滴"
+      ],
+      "meaningsEn": [
+        "drop of water"
+      ]
+    },
+    {
+      "word": "壁",
+      "reading": "かべ",
+      "level": "N4",
+      "sourceId": "0752484ec5",
+      "jmdictId": 1509290,
+      "readings": [
+        "かべ"
+      ],
+      "spellings": [
+        "壁"
+      ],
+      "meaningsEn": [
+        "wall"
+      ]
+    },
+    {
+      "word": "完璧",
+      "reading": "かんぺき",
+      "level": "N1",
+      "sourceId": "3c07e35ffe",
+      "jmdictId": 1590970,
+      "readings": [
+        "かんぺき"
+      ],
+      "spellings": [
+        "完璧"
+      ],
+      "meaningsEn": [
+        "perfection",
+        "completeness",
+        "flawless"
+      ]
+    },
+    {
+      "word": "貨物",
+      "reading": "かもつ",
+      "level": "N2",
+      "sourceId": "9cb6ca65c9",
+      "jmdictId": 1195890,
+      "readings": [
+        "かもつ"
+      ],
+      "spellings": [
+        "貨物"
+      ],
+      "meaningsEn": [
+        "cargo",
+        "freight"
+      ]
+    },
+    {
+      "word": "思う",
+      "reading": "おもう",
+      "level": "N4",
+      "sourceId": "bad913ed8f",
+      "jmdictId": 1589350,
+      "readings": [
+        "おもう"
+      ],
+      "spellings": [
+        "思う"
+      ],
+      "meaningsEn": [
+        "to think",
+        "to feel"
+      ]
+    },
+    {
+      "word": "辛い",
+      "reading": "からい",
+      "level": "N5",
+      "sourceId": "d2546ac97b",
+      "jmdictId": 1365850,
+      "readings": [
+        "からい",
+        "つらい"
+      ],
+      "spellings": [
+        "辛い"
+      ],
+      "meaningsEn": [
+        "spicy"
+      ]
+    },
+    {
+      "word": "文字",
+      "reading": "もじ",
+      "level": "N3",
+      "sourceId": "2ec7e341be",
+      "jmdictId": 1505390,
+      "readings": [
+        "もじ"
+      ],
+      "spellings": [
+        "文字"
+      ],
+      "meaningsEn": [
+        "letter (of alphabet)",
+        "character"
+      ]
+    },
+    {
+      "word": "寺",
+      "reading": "てら",
+      "level": "N4",
+      "sourceId": "a9687d55e3",
+      "jmdictId": 1315240,
+      "readings": [
+        "てら"
+      ],
+      "spellings": [
+        "寺"
+      ],
+      "meaningsEn": [
+        "temple"
+      ]
+    },
+    {
+      "word": "地図",
+      "reading": "ちず",
+      "level": "N5",
+      "sourceId": "ffa3dda331",
+      "jmdictId": 1421290,
+      "readings": [
+        "ちず"
+      ],
+      "spellings": [
+        "地図"
+      ],
+      "meaningsEn": [
+        "map"
+      ]
+    },
+    {
+      "word": "銀",
+      "reading": "ぎん",
+      "level": "N3",
+      "sourceId": "dedefd0d0c",
+      "jmdictId": 1595090,
+      "readings": [
+        "ぎん"
+      ],
+      "spellings": [
+        "銀"
+      ],
+      "meaningsEn": [
+        "silver",
+        "silver coin",
+        "silver paint"
+      ]
+    },
+    {
+      "word": "花",
+      "reading": "はな",
+      "level": "N5",
+      "sourceId": "6485c3c2a7",
+      "jmdictId": 1194500,
+      "readings": [
+        "はな"
+      ],
+      "spellings": [
+        "花"
+      ],
+      "meaningsEn": [
+        "flower"
+      ]
+    },
+    {
+      "word": "森林",
+      "reading": "しんりん",
+      "level": "N2",
+      "sourceId": "ddca1b1da0",
+      "jmdictId": 1362530,
+      "readings": [
+        "しんりん"
+      ],
+      "spellings": [
+        "森林"
+      ],
+      "meaningsEn": [
+        "forest",
+        "woods"
+      ]
+    },
+    {
+      "word": "徹底",
+      "reading": "てってい",
+      "level": "N3",
+      "sourceId": "9ed2c14da0",
+      "jmdictId": 1437670,
+      "readings": [
+        "てってい"
+      ],
+      "spellings": [
+        "徹底"
+      ],
+      "meaningsEn": [
+        "thoroughness",
+        "completeness"
+      ]
+    },
+    {
+      "word": "練習",
+      "reading": "れんしゅう",
+      "level": "N5",
+      "sourceId": "d23f06249a",
+      "jmdictId": 1559160,
+      "readings": [
+        "れんしゅう"
+      ],
+      "spellings": [
+        "練習"
+      ],
+      "meaningsEn": [
+        "to practice"
+      ]
+    },
+    {
+      "word": "世紀",
+      "reading": "せいき",
+      "level": "N3",
+      "sourceId": "8e592c506e",
+      "jmdictId": 1373990,
+      "readings": [
+        "せいき"
+      ],
+      "spellings": [
+        "世紀"
+      ],
+      "meaningsEn": [
+        "century",
+        "era"
+      ]
+    },
+    {
+      "word": "武士",
+      "reading": "ぶし",
+      "level": "N2",
+      "sourceId": "ebf84be776",
+      "jmdictId": 1583680,
+      "readings": [
+        "ぶし"
+      ],
+      "spellings": [
+        "武士"
+      ],
+      "meaningsEn": [
+        "warrior",
+        "samurai"
+      ]
+    },
+    {
+      "word": "干す",
+      "reading": "ほす",
+      "level": "N2",
+      "sourceId": "119c294e09",
+      "jmdictId": 1603510,
+      "readings": [
+        "ほす"
+      ],
+      "spellings": [
+        "干す"
+      ],
+      "meaningsEn": [
+        "to air",
+        "to dry",
+        "to desiccate",
+        "to drain (off)",
+        "to drink up"
+      ]
+    }
+  ],
+  "note": "Vocabulary metadata only. All sentences, translations and distractors are original."
+}
