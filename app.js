@@ -1,21 +1,19 @@
-import { KANJI } from './kanji-data.js?v=20261013-similar-quiz';
-import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261013-similar-quiz';
-import { shuffle, filterKanji, createQuiz, eligibleQuizCards, cleanProgress, localDay } from './core.js?v=20261013-similar-quiz';
-import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261013-similar-quiz';
-import { groupsForCharacter } from './similar-core.js?v=20261013-similar-quiz';
-import { createSimilarView } from './similar-view.js?v=20261013-similar-quiz';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-similar-quiz';
-import { familiesForCharacter } from './radical-core.js?v=20261013-similar-quiz';
+import { KANJI } from './kanji-data.js?v=20261013-counters';
+import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261013-counters';
+import { shuffle, filterKanji, createQuiz, eligibleQuizCards, cleanProgress, localDay } from './core.js?v=20261013-counters';
+import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261013-counters';
+import { groupsForCharacter } from './similar-core.js?v=20261013-counters';
+import { createSimilarView } from './similar-view.js?v=20261013-counters';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-counters';
+import { familiesForCharacter } from './radical-core.js?v=20261013-counters';
 
-import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261013-similar-quiz';
-import { filterReadingQuestions, createReadingQuiz } from './jlpt-reading-core.js?v=20261013-similar-quiz';
+import { filterReadingQuestions, createReadingQuiz } from './jlpt-reading-core.js?v=20261013-counters';
 
-import { KANJI_WRITING, KATAKANA_WRITING } from './writing-data.js?v=20261013-similar-quiz';
-import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261013-similar-quiz';
-import { SIMILAR_READING, SIMILAR_WRITING, QUIZ_TOPICS, mergePracticeBank, supportsQuizTopics, resolveQuizTopic, quizTopicLabel, filterTopicQuestions } from './similar-quiz-core.js?v=20261013-similar-quiz';
-import { questionTopicLinks } from './similar-quiz-view.js?v=20261013-similar-quiz';
+import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261013-counters';
+import { topicsForMode, supportsQuizTopics, resolveQuizTopic, quizTopicLabel, filterTopicQuestions } from './similar-quiz-core.js?v=20261013-counters';
+import { questionTopicLinks } from './similar-quiz-view.js?v=20261013-counters';
 
-const practiceBanks = {'jlpt-reading':mergePracticeBank(JLPT_READINGS,SIMILAR_READING), 'hiragana-kanji':mergePracticeBank(KANJI_WRITING,SIMILAR_WRITING), 'hiragana-katakana':KATAKANA_WRITING};
+import { PRACTICE_BANKS as practiceBanks } from './practice-banks.js?v=20261013-counters';
 
 const paths = {
   home:'<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>',
@@ -166,7 +164,7 @@ function renderQuizSetup() {
   clearInterval(quizTimer); quiz = null;
   root.innerHTML = heading('SEDIKIT TANTANGAN, BANYAK KEMAJUAN', 'Baca, bedakan, lalu ingat.', 'Latih arti, bacaan kanji, dan penulisan katakana, lalu pahami setiap jawaban. Pilih level dan ritme yang cocok untukmu.') + `<div class="setup-panel"><div class="setup-title"><span class="stat-icon">${icon('sparkles')}</span><div><h2>Racik sesi belajarmu</h2><p>Pilihan ganda, tanpa tekanan. Kamu yang atur ritmenya.</p></div></div><div class="setup-grid"><div class="field"><label for="quiz-mode">Yang ingin dilatih</label><select id="quiz-mode"><option value="jlpt-reading">Kanji → Hiragana · Bacaan ala JLPT</option><option value="hiragana-kanji">Hiragana → Kanji · Bentuk mirip</option><option value="hiragana-katakana">Hiragana → Katakana · Bentuk mirip</option><option value="meaning">Kanji → Arti Indonesia</option><option value="kanji">Arti Indonesia → Kanji</option><option value="reading">Contoh kata → Hiragana</option></select></div><div class="field"><label for="quiz-level">Level latihan</label><select id="quiz-level"></select></div><div class="field"><label for="quiz-count">Jumlah soal</label><select id="quiz-count"><option value="5">5 soal · Pemanasan</option><option value="10">10 soal · Latihan harian</option><option value="20">20 soal · Tantangan ekstra</option></select></div><div class="field"><label for="quiz-time">Waktu per soal</label><select id="quiz-time"><option value="0">Santai, tanpa timer</option><option value="15">15 detik</option><option value="30">30 detik</option></select></div></div><section class="reading-intro" id="quiz-intro" aria-label="Tentang mode latihan"></section><p class="setup-note" id="quiz-note" role="status"></p><button class="primary" data-action="quiz-start">Mulai kuis ${icon('arrow')}</button><p class="reading-disclaimer" id="quiz-disclaimer">Latihan buatan untuk belajar, bukan soal resmi JLPT. Level mengikuti daftar kosakata komunitas.</p></div>`;
   document.querySelector('#quiz-mode').value = quizPreferences.mode;
-  document.querySelector('.setup-grid').insertAdjacentHTML('beforeend', '<div class="field quiz-topic-field"><label for="quiz-topic">Materi soal</label><select id="quiz-topic"></select><small>Pilih seluruh materi, semua Kanji Mirip, atau satu kelompok yang ingin dilatih.</small></div>');
+  document.querySelector('.setup-grid').insertAdjacentHTML('beforeend', '<div class="field quiz-topic-field"><label for="quiz-topic">Materi soal</label><select id="quiz-topic"></select><small id="quiz-topic-help"></small></div>');
   updateQuizTopics(quizPreferences.topic);
   document.querySelector('#quiz-count').value = quizPreferences.count;
   document.querySelector('#quiz-time').value = quizPreferences.time;
@@ -184,10 +182,11 @@ function quizIntro(mode, bank, level) {
   if (!bank?.length) return '';
   const isWriting = mode !== 'jlpt-reading';
   const sample = bank.find(q=>level === 'all' || q.level === level) || bank[0];
-  const title = mode === 'hiragana-kanji' ? 'Teliti bentuknya.<br> Kenali kanjinya.' : mode === 'hiragana-katakana' ? 'Bedakan シ・ツ<br> dan ソ・ン.' : 'Mirip bunyinya,<br> beda jawabannya.';
+  const specialReading = mode === 'jlpt-reading' && topicsForMode(mode).some(t=>t.kind==='reading' && t.id===quizPreferences.topic);
+  const title = mode === 'hiragana-kanji' ? 'Teliti bentuknya.<br> Kenali kanjinya.' : mode === 'hiragana-katakana' ? 'Bedakan シ・ツ<br> dan ソ・ン.' : specialReading ? 'Teliti bunyinya.<br> Pahami konteksnya.' : 'Mirip bunyinya,<br> beda jawabannya.';
   const description = isWriting
     ? 'Baca bagian yang digarisbawahi dalam kalimat, lalu pilih penulisan yang tepat. Perhatikan bentuk huruf, goresan, dan tanda kecilnya.'
-    : 'Perhatikan bunyi panjang, dakuten, serta huruf kecil ゃ・ゅ・ょ・っ. Setelah menjawab, lihat arti dan alasan bacaan yang tepat.';
+    : specialReading ? 'Latih perubahan bunyi pada hitungan, nominal yen, tanggal, dan kata. Baca konteks kalimat: 1日 sebagai tanggal berbeda dari durasi satu hari. Pilihan mengecoh pada っ, ゅ, bunyi panjang, dan tanda suara.' : 'Perhatikan bunyi panjang, dakuten, serta huruf kecil ゃ・ゅ・ょ・っ. Materi juga mencakup penghitung, nominal yen, dan tanggal. Setelah menjawab, lihat arti dan alasan bacaan yang tepat.';
   const options = isWriting ? [sample.answer, ...sample.distractors] : [sample.distractors[0], sample.reading, ...sample.distractors.slice(1)];
   return `<div><span class="reading-label">${bank.length} SOAL · ${escape(quizTopicLabel(supportsQuizTopics(mode) ? quizPreferences.topic : 'all'))}</span><h3>${title}</h3><p>${description}</p><div class="reading-tags"><span>${levels.filter(l=>bank.some(q=>q.level===l)).join(' · ')}</span><span>Arti & pembahasan</span></div></div><div class="reading-example ${isWriting ? 'writing-example' : ''}"><span>CONTOH ${sample.level} · ${isWriting ? 'PILIH TULISANNYA' : 'PILIH BACAANNYA'}</span><strong lang="ja">${escape(isWriting ? sample.prompt : sample.word)}</strong>${sample.sentence ? `<p class="quiz-example-context" lang="ja">${escape(sample.sentence.replace('{target}',isWriting ? sample.prompt : sample.word))}</p>` : ''}<div class="reading-example-options" lang="ja">${options.map(a => `<span>${escape(a)}</span>`).join('')}</div></div>`;
 }
@@ -197,17 +196,18 @@ function updateQuizTopics(selected = 'all') {
   const select=document.querySelector('#quiz-topic');
   select.closest('.field').hidden=!supported;select.disabled=!supported;
   const bank=practiceBanks[mode] || [];
-  const options=kind=>QUIZ_TOPICS.filter(t=>t.kind===kind).map(t=>({topic:t,count:filterTopicQuestions(bank,t.id).length})).filter(t=>t.count).map(({topic,count})=>`<option value="${topic.id}">${escape(topic.label)} · ${count} soal</option>`).join('');
-  select.innerHTML=`<option value="all">Semua materi · ${bank.length} soal</option>${supported ? `<option value="similar">Semua Kanji Mirip · ${filterTopicQuestions(bank,'similar').length} soal</option><optgroup label="Keluarga radikal & komponen">${options('family')}</optgroup><optgroup label="Kelompok bentuk mirip">${options('comparison')}</optgroup>` : ''}`;
-  select.value=supported ? resolveQuizTopic(selected) : 'all';
+  const options=kind=>topicsForMode(mode).filter(t=>t.kind===kind).map(t=>({topic:t,count:filterTopicQuestions(bank,t.id).length})).filter(t=>t.count).map(({topic,count})=>`<option value="${topic.id}">${escape(topic.label)} · ${count} soal</option>`).join('');
+  select.innerHTML=`<option value="all">Semua materi · ${bank.length} soal</option>${supported ? `${mode==='jlpt-reading' ? `<optgroup label="Hitungan, tanggal & bunyi kata">${options('reading')}</optgroup>` : ''}<option value="similar">Semua Kanji Mirip · ${filterTopicQuestions(bank,'similar').length} soal</option><optgroup label="Keluarga radikal & komponen">${options('family')}</optgroup><optgroup label="Kelompok bentuk mirip">${options('comparison')}</optgroup>` : ''}`;
+  select.value=resolveQuizTopic(selected,mode);
   if (!select.value) select.value='all';
+  document.querySelector('#quiz-topic-help').textContent=mode==='jlpt-reading' ? 'Pilih hitungan benda, nominal yen, tanggal, bunyi kata, atau kelompok Kanji Mirip. Bacaan hitungan dan tanggal tersedia pada level latihan N5.' : 'Pilih seluruh materi, semua Kanji Mirip, atau satu kelompok yang ingin dilatih.';
 }
 function updateQuizLevels(selected) {
   const mode=document.querySelector('#quiz-mode').value;
   const original = practiceBanks[mode];
   const bank=original ? filterTopicQuestions(original,supportsQuizTopics(mode) ? document.querySelector('#quiz-topic').value : 'all') : null;
   document.querySelector('#quiz-level').innerHTML = bank
-    ? `<option value="all">Semua level · ${bank.length} kata</option>${levels.map(l => {const count=filterReadingQuestions(bank,l).length;return `<option value="${l}" ${count ? '' : 'disabled'}>${l} · ${count} kata</option>`;}).join('')}`
+    ? `<option value="all">Semua level · ${bank.length} soal</option>${levels.map(l => {const count=filterReadingQuestions(bank,l).length;return `<option value="${l}" ${count ? '' : 'disabled'}>${l} · ${count} soal</option>`;}).join('')}`
     : levelOptions(selected);
   document.querySelector('#quiz-level').value = bank && selected !== 'all' && !filterReadingQuestions(bank,selected).length ? 'all' : selected;
 }
@@ -224,7 +224,8 @@ function quizNote() {
   document.querySelector('#quiz-intro').hidden = !bank;
   document.querySelector('#quiz-intro').innerHTML = quizIntro(mode,topicBank,level);
   document.querySelector('#quiz-disclaimer').hidden = !bank;
-  document.querySelector('#quiz-note').textContent = `${Math.min(requested, pool.length)} soal acak dari ${pool.length} ${bank ? 'kosakata' : 'kanji'} tersedia. ${requested > pool.length ? 'Jumlah soal disesuaikan dengan koleksi.' : 'Hasil latihan tersimpan di browser ini.'}`;
+  document.querySelector('#quiz-disclaimer').textContent=mode==='jlpt-reading' ? 'Latihan buatan, bukan soal resmi JLPT. Level kosakata mengikuti daftar komunitas; hitungan, tanggal, dan tambahan bunyi kata dikelompokkan sebagai latihan dasar N5 secara editorial.' : 'Latihan buatan untuk belajar, bukan soal resmi JLPT. Level mengikuti daftar kosakata komunitas.';
+  document.querySelector('#quiz-note').textContent = `${Math.min(requested, pool.length)} soal acak dari ${pool.length} ${bank ? 'soal' : 'kanji'} tersedia. ${requested > pool.length ? 'Jumlah soal disesuaikan dengan koleksi.' : 'Hasil latihan tersimpan di browser ini.'}`;
   document.querySelector('[data-action="quiz-start"]').disabled = !pool.length;
 }
 function startQuiz() {
@@ -307,7 +308,7 @@ function route() {
   else if (view === 'kuis') {
     if (groupId === 'jlpt') quizPreferences.mode = 'jlpt-reading';
     else if (Object.hasOwn(practiceBanks, groupId)) quizPreferences.mode = groupId;
-    if (groupId) quizPreferences.topic = supportsQuizTopics(quizPreferences.mode) ? resolveQuizTopic(topicId) : 'all';
+    if (groupId) quizPreferences.topic = resolveQuizTopic(topicId,quizPreferences.mode);
     if (quizPreferences.topic !== 'all' && topicId) quizPreferences.level='all';
     renderQuizSetup();
   }

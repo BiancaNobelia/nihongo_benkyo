@@ -1,0 +1,11 @@
+{
+  "reviewed": "2026-10-13",
+  "scope": "Reading facts only. All questions, contexts, Indonesian explanations, and distractors are original. N5 is an editorial practice band, not an official JLPT assignment.",
+  "references": [
+    {"id":"joshu-counters","publisher":"University of Texas at Austin","title":"JOSHU — Counters","url":"https://laits.utexas.edu/japanese/joshu/counters/counters_english.php","usedFor":"本・台・枚・個・冊・匹・杯・人・つ and durations"},
+    {"id":"irodori-starter","publisher":"The Japan Foundation","title":"Irodori Starter — Word list","url":"https://www.irodori.jpf.go.jp/assets/data/wordlist_X.pdf","usedFor":"Printed sections L9-2 (one-day duration), L12-2 through L12-4 (calendar dates), L16-1 through L16-2 (numbers and yen)"},
+    {"id":"marugoto-vocabulary","publisher":"The Japan Foundation","title":"Marugoto Starter — Vocabulary index","url":"https://marugoto.jpf.go.jp/assets/docs/download/starter_c/MarugotoStarterCompetencesVocabularyIndex_CN.pdf","usedFor":"中国・中国語・韓国・東京; 留学生 also checked against the pinned OpenJLPT/JMdict cache"},
+    {"id":"jyl-variants","publisher":"JYL Project — Japanese Language Education for Young Learners","title":"Reference data 09 — Counters","url":"https://www.kodomo-kotoba.info/pdf/Goi_Reference_data09.pdf","usedFor":"Accepted alternatives including 八本・八匹・八杯 and じゅっ／じっ; alternatives are not used as distractors"},
+    {"id":"jf-calendar-variants","publisher":"The Japan Foundation, Bangkok","title":"Akiko and Friends — Teacher Manual Volume 2","url":"https://ba.jpf.go.jp/wp-content/uploads/2025/08/Teacher-Manual-Vol.2-2017-JP-2024.05.13.pdf","usedFor":"Calendar variants 17日・27日 with なな; both しち and なな readings are excluded from distractors"}
+  ]
+}

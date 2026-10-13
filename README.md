@@ -20,9 +20,14 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
   pagination, dan tautan dari detail tersedia di `#mirip`.
 - Flashcard dengan penilaian mandiri dan pilihan koleksi.
 - Kuis arti, kanji, atau bacaan kata; 5/10/20 soal dan timer opsional.
-- Bacaan ala JLPT: 180 soal kosakata N5–N1 dengan pilihan hiragana
+- Bacaan ala JLPT: 280 soal N5–N1 dengan pilihan hiragana
   yang mirip, arti Indonesia, dan penjelasan bunyi panjang, dakuten, serta kana kecil.
   Buka langsung melalui `#kuis/jlpt`. Ini latihan buatan, bukan soal resmi ujian.
+- Bacaan khusus: 100 soal tambahan yang dikelompokkan sebagai latihan dasar
+  N5 secara editorial. Ada 44 soal penghitung (本・台・枚・個・冊・匹・杯・人・つ),
+  18 nominal ratusan/ribuan yen, 31 tanggal + 2 durasi hari, serta 5 soal bunyi
+  kata seperti 中国. Pilih **Materi soal**, atau buka `#kuis/jlpt/bacaan-khusus`.
+  Kedua bacaan `1日` dibedakan lewat konteks; variasi sah tidak dijadikan pengecoh.
 - Hiragana → Kanji: 132 soal; Hiragana → Katakana: 50 soal (10 per level).
   Kalimat dengan target bergaris bawah, empat pilihan bentuk mirip,
   arti kalimat, dan penjelasan perbedaannya. Buka `#kuis/hiragana-kanji` atau
@@ -73,6 +78,9 @@ pencarian, gabungan filter, dan pagination seluruh anggota.
 Pengujian soal Kanji Mirip memeriksa 82 rujukan kosakata, kedua arah latihan,
 pengecoh dan ejaan alternatif, konteks, cakupan 58 kelompok, penggabungan bank
 tanpa duplikasi, serta kombinasi materi dan level.
+Pengujian bacaan khusus memeriksa perubahan bunyi per penghitung, nominal yen,
+seluruh tanggal 1–31, dua konteks `1日`, pilihan yang diminta pengguna, variasi
+bacaan yang sah, serta pemisahan filter bacaan dari soal penulisan/Kanji Mirip.
 Jalankan `python -m unittest discover -s tests -p "test_*.py"` untuk memastikan
 build menolak data baru atau berubah yang belum ditinjau.
 

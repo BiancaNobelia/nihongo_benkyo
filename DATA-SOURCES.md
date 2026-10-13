@@ -208,7 +208,8 @@ menjawab dan pada ulasan hasil.
 `similar-quiz-core.js` menghubungkan target karakter ke kelompok lama dan
 keluarga radikal, menggabungkan bank tanpa mengulang kosakata yang sama, serta
 memfilter materi dan level. Bank gabungan yang tampil di aplikasi berisi
-**180 soal kanji → hiragana** dan **132 soal hiragana → kanji**. Dua kata yang
+**180 soal kanji → hiragana** sebelum tambahan bacaan khusus di bawah, dan
+**132 soal hiragana → kanji**. Dua kata yang
 sudah ada pada bank membaca memakai versi baru yang memiliki konteks kalimat.
 Bank katakana tetap berisi 50 soal. Kelompok kecil menyesuaikan jumlah soal
 dengan jumlah kata yang tersedia, dan tidak mengulang kata demi memenuhi kuota.
@@ -217,6 +218,43 @@ Jalankan `python scripts/build_similar_quiz.py` setelah cache dari
 `scripts/import_catalog.py` tersedia. Generator memvalidasi rujukan, pilihan
 jawaban, dan target, lalu menulis `similar-quiz-data.js` serta metadata sumber.
 Jalankan `npm test` setelah mengubah materi atau pengelompokan.
+
+### Penghitung, yen, tanggal, dan bunyi kata
+
+`special-reading-data.js` memuat **100 soal tambahan**, seluruhnya hanya pada
+mode kanji → hiragana. Total bank membaca menjadi **280 soal**, sedangkan
+penulisan kanji tetap 132 dan katakana 50. Rinciannya:
+
+- 44 soal: 本, 台, 枚, 個, 冊, 匹, 杯, 人, dan つ.
+- 18 soal: 100–900 yen dan 1.000–9.000 yen.
+- 33 soal: setiap tanggal 1–31 serta durasi satu dan dua hari.
+- 5 soal: 中国, 中国語, 韓国, 東京, dan 留学生.
+
+Bacaan ditinjau terhadap [JOSHU, University of Texas at Austin](https://laits.utexas.edu/japanese/joshu/counters/counters_english.php),
+[daftar kata Irodori 入門, Japan Foundation](https://www.irodori.jpf.go.jp/assets/data/wordlist_X.pdf),
+dan [indeks kosakata Marugoto 入門, Japan Foundation](https://marugoto.jpf.go.jp/assets/docs/download/starter_c/MarugotoStarterCompetencesVocabularyIndex_CN.pdf).
+Variasi seperti はっぽん／はちほん dan じゅっぽん／じっぽん diperiksa dengan
+[tabel penghitung JYL](https://www.kodomo-kotoba.info/pdf/Goi_Reference_data09.pdf).
+Rujukan beserta cakupannya dicatat di `data/special-reading-references.json`.
+留学生 juga dicocokkan dengan JMdict ID 1552750 pada cache OpenJLPT terkunci.
+
+Semua kalimat, terjemahan Indonesia, pembahasan, dan pengecoh disusun khusus;
+tidak ada soal atau kalimat buku pelajaran yang disalin. Sumber dipakai untuk
+memeriksa fakta bacaan. **N5 adalah kelompok latihan dasar editorial** untuk
+tambahan ini, bukan penetapan level resmi atau klaim bahwa semua contoh ada
+pada daftar kosakata komunitas. Keterangan ini ditampilkan dalam pengaturan.
+
+Pilihan yang diterima dicatat dalam `acceptedReadings` dan tidak boleh muncul
+sebagai pengecoh. Untuk `1日`, dua konteks dipertahankan dengan `contextKey`:
+tanggal (`ついたち`) dan durasi (`いちにち`). Kata yang sama tanpa perbedaan konteks
+tetap digabung. Pilihan hanya memuat satu jawaban tepat untuk kalimatnya.
+Penghitung tidak mengikuti satu aturan umum: misalnya 六本 menjadi ろっぽん,
+sedangkan 六台 tetap ろくだい dan 六千円 tetap ろくせんえん.
+
+`practice-banks.js` menjadi sumber bank gabungan untuk aplikasi dan pengujian.
+Topik baru hanya muncul pada mode membaca, dapat dipilih sebagai kelompok
+besar atau per penghitung, dan tidak masuk filter **Semua Kanji Mirip**.
+Jalankan `npm test` sesudah memperbarui materi.
 
 ### Membangun katalog
 

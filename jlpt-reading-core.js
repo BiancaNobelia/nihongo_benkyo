@@ -1,4 +1,4 @@
-import { shuffle } from './core.js?v=20261013-similar-quiz';
+import { shuffle } from './core.js?v=20261013-counters';
 
 export function filterReadingQuestions(bank, level = 'all') {
   return bank.filter(q => level === 'all' || q.level === level);
@@ -6,6 +6,7 @@ export function filterReadingQuestions(bank, level = 'all') {
 
 export function createReadingQuiz(pool, count, random = Math.random) {
   return shuffle(pool, random).slice(0, Math.max(0, Math.min(count, pool.length))).map(q => ({
+    id:q.id, contextKey:q.contextKey,
     prompt: q.word,
     answer: q.reading,
     level: q.level,
