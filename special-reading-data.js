@@ -32,7 +32,7 @@ const counters = [
     [9,'きゅうほん',['きゅほん','きゅうぼん','きゅうぽん'],'きゅう tetap panjang dan 本 dibaca ほん.'],
     [10,'じゅっぽん',['じゅっぼん','じゅうぽん','じゅっぽう'],'Baca じゅっぽん. じっぽん juga benar; bentuk itu tidak dipakai sebagai pilihan salah.',['じっぽん']],
   ]},
-  {id:'dai',suffix:'台',unit:'unit mobil',sentence:'くるまが {target} とまっています。',translation:n=>`Ada ${n} mobil yang terparkir.`,note:'台 menghitung kendaraan dan mesin. Baca だい; pola 本 tidak berlaku di sini.',rows:[
+  {id:'dai',suffix:'台',unit:'unit mobil',sentence:'くるまが {target} とまっています。',translation:n=>`Ada ${n} mobil yang terparkir.`,note:'台 menghitung kendaraan dan mesin. Baca だい.',rows:[
     [1,'いちだい',['いっだい','いちたい','いちでい'],'Satu unit dibaca いちだい, tanpa っ kecil.'],
     [3,'さんだい',['さんたい','さんでい','さだい'],'Tiga unit dibaca さんだい. だ memakai dakuten.'],
     [4,'よんだい',['よだい','よんたい','よんでい'],'Empat unit memakai よん, kemudian だい.'],
@@ -42,7 +42,7 @@ const counters = [
   ]},
   {id:'mai',suffix:'枚',unit:'lembar kertas',sentence:'かみを {target} つかいます。',translation:n=>`Saya menggunakan ${n} lembar kertas.`,note:'枚 menghitung benda tipis dan datar, seperti kertas.',rows:[
     [1,'いちまい',['いっまい','いちまえ','いちばい'],'Baca いち + まい; tidak ada perubahan menjadi っ.'],
-    [3,'さんまい',['さんばい','さんまえ','さまい'],'Baca さん + まい. Jangan tertukar dengan 杯（ばい）.'],
+    [3,'さんまい',['さんばい','さんまえ','さまい'],'Baca さん + まい. Akhiran まい tetap memakai ま.'],
     [6,'ろくまい',['ろっまい','ろくばい','ろくまえ'],'ろく tetap utuh sebelum まい.'],
     [8,'はちまい',['はっまい','はちばい','はちまえ'],'はち tetap utuh sebelum まい.'],
   ]},
@@ -102,12 +102,12 @@ const moneyRows = [
   ['七百円',700,'ななひゃくえん',['ななびゃくえん','ななぴゃくえん','なひゃくえん'],'Baca ななひゃく, tanpa perubahan pada ひゃく.'],
   ['八百円',800,'はっぴゃくえん',['はちひゃくえん','はちぴゃくえん','はっびゃくえん'],'八百 dibaca はっぴゃく dengan っ dan ぴゃ.'],
   ['九百円',900,'きゅうひゃくえん',['きゅひゃくえん','きゅうびゃくえん','きゅうぴゃくえん'],'きゅう panjang, lalu ひゃく.'],
-  ['千円',1000,'せんえん',['ぜんえん','せえん','せんいん'],'Untuk seribu, gunakan せん. 一千円 juga dapat dibaca いっせんえん; itu bukan pilihan salah di sini.',['いっせんえん']],
+  ['千円',1000,'せんえん',['ぜんえん','せえん','せんいん'],'Untuk seribu yen dalam soal ini, baca せん + えん.',['いっせんえん']],
   ['二千円',2000,'にせんえん',['にぜんえん','にっせんえん','にせいえん'],'二千 dibaca にせん; せ tidak memakai dakuten.'],
   ['三千円',3000,'さんぜんえん',['さんせんえん','さんじぇんえん','さっせんえん'],'三千 dibaca さんぜん. せん berubah menjadi ぜん.'],
-  ['四千円',4000,'よんせんえん',['よんぜんえん','よっせんえん','よせんえん'],'四千 tetap よんせん. Perubahan menjadi ぜん terjadi pada 三千.'],
+  ['四千円',4000,'よんせんえん',['よんぜんえん','よっせんえん','よせんえん'],'四千 dibaca よんせん. せ tidak memakai dakuten.'],
   ['五千円',5000,'ごせんえん',['ごぜんえん','ごっせんえん','こせんえん'],'五千 dibaca ごせん. Dakuten hanya pada ご.'],
-  ['六千円',6000,'ろくせんえん',['ろっせんえん','ろくぜんえん','ろっぜんえん'],'六千 tetap ろくせん, berbeda dari 六百（ろっぴゃく）.'],
+  ['六千円',6000,'ろくせんえん',['ろっせんえん','ろくぜんえん','ろっぜんえん'],'六千 dibaca ろくせん. Pertahankan く dan gunakan せ tanpa dakuten.'],
   ['七千円',7000,'ななせんえん',['ななぜんえん','なっせんえん','なせんえん'],'Baca ななせん. Tidak ada perubahan menjadi ぜん.'],
   ['八千円',8000,'はっせんえん',['はちせんえん','はっぜんえん','はちぜんえん'],'八千 dibaca はっせん. はち berubah menjadi はっ; せ tetap tanpa dakuten.'],
   ['九千円',9000,'きゅうせんえん',['きゅせんえん','きゅうぜんえん','きゅっせんえん'],'きゅう tetap panjang, diikuti せん.'],
@@ -166,7 +166,7 @@ const durationQuestions=[
     explanation:'Kalimat ini menyebut lama pekerjaan, jadi 1日 dibaca いちにち. ついたち adalah bacaan tanggal satu.'},
   {id:'duration:2',word:'2日間',reading:'ふつかかん',distractors:['ににちかん','ふっかかん','ふつがかん'],meaning:'Selama dua hari',
     sentence:'{target}、ホテルに とまります。',sentenceMeaning:'Saya menginap di hotel selama dua hari.',
-    explanation:'二日 dibaca ふつか. Tambahkan 間（かん）untuk durasi: ふつかかん.'},
+    explanation:'2日 dalam durasi ini dibaca ふつか. Tambahkan 間（かん）untuk durasi: ふつかかん.'},
 ].map(q=>({...q,acceptedReadings:[q.reading],topicIds:['bacaan-khusus','tanggal-hari'],sourceId:'irodori-starter'}));
 
 const wordQuestions=[
@@ -178,7 +178,7 @@ const wordQuestions=[
     explanation:'Baca ちゅうごく + ご. Pertahankan bunyi panjang ちゅう; 語 dibaca ご dengan dakuten.'},
   {word:'韓国',reading:'かんこく',distractors:['かんごく','がんこく','かんこっ'],meaning:'Korea Selatan',
     sentence:'ソウルは {target} の しゅとです。',sentenceMeaning:'Seoul adalah ibu kota Korea Selatan.',
-    explanation:'韓国 dibaca かんこく. 国 memakai こく tanpa dakuten, berbeda dari 中国（ちゅうごく）.'},
+    explanation:'韓国 dibaca かんこく. 国 memakai こく tanpa dakuten.'},
   {word:'東京',reading:'とうきょう',distractors:['ときょう','とうきょ','とうぎょう'],meaning:'Tokyo',
     sentence:'しんかんせんで {target} へ いきます。',sentenceMeaning:'Saya pergi ke Tokyo dengan shinkansen.',
     explanation:'Baca とう + きょう. Kedua bagian panjang; ょ kecil dan き tanpa dakuten.'},

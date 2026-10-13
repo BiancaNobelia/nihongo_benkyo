@@ -10,7 +10,7 @@ const BANK = {
     ['学生', 'がくせい', 'Pelajar; mahasiswa', ['かくせい', 'がくせ', 'がくぜい'], 'Baca がく + せい. Awalnya が dengan dakuten, sedangkan せ tanpa dakuten.'],
     ['先生', 'せんせい', 'Guru', ['せんせ', 'ぜんせい', 'せんぜい'], 'Kedua せ tidak memakai dakuten. Akhiran せい ditulis dengan い.'],
     ['勉強', 'べんきょう', 'Belajar', ['へんきょう', 'べんきょ', 'べんぎょう'], 'Baca べん + きょう. Perhatikan dakuten pada べ dan bunyi panjang きょう.'],
-    ['病院', 'びょういん', 'Rumah sakit', ['びょいん', 'びよういん', 'ひょういん'], 'びょう memakai ょ kecil. びよういん dengan よ besar adalah bacaan 美容院, yaitu salon kecantikan.'],
+    ['病院', 'びょういん', 'Rumah sakit', ['びょいん', 'びよういん', 'ひょういん'], 'Baca びょう + いん. びょう memakai ょ kecil dan bunyi panjang う.'],
     ['旅行', 'りょこう', 'Perjalanan; bepergian', ['りょうこう', 'りょこ', 'りよこう'], 'りょ pendek, lalu こう panjang. Gunakan ょ kecil, bukan よ besar.'],
     ['会社', 'かいしゃ', 'Perusahaan', ['がいしゃ', 'かいじゃ', 'かいしや'], 'Baca かい + しゃ. か dan し tidak memakai dakuten; ゃ ditulis kecil.'],
     ['電車', 'でんしゃ', 'Kereta listrik', ['てんしゃ', 'でんじゃ', 'でんしや'], '電 dibaca でん dengan dakuten. 車 di sini dibaca しゃ dengan ゃ kecil.'],

@@ -1,4 +1,4 @@
-import { RADICAL_MEMBERS } from './radical-members.js?v=20261013-reading-balance';
+import { RADICAL_MEMBERS } from './radical-members.js?v=20261013-components';
 
 // Editorial teaching notes. Membership comes from complete main components
 // in KanjiVG; meanings and readings come from the reviewed local catalog.

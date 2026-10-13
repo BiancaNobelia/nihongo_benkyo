@@ -1,4 +1,4 @@
-import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261013-reading-balance';
+import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261013-components';
 
 export function similarityQuizCallout(id) {
   const count=quizTopicCount(id);

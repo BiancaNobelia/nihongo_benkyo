@@ -132,7 +132,8 @@ function expand(bank, mode) {
   return Object.entries(bank).flatMap(([level, rows]) => rows.map(
     ([sourceWord, prompt, answer, meaning, sentence, sentenceMeaning, distractors, explanation]) => ({
       id:`${mode}:${answer}`, mode, level, sourceWord, prompt, answer, meaning,
-      sentence, sentenceMeaning, distractors, explanation,
+      sentence, sentenceMeaning, distractors,
+      explanation:mode==='hiragana-kanji' ? `Baca ${prompt}. Gunakan ${answer} untuk kata dalam kalimat ini.` : explanation,
     })
   ));
 }

@@ -1,6 +1,6 @@
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-reading-balance';
-import { filterRadicalFamilies, filterRadicalKanji, paginateRadicals } from './radical-core.js?v=20261013-reading-balance';
-import { similarityQuizCallout } from './similar-quiz-view.js?v=20261013-reading-balance';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-components';
+import { filterRadicalFamilies, filterRadicalKanji, paginateRadicals } from './radical-core.js?v=20261013-components';
+import { similarityQuizCallout } from './similar-quiz-view.js?v=20261013-components';
 
 export function createRadicalView({root, kanji, levels, escape, icon}) {
   const byChar = new Map(kanji.map(k => [k.char,k]));

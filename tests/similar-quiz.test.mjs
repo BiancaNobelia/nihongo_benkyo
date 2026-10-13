@@ -131,5 +131,7 @@ test('ambiguous words retain sentence context and do not include alternate readi
   const outskirts=SIMILAR_WRITING.find(q=>q.answer==='郊外');
   assert.ok(outskirts.distractors.includes('校外'));
   assert.match(outskirts.sentence,/とし/);
-  assert.match(outskirts.explanation,/luar sekolah/);
+  assert.match(outskirts.meaning,/pinggiran kota/i);
+  assert.match(outskirts.sentenceMeaning,/pinggiran kota/i);
+  assert.ok(!outskirts.explanation.includes('校外'));
 });

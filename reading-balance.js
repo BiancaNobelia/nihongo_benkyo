@@ -1,5 +1,5 @@
-import { shuffle } from './core.js?v=20261013-reading-balance';
-import { READING_METADATA } from './reading-metadata.js?v=20261013-reading-balance';
+import { shuffle } from './core.js?v=20261013-components';
+import { READING_METADATA } from './reading-metadata.js?v=20261013-components';
 
 export const READING_CATEGORIES = {
   noun:'Kata benda', verb:'Kata kerja', adjective:'Kata sifat', adverb:'Kata keterangan', special:'Hitungan & tanggal',

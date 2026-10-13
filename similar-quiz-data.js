@@ -105,7 +105,7 @@ export const SIMILAR_VOCABULARY = [
     "sentence": "まどから {target} が みえます。",
     "sentenceMeaning": "Laut terlihat dari jendela.",
     "visualExplanation": "海 memakai 氵, 梅 memakai 木, 悔 memakai 忄, dan 侮 memakai 亻. Bagian 毎 di kanan sama.",
-    "readingExplanation": "海 dibaca うみ. うめ adalah bacaan 梅, pohon atau buah ume."
+    "readingExplanation": "Baca うみ. Urutan bunyinya adalah う・み."
   },
   {
     "word": "池",
@@ -126,7 +126,7 @@ export const SIMILAR_VOCABULARY = [
     "sentence": "にわの {target} に こいが います。",
     "sentenceMeaning": "Ada ikan koi di kolam taman.",
     "visualExplanation": "池 memiliki 氵 di kiri 也. 地 memakai 土 dan 他 memakai 亻; 汰 memiliki 太 di kanan.",
-    "readingExplanation": "池 dibaca いけ. 地 dapat dibaca ち, tetapi bentuknya memakai 土."
+    "readingExplanation": "Baca いけ. け tidak memakai dakuten."
   },
   {
     "word": "注意",
@@ -609,7 +609,7 @@ export const SIMILAR_VOCABULARY = [
     "sentence": "きょうは {target} が いいです。",
     "sentenceMeaning": "Cuaca hari ini cerah.",
     "visualExplanation": "天 memiliki garis mendatar paling atas. Pada 夫, garis tegaknya menonjol; 夭 memakai sapuan miring dan 大 tidak memiliki garis atas tambahan.",
-    "readingExplanation": "Baca てんき. でんき adalah bacaan 電気, listrik."
+    "readingExplanation": "Baca てんき. て dan き tidak memakai dakuten."
   },
   {
     "word": "千",
@@ -819,7 +819,7 @@ export const SIMILAR_VOCABULARY = [
     "sentence": "ここで ともだちを {target}。",
     "sentenceMeaning": "Saya menunggu teman di sini.",
     "visualExplanation": "待 memakai 彳 di kiri 寺. 持 memakai 扌, 時 memakai 日, dan 詩 memakai 言.",
-    "readingExplanation": "待つ dibaca まつ. もつ adalah bacaan 持つ, memegang atau membawa."
+    "readingExplanation": "Baca まつ. Bagian kanji dibaca ま, lalu diikuti つ."
   },
   {
     "word": "持つ",
@@ -840,7 +840,7 @@ export const SIMILAR_VOCABULARY = [
     "sentence": "りょうてで おもい にもつを {target}。",
     "sentenceMeaning": "Saya memegang barang berat dengan kedua tangan.",
     "visualExplanation": "持 memakai 扌 di kiri 寺. 待 memakai 彳, 時 memakai 日, dan 詩 memakai 言.",
-    "readingExplanation": "持つ dibaca もつ. まつ adalah bacaan 待つ, menunggu."
+    "readingExplanation": "Baca もつ. Bagian kanji dibaca も, lalu diikuti つ."
   },
   {
     "word": "詩",
@@ -861,7 +861,7 @@ export const SIMILAR_VOCABULARY = [
     "sentence": "みじかい {target} を かきました。",
     "sentenceMeaning": "Saya menulis puisi pendek.",
     "visualExplanation": "詩 memiliki 言 di kiri 寺. 時 memakai 日, 持 memakai 扌, dan 待 memakai 彳.",
-    "readingExplanation": "詩 dibaca し. じ dapat menjadi bacaan 時, tetapi komponen kirinya berbeda."
+    "readingExplanation": "Baca し. し tidak memakai dakuten."
   },
   {
     "word": "晴れる",
@@ -1050,7 +1050,7 @@ export const SIMILAR_VOCABULARY = [
     "sentence": "にわの {target} の はなが さきました。",
     "sentenceMeaning": "Bunga ume di taman sudah mekar.",
     "visualExplanation": "梅 memakai 木 di kiri 毎. 海 memakai 氵, 悔 memakai 忄, dan 侮 memakai 亻.",
-    "readingExplanation": "梅 dibaca うめ. うみ adalah bacaan 海, laut."
+    "readingExplanation": "Baca うめ. Urutan bunyinya adalah う・め."
   },
   {
     "word": "緑",
@@ -1575,7 +1575,7 @@ export const SIMILAR_VOCABULARY = [
     "sentence": "この ゆびわは {target} で できています。",
     "sentenceMeaning": "Cincin ini terbuat dari perak.",
     "visualExplanation": "銀 memakai 金 di kiri 艮. 銅 dan 鋼 memiliki bagian kanan berbeda, sedangkan 根 memakai 木 di kiri 艮.",
-    "readingExplanation": "銀 dibaca ぎん. きん adalah bacaan 金, emas."
+    "readingExplanation": "Baca ぎん. ぎ memakai dakuten."
   },
   {
     "word": "花",

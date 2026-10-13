@@ -1,7 +1,7 @@
-import { SIMILAR_VOCABULARY } from './similar-quiz-data.js?v=20261013-reading-balance';
-import { SIMILAR_GROUPS } from './similar-data.js?v=20261013-reading-balance';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-reading-balance';
-import { READING_TOPICS } from './special-reading-data.js?v=20261013-reading-balance';
+import { SIMILAR_VOCABULARY } from './similar-quiz-data.js?v=20261013-components';
+import { SIMILAR_GROUPS } from './similar-data.js?v=20261013-components';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-components';
+import { READING_TOPICS } from './special-reading-data.js?v=20261013-components';
 
 export const QUIZ_TOPICS = [
   ...RADICAL_FAMILIES.map(f => ({id:f.id,kind:'family',label:`${f.symbol} · ${f.title}`,chars:f.members})),
@@ -12,13 +12,13 @@ const topicIds = char => QUIZ_TOPICS.filter(t=>t.chars.includes(char)).map(t=>t.
 export const SIMILAR_READING = SIMILAR_VOCABULARY.map(q => ({
   ...q, id:`similar-reading:${q.word}`, topicIds:topicIds(q.target),
   distractors:q.readingDistractors,
-  explanation:`${q.readingExplanation} ${q.visualExplanation}`,
+  explanation:q.readingExplanation,
 }));
 export const SIMILAR_WRITING = SIMILAR_VOCABULARY.map(q => ({
   ...q, id:`similar-writing:${q.word}`, topicIds:topicIds(q.target),
   sourceWord:q.word, mode:'hiragana-kanji', prompt:q.reading, answer:q.word,
   distractors:q.writingDistractors,
-  explanation:`${q.visualExplanation} ${q.readingExplanation}`,
+  explanation:q.readingExplanation,
 }));
 
 // A word shared by banks is replaced by its newer version. Explicit contexts

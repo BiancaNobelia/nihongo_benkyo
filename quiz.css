@@ -22,5 +22,13 @@
 .answer-translation{background:#eaf0e1;border-radius:7px;padding:13px 15px;margin-top:12px}
 .answer-translation p{font-size:14px}
 .answer-details .answer-explanation{font-size:12px;line-height:1.9;color:#606f54;border-top:1px solid var(--line);margin-top:17px;padding-top:14px}
+.answer-components{border-top:1px solid var(--line);margin-top:18px;padding-top:16px}
+.answer-components ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
+.answer-components li{padding:12px 14px;border:1px solid #e0e6d7;border-radius:7px;background:#fff}
+.component-heading{display:flex;align-items:center;gap:12px;margin-bottom:5px}
+.component-heading strong{font-family:var(--serif);font-size:27px;font-weight:500;line-height:1.4}
+.component-heading span{font-size:12px;font-weight:550;color:#536646}
+.answer-components li p{font-size:13px;line-height:1.9}
+.answer-components .component-tip{font-size:10px;color:var(--muted);margin-top:10px;line-height:1.7}
 .review-item{align-items:flex-start}.review-item>div{flex:1}.review-list .answer-details{padding:14px;margin-top:8px}.review-list .answer-word strong{font-size:17px}.review-list .answer-meaning p{font-size:13px}.review-list .answer-sentence p{font-size:15px}.review-list .answer-translation p{font-size:12px}
 @media(max-width:700px){.quiz-custom-count input{font-size:16px}.answer-details{padding:16px}.answer-word strong{font-size:20px}.answer-reading{font-size:14px}.answer-meaning p{font-size:15px}.answer-sentence p{font-size:16px}.answer-translation{padding:12px}.answer-translation p{font-size:13px}.review-item{gap:10px}.review-char{min-width:30px;font-size:19px}.review-list .answer-details{padding:12px}}

@@ -313,6 +313,35 @@ tetap dapat muncul; dua konteks `1日` tetap merupakan soal yang berbeda.
 Untuk memperbarui: edit data editorial, jalankan
 `python scripts/build_reading_vocabulary.py`, lalu `npm test`.
 
+### Pembahasan komponen pada jawaban kuis
+
+`kanji-components-data.js` menyimpan 1.219 uraian bentuk dari KanjiVG r20260714,
+dengan checksum yang sama seperti `data/radical-source.json`. Bangun ulang
+dengan `python scripts/build_components.py` setelah cache KanjiVG tersedia.
+Arti komponennya memakai katalog Indonesia yang sudah ditinjau, ditambah
+glos editorial untuk radikal dan bentuk variannya dalam skrip tersebut.
+Misalnya 氵 berasal dari 水 (air), sedangkan 月 yang dilabeli sebagai varian
+肉 diberi arti daging/tubuh, bukan bulan. 阝 kiri dan kanan juga dibedakan.
+
+Ekstraksi hanya menerima dua hingga empat komponen lengkap yang artinya
+tersedia. Bagian parsial, bentuk yang belum dikenali, dan karakter dasar tidak
+dipecah secara spekulatif. Kanji yang tidak mempunyai uraian tetap menampilkan
+arti kanjinya. Uraian ini menjelaskan bentuk yang terlihat, bukan menyimpulkan
+asal-usul atau menjumlahkan arti komponen menjadi arti kata.
+
+Pembahasan mengambil kanji dari kata jawaban yang benar saja. Catatan pembanding
+pilihan pengecoh tidak ditambahkan ke kuis kanji; materi perbandingan di tab
+Kanji Mirip tetap tersedia. Arti kata, kalimat lengkap, terjemahan kalimat, dan
+catatan bunyi tetap ditampilkan untuk jawaban benar, salah, kehabisan waktu,
+maupun ulasan akhir.
+
+Rujukan contoh 聞: [Kanjipedia](https://www.kanjipedia.jp/kanji/0006190200)
+menjelaskan 耳 sebagai bagian makna dan 門 sebagai bagian bunyi. Glos 門
+(gerbang) dan 耳 (telinga) membantu mengenali bentuk; bukan etimologi
+"gerbang + telinga = mendengar". [Kanji123](https://kanji123.org/n5-kanji-test1)
+ditinjau sebagai referensi format latihan dalam kalimat; soal atau kalimatnya
+tidak disalin ke bank ini.
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau
