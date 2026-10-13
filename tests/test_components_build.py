@@ -6,6 +6,7 @@ import xml.etree.ElementTree as ET
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from build_components import decompose
+from build_radicals import visible_components
 
 
 def node(body):
@@ -13,6 +14,16 @@ def node(body):
 
 
 class ConservativeComponents(unittest.TestCase):
+    def test_gate_family_includes_whole_nested_gates_only(self):
+        nested = node('<g kvg:element="間"><g kvg:element="門"/></g>')
+        self.assertIn('門', visible_components(nested))
+        for attributes in ['kvg:partial="true"', 'kvg:part="1"']:
+            for body in [f'<g kvg:element="門" {attributes}/>',
+                         f'<g kvg:element="間"><g kvg:element="門" {attributes}/></g>']:
+                self.assertNotIn('門', visible_components(node(body)))
+        other_family = node('<g kvg:element="禾"><g kvg:element="木"/></g>')
+        self.assertNotIn('木', visible_components(other_family))
+
     def test_partial_and_unlabelled_strokes_are_not_complete_parts(self):
         for body in ['<g kvg:element="木"/><path/>',
                      '<g kvg:element="木"/><g kvg:element="玉" kvg:partial="true"/>']:

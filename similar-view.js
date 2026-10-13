@@ -1,7 +1,7 @@
-import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261013-components';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-components';
-import { createRadicalView } from './radical-view.js?v=20261013-components';
-import { similarityQuizCallout } from './similar-quiz-view.js?v=20261013-components';
+import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261014-mon-family';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-mon-family';
+import { createRadicalView } from './radical-view.js?v=20261014-mon-family';
+import { similarityQuizCallout } from './similar-quiz-view.js?v=20261014-mon-family';
 
 export function createSimilarView({root, kanji, groups, categories, levels, escape, icon, activity}) {
   const byChar = new Map(kanji.map(k => [k.char, k]));

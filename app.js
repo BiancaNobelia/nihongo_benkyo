@@ -1,22 +1,22 @@
-import { KANJI } from './kanji-data.js?v=20261013-components';
-import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261013-components';
-import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261013-components';
-import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261013-components';
-import { groupsForCharacter } from './similar-core.js?v=20261013-components';
-import { createSimilarView } from './similar-view.js?v=20261013-components';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-components';
-import { familiesForCharacter } from './radical-core.js?v=20261013-components';
+import { KANJI } from './kanji-data.js?v=20261014-mon-family';
+import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-mon-family';
+import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-mon-family';
+import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-mon-family';
+import { groupsForCharacter } from './similar-core.js?v=20261014-mon-family';
+import { createSimilarView } from './similar-view.js?v=20261014-mon-family';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-mon-family';
+import { familiesForCharacter } from './radical-core.js?v=20261014-mon-family';
 
-import { createReadingQuiz } from './jlpt-reading-core.js?v=20261013-components';
+import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-mon-family';
 
-import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261013-components';
-import { questionTopicLinks } from './similar-quiz-view.js?v=20261013-components';
+import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261014-mon-family';
+import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-mon-family';
 
-import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261013-components';
-import { requestedQuizCount } from './quiz-settings.js?v=20261013-components';
-import { quizSetupPanel } from './quiz-setup-view.js?v=20261013-components';
-import { answerDetailsMarkup } from './quiz-feedback.js?v=20261013-components';
-import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261013-components';
+import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-mon-family';
+import { requestedQuizCount } from './quiz-settings.js?v=20261014-mon-family';
+import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-mon-family';
+import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-mon-family';
+import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-mon-family';
 
 const paths = {
   home:'<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>',

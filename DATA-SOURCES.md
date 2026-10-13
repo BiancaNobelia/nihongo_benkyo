@@ -100,7 +100,7 @@ Tidak ada gambar atau dataset diagram goresan eksternal yang disalin.
 
 ### Keluarga radikal dan komponen
 
-Tab Kanji Mirip juga memiliki **10 keluarga dengan 824 karakter unik** dari
+Tab Kanji Mirip juga memiliki **11 keluarga dengan 837 karakter unik** dari
 katalog yang sama. `radical-members.js` mengambil label komponen utama dari
 [KanjiVG r20260714](https://github.com/KanjiVG/kanjivg/releases/tag/r20260714),
 © 2009–2026 Ulrich Apel dan kontributor, dengan
@@ -109,9 +109,10 @@ katalog yang sama. `radical-members.js` mengambil label komponen utama dari
 Lisensi 3.0 ini berlaku untuk ekstrak komponen; data kamus lain tetap mengikuti
 lisensi yang dijelaskan sebelumnya. Tidak ada diagram atau path SVG yang disalin.
 
-Ekstraksi memeriksa bentuk utuh dan komponen langsungnya pada seluruh 2.383
-kanji; seluruhnya ditemukan pada sumber. Komponen bertanda parsial dan bagian
-yang lebih dalam tidak dipakai agar 木 di dalam 禾 atau 亻 di dalam 彳 tidak
+Ekstraksi memeriksa seluruh 2.383 kanji; seluruhnya ditemukan pada sumber.
+Untuk sepuluh keluarga semula, hanya bentuk utuh dan komponen langsungnya
+yang digunakan. Komponen bertanda parsial dan bagian yang lebih dalam tidak
+dipakai agar 木 di dalam 禾 atau 亻 di dalam 彳 tidak
 menjadi anggota yang menyesatkan. Komponen visual tidak harus sama dengan
 radikal kamus: 酒 tetap termasuk 氵. Batas ini berarti daftar bukan pencarian
 semua subkomponen tersembunyi, misalnya 氵 di dalam 落. Cakupan juga terbatas
@@ -121,6 +122,18 @@ Keluarga air memuat 130 kanji: 123 dengan 氵, 5 dengan 水, dan 2 dengan 氺.
 Keluarga perjalanan memuat 55 kanji dengan ⻌ atau 辶. Keluarga lain: 木, 扌/手,
 忄/心/⺗, 言, 糸, 艹, 亻 (ditambah bentuk dasar 人), dan 金. Satu kanji dapat
 masuk beberapa keluarga, seperti 休 pada orang dan kayu.
+
+Kelompok **Mengandung bentuk 門** (`bentuk-mon`) menambahkan pencarian bentuk
+門 yang lengkap pada semua kedalaman komponen. Anggotanya adalah 17 karakter:
+門・間・聞・開・問・関・閉・簡・閣・闘・閥・欄・潤・閲・蘭・闇・閑.
+Ini mencakup seluruh kecocokan dalam katalog N5–N1 yang digunakan, termasuk
+簡・潤・欄・蘭 yang mengandung 門 di dalam komponen lain. Karakter dengan bentuk
+bingkai lain seperti 同 atau 周 tidak masuk. Arti, bacaan, dan level tetap
+mengambil katalog yang sama. Cakupan ini tidak dibatasi oleh radikal kamus:
+[聞 beradikal 耳](https://www.kanjipedia.jp/kanji/0006190200) tetap termasuk.
+Nama [門 / もんがまえ](https://www.kanjipedia.jp/sakuin/bushu/detail/8/169)
+mengikuti Kanjipedia. Pencarian lebih dalam ini hanya berlaku bagi kelompok 門;
+batas keanggotaan sepuluh keluarga sebelumnya tetap sama.
 
 `radical-data.js` memuat tema, contoh, dan petunjuk Indonesia yang disusun
 secara editorial. Tema hanya alat bantu ingatan, bukan klaim bahwa setiap
@@ -185,7 +198,7 @@ Atribusi dan CC BY-SA 4.0 untuk data adaptasi tetap berlaku sebagaimana di atas.
 
 `data/similar-quiz-editorial.json` menambahkan **82 kosakata dalam dua arah**:
 hiragana → kanji dan kanji → hiragana. Targetnya mencakup seluruh **48 kelompok
-bentuk mirip dan 10 keluarga radikal**. Ini bank pilihan, bukan soal untuk
+bentuk mirip dan 11 keluarga radikal/komponen**. Ini bank pilihan, bukan soal untuk
 setiap anggota keluarga atau seluruh kosakata JLPT. Pembagian kosakata:
 N5 34, N4 15, N3 20, N2 8, N1 5 pada sumber kosakata. Metadata sumber ini tetap
 disimpan. Mode membaca memakai level kosakata sumber; mode penulisan memakai

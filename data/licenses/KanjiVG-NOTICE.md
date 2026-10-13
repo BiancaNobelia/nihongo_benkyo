@@ -13,8 +13,10 @@ Legal code: https://creativecommons.org/licenses/by-sa/3.0/legalcode
 `radical-members.js` is an adaptation of the component labels in the KanjiVG
 XML release, extracted on 13 October 2026. It keeps only complete components
 at the whole-character or immediate-child level, for characters in the site's
-local catalog. Nested subcomponents and partial shapes are excluded. It does
-not include vector paths, stroke drawings, or stroke numbers.
+local catalog. Partial shapes are excluded. The 門 family added on 14 October
+2026 explicitly includes complete nested 門 components (e.g. 簡 and 潤);
+the other families still exclude nested subcomponents. It does not include
+vector paths, stroke drawings, or stroke numbers.
 
 The extracted component data remains available under CC BY-SA 3.0.
 `kanji-components-data.js` also adapts labels from the same pinned release,

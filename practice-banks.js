@@ -1,12 +1,12 @@
-import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261013-components';
-import { KANJI_WRITING, KATAKANA_WRITING } from './writing-data.js?v=20261013-components';
-import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261013-components';
-import { SPECIAL_READINGS } from './special-reading-data.js?v=20261013-components';
-import { KANJI } from './kanji-data.js?v=20261013-components';
-import { eligibleQuizCards } from './core.js?v=20261013-components';
-import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261013-components';
-import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261013-components';
-import { prepareReadingBank } from './reading-balance.js?v=20261013-components';
+import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261014-mon-family';
+import { KANJI_WRITING, KATAKANA_WRITING } from './writing-data.js?v=20261014-mon-family';
+import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261014-mon-family';
+import { SPECIAL_READINGS } from './special-reading-data.js?v=20261014-mon-family';
+import { KANJI } from './kanji-data.js?v=20261014-mon-family';
+import { eligibleQuizCards } from './core.js?v=20261014-mon-family';
+import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261014-mon-family';
+import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261014-mon-family';
+import { prepareReadingBank } from './reading-balance.js?v=20261014-mon-family';
 
 export const PRACTICE_BANKS = {
   // Existing contextual questions win over duplicate new vocabulary entries.

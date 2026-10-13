@@ -1,7 +1,7 @@
-import { RADICAL_MEMBERS } from './radical-members.js?v=20261013-components';
+import { RADICAL_MEMBERS } from './radical-members.js?v=20261014-mon-family';
 
-// Editorial teaching notes. Membership comes from complete main components
-// in KanjiVG; meanings and readings come from the reviewed local catalog.
+// Editorial teaching notes. Membership comes from complete components in
+// KanjiVG (including nested 門); meanings/readings use the reviewed catalog.
 const definitions = [
   {id:'radikal-air', title:'Air & cairan', symbol:'氵', name:'Sanzui', forms:['氵','水','氺'], preview:'水洗注海',
     description:'Tiga goresan di kiri, banyak bentuk yang bisa dikenali.',
@@ -22,6 +22,16 @@ const definitions = [
       {char:'週',word:'毎週',reading:'まいしゅう',romaji:'maishuu shuu shu shū',meaning:'setiap pekan',cue:'Di dalamnya ada 周: bingkai terbuka di bawah, dengan 土 dan 口 di dalam.'},
       {char:'通',word:'通る',reading:'とおる',romaji:'tooru tōru',meaning:'melewati; melalui',cue:'Di dalamnya ada 甬: bagian bawah seperti 用, dengan tanda kecil di atas.'},
       {char:'近',word:'近い',reading:'ちかい',romaji:'chikai',meaning:'dekat',cue:'Di dalamnya ada 斤. Bentuknya lebih terbuka dan tidak memiliki kotak tertutup.'},
+    ]},
+  {id:'bentuk-mon',title:'Mengandung bentuk 門',symbol:'門',name:'Mon / mongamae',forms:['門'],preview:'門間聞問',
+    description:'Kenali bingkai gerbang, termasuk di dalam kanji yang lebih besar.',
+    note:'門 berarti gerbang; sebagai komponen pembingkai disebut mongamae. Kelompok ini memuat seluruh kanji dalam koleksi N5–N1 yang mengandung bentuk 門 lengkap, termasuk di dalam 簡, 潤, 欄, dan 蘭. Pengelompokan berdasarkan bentuk yang terlihat: radikal kamusnya bisa berbeda. Contohnya, 聞 memiliki radikal utama 耳.',
+    tip:'Amati isi bingkai 門: 間 memiliki 日 (matahari; hari), 聞 memiliki 耳 (telinga), 問 memiliki 口 (mulut), dan 閑 memiliki 木 (pohon; kayu). Pada kanji yang lebih besar, cari bingkai 門 terlebih dahulu, lalu perhatikan bagian di luar dan di dalamnya.',
+    examples:[
+      {char:'門',word:'門',reading:'もん',romaji:'mon mongamae',meaning:'gerbang',cue:'Bentuk dasarnya terdiri dari dua sisi seperti daun gerbang; bagian tengah bawah terbuka.'},
+      {char:'間',word:'時間',reading:'じかん',romaji:'jikan aida ma',meaning:'waktu',cue:'門 sebagai bingkai, dengan 日 (matahari; hari) di dalam.'},
+      {char:'聞',word:'聞く',reading:'きく',romaji:'kiku',meaning:'mendengar',cue:'門 sebagai bingkai, dengan 耳 (telinga) di dalam.'},
+      {char:'問',word:'問題',reading:'もんだい',romaji:'mondai tou',meaning:'masalah',cue:'門 sebagai bingkai, dengan 口 (mulut) di dalam.'},
     ]},
   {id:'radikal-kayu',title:'Pohon & kayu',symbol:'木',name:'Ki / kihen',forms:['木'],preview:'木林森村',
     description:'Batang dan dua cabang, di kiri atau bagian lain.',

@@ -15,8 +15,23 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = '20260714'
 URL = f'https://github.com/KanjiVG/kanjivg/releases/download/r{VERSION}/kanjivg-{VERSION}.xml.gz'
-FORMS = ['水', '氵', '氺', '辶', '⻌', '木', '手', '扌', '心', '忄', '⺗', '言', '糸', '艹', '人', '亻', '金']
+FORMS = ['水', '氵', '氺', '辶', '⻌', '木', '手', '扌', '心', '忄', '⺗', '言', '糸', '艹', '人', '亻', '金', '門']
+# The gate family explicitly includes complete nested 門, e.g. 簡 and 潤.
+# Other families keep their existing main-component scope.
+NESTED_FORMS = {'門'}
 NS = '{http://kanjivg.tagaini.net}'
+
+
+def visible_components(main):
+    elements = {g.get(NS + 'element') for g in [main, *main]
+                if g.get(NS + 'partial') != 'true'
+                and (g.get(NS + 'element') not in NESTED_FORMS
+                     or g.get(NS + 'part') is None)}
+    elements.update(g.get(NS + 'element') for g in main.iter('g')
+                    if g.get(NS + 'element') in NESTED_FORMS
+                    and g.get(NS + 'partial') != 'true'
+                    and g.get(NS + 'part') is None)
+    return elements
 
 
 def main():
@@ -46,12 +61,8 @@ def main():
         if entry is None:
             missing.append(char)
             continue
-        # Use the whole character and its immediate components. Do not match
-        # smaller nested shapes (e.g. 亻 inside 彳 or 木 inside 禾).
-        # A partial shape is not a complete component.
-        main = entry[0]
-        elements = {g.get(NS + 'element') for g in [main, *main]
-                    if g.get(NS + 'partial') != 'true'}
+        # Search deeper only for explicitly declared whole-shape families.
+        elements = visible_components(entry[0])
         for form in FORMS:
             if form in elements:
                 members[form].append(char)
@@ -63,6 +74,7 @@ def main():
         'export const RADICAL_MEMBERS = ' + json.dumps(output, ensure_ascii=False, indent=2) + ';\n', encoding='utf-8')
     manifest = dict(repository='https://github.com/KanjiVG/kanjivg', version=VERSION,
                     url=URL, sha256=digest, retrieved='2026-10-13',
+                    extracted='2026-10-14', nestedForms=sorted(NESTED_FORMS),
                     catalogCount=len(catalog), missing=missing,
                     counts={form: len(chars) for form, chars in members.items()})
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')

@@ -1,5 +1,5 @@
-import { KANJI } from './kanji-data.js?v=20261013-components';
-import { LEVELS } from './levels.js?v=20261013-components';
+import { KANJI } from './kanji-data.js?v=20261014-mon-family';
+import { LEVELS } from './levels.js?v=20261014-mon-family';
 
 const kanjiLevels=new Map(KANJI.map(k=>[k.char,k.level]));
 

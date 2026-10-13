@@ -1,6 +1,6 @@
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-components';
-import { filterRadicalFamilies, filterRadicalKanji, paginateRadicals } from './radical-core.js?v=20261013-components';
-import { similarityQuizCallout } from './similar-quiz-view.js?v=20261013-components';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-mon-family';
+import { filterRadicalFamilies, filterRadicalKanji, paginateRadicals } from './radical-core.js?v=20261014-mon-family';
+import { similarityQuizCallout } from './similar-quiz-view.js?v=20261014-mon-family';
 
 export function createRadicalView({root, kanji, levels, escape, icon}) {
   const byChar = new Map(kanji.map(k => [k.char,k]));
@@ -10,7 +10,7 @@ export function createRadicalView({root, kanji, levels, escape, icon}) {
   let overviewQuery = '';
   const badge = k => `<span class="similar-level ${k.level.toLowerCase()}">${k.level}</span>`;
   const levelRange = f => {const available=levels.filter(l=>f.members.some(c=>byChar.get(c).level===l));return `${available[0]}–${available.at(-1)}`;};
-  const sources = `<p class="similar-footnote">Keluarga ini mengelompokkan komponen utama yang terlihat, termasuk bentuk dasarnya. Nama tema membantu mengingat; kesamaan komponen tidak selalu berarti kesamaan arti atau bacaan. Cakupan mengikuti koleksi situs N5–N1. Data komponen: <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a>, © Ulrich Apel, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>; diolah untuk pengelompokan.</p>`;
+  const sources = `<p class="similar-footnote">Keluarga ini mengelompokkan bentuk komponen yang terlihat, termasuk bentuk dasarnya. Cakupan tiap kelompok dijelaskan pada halaman detailnya. Nama tema membantu mengingat; kesamaan komponen tidak selalu berarti kesamaan arti, bacaan, atau radikal kamus. Cakupan mengikuti koleksi situs N5–N1. Data komponen: <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a>, © Ulrich Apel, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>; diolah untuk pengelompokan.</p>`;
 
   function renderOverview(container) {
     family = null;

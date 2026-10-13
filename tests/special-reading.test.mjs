@@ -101,8 +101,8 @@ test('new topics are reading-only and do not leak into the 82 similar-kanji ques
     assert.equal(resolveQuizTopic(id,'hiragana-kanji'),'all');
     assert.equal(filterTopicQuestions(PRACTICE_BANKS['hiragana-kanji'],id).length,0,id);
   }
-  assert.equal(topicsForMode('hiragana-kanji').length,58);
-  assert.equal(topicsForMode('jlpt-reading').length,72);
+  assert.equal(topicsForMode('hiragana-kanji').length,59);
+  assert.equal(topicsForMode('jlpt-reading').length,73);
   assert.deepEqual(topicsForMode('hiragana-katakana'),[]);
   assert.equal(resolveQuizTopic('unknown-topic'),'all');
   assert.ok(bank.some(q=>q.word==='先週'));

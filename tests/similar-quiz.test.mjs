@@ -58,7 +58,7 @@ test('distractors are close, preserve okurigana and never offer accepted reading
   }
 });
 
-test('both directions cover all 48 comparison groups and 10 radical families with exact target membership',()=>{
+test('both directions cover all comparison groups and component families with exact target membership',()=>{
   assert.equal(QUIZ_TOPICS.length,SIMILAR_GROUPS.length+RADICAL_FAMILIES.length);
   for(const topic of QUIZ_TOPICS) {
     assert.ok(quizTopicCount(topic.id)>0,topic.id);
