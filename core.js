@@ -32,7 +32,11 @@ export function createQuiz(pool, mode, count, random = Math.random) {
       ? !accepted.has(getAnswer(other))
       : ![...meaningSets.get(k.char)].some(sense => meaningSets.get(other.char).has(sense))));
     const distractors = [...new Set(candidates.map(getAnswer))].filter(a => !accepted.has(a));
-    return { kanji: k, prompt: mode === 'kanji' ? k.meaning : mode === 'reading' ? k.example.word : k.char,
+    return { kanji:k, level:k.quizLevel || k.level,
+      word:mode==='reading' ? k.example.word : k.char,
+      meaning:mode==='reading' ? k.example.meaning : k.meaning,
+      reading:mode==='reading' ? k.example.reading : '',
+      prompt: mode === 'kanji' ? k.meaning : mode === 'reading' ? k.example.word : k.char,
       answer, options: shuffle([answer, ...shuffle(distractors, random).slice(0, 3)], random) };
   });
 }

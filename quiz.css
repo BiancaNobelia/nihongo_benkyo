@@ -1,0 +1,24 @@
+.quiz-custom-count{display:grid;gap:8px;margin-top:13px}
+.quiz-custom-count[hidden],#quiz-count-error[hidden]{display:none}
+.quiz-custom-count label{font-size:11px;color:var(--muted)}
+.quiz-custom-count input{width:100%;min-width:0;border:1px solid var(--line);border-radius:7px;padding:12px 13px;background:#fff;color:var(--ink);font:inherit;font-size:13px}
+.quiz-custom-count input:focus{outline:2px solid #afbea0;outline-offset:2px}
+.quiz-custom-count input[aria-invalid="true"]{border-color:var(--red)}
+#quiz-count-error{font-size:11px;line-height:1.7;color:var(--red)}
+.quiz-level-note{font-size:11px;line-height:1.8;color:var(--muted);margin:20px 0 0;padding:12px 15px;border-left:3px solid #b8c7a8;background:#f5f6f0}
+.quiz-feedback{scroll-margin-block:24px 105px}
+.answer-status{font-size:13px;line-height:1.8;margin:0 0 14px}
+.answer-details{text-align:left;color:var(--ink);background:#fafbf7;border:1px solid #e0e6d7;border-radius:10px;padding:21px;margin-top:12px;overflow-wrap:anywhere}
+.answer-details>div>span{display:block;color:var(--muted);font-size:10px;font-weight:600;letter-spacing:.4px;margin-bottom:5px}
+.answer-word strong{display:block;font-family:var(--serif);font-size:22px;font-weight:500;line-height:1.8}
+.answer-reading{font-size:16px;color:#526744}
+.answer-meaning{margin-top:16px}
+.answer-details p{margin:0;line-height:1.8}
+.answer-meaning p{font-size:16px;font-weight:550}
+.answer-sentence{margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}
+.answer-sentence p{font-family:var(--serif);font-size:18px;line-height:2}
+.answer-translation{background:#eaf0e1;border-radius:7px;padding:13px 15px;margin-top:12px}
+.answer-translation p{font-size:14px}
+.answer-details .answer-explanation{font-size:12px;line-height:1.9;color:#606f54;border-top:1px solid var(--line);margin-top:17px;padding-top:14px}
+.review-item{align-items:flex-start}.review-item>div{flex:1}.review-list .answer-details{padding:14px;margin-top:8px}.review-list .answer-word strong{font-size:17px}.review-list .answer-meaning p{font-size:13px}.review-list .answer-sentence p{font-size:15px}.review-list .answer-translation p{font-size:12px}
+@media(max-width:700px){.quiz-custom-count input{font-size:16px}.answer-details{padding:16px}.answer-word strong{font-size:20px}.answer-reading{font-size:14px}.answer-meaning p{font-size:15px}.answer-sentence p{font-size:16px}.answer-translation{padding:12px}.answer-translation p{font-size:13px}.review-item{gap:10px}.review-char{min-width:30px;font-size:19px}.review-list .answer-details{padding:12px}}

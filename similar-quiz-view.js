@@ -1,9 +1,9 @@
-import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261013-counters';
+import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261013-quiz-settings';
 
 export function similarityQuizCallout(id) {
   const count=quizTopicCount(id);
   if (!count) return '';
-  return `<aside class="similar-practice-callout similar-vocab-callout"><div><h2>Uji bentuknya dalam kata.</h2><p>${count} kosakata pilihan dari kelompok ini. Latih dua arah dengan kalimat, pilihan mirip, dan pembahasan. Level mengikuti kosakata.</p></div><div class="similar-quiz-directions"><a class="primary" href="#kuis/hiragana-kanji/${id}">Hiragana → Kanji</a><a class="secondary" href="#kuis/jlpt/${id}">Kanji → Hiragana</a></div></aside>`;
+  return `<aside class="similar-practice-callout similar-vocab-callout"><div><h2>Uji bentuknya dalam kata.</h2><p>${count} kosakata dari kelompok ini tersedia di bank latihan. Pilih level kanji; soal akan bercampur otomatis dengan materi lain pada level yang sama.</p></div><div class="similar-quiz-directions"><a class="primary" href="#kuis/hiragana-kanji">Hiragana → Kanji</a><a class="secondary" href="#kuis/jlpt">Kanji → Hiragana</a></div></aside>`;
 }
 
 export function questionTopicLinks(question, escape) {

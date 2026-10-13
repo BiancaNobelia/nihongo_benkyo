@@ -187,8 +187,8 @@ Atribusi dan CC BY-SA 4.0 untuk data adaptasi tetap berlaku sebagaimana di atas.
 hiragana → kanji dan kanji → hiragana. Targetnya mencakup seluruh **48 kelompok
 bentuk mirip dan 10 keluarga radikal**. Ini bank pilihan, bukan soal untuk
 setiap anggota keluarga atau seluruh kosakata JLPT. Pembagian kosakata:
-N5 34, N4 15, N3 20, N2 8, N1 5. Level kosakata dapat berbeda dari level kanji
-tunggal pada halaman kelompok.
+N5 34, N4 15, N3 20, N2 8, N1 5 pada sumber kosakata. Metadata sumber ini tetap
+disimpan; level latihan di aplikasi kini mengikuti kanji tersulit pada target.
 
 Kata, bacaan, dan level dicocokkan dengan snapshot OpenJLPT/JMdict yang sama;
 metadata rujukannya ada di `data/similar-quiz-source.json`. Kalimat, arti
@@ -207,12 +207,12 @@ menjawab dan pada ulasan hasil.
 
 `similar-quiz-core.js` menghubungkan target karakter ke kelompok lama dan
 keluarga radikal, menggabungkan bank tanpa mengulang kosakata yang sama, serta
-memfilter materi dan level. Bank gabungan yang tampil di aplikasi berisi
+menghubungkan metadata materi. Bank gabungan berisi
 **180 soal kanji → hiragana** sebelum tambahan bacaan khusus di bawah, dan
 **132 soal hiragana → kanji**. Dua kata yang
 sudah ada pada bank membaca memakai versi baru yang memiliki konteks kalimat.
-Bank katakana tetap berisi 50 soal. Kelompok kecil menyesuaikan jumlah soal
-dengan jumlah kata yang tersedia, dan tidak mengulang kata demi memenuhi kuota.
+Bank katakana tetap berisi 50 soal. Jumlah soal menyesuaikan bank pada level
+yang tersedia, dan tidak mengulang kata demi memenuhi kuota.
 
 Jalankan `python scripts/build_similar_quiz.py` setelah cache dari
 `scripts/import_catalog.py` tersedia. Generator memvalidasi rujukan, pilihan
@@ -240,9 +240,9 @@ Rujukan beserta cakupannya dicatat di `data/special-reading-references.json`.
 
 Semua kalimat, terjemahan Indonesia, pembahasan, dan pengecoh disusun khusus;
 tidak ada soal atau kalimat buku pelajaran yang disalin. Sumber dipakai untuk
-memeriksa fakta bacaan. **N5 adalah kelompok latihan dasar editorial** untuk
-tambahan ini, bukan penetapan level resmi atau klaim bahwa semua contoh ada
-pada daftar kosakata komunitas. Keterangan ini ditampilkan dalam pengaturan.
+memeriksa fakta bacaan. Level latihan mengikuti kanji tersulit dalam target
+berdasarkan katalog situs: N5 69, N4 7, N3 6, N2 17, N1 1. Ini bukan
+penetapan level resmi atau klaim level kosakata dalam sumber rujukan bacaan.
 
 Pilihan yang diterima dicatat dalam `acceptedReadings` dan tidak boleh muncul
 sebagai pengecoh. Untuk `1日`, dua konteks dipertahankan dengan `contextKey`:
@@ -252,9 +252,30 @@ Penghitung tidak mengikuti satu aturan umum: misalnya 六本 menjadi ろっぽ�
 sedangkan 六台 tetap ろくだい dan 六千円 tetap ろくせんえん.
 
 `practice-banks.js` menjadi sumber bank gabungan untuk aplikasi dan pengujian.
-Topik baru hanya muncul pada mode membaca, dapat dipilih sebagai kelompok
-besar atau per penghitung, dan tidak masuk filter **Semua Kanji Mirip**.
+Penghitung, yen, dan tanggal hanya masuk mode membaca. Metadata topik tetap
+disimpan untuk hubungan materi; tidak ada pemilihan topik pada pengaturan kuis.
 Jalankan `npm test` sesudah memperbarui materi.
+
+### Level dan pengaturan kuis
+
+`quiz-settings.js` menyelaraskan level latihan dengan katalog kanji situs.
+Untuk kata gabungan atau bentuk berokurigana, level mengikuti kanji tersulit
+dalam **kata target**, bukan seluruh kalimat konteks atau pilihan pengecoh.
+Perhitungan memakai karakter yang tercatat di katalog. Sebanyak 29 contoh N1
+mengandung karakter tambahan di luar katalog; semuanya tetap berada di N1.
+Contoh: 六本 N5, 六台 N4, 六杯 N3, 六枚 N2, 韓国 N1. Aturan yang sama berlaku
+pada mode Contoh kata → Hiragana. Level kosakata asli di bank sumber tetap
+dipertahankan; Hiragana → Katakana tetap memakai level kosakata tersebut.
+
+`getQuizPool` mencampur semua materi pada level pilihan secara otomatis.
+Bank kanji → hiragana berisi N5 81, N4 48, N3 48, N2 55, N1 48; hiragana →
+kanji berisi N5 14, N4 28, N3 31, N2 28, N1 31. Tautan topik lama membuka
+mode yang sesuai tanpa filter tersembunyi. Pilihan jumlah 10, 20, 50, atau
+custom (bilangan bulat positif) dibatasi pada jumlah soal tersedia.
+
+`quiz-feedback.js` menyediakan arti kata/kanji dan terjemahan kalimat yang sama
+untuk jawaban benar, salah, waktu habis, dan ulasan hasil. Keberadaan pembahasan
+tambahan tidak menentukan apakah arti ditampilkan.
 
 ### Membangun katalog
 

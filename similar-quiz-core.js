@@ -1,7 +1,7 @@
-import { SIMILAR_VOCABULARY } from './similar-quiz-data.js?v=20261013-counters';
-import { SIMILAR_GROUPS } from './similar-data.js?v=20261013-counters';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-counters';
-import { READING_TOPICS } from './special-reading-data.js?v=20261013-counters';
+import { SIMILAR_VOCABULARY } from './similar-quiz-data.js?v=20261013-quiz-settings';
+import { SIMILAR_GROUPS } from './similar-data.js?v=20261013-quiz-settings';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261013-quiz-settings';
+import { READING_TOPICS } from './special-reading-data.js?v=20261013-quiz-settings';
 
 export const QUIZ_TOPICS = [
   ...RADICAL_FAMILIES.map(f => ({id:f.id,kind:'family',label:`${f.symbol} · ${f.title}`,chars:f.members})),

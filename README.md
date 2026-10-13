@@ -19,14 +19,19 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
   Contoh pembeda, pencarian (termasuk romaji contoh), filter level/bentuk,
   pagination, dan tautan dari detail tersedia di `#mirip`.
 - Flashcard dengan penilaian mandiri dan pilihan koleksi.
-- Kuis arti, kanji, atau bacaan kata; 5/10/20 soal dan timer opsional.
+- Kuis arti, kanji, atau bacaan kata; 10/20/50 soal atau jumlah custom, dan timer
+  opsional. Jumlah dibatasi soal yang tersedia tanpa mengulang soal.
+- Materi bercampur otomatis sesuai level latihan, tanpa pilihan materi tambahan.
+  Level kata gabungan mengikuti kanji tersulit di katalog situs; katakana tetap
+  mengikuti level kosakata sumber. Arti kata/kanji dan terjemahan kalimat selalu
+  muncul setelah jawaban benar, salah, atau waktu habis, serta pada ulasan hasil.
 - Bacaan ala JLPT: 280 soal N5–N1 dengan pilihan hiragana
   yang mirip, arti Indonesia, dan penjelasan bunyi panjang, dakuten, serta kana kecil.
   Buka langsung melalui `#kuis/jlpt`. Ini latihan buatan, bukan soal resmi ujian.
-- Bacaan khusus: 100 soal tambahan yang dikelompokkan sebagai latihan dasar
-  N5 secara editorial. Ada 44 soal penghitung (本・台・枚・個・冊・匹・杯・人・つ),
+- Bacaan khusus: 100 soal tambahan yang dibagi mengikuti level kanji dalam kata.
+  Ada 44 soal penghitung (本・台・枚・個・冊・匹・杯・人・つ),
   18 nominal ratusan/ribuan yen, 31 tanggal + 2 durasi hari, serta 5 soal bunyi
-  kata seperti 中国. Pilih **Materi soal**, atau buka `#kuis/jlpt/bacaan-khusus`.
+  kata seperti 中国. Semua masuk otomatis pada level yang sesuai di `#kuis/jlpt`.
   Kedua bacaan `1日` dibedakan lewat konteks; variasi sah tidak dijadikan pengecoh.
 - Hiragana → Kanji: 132 soal; Hiragana → Katakana: 50 soal (10 per level).
   Kalimat dengan target bergaris bawah, empat pilihan bentuk mirip,
@@ -34,10 +39,9 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
   `#kuis/hiragana-katakana`. Jumlah soal disesuaikan dengan materi dan level
   yang tersedia, tanpa mengulang kata dalam satu sesi.
 - Materi Kanji Mirip: 82 kosakata yang bisa dilatih dua arah, mencakup seluruh
-  48 kelompok perbandingan dan 10 keluarga radikal. Pilih materi di pengaturan
-  kuis atau mulai dari halaman kelompok. Pembahasan menautkan kembali ke
-  perbandingan bentuk. Contoh: `#kuis/hiragana-kanji/radikal-air`,
-  `#kuis/jlpt/radikal-perjalanan`, atau `#kuis/jlpt/similar`.
+  48 kelompok perbandingan dan 10 keluarga radikal. Soal masuk otomatis sesuai
+  level. Pembahasan menautkan kembali ke perbandingan bentuk. Tautan lama yang
+  menyertakan materi tetap membuka mode kuis, tetapi tidak membatasi bank soal.
 - Hasil kuis, progres penguasaan, dan hari belajar di `localStorage`.
 
 Progres hanya tersedia di browser/perangkat yang sama, tanpa akun atau server.
@@ -81,6 +85,8 @@ tanpa duplikasi, serta kombinasi materi dan level.
 Pengujian bacaan khusus memeriksa perubahan bunyi per penghitung, nominal yen,
 seluruh tanggal 1–31, dua konteks `1日`, pilihan yang diminta pengguna, variasi
 bacaan yang sah, serta pemisahan filter bacaan dari soal penulisan/Kanji Mirip.
+Pengujian pengaturan kuis memeriksa jumlah custom, batas bank, level kanji pada
+kata gabungan, dan arti/terjemahan di seluruh mode meskipun tanpa pembahasan.
 Jalankan `python -m unittest discover -s tests -p "test_*.py"` untuk memastikan
 build menolak data baru atau berubah yang belum ditinjau.
 

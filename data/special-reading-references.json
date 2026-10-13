@@ -1,6 +1,6 @@
 {
   "reviewed": "2026-10-13",
-  "scope": "Reading facts only. All questions, contexts, Indonesian explanations, and distractors are original. N5 is an editorial practice band, not an official JLPT assignment.",
+  "scope": "Reading facts only. All questions, contexts, Indonesian explanations, and distractors are original. Practice levels follow the hardest target kanji in the site's community catalog, not an official JLPT assignment.",
   "references": [
     {"id":"joshu-counters","publisher":"University of Texas at Austin","title":"JOSHU — Counters","url":"https://laits.utexas.edu/japanese/joshu/counters/counters_english.php","usedFor":"本・台・枚・個・冊・匹・杯・人・つ and durations"},
     {"id":"irodori-starter","publisher":"The Japan Foundation","title":"Irodori Starter — Word list","url":"https://www.irodori.jpf.go.jp/assets/data/wordlist_X.pdf","usedFor":"Printed sections L9-2 (one-day duration), L12-2 through L12-4 (calendar dates), L16-1 through L16-2 (numbers and yen)"},
