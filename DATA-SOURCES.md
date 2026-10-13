@@ -188,7 +188,8 @@ hiragana → kanji dan kanji → hiragana. Targetnya mencakup seluruh **48 kelom
 bentuk mirip dan 10 keluarga radikal**. Ini bank pilihan, bukan soal untuk
 setiap anggota keluarga atau seluruh kosakata JLPT. Pembagian kosakata:
 N5 34, N4 15, N3 20, N2 8, N1 5 pada sumber kosakata. Metadata sumber ini tetap
-disimpan; level latihan di aplikasi kini mengikuti kanji tersulit pada target.
+disimpan. Mode membaca memakai level kosakata sumber; mode penulisan memakai
+level kanji tersulit pada target.
 
 Kata, bacaan, dan level dicocokkan dengan snapshot OpenJLPT/JMdict yang sama;
 metadata rujukannya ada di `data/similar-quiz-source.json`. Kalimat, arti
@@ -222,7 +223,8 @@ Jalankan `npm test` setelah mengubah materi atau pengelompokan.
 ### Penghitung, yen, tanggal, dan bunyi kata
 
 `special-reading-data.js` memuat **100 soal tambahan**, seluruhnya hanya pada
-mode kanji → hiragana. Total bank membaca menjadi **280 soal**, sedangkan
+mode kanji → hiragana. Bank lama berisi **280 soal** sebelum perluasan kosakata
+di bawah; sekarang totalnya **464 soal**, sedangkan
 penulisan kanji tetap 132 dan katakana 50. Rinciannya:
 
 - 44 soal: 本, 台, 枚, 個, 冊, 匹, 杯, 人, dan つ.
@@ -240,9 +242,9 @@ Rujukan beserta cakupannya dicatat di `data/special-reading-references.json`.
 
 Semua kalimat, terjemahan Indonesia, pembahasan, dan pengecoh disusun khusus;
 tidak ada soal atau kalimat buku pelajaran yang disalin. Sumber dipakai untuk
-memeriksa fakta bacaan. Level latihan mengikuti kanji tersulit dalam target
-berdasarkan katalog situs: N5 69, N4 7, N3 6, N2 17, N1 1. Ini bukan
-penetapan level resmi atau klaim level kosakata dalam sumber rujukan bacaan.
+memeriksa fakta bacaan. Materi dasar ini dikelompokkan secara editorial pada
+N5, bukan penetapan resmi JLPT. Porsi hitungan dan tanggal dibatasi saat
+pemilihan soal campuran agar tidak mendominasi latihan kosakata.
 
 Pilihan yang diterima dicatat dalam `acceptedReadings` dan tidak boleh muncul
 sebagai pengecoh. Untuk `1日`, dua konteks dipertahankan dengan `contextKey`:
@@ -258,17 +260,19 @@ Jalankan `npm test` sesudah memperbarui materi.
 
 ### Level dan pengaturan kuis
 
-`quiz-settings.js` menyelaraskan level latihan dengan katalog kanji situs.
-Untuk kata gabungan atau bentuk berokurigana, level mengikuti kanji tersulit
+`quiz-settings.js` menyelaraskan mode Hiragana → Kanji, kuis arti, dan contoh
+kata katalog dengan level kanji situs. Untuk kata gabungan atau bentuk berokurigana, level mengikuti kanji tersulit
 dalam **kata target**, bukan seluruh kalimat konteks atau pilihan pengecoh.
 Perhitungan memakai karakter yang tercatat di katalog. Sebanyak 29 contoh N1
 mengandung karakter tambahan di luar katalog; semuanya tetap berada di N1.
 Contoh: 六本 N5, 六台 N4, 六杯 N3, 六枚 N2, 韓国 N1. Aturan yang sama berlaku
-pada mode Contoh kata → Hiragana. Level kosakata asli di bank sumber tetap
-dipertahankan; Hiragana → Katakana tetap memakai level kosakata tersebut.
+pada mode Contoh kata → Hiragana. **Kanji → Hiragana (bacaan ala JLPT)** memakai
+level kosakata sumber, karena kata dasar seperti 勉強, 病院, dan 郵便局 tetap
+dipelajari pada N5 meskipun kanji penyusunnya muncul di kelompok kanji lebih tinggi.
+Hiragana → Katakana juga memakai level kosakata sumber.
 
 `getQuizPool` mencampur semua materi pada level pilihan secara otomatis.
-Bank kanji → hiragana berisi N5 81, N4 48, N3 48, N2 55, N1 48; hiragana →
+Bank kanji → hiragana berisi N5 189, N4 73, N3 75, N2 65, N1 62; hiragana →
 kanji berisi N5 14, N4 28, N3 31, N2 28, N1 31. Tautan topik lama membuka
 mode yang sesuai tanpa filter tersembunyi. Pilihan jumlah 10, 20, 50, atau
 custom (bilangan bulat positif) dibatasi pada jumlah soal tersedia.
@@ -276,6 +280,38 @@ custom (bilangan bulat positif) dibatasi pada jumlah soal tersedia.
 `quiz-feedback.js` menyediakan arti kata/kanji dan terjemahan kalimat yang sama
 untuk jawaban benar, salah, waktu habis, dan ulasan hasil. Keberadaan pembahasan
 tambahan tidak menentukan apakah arti ditampilkan.
+
+### Keragaman kosakata dan pemilihan soal membaca
+
+`data/reading-vocabulary-editorial.json` menambahkan 200 entri pilihan, 40 per
+level: 8 kata benda, 12 kata kerja, 12 kata sifat, dan 8 kata keterangan. Bacaan,
+level, dan kelas kata dicocokkan dengan snapshot OpenJLPT/JMdict yang sama.
+Arti Indonesia disusun dan ditinjau secara editorial; kesalahan arti sumber
+seperti 半分 = “half minute” tidak diteruskan. Satu kelas utama dipilih untuk
+penyeimbangan latihan; sebuah kata dapat mempunyai fungsi lain dalam konteks.
+
+`scripts/build_reading_vocabulary.py` memvalidasi kata/bacaan/level dan menulis
+`reading-vocabulary-data.js`, `reading-metadata.js`, serta metadata atribusi di
+`data/reading-vocabulary-source.json`. Tidak ada kalimat dari sumber yang
+disalin. Pengecoh dibuat dengan perubahan satu kana, mempertahankan okurigana,
+dan mengecualikan seluruh bacaan sah untuk ejaan tersebut dalam sumber terkunci.
+Data adaptasi mengikuti CC BY-SA 4.0 dan atribusi EDRDG/OpenJLPT di atas.
+
+Soal lama yang mempunyai konteks atau pilihan khusus dipertahankan ketika kata
+yang sama digabung. Hasil akhir menambah 184 soal unik: total 464, terdiri dari
+180 kata benda, 77 kata kerja, 70 kata sifat, 42 kata keterangan, dan 95 hitungan/
+tanggal. Lima soal seperti 中国 dari bank bacaan khusus termasuk kata benda.
+
+`reading-balance.js` mengembalikan level kosakata sumber untuk bank membaca.
+Pemilihan berputar antar empat kelas kata, lalu mengacak urutan soal dan pilihan.
+Hitungan/tanggal mendapat paling banyak 20% dari sesi normal (2/10, 4/20, 10/50).
+Jika jumlah yang diminta melebihi kapasitas kosakata yang tersisa, soal hitungan/
+tanggal tambahan boleh mengisi sisa sesi; soal tidak diulang untuk memenuhi kuota.
+Subkelompok penghitung, yen, dan tanggal juga dipilih bergantian. Semua soal
+tetap dapat muncul; dua konteks `1日` tetap merupakan soal yang berbeda.
+
+Untuk memperbarui: edit data editorial, jalankan
+`python scripts/build_reading_vocabulary.py`, lalu `npm test`.
 
 ### Membangun katalog
 

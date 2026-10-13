@@ -22,16 +22,24 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 - Kuis arti, kanji, atau bacaan kata; 10/20/50 soal atau jumlah custom, dan timer
   opsional. Jumlah dibatasi soal yang tersedia tanpa mengulang soal.
 - Materi bercampur otomatis sesuai level latihan, tanpa pilihan materi tambahan.
-  Level kata gabungan mengikuti kanji tersulit di katalog situs; katakana tetap
-  mengikuti level kosakata sumber. Arti kata/kanji dan terjemahan kalimat selalu
+  Kanji → Hiragana dan katakana mengikuti level kosakata sumber. Penulisan kanji
+  dan contoh kata katalog mengikuti kanji tersulit. Arti kata/kanji dan terjemahan kalimat selalu
   muncul setelah jawaban benar, salah, atau waktu habis, serta pada ulasan hasil.
-- Bacaan ala JLPT: 280 soal N5–N1 dengan pilihan hiragana
+- Bacaan ala JLPT: 464 soal N5–N1 dengan pilihan hiragana
   yang mirip, arti Indonesia, dan penjelasan bunyi panjang, dakuten, serta kana kecil.
   Buka langsung melalui `#kuis/jlpt`. Ini latihan buatan, bukan soal resmi ujian.
-- Bacaan khusus: 100 soal tambahan yang dibagi mengikuti level kanji dalam kata.
+- Ragam kosakata: kata benda, kata kerja, kata sifat, dan kata keterangan tersedia
+  di setiap level. Seluruh soal lama tetap ada; 200 entri baru yang ditinjau
+  menambah 184 soal unik setelah duplikasi digabung. N5 189, N4 73, N3 75,
+  N2 65, N1 62. Komposisi bank dan jenis soal ditampilkan di kuis.
+- Sesi membaca memilih kelas kata secara seimbang. Hitungan/tanggal maksimal
+  20% selama bank kosakata cukup; sesi yang mendekati seluruh bank dapat
+  menggunakan sisanya tanpa pengulangan. Contoh 10 soal N5: masing-masing
+  2 kata benda, kata kerja, kata sifat, kata keterangan, serta hitungan/tanggal.
+- Bacaan khusus: 100 soal tambahan dalam kelompok latihan dasar N5 editorial.
   Ada 44 soal penghitung (本・台・枚・個・冊・匹・杯・人・つ),
   18 nominal ratusan/ribuan yen, 31 tanggal + 2 durasi hari, serta 5 soal bunyi
-  kata seperti 中国. Semua masuk otomatis pada level yang sesuai di `#kuis/jlpt`.
+  kata seperti 中国. Semua masuk otomatis di `#kuis/jlpt`.
   Kedua bacaan `1日` dibedakan lewat konteks; variasi sah tidak dijadikan pengecoh.
 - Hiragana → Kanji: 132 soal; Hiragana → Katakana: 50 soal (10 per level).
   Kalimat dengan target bergaris bawah, empat pilihan bentuk mirip,
@@ -87,6 +95,10 @@ seluruh tanggal 1–31, dua konteks `1日`, pilihan yang diminta pengguna, varia
 bacaan yang sah, serta pemisahan filter bacaan dari soal penulisan/Kanji Mirip.
 Pengujian pengaturan kuis memeriksa jumlah custom, batas bank, level kanji pada
 kata gabungan, dan arti/terjemahan di seluruh mode meskipun tanpa pembahasan.
+Pengujian keragaman membaca mencocokkan 200 entri baru dengan metadata kamus,
+memastikan semua soal lama tetap ada pada level kosakata sumber, serta menguji
+1.800 sesi acak (10/20/50 soal di lima level dan gabungannya) agar keempat kelas
+kata terwakili dan hitungan/tanggal tidak mendominasi.
 Jalankan `python -m unittest discover -s tests -p "test_*.py"` untuk memastikan
 build menolak data baru atau berubah yang belum ditinjau.
 

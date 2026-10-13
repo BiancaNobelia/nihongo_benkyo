@@ -1,12 +1,14 @@
-import { shuffle } from './core.js?v=20261013-quiz-settings';
+import { shuffle } from './core.js?v=20261013-reading-balance';
+import { selectReadingQuestions } from './reading-balance.js?v=20261013-reading-balance';
 
 export function filterReadingQuestions(bank, level = 'all') {
   return bank.filter(q => level === 'all' || q.level === level);
 }
 
 export function createReadingQuiz(pool, count, random = Math.random) {
-  return shuffle(pool, random).slice(0, Math.max(0, Math.min(count, pool.length))).map(q => ({
+  return selectReadingQuestions(pool,count,random).map(q => ({
     id:q.id, contextKey:q.contextKey,
+    readingCategory:q.readingCategory,
     prompt: q.word,
     answer: q.reading,
     level: q.level,

@@ -32,7 +32,7 @@ test('compounds follow the hardest catalog kanji without changing source vocabul
   assert.deepEqual(PRACTICE_BANKS['hiragana-katakana'],KATAKANA_WRITING);
 });
 
-test('all material is partitioned by level using target kanji, including catalog examples',()=>{
+test('all modes partition questions by their intended level policy',()=>{
   const levelMap=new Map(KANJI.map(k=>[k.char,k.level]));
   for(const mode of modes){
     assert.equal(LEVELS.reduce((sum,l)=>sum+getQuizPool(mode,l).length,0),getQuizPool(mode).length,mode);
@@ -40,7 +40,7 @@ test('all material is partitioned by level using target kanji, including catalog
       const pool=getQuizPool(mode,level);
       assert.ok(pool.length>0,`${mode} ${level}`);
       for(const q of pool){
-        if(mode==='hiragana-katakana'){assert.equal(q.level,level);continue;}
+        if(mode==='hiragana-katakana' || mode==='jlpt-reading'){assert.equal(q.level,level);continue;}
         const word=q.word || q.answer || (mode==='reading' ? q.example.word : q.char);
         const ranks=[...word].filter(c=>/\p{Unified_Ideograph}/u.test(c)).map(c=>{
           // Some N1 catalog examples include rare characters outside the catalog.
@@ -57,8 +57,8 @@ test('all material is partitioned by level using target kanji, including catalog
     }
   }
   assert.ok(getQuizPool('jlpt-reading','N5').some(q=>q.id==='date:1'));
-  assert.ok(getQuizPool('jlpt-reading','N4').some(q=>q.word==='六台'));
-  assert.ok(!getQuizPool('jlpt-reading','N5').some(q=>q.word==='六台'));
+  assert.ok(getQuizPool('jlpt-reading','N5').some(q=>q.word==='六台'));
+  assert.ok(!getQuizPool('jlpt-reading','N4').some(q=>q.word==='六台'));
 });
 
 test('50 and custom sessions cap at the available bank and keep distinct question identities',()=>{

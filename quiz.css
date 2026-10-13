@@ -7,6 +7,8 @@
 #quiz-count-error{font-size:11px;line-height:1.7;color:var(--red)}
 .quiz-level-note{font-size:11px;line-height:1.8;color:var(--muted);margin:20px 0 0;padding:12px 15px;border-left:3px solid #b8c7a8;background:#f5f6f0}
 .quiz-feedback{scroll-margin-block:24px 105px}
+.reading-category{display:table;margin:0 auto 12px;border:1px solid #dbe3cf;border-radius:20px;background:#f1f5e9;color:#556b43;padding:5px 12px;font-size:11px;font-weight:600}
+.reading-composition{grid-column:1/-1;border-top:1px solid #d6dfcb;padding-top:20px}.reading-composition h4{font-size:13px;margin:0 0 12px}.reading-composition>div{display:grid;grid-template-columns:repeat(auto-fit,minmax(94px,1fr));gap:8px}.reading-composition>div>span{padding:10px;background:#ffffffb3;border-radius:6px;font-size:10px;color:#64705b}.reading-composition strong{display:block;font-size:14px;font-weight:550;color:var(--ink);margin-top:5px}.reading-composition>p{font-size:10px;margin:13px 0 0}
 .answer-status{font-size:13px;line-height:1.8;margin:0 0 14px}
 .answer-details{text-align:left;color:var(--ink);background:#fafbf7;border:1px solid #e0e6d7;border-radius:10px;padding:21px;margin-top:12px;overflow-wrap:anywhere}
 .answer-details>div>span{display:block;color:var(--muted);font-size:10px;font-weight:600;letter-spacing:.4px;margin-bottom:5px}

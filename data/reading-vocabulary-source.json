@@ -1,0 +1,3544 @@
+{
+  "source": "https://github.com/evanclan/OpenJLPT",
+  "commit": "0d1d3410bec90bd4098a7c72de820543cb4f707c",
+  "date": "2026-10-13",
+  "note": "Only vocabulary facts imported; meanings, categories, and distractors adapted for practice.",
+  "words": [
+    {
+      "word": "水",
+      "reading": "みず",
+      "level": "N5",
+      "sourceId": "69a792520f",
+      "jmdictId": 1371260,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "みず"
+      ],
+      "meaningsEn": [
+        "water"
+      ]
+    },
+    {
+      "word": "山",
+      "reading": "やま",
+      "level": "N5",
+      "sourceId": "e8a5cbdf0a",
+      "jmdictId": 1302680,
+      "pos": [
+        "n",
+        "ctr"
+      ],
+      "readings": [
+        "やま"
+      ],
+      "meaningsEn": [
+        "mountain"
+      ]
+    },
+    {
+      "word": "花",
+      "reading": "はな",
+      "level": "N5",
+      "sourceId": "6485c3c2a7",
+      "jmdictId": 1194500,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "はな"
+      ],
+      "meaningsEn": [
+        "flower"
+      ]
+    },
+    {
+      "word": "猫",
+      "reading": "ねこ",
+      "level": "N5",
+      "sourceId": "cbbfc8cad6",
+      "jmdictId": 1467640,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "ねこ"
+      ],
+      "meaningsEn": [
+        "cat"
+      ]
+    },
+    {
+      "word": "犬",
+      "reading": "いぬ",
+      "level": "N5",
+      "sourceId": "0df89f5010",
+      "jmdictId": 1258330,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "いぬ"
+      ],
+      "meaningsEn": [
+        "dog"
+      ]
+    },
+    {
+      "word": "本",
+      "reading": "ほん",
+      "level": "N5",
+      "sourceId": "0e8f798dbf",
+      "jmdictId": 1522150,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "ほん"
+      ],
+      "meaningsEn": [
+        "book"
+      ]
+    },
+    {
+      "word": "友達",
+      "reading": "ともだち",
+      "level": "N5",
+      "sourceId": "72c525f37a",
+      "jmdictId": 1540170,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "ともだち"
+      ],
+      "meaningsEn": [
+        "friend"
+      ]
+    },
+    {
+      "word": "家族",
+      "reading": "かぞく",
+      "level": "N5",
+      "sourceId": "1c9db63bdc",
+      "jmdictId": 1192150,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "かぞく"
+      ],
+      "meaningsEn": [
+        "family"
+      ]
+    },
+    {
+      "word": "食べる",
+      "reading": "たべる",
+      "level": "N5",
+      "sourceId": "86f67e2dc3",
+      "jmdictId": 1358280,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "たべる"
+      ],
+      "meaningsEn": [
+        "to eat"
+      ]
+    },
+    {
+      "word": "飲む",
+      "reading": "のむ",
+      "level": "N5",
+      "sourceId": "e0bcec9bd9",
+      "jmdictId": 1169870,
+      "pos": [
+        "v5m",
+        "vt"
+      ],
+      "readings": [
+        "のむ"
+      ],
+      "meaningsEn": [
+        "to drink"
+      ]
+    },
+    {
+      "word": "読む",
+      "reading": "よむ",
+      "level": "N5",
+      "sourceId": "eb7e675902",
+      "jmdictId": 1456360,
+      "pos": [
+        "v5m",
+        "vt"
+      ],
+      "readings": [
+        "よむ"
+      ],
+      "meaningsEn": [
+        "to read"
+      ]
+    },
+    {
+      "word": "書く",
+      "reading": "かく",
+      "level": "N5",
+      "sourceId": "f7c7f35d9e",
+      "jmdictId": 1343950,
+      "pos": [
+        "v5k",
+        "vt"
+      ],
+      "readings": [
+        "かく"
+      ],
+      "meaningsEn": [
+        "to write"
+      ]
+    },
+    {
+      "word": "聞く",
+      "reading": "きく",
+      "level": "N5",
+      "sourceId": "dc19a213cd",
+      "jmdictId": 1591110,
+      "pos": [
+        "v5k",
+        "vt"
+      ],
+      "readings": [
+        "きく"
+      ],
+      "meaningsEn": [
+        "to hear",
+        "to listen to",
+        "to ask"
+      ]
+    },
+    {
+      "word": "話す",
+      "reading": "はなす",
+      "level": "N5",
+      "sourceId": "9d5bde24ec",
+      "jmdictId": 1562350,
+      "pos": [
+        "v5s",
+        "vt"
+      ],
+      "readings": [
+        "はなす"
+      ],
+      "meaningsEn": [
+        "to speak"
+      ]
+    },
+    {
+      "word": "行く",
+      "reading": "いく",
+      "level": "N5",
+      "sourceId": "66e4692df7",
+      "jmdictId": 1578850,
+      "pos": [
+        "v5k-s",
+        "vi"
+      ],
+      "readings": [
+        "いく"
+      ],
+      "meaningsEn": [
+        "to go"
+      ]
+    },
+    {
+      "word": "帰る",
+      "reading": "かえる",
+      "level": "N5",
+      "sourceId": "1d22f1d023",
+      "jmdictId": 1221270,
+      "pos": [
+        "v5r",
+        "vi"
+      ],
+      "readings": [
+        "かえる"
+      ],
+      "meaningsEn": [
+        "to go back"
+      ]
+    },
+    {
+      "word": "買う",
+      "reading": "かう",
+      "level": "N5",
+      "sourceId": "bdb125e5c6",
+      "jmdictId": 1473740,
+      "pos": [
+        "v5u",
+        "vt"
+      ],
+      "readings": [
+        "かう"
+      ],
+      "meaningsEn": [
+        "to buy"
+      ]
+    },
+    {
+      "word": "泳ぐ",
+      "reading": "およぐ",
+      "level": "N5",
+      "sourceId": "3c5bb8f223",
+      "jmdictId": 1174340,
+      "pos": [
+        "v5g",
+        "vi"
+      ],
+      "readings": [
+        "およぐ"
+      ],
+      "meaningsEn": [
+        "to swim"
+      ]
+    },
+    {
+      "word": "歩く",
+      "reading": "あるく",
+      "level": "N5",
+      "sourceId": "55f3080ce4",
+      "jmdictId": 1514320,
+      "pos": [
+        "v5k",
+        "vi"
+      ],
+      "readings": [
+        "あるく"
+      ],
+      "meaningsEn": [
+        "to walk"
+      ]
+    },
+    {
+      "word": "覚える",
+      "reading": "おぼえる",
+      "level": "N5",
+      "sourceId": "dad2d16220",
+      "jmdictId": 1206050,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "おぼえる"
+      ],
+      "meaningsEn": [
+        "to remember"
+      ]
+    },
+    {
+      "word": "新しい",
+      "reading": "あたらしい",
+      "level": "N5",
+      "sourceId": "8ae27e3b51",
+      "jmdictId": 1361490,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "あたらしい"
+      ],
+      "meaningsEn": [
+        "new"
+      ]
+    },
+    {
+      "word": "古い",
+      "reading": "ふるい",
+      "level": "N5",
+      "sourceId": "aa60dd4a11",
+      "jmdictId": 1265070,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "ふるい"
+      ],
+      "meaningsEn": [
+        "old (not used for people)"
+      ]
+    },
+    {
+      "word": "暑い",
+      "reading": "あつい",
+      "level": "N5",
+      "sourceId": "7b4aecdf7b",
+      "jmdictId": 1343460,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "あつい"
+      ],
+      "meaningsEn": [
+        "hot"
+      ]
+    },
+    {
+      "word": "寒い",
+      "reading": "さむい",
+      "level": "N5",
+      "sourceId": "688bc67044",
+      "jmdictId": 1210360,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "さむい"
+      ],
+      "meaningsEn": [
+        "cold"
+      ]
+    },
+    {
+      "word": "大きい",
+      "reading": "おおきい",
+      "level": "N5",
+      "sourceId": "8fa5a63fc7",
+      "jmdictId": 1588880,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "おおきい"
+      ],
+      "meaningsEn": [
+        "big"
+      ]
+    },
+    {
+      "word": "小さい",
+      "reading": "ちいさい",
+      "level": "N5",
+      "sourceId": "d4779ac36c",
+      "jmdictId": 1347750,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "ちいさい"
+      ],
+      "meaningsEn": [
+        "little"
+      ]
+    },
+    {
+      "word": "高い",
+      "reading": "たかい",
+      "level": "N5",
+      "sourceId": "c74892f565",
+      "jmdictId": 1283190,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "たかい"
+      ],
+      "meaningsEn": [
+        "tall",
+        "expensive"
+      ]
+    },
+    {
+      "word": "安い",
+      "reading": "やすい",
+      "level": "N5",
+      "sourceId": "33b86212ca",
+      "jmdictId": 1153670,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "やすい"
+      ],
+      "meaningsEn": [
+        "cheap"
+      ]
+    },
+    {
+      "word": "忙しい",
+      "reading": "いそがしい",
+      "level": "N5",
+      "sourceId": "cd1bcc2b1b",
+      "jmdictId": 1519290,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "いそがしい"
+      ],
+      "meaningsEn": [
+        "busy",
+        "irritated"
+      ]
+    },
+    {
+      "word": "楽しい",
+      "reading": "たのしい",
+      "level": "N5",
+      "sourceId": "9b2d455dfe",
+      "jmdictId": 1207240,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "たのしい"
+      ],
+      "meaningsEn": [
+        "enjoyable"
+      ]
+    },
+    {
+      "word": "静か",
+      "reading": "しずか",
+      "level": "N5",
+      "sourceId": "178469ba7a",
+      "jmdictId": 1381820,
+      "pos": [
+        "adj-na"
+      ],
+      "readings": [
+        "しずか"
+      ],
+      "meaningsEn": [
+        "quiet"
+      ]
+    },
+    {
+      "word": "便利",
+      "reading": "べんり",
+      "level": "N5",
+      "sourceId": "84887dde48",
+      "jmdictId": 1512610,
+      "pos": [
+        "adj-na"
+      ],
+      "readings": [
+        "べんり"
+      ],
+      "meaningsEn": [
+        "useful",
+        "convenient"
+      ]
+    },
+    {
+      "word": "少し",
+      "reading": "すこし",
+      "level": "N5",
+      "sourceId": "c373555102",
+      "jmdictId": 1348870,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "すこし"
+      ],
+      "meaningsEn": [
+        "few"
+      ]
+    },
+    {
+      "word": "時々",
+      "reading": "ときどき",
+      "level": "N5",
+      "sourceId": "978a2cefa5",
+      "jmdictId": 1598680,
+      "pos": [
+        "adv",
+        "adj-no"
+      ],
+      "readings": [
+        "ときどき"
+      ],
+      "meaningsEn": [
+        "sometimes"
+      ]
+    },
+    {
+      "word": "初めて",
+      "reading": "はじめて",
+      "level": "N5",
+      "sourceId": "3f18999e09",
+      "jmdictId": 1342550,
+      "pos": [
+        "adv",
+        "adj-no"
+      ],
+      "readings": [
+        "はじめて"
+      ],
+      "meaningsEn": [
+        "for the first time"
+      ]
+    },
+    {
+      "word": "全部",
+      "reading": "ぜんぶ",
+      "level": "N5",
+      "sourceId": "acba6e07ba",
+      "jmdictId": 1396130,
+      "pos": [
+        "n",
+        "adj-no",
+        "adv"
+      ],
+      "readings": [
+        "ぜんぶ"
+      ],
+      "meaningsEn": [
+        "all"
+      ]
+    },
+    {
+      "word": "近く",
+      "reading": "ちかく",
+      "level": "N5",
+      "sourceId": "6d7293f7cf",
+      "jmdictId": 1242160,
+      "pos": [
+        "n",
+        "adj-no",
+        "adv"
+      ],
+      "readings": [
+        "ちかく"
+      ],
+      "meaningsEn": [
+        "near"
+      ]
+    },
+    {
+      "word": "半分",
+      "reading": "はんぶん",
+      "level": "N5",
+      "sourceId": "a1cda8cb11",
+      "jmdictId": 1479890,
+      "pos": [
+        "adv",
+        "n"
+      ],
+      "readings": [
+        "はんぶん"
+      ],
+      "meaningsEn": [
+        "half minute"
+      ]
+    },
+    {
+      "word": "もう一度",
+      "reading": "もういちど",
+      "level": "N5",
+      "sourceId": "3ae16ad93a",
+      "jmdictId": 2005860,
+      "pos": [
+        "exp",
+        "adv"
+      ],
+      "readings": [
+        "もういちど"
+      ],
+      "meaningsEn": [
+        "again"
+      ]
+    },
+    {
+      "word": "毎日",
+      "reading": "まいにち",
+      "level": "N5",
+      "sourceId": "039a696225",
+      "jmdictId": 1524720,
+      "pos": [
+        "n",
+        "adv"
+      ],
+      "readings": [
+        "まいにち"
+      ],
+      "meaningsEn": [
+        "every day"
+      ]
+    },
+    {
+      "word": "意見",
+      "reading": "いけん",
+      "level": "N4",
+      "sourceId": "ba5a03baf1",
+      "jmdictId": 1156530,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "いけん"
+      ],
+      "meaningsEn": [
+        "opinion"
+      ]
+    },
+    {
+      "word": "季節",
+      "reading": "きせつ",
+      "level": "N4",
+      "sourceId": "a1afb31e7b",
+      "jmdictId": 1222840,
+      "pos": [
+        "n",
+        "adj-no"
+      ],
+      "readings": [
+        "きせつ"
+      ],
+      "meaningsEn": [
+        "season"
+      ]
+    },
+    {
+      "word": "景色",
+      "reading": "けしき",
+      "level": "N4",
+      "sourceId": "a200494cec",
+      "jmdictId": 1250870,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "けしき"
+      ],
+      "meaningsEn": [
+        "scene",
+        "landscape"
+      ]
+    },
+    {
+      "word": "空港",
+      "reading": "くうこう",
+      "level": "N4",
+      "sourceId": "0f74a8f3a4",
+      "jmdictId": 1245570,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "くうこう"
+      ],
+      "meaningsEn": [
+        "airport"
+      ]
+    },
+    {
+      "word": "交通",
+      "reading": "こうつう",
+      "level": "N4",
+      "sourceId": "d64432f194",
+      "jmdictId": 1272280,
+      "pos": [
+        "n",
+        "vs"
+      ],
+      "readings": [
+        "こうつう"
+      ],
+      "meaningsEn": [
+        "traffic",
+        "transportation"
+      ]
+    },
+    {
+      "word": "文化",
+      "reading": "ぶんか",
+      "level": "N4",
+      "sourceId": "2f79469321",
+      "jmdictId": 1505120,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "ぶんか"
+      ],
+      "meaningsEn": [
+        "culture"
+      ]
+    },
+    {
+      "word": "規則",
+      "reading": "きそく",
+      "level": "N4",
+      "sourceId": "fcca18b129",
+      "jmdictId": 1223021,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "きそく"
+      ],
+      "meaningsEn": [
+        "regulations"
+      ]
+    },
+    {
+      "word": "理由",
+      "reading": "りゆう",
+      "level": "N4",
+      "sourceId": "df83eb2b9c",
+      "jmdictId": 1550140,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "りゆう"
+      ],
+      "meaningsEn": [
+        "reason"
+      ]
+    },
+    {
+      "word": "集める",
+      "reading": "あつめる",
+      "level": "N4",
+      "sourceId": "b00801af22",
+      "jmdictId": 1333560,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "あつめる"
+      ],
+      "meaningsEn": [
+        "to collect something"
+      ]
+    },
+    {
+      "word": "謝る",
+      "reading": "あやまる",
+      "level": "N4",
+      "sourceId": "1056f23586",
+      "jmdictId": 1323010,
+      "pos": [
+        "v5r",
+        "vt",
+        "vi"
+      ],
+      "readings": [
+        "あやまる"
+      ],
+      "meaningsEn": [
+        "to apologize"
+      ]
+    },
+    {
+      "word": "急ぐ",
+      "reading": "いそぐ",
+      "level": "N4",
+      "sourceId": "05b5de61ab",
+      "jmdictId": 1228650,
+      "pos": [
+        "v5g",
+        "vi",
+        "vt"
+      ],
+      "readings": [
+        "いそぐ"
+      ],
+      "meaningsEn": [
+        "to hurry"
+      ]
+    },
+    {
+      "word": "選ぶ",
+      "reading": "えらぶ",
+      "level": "N4",
+      "sourceId": "60c9784974",
+      "jmdictId": 1588730,
+      "pos": [
+        "v5b",
+        "vt"
+      ],
+      "readings": [
+        "えらぶ"
+      ],
+      "meaningsEn": [
+        "to choose"
+      ]
+    },
+    {
+      "word": "送る",
+      "reading": "おくる",
+      "level": "N4",
+      "sourceId": "af1dae5588",
+      "jmdictId": 1402730,
+      "pos": [
+        "v5r",
+        "vt"
+      ],
+      "readings": [
+        "おくる"
+      ],
+      "meaningsEn": [
+        "to send"
+      ]
+    },
+    {
+      "word": "遅れる",
+      "reading": "おくれる",
+      "level": "N4",
+      "sourceId": "ae8ce3986c",
+      "jmdictId": 1589040,
+      "pos": [
+        "v1",
+        "vi"
+      ],
+      "readings": [
+        "おくれる"
+      ],
+      "meaningsEn": [
+        "to be late"
+      ]
+    },
+    {
+      "word": "考える",
+      "reading": "かんがえる",
+      "level": "N4",
+      "sourceId": "cc34f28850",
+      "jmdictId": 1281020,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "かんがえる"
+      ],
+      "meaningsEn": [
+        "to consider"
+      ]
+    },
+    {
+      "word": "決める",
+      "reading": "きめる",
+      "level": "N4",
+      "sourceId": "6a98f898ab",
+      "jmdictId": 1254180,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "きめる"
+      ],
+      "meaningsEn": [
+        "to decide"
+      ]
+    },
+    {
+      "word": "比べる",
+      "reading": "くらべる",
+      "level": "N4",
+      "sourceId": "5bfe1d2c25",
+      "jmdictId": 1483540,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "くらべる"
+      ],
+      "meaningsEn": [
+        "to compare"
+      ]
+    },
+    {
+      "word": "探す",
+      "reading": "さがす",
+      "level": "N4",
+      "sourceId": "0f4440571e",
+      "jmdictId": 1593670,
+      "pos": [
+        "v5s",
+        "vt"
+      ],
+      "readings": [
+        "さがす"
+      ],
+      "meaningsEn": [
+        "to look for"
+      ]
+    },
+    {
+      "word": "手伝う",
+      "reading": "てつだう",
+      "level": "N4",
+      "sourceId": "b4206ea6cb",
+      "jmdictId": 1328190,
+      "pos": [
+        "v5u",
+        "vt"
+      ],
+      "readings": [
+        "てつだう"
+      ],
+      "meaningsEn": [
+        "to assist"
+      ]
+    },
+    {
+      "word": "続ける",
+      "reading": "つづける",
+      "level": "N4",
+      "sourceId": "d177796b00",
+      "jmdictId": 1405800,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "つづける"
+      ],
+      "meaningsEn": [
+        "to continue"
+      ]
+    },
+    {
+      "word": "美しい",
+      "reading": "うつくしい",
+      "level": "N4",
+      "sourceId": "0dd54894db",
+      "jmdictId": 1486360,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "うつくしい"
+      ],
+      "meaningsEn": [
+        "beautiful"
+      ]
+    },
+    {
+      "word": "悲しい",
+      "reading": "かなしい",
+      "level": "N4",
+      "sourceId": "3153705f1f",
+      "jmdictId": 1483190,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "かなしい"
+      ],
+      "meaningsEn": [
+        "sad"
+      ]
+    },
+    {
+      "word": "厳しい",
+      "reading": "きびしい",
+      "level": "N4",
+      "sourceId": "d90ee2957c",
+      "jmdictId": 1262530,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "きびしい"
+      ],
+      "meaningsEn": [
+        "strict"
+      ]
+    },
+    {
+      "word": "怖い",
+      "reading": "こわい",
+      "level": "N4",
+      "sourceId": "a769e4c0da",
+      "jmdictId": 1593480,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "こわい"
+      ],
+      "meaningsEn": [
+        "frightening"
+      ]
+    },
+    {
+      "word": "正しい",
+      "reading": "ただしい",
+      "level": "N4",
+      "sourceId": "abb49cd233",
+      "jmdictId": 1376600,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "ただしい"
+      ],
+      "meaningsEn": [
+        "correct"
+      ]
+    },
+    {
+      "word": "眠い",
+      "reading": "ねむい",
+      "level": "N4",
+      "sourceId": "ac5fa7fe3b",
+      "jmdictId": 1529330,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "ねむい"
+      ],
+      "meaningsEn": [
+        "sleepy"
+      ]
+    },
+    {
+      "word": "深い",
+      "reading": "ふかい",
+      "level": "N4",
+      "sourceId": "de718a81e9",
+      "jmdictId": 1362640,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "ふかい"
+      ],
+      "meaningsEn": [
+        "deep"
+      ]
+    },
+    {
+      "word": "珍しい",
+      "reading": "めずらしい",
+      "level": "N4",
+      "sourceId": "6307098126",
+      "jmdictId": 1431850,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "めずらしい"
+      ],
+      "meaningsEn": [
+        "rare"
+      ]
+    },
+    {
+      "word": "優しい",
+      "reading": "やさしい",
+      "level": "N4",
+      "sourceId": "427a618271",
+      "jmdictId": 1539040,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "やさしい"
+      ],
+      "meaningsEn": [
+        "kind"
+      ]
+    },
+    {
+      "word": "簡単",
+      "reading": "かんたん",
+      "level": "N4",
+      "sourceId": "ac20bba998",
+      "jmdictId": 1214330,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "かんたん"
+      ],
+      "meaningsEn": [
+        "simple"
+      ]
+    },
+    {
+      "word": "親切",
+      "reading": "しんせつ",
+      "level": "N4",
+      "sourceId": "c904982ded",
+      "jmdictId": 1365250,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "しんせつ"
+      ],
+      "meaningsEn": [
+        "kindness"
+      ]
+    },
+    {
+      "word": "複雑",
+      "reading": "ふくざつ",
+      "level": "N4",
+      "sourceId": "1d83ae6a5a",
+      "jmdictId": 1501350,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "ふくざつ"
+      ],
+      "meaningsEn": [
+        "complexity",
+        "complication"
+      ]
+    },
+    {
+      "word": "必ず",
+      "reading": "かならず",
+      "level": "N4",
+      "sourceId": "5a76ee84b9",
+      "jmdictId": 1487400,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "かならず"
+      ],
+      "meaningsEn": [
+        "certainly",
+        "necessarily"
+      ]
+    },
+    {
+      "word": "決して",
+      "reading": "けっして",
+      "level": "N4",
+      "sourceId": "511cbf9eee",
+      "jmdictId": 1254130,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "けっして"
+      ],
+      "meaningsEn": [
+        "never"
+      ]
+    },
+    {
+      "word": "大体",
+      "reading": "だいたい",
+      "level": "N4",
+      "sourceId": "c0afe72b73",
+      "jmdictId": 1414470,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "だいたい"
+      ],
+      "meaningsEn": [
+        "generally"
+      ]
+    },
+    {
+      "word": "大分",
+      "reading": "だいぶ",
+      "level": "N4",
+      "sourceId": "b442490fff",
+      "jmdictId": 1414920,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "だいぶ",
+        "だいぶん"
+      ],
+      "meaningsEn": [
+        "greatly"
+      ]
+    },
+    {
+      "word": "例えば",
+      "reading": "たとえば",
+      "level": "N4",
+      "sourceId": "1cda12dd3f",
+      "jmdictId": 1556370,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "たとえば"
+      ],
+      "meaningsEn": [
+        "for example"
+      ]
+    },
+    {
+      "word": "特に",
+      "reading": "とくに",
+      "level": "N4",
+      "sourceId": "0b2acf3460",
+      "jmdictId": 1454670,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "とくに"
+      ],
+      "meaningsEn": [
+        "particularly",
+        "especially"
+      ]
+    },
+    {
+      "word": "非常に",
+      "reading": "ひじょうに",
+      "level": "N4",
+      "sourceId": "be23bfe1f6",
+      "jmdictId": 1484930,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "ひじょうに"
+      ],
+      "meaningsEn": [
+        "extremely"
+      ]
+    },
+    {
+      "word": "一生懸命",
+      "reading": "いっしょうけんめい",
+      "level": "N4",
+      "sourceId": "cf69ef2274",
+      "jmdictId": 1164010,
+      "pos": [
+        "adv",
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "いっしょうけんめい"
+      ],
+      "meaningsEn": [
+        "with utmost effort"
+      ]
+    },
+    {
+      "word": "環境",
+      "reading": "かんきょう",
+      "level": "N3",
+      "sourceId": "c8ca17553a",
+      "jmdictId": 1213280,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "かんきょう"
+      ],
+      "meaningsEn": [
+        "environment",
+        "circumstance"
+      ]
+    },
+    {
+      "word": "責任",
+      "reading": "せきにん",
+      "level": "N3",
+      "sourceId": "4c29ad3233",
+      "jmdictId": 1383180,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "せきにん"
+      ],
+      "meaningsEn": [
+        "duty",
+        "responsibility"
+      ]
+    },
+    {
+      "word": "相手",
+      "reading": "あいて",
+      "level": "N3",
+      "sourceId": "cab1bc201f",
+      "jmdictId": 1401000,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "あいて"
+      ],
+      "meaningsEn": [
+        "companion",
+        "partner",
+        "company"
+      ]
+    },
+    {
+      "word": "現実",
+      "reading": "げんじつ",
+      "level": "N3",
+      "sourceId": "30088243fb",
+      "jmdictId": 1263710,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "げんじつ"
+      ],
+      "meaningsEn": [
+        "reality"
+      ]
+    },
+    {
+      "word": "目的",
+      "reading": "もくてき",
+      "level": "N3",
+      "sourceId": "0440a8bd4f",
+      "jmdictId": 1535560,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "もくてき"
+      ],
+      "meaningsEn": [
+        "purpose",
+        "goal",
+        "aim",
+        "objective",
+        "intention"
+      ]
+    },
+    {
+      "word": "結果",
+      "reading": "けっか",
+      "level": "N3",
+      "sourceId": "e391d26404",
+      "jmdictId": 1254690,
+      "pos": [
+        "n",
+        "vs",
+        "vt",
+        "vi"
+      ],
+      "readings": [
+        "けっか"
+      ],
+      "meaningsEn": [
+        "result",
+        "consequence"
+      ]
+    },
+    {
+      "word": "知識",
+      "reading": "ちしき",
+      "level": "N3",
+      "sourceId": "ae8e7129b1",
+      "jmdictId": 1420590,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "ちしき"
+      ],
+      "meaningsEn": [
+        "knowledge",
+        "information"
+      ]
+    },
+    {
+      "word": "能力",
+      "reading": "のうりょく",
+      "level": "N3",
+      "sourceId": "2cc68f1162",
+      "jmdictId": 1470370,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "のうりょく"
+      ],
+      "meaningsEn": [
+        "ability",
+        "faculty"
+      ]
+    },
+    {
+      "word": "諦める",
+      "reading": "あきらめる",
+      "level": "N3",
+      "sourceId": "8ff67241d3",
+      "jmdictId": 1436730,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "あきらめる"
+      ],
+      "meaningsEn": [
+        "to give up",
+        "to abandon"
+      ]
+    },
+    {
+      "word": "預ける",
+      "reading": "あずける",
+      "level": "N3",
+      "sourceId": "9092a33de5",
+      "jmdictId": 1544990,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "あずける"
+      ],
+      "meaningsEn": [
+        "to give into custody",
+        "to entrust",
+        "to deposit"
+      ]
+    },
+    {
+      "word": "与える",
+      "reading": "あたえる",
+      "level": "N3",
+      "sourceId": "264ec34f18",
+      "jmdictId": 1544730,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "あたえる"
+      ],
+      "meaningsEn": [
+        "to give",
+        "to present",
+        "to award"
+      ]
+    },
+    {
+      "word": "扱う",
+      "reading": "あつかう",
+      "level": "N3",
+      "sourceId": "c0dfcb262d",
+      "jmdictId": 1153440,
+      "pos": [
+        "v5u",
+        "vt"
+      ],
+      "readings": [
+        "あつかう"
+      ],
+      "meaningsEn": [
+        "to handle",
+        "to deal with",
+        "to treat"
+      ]
+    },
+    {
+      "word": "表す",
+      "reading": "あらわす",
+      "level": "N3",
+      "sourceId": "474e600ef2",
+      "jmdictId": 1263490,
+      "pos": [
+        "v5s",
+        "vt"
+      ],
+      "readings": [
+        "あらわす"
+      ],
+      "meaningsEn": [
+        "to express",
+        "to show",
+        "to reveal"
+      ]
+    },
+    {
+      "word": "受け取る",
+      "reading": "うけとる",
+      "level": "N3",
+      "sourceId": "ae7bf4b275",
+      "jmdictId": 1329650,
+      "pos": [
+        "v5r",
+        "vt"
+      ],
+      "readings": [
+        "うけとる"
+      ],
+      "meaningsEn": [
+        "to receive",
+        "to get",
+        "to accept",
+        "to take"
+      ]
+    },
+    {
+      "word": "失う",
+      "reading": "うしなう",
+      "level": "N3",
+      "sourceId": "13fe04cb12",
+      "jmdictId": 1319750,
+      "pos": [
+        "v5u",
+        "vt"
+      ],
+      "readings": [
+        "うしなう"
+      ],
+      "meaningsEn": [
+        "to lose",
+        "to part with"
+      ]
+    },
+    {
+      "word": "疑う",
+      "reading": "うたがう",
+      "level": "N3",
+      "sourceId": "60e8b7bc2b",
+      "jmdictId": 1225510,
+      "pos": [
+        "v5u",
+        "vt"
+      ],
+      "readings": [
+        "うたがう"
+      ],
+      "meaningsEn": [
+        "to doubt",
+        "to distrust",
+        "to be suspicious of",
+        "to suspect"
+      ]
+    },
+    {
+      "word": "描く",
+      "reading": "えがく",
+      "level": "N3",
+      "sourceId": "a359eccfaf",
+      "jmdictId": 1583460,
+      "pos": [
+        "v5k",
+        "vt"
+      ],
+      "readings": [
+        "えがく"
+      ],
+      "meaningsEn": [
+        "to draw",
+        "to paint",
+        "to sketch",
+        "to depict",
+        "to describe"
+      ]
+    },
+    {
+      "word": "贈る",
+      "reading": "おくる",
+      "level": "N3",
+      "sourceId": "69db85c3a9",
+      "jmdictId": 1403550,
+      "pos": [
+        "v5r",
+        "vt"
+      ],
+      "readings": [
+        "おくる"
+      ],
+      "meaningsEn": [
+        "to send",
+        "to give to",
+        "to award to",
+        "to confer on"
+      ]
+    },
+    {
+      "word": "抱える",
+      "reading": "かかえる",
+      "level": "N3",
+      "sourceId": "f6d4ab33ef",
+      "jmdictId": 1516310,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "かかえる"
+      ],
+      "meaningsEn": [
+        "to hold or carry under or in the arms"
+      ]
+    },
+    {
+      "word": "輝く",
+      "reading": "かがやく",
+      "level": "N3",
+      "sourceId": "b3f81ac90b",
+      "jmdictId": 1224020,
+      "pos": [
+        "v5k",
+        "vi"
+      ],
+      "readings": [
+        "かがやく"
+      ],
+      "meaningsEn": [
+        "to shine",
+        "to glitter",
+        "to sparkle"
+      ]
+    },
+    {
+      "word": "明らか",
+      "reading": "あきらか",
+      "level": "N3",
+      "sourceId": "b32e523015",
+      "jmdictId": 1532310,
+      "pos": [
+        "adj-na"
+      ],
+      "readings": [
+        "あきらか"
+      ],
+      "meaningsEn": [
+        "obvious",
+        "evident",
+        "clear"
+      ]
+    },
+    {
+      "word": "幼い",
+      "reading": "おさない",
+      "level": "N3",
+      "sourceId": "125a8eb816",
+      "jmdictId": 1545110,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "おさない"
+      ],
+      "meaningsEn": [
+        "very young",
+        "childish"
+      ]
+    },
+    {
+      "word": "穏やか",
+      "reading": "おだやか",
+      "level": "N3",
+      "sourceId": "93e1217f4a",
+      "jmdictId": 1183590,
+      "pos": [
+        "adj-na"
+      ],
+      "readings": [
+        "おだやか"
+      ],
+      "meaningsEn": [
+        "calm",
+        "gentle",
+        "quiet"
+      ]
+    },
+    {
+      "word": "賢い",
+      "reading": "かしこい",
+      "level": "N3",
+      "sourceId": "d26324d28a",
+      "jmdictId": 1260260,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "かしこい"
+      ],
+      "meaningsEn": [
+        "wise",
+        "clever",
+        "smart"
+      ]
+    },
+    {
+      "word": "苦しい",
+      "reading": "くるしい",
+      "level": "N3",
+      "sourceId": "823d4cdf65",
+      "jmdictId": 1244320,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "くるしい"
+      ],
+      "meaningsEn": [
+        "painful",
+        "difficult"
+      ]
+    },
+    {
+      "word": "詳しい",
+      "reading": "くわしい",
+      "level": "N3",
+      "sourceId": "d6448fea52",
+      "jmdictId": 1351730,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "くわしい"
+      ],
+      "meaningsEn": [
+        "knowing very well",
+        "detailed",
+        "full",
+        "accurate"
+      ]
+    },
+    {
+      "word": "親しい",
+      "reading": "したしい",
+      "level": "N3",
+      "sourceId": "65b4a1f58b",
+      "jmdictId": 1365050,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "したしい"
+      ],
+      "meaningsEn": [
+        "intimate",
+        "close (e.g. friend)"
+      ]
+    },
+    {
+      "word": "快適",
+      "reading": "かいてき",
+      "level": "N3",
+      "sourceId": "b550808b0f",
+      "jmdictId": 1200120,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "かいてき"
+      ],
+      "meaningsEn": [
+        "pleasant",
+        "agreeable",
+        "comfortable"
+      ]
+    },
+    {
+      "word": "貴重",
+      "reading": "きちょう",
+      "level": "N3",
+      "sourceId": "7660474b4f",
+      "jmdictId": 1223520,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "きちょう"
+      ],
+      "meaningsEn": [
+        "precious",
+        "valuable"
+      ]
+    },
+    {
+      "word": "巨大",
+      "reading": "きょだい",
+      "level": "N3",
+      "sourceId": "db79e0b5b4",
+      "jmdictId": 1232180,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "きょだい"
+      ],
+      "meaningsEn": [
+        "huge",
+        "gigantic",
+        "enormous"
+      ]
+    },
+    {
+      "word": "重要",
+      "reading": "じゅうよう",
+      "level": "N3",
+      "sourceId": "bc3d5a165c",
+      "jmdictId": 1336820,
+      "pos": [
+        "adj-na"
+      ],
+      "readings": [
+        "じゅうよう"
+      ],
+      "meaningsEn": [
+        "important",
+        "momentous",
+        "essential",
+        "principal",
+        "major"
+      ]
+    },
+    {
+      "word": "奇妙",
+      "reading": "きみょう",
+      "level": "N3",
+      "sourceId": "14a3436b7e",
+      "jmdictId": 1219490,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "きみょう"
+      ],
+      "meaningsEn": [
+        "strange",
+        "queer",
+        "curious"
+      ]
+    },
+    {
+      "word": "主に",
+      "reading": "おもに",
+      "level": "N3",
+      "sourceId": "43b76d54d8",
+      "jmdictId": 1324990,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "おもに"
+      ],
+      "meaningsEn": [
+        "mainly",
+        "primarily"
+      ]
+    },
+    {
+      "word": "思わず",
+      "reading": "おもわず",
+      "level": "N3",
+      "sourceId": "7942f6b1d6",
+      "jmdictId": 1309460,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "おもわず"
+      ],
+      "meaningsEn": [
+        "unintentional",
+        "spontaneous"
+      ]
+    },
+    {
+      "word": "結局",
+      "reading": "けっきょく",
+      "level": "N3",
+      "sourceId": "cb50e02845",
+      "jmdictId": 1254730,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "けっきょく"
+      ],
+      "meaningsEn": [
+        "after all",
+        "eventually"
+      ]
+    },
+    {
+      "word": "更に",
+      "reading": "さらに",
+      "level": "N3",
+      "sourceId": "e32542ef92",
+      "jmdictId": 1279310,
+      "pos": [
+        "adv",
+        "conj"
+      ],
+      "readings": [
+        "さらに"
+      ],
+      "meaningsEn": [
+        "furthermore",
+        "again",
+        "after all",
+        "more and more",
+        "moreover"
+      ]
+    },
+    {
+      "word": "既に",
+      "reading": "すでに",
+      "level": "N3",
+      "sourceId": "aa2fbac408",
+      "jmdictId": 1220310,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "すでに"
+      ],
+      "meaningsEn": [
+        "already",
+        "too late"
+      ]
+    },
+    {
+      "word": "突然",
+      "reading": "とつぜん",
+      "level": "N3",
+      "sourceId": "b0fe689407",
+      "jmdictId": 1457040,
+      "pos": [
+        "adj-no",
+        "adj-na",
+        "adv"
+      ],
+      "readings": [
+        "とつぜん"
+      ],
+      "meaningsEn": [
+        "abruptly",
+        "suddenly",
+        "unexpectedly",
+        "all at once"
+      ]
+    },
+    {
+      "word": "常に",
+      "reading": "つねに",
+      "level": "N3",
+      "sourceId": "43f9074428",
+      "jmdictId": 1355970,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "つねに"
+      ],
+      "meaningsEn": [
+        "always",
+        "constantly"
+      ]
+    },
+    {
+      "word": "再び",
+      "reading": "ふたたび",
+      "level": "N3",
+      "sourceId": "02a74abcd0",
+      "jmdictId": 1292300,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "ふたたび"
+      ],
+      "meaningsEn": [
+        "again",
+        "once more",
+        "a second time"
+      ]
+    },
+    {
+      "word": "構造",
+      "reading": "こうぞう",
+      "level": "N2",
+      "sourceId": "fd699d42d8",
+      "jmdictId": 1279790,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "こうぞう"
+      ],
+      "meaningsEn": [
+        "structure",
+        "construction"
+      ]
+    },
+    {
+      "word": "寿命",
+      "reading": "じゅみょう",
+      "level": "N2",
+      "sourceId": "772e03ca49",
+      "jmdictId": 1330240,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "じゅみょう"
+      ],
+      "meaningsEn": [
+        "life span"
+      ]
+    },
+    {
+      "word": "基礎",
+      "reading": "きそ",
+      "level": "N2",
+      "sourceId": "cf3f89597d",
+      "jmdictId": 1219060,
+      "pos": [
+        "n",
+        "adj-no"
+      ],
+      "readings": [
+        "きそ"
+      ],
+      "meaningsEn": [
+        "foundation",
+        "basis"
+      ]
+    },
+    {
+      "word": "境界",
+      "reading": "きょうかい",
+      "level": "N2",
+      "sourceId": "a34e91aa05",
+      "jmdictId": 1235960,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "きょうかい"
+      ],
+      "meaningsEn": [
+        "boundary"
+      ]
+    },
+    {
+      "word": "基盤",
+      "reading": "きばん",
+      "level": "N2",
+      "sourceId": "629536cb8c",
+      "jmdictId": 1219170,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "きばん"
+      ],
+      "meaningsEn": [
+        "foundation",
+        "basis"
+      ]
+    },
+    {
+      "word": "規律",
+      "reading": "きりつ",
+      "level": "N2",
+      "sourceId": "ecfba97554",
+      "jmdictId": 1223120,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "きりつ"
+      ],
+      "meaningsEn": [
+        "order",
+        "rules",
+        "law"
+      ]
+    },
+    {
+      "word": "方針",
+      "reading": "ほうしん",
+      "level": "N2",
+      "sourceId": "144c1b4945",
+      "jmdictId": 1517040,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "ほうしん"
+      ],
+      "meaningsEn": [
+        "objective",
+        "plan",
+        "policy"
+      ]
+    },
+    {
+      "word": "行事",
+      "reading": "ぎょうじ",
+      "level": "N2",
+      "sourceId": "c0959c1346",
+      "jmdictId": 1281930,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "ぎょうじ"
+      ],
+      "meaningsEn": [
+        "event",
+        "function"
+      ]
+    },
+    {
+      "word": "憧れる",
+      "reading": "あこがれる",
+      "level": "N2",
+      "sourceId": "36c77eda04",
+      "jmdictId": 1453810,
+      "pos": [
+        "v1",
+        "vi"
+      ],
+      "readings": [
+        "あこがれる"
+      ],
+      "meaningsEn": [
+        "to long for",
+        "to yearn after",
+        "to admire"
+      ]
+    },
+    {
+      "word": "味わう",
+      "reading": "あじわう",
+      "level": "N2",
+      "sourceId": "e62d8e80cc",
+      "jmdictId": 1527010,
+      "pos": [
+        "v5u",
+        "vt"
+      ],
+      "readings": [
+        "あじわう"
+      ],
+      "meaningsEn": [
+        "to taste",
+        "to savor",
+        "to relish"
+      ]
+    },
+    {
+      "word": "預かる",
+      "reading": "あずかる",
+      "level": "N2",
+      "sourceId": "eafba17b69",
+      "jmdictId": 1544970,
+      "pos": [
+        "v5r",
+        "vt"
+      ],
+      "readings": [
+        "あずかる"
+      ],
+      "meaningsEn": [
+        "to keep in custody",
+        "to receive on deposit",
+        "to take charge of"
+      ]
+    },
+    {
+      "word": "編む",
+      "reading": "あむ",
+      "level": "N2",
+      "sourceId": "fb73ee2899",
+      "jmdictId": 1511950,
+      "pos": [
+        "v5m",
+        "vt"
+      ],
+      "readings": [
+        "あむ"
+      ],
+      "meaningsEn": [
+        "to knit"
+      ]
+    },
+    {
+      "word": "改める",
+      "reading": "あらためる",
+      "level": "N2",
+      "sourceId": "554088a0dc",
+      "jmdictId": 1200750,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "あらためる"
+      ],
+      "meaningsEn": [
+        "to change",
+        "to alter",
+        "to reform",
+        "to revise"
+      ]
+    },
+    {
+      "word": "浮かぶ",
+      "reading": "うかぶ",
+      "level": "N2",
+      "sourceId": "155ca82293",
+      "jmdictId": 1497430,
+      "pos": [
+        "v5b",
+        "vi"
+      ],
+      "readings": [
+        "うかぶ"
+      ],
+      "meaningsEn": [
+        "to float",
+        "to rise to surface",
+        "to come to mind"
+      ]
+    },
+    {
+      "word": "敬う",
+      "reading": "うやまう",
+      "level": "N2",
+      "sourceId": "d95334bf4d",
+      "jmdictId": 1250700,
+      "pos": [
+        "v5u",
+        "vt"
+      ],
+      "readings": [
+        "うやまう"
+      ],
+      "meaningsEn": [
+        "to show respect",
+        "to honour"
+      ]
+    },
+    {
+      "word": "補う",
+      "reading": "おぎなう",
+      "level": "N2",
+      "sourceId": "2fa74b3912",
+      "jmdictId": 1514460,
+      "pos": [
+        "v5u",
+        "vt"
+      ],
+      "readings": [
+        "おぎなう"
+      ],
+      "meaningsEn": [
+        "to compensate for"
+      ]
+    },
+    {
+      "word": "怠る",
+      "reading": "おこたる",
+      "level": "N2",
+      "sourceId": "ca8c4f4dbf",
+      "jmdictId": 1410710,
+      "pos": [
+        "v5r",
+        "vt"
+      ],
+      "readings": [
+        "おこたる"
+      ],
+      "meaningsEn": [
+        "to neglect",
+        "to be off guard",
+        "to be feeling better"
+      ]
+    },
+    {
+      "word": "教わる",
+      "reading": "おそわる",
+      "level": "N2",
+      "sourceId": "acbef70f9e",
+      "jmdictId": 1236940,
+      "pos": [
+        "v5r",
+        "vt"
+      ],
+      "readings": [
+        "おそわる"
+      ],
+      "meaningsEn": [
+        "to be taught"
+      ]
+    },
+    {
+      "word": "承る",
+      "reading": "うけたまわる",
+      "level": "N2",
+      "sourceId": "a4847f22e0",
+      "jmdictId": 1349440,
+      "pos": [
+        "v5r",
+        "vt"
+      ],
+      "readings": [
+        "うけたまわる"
+      ],
+      "meaningsEn": [
+        "(humble) to hear",
+        "to be told",
+        "to know"
+      ]
+    },
+    {
+      "word": "争う",
+      "reading": "あらそう",
+      "level": "N2",
+      "sourceId": "2c37f1e65a",
+      "jmdictId": 1400620,
+      "pos": [
+        "v5u",
+        "vi"
+      ],
+      "readings": [
+        "あらそう"
+      ],
+      "meaningsEn": [
+        "to dispute",
+        "to argue",
+        "to be at variance",
+        "to compete"
+      ]
+    },
+    {
+      "word": "厚かましい",
+      "reading": "あつかましい",
+      "level": "N2",
+      "sourceId": "a059581841",
+      "jmdictId": 1275330,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "あつかましい"
+      ],
+      "meaningsEn": [
+        "impudent",
+        "shameless",
+        "brazen"
+      ]
+    },
+    {
+      "word": "怪しい",
+      "reading": "あやしい",
+      "level": "N2",
+      "sourceId": "36d05281eb",
+      "jmdictId": 1586700,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "あやしい"
+      ],
+      "meaningsEn": [
+        "suspicious",
+        "dubious",
+        "doubtful"
+      ]
+    },
+    {
+      "word": "荒い",
+      "reading": "あらい",
+      "level": "N2",
+      "sourceId": "c171dadc4a",
+      "jmdictId": 1281450,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "あらい"
+      ],
+      "meaningsEn": [
+        "rough",
+        "rude",
+        "wild"
+      ]
+    },
+    {
+      "word": "勇ましい",
+      "reading": "いさましい",
+      "level": "N2",
+      "sourceId": "3966c8755c",
+      "jmdictId": 1539660,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "いさましい"
+      ],
+      "meaningsEn": [
+        "brave",
+        "valiant",
+        "gallant",
+        "courageous"
+      ]
+    },
+    {
+      "word": "薄暗い",
+      "reading": "うすぐらい",
+      "level": "N2",
+      "sourceId": "609f65f056",
+      "jmdictId": 1475530,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "うすぐらい"
+      ],
+      "meaningsEn": [
+        "dim",
+        "gloomy"
+      ]
+    },
+    {
+      "word": "羨ましい",
+      "reading": "うらやましい",
+      "level": "N2",
+      "sourceId": "d40a8e4a7f",
+      "jmdictId": 1391940,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "うらやましい"
+      ],
+      "meaningsEn": [
+        "envious",
+        "enviable"
+      ]
+    },
+    {
+      "word": "険しい",
+      "reading": "けわしい",
+      "level": "N2",
+      "sourceId": "7f5f5e5428",
+      "jmdictId": 1260530,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "けわしい"
+      ],
+      "meaningsEn": [
+        "inaccessible place",
+        "sharp eyes"
+      ]
+    },
+    {
+      "word": "悔しい",
+      "reading": "くやしい",
+      "level": "N2",
+      "sourceId": "07f20a5682",
+      "jmdictId": 1592350,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "くやしい"
+      ],
+      "meaningsEn": [
+        "regrettable",
+        "mortifying",
+        "vexing"
+      ]
+    },
+    {
+      "word": "謙虚",
+      "reading": "けんきょ",
+      "level": "N2",
+      "sourceId": "5a40e5dbe9",
+      "jmdictId": 1260190,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "けんきょ"
+      ],
+      "meaningsEn": [
+        "modesty",
+        "humility"
+      ]
+    },
+    {
+      "word": "強引",
+      "reading": "ごういん",
+      "level": "N2",
+      "sourceId": "0e34bf193f",
+      "jmdictId": 1236170,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "ごういん"
+      ],
+      "meaningsEn": [
+        "overbearing",
+        "coercive",
+        "pushy",
+        "forcible",
+        "high-handed"
+      ]
+    },
+    {
+      "word": "純粋",
+      "reading": "じゅんすい",
+      "level": "N2",
+      "sourceId": "2cd84ea8b4",
+      "jmdictId": 1341930,
+      "pos": [
+        "adj-na",
+        "adj-no",
+        "n"
+      ],
+      "readings": [
+        "じゅんすい"
+      ],
+      "meaningsEn": [
+        "pure",
+        "true",
+        "genuine",
+        "unmixed"
+      ]
+    },
+    {
+      "word": "空っぽ",
+      "reading": "からっぽ",
+      "level": "N2",
+      "sourceId": "b49d7bfd2b",
+      "jmdictId": 1245380,
+      "pos": [
+        "adj-no",
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "からっぽ"
+      ],
+      "meaningsEn": [
+        "empty",
+        "vacant",
+        "hollow"
+      ]
+    },
+    {
+      "word": "改めて",
+      "reading": "あらためて",
+      "level": "N2",
+      "sourceId": "ba30b2fc1e",
+      "jmdictId": 1200740,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "あらためて"
+      ],
+      "meaningsEn": [
+        "another time",
+        "again",
+        "over again",
+        "anew",
+        "formally"
+      ]
+    },
+    {
+      "word": "案外",
+      "reading": "あんがい",
+      "level": "N2",
+      "sourceId": "96370a1ce3",
+      "jmdictId": 1154820,
+      "pos": [
+        "adv",
+        "adv-to"
+      ],
+      "readings": [
+        "あんがい"
+      ],
+      "meaningsEn": [
+        "unexpectedly"
+      ]
+    },
+    {
+      "word": "一応",
+      "reading": "いちおう",
+      "level": "N2",
+      "sourceId": "99ff21adbb",
+      "jmdictId": 1161170,
+      "pos": [
+        "n",
+        "adv"
+      ],
+      "readings": [
+        "いちおう"
+      ],
+      "meaningsEn": [
+        "once",
+        "tentatively",
+        "in outline",
+        "for the time being"
+      ]
+    },
+    {
+      "word": "一旦",
+      "reading": "いったん",
+      "level": "N2",
+      "sourceId": "e2c0c40491",
+      "jmdictId": 1164650,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "いったん"
+      ],
+      "meaningsEn": [
+        "once",
+        "for a moment",
+        "one morning",
+        "temporarily"
+      ]
+    },
+    {
+      "word": "再三",
+      "reading": "さいさん",
+      "level": "N2",
+      "sourceId": "9087a1e25d",
+      "jmdictId": 1292760,
+      "pos": [
+        "adv",
+        "adj-no"
+      ],
+      "readings": [
+        "さいさん"
+      ],
+      "meaningsEn": [
+        "again and again",
+        "repeatedly"
+      ]
+    },
+    {
+      "word": "早速",
+      "reading": "さっそく",
+      "level": "N2",
+      "sourceId": "256e7a9058",
+      "jmdictId": 1400300,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "さっそく"
+      ],
+      "meaningsEn": [
+        "at once",
+        "immediately",
+        "without delay",
+        "promptly"
+      ]
+    },
+    {
+      "word": "絶えず",
+      "reading": "たえず",
+      "level": "N2",
+      "sourceId": "385564b693",
+      "jmdictId": 1386700,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "たえず"
+      ],
+      "meaningsEn": [
+        "constantly"
+      ]
+    },
+    {
+      "word": "比較的",
+      "reading": "ひかくてき",
+      "level": "N2",
+      "sourceId": "dc7f5a8762",
+      "jmdictId": 1483600,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "ひかくてき"
+      ],
+      "meaningsEn": [
+        "comparatively",
+        "relatively"
+      ]
+    },
+    {
+      "word": "領域",
+      "reading": "りょういき",
+      "level": "N1",
+      "sourceId": "3e37fcff5a",
+      "jmdictId": 1554720,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "りょういき"
+      ],
+      "meaningsEn": [
+        "area",
+        "domain",
+        "territory",
+        "field",
+        "region",
+        "regime"
+      ]
+    },
+    {
+      "word": "措置",
+      "reading": "そち",
+      "level": "N1",
+      "sourceId": "116afb9f88",
+      "jmdictId": 1396530,
+      "pos": [
+        "n",
+        "vs",
+        "vt"
+      ],
+      "readings": [
+        "そち"
+      ],
+      "meaningsEn": [
+        "measure",
+        "step"
+      ]
+    },
+    {
+      "word": "根拠",
+      "reading": "こんきょ",
+      "level": "N1",
+      "sourceId": "957d019486",
+      "jmdictId": 1290120,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "こんきょ"
+      ],
+      "meaningsEn": [
+        "basis",
+        "foundation"
+      ]
+    },
+    {
+      "word": "概念",
+      "reading": "がいねん",
+      "level": "N1",
+      "sourceId": "2430b22515",
+      "jmdictId": 1204480,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "がいねん"
+      ],
+      "meaningsEn": [
+        "general idea",
+        "concept",
+        "notion"
+      ]
+    },
+    {
+      "word": "権限",
+      "reading": "けんげん",
+      "level": "N1",
+      "sourceId": "1f41af8458",
+      "jmdictId": 1258130,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "けんげん"
+      ],
+      "meaningsEn": [
+        "power",
+        "authority",
+        "jurisdiction"
+      ]
+    },
+    {
+      "word": "課題",
+      "reading": "かだい",
+      "level": "N1",
+      "sourceId": "f61f8da3d3",
+      "jmdictId": 1195820,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "かだい"
+      ],
+      "meaningsEn": [
+        "subject",
+        "theme",
+        "task"
+      ]
+    },
+    {
+      "word": "契機",
+      "reading": "けいき",
+      "level": "N1",
+      "sourceId": "d07bdd00a7",
+      "jmdictId": 1250180,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "けいき"
+      ],
+      "meaningsEn": [
+        "opportunity",
+        "chance"
+      ]
+    },
+    {
+      "word": "意欲",
+      "reading": "いよく",
+      "level": "N1",
+      "sourceId": "6a8979ffef",
+      "jmdictId": 1587690,
+      "pos": [
+        "n"
+      ],
+      "readings": [
+        "いよく"
+      ],
+      "meaningsEn": [
+        "will",
+        "desire",
+        "ambition"
+      ]
+    },
+    {
+      "word": "欺く",
+      "reading": "あざむく",
+      "level": "N1",
+      "sourceId": "5f330190c2",
+      "jmdictId": 1225420,
+      "pos": [
+        "v5k",
+        "vt"
+      ],
+      "readings": [
+        "あざむく"
+      ],
+      "meaningsEn": [
+        "to deceive"
+      ]
+    },
+    {
+      "word": "焦る",
+      "reading": "あせる",
+      "level": "N1",
+      "sourceId": "4905fc6f13",
+      "jmdictId": 1350780,
+      "pos": [
+        "v5r",
+        "vi"
+      ],
+      "readings": [
+        "あせる"
+      ],
+      "meaningsEn": [
+        "to be in a hurry",
+        "to be impatient"
+      ]
+    },
+    {
+      "word": "操る",
+      "reading": "あやつる",
+      "level": "N1",
+      "sourceId": "7c9023df23",
+      "jmdictId": 1400010,
+      "pos": [
+        "v5r",
+        "vt"
+      ],
+      "readings": [
+        "あやつる"
+      ],
+      "meaningsEn": [
+        "to manipulate",
+        "to operate",
+        "to pull strings"
+      ]
+    },
+    {
+      "word": "誤る",
+      "reading": "あやまる",
+      "level": "N1",
+      "sourceId": "28a4658761",
+      "jmdictId": 1271300,
+      "pos": [
+        "v5r",
+        "vt"
+      ],
+      "readings": [
+        "あやまる"
+      ],
+      "meaningsEn": [
+        "to make a mistake"
+      ]
+    },
+    {
+      "word": "歩む",
+      "reading": "あゆむ",
+      "level": "N1",
+      "sourceId": "9de629082f",
+      "jmdictId": 1514360,
+      "pos": [
+        "v5m",
+        "vi"
+      ],
+      "readings": [
+        "あゆむ"
+      ],
+      "meaningsEn": [
+        "to walk",
+        "to go on foot"
+      ]
+    },
+    {
+      "word": "営む",
+      "reading": "いとなむ",
+      "level": "N1",
+      "sourceId": "cdd1146fbf",
+      "jmdictId": 1173420,
+      "pos": [
+        "v5m",
+        "vt"
+      ],
+      "readings": [
+        "いとなむ"
+      ],
+      "meaningsEn": [
+        "to carry on (e.g. in ceremony)",
+        "to run a business"
+      ]
+    },
+    {
+      "word": "挑む",
+      "reading": "いどむ",
+      "level": "N1",
+      "sourceId": "71377eae9e",
+      "jmdictId": 1428230,
+      "pos": [
+        "v5m",
+        "vt"
+      ],
+      "readings": [
+        "いどむ"
+      ],
+      "meaningsEn": [
+        "to challenge",
+        "to contend for",
+        "to make love to"
+      ]
+    },
+    {
+      "word": "促す",
+      "reading": "うながす",
+      "level": "N1",
+      "sourceId": "e6b73af208",
+      "jmdictId": 1403760,
+      "pos": [
+        "v5s",
+        "vt"
+      ],
+      "readings": [
+        "うながす"
+      ],
+      "meaningsEn": [
+        "to urge",
+        "to press",
+        "to suggest",
+        "to demand",
+        "to stimulate",
+        "to quicken",
+        "to incite",
+        "to invite (attention to)"
+      ]
+    },
+    {
+      "word": "受け継ぐ",
+      "reading": "うけつぐ",
+      "level": "N1",
+      "sourceId": "8932a42228",
+      "jmdictId": 1329600,
+      "pos": [
+        "v5g",
+        "vt"
+      ],
+      "readings": [
+        "うけつぐ"
+      ],
+      "meaningsEn": [
+        "to inherit",
+        "to succeed",
+        "to take over"
+      ]
+    },
+    {
+      "word": "受け入れる",
+      "reading": "うけいれる",
+      "level": "N1",
+      "sourceId": "4b78567357",
+      "jmdictId": 1329670,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "うけいれる"
+      ],
+      "meaningsEn": [
+        "to accept",
+        "to receive"
+      ]
+    },
+    {
+      "word": "案じる",
+      "reading": "あんじる",
+      "level": "N1",
+      "sourceId": "ba3f929e63",
+      "jmdictId": 1154780,
+      "pos": [
+        "v1",
+        "vt"
+      ],
+      "readings": [
+        "あんじる"
+      ],
+      "meaningsEn": [
+        "to be anxious",
+        "to ponder"
+      ]
+    },
+    {
+      "word": "慕う",
+      "reading": "したう",
+      "level": "N1",
+      "sourceId": "d24c5432b6",
+      "jmdictId": 1514910,
+      "pos": [
+        "v5u",
+        "vt"
+      ],
+      "readings": [
+        "したう"
+      ],
+      "meaningsEn": [
+        "to yearn for",
+        "to miss",
+        "to adore",
+        "to love dearly"
+      ]
+    },
+    {
+      "word": "鮮やか",
+      "reading": "あざやか",
+      "level": "N1",
+      "sourceId": "a7d4d501a5",
+      "jmdictId": 1392500,
+      "pos": [
+        "adj-na"
+      ],
+      "readings": [
+        "あざやか"
+      ],
+      "meaningsEn": [
+        "vivid",
+        "clear",
+        "brilliant"
+      ]
+    },
+    {
+      "word": "著しい",
+      "reading": "いちじるしい",
+      "level": "N1",
+      "sourceId": "241f51574c",
+      "jmdictId": 1427070,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "いちじるしい"
+      ],
+      "meaningsEn": [
+        "remarkable",
+        "considerable"
+      ]
+    },
+    {
+      "word": "卑しい",
+      "reading": "いやしい",
+      "level": "N1",
+      "sourceId": "4c6dd2408d",
+      "jmdictId": 1482660,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "いやしい"
+      ],
+      "meaningsEn": [
+        "greedy",
+        "vulgar",
+        "shabby",
+        "humble",
+        "base",
+        "mean",
+        "vile"
+      ]
+    },
+    {
+      "word": "鬱陶しい",
+      "reading": "うっとうしい",
+      "level": "N1",
+      "sourceId": "345c476ef0",
+      "jmdictId": 1568430,
+      "pos": [
+        "adj-i"
+      ],
+      "readings": [
+        "うっとうしい"
+      ],
+      "meaningsEn": [
+        "gloomy",
+        "depressing"
+      ]
+    },
+    {
+      "word": "厳か",
+      "reading": "おごそか",
+      "level": "N1",
+      "sourceId": "1ee8b93761",
+      "jmdictId": 1262520,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "おごそか"
+      ],
+      "meaningsEn": [
+        "austere",
+        "majestic",
+        "dignified",
+        "stately",
+        "awful",
+        "impressive"
+      ]
+    },
+    {
+      "word": "愚か",
+      "reading": "おろか",
+      "level": "N1",
+      "sourceId": "68865480c1",
+      "jmdictId": 1245100,
+      "pos": [
+        "adj-na"
+      ],
+      "readings": [
+        "おろか"
+      ],
+      "meaningsEn": [
+        "foolish",
+        "stupid"
+      ]
+    },
+    {
+      "word": "温和",
+      "reading": "おんわ",
+      "level": "N1",
+      "sourceId": "75df9efb1e",
+      "jmdictId": 1589620,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "おんわ"
+      ],
+      "meaningsEn": [
+        "gentle",
+        "mild",
+        "moderate"
+      ]
+    },
+    {
+      "word": "円滑",
+      "reading": "えんかつ",
+      "level": "N1",
+      "sourceId": "c21a451e73",
+      "jmdictId": 1576570,
+      "pos": [
+        "adj-na"
+      ],
+      "readings": [
+        "えんかつ"
+      ],
+      "meaningsEn": [
+        "harmony",
+        "smoothness"
+      ]
+    },
+    {
+      "word": "円満",
+      "reading": "えんまん",
+      "level": "N1",
+      "sourceId": "a24b6a05b0",
+      "jmdictId": 1176200,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "えんまん"
+      ],
+      "meaningsEn": [
+        "perfection",
+        "harmony",
+        "peace",
+        "smoothness",
+        "completeness",
+        "satisfaction",
+        "integrity"
+      ]
+    },
+    {
+      "word": "臆病",
+      "reading": "おくびょう",
+      "level": "N1",
+      "sourceId": "e3025feafa",
+      "jmdictId": 1182790,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "おくびょう"
+      ],
+      "meaningsEn": [
+        "cowardice",
+        "timidity"
+      ]
+    },
+    {
+      "word": "誠実",
+      "reading": "せいじつ",
+      "level": "N1",
+      "sourceId": "4e718e1c73",
+      "jmdictId": 1381180,
+      "pos": [
+        "adj-na",
+        "n"
+      ],
+      "readings": [
+        "せいじつ"
+      ],
+      "meaningsEn": [
+        "sincere",
+        "honest",
+        "faithful"
+      ]
+    },
+    {
+      "word": "微か",
+      "reading": "かすか",
+      "level": "N1",
+      "sourceId": "807c84bfa5",
+      "jmdictId": 1590290,
+      "pos": [
+        "adj-na"
+      ],
+      "readings": [
+        "かすか"
+      ],
+      "meaningsEn": [
+        "faint",
+        "dim",
+        "weak",
+        "indistinct",
+        "hazy",
+        "poor",
+        "wretched"
+      ]
+    },
+    {
+      "word": "敢えて",
+      "reading": "あえて",
+      "level": "N1",
+      "sourceId": "69bb692c2b",
+      "jmdictId": 1212850,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "あえて"
+      ],
+      "meaningsEn": [
+        "dare (to do)",
+        "challenge (to do)"
+      ]
+    },
+    {
+      "word": "予め",
+      "reading": "あらかじめ",
+      "level": "N1",
+      "sourceId": "d91254a19e",
+      "jmdictId": 1542860,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "あらかじめ"
+      ],
+      "meaningsEn": [
+        "beforehand",
+        "in advance",
+        "previously"
+      ]
+    },
+    {
+      "word": "案の定",
+      "reading": "あんのじょう",
+      "level": "N1",
+      "sourceId": "c052d729c7",
+      "jmdictId": 1154790,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "あんのじょう"
+      ],
+      "meaningsEn": [
+        "sure enough",
+        "as usual"
+      ]
+    },
+    {
+      "word": "一挙に",
+      "reading": "いっきょに",
+      "level": "N1",
+      "sourceId": "b46bd7a8fa",
+      "jmdictId": 1609220,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "いっきょに"
+      ],
+      "meaningsEn": [
+        "at a stroke",
+        "with a single swoop"
+      ]
+    },
+    {
+      "word": "極めて",
+      "reading": "きわめて",
+      "level": "N1",
+      "sourceId": "746e5a2a80",
+      "jmdictId": 1240200,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "きわめて"
+      ],
+      "meaningsEn": [
+        "exceedingly",
+        "extremely"
+      ]
+    },
+    {
+      "word": "辛うじて",
+      "reading": "かろうじて",
+      "level": "N1",
+      "sourceId": "68a47d4c28",
+      "jmdictId": 1365870,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "かろうじて"
+      ],
+      "meaningsEn": [
+        "barely",
+        "narrowly",
+        "just manage to do st"
+      ]
+    },
+    {
+      "word": "即座に",
+      "reading": "そくざに",
+      "level": "N1",
+      "sourceId": "5eac5a540a",
+      "jmdictId": 1404190,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "そくざに"
+      ],
+      "meaningsEn": [
+        "immediately",
+        "right away"
+      ]
+    },
+    {
+      "word": "到底",
+      "reading": "とうてい",
+      "level": "N1",
+      "sourceId": "b40c224700",
+      "jmdictId": 1449880,
+      "pos": [
+        "adv"
+      ],
+      "readings": [
+        "とうてい"
+      ],
+      "meaningsEn": [
+        "(cannot) possibly"
+      ]
+    }
+  ]
+}

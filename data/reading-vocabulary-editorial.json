@@ -1,0 +1,1052 @@
+{
+  "N5": {
+    "noun": [
+      [
+        "水",
+        "みず",
+        "Air"
+      ],
+      [
+        "山",
+        "やま",
+        "Gunung"
+      ],
+      [
+        "花",
+        "はな",
+        "Bunga"
+      ],
+      [
+        "猫",
+        "ねこ",
+        "Kucing"
+      ],
+      [
+        "犬",
+        "いぬ",
+        "Anjing"
+      ],
+      [
+        "本",
+        "ほん",
+        "Buku"
+      ],
+      [
+        "友達",
+        "ともだち",
+        "Teman"
+      ],
+      [
+        "家族",
+        "かぞく",
+        "Keluarga"
+      ]
+    ],
+    "verb": [
+      [
+        "食べる",
+        "たべる",
+        "Makan"
+      ],
+      [
+        "飲む",
+        "のむ",
+        "Minum"
+      ],
+      [
+        "読む",
+        "よむ",
+        "Membaca"
+      ],
+      [
+        "書く",
+        "かく",
+        "Menulis"
+      ],
+      [
+        "聞く",
+        "きく",
+        "Mendengar; mendengarkan"
+      ],
+      [
+        "話す",
+        "はなす",
+        "Berbicara"
+      ],
+      [
+        "行く",
+        "いく",
+        "Pergi"
+      ],
+      [
+        "帰る",
+        "かえる",
+        "Pulang; kembali"
+      ],
+      [
+        "買う",
+        "かう",
+        "Membeli"
+      ],
+      [
+        "泳ぐ",
+        "およぐ",
+        "Berenang"
+      ],
+      [
+        "歩く",
+        "あるく",
+        "Berjalan kaki"
+      ],
+      [
+        "覚える",
+        "おぼえる",
+        "Mengingat; menghafal"
+      ]
+    ],
+    "adjective": [
+      [
+        "新しい",
+        "あたらしい",
+        "Baru"
+      ],
+      [
+        "古い",
+        "ふるい",
+        "Lama; tua (untuk benda)"
+      ],
+      [
+        "暑い",
+        "あつい",
+        "Panas (cuaca)"
+      ],
+      [
+        "寒い",
+        "さむい",
+        "Dingin (cuaca)"
+      ],
+      [
+        "大きい",
+        "おおきい",
+        "Besar"
+      ],
+      [
+        "小さい",
+        "ちいさい",
+        "Kecil"
+      ],
+      [
+        "高い",
+        "たかい",
+        "Tinggi; mahal"
+      ],
+      [
+        "安い",
+        "やすい",
+        "Murah"
+      ],
+      [
+        "忙しい",
+        "いそがしい",
+        "Sibuk"
+      ],
+      [
+        "楽しい",
+        "たのしい",
+        "Menyenangkan"
+      ],
+      [
+        "静か",
+        "しずか",
+        "Tenang; tidak berisik"
+      ],
+      [
+        "便利",
+        "べんり",
+        "Praktis; memudahkan"
+      ]
+    ],
+    "adverb": [
+      [
+        "少し",
+        "すこし",
+        "Sedikit"
+      ],
+      [
+        "時々",
+        "ときどき",
+        "Kadang-kadang"
+      ],
+      [
+        "初めて",
+        "はじめて",
+        "Untuk pertama kali"
+      ],
+      [
+        "全部",
+        "ぜんぶ",
+        "Semuanya"
+      ],
+      [
+        "近く",
+        "ちかく",
+        "Di dekat; tidak jauh"
+      ],
+      [
+        "半分",
+        "はんぶん",
+        "Setengah"
+      ],
+      [
+        "もう一度",
+        "もういちど",
+        "Sekali lagi"
+      ],
+      [
+        "毎日",
+        "まいにち",
+        "Setiap hari"
+      ]
+    ]
+  },
+  "N4": {
+    "noun": [
+      [
+        "意見",
+        "いけん",
+        "Pendapat"
+      ],
+      [
+        "季節",
+        "きせつ",
+        "Musim"
+      ],
+      [
+        "景色",
+        "けしき",
+        "Pemandangan"
+      ],
+      [
+        "空港",
+        "くうこう",
+        "Bandara"
+      ],
+      [
+        "交通",
+        "こうつう",
+        "Lalu lintas; transportasi"
+      ],
+      [
+        "文化",
+        "ぶんか",
+        "Budaya"
+      ],
+      [
+        "規則",
+        "きそく",
+        "Peraturan"
+      ],
+      [
+        "理由",
+        "りゆう",
+        "Alasan"
+      ]
+    ],
+    "verb": [
+      [
+        "集める",
+        "あつめる",
+        "Mengumpulkan"
+      ],
+      [
+        "謝る",
+        "あやまる",
+        "Meminta maaf"
+      ],
+      [
+        "急ぐ",
+        "いそぐ",
+        "Bergegas"
+      ],
+      [
+        "選ぶ",
+        "えらぶ",
+        "Memilih"
+      ],
+      [
+        "送る",
+        "おくる",
+        "Mengirim"
+      ],
+      [
+        "遅れる",
+        "おくれる",
+        "Terlambat"
+      ],
+      [
+        "考える",
+        "かんがえる",
+        "Memikirkan; mempertimbangkan"
+      ],
+      [
+        "決める",
+        "きめる",
+        "Memutuskan"
+      ],
+      [
+        "比べる",
+        "くらべる",
+        "Membandingkan"
+      ],
+      [
+        "探す",
+        "さがす",
+        "Mencari"
+      ],
+      [
+        "手伝う",
+        "てつだう",
+        "Membantu"
+      ],
+      [
+        "続ける",
+        "つづける",
+        "Melanjutkan"
+      ]
+    ],
+    "adjective": [
+      [
+        "美しい",
+        "うつくしい",
+        "Indah"
+      ],
+      [
+        "悲しい",
+        "かなしい",
+        "Sedih"
+      ],
+      [
+        "厳しい",
+        "きびしい",
+        "Ketat; keras"
+      ],
+      [
+        "怖い",
+        "こわい",
+        "Menakutkan"
+      ],
+      [
+        "正しい",
+        "ただしい",
+        "Benar; tepat"
+      ],
+      [
+        "眠い",
+        "ねむい",
+        "Mengantuk"
+      ],
+      [
+        "深い",
+        "ふかい",
+        "Dalam"
+      ],
+      [
+        "珍しい",
+        "めずらしい",
+        "Langka; tidak biasa"
+      ],
+      [
+        "優しい",
+        "やさしい",
+        "Baik hati; lembut"
+      ],
+      [
+        "簡単",
+        "かんたん",
+        "Mudah; sederhana"
+      ],
+      [
+        "親切",
+        "しんせつ",
+        "Baik hati; suka menolong"
+      ],
+      [
+        "複雑",
+        "ふくざつ",
+        "Rumit"
+      ]
+    ],
+    "adverb": [
+      [
+        "必ず",
+        "かならず",
+        "Pasti; tanpa kecuali"
+      ],
+      [
+        "決して",
+        "けっして",
+        "Sama sekali tidak (bersama bentuk negatif)"
+      ],
+      [
+        "大体",
+        "だいたい",
+        "Secara umum; kira-kira"
+      ],
+      [
+        "大分",
+        "だいぶ",
+        "Cukup banyak; lumayan besar perubahannya"
+      ],
+      [
+        "例えば",
+        "たとえば",
+        "Misalnya"
+      ],
+      [
+        "特に",
+        "とくに",
+        "Terutama; khususnya"
+      ],
+      [
+        "非常に",
+        "ひじょうに",
+        "Sangat"
+      ],
+      [
+        "一生懸命",
+        "いっしょうけんめい",
+        "Dengan sungguh-sungguh"
+      ]
+    ]
+  },
+  "N3": {
+    "noun": [
+      [
+        "環境",
+        "かんきょう",
+        "Lingkungan"
+      ],
+      [
+        "責任",
+        "せきにん",
+        "Tanggung jawab"
+      ],
+      [
+        "相手",
+        "あいて",
+        "Lawan; orang yang diajak berinteraksi"
+      ],
+      [
+        "現実",
+        "げんじつ",
+        "Kenyataan"
+      ],
+      [
+        "目的",
+        "もくてき",
+        "Tujuan"
+      ],
+      [
+        "結果",
+        "けっか",
+        "Hasil"
+      ],
+      [
+        "知識",
+        "ちしき",
+        "Pengetahuan"
+      ],
+      [
+        "能力",
+        "のうりょく",
+        "Kemampuan"
+      ]
+    ],
+    "verb": [
+      [
+        "諦める",
+        "あきらめる",
+        "Menyerah; mengikhlaskan"
+      ],
+      [
+        "預ける",
+        "あずける",
+        "Menitipkan"
+      ],
+      [
+        "与える",
+        "あたえる",
+        "Memberikan"
+      ],
+      [
+        "扱う",
+        "あつかう",
+        "Menangani; memperlakukan"
+      ],
+      [
+        "表す",
+        "あらわす",
+        "Mengungkapkan; menyatakan"
+      ],
+      [
+        "受け取る",
+        "うけとる",
+        "Menerima"
+      ],
+      [
+        "失う",
+        "うしなう",
+        "Kehilangan"
+      ],
+      [
+        "疑う",
+        "うたがう",
+        "Meragukan; mencurigai"
+      ],
+      [
+        "描く",
+        "えがく",
+        "Menggambar; melukiskan"
+      ],
+      [
+        "贈る",
+        "おくる",
+        "Memberikan sebagai hadiah"
+      ],
+      [
+        "抱える",
+        "かかえる",
+        "Mendekap; menanggung"
+      ],
+      [
+        "輝く",
+        "かがやく",
+        "Bersinar"
+      ]
+    ],
+    "adjective": [
+      [
+        "明らか",
+        "あきらか",
+        "Jelas; nyata"
+      ],
+      [
+        "幼い",
+        "おさない",
+        "Masih kecil; belum dewasa"
+      ],
+      [
+        "穏やか",
+        "おだやか",
+        "Tenang; lembut"
+      ],
+      [
+        "賢い",
+        "かしこい",
+        "Pandai; bijaksana"
+      ],
+      [
+        "苦しい",
+        "くるしい",
+        "Menyakitkan; terasa berat"
+      ],
+      [
+        "詳しい",
+        "くわしい",
+        "Terperinci; memahami dengan baik"
+      ],
+      [
+        "親しい",
+        "したしい",
+        "Akrab"
+      ],
+      [
+        "快適",
+        "かいてき",
+        "Nyaman"
+      ],
+      [
+        "貴重",
+        "きちょう",
+        "Berharga"
+      ],
+      [
+        "巨大",
+        "きょだい",
+        "Sangat besar; raksasa"
+      ],
+      [
+        "重要",
+        "じゅうよう",
+        "Penting"
+      ],
+      [
+        "奇妙",
+        "きみょう",
+        "Aneh; tidak biasa"
+      ]
+    ],
+    "adverb": [
+      [
+        "主に",
+        "おもに",
+        "Terutama"
+      ],
+      [
+        "思わず",
+        "おもわず",
+        "Tanpa sengaja; spontan"
+      ],
+      [
+        "結局",
+        "けっきょく",
+        "Pada akhirnya"
+      ],
+      [
+        "更に",
+        "さらに",
+        "Lebih lanjut; semakin"
+      ],
+      [
+        "既に",
+        "すでに",
+        "Sudah"
+      ],
+      [
+        "突然",
+        "とつぜん",
+        "Tiba-tiba"
+      ],
+      [
+        "常に",
+        "つねに",
+        "Selalu"
+      ],
+      [
+        "再び",
+        "ふたたび",
+        "Kembali; sekali lagi"
+      ]
+    ]
+  },
+  "N2": {
+    "noun": [
+      [
+        "構造",
+        "こうぞう",
+        "Struktur; susunan"
+      ],
+      [
+        "寿命",
+        "じゅみょう",
+        "Jangka hidup; usia pakai"
+      ],
+      [
+        "基礎",
+        "きそ",
+        "Dasar; fondasi"
+      ],
+      [
+        "境界",
+        "きょうかい",
+        "Batas wilayah atau bidang"
+      ],
+      [
+        "基盤",
+        "きばん",
+        "Landasan; dasar penopang"
+      ],
+      [
+        "規律",
+        "きりつ",
+        "Disiplin; tata tertib"
+      ],
+      [
+        "方針",
+        "ほうしん",
+        "Kebijakan; arah tindakan"
+      ],
+      [
+        "行事",
+        "ぎょうじ",
+        "Acara; kegiatan yang diselenggarakan"
+      ]
+    ],
+    "verb": [
+      [
+        "憧れる",
+        "あこがれる",
+        "Mendambakan; mengagumi"
+      ],
+      [
+        "味わう",
+        "あじわう",
+        "Mengecap; menikmati"
+      ],
+      [
+        "預かる",
+        "あずかる",
+        "Menjaga barang titipan"
+      ],
+      [
+        "編む",
+        "あむ",
+        "Merajut; menganyam"
+      ],
+      [
+        "改める",
+        "あらためる",
+        "Memperbaiki; mengubah"
+      ],
+      [
+        "浮かぶ",
+        "うかぶ",
+        "Mengapung; terlintas"
+      ],
+      [
+        "敬う",
+        "うやまう",
+        "Menghormati"
+      ],
+      [
+        "補う",
+        "おぎなう",
+        "Melengkapi kekurangan"
+      ],
+      [
+        "怠る",
+        "おこたる",
+        "Melalaikan"
+      ],
+      [
+        "教わる",
+        "おそわる",
+        "Belajar dari seseorang; diajari"
+      ],
+      [
+        "承る",
+        "うけたまわる",
+        "Menerima; mendengar (bahasa merendahkan diri)"
+      ],
+      [
+        "争う",
+        "あらそう",
+        "Bertengkar; bersaing"
+      ]
+    ],
+    "adjective": [
+      [
+        "厚かましい",
+        "あつかましい",
+        "Tidak tahu malu"
+      ],
+      [
+        "怪しい",
+        "あやしい",
+        "Mencurigakan"
+      ],
+      [
+        "荒い",
+        "あらい",
+        "Kasar; keras"
+      ],
+      [
+        "勇ましい",
+        "いさましい",
+        "Berani; gagah"
+      ],
+      [
+        "薄暗い",
+        "うすぐらい",
+        "Remang-remang"
+      ],
+      [
+        "羨ましい",
+        "うらやましい",
+        "Membuat iri"
+      ],
+      [
+        "険しい",
+        "けわしい",
+        "Terjal; sulit dilalui"
+      ],
+      [
+        "悔しい",
+        "くやしい",
+        "Kesal karena kalah atau gagal"
+      ],
+      [
+        "謙虚",
+        "けんきょ",
+        "Rendah hati"
+      ],
+      [
+        "強引",
+        "ごういん",
+        "Memaksa; bersikeras"
+      ],
+      [
+        "純粋",
+        "じゅんすい",
+        "Murni; tulus"
+      ],
+      [
+        "空っぽ",
+        "からっぽ",
+        "Kosong"
+      ]
+    ],
+    "adverb": [
+      [
+        "改めて",
+        "あらためて",
+        "Sekali lagi; dengan cara baru"
+      ],
+      [
+        "案外",
+        "あんがい",
+        "Di luar dugaan"
+      ],
+      [
+        "一応",
+        "いちおう",
+        "Untuk sementara; setidaknya"
+      ],
+      [
+        "一旦",
+        "いったん",
+        "Untuk sementara; sekali terlebih dahulu"
+      ],
+      [
+        "再三",
+        "さいさん",
+        "Berulang kali"
+      ],
+      [
+        "早速",
+        "さっそく",
+        "Segera"
+      ],
+      [
+        "絶えず",
+        "たえず",
+        "Terus-menerus"
+      ],
+      [
+        "比較的",
+        "ひかくてき",
+        "Relatif; dibandingkan yang lain"
+      ]
+    ]
+  },
+  "N1": {
+    "noun": [
+      [
+        "領域",
+        "りょういき",
+        "Wilayah; lingkup bidang"
+      ],
+      [
+        "措置",
+        "そち",
+        "Tindakan penanganan"
+      ],
+      [
+        "根拠",
+        "こんきょ",
+        "Dasar; bukti pendukung"
+      ],
+      [
+        "概念",
+        "がいねん",
+        "Konsep"
+      ],
+      [
+        "権限",
+        "けんげん",
+        "Wewenang"
+      ],
+      [
+        "課題",
+        "かだい",
+        "Tugas; persoalan yang perlu diselesaikan"
+      ],
+      [
+        "契機",
+        "けいき",
+        "Pemicu; kesempatan yang mengawali perubahan"
+      ],
+      [
+        "意欲",
+        "いよく",
+        "Kemauan; semangat untuk melakukan sesuatu"
+      ]
+    ],
+    "verb": [
+      [
+        "欺く",
+        "あざむく",
+        "Menipu; memperdaya"
+      ],
+      [
+        "焦る",
+        "あせる",
+        "Gelisah; terburu-buru"
+      ],
+      [
+        "操る",
+        "あやつる",
+        "Mengendalikan; memanipulasi"
+      ],
+      [
+        "誤る",
+        "あやまる",
+        "Melakukan kesalahan"
+      ],
+      [
+        "歩む",
+        "あゆむ",
+        "Melangkah; menempuh"
+      ],
+      [
+        "営む",
+        "いとなむ",
+        "Menjalankan usaha atau kegiatan"
+      ],
+      [
+        "挑む",
+        "いどむ",
+        "Menantang; menghadapi tantangan"
+      ],
+      [
+        "促す",
+        "うながす",
+        "Mendorong; mendesak"
+      ],
+      [
+        "受け継ぐ",
+        "うけつぐ",
+        "Mewarisi; meneruskan"
+      ],
+      [
+        "受け入れる",
+        "うけいれる",
+        "Menerima; menyambut"
+      ],
+      [
+        "案じる",
+        "あんじる",
+        "Mengkhawatirkan"
+      ],
+      [
+        "慕う",
+        "したう",
+        "Merindukan; menaruh rasa sayang atau hormat"
+      ]
+    ],
+    "adjective": [
+      [
+        "鮮やか",
+        "あざやか",
+        "Cerah; mencolok; piawai"
+      ],
+      [
+        "著しい",
+        "いちじるしい",
+        "Mencolok; sangat besar perubahannya"
+      ],
+      [
+        "卑しい",
+        "いやしい",
+        "Hina; serakah"
+      ],
+      [
+        "鬱陶しい",
+        "うっとうしい",
+        "Membuat sumpek; mengganggu"
+      ],
+      [
+        "厳か",
+        "おごそか",
+        "Khidmat; agung"
+      ],
+      [
+        "愚か",
+        "おろか",
+        "Bodoh; tidak bijaksana"
+      ],
+      [
+        "温和",
+        "おんわ",
+        "Lembut; ramah"
+      ],
+      [
+        "円滑",
+        "えんかつ",
+        "Lancar"
+      ],
+      [
+        "円満",
+        "えんまん",
+        "Rukun; harmonis"
+      ],
+      [
+        "臆病",
+        "おくびょう",
+        "Penakut"
+      ],
+      [
+        "誠実",
+        "せいじつ",
+        "Tulus; jujur"
+      ],
+      [
+        "微か",
+        "かすか",
+        "Samar; sangat lemah"
+      ]
+    ],
+    "adverb": [
+      [
+        "敢えて",
+        "あえて",
+        "Dengan sengaja meski sulit atau berisiko"
+      ],
+      [
+        "予め",
+        "あらかじめ",
+        "Sebelumnya; terlebih dahulu"
+      ],
+      [
+        "案の定",
+        "あんのじょう",
+        "Seperti yang diduga"
+      ],
+      [
+        "一挙に",
+        "いっきょに",
+        "Sekaligus"
+      ],
+      [
+        "極めて",
+        "きわめて",
+        "Sangat; amat"
+      ],
+      [
+        "辛うじて",
+        "かろうじて",
+        "Dengan susah payah; nyaris tidak berhasil"
+      ],
+      [
+        "即座に",
+        "そくざに",
+        "Seketika"
+      ],
+      [
+        "到底",
+        "とうてい",
+        "Sama sekali tidak mungkin (bersama bentuk negatif)"
+      ]
+    ]
+  }
+}

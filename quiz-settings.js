@@ -1,5 +1,5 @@
-import { KANJI } from './kanji-data.js?v=20261013-quiz-settings';
-import { LEVELS } from './levels.js?v=20261013-quiz-settings';
+import { KANJI } from './kanji-data.js?v=20261013-reading-balance';
+import { LEVELS } from './levels.js?v=20261013-reading-balance';
 
 const kanjiLevels=new Map(KANJI.map(k=>[k.char,k.level]));
 

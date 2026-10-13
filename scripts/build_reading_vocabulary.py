@@ -1,0 +1,105 @@
+"""Build reviewed reading exercises and metadata from the pinned OpenJLPT cache.
+
+Only word/readings/levels/POS are imported. Source example sentences are not used.
+Indonesian meanings and primary practice categories are editorial.
+"""
+import json
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def load(path):
+    return json.loads((ROOT / path).read_text(encoding='utf-8'))
+
+
+def category_for(word, pos):
+    # Nominal suru stems such as 勉強 are noun questions; inflected/dictionary
+    # verbs are verb questions. adj-no alone does not turn a noun into an adjective.
+    if any(p.startswith(('v1', 'v5', 'vk', 'vs-i', 'vs-s', 'vz')) for p in pos):
+        return 'verb'
+    if pos and pos[0] == 'n':
+        return 'noun'
+    if any(p in ('adj-i', 'adj-na', 'adj-t', 'adj-pn') for p in pos):
+        return 'adjective'
+    if 'adv' in pos:
+        return 'adverb'
+    return 'noun'
+
+
+def distractors(word, reading, accepted):
+    suffix = re.search(r'[ぁ-ゖ]+$', word)
+    suffix = suffix.group() if suffix and reading.endswith(suffix.group()) else ''
+    stem = reading[:-len(suffix)] if suffix else reading
+    groups = ['かが','きぎ','くぐ','けげ','こご','さざ','しじ','すず','せぜ','そぞ',
+              'ただ','ちぢ','つづ','てで','とど','はばぱ','ひびぴ','ふぶぷ','へべぺ','ほぼぽ',
+              'ゃや','ゅゆ','ょよ','っつ']
+    candidates = []
+    for i, kana in enumerate(stem):
+        for group in groups:
+            if kana in group:
+                candidates += [stem[:i]+other+stem[i+1:]+suffix for other in group if other != kana]
+    for i, kana in enumerate(stem):
+        if i and kana in 'うい':
+            candidates.append(stem[:i]+stem[i+1:]+suffix)
+    # Kana with nearby sounds, applied only to the kanji reading, not okurigana.
+    for i, kana in enumerate(stem):
+        for group in ['あいうえお','かきくけこ','さしすせそ','たちつてと','なにぬねの',
+                      'はひふへほ','まみむめも','らりるれろ','やゆよ','わらな']:
+            if kana in group:
+                candidates += [stem[:i]+group[(group.index(kana)+step)%len(group)]+stem[i+1:]+suffix for step in [1,-1,2]]
+    for kana_row, vowel in [('あかがさざただなはばぱまやゃらわ','あ'),
+                            ('いきぎしじちぢにひびぴみり','い'),
+                            ('うくぐすずつづぬふぶぷむゆゅる','う'),
+                            ('えけげせぜてでねへべぺめれ','い'),
+                            ('おこごそぞとどのほぼぽもよょろ','う')]:
+        if stem and stem[-1] in kana_row:
+            candidates.append(stem+vowel+suffix)
+    wrong = list(dict.fromkeys(c for c in candidates if c not in accepted and c and not c.startswith(('っ','ゃ','ゅ','ょ'))))[:3]
+    if len(wrong) != 3:
+        raise ValueError(f'Not enough valid distractors: {word}')
+    note = f'{word} dibaca {reading}. '
+    note += f'Bagian kanjinya dibaca {stem}; akhiran {suffix} tetap sama.' if suffix else f'Ingat urutan bunyinya: {"・".join(reading)}. Perhatikan tanda suara dan ukuran kana pada pilihan.'
+    return wrong, note
+
+
+def main():
+    vocab = [v for n in range(5, 0, -1) for v in load(f'.cache/openjlpt/data_json_vocab_n{n}.json')]
+    editorial = load('data/reading-vocabulary-editorial.json')
+    rows, refs, overrides = [], [], {}
+    for level, categories in editorial.items():
+        for category, entries in categories.items():
+            for word, reading, meaning in entries:
+                matches = [v for v in vocab if v['word']==word and v['reading']==reading and v['level']==level]
+                if not matches:
+                    raise ValueError(f'No matching source: {level} {word} {reading}')
+                source = matches[0]
+                accepted = sorted({v['reading'] for v in vocab if v['word']==word})
+                wrong, note = distractors(word, reading, accepted)
+                rows.append(dict(id=f'vocabulary:{word}', word=word, reading=reading, meaning=meaning,
+                                 level=level, readingCategory=category, levelBasis='vocabulary-source',
+                                 distractors=wrong, explanation=note))
+                refs.append(dict(word=word, reading=reading, level=level, sourceId=source['id'],
+                                 jmdictId=source['jmdict_id'], pos=source.get('pos',[]),
+                                 readings=accepted, meaningsEn=source['meanings']))
+                overrides[(word, reading)] = category
+    # Metadata covers existing vocabulary too, preserving its source level.
+    existing = [q for path in ['data/jlpt-reading-source.json','data/similar-quiz-source.json'] for q in load(path)['words']]
+    requests = {(q['word'],q['reading'],q['level']) for q in existing+refs}
+    metadata = []
+    for word, reading, level in sorted(requests):
+        source = next(v for v in vocab if v['word']==word and v['reading']==reading and v['level']==level)
+        metadata.append(dict(word=word,reading=reading,level=level,pos=source.get('pos',[]),
+                             category=overrides.get((word,reading),category_for(word,source.get('pos',[])))))
+    header = '// Generated by scripts/build_reading_vocabulary.py. CC BY-SA 4.0; see DATA-SOURCES.md.\n'
+    (ROOT/'reading-vocabulary-data.js').write_text(header+'export const READING_VOCABULARY = '+json.dumps(rows,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
+    (ROOT/'reading-metadata.js').write_text(header+'export const READING_METADATA = '+json.dumps(metadata,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
+    lock=load('data/source-lock.json')
+    (ROOT/'data/reading-vocabulary-source.json').write_text(json.dumps(dict(source=lock['repository'],commit=lock['commit'],
+        date='2026-10-13',note='Only vocabulary facts imported; meanings, categories, and distractors adapted for practice.',words=refs),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print(f'{len(rows)} reviewed vocabulary exercises; {len(metadata)} source metadata records.')
+
+
+if __name__ == '__main__':
+    main()

@@ -5,7 +5,6 @@ import { SPECIAL_READINGS, READING_TOPICS } from '../special-reading-data.js';
 import { PRACTICE_BANKS } from '../practice-banks.js';
 import { filterTopicQuestions, mergePracticeBank, practiceQuestionKey, topicsForMode, resolveQuizTopic } from '../similar-quiz-core.js';
 import { createReadingQuiz } from '../jlpt-reading-core.js';
-import { kanjiWordLevel } from '../quiz-settings.js';
 
 const bank=PRACTICE_BANKS['jlpt-reading'];
 const refs=JSON.parse(readFileSync(new URL('../data/special-reading-references.json',import.meta.url),'utf8'));
@@ -17,8 +16,8 @@ test('100 contextual reading exercises have complete source metadata and exactly
   assert.equal(new Set(SPECIAL_READINGS.map(practiceQuestionKey)).size,100);
   for(const q of SPECIAL_READINGS){
     assert.match(q.word,/\p{Script=Han}/u,q.id);
-    assert.equal(q.level,kanjiWordLevel(q.word));
-    assert.equal(q.levelBasis,'kanji-catalog');
+    assert.equal(q.level,'N5');
+    assert.equal(q.levelBasis,'editorial-foundation');
     assert.ok(refs.references.some(r=>r.id===q.sourceId),q.id);
     assert.equal(q.sentence.split('{target}').length,2,q.id);
     assert.ok(q.meaning && q.sentenceMeaning && q.explanation.length>20,q.id);
@@ -89,7 +88,7 @@ test('all 31 calendar dates are present and 1日 keeps both disambiguated contex
 });
 
 test('new topics are reading-only and do not leak into the 82 similar-kanji questions',()=>{
-  assert.equal(bank.length,280);
+  assert.equal(bank.length,464);
   assert.equal(PRACTICE_BANKS['hiragana-kanji'].length,132);
   assert.equal(PRACTICE_BANKS['hiragana-katakana'].length,50);
   assert.equal(filterTopicQuestions(bank,'similar').length,82);

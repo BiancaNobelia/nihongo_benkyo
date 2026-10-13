@@ -23,6 +23,6 @@ export function quizSetupPanel(icon) {
     <section class="reading-intro" id="quiz-intro" aria-label="Tentang mode latihan"></section>
     <p class="setup-note" id="quiz-note" role="status"></p>
     <button class="primary" data-action="quiz-start">Mulai kuis ${icon('arrow')}</button>
-    <p class="reading-disclaimer">Latihan buatan, bukan soal resmi JLPT. Pengelompokan kanji mengikuti katalog komunitas yang digunakan di website ini.</p>
+    <p class="reading-disclaimer">Latihan buatan, bukan soal resmi JLPT. Level mengikuti sumber belajar komunitas dan pengelompokan latihan.</p>
   </div>`;
 }

@@ -1,13 +1,16 @@
-import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261013-quiz-settings';
-import { KANJI_WRITING, KATAKANA_WRITING } from './writing-data.js?v=20261013-quiz-settings';
-import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261013-quiz-settings';
-import { SPECIAL_READINGS } from './special-reading-data.js?v=20261013-quiz-settings';
-import { KANJI } from './kanji-data.js?v=20261013-quiz-settings';
-import { eligibleQuizCards } from './core.js?v=20261013-quiz-settings';
-import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261013-quiz-settings';
+import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261013-reading-balance';
+import { KANJI_WRITING, KATAKANA_WRITING } from './writing-data.js?v=20261013-reading-balance';
+import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261013-reading-balance';
+import { SPECIAL_READINGS } from './special-reading-data.js?v=20261013-reading-balance';
+import { KANJI } from './kanji-data.js?v=20261013-reading-balance';
+import { eligibleQuizCards } from './core.js?v=20261013-reading-balance';
+import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261013-reading-balance';
+import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261013-reading-balance';
+import { prepareReadingBank } from './reading-balance.js?v=20261013-reading-balance';
 
 export const PRACTICE_BANKS = {
-  'jlpt-reading':assignKanjiLevels(mergePracticeBank(mergePracticeBank(JLPT_READINGS,SIMILAR_READING),SPECIAL_READINGS)),
+  // Existing contextual questions win over duplicate new vocabulary entries.
+  'jlpt-reading':prepareReadingBank(mergePracticeBank(READING_VOCABULARY,mergePracticeBank(mergePracticeBank(JLPT_READINGS,SIMILAR_READING),SPECIAL_READINGS))),
   'hiragana-kanji':assignKanjiLevels(mergePracticeBank(KANJI_WRITING,SIMILAR_WRITING)),
   'hiragana-katakana':KATAKANA_WRITING,
 };

@@ -1,7 +1,6 @@
 // Original exercises, checked against JF Irodori / Marugoto and UT Austin JOSHU.
-// Practice levels follow the most advanced kanji in each word in our catalog.
+// Foundational counting/calendar readings use an editorial N5 practice band.
 // References and accepted-variant policy: DATA-SOURCES.md.
-import { kanjiWordLevel } from './quiz-settings.js?v=20261013-quiz-settings';
 export const READING_TOPICS = [
   ['bacaan-khusus','Semua hitungan, tanggal & bunyi kata'],
   ['penghitung-benda','Semua penghitung benda & orang'],
@@ -189,4 +188,4 @@ const wordQuestions=[
 ].map(q=>({...q,id:`sound:${q.word}`,acceptedReadings:[q.reading],topicIds:['bacaan-khusus','bunyi-kata'],sourceId:'marugoto-vocabulary'}));
 
 export const SPECIAL_READINGS=[...counterQuestions,...moneyQuestions,...dateQuestions,...durationQuestions,...wordQuestions]
-  .map(q=>({...q,level:kanjiWordLevel(q.word),levelBasis:'kanji-catalog'}));
+  .map(q=>({...q,level:'N5',levelBasis:'editorial-foundation'}));
