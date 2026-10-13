@@ -1,22 +1,23 @@
-import { KANJI } from './kanji-data.js?v=20261014-mon-family';
-import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-mon-family';
-import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-mon-family';
-import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-mon-family';
-import { groupsForCharacter } from './similar-core.js?v=20261014-mon-family';
-import { createSimilarView } from './similar-view.js?v=20261014-mon-family';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-mon-family';
-import { familiesForCharacter } from './radical-core.js?v=20261014-mon-family';
+import { KANJI } from './kanji-data.js?v=20261014-mon-notes';
+import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-mon-notes';
+import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-mon-notes';
+import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-mon-notes';
+import { groupsForCharacter } from './similar-core.js?v=20261014-mon-notes';
+import { createSimilarView } from './similar-view.js?v=20261014-mon-notes';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-mon-notes';
+import { familiesForCharacter } from './radical-core.js?v=20261014-mon-notes';
+import { componentNoteMarkup } from './component-note-view.js?v=20261014-mon-notes';
 
-import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-mon-family';
+import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-mon-notes';
 
-import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261014-mon-family';
-import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-mon-family';
+import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261014-mon-notes';
+import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-mon-notes';
 
-import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-mon-family';
-import { requestedQuizCount } from './quiz-settings.js?v=20261014-mon-family';
-import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-mon-family';
-import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-mon-family';
-import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-mon-family';
+import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-mon-notes';
+import { requestedQuizCount } from './quiz-settings.js?v=20261014-mon-notes';
+import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-mon-notes';
+import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-mon-notes';
+import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-mon-notes';
 
 const paths = {
   home:'<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>',
@@ -128,6 +129,7 @@ function detail(char, record = true) {
     <div class="reading-grid"><div><small>ONYOMI · BACAAN ON</small><p lang="ja">${escape(k.on.join('、') || '—')}</p></div><div><small>KUNYOMI · BACAAN KUN</small><p lang="ja">${escape(k.kun.join('、') || '—')}</p></div></div>
     <p class="reading-note">Titik memisahkan bacaan kanji dan akhiran hiragana (okurigana).</p>
     <div class="example-box"><span class="example-title">TEMUKAN DALAM KATA</span>${k.example ? `<ruby lang="ja">${escape(k.example.word)}<rt>${escape(k.example.reading)}</rt></ruby><p>${escape(k.example.meaning)}</p>${k.example.meaningEn ? `<small class="source-gloss" lang="en">${escape(k.example.meaningEn)}</small>` : ''}` : '<p>Contoh kosakata belum tersedia untuk karakter ini. Bacaan on dan kun tetap dapat dipelajari.</p>'}</div>
+    ${componentNoteMarkup(k.char,escape)}
     ${related.length ? `<div class="similar-related"><h3>Jangan tertukar dengan...</h3>${related.map(group => `<a href="#mirip/${group.id}" class="similar-related-link"><span lang="ja">${group.members.map(m => m.char).join(' · ')}</span><span>Bandingkan ${icon('arrow')}</span></a>`).join('')}</div>` : ''}
     ${families.length ? `<div class="similar-related"><h3>Keluarga radikal & komponen</h3>${families.map(f => `<a href="#mirip/${f.id}" class="radical-related-link"><span lang="ja">${f.symbol}</span><span>${escape(f.title)}<small>${f.members.length} kanji dalam keluarga</small></span>${icon('arrow')}</a>`).join('')}</div>` : ''}
     <div class="modal-actions"><button class="secondary" data-save="${k.char}">${icon('bookmark')} ${progress.saved.includes(char) ? 'Tersimpan' : 'Simpan kanji'}</button><button class="primary" data-known="${k.char}">${icon('check')} ${progress.known.includes(char) ? 'Sudah dikuasai' : 'Tandai dikuasai'}</button></div>`);

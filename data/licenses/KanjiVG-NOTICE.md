@@ -26,5 +26,10 @@ named parts with known Indonesian glosses are kept. Partial or unknown parts,
 unreviewed variant mappings and incomplete frames are omitted. The data
 describes visible structure, not historical etymology. No vector paths are used.
 Editorial explanations and Indonesian translations are added separately.
+`mon-components-data.js` adds reviewed visual explanations for all 17 gate-family
+members, including nested parts, based on this structure and the dictionary
+checks in `data/mon-components-references.json`. Modern simplified forms are
+explained separately from historical etymology. The adapted structure remains
+CC BY-SA 3.0; no vector paths or dictionary passages are reproduced.
 See `data/radical-source.json` for the source URL and SHA-256 checksum, and
 `scripts/build_radicals.py` for the extraction procedure.

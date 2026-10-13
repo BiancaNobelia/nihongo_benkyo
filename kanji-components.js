@@ -1,5 +1,5 @@
-import { KANJI } from './kanji-data.js?v=20261014-mon-family';
-import { KANJI_COMPONENTS } from './kanji-components-data.js?v=20261014-mon-family';
+import { KANJI } from './kanji-data.js?v=20261014-mon-notes';
+import { KANJI_COMPONENTS } from './kanji-components-data.js?v=20261014-mon-notes';
 
 const meanings = new Map(KANJI.map(k => [k.char, k.meaning]));
 

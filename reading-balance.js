@@ -1,5 +1,5 @@
-import { shuffle } from './core.js?v=20261014-mon-family';
-import { READING_METADATA } from './reading-metadata.js?v=20261014-mon-family';
+import { shuffle } from './core.js?v=20261014-mon-notes';
+import { READING_METADATA } from './reading-metadata.js?v=20261014-mon-notes';
 
 export const READING_CATEGORIES = {
   noun:'Kata benda', verb:'Kata kerja', adjective:'Kata sifat', adverb:'Kata keterangan', special:'Hitungan & tanggal',

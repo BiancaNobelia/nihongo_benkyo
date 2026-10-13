@@ -355,6 +355,22 @@ menjelaskan 耳 sebagai bagian makna dan 門 sebagai bagian bunyi. Glos 門
 ditinjau sebagai referensi format latihan dalam kalimat; soal atau kalimatnya
 tidak disalin ke bank ini.
 
+### Penjelasan seluruh anggota keluarga 門
+
+`mon-components-data.js` melengkapi uraian manual untuk seluruh 17 anggota
+keluarga 門. Uraian tampil langsung pada setiap kartu keluarga dan pada modal
+detail kanji. Komponen gabungan yang relevan diuraikan lagi, misalnya 潤 →
+氵 + 閏 → 門 + 王 dan 簡 → ⺮ + 間 → 門 + 日. Komponen dasar tetap ditampilkan
+sebagai bentuk utuh; setiap goresan tidak diberi arti kata secara spekulatif.
+
+Struktur visual dicocokkan dengan KanjiVG terkunci dan kamus. Glos Indonesia
+memakai katalog yang sudah ditinjau serta catatan editorial. Rujukan rinci
+tersimpan di `data/mon-components-references.json`. Bentuk Jepang modern
+dibedakan dari bentuk lama: misalnya 関 dari 關, 闘 dari 鬪, serta isi 闌 pada
+欄 dan 蘭. Bentuk 开 pada 開 dijelaskan sebagai perubahan 廾 (kedua tangan)
+mengikuti Kanjipedia. Uraian bentuk bukan persamaan arti atau klaim etimologi.
+Perubahan ini tidak mengubah bank soal, level kanji, atau anggota keluarga lain.
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau

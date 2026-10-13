@@ -1,0 +1,19 @@
+{
+  "reviewDate": "2026-10-14",
+  "scope": "All 17 catalog kanji containing a complete 門; manual visual explanations, including nested parts. Modern visible structure is distinguished from etymology.",
+  "structuralSource": "data/radical-source.json (KanjiVG r20260714)",
+  "indonesianGlosses": "Reviewed local catalog, with editorial glosses checked against the dictionary pages below.",
+  "references": [
+    {"characters":"門", "url":"https://www.kanjipedia.jp/kanji/0006766200", "use":"Gate meaning and two door leaves."},
+    {"characters":"聞", "url":"https://www.kanjipedia.jp/kanji/0006190200", "use":"耳 semantic part and 門 phonetic part."},
+    {"characters":"開", "url":"https://www.kanjipedia.jp/kanji/0000805700", "use":"开 as changed form of 廾, two hands."},
+    {"characters":"関", "url":"https://www.kanjipedia.jp/kanji/0001108800", "use":"Modern simplified shape versus old 關."},
+    {"characters":"闘", "url":"https://www.kanjipedia.jp/kanji/0005243700", "use":"Modern 闘 versus old 鬪; avoid false gate/bean etymology."},
+    {"characters":"欄", "url":"https://www.kanjipedia.jp/kanji/0007063400", "use":"Modern 20-stroke shape versus old 21-stroke shape; 木 + 闌."},
+    {"characters":"閏潤", "url":"https://www.kanjipedia.jp/kanji/0003259700", "use":"閏 meaning and visible 門 + 王; do not mislabel 王 as jade."},
+    {"characters":"兌閲", "url":"https://www.kanjipedia.jp/kanji/0004410900", "use":"兌 meanings; visible positions come from KanjiVG."},
+    {"characters":"闌欄蘭", "url":"https://kotobank.jp/word/%E9%97%8C-656614", "use":"闌 meanings from Shogakukan Daijisen and Heibonsha Jitsu."},
+    {"characters":"柬欄蘭", "url":"https://kotobank.jp/word/%E6%9F%AC-2785332", "use":"柬 means choose/select; dictionary source Heibonsha Jitsu."},
+    {"characters":"夂各閣", "url":"https://www.ishii-miraikan.com/kanjikyouiku/contents/11_04_00_01.pdf", "use":"Downward-pointing foot component; visible 夂 + 口 checked against KanjiVG."}
+  ]
+}
