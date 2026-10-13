@@ -1,0 +1,1409 @@
+{
+  "source": "https://github.com/evanclan/OpenJLPT",
+  "commit": "0d1d3410bec90bd4098a7c72de820543cb4f707c",
+  "date": "2026-10-13",
+  "note": "Vocabulary metadata only; no example sentences or official exam questions copied.",
+  "words": [
+    {
+      "word": "先週",
+      "level": "N5",
+      "reading": "せんしゅう",
+      "sourceId": "b8c4cd80db",
+      "jmdictId": 1387870,
+      "readings": [
+        "せんしゅう"
+      ],
+      "meaningsEn": [
+        "last week"
+      ]
+    },
+    {
+      "word": "今週",
+      "level": "N5",
+      "reading": "こんしゅう",
+      "sourceId": "7a27eadef1",
+      "jmdictId": 1289220,
+      "readings": [
+        "こんしゅう"
+      ],
+      "meaningsEn": [
+        "this week"
+      ]
+    },
+    {
+      "word": "来週",
+      "level": "N5",
+      "reading": "らいしゅう",
+      "sourceId": "7a4ef637be",
+      "jmdictId": 1548010,
+      "readings": [
+        "らいしゅう"
+      ],
+      "meaningsEn": [
+        "next week"
+      ]
+    },
+    {
+      "word": "学校",
+      "level": "N5",
+      "reading": "がっこう",
+      "sourceId": "dd8ac16bd2",
+      "jmdictId": 1206730,
+      "readings": [
+        "がっこう"
+      ],
+      "meaningsEn": [
+        "school"
+      ]
+    },
+    {
+      "word": "学生",
+      "level": "N5",
+      "reading": "がくせい",
+      "sourceId": "452102ad0a",
+      "jmdictId": 1206900,
+      "readings": [
+        "がくせい"
+      ],
+      "meaningsEn": [
+        "student"
+      ]
+    },
+    {
+      "word": "先生",
+      "level": "N5",
+      "reading": "せんせい",
+      "sourceId": "814bdc2cec",
+      "jmdictId": 1387990,
+      "readings": [
+        "せんせい"
+      ],
+      "meaningsEn": [
+        "teacher",
+        "doctor"
+      ]
+    },
+    {
+      "word": "勉強",
+      "level": "N5",
+      "reading": "べんきょう",
+      "sourceId": "65783b95dd",
+      "jmdictId": 1512670,
+      "readings": [
+        "べんきょう"
+      ],
+      "meaningsEn": [
+        "to study"
+      ]
+    },
+    {
+      "word": "病院",
+      "level": "N5",
+      "reading": "びょういん",
+      "sourceId": "734d275fd9",
+      "jmdictId": 1490220,
+      "readings": [
+        "びょういん"
+      ],
+      "meaningsEn": [
+        "hospital"
+      ]
+    },
+    {
+      "word": "旅行",
+      "level": "N5",
+      "reading": "りょこう",
+      "sourceId": "2ba96bef9a",
+      "jmdictId": 1553170,
+      "readings": [
+        "りょこう"
+      ],
+      "meaningsEn": [
+        "travel"
+      ]
+    },
+    {
+      "word": "会社",
+      "level": "N5",
+      "reading": "かいしゃ",
+      "sourceId": "2120ff505c",
+      "jmdictId": 1198550,
+      "readings": [
+        "かいしゃ"
+      ],
+      "meaningsEn": [
+        "company"
+      ]
+    },
+    {
+      "word": "電車",
+      "level": "N5",
+      "reading": "でんしゃ",
+      "sourceId": "62b5c13164",
+      "jmdictId": 1443530,
+      "readings": [
+        "でんしゃ"
+      ],
+      "meaningsEn": [
+        "electric train"
+      ]
+    },
+    {
+      "word": "自転車",
+      "level": "N5",
+      "reading": "じてんしゃ",
+      "sourceId": "ebf194a316",
+      "jmdictId": 1318290,
+      "readings": [
+        "じてんしゃ"
+      ],
+      "meaningsEn": [
+        "bicycle"
+      ]
+    },
+    {
+      "word": "郵便局",
+      "level": "N5",
+      "reading": "ゆうびんきょく",
+      "sourceId": "8b86921749",
+      "jmdictId": 1542430,
+      "readings": [
+        "ゆうびんきょく"
+      ],
+      "meaningsEn": [
+        "post office"
+      ]
+    },
+    {
+      "word": "図書館",
+      "level": "N5",
+      "reading": "としょかん",
+      "sourceId": "de5a452667",
+      "jmdictId": 1370420,
+      "readings": [
+        "としょかん"
+      ],
+      "meaningsEn": [
+        "library"
+      ]
+    },
+    {
+      "word": "新聞",
+      "level": "N5",
+      "reading": "しんぶん",
+      "sourceId": "b8317395af",
+      "jmdictId": 1362360,
+      "readings": [
+        "しんぶん"
+      ],
+      "meaningsEn": [
+        "newspaper"
+      ]
+    },
+    {
+      "word": "練習",
+      "level": "N5",
+      "reading": "れんしゅう",
+      "sourceId": "d23f06249a",
+      "jmdictId": 1559160,
+      "readings": [
+        "れんしゅう"
+      ],
+      "meaningsEn": [
+        "to practice"
+      ]
+    },
+    {
+      "word": "誕生日",
+      "level": "N5",
+      "reading": "たんじょうび",
+      "sourceId": "2e610178ae",
+      "jmdictId": 1419110,
+      "readings": [
+        "たんじょうび"
+      ],
+      "meaningsEn": [
+        "birthday"
+      ]
+    },
+    {
+      "word": "一緒",
+      "level": "N5",
+      "reading": "いっしょ",
+      "sourceId": "2dc7289c82",
+      "jmdictId": 1163400,
+      "readings": [
+        "いっしょ"
+      ],
+      "meaningsEn": [
+        "together"
+      ]
+    },
+    {
+      "word": "写真",
+      "level": "N5",
+      "reading": "しゃしん",
+      "sourceId": "5101640e7e",
+      "jmdictId": 1321900,
+      "readings": [
+        "しゃしん"
+      ],
+      "meaningsEn": [
+        "photograph"
+      ]
+    },
+    {
+      "word": "授業",
+      "level": "N5",
+      "reading": "じゅぎょう",
+      "sourceId": "5bae559507",
+      "jmdictId": 1330290,
+      "readings": [
+        "じゅぎょう"
+      ],
+      "meaningsEn": [
+        "lesson",
+        "class work"
+      ]
+    },
+    {
+      "word": "安心",
+      "level": "N4",
+      "reading": "あんしん",
+      "sourceId": "d06643e4e1",
+      "jmdictId": 1153890,
+      "readings": [
+        "あんしん"
+      ],
+      "meaningsEn": [
+        "relief"
+      ]
+    },
+    {
+      "word": "安全",
+      "level": "N4",
+      "reading": "あんぜん",
+      "sourceId": "160a8399af",
+      "jmdictId": 1153930,
+      "readings": [
+        "あんぜん"
+      ],
+      "meaningsEn": [
+        "safety"
+      ]
+    },
+    {
+      "word": "案内",
+      "level": "N4",
+      "reading": "あんない",
+      "sourceId": "52a79a5d69",
+      "jmdictId": 1154860,
+      "readings": [
+        "あんない"
+      ],
+      "meaningsEn": [
+        "to guide"
+      ]
+    },
+    {
+      "word": "意見",
+      "level": "N4",
+      "reading": "いけん",
+      "sourceId": "ba5a03baf1",
+      "jmdictId": 1156530,
+      "readings": [
+        "いけん"
+      ],
+      "meaningsEn": [
+        "opinion"
+      ]
+    },
+    {
+      "word": "以上",
+      "level": "N4",
+      "reading": "いじょう",
+      "sourceId": "13ab63d79a",
+      "jmdictId": 1155120,
+      "readings": [
+        "いじょう"
+      ],
+      "meaningsEn": [
+        "more than",
+        "this is all"
+      ]
+    },
+    {
+      "word": "運転",
+      "level": "N4",
+      "reading": "うんてん",
+      "sourceId": "44f33984fb",
+      "jmdictId": 1172830,
+      "readings": [
+        "うんてん"
+      ],
+      "meaningsEn": [
+        "to drive"
+      ]
+    },
+    {
+      "word": "運動",
+      "level": "N4",
+      "reading": "うんどう",
+      "sourceId": "47487b1e85",
+      "jmdictId": 1172910,
+      "readings": [
+        "うんどう"
+      ],
+      "meaningsEn": [
+        "to exercise"
+      ]
+    },
+    {
+      "word": "遠慮",
+      "level": "N4",
+      "reading": "えんりょ",
+      "sourceId": "5ceed9165d",
+      "jmdictId": 1178450,
+      "readings": [
+        "えんりょ"
+      ],
+      "meaningsEn": [
+        "to be reserved",
+        "to be restrained"
+      ]
+    },
+    {
+      "word": "会議",
+      "level": "N4",
+      "reading": "かいぎ",
+      "sourceId": "83af91b7eb",
+      "jmdictId": 1198360,
+      "readings": [
+        "かいぎ"
+      ],
+      "meaningsEn": [
+        "meeting"
+      ]
+    },
+    {
+      "word": "会場",
+      "level": "N4",
+      "reading": "かいじょう",
+      "sourceId": "7508a7d366",
+      "jmdictId": 1198660,
+      "readings": [
+        "かいじょう"
+      ],
+      "meaningsEn": [
+        "assembly hall or meeting place"
+      ]
+    },
+    {
+      "word": "会話",
+      "level": "N4",
+      "reading": "かいわ",
+      "sourceId": "81b9c23c14",
+      "jmdictId": 1198880,
+      "readings": [
+        "かいわ"
+      ],
+      "meaningsEn": [
+        "conversation"
+      ]
+    },
+    {
+      "word": "科学",
+      "level": "N4",
+      "reading": "かがく",
+      "sourceId": "ea150f3d48",
+      "jmdictId": 1192700,
+      "readings": [
+        "かがく"
+      ],
+      "meaningsEn": [
+        "science"
+      ]
+    },
+    {
+      "word": "経験",
+      "level": "N4",
+      "reading": "けいけん",
+      "sourceId": "9746b57413",
+      "jmdictId": 1251270,
+      "readings": [
+        "けいけん"
+      ],
+      "meaningsEn": [
+        "to experience"
+      ]
+    },
+    {
+      "word": "試験",
+      "level": "N4",
+      "reading": "しけん",
+      "sourceId": "7855de335f",
+      "jmdictId": 1312350,
+      "readings": [
+        "しけん"
+      ],
+      "meaningsEn": [
+        "examination"
+      ]
+    },
+    {
+      "word": "説明",
+      "level": "N4",
+      "reading": "せつめい",
+      "sourceId": "123ee74d43",
+      "jmdictId": 1386460,
+      "readings": [
+        "せつめい"
+      ],
+      "meaningsEn": [
+        "explanation"
+      ]
+    },
+    {
+      "word": "約束",
+      "level": "N4",
+      "reading": "やくそく",
+      "sourceId": "2ef2e06612",
+      "jmdictId": 1538130,
+      "readings": [
+        "やくそく"
+      ],
+      "meaningsEn": [
+        "promise"
+      ]
+    },
+    {
+      "word": "生活",
+      "level": "N4",
+      "reading": "せいかつ",
+      "sourceId": "7817c4eed6",
+      "jmdictId": 1378860,
+      "readings": [
+        "せいかつ"
+      ],
+      "meaningsEn": [
+        "to live"
+      ]
+    },
+    {
+      "word": "住所",
+      "level": "N4",
+      "reading": "じゅうしょ",
+      "sourceId": "47593d1123",
+      "jmdictId": 1334080,
+      "readings": [
+        "じゅうしょ"
+      ],
+      "meaningsEn": [
+        "an address",
+        "a residence"
+      ]
+    },
+    {
+      "word": "出発",
+      "level": "N4",
+      "reading": "しゅっぱつ",
+      "sourceId": "c614552d23",
+      "jmdictId": 1340000,
+      "readings": [
+        "しゅっぱつ"
+      ],
+      "meaningsEn": [
+        "to depart"
+      ]
+    },
+    {
+      "word": "卒業",
+      "level": "N4",
+      "reading": "そつぎょう",
+      "sourceId": "6a89d1feee",
+      "jmdictId": 1405890,
+      "readings": [
+        "そつぎょう"
+      ],
+      "meaningsEn": [
+        "graduation"
+      ]
+    },
+    {
+      "word": "愛情",
+      "level": "N3",
+      "reading": "あいじょう",
+      "sourceId": "0cb7e80d4c",
+      "jmdictId": 1150860,
+      "readings": [
+        "あいじょう"
+      ],
+      "meaningsEn": [
+        "love",
+        "affection"
+      ]
+    },
+    {
+      "word": "握手",
+      "level": "N3",
+      "reading": "あくしゅ",
+      "sourceId": "6312892cc5",
+      "jmdictId": 1152730,
+      "readings": [
+        "あくしゅ"
+      ],
+      "meaningsEn": [
+        "handshake"
+      ]
+    },
+    {
+      "word": "暗記",
+      "level": "N3",
+      "reading": "あんき",
+      "sourceId": "1e8e1ca3dc",
+      "jmdictId": 1586910,
+      "readings": [
+        "あんき"
+      ],
+      "meaningsEn": [
+        "memorization",
+        "learning by heart"
+      ]
+    },
+    {
+      "word": "安定",
+      "level": "N3",
+      "reading": "あんてい",
+      "sourceId": "7a5bf31b8a",
+      "jmdictId": 1154120,
+      "readings": [
+        "あんてい"
+      ],
+      "meaningsEn": [
+        "stability",
+        "equilibrium"
+      ]
+    },
+    {
+      "word": "意識",
+      "level": "N3",
+      "reading": "いしき",
+      "sourceId": "adfd2f59c3",
+      "jmdictId": 1156640,
+      "readings": [
+        "いしき"
+      ],
+      "meaningsEn": [
+        "consciousness",
+        "senses"
+      ]
+    },
+    {
+      "word": "異常",
+      "level": "N3",
+      "reading": "いじょう",
+      "sourceId": "8822903a55",
+      "jmdictId": 1157760,
+      "readings": [
+        "いじょう"
+      ],
+      "meaningsEn": [
+        "strangeness",
+        "abnormality",
+        "disorder"
+      ]
+    },
+    {
+      "word": "一瞬",
+      "level": "N3",
+      "reading": "いっしゅん",
+      "sourceId": "fc1d99931b",
+      "jmdictId": 1163340,
+      "readings": [
+        "いっしゅん"
+      ],
+      "meaningsEn": [
+        "a moment",
+        "an instant"
+      ]
+    },
+    {
+      "word": "一般",
+      "level": "N3",
+      "reading": "いっぱん",
+      "sourceId": "b65151eaec",
+      "jmdictId": 1165790,
+      "readings": [
+        "いっぱん"
+      ],
+      "meaningsEn": [
+        "general",
+        "liberal",
+        "universal",
+        "ordinary",
+        "average"
+      ]
+    },
+    {
+      "word": "医療",
+      "level": "N3",
+      "reading": "いりょう",
+      "sourceId": "3bbedbe5a9",
+      "jmdictId": 1160140,
+      "readings": [
+        "いりょう"
+      ],
+      "meaningsEn": [
+        "medical care",
+        "medical treatment"
+      ]
+    },
+    {
+      "word": "印象",
+      "level": "N3",
+      "reading": "いんしょう",
+      "sourceId": "ddedf2e7ba",
+      "jmdictId": 1168390,
+      "readings": [
+        "いんしょう"
+      ],
+      "meaningsEn": [
+        "impression"
+      ]
+    },
+    {
+      "word": "感情",
+      "level": "N3",
+      "reading": "かんじょう",
+      "sourceId": "c2dcadfe14",
+      "jmdictId": 1212410,
+      "readings": [
+        "かんじょう"
+      ],
+      "meaningsEn": [
+        "emotion(s)",
+        "feeling(s)",
+        "sentiment"
+      ]
+    },
+    {
+      "word": "環境",
+      "level": "N3",
+      "reading": "かんきょう",
+      "sourceId": "c8ca17553a",
+      "jmdictId": 1213280,
+      "readings": [
+        "かんきょう"
+      ],
+      "meaningsEn": [
+        "environment",
+        "circumstance"
+      ]
+    },
+    {
+      "word": "協力",
+      "level": "N3",
+      "reading": "きょうりょく",
+      "sourceId": "23ba87bda6",
+      "jmdictId": 1591720,
+      "readings": [
+        "きょうりょく"
+      ],
+      "meaningsEn": [
+        "cooperation",
+        "collaboration"
+      ]
+    },
+    {
+      "word": "経営",
+      "level": "N3",
+      "reading": "けいえい",
+      "sourceId": "80d351fd10",
+      "jmdictId": 1251130,
+      "readings": [
+        "けいえい"
+      ],
+      "meaningsEn": [
+        "management",
+        "administration"
+      ]
+    },
+    {
+      "word": "重要",
+      "level": "N3",
+      "reading": "じゅうよう",
+      "sourceId": "bc3d5a165c",
+      "jmdictId": 1336820,
+      "readings": [
+        "じゅうよう"
+      ],
+      "meaningsEn": [
+        "important",
+        "momentous",
+        "essential",
+        "principal",
+        "major"
+      ]
+    },
+    {
+      "word": "成長",
+      "level": "N3",
+      "reading": "せいちょう",
+      "sourceId": "ed4e8d935d",
+      "jmdictId": 1375790,
+      "readings": [
+        "せいちょう"
+      ],
+      "meaningsEn": [
+        "growth",
+        "grow to adulthood"
+      ]
+    },
+    {
+      "word": "責任",
+      "level": "N3",
+      "reading": "せきにん",
+      "sourceId": "4c29ad3233",
+      "jmdictId": 1383180,
+      "readings": [
+        "せきにん"
+      ],
+      "meaningsEn": [
+        "duty",
+        "responsibility"
+      ]
+    },
+    {
+      "word": "判断",
+      "level": "N3",
+      "reading": "はんだん",
+      "sourceId": "3b88931b34",
+      "jmdictId": 1478620,
+      "readings": [
+        "はんだん"
+      ],
+      "meaningsEn": [
+        "judgement",
+        "decision"
+      ]
+    },
+    {
+      "word": "表情",
+      "level": "N3",
+      "reading": "ひょうじょう",
+      "sourceId": "58e01c0b72",
+      "jmdictId": 1489700,
+      "readings": [
+        "ひょうじょう"
+      ],
+      "meaningsEn": [
+        "facial expression"
+      ]
+    },
+    {
+      "word": "解釈",
+      "level": "N3",
+      "reading": "かいしゃく",
+      "sourceId": "bb3089103b",
+      "jmdictId": 1199010,
+      "readings": [
+        "かいしゃく"
+      ],
+      "meaningsEn": [
+        "explanation",
+        "interpretation"
+      ]
+    },
+    {
+      "word": "圧縮",
+      "level": "N2",
+      "reading": "あっしゅく",
+      "sourceId": "869960843c",
+      "jmdictId": 1153080,
+      "readings": [
+        "あっしゅく"
+      ],
+      "meaningsEn": [
+        "compression",
+        "condensation",
+        "pressure"
+      ]
+    },
+    {
+      "word": "育児",
+      "level": "N2",
+      "reading": "いくじ",
+      "sourceId": "3308b2d953",
+      "jmdictId": 1160630,
+      "readings": [
+        "いくじ"
+      ],
+      "meaningsEn": [
+        "childcare",
+        "nursing",
+        "upbringing"
+      ]
+    },
+    {
+      "word": "衣食住",
+      "level": "N2",
+      "reading": "いしょくじゅう",
+      "sourceId": "05292c6357",
+      "jmdictId": 1158780,
+      "readings": [
+        "いしょくじゅう"
+      ],
+      "meaningsEn": [
+        "necessities of life (food, clothing, etc.)"
+      ]
+    },
+    {
+      "word": "一流",
+      "level": "N2",
+      "reading": "いちりゅう",
+      "sourceId": "9299dcd9c4",
+      "jmdictId": 1167270,
+      "readings": [
+        "いちりゅう"
+      ],
+      "meaningsEn": [
+        "first class",
+        "top grade",
+        "foremost",
+        "top-notch"
+      ]
+    },
+    {
+      "word": "一斉",
+      "level": "N2",
+      "reading": "いっせい",
+      "sourceId": "b1205d9b83",
+      "jmdictId": 1164040,
+      "readings": [
+        "いっせい"
+      ],
+      "meaningsEn": [
+        "simultaneous",
+        "all at once"
+      ]
+    },
+    {
+      "word": "移転",
+      "level": "N2",
+      "reading": "いてん",
+      "sourceId": "2c3f94c2e7",
+      "jmdictId": 1158390,
+      "readings": [
+        "いてん"
+      ],
+      "meaningsEn": [
+        "moving",
+        "transfer",
+        "demise"
+      ]
+    },
+    {
+      "word": "延長",
+      "level": "N2",
+      "reading": "えんちょう",
+      "sourceId": "dba326f5ee",
+      "jmdictId": 1176510,
+      "readings": [
+        "えんちょう"
+      ],
+      "meaningsEn": [
+        "extension",
+        "elongation",
+        "prolongation",
+        "lengthening"
+      ]
+    },
+    {
+      "word": "応援",
+      "level": "N2",
+      "reading": "おうえん",
+      "sourceId": "f4d4c5dfdf",
+      "jmdictId": 1179840,
+      "readings": [
+        "おうえん"
+      ],
+      "meaningsEn": [
+        "aid",
+        "assistance",
+        "help",
+        "reinforcement"
+      ]
+    },
+    {
+      "word": "官庁",
+      "level": "N2",
+      "reading": "かんちょう",
+      "sourceId": "d3003d9bb0",
+      "jmdictId": 1211730,
+      "readings": [
+        "かんちょう"
+      ],
+      "meaningsEn": [
+        "government office",
+        "authorities"
+      ]
+    },
+    {
+      "word": "乾燥",
+      "level": "N2",
+      "reading": "かんそう",
+      "sourceId": "ad1e1c4b93",
+      "jmdictId": 1209920,
+      "readings": [
+        "かんそう"
+      ],
+      "meaningsEn": [
+        "dry",
+        "arid",
+        "insipid",
+        "dehydrated"
+      ]
+    },
+    {
+      "word": "教養",
+      "level": "N2",
+      "reading": "きょうよう",
+      "sourceId": "cbc70409ad",
+      "jmdictId": 1237370,
+      "readings": [
+        "きょうよう"
+      ],
+      "meaningsEn": [
+        "culture",
+        "education",
+        "refinement",
+        "cultivation"
+      ]
+    },
+    {
+      "word": "構造",
+      "level": "N2",
+      "reading": "こうぞう",
+      "sourceId": "fd699d42d8",
+      "jmdictId": 1279790,
+      "readings": [
+        "こうぞう"
+      ],
+      "meaningsEn": [
+        "structure",
+        "construction"
+      ]
+    },
+    {
+      "word": "寿命",
+      "level": "N2",
+      "reading": "じゅみょう",
+      "sourceId": "772e03ca49",
+      "jmdictId": 1330240,
+      "readings": [
+        "じゅみょう"
+      ],
+      "meaningsEn": [
+        "life span"
+      ]
+    },
+    {
+      "word": "調整",
+      "level": "N2",
+      "reading": "ちょうせい",
+      "sourceId": "45ba6efa0f",
+      "jmdictId": 1429200,
+      "readings": [
+        "ちょうせい"
+      ],
+      "meaningsEn": [
+        "regulation",
+        "adjustment",
+        "tuning"
+      ]
+    },
+    {
+      "word": "抽象",
+      "level": "N2",
+      "reading": "ちゅうしょう",
+      "sourceId": "e74bba8aa5",
+      "jmdictId": 1426190,
+      "readings": [
+        "ちゅうしょう"
+      ],
+      "meaningsEn": [
+        "abstract"
+      ]
+    },
+    {
+      "word": "集会",
+      "level": "N2",
+      "reading": "しゅうかい",
+      "sourceId": "e7815da48e",
+      "jmdictId": 1333600,
+      "readings": [
+        "しゅうかい"
+      ],
+      "meaningsEn": [
+        "meeting",
+        "assembly"
+      ]
+    },
+    {
+      "word": "出張",
+      "level": "N2",
+      "reading": "しゅっちょう",
+      "sourceId": "aac5075190",
+      "jmdictId": 1339660,
+      "readings": [
+        "しゅっちょう"
+      ],
+      "meaningsEn": [
+        "official tour",
+        "business trip"
+      ]
+    },
+    {
+      "word": "純粋",
+      "level": "N2",
+      "reading": "じゅんすい",
+      "sourceId": "2cd84ea8b4",
+      "jmdictId": 1341930,
+      "readings": [
+        "じゅんすい"
+      ],
+      "meaningsEn": [
+        "pure",
+        "true",
+        "genuine",
+        "unmixed"
+      ]
+    },
+    {
+      "word": "消毒",
+      "level": "N2",
+      "reading": "しょうどく",
+      "sourceId": "60a9dc46c6",
+      "jmdictId": 1350270,
+      "readings": [
+        "しょうどく"
+      ],
+      "meaningsEn": [
+        "disinfection",
+        "sterilization"
+      ]
+    },
+    {
+      "word": "矛盾",
+      "level": "N2",
+      "reading": "むじゅん",
+      "sourceId": "af01900899",
+      "jmdictId": 1531090,
+      "readings": [
+        "むじゅん"
+      ],
+      "meaningsEn": [
+        "contradiction",
+        "inconsistency"
+      ]
+    },
+    {
+      "word": "圧迫",
+      "level": "N1",
+      "reading": "あっぱく",
+      "sourceId": "eab33fad07",
+      "jmdictId": 1153310,
+      "readings": [
+        "あっぱく"
+      ],
+      "meaningsEn": [
+        "pressure",
+        "coercion",
+        "oppression"
+      ]
+    },
+    {
+      "word": "暗殺",
+      "level": "N1",
+      "reading": "あんさつ",
+      "sourceId": "eda4f150bd",
+      "jmdictId": 1154520,
+      "readings": [
+        "あんさつ"
+      ],
+      "meaningsEn": [
+        "assassination"
+      ]
+    },
+    {
+      "word": "育成",
+      "level": "N1",
+      "reading": "いくせい",
+      "sourceId": "8dc66af6e2",
+      "jmdictId": 1587150,
+      "readings": [
+        "いくせい"
+      ],
+      "meaningsEn": [
+        "rearing",
+        "training",
+        "nurture",
+        "cultivation",
+        "promotion"
+      ]
+    },
+    {
+      "word": "移行",
+      "level": "N1",
+      "reading": "いこう",
+      "sourceId": "2427a8f4e6",
+      "jmdictId": 1158240,
+      "readings": [
+        "いこう"
+      ],
+      "meaningsEn": [
+        "switching over to"
+      ]
+    },
+    {
+      "word": "意向",
+      "level": "N1",
+      "reading": "いこう",
+      "sourceId": "419813adc3",
+      "jmdictId": 1587200,
+      "readings": [
+        "いこう"
+      ],
+      "meaningsEn": [
+        "intention",
+        "idea",
+        "inclination"
+      ]
+    },
+    {
+      "word": "妥協",
+      "level": "N1",
+      "reading": "だきょう",
+      "sourceId": "371c591e26",
+      "jmdictId": 1408510,
+      "readings": [
+        "だきょう"
+      ],
+      "meaningsEn": [
+        "compromise",
+        "giving in"
+      ]
+    },
+    {
+      "word": "促進",
+      "level": "N1",
+      "reading": "そくしん",
+      "sourceId": "079f60c131",
+      "jmdictId": 1403780,
+      "readings": [
+        "そくしん"
+      ],
+      "meaningsEn": [
+        "promotion",
+        "acceleration",
+        "encouragement",
+        "facilitation",
+        "spurring on"
+      ]
+    },
+    {
+      "word": "絶望",
+      "level": "N1",
+      "reading": "ぜつぼう",
+      "sourceId": "ecd2111666",
+      "jmdictId": 1386960,
+      "readings": [
+        "ぜつぼう"
+      ],
+      "meaningsEn": [
+        "despair",
+        "hopelessness"
+      ]
+    },
+    {
+      "word": "憂鬱",
+      "level": "N1",
+      "reading": "ゆううつ",
+      "sourceId": "9332d2b39b",
+      "jmdictId": 1605640,
+      "readings": [
+        "ゆううつ"
+      ],
+      "meaningsEn": [
+        "depression",
+        "melancholy",
+        "dejection",
+        "gloom"
+      ]
+    },
+    {
+      "word": "融資",
+      "level": "N1",
+      "reading": "ゆうし",
+      "sourceId": "24ed1f170c",
+      "jmdictId": 1542600,
+      "readings": [
+        "ゆうし"
+      ],
+      "meaningsEn": [
+        "financing",
+        "loan"
+      ]
+    },
+    {
+      "word": "領域",
+      "level": "N1",
+      "reading": "りょういき",
+      "sourceId": "3e37fcff5a",
+      "jmdictId": 1554720,
+      "readings": [
+        "りょういき"
+      ],
+      "meaningsEn": [
+        "area",
+        "domain",
+        "territory",
+        "field",
+        "region",
+        "regime"
+      ]
+    },
+    {
+      "word": "革新",
+      "level": "N1",
+      "reading": "かくしん",
+      "sourceId": "9b8758c027",
+      "jmdictId": 1206470,
+      "readings": [
+        "かくしん"
+      ],
+      "meaningsEn": [
+        "reform",
+        "innovation"
+      ]
+    },
+    {
+      "word": "措置",
+      "level": "N1",
+      "reading": "そち",
+      "sourceId": "116afb9f88",
+      "jmdictId": 1396530,
+      "readings": [
+        "そち"
+      ],
+      "meaningsEn": [
+        "measure",
+        "step"
+      ]
+    },
+    {
+      "word": "衝撃",
+      "level": "N1",
+      "reading": "しょうげき",
+      "sourceId": "6ea8615b30",
+      "jmdictId": 1351510,
+      "readings": [
+        "しょうげき"
+      ],
+      "meaningsEn": [
+        "shock",
+        "crash",
+        "impact",
+        "ballistic"
+      ]
+    },
+    {
+      "word": "頻繁",
+      "level": "N1",
+      "reading": "ひんぱん",
+      "sourceId": "d8165931bc",
+      "jmdictId": 1491050,
+      "readings": [
+        "ひんぱん"
+      ],
+      "meaningsEn": [
+        "frequency"
+      ]
+    },
+    {
+      "word": "繁栄",
+      "level": "N1",
+      "reading": "はんえい",
+      "sourceId": "8aea8207d5",
+      "jmdictId": 1481670,
+      "readings": [
+        "はんえい"
+      ],
+      "meaningsEn": [
+        "prospering",
+        "prosperity",
+        "thriving",
+        "flourishing"
+      ]
+    },
+    {
+      "word": "誠実",
+      "level": "N1",
+      "reading": "せいじつ",
+      "sourceId": "4e718e1c73",
+      "jmdictId": 1381180,
+      "readings": [
+        "せいじつ"
+      ],
+      "meaningsEn": [
+        "sincere",
+        "honest",
+        "faithful"
+      ]
+    },
+    {
+      "word": "納入",
+      "level": "N1",
+      "reading": "のうにゅう",
+      "sourceId": "6d57e2cc71",
+      "jmdictId": 1470090,
+      "readings": [
+        "のうにゅう"
+      ],
+      "meaningsEn": [
+        "payment",
+        "supply"
+      ]
+    },
+    {
+      "word": "診療",
+      "level": "N1",
+      "reading": "しんりょう",
+      "sourceId": "9e1b9872a7",
+      "jmdictId": 1365500,
+      "readings": [
+        "しんりょう"
+      ],
+      "meaningsEn": [
+        "medical examination and treatment",
+        "diagnosis"
+      ]
+    },
+    {
+      "word": "奨励",
+      "level": "N1",
+      "reading": "しょうれい",
+      "sourceId": "002ee4fb5a",
+      "jmdictId": 1347550,
+      "readings": [
+        "しょうれい"
+      ],
+      "meaningsEn": [
+        "encouragement",
+        "promotion",
+        "message",
+        "address"
+      ]
+    }
+  ]
+}

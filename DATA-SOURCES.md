@@ -98,6 +98,28 @@ tangan tetap dimungkinkan. Acuan bentuk termasuk
 yang juga menjelaskan bahwa panjang garis 土/士 sebagai komponen dapat bervariasi.
 Tidak ada gambar atau dataset diagram goresan eksternal yang disalin.
 
+### Kuis bacaan ala JLPT
+
+`jlpt-reading-data.js` berisi 100 soal latihan buatan, masing-masing 20 kosakata
+untuk N5, N4, N3, N2, dan N1. Bacaan serta level diambil dari berkas
+`data/json/vocab/n5.json` sampai `n1.json` pada commit OpenJLPT yang dikunci di atas.
+`data/jlpt-reading-source.json` menyimpan metadata sumber yang digunakan, termasuk
+bacaan alternatif yang tercatat. Arti Indonesia, pilihan pengecoh, dan penjelasan
+disusun secara editorial pada 13 Oktober 2026. Data adaptasi ini juga tersedia
+dengan CC BY-SA 4.0 dan atribusi EDRDG/OpenJLPT sebagaimana di atas.
+
+Setiap soal memiliki satu jawaban dan tiga pilihan hiragana yang sengaja mirip,
+bukan tiga bacaan acak dari kata lain. Pemeriksaan otomatis memastikan pilihan
+pengecoh berbeda dari bacaan yang diterima sumber, dan berjarak paling banyak dua
+perubahan kana dari jawaban. Soal mencakup bunyi panjang, dakuten/handakuten,
+kana kecil, serta pergantian bunyi dalam gabungan kanji. Arti dan penjelasan baru
+ditampilkan setelah pengguna menjawab.
+
+Bank ini merupakan pilihan latihan, **bukan seluruh kosakata JLPT maupun soal
+ujian resmi**. Formatnya merujuk latihan membaca kanji pada
+[bagian kosakata JLPT](https://www.jlpt.jp/e/guideline/testsections.html).
+Tidak ada kalimat contoh Tatoeba atau soal resmi yang disalin.
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau

@@ -1,4 +1,4 @@
-import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261013-similar';
+import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261013-jlpt';
 
 export function createSimilarView({root, kanji, groups, categories, levels, escape, icon, activity}) {
   const byChar = new Map(kanji.map(k => [k.char, k]));

@@ -2,5 +2,5 @@
   "name": "nihongo-benkyo",
   "private": true,
   "type": "module",
-  "scripts": { "test": "node --test tests/core.test.mjs tests/translations.test.mjs tests/similar.test.mjs" }
+  "scripts": { "test": "node --test tests/core.test.mjs tests/translations.test.mjs tests/similar.test.mjs tests/jlpt-reading.test.mjs" }
 }
