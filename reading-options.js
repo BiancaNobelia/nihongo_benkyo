@@ -1,6 +1,6 @@
-import { shuffle } from './core.js?v=20261014-kotoba-n3';
-import { READING_CHOICES } from './reading-choice-data.js?v=20261014-kotoba-n3';
-import { readingQuestionKey } from './reading-history.js?v=20261014-kotoba-n3';
+import { shuffle } from './core.js?v=20261014-n5-pdf';
+import { READING_CHOICES } from './reading-choice-data.js?v=20261014-n5-pdf';
+import { readingQuestionKey } from './reading-history.js?v=20261014-n5-pdf';
 
 const choicesByQuestion=new Map(READING_CHOICES.map(q=>[q.key,q]));
 

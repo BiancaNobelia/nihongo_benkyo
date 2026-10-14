@@ -1,28 +1,28 @@
-import { KANJI } from './kanji-data.js?v=20261014-kotoba-n3';
-import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-kotoba-n3';
-import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-kotoba-n3';
-import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-kotoba-n3';
-import { groupsForCharacter } from './similar-core.js?v=20261014-kotoba-n3';
-import { createSimilarView } from './similar-view.js?v=20261014-kotoba-n3';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-kotoba-n3';
-import { familiesForCharacter } from './radical-core.js?v=20261014-kotoba-n3';
-import { componentNoteMarkup } from './component-note-view.js?v=20261014-kotoba-n3';
+import { KANJI } from './kanji-data.js?v=20261014-n5-pdf';
+import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-n5-pdf';
+import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-n5-pdf';
+import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-n5-pdf';
+import { groupsForCharacter } from './similar-core.js?v=20261014-n5-pdf';
+import { createSimilarView } from './similar-view.js?v=20261014-n5-pdf';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-n5-pdf';
+import { familiesForCharacter } from './radical-core.js?v=20261014-n5-pdf';
+import { componentNoteMarkup } from './component-note-view.js?v=20261014-n5-pdf';
 
-import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-kotoba-n3';
-import { READING_HISTORY_KEY, cleanReadingHistory, recordReadingShown, readingHistorySummary } from './reading-history.js?v=20261014-kotoba-n3';
-import { readingOptions } from './reading-options.js?v=20261014-kotoba-n3';
+import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-n5-pdf';
+import { READING_HISTORY_KEY, cleanReadingHistory, recordReadingShown, readingHistorySummary } from './reading-history.js?v=20261014-n5-pdf';
+import { readingOptions } from './reading-options.js?v=20261014-n5-pdf';
 
-import { createWritingQuiz } from './writing-core.js?v=20261014-kotoba-n3';
-import { READING_MODE_NAMES, usesSentence, quizPromptMarkup } from './quiz-prompt.js?v=20261014-kotoba-n3';
-import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-kotoba-n3';
+import { createWritingQuiz } from './writing-core.js?v=20261014-n5-pdf';
+import { READING_MODE_NAMES, usesSentence, quizPromptMarkup } from './quiz-prompt.js?v=20261014-n5-pdf';
+import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-n5-pdf';
 
-import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-kotoba-n3';
-import { requestedQuizCount } from './quiz-settings.js?v=20261014-kotoba-n3';
-import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-kotoba-n3';
-import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-kotoba-n3';
-import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-kotoba-n3';
-import { createKotobaView } from './kotoba-view.js?v=20261014-kotoba-n3';
-import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261014-kotoba-n3';
+import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-n5-pdf';
+import { requestedQuizCount } from './quiz-settings.js?v=20261014-n5-pdf';
+import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-n5-pdf';
+import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-n5-pdf';
+import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-n5-pdf';
+import { createKotobaView } from './kotoba-view.js?v=20261014-n5-pdf';
+import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261014-n5-pdf';
 
 const paths = {
   speaker:'<path d="m11 4-5 4H3v8h3l5 4zM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>',
@@ -203,10 +203,10 @@ function quizIntro(mode, pool, level) {
   }
   if(!practiceBanks[mode] || !pool.length)return '';
   const isWriting=mode!=='jlpt-reading';
-  const sample=mode==='jlpt-reading' ? pool.find(q=>q.word==='先週') || pool.find(q=>readingOptions(q,()=>0.5).readingAlternatives.length) || pool[0] : pool[0];
+  const sample=mode==='jlpt-reading' ? pool.find(q=>q.id==='n5-pdf-1-1') || pool.find(q=>q.word==='先週') || pool.find(q=>readingOptions(q,()=>0.5).readingAlternatives.length) || pool[0] : pool[0];
   const isEnglish=mode==='english-katakana';
   const title=mode==='hiragana-kanji' ? 'Teliti bentuknya.<br> Kenali kanjinya.' : isEnglish ? 'Dari kata Inggris,<br> kenali katakananya.' : 'Baca kalimatnya.<br> Kenali bacaannya.';
-  const description=isEnglish ? 'Baca kata Inggris, lalu pilih kosakata katakana yang sesuai maknanya. Perhatikan bentuk huruf, tanda panjang, dan kana kecil. Arti dan contoh kalimat muncul setelah menjawab.' : isWriting ? 'Baca bagian bergaris bawah, lalu pilih penulisan yang tepat. Arti kata dan kalimat akan muncul setelah kamu menjawab.' : 'Setiap soal berisi satu kalimat. Pilih bacaan hiragana untuk kata bergaris bawah, seperti latihan JLPT. Setelah menjawab, pahami arti kata, terjemahan kalimat, dan bacaan kanjinya.';
+  const description=isEnglish ? 'Baca kata Inggris, lalu pilih kosakata katakana yang sesuai maknanya. Perhatikan bentuk huruf, tanda panjang, dan kana kecil. Arti dan contoh kalimat muncul setelah menjawab.' : isWriting ? 'Baca bagian bergaris bawah, lalu pilih penulisan yang tepat. Arti kata dan kalimat akan muncul setelah kamu menjawab.' : 'Kalimat boleh memuat beberapa kanji. Pilih bacaan hiragana hanya untuk bagian bergaris bawah. Setelah menjawab, pelajari arti kata, terjemahan kalimat, dan bacaan kanjinya.';
   const options=isWriting ? [sample.answer,...sample.distractors] : readingOptions(sample,()=>0.5).options;
   const example=mode==='jlpt-reading' ? `<p class="reading-example-sentence" lang="ja">${quizPromptMarkup(sample,mode,escape)}</p>` : `<strong lang="${isEnglish ? 'en' : 'ja'}" class="${isEnglish ? 'english-cue' : ''}">${escape(sample.prompt)}</strong>${sample.sentence && !isEnglish ? `<p class="quiz-example-context" lang="ja">${escape(sample.sentence.replace('{target}',sample.prompt))}</p>` : ''}`;
   return `<div><span class="reading-label">${pool.length} SOAL TERSEDIA · ${level==='all' ? 'SEMUA LEVEL' : level}</span><h3>${title}</h3><p>${description}</p><div class="reading-tags"><span>${mode==='jlpt-reading' ? 'Kalimat · kata bergaris bawah' : 'Materi otomatis'}</span><span>Arti kata & kalimat</span></div></div><div class="reading-example ${isWriting ? 'writing-example' : ''}"><span>CONTOH ${sample.level} · ${isWriting ? 'PILIH TULISANNYA' : 'PILIH BACAAN KATA BERGARIS BAWAH'}</span>${example}<div class="reading-example-options" lang="ja">${options.map(a=>`<span>${escape(a)}</span>`).join('')}</div></div>`;
@@ -230,7 +230,7 @@ function quizNote() {
   document.querySelector('#quiz-custom-field').hidden=countChoice!=='custom';
   document.querySelector('#quiz-count-error').hidden=!invalid;
   document.querySelector('#quiz-custom-count').setAttribute('aria-invalid',String(invalid));
-  document.querySelector('#quiz-level-note').textContent=mode==='jlpt-reading' ? 'Semua soal memakai kalimat dengan satu kata target. Level mengikuti kosakata pada sumber belajar. Bacaan hitungan dan tanggal termasuk latihan dasar N5.' : mode==='reading' ? 'Soal berupa satu kata atau kanji, tanpa kalimat. Arti Indonesia muncul setelah menjawab. Level mengikuti kanji tersulit dalam kata di katalog.' : mode==='english-katakana' ? 'Level mengikuti sumber kosakata dan pengelompokan latihan tambahan. Pilih padanan katakana yang digunakan dalam bahasa Jepang; bunyinya bisa berbeda dari bahasa Inggris.' : 'Materi otomatis mengikuti level kanji di katalog. Untuk kata gabungan, levelnya mengikuti kanji tersulit dalam kata tersebut.';
+  document.querySelector('#quiz-level-note').textContent=mode==='jlpt-reading' ? 'Hanya bagian bergaris bawah yang ditanyakan. N5 memakai kosakata dasar N5 / Minna no Nihongo I (bab 1–25), termasuk hitungan dan tanggal. Arti kata dan kalimat tampil setelah menjawab.' : mode==='reading' ? 'Soal berupa satu kata atau kanji, tanpa kalimat. Arti Indonesia muncul setelah menjawab. Level mengikuti kanji tersulit dalam kata di katalog.' : mode==='english-katakana' ? 'Level mengikuti sumber kosakata dan pengelompokan latihan tambahan. Pilih padanan katakana yang digunakan dalam bahasa Jepang; bunyinya bisa berbeda dari bahasa Inggris.' : 'Materi otomatis mengikuti level kanji di katalog. Untuk kata gabungan, levelnya mengikuti kanji tersulit dalam kata tersebut.';
   document.querySelector('#quiz-intro').hidden=!practiceBanks[mode] && mode!=='reading';
   document.querySelector('#quiz-intro').innerHTML=quizIntro(mode,pool,level);
   if(mode==='jlpt-reading'){

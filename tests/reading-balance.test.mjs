@@ -9,6 +9,7 @@ import { READING_METADATA } from '../reading-metadata.js';
 import { getQuizPool } from '../practice-banks.js';
 import { selectReadingQuestions, readingComposition } from '../reading-balance.js';
 import { createReadingQuiz } from '../jlpt-reading-core.js';
+import {N5_CONTEXT_OVERRIDES} from '../n5-reading-data.js';
 
 const levels=['N5','N4','N3','N2','N1'];
 const categories=['noun','verb','adjective','adverb'];
@@ -50,12 +51,16 @@ test('200 reviewed vocabulary entries retain source readings, levels, and gramma
 
 test('all previous questions remain and ordinary vocabulary returns to its source level',()=>{
   const pool=getQuizPool('jlpt-reading');
-  assert.equal(pool.length,464);
+  assert.equal(pool.length,663);
   for(const q of [...JLPT_READINGS,...SIMILAR_READING,...SPECIAL_READINGS]){
     const current=pool.find(p=>practiceQuestionKey(p)===practiceQuestionKey(q));
     assert.ok(current,`missing old question: ${q.word}`);
     assert.equal(current.level,q.level,q.word);
-    if(q.sentence){assert.equal(current.sentence,q.sentence);assert.equal(current.sentenceMeaning,q.sentenceMeaning);}
+    if(q.sentence){
+      const override=q.level==='N5' && N5_CONTEXT_OVERRIDES[q.word];
+      assert.equal(current.sentence,override?.[0] || q.sentence);
+      assert.equal(current.sentenceMeaning,override?.[1] || q.sentenceMeaning);
+    }
   }
   for(const word of ['先週','勉強','病院','郵便局','図書館','誕生日','授業'])assert.ok(getQuizPool('jlpt-reading','N5').some(q=>q.word===word),word);
   for(const level of levels){

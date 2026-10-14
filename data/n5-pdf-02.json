@@ -1,0 +1,22 @@
+[
+ [1,"大きい","おおきい","Besar","あなたのカメラは{target}ですか。","Apakah kamera Anda besar?",["ちいさい","ちかい","おおい"],"adjective"],
+ [2,"白い","しろい","Putih","{target}花を買いました。","Saya membeli bunga putih.",["くろい","あかい","あおい"],"adjective"],
+ [3,"荷物","にもつ","Barang bawaan; paket","{target}を送ります。","Saya mengirim paket.",["におの","にぶつ","につか"],"noun"],
+ [4,"食べ物","たべもの","Makanan","日本の{target}はおいしいです。","Makanan Jepang enak.",["たべもつ","たべぶつ","たへもの"],"noun"],
+ [5,"右","みぎ","Kanan","銀行の{target}に学校があります。","Ada sekolah di sebelah kanan bank.",["いし","ひだり","となり"],"noun"],
+ [6,"近く","ちかく","Dekat; sekitar","郵便局はスーパーの{target}にあります。","Kantor pos berada di dekat supermarket.",["おおく","ちいさく","おおきく"],"noun"],
+ [7,"後ろ","うしろ","Belakang","駅の前に白いビルがあります。そして駅の{target}に大きいデパートがあります。","Di depan stasiun ada gedung putih. Di belakang stasiun ada toserba besar.",["あとろ","ごろ","まえろ"],"noun"],
+ [8,"手紙","てがみ","Surat","テーブルの上に{target}があります。","Ada surat di atas meja.",["しゅかみ","でかみ","しゅがみ"],"noun"],
+ [9,"犬","いぬ","Anjing","男の子と女の子の間に{target}がいます。","Ada anjing di antara anak laki-laki dan anak perempuan.",["ねこ","ねずみ","か"],"noun"],
+ [10,"中","なか","Dalam","スーパーの{target}に花の店があります。","Ada toko bunga di dalam supermarket.",["ちゅう","よる","なま"],"noun"],
+ [11,"黒い","くろい","Hitam","木の下に{target}いすがあります。","Ada kursi hitam di bawah pohon.",["あかい","しろい","あおい"],"adjective"],
+ [12,"左","ひだり","Kiri","エレベーターの{target}にとけい売り場があります。","Bagian penjualan jam ada di sebelah kiri lift.",["みぎ","となり","した"],"noun"],
+ [13,"外","そと","Luar","家の{target}にだれかいます。","Ada seseorang di luar rumah.",["おく","まえ","なか"],"noun"],
+ [14,"早く","はやく","Pagi-pagi; lebih awal","朝{target}起きます。","Saya bangun pagi-pagi.",["ふるく","おもく","あたらしく"],"adverb"],
+ [15,"中国","ちゅうごく","Tiongkok","私は先月の十四日に{target}から日本へ来ました。","Saya datang ke Jepang dari Tiongkok pada tanggal empat belas bulan lalu.",["ちゅうこく","ちゅうくに","ちゅうなか"],"noun"],
+ [16,"上手","じょうず","Pandai; mahir","マリアさんはダンスが{target}です。私はダンスが下手です。","Maria pandai menari. Saya kurang pandai menari.",["うえて","へた","じょうしゅ"],"adjective"],
+ [17,"好き","すき","Suka","ミラーさんはどんな食べ物が{target}ですか。","Makanan seperti apa yang disukai Miller?",["おき","いき","はき"],"adjective"],
+ [18,"帰ります","かえります","Pulang","約束がありますから、今晩は早く{target}。","Karena ada janji, malam ini saya pulang lebih awal.",["かります","うります","はしります"],"verb"],
+ [19,"お金","おかね","Uang","細かい{target}があります。","Saya punya uang kecil.",["おきん","おぎん","おばん"],"noun"],
+ [20,"何人","なんにん","Berapa orang","家族は{target}ですか。","Ada berapa orang dalam keluarga Anda?",["なんじん","なんひと","なんびと"],"special"]
+]

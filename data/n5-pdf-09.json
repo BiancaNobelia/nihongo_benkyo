@@ -1,0 +1,22 @@
+[
+ [1,"お母さん","おかあさん","Ibu","ゆうさんの{target}は外国人に日本語をおしえています。","Ibu Yu mengajar bahasa Jepang kepada orang asing.",["おねえさん","おかさん","おばあさん"],"noun"],
+ [2,"外国人","がいこくじん","Orang asing","ゆうさんのお母さんは{target}に日本語をおしえています。","Ibu Yu mengajar bahasa Jepang kepada orang asing.",["かいこくじん","がいごくじん","がいこくしん"],"noun"],
+ [3,"日本語","にほんご","Bahasa Jepang","ゆうさんのお母さんは外国人に{target}をおしえています。","Ibu Yu mengajar bahasa Jepang kepada orang asing.",["にぼんご","にほんこ","にはんご"],"noun"],
+ [4,"毎週","まいしゅう","Setiap minggu","{target}日曜日に車をみがきます。","Saya mengilapkan mobil setiap hari Minggu.",["まいまつ","まいにち","まいねん"],"adverb"],
+ [5,"日曜日","にちようび","Minggu (hari)","毎週{target}に車をみがきます。","Saya mengilapkan mobil setiap hari Minggu.",["どようび","げつようび","もくようび"],"noun"],
+ [6,"車","くるま","Mobil","毎週日曜日に{target}をみがきます。","Saya mengilapkan mobil setiap hari Minggu.",["くりま","くらま","くろま"],"noun"],
+ [7,"同じ","おなじ","Sama","わたしと{target}国から来た人を知っています。","Saya mengenal orang yang berasal dari negara yang sama dengan saya.",["どうじ","そうじ","おうじ"],"adjective"],
+ [8,"知って","しって","Tahu; kenal (bentuk te)","わたしと同じ国から来た人を{target}います。","Saya mengenal orang yang berasal dari negara yang sama dengan saya.",["ちって","とって","つって"],"verb"],
+ [9,"赤い","あかい","Merah","この{target}花を六本ください。","Tolong beri saya enam tangkai bunga merah ini.",["あおい","くろい","しろい"],"adjective"],
+ [10,"花","はな","Bunga","この赤い{target}を六本ください。","Tolong beri saya enam tangkai bunga merah ini.",["かな","ばな","あな"],"noun"],
+ [11,"六本","ろっぽん","Enam batang; enam tangkai","この赤い花を{target}ください。","Tolong beri saya enam tangkai bunga merah ini.",["ろくほん","ろくぼん","ろぐほん"],"special"],
+ [12,"駅","えき","Stasiun","{target}の東がわは小さい店がたくさんならんでにぎやかです。","Di sebelah timur stasiun, banyak toko kecil berderet dan suasananya ramai.",["はし","うち","まち"],"noun"],
+ [13,"東がわ","ひがしがわ","Sebelah timur","駅の{target}は小さい店がたくさんならんでにぎやかです。","Di sebelah timur stasiun, banyak toko kecil berderet dan suasananya ramai.",["にしがわ","きたがわ","みなみがわ"],"noun"],
+ [14,"小さい","ちいさい","Kecil","駅の東がわは{target}店がたくさんならんでにぎやかです。","Di sebelah timur stasiun, banyak toko kecil berderet dan suasananya ramai.",["ちさい","ちいざい","みせ"],"adjective"],
+ [15,"店","みせ","Toko","駅の東がわは小さい{target}がたくさんならんでにぎやかです。","Di sebelah timur stasiun, banyak toko kecil berderet dan suasananya ramai.",["てん","ところ","もの"],"noun"],
+ [16,"赤い","あかい","Merah","あの{target}時計はわたしのです。","Jam merah itu milik saya.",["あがい","あっかい","あかっい"],"adjective"],
+ [17,"時計","とけい","Jam","あの赤い{target}はわたしのです。","Jam merah itu milik saya.",["とけえ","とうけ","とうけい"],"noun"],
+ [18,"先生","せんせい","Guru","{target}、お元気ですか。","Bapak/Ibu Guru, apa kabar?",["せんせえ","せんせ","せせい"],"noun"],
+ [19,"元気","げんき","Sehat; bersemangat","先生、お{target}ですか。","Bapak/Ibu Guru, apa kabar?",["げきい","けんき","げんきい"],"adjective"],
+ [20,"高い","たかい","Mahal","あの大きいかばんは{target}です。","Tas besar itu mahal.",["たがい","かたい","かだい"],"adjective"]
+]

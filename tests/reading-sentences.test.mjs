@@ -8,24 +8,25 @@ import {READING_SENTENCES, withReadingSentence} from '../reading-sentences.js';
 import {usesSentence, quizPromptMarkup} from '../quiz-prompt.js';
 import {answerDetails, answerDetailsMarkup} from '../quiz-feedback.js';
 import {readingQuestionKey, recordReadingShown} from '../reading-history.js';
+import {N5_CONTEXT_OVERRIDES} from '../n5-reading-data.js';
 
 const escape=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const seeded=seed=>()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);
 
-test('all 464 JLPT questions have one contextual sentence and an Indonesian translation',()=>{
+test('all 663 JLPT questions have one target in context and an Indonesian translation',()=>{
   const pool=getQuizPool('jlpt-reading');
-  assert.equal(pool.length,464);
+  assert.equal(pool.length,663);
   assert.equal(READING_SENTENCES.size,282);
   for(const q of pool){
     assert.equal(q.sentence.split('{target}').length,2,q.word);
-    assert.equal((q.sentence.match(/[。？！]/g)||[]).length,1,`${q.word}: sentence punctuation`);
+    assert.ok((q.sentence.match(/[。？！]/g)||[]).length>=1,`${q.word}: sentence punctuation`);
     assert.ok(q.sentence.replace('{target}','').trim().length>=5,q.word);
     assert.ok(q.sentenceMeaning.length>10,q.word);
   }
   for(const [word,context] of READING_SENTENCES){
     const q=pool.find(q=>q.word===word);
     assert.ok(q,`orphaned sentence: ${word}`);
-    assert.equal(q.sentence,context.sentence);
+    assert.equal(q.sentence,N5_CONTEXT_OVERRIDES[word]?.[0] || context.sentence);
     // No isolated target reading written as a separate word in the context.
     const tokens=context.sentence.replace('{target}',' ').split(/[\s、。？！]+/u);
     assert.ok(!tokens.includes(q.reading),`${word}: answer leaked into context`);
@@ -79,7 +80,7 @@ test('new sentences preserve previous exposure identities and the two date conte
   const old={...school}; delete old.sentence; delete old.sentenceMeaning;
   assert.equal(readingQuestionKey(old),readingQuestionKey(school));
   const history=recordReadingShown({},old);
-  assert.ok(createReadingQuiz(pool,50,seeded(1),history).every(q=>q.prompt!=='学校'));
+  assert.ok(createReadingQuiz(pool,50,seeded(1),history).every(q=>readingQuestionKey(q)!==readingQuestionKey(school)));
   const dates=createReadingQuiz(pool.filter(q=>q.word==='1日'),2,seeded(1));
   assert.equal(new Set(dates.map(q=>q.sentence)).size,2);
   assert.deepEqual(new Set(dates.map(q=>q.answer)),new Set(['ついたち','いちにち']));

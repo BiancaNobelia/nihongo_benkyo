@@ -1,0 +1,21 @@
+[
+ [1,"南","みなみ","Selatan","駅の前でバスを降ります。そして、{target}のほうへ100メートルぐらい行ってください。左がわに大きいホテルがあります。","Turunlah dari bus di depan stasiun, lalu berjalanlah sekitar 100 meter ke selatan. Ada hotel besar di sebelah kiri.",["きた","にし","ひがし"],"noun"],
+ [2,"行って","いって","Pergi (bentuk te)","駅の前でバスを降ります。そして、南のほうへ100メートルぐらい{target}ください。左がわに大きいホテルがあります。","Turunlah dari bus di depan stasiun, lalu berjalanlah sekitar 100 meter ke selatan. Ada hotel besar di sebelah kiri.",["はしって","はいって","おこなって"],"verb"],
+ [3,"左","ひだり","Kiri","駅の前でバスを降ります。そして、南のほうへ100メートルぐらい行ってください。{target}がわに大きいホテルがあります。","Turunlah dari bus di depan stasiun, lalu berjalanlah sekitar 100 meter ke selatan. Ada hotel besar di sebelah kiri.",["みぎ","いし","ひたり"],"noun"],
+ [4,"大きい","おおきい","Besar","駅の前でバスを降ります。そして、南のほうへ100メートルぐらい行ってください。左がわに{target}ホテルがあります。","Turunlah dari bus di depan stasiun, lalu berjalanlah sekitar 100 meter ke selatan. Ada hotel besar di sebelah kiri.",["たかい","おおい","ひろい"],"adjective"],
+ [5,"父","ちち","Ayah (sendiri)","{target}の誕生日にネクタイをあげます。","Saya memberikan dasi pada hari ulang tahun ayah.",["はは","あね","あに"],"noun"],
+ [6,"誕生日","たんじょうび","Ulang tahun","父の{target}にネクタイをあげます。","Saya memberikan dasi pada hari ulang tahun ayah.",["たんしょうび","たんじょうにち","たんじょび"],"noun"],
+ [7,"雨","あめ","Hujan","{target}の日は、アパートの部屋で音楽を聞きます。","Pada hari hujan, saya mendengarkan musik di kamar apartemen.",["ゆき","でん","あま"],"noun"],
+ [8,"部屋","へや","Kamar; ruangan","雨の日は、アパートの{target}で音楽を聞きます。","Pada hari hujan, saya mendengarkan musik di kamar apartemen.",["ぶや","へおく","へいえ"],"noun"],
+ [9,"聞きます","ききます","Mendengarkan","雨の日は、アパートの部屋で音楽を{target}。","Pada hari hujan, saya mendengarkan musik di kamar apartemen.",["ひきます","あきます","もんきます"],"verb"],
+ [10,"天気","てんき","Cuaca","いい{target}ですから、外で食べましょう。","Karena cuacanya bagus, mari makan di luar.",["でんき","たいき","げんき"],"noun"],
+ [11,"外で","そとで","Di luar","いい天気ですから、{target}食べましょう。","Karena cuacanya bagus, mari makan di luar.",["うえで","となりで","ちかで"],"noun"],
+ [12,"食べ","たべ","Makan (pangkal bentuk masu)","いい天気ですから、外で{target}ましょう。","Karena cuacanya bagus, mari makan di luar.",["のべ","くちべ","はんべ"],"verb"],
+ [13,"今年","ことし","Tahun ini","{target}の夏休みには国から父が来ます。","Pada liburan musim panas tahun ini, ayah akan datang dari negara asal saya.",["らいねん","きょねん","こどし"],"noun"],
+ [14,"休み","やすみ","Liburan; istirahat","今年の夏{target}には国から父が来ます。","Pada liburan musim panas tahun ini, ayah akan datang dari negara asal saya.",["ほんみ","きみ","たいみ"],"noun"],
+ [15,"父","ちち","Ayah (sendiri)","今年の夏休みには国から{target}が来ます。","Pada liburan musim panas tahun ini, ayah akan datang dari negara asal saya.",["はは","あに","おとうと"],"noun"],
+ [16,"今日","きょう","Hari ini","{target}は一日中雨が降っていましたから、本を読んでいました。","Hari ini hujan turun sepanjang hari, jadi saya menghabiskan waktu dengan membaca buku.",["まいにち","あした","きょねん"],"noun"],
+ [17,"一日中","いちにちじゅう","Sepanjang hari","今日は{target}雨が降っていましたから、本を読んでいました。","Hari ini hujan turun sepanjang hari, jadi saya menghabiskan waktu dengan membaca buku.",["いちにちかん","ついたちじゅう","いちにちちゅう"],"special"],
+ [18,"雨","あめ","Hujan","今日は一日中{target}が降っていましたから、本を読んでいました。","Hari ini hujan turun sepanjang hari, jadi saya menghabiskan waktu dengan membaca buku.",["ゆき","くも","かみなり"],"noun"],
+ [19,"読んで","よんで","Membaca (bentuk te)","今日は一日中雨が降っていましたから、本を{target}いました。","Hari ini hujan turun sepanjang hari, jadi saya menghabiskan waktu dengan membaca buku.",["はなんで","ごんで","きんで"],"verb"]
+]

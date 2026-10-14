@@ -1,0 +1,22 @@
+[
+ [1,"兄","あに","Kakak laki-laki (sendiri)","{target}は会社員です。弟は大学生です。","Kakak laki-laki saya karyawan perusahaan. Adik laki-laki saya mahasiswa.",["おに","あね","おね"],"noun"],
+ [2,"一週間","いっしゅうかん","Satu minggu","あの兄弟は{target}に二回サッカーをします。","Kakak beradik itu bermain sepak bola dua kali seminggu.",["いちしゅうかん","いっしゅかん","いちしゅかん"],"special"],
+ [3,"春","はる","Musim semi","{target}と秋とどちらがすきですか。","Anda lebih suka musim semi atau musim gugur?",["あき","なつ","ふゆ"],"noun"],
+ [4,"姉","あね","Kakak perempuan (sendiri)","夏休みに{target}と国へ帰ります。","Saat liburan musim panas, saya pulang ke negara asal bersama kakak perempuan.",["いもうと","おとうと","あに"],"noun"],
+ [5,"寒く","さむく","Dingin (cuaca; bentuk sambung)","今年の冬はあまり{target}なかったです。","Musim dingin tahun ini tidak terlalu dingin.",["あつく","うすく","つめたく"],"adjective"],
+ [6,"天気","てんき","Cuaca","きのうの{target}はあまりよくなかったです。","Cuaca kemarin kurang baik.",["げんき","でんき","ねんき"],"noun"],
+ [7,"少し","すこし","Sedikit","ケーキを{target}食べました。","Saya makan sedikit kue.",["すし","こし","おし"],"adverb"],
+ [8,"お姉さん","おねえさん","Kakak perempuan","ワンさんの{target}は元気な人です。","Kakak perempuan Wang adalah orang yang penuh semangat.",["おにいさん","おとうさん","おいもとさん"],"noun"],
+ [9,"多い","おおい","Banyak","東京はニューヨークより人が{target}ですか、少ないですか。","Apakah penduduk Tokyo lebih banyak atau lebih sedikit daripada New York?",["おいしい","たのしい","ちかい"],"adjective"],
+ [10,"お兄さん","おにいさん","Kakak laki-laki","マリアさんの{target}は一ヶ月に三回映画を見ます。","Kakak laki-laki Maria menonton film tiga kali sebulan.",["おにさん","おあにさん","おあにいさん"],"noun"],
+ [11,"外国人","がいこくじん","Orang asing","この学校に{target}が何人いますか。","Ada berapa orang asing di sekolah ini?",["がいこくにん","がいくにじん","がいくににん"],"noun"],
+ [12,"駅","えき","Stasiun","{target}まで歩いて何分かかりますか。","Berapa menit waktu yang diperlukan untuk berjalan kaki ke stasiun?",["とり","えだ","おき"],"noun"],
+ [13,"入りません","はいりません","Tidak masuk (dalam ajakan: mau masuk?)","喫茶店に{target}か。","Bagaimana kalau kita masuk ke kedai kopi?",["いりません","はしりません","おどりません"],"verb"],
+ [14,"窓","まど","Jendela","{target}を開けましょうか。","Bolehkah saya membukakan jendela?",["くつ","かさ","て"],"noun"],
+ [15,"来週","らいしゅう","Minggu depan","{target}近くの山へ遊びにいきます。","Minggu depan saya pergi bermain ke gunung di dekat sini.",["せんしゅう","こんしゅう","さらいしゅう"],"noun"],
+ [16,"広い","ひろい","Luas","世界でどこの国が一番{target}ですか。","Negara mana yang paling luas di dunia?",["くろい","ひくい","ふかい"],"adjective"],
+ [17,"川","かわ","Sungai","毎日兄といっしょに{target}へ釣りにいきます。","Setiap hari saya pergi memancing ke sungai bersama kakak laki-laki.",["けん","わん","がん"],"noun"],
+ [18,"英語","えいご","Bahasa Inggris","妹は来年の春イギリスへ{target}の勉強に行きます。","Adik perempuan saya akan pergi ke Inggris untuk belajar bahasa Inggris pada musim semi tahun depan.",["えご","えいが","えか"],"noun"],
+ [19,"映画","えいが","Film","今リーさんの家族は{target}を見ています。","Sekarang keluarga Lee sedang menonton film.",["まんが","はがき","えいご"],"noun"],
+ [20,"お茶","おちゃ","Teh","冷たい{target}が飲みたいです。","Saya ingin minum teh dingin.",["おぱん","おなか","おゆ"],"noun"]
+]

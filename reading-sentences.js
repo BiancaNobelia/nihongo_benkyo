@@ -1,9 +1,9 @@
 // Original practice sentences and Indonesian translations, written 2026-10-14.
 // The supplied Kanji123 PDF is a format reference; its questions are not copied.
 // Surrounding kana keep the exercise focused on the single underlined target.
-import { SIMILAR_VOCABULARY } from './similar-quiz-data.js?v=20261014-kotoba-n3';
-import { SPECIAL_READINGS } from './special-reading-data.js?v=20261014-kotoba-n3';
-import { readingQuestionKey } from './reading-history.js?v=20261014-kotoba-n3';
+import { SIMILAR_VOCABULARY } from './similar-quiz-data.js?v=20261014-n5-pdf';
+import { SPECIAL_READINGS } from './special-reading-data.js?v=20261014-n5-pdf';
+import { readingQuestionKey } from './reading-history.js?v=20261014-n5-pdf';
 
 const SENTENCES = [
   // N5

@@ -1,0 +1,22 @@
+[
+ [1,"本屋","ほんや","Toko buku","あの{target}はきょう休みますか。","Apakah toko buku itu tutup hari ini?",["はんや","ばんや","ぼんや"],"noun"],
+ [2,"電話","でんわ","Telepon","カリナさんは事務所で{target}をかけている人です。","Karina adalah orang yang sedang menelepon di kantor.",["てんわ","でんき","でんしゃ"],"noun"],
+ [3,"着て","きて","Memakai pakaian (bentuk te)","マリアさんは赤いセーターを{target}いる人です。","Maria adalah orang yang memakai sweter merah.",["つて","して","たて"],"verb"],
+ [4,"生まれた","うまれた","Lahir (bentuk lampau)","私が{target}所は横浜です。","Tempat saya lahir adalah Yokohama.",["なまれた","はまれた","いまれた"],"verb"],
+ [5,"先生","せんせい","Guru","{target}の話はおもしろかったです。","Cerita guru tadi menarik.",["せいと","せんそう","さきなま"],"noun"],
+ [6,"来る","くる","Datang","あしたのパーティーに{target}でしょう。","Anda akan datang ke pesta besok, kan?",["さる","える","きる"],"verb"],
+ [7,"足りない","たりない","Tidak cukup","父はお金が{target}と言いました。","Ayah mengatakan uangnya tidak cukup.",["かりない","ありない","はりない"],"verb"],
+ [8,"七万円","ななまんえん","Tujuh puluh ribu yen","このアパートのやちんは一ヶ月{target}です。","Sewa apartemen ini tujuh puluh ribu yen per bulan.",["ろくまんえん","はちまんえん","きゅうまんえん"],"special"],
+ [9,"服","ふく","Pakaian","お正月に国へ帰ったとき、{target}を買いました。","Saat pulang ke negara asal pada Tahun Baru, saya membeli pakaian.",["かさ","はこ","かし"],"noun"],
+ [10,"道","みち","Jalan","{target}を渡るとき、車に気をつけます。","Saat menyeberang jalan, saya berhati-hati terhadap mobil.",["はし","かわ","やま"],"noun"],
+ [11,"会いました","あいました","Bertemu (bentuk lampau)","駅へ行くとき、友達に{target}。","Saat pergi ke stasiun, saya bertemu teman.",["ひろいました","おいました","かいました"],"verb"],
+ [12,"図書館","としょかん","Perpustakaan","{target}で本を借りるとき、何がいりますか。","Apa yang diperlukan ketika meminjam buku di perpustakaan?",["としょうかん","としょうがん","としょがん"],"noun"],
+ [13,"曲がる","まがる","Berbelok","右へ{target}と、銀行があります。","Jika berbelok ke kanan, ada bank.",["あがる","さがる","もがる"],"verb"],
+ [14,"建物","たてもの","Bangunan","美術館はどの{target}ですか。","Museum seni berada di bangunan yang mana?",["けんぶつ","たちぶつ","けんもの"],"noun"],
+ [15,"地図","ちず","Peta","彼は私に{target}をかいてくれました。","Dia menggambarkan peta untuk saya.",["あいず","ちす","あいす"],"noun"],
+ [16,"写真","しゃしん","Foto","私はカリナさんに{target}を見せてもらいました。","Karina memperlihatkan foto kepada saya.",["しんちょう","せいしん","しんけい"],"noun"],
+ [17,"動物","どうぶつ","Hewan","公園にどんな{target}がいますか。","Hewan apa saja yang ada di taman?",["しょくぶつ","せいぶつ","けんぶつ"],"noun"],
+ [18,"電車","でんしゃ","Kereta listrik","弟はこの{target}は速いと言いました。","Adik laki-laki saya mengatakan kereta ini cepat.",["でんわ","てんき","てんこう"],"noun"],
+ [19,"終わります","おわります","Selesai; berakhir","五時に仕事が{target}。","Pekerjaan selesai pukul lima.",["かわります","さわります","こわります"],"verb"],
+ [20,"時計","とけい","Jam","{target}が動かないとき、どうしますか。","Apa yang Anda lakukan ketika jam tidak berjalan?",["よけい","ゆうけい","じけい"],"noun"]
+]

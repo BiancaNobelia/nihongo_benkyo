@@ -1464,14 +1464,14 @@
       "readings": [
         "こんしゅう"
       ],
-      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%80%B1"
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BB%8A"
     },
     {
       "word": "来週",
       "readings": [
         "らいしゅう"
       ],
-      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%80%B1"
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9D%A5"
     },
     {
       "word": "学校",
@@ -1797,7 +1797,7 @@
       "readings": [
         "いりょう"
       ],
-      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%99%82"
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%8C%BB"
     },
     {
       "word": "印象",
@@ -2098,7 +2098,7 @@
       "readings": [
         "もくようび"
       ],
-      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%97%A5"
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9C%A8"
     },
     {
       "word": "自己",
@@ -2700,6 +2700,1448 @@
         "りゅうがくせい"
       ],
       "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%AD%A6"
+    },
+    {
+      "word": "学校",
+      "readings": [
+        "がっこう"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%AD%A6"
+    },
+    {
+      "word": "今晩",
+      "readings": [
+        "こんばん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BB%8A"
+    },
+    {
+      "word": "新聞",
+      "readings": [
+        "しんぶん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%96%B0"
+    },
+    {
+      "word": "午後",
+      "readings": [
+        "ごご"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%8D%88"
+    },
+    {
+      "word": "店",
+      "readings": [
+        "たな",
+        "てん",
+        "みせ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%BA%97"
+    },
+    {
+      "word": "見ます",
+      "readings": [
+        "みます"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%A6%8B"
+    },
+    {
+      "word": "水",
+      "readings": [
+        "すい",
+        "みず"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%B0%B4"
+    },
+    {
+      "word": "誕生日",
+      "readings": [
+        "たんじょうび"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%94%9F"
+    },
+    {
+      "word": "午前",
+      "readings": [
+        "ごぜん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%8D%88"
+    },
+    {
+      "word": "お母さん",
+      "readings": [
+        "おかあさん",
+        "おかーさん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%AF%8D"
+    },
+    {
+      "word": "お父さん",
+      "readings": [
+        "おとうさん",
+        "おとっさん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%88%B6"
+    },
+    {
+      "word": "昼ご飯",
+      "readings": [
+        "ひるごはん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%A3%AF"
+    },
+    {
+      "word": "傘",
+      "readings": [
+        "かさ",
+        "からかさ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%82%98"
+    },
+    {
+      "word": "高い",
+      "readings": [
+        "たかい",
+        "たかーい",
+        "たっかーい",
+        "たっけー"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%AB%98"
+    },
+    {
+      "word": "赤い",
+      "readings": [
+        "あかい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%B5%A4"
+    },
+    {
+      "word": "夜",
+      "readings": [
+        "や",
+        "よ",
+        "よる"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A4%9C"
+    },
+    {
+      "word": "安い",
+      "readings": [
+        "やすい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%AE%89"
+    },
+    {
+      "word": "飲みます",
+      "readings": [
+        "のみます"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%A3%B2"
+    },
+    {
+      "word": "晩ご飯",
+      "readings": [
+        "ばんごはん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%A3%AF"
+    },
+    {
+      "word": "大きい",
+      "readings": [
+        "おおきい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A4%A7"
+    },
+    {
+      "word": "白い",
+      "readings": [
+        "しろい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%99%BD"
+    },
+    {
+      "word": "荷物",
+      "readings": [
+        "にもつ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%89%A9"
+    },
+    {
+      "word": "食べ物",
+      "readings": [
+        "たべもの"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%A3%9F"
+    },
+    {
+      "word": "右",
+      "readings": [
+        "みぎ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%8F%B3"
+    },
+    {
+      "word": "近く",
+      "readings": [
+        "ちかく"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%BF%91"
+    },
+    {
+      "word": "後ろ",
+      "readings": [
+        "うしろ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%BE%8C"
+    },
+    {
+      "word": "手紙",
+      "readings": [
+        "てがみ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%89%8B"
+    },
+    {
+      "word": "犬",
+      "readings": [
+        "いぬ",
+        "イヌ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%8A%AC"
+    },
+    {
+      "word": "中",
+      "readings": [
+        "うち",
+        "じゅう",
+        "ちゅう",
+        "ぢゅう",
+        "なか",
+        "チュン"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%B8%AD"
+    },
+    {
+      "word": "黒い",
+      "readings": [
+        "くろい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%BB%92"
+    },
+    {
+      "word": "左",
+      "readings": [
+        "さ",
+        "ひだり"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%B7%A6"
+    },
+    {
+      "word": "外",
+      "readings": [
+        "がい",
+        "そと",
+        "と",
+        "ほか",
+        "よそ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A4%96"
+    },
+    {
+      "word": "早く",
+      "readings": [
+        "はやく"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%97%A9"
+    },
+    {
+      "word": "中国",
+      "readings": [
+        "ちゅうこく",
+        "ちゅうごく"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%B8%AD"
+    },
+    {
+      "word": "上手",
+      "readings": [
+        "うわて",
+        "かみて",
+        "じょうしゅ",
+        "じょうず",
+        "じょうて"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%B8%8A"
+    },
+    {
+      "word": "好き",
+      "readings": [
+        "すき",
+        "ずき"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A5%BD"
+    },
+    {
+      "word": "帰ります",
+      "readings": [
+        "かえります"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%B8%B0"
+    },
+    {
+      "word": "お金",
+      "readings": [
+        "おかね"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%87%91"
+    },
+    {
+      "word": "兄",
+      "readings": [
+        "あに",
+        "けい",
+        "このかみ",
+        "にい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%85%84"
+    },
+    {
+      "word": "春",
+      "readings": [
+        "はる"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%98%A5"
+    },
+    {
+      "word": "姉",
+      "readings": [
+        "あね",
+        "し",
+        "ねえ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A7%89"
+    },
+    {
+      "word": "寒く",
+      "readings": [
+        "さむく"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%AF%92"
+    },
+    {
+      "word": "天気",
+      "readings": [
+        "てんき"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A4%A9"
+    },
+    {
+      "word": "少し",
+      "readings": [
+        "すこし"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%B0%91"
+    },
+    {
+      "word": "お姉さん",
+      "readings": [
+        "おねいさん",
+        "おねえさん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A7%89"
+    },
+    {
+      "word": "多い",
+      "readings": [
+        "おおい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A4%9A"
+    },
+    {
+      "word": "お兄さん",
+      "readings": [
+        "おにいさん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%85%84"
+    },
+    {
+      "word": "外国人",
+      "readings": [
+        "がいこくじん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A4%96"
+    },
+    {
+      "word": "駅",
+      "readings": [
+        "えき"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%A7%85"
+    },
+    {
+      "word": "入りません",
+      "readings": [
+        "はいりません"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%85%A5"
+    },
+    {
+      "word": "窓",
+      "readings": [
+        "まど"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%AA%93"
+    },
+    {
+      "word": "来週",
+      "readings": [
+        "らいしゅう"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9D%A5"
+    },
+    {
+      "word": "広い",
+      "readings": [
+        "ひろい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%BA%83"
+    },
+    {
+      "word": "川",
+      "readings": [
+        "かわ",
+        "がわ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%B7%9D"
+    },
+    {
+      "word": "英語",
+      "readings": [
+        "えいご"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%8B%B1"
+    },
+    {
+      "word": "映画",
+      "readings": [
+        "えいが"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%98%A0"
+    },
+    {
+      "word": "お茶",
+      "readings": [
+        "おちゃ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%8C%B6"
+    },
+    {
+      "word": "弟",
+      "readings": [
+        "おと",
+        "おとうと",
+        "おとと",
+        "てい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%BC%9F"
+    },
+    {
+      "word": "海",
+      "readings": [
+        "うみ",
+        "み",
+        "わた",
+        "わだ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%B5%B7"
+    },
+    {
+      "word": "長い",
+      "readings": [
+        "ながい",
+        "ながーい",
+        "なげー",
+        "なっがい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%95%B7"
+    },
+    {
+      "word": "家族",
+      "readings": [
+        "かぞく"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%AE%B6"
+    },
+    {
+      "word": "立って",
+      "readings": [
+        "たって"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%AB%8B"
+    },
+    {
+      "word": "知って",
+      "readings": [
+        "しって"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%9F%A5"
+    },
+    {
+      "word": "魚",
+      "readings": [
+        "うお",
+        "さかな"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%AD%9A"
+    },
+    {
+      "word": "使って",
+      "readings": [
+        "つかって"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BD%BF"
+    },
+    {
+      "word": "住所",
+      "readings": [
+        "じゅうしょ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BD%8F"
+    },
+    {
+      "word": "父",
+      "readings": [
+        "かそ",
+        "かぞ",
+        "ちち",
+        "ちゃん",
+        "てて"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%88%B6"
+    },
+    {
+      "word": "顔",
+      "readings": [
+        "かお",
+        "かんばせ",
+        "がお"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%A1%94"
+    },
+    {
+      "word": "体",
+      "readings": [
+        "からだ",
+        "たい",
+        "てい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BD%93"
+    },
+    {
+      "word": "作って",
+      "readings": [
+        "つくって"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BD%9C"
+    },
+    {
+      "word": "口",
+      "readings": [
+        "く",
+        "くち",
+        "こう"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%8F%A3"
+    },
+    {
+      "word": "学校",
+      "readings": [
+        "がっこう"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%AD%A6"
+    },
+    {
+      "word": "目",
+      "readings": [
+        "め",
+        "もく"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%9B%AE"
+    },
+    {
+      "word": "買い物",
+      "readings": [
+        "かいもの",
+        "かいもん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%B2%B7"
+    },
+    {
+      "word": "新しい",
+      "readings": [
+        "あたらしい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%96%B0"
+    },
+    {
+      "word": "妹",
+      "readings": [
+        "いも",
+        "いもうと"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A6%B9"
+    },
+    {
+      "word": "借ります",
+      "readings": [
+        "かります"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%80%9F"
+    },
+    {
+      "word": "貸して",
+      "readings": [
+        "かして"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%B2%B8"
+    },
+    {
+      "word": "電気",
+      "readings": [
+        "でんき"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%9B%BB"
+    },
+    {
+      "word": "本",
+      "readings": [
+        "ほん",
+        "もと"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9C%AC"
+    },
+    {
+      "word": "富士山",
+      "readings": [
+        "ふじさん",
+        "ふじやま"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%B1%B1"
+    },
+    {
+      "word": "日本語",
+      "readings": [
+        "にっぽんご",
+        "にほんご"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%97%A5"
+    },
+    {
+      "word": "高い",
+      "readings": [
+        "たかい",
+        "たかーい",
+        "たっかーい",
+        "たっけー"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%AB%98"
+    },
+    {
+      "word": "意見",
+      "readings": [
+        "いけん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%84%8F"
+    },
+    {
+      "word": "不便",
+      "readings": [
+        "ふびん",
+        "ふべん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BE%BF"
+    },
+    {
+      "word": "医者",
+      "readings": [
+        "いしゃ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%8C%BB"
+    },
+    {
+      "word": "病院",
+      "readings": [
+        "びょういん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%97%85"
+    },
+    {
+      "word": "同じ",
+      "readings": [
+        "おなじ",
+        "おんなし",
+        "おんなじ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%90%8C"
+    },
+    {
+      "word": "仕事",
+      "readings": [
+        "しごと"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BA%8B"
+    },
+    {
+      "word": "用事",
+      "readings": [
+        "ようじ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BA%8B"
+    },
+    {
+      "word": "食堂",
+      "readings": [
+        "しょくどう",
+        "じきどう"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%A3%9F"
+    },
+    {
+      "word": "会社",
+      "readings": [
+        "かいしゃ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BC%9A"
+    },
+    {
+      "word": "部屋",
+      "readings": [
+        "へや"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%83%A8"
+    },
+    {
+      "word": "店",
+      "readings": [
+        "たな",
+        "てん",
+        "みせ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%BA%97"
+    },
+    {
+      "word": "彼女",
+      "readings": [
+        "かのじょ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%BD%BC"
+    },
+    {
+      "word": "本屋",
+      "readings": [
+        "ほんおく",
+        "ほんや"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9C%AC"
+    },
+    {
+      "word": "電話",
+      "readings": [
+        "でんわ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%9B%BB"
+    },
+    {
+      "word": "着て",
+      "readings": [
+        "きて"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%9D%80"
+    },
+    {
+      "word": "生まれた",
+      "readings": [
+        "うまれた"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%94%9F"
+    },
+    {
+      "word": "先生",
+      "readings": [
+        "せんしょう",
+        "せんじょう",
+        "せんせい",
+        "ぜんじょう",
+        "シーサン"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%94%9F"
+    },
+    {
+      "word": "来る",
+      "readings": [
+        "きたる",
+        "くる",
+        "クる"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9D%A5"
+    },
+    {
+      "word": "足りない",
+      "readings": [
+        "たりない"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%B6%B3"
+    },
+    {
+      "word": "服",
+      "readings": [
+        "ふく",
+        "ぶく"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9C%8D"
+    },
+    {
+      "word": "道",
+      "readings": [
+        "ち",
+        "ぢ",
+        "どう",
+        "みち",
+        "タオ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%81%93"
+    },
+    {
+      "word": "会いました",
+      "readings": [
+        "あいました"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BC%9A"
+    },
+    {
+      "word": "図書館",
+      "readings": [
+        "ずしょかん",
+        "としょかん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9B%B8"
+    },
+    {
+      "word": "曲がる",
+      "readings": [
+        "まがる"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9B%B2"
+    },
+    {
+      "word": "建物",
+      "readings": [
+        "たてもの"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%89%A9"
+    },
+    {
+      "word": "地図",
+      "readings": [
+        "ちず"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%9C%B0"
+    },
+    {
+      "word": "写真",
+      "readings": [
+        "しゃしん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%86%99"
+    },
+    {
+      "word": "動物",
+      "readings": [
+        "どうぶつ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%89%A9"
+    },
+    {
+      "word": "電車",
+      "readings": [
+        "でんしゃ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%9B%BB"
+    },
+    {
+      "word": "終わります",
+      "readings": [
+        "おわります"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%B5%82"
+    },
+    {
+      "word": "時計",
+      "readings": [
+        "とけい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%99%82"
+    },
+    {
+      "word": "試験",
+      "readings": [
+        "しけん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%A8%93"
+    },
+    {
+      "word": "両親",
+      "readings": [
+        "ふたおや",
+        "りょうしん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%A6%AA"
+    },
+    {
+      "word": "考えて",
+      "readings": [
+        "かんがえて"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%80%83"
+    },
+    {
+      "word": "作文",
+      "readings": [
+        "さくぶん",
+        "さくもん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BD%9C"
+    },
+    {
+      "word": "親切",
+      "readings": [
+        "しんせつ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%A6%AA"
+    },
+    {
+      "word": "田舎",
+      "readings": [
+        "いなか",
+        "でんしゃ",
+        "でんじゃ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%94%B0"
+    },
+    {
+      "word": "留学生",
+      "readings": [
+        "りゅうがくせい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%AD%A6"
+    },
+    {
+      "word": "散歩",
+      "readings": [
+        "さんぽ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%AD%A9"
+    },
+    {
+      "word": "切手",
+      "readings": [
+        "きって",
+        "きれて"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%88%87"
+    },
+    {
+      "word": "大使館",
+      "readings": [
+        "たいしかん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A4%A7"
+    },
+    {
+      "word": "切る",
+      "readings": [
+        "きる",
+        "キる"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%88%87"
+    },
+    {
+      "word": "会議",
+      "readings": [
+        "かいぎ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BC%9A"
+    },
+    {
+      "word": "使った",
+      "readings": [
+        "つかった"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BD%BF"
+    },
+    {
+      "word": "手紙",
+      "readings": [
+        "てがみ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%89%8B"
+    },
+    {
+      "word": "木",
+      "readings": [
+        "き",
+        "もく"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9C%A8"
+    },
+    {
+      "word": "浴びて",
+      "readings": [
+        "あびて"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%B5%B4"
+    },
+    {
+      "word": "薬",
+      "readings": [
+        "くすり",
+        "やく",
+        "クスリ",
+        "ヤク"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%96%AC"
+    },
+    {
+      "word": "部長",
+      "readings": [
+        "ぶちょう"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%83%A8"
+    },
+    {
+      "word": "左",
+      "readings": [
+        "さ",
+        "ひだり"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%B7%A6"
+    },
+    {
+      "word": "右",
+      "readings": [
+        "みぎ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%8F%B3"
+    },
+    {
+      "word": "小さい",
+      "readings": [
+        "ちいさい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%B0%8F"
+    },
+    {
+      "word": "土曜日",
+      "readings": [
+        "どようび"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%9C%9F"
+    },
+    {
+      "word": "朝",
+      "readings": [
+        "あさ",
+        "あした",
+        "ちょう"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9C%9D"
+    },
+    {
+      "word": "雨",
+      "readings": [
+        "あめ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%9B%A8"
+    },
+    {
+      "word": "来て",
+      "readings": [
+        "きて"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9D%A5"
+    },
+    {
+      "word": "学校",
+      "readings": [
+        "がっこう"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%AD%A6"
+    },
+    {
+      "word": "銀行",
+      "readings": [
+        "ぎんこう"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%8A%80"
+    },
+    {
+      "word": "道",
+      "readings": [
+        "ち",
+        "ぢ",
+        "どう",
+        "みち",
+        "タオ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%81%93"
+    },
+    {
+      "word": "西",
+      "readings": [
+        "せい",
+        "にし",
+        "シャー"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%A5%BF"
+    },
+    {
+      "word": "左がわ",
+      "readings": [
+        "ひだりがわ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%B7%A6"
+    },
+    {
+      "word": "木",
+      "readings": [
+        "き",
+        "もく"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9C%A8"
+    },
+    {
+      "word": "下",
+      "readings": [
+        "か",
+        "げ",
+        "さがる",
+        "した",
+        "しも",
+        "もと"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%B8%8B"
+    },
+    {
+      "word": "聞きました",
+      "readings": [
+        "ききました"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%81%9E"
+    },
+    {
+      "word": "天気",
+      "readings": [
+        "てんき"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A4%A9"
+    },
+    {
+      "word": "北",
+      "readings": [
+        "きた",
+        "ペー"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%8C%97"
+    },
+    {
+      "word": "お母さん",
+      "readings": [
+        "おかあさん",
+        "おかーさん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%AF%8D"
+    },
+    {
+      "word": "外国人",
+      "readings": [
+        "がいこくじん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A4%96"
+    },
+    {
+      "word": "日本語",
+      "readings": [
+        "にっぽんご",
+        "にほんご"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%97%A5"
+    },
+    {
+      "word": "毎週",
+      "readings": [
+        "まいしゅう"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%80%B1"
+    },
+    {
+      "word": "日曜日",
+      "readings": [
+        "にちようび"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%97%A5"
+    },
+    {
+      "word": "車",
+      "readings": [
+        "くるま",
+        "しゃ",
+        "クルマ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%BB%8A"
+    },
+    {
+      "word": "同じ",
+      "readings": [
+        "おなじ",
+        "おんなし",
+        "おんなじ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%90%8C"
+    },
+    {
+      "word": "知って",
+      "readings": [
+        "しって"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%9F%A5"
+    },
+    {
+      "word": "赤い",
+      "readings": [
+        "あかい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%B5%A4"
+    },
+    {
+      "word": "花",
+      "readings": [
+        "はな"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%8A%B1"
+    },
+    {
+      "word": "駅",
+      "readings": [
+        "えき"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%A7%85"
+    },
+    {
+      "word": "東がわ",
+      "readings": [
+        "ひがしがわ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%9D%B1"
+    },
+    {
+      "word": "小さい",
+      "readings": [
+        "ちいさい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%B0%8F"
+    },
+    {
+      "word": "店",
+      "readings": [
+        "たな",
+        "てん",
+        "みせ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%BA%97"
+    },
+    {
+      "word": "赤い",
+      "readings": [
+        "あかい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%B5%A4"
+    },
+    {
+      "word": "時計",
+      "readings": [
+        "とけい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E6%99%82"
+    },
+    {
+      "word": "先生",
+      "readings": [
+        "せんしょう",
+        "せんじょう",
+        "せんせい",
+        "ぜんじょう",
+        "シーサン"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%94%9F"
+    },
+    {
+      "word": "元気",
+      "readings": [
+        "げんき"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%85%83"
+    },
+    {
+      "word": "高い",
+      "readings": [
+        "たかい",
+        "たかーい",
+        "たっかーい",
+        "たっけー"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%AB%98"
+    },
+    {
+      "word": "南",
+      "readings": [
+        "なん",
+        "みなみ",
+        "みんなみ",
+        "ナン"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%8D%97"
+    },
+    {
+      "word": "行って",
+      "readings": [
+        "いって"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%A1%8C"
+    },
+    {
+      "word": "左",
+      "readings": [
+        "さ",
+        "ひだり"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%B7%A6"
+    },
+    {
+      "word": "大きい",
+      "readings": [
+        "おおきい"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A4%A7"
+    },
+    {
+      "word": "父",
+      "readings": [
+        "かそ",
+        "かぞ",
+        "ちち",
+        "ちゃん",
+        "てて"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%88%B6"
+    },
+    {
+      "word": "誕生日",
+      "readings": [
+        "たんじょうび"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%94%9F"
+    },
+    {
+      "word": "雨",
+      "readings": [
+        "あめ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%9B%A8"
+    },
+    {
+      "word": "部屋",
+      "readings": [
+        "へや"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%83%A8"
+    },
+    {
+      "word": "聞きます",
+      "readings": [
+        "ききます"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%81%9E"
+    },
+    {
+      "word": "天気",
+      "readings": [
+        "てんき"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A4%A9"
+    },
+    {
+      "word": "外で",
+      "readings": [
+        "そとで"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E5%A4%96"
+    },
+    {
+      "word": "食べ",
+      "readings": [
+        "たべ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%A3%9F"
+    },
+    {
+      "word": "今年",
+      "readings": [
+        "ことし",
+        "こんねん"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BB%8A"
+    },
+    {
+      "word": "休み",
+      "readings": [
+        "やすみ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BC%91"
+    },
+    {
+      "word": "父",
+      "readings": [
+        "かそ",
+        "かぞ",
+        "ちち",
+        "ちゃん",
+        "てて"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E7%88%B6"
+    },
+    {
+      "word": "今日",
+      "readings": [
+        "きょう",
+        "こんじつ",
+        "こんち",
+        "こんにち"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E4%BB%8A"
+    },
+    {
+      "word": "雨",
+      "readings": [
+        "あめ"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E9%9B%A8"
+    },
+    {
+      "word": "読んで",
+      "readings": [
+        "よんで"
+      ],
+      "dictionaryUrl": "https://kanjiapi.dev/v1/words/%E8%AA%AD"
     }
   ]
 }

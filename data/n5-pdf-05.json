@@ -1,0 +1,22 @@
+[
+ [1,"妹","いもうと","Adik perempuan (sendiri)","{target}は日本語を教えている。","Adik perempuan saya mengajar bahasa Jepang.",["おとうと","おとこ","おんな"],"noun"],
+ [2,"借ります","かります","Meminjam","姉にお金を{target}。","Saya meminjam uang dari kakak perempuan.",["うります","はしります","かします"],"verb"],
+ [3,"貸して","かして","Meminjamkan (bentuk te)","ちょっとそのシャープペンシルを{target}。","Pinjamkan pensil mekanik itu sebentar, ya.",["こわして","かえして","わたして"],"verb"],
+ [4,"電気","でんき","Listrik; lampu","寝るから、{target}を消すよ。","Karena mau tidur, saya matikan lampunya, ya.",["げんき","でんし","てんき"],"noun"],
+ [5,"本","ほん","Buku","ひまな日はゴルフの練習をしたり{target}を読んだりします。","Pada hari senggang, saya melakukan kegiatan seperti berlatih golf dan membaca buku.",["き","からだ","えだ"],"noun"],
+ [6,"富士山","ふじさん","Gunung Fuji","{target}に登ったことがある。","Saya pernah mendaki Gunung Fuji.",["ぶじさん","ふしさん","ふじいさん"],"noun"],
+ [7,"日本語","にほんご","Bahasa Jepang","{target}で話さなければならない。","Saya harus berbicara dalam bahasa Jepang.",["にほんこ","にはんご","にはんこ"],"noun"],
+ [8,"高い","たかい","Mahal; tinggi","この時計は{target}。","Jam ini mahal.",["ひくい","やすい","ひろい"],"adjective"],
+ [9,"意見","いけん","Pendapat","先生の{target}を聞いてください。","Tolong dengarkan pendapat guru.",["いけみ","いみ","いけみせ"],"noun"],
+ [10,"不便","ふべん","Tidak praktis; menyulitkan","新しい空港はちょっと交通が{target}だと思います。","Menurut saya, akses transportasi ke bandara baru agak sulit.",["ふへん","ふうべん","ふうへん"],"adjective"],
+ [11,"医者","いしゃ","Dokter","あの人は{target}でしょう。","Orang itu mungkin dokter.",["いりょう","いもの","いいん"],"noun"],
+ [12,"病院","びょういん","Rumah sakit","私は{target}で働いています。","Saya bekerja di rumah sakit.",["びょうき","びょいん","びょき"],"noun"],
+ [13,"同じ","おなじ","Sama","かれは私と{target}店で働いています。","Dia bekerja di toko yang sama dengan saya.",["すなじ","どうじ","へんじ"],"adjective"],
+ [14,"仕事","しごと","Pekerjaan","日本語を使う{target}をしたいです。","Saya ingin melakukan pekerjaan yang menggunakan bahasa Jepang.",["しこと","しじ","じこと"],"noun"],
+ [15,"用事","ようじ","Keperluan; urusan","きょうは銀行へ行く{target}があります。","Hari ini saya ada keperluan pergi ke bank.",["ようこと","よじ","よやく"],"noun"],
+ [16,"食堂","しょくどう","Kantin; tempat makan","私がよく昼ご飯を食べる{target}は新しいです。","Kantin tempat saya sering makan siang masih baru.",["たべどう","しょくと","しょくとう"],"noun"],
+ [17,"会社","かいしゃ","Perusahaan; kantor","病気ですから、{target}を休みます。","Karena sakit, saya tidak masuk kerja.",["かいらん","かいいん","かいじゃ"],"noun"],
+ [18,"部屋","へや","Kamar; ruangan","ミラーさんがいる{target}は201です。","Ruangan tempat Miller berada adalah nomor 201.",["ぶや","はなや","ほんや"],"noun"],
+ [19,"店","みせ","Toko","これはあの{target}でかったパンです。","Ini roti yang saya beli di toko itu.",["けん","むら","みち"],"noun"],
+ [20,"彼女","かのじょ","Dia (perempuan)","{target}は大学に入りたいと言いました。","Dia mengatakan ingin masuk universitas.",["かれら","かのじょう","かれあんな"],"noun"]
+]

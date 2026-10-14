@@ -1,5 +1,5 @@
-import { KOTOBA_ENTRIES, KOTOBA_CHAPTERS } from './kotoba-data.js?v=20261014-kotoba-n3';
-import { KOTOBA_N3_ENTRIES } from './kotoba-n3-data.js?v=20261014-kotoba-n3';
+import { KOTOBA_ENTRIES, KOTOBA_CHAPTERS } from './kotoba-data.js?v=20261014-n5-pdf';
+import { KOTOBA_N3_ENTRIES } from './kotoba-n3-data.js?v=20261014-n5-pdf';
 
 export const KOTOBA_COURSES = {
   minna: {id:'minna', label:'Minna no Nihongo I & II', short:'Minna no Nihongo', subtitle:'Bab 1–50', entries:KOTOBA_ENTRIES, chapters:KOTOBA_CHAPTERS},

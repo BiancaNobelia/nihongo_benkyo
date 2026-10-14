@@ -1,0 +1,22 @@
+[
+ [1,"六時","ろくじ","Pukul enam","毎朝{target}にうちを出ます。","Setiap pagi saya berangkat dari rumah pukul enam.",["ろっくじ","むっくじ","よつじ"],"special"],
+ [2,"弟","おとうと","Adik laki-laki (sendiri)","先週の土曜日、{target}は近くの川へ泳ぎに行きました。","Sabtu minggu lalu, adik laki-laki saya pergi berenang ke sungai di dekat sini.",["いもうと","おとこ","おんな"],"noun"],
+ [3,"海","うみ","Laut","{target}で遊びたいです。","Saya ingin bermain di laut.",["かい","みなと","つなみ"],"noun"],
+ [4,"長い","ながい","Panjang","ミラーさんは手が大きくて、足が{target}です。","Tangan Miller besar dan kakinya panjang.",["みじかい","とおい","ちかい"],"adjective"],
+ [5,"家族","かぞく","Keluarga","私の{target}はバンコクに住んでいます。","Keluarga saya tinggal di Bangkok.",["かてい","いえぞく","がっこう"],"noun"],
+ [6,"立って","たって","Berdiri (bentuk te)","すみませんが、ちょっと{target}ください。","Permisi, tolong berdiri sebentar.",["すわって","かって","もって"],"verb"],
+ [7,"知って","しって","Tahu; kenal (bentuk te)","あの方を{target}いますか。","Apakah Anda mengenal orang itu?",["すんで","まって","わたって"],"verb"],
+ [8,"魚","さかな","Ikan","イーさんは肉や{target}が好きですか。","Apakah Yi suka daging dan ikan?",["さけ","かに","ぞう"],"noun"],
+ [9,"使って","つかって","Menggunakan (bentuk te)","この辞書を{target}もいいですか。","Bolehkah saya menggunakan kamus ini?",["しって","かって","はしって"],"verb"],
+ [10,"住所","じゅうしょ","Alamat","私はマリアさんの{target}を知っています。","Saya mengetahui alamat Maria.",["すみところ","すみどころ","じゅしょ"],"noun"],
+ [11,"何人","なんにん","Berapa orang","この学校に外国人が{target}いますか。","Ada berapa orang asing di sekolah ini?",["なんじん","なんひと","なんびと"],"special"],
+ [12,"父","ちち","Ayah (sendiri)","きのう{target}と母といっしょに私の国の映画を見ました。","Kemarin saya menonton film dari negara asal saya bersama ayah dan ibu.",["はは","おや","りょうしん"],"noun"],
+ [13,"顔","かお","Wajah","私の犬は{target}が小さくて、耳が長いです。","Wajah anjing saya kecil dan telinganya panjang.",["ひたい","はな","め"],"noun"],
+ [14,"体","からだ","Tubuh","あの男の人は{target}が大きいです。","Laki-laki itu bertubuh besar.",["もく","き","ほん"],"noun"],
+ [15,"作って","つくって","Membuat (bentuk te)","この会社はどんなせいひんを{target}いますか。","Produk seperti apa yang dibuat oleh perusahaan ini?",["おどって","まわって","さわって"],"verb"],
+ [16,"口","くち","Mulut","{target}の中を見せてください。","Tolong perlihatkan bagian dalam mulut Anda.",["した","みみ","あせ"],"noun"],
+ [17,"学校","がっこう","Sekolah","母は{target}で英語を教えています。","Ibu saya mengajar bahasa Inggris di sekolah.",["がくこう","がっこ","かっこう"],"noun"],
+ [18,"目","め","Mata","私の友達は{target}がきれいです。","Teman saya memiliki mata yang indah.",["ほお","かみ","おかね"],"noun"],
+ [19,"買い物","かいもの","Belanja","京都で神社を見て、それから{target}しました。","Saya mengunjungi kuil Shinto di Kyoto, lalu berbelanja.",["かいぶつ","かいもつ","かいぶん"],"noun"],
+ [20,"新しい","あたらしい","Baru","毎日{target}漢字を八つ書かなければなりません。","Setiap hari saya harus menulis delapan kanji baru.",["おいしい","たのしい","したしい"],"adjective"]
+]

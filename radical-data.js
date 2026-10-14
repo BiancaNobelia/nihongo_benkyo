@@ -1,4 +1,4 @@
-import { RADICAL_MEMBERS } from './radical-members.js?v=20261014-kotoba-n3';
+import { RADICAL_MEMBERS } from './radical-members.js?v=20261014-n5-pdf';
 
 // Editorial teaching notes. Membership comes from complete components in
 // KanjiVG (including nested 門); meanings/readings use the reviewed catalog.

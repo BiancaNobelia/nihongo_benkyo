@@ -598,6 +598,57 @@ python scripts/build_kotoba_n3.py /path/to/workbook.xlsx
 npm test
 ```
 
+### Tambahan PDF N5 dan penyederhanaan kosakata — 14 Oktober 2026
+
+Pembaruan ini menambahkan **199 adaptasi soal** dari `N5_1.pdf`–`N5_10.pdf`
+yang diberikan pengguna, bersumber dari Kanji123. Sembilan berkas pertama
+masing-masing berisi 20 soal. Berkas kesepuluh berakhir pada nomor 19.
+Jumlah akhir JLPT membaca: **663 soal**, dengan **388 soal N5**; jumlah
+level lain tetap. Bagian riwayat di atas yang menyebut 464 soal menjelaskan
+bank dasar sebelum tambahan ini.
+
+`data/n5-pdf-01.json`–`n5-pdf-10.json` menyimpan target, bacaan, arti,
+konteks, terjemahan Indonesia, dan pengecoh yang ditinjau. Nomor berkas,
+nomor soal, jumlah halaman, hash SHA-256, dan catatan adaptasi tercatat pada
+`data/n5-pdf-source.json`. Berkas PDF asli tidak dipublikasikan. Materi ini
+adalah adaptasi latihan Kanji123 yang diminta pengguna, bukan soal resmi
+JLPT; tidak dinyatakan sebagai materi orisinal website atau diberi lisensi
+ulang atas nama website.
+
+Kalimat boleh memuat beberapa kanji dengan tepat satu `{target}`. Kesalahan
+partikel, ejaan, akhiran yang terduplikasi, pilihan ganda identik, dan pilihan
+yang tidak memuat jawaban benar dikoreksi. Soal menulis pada PDF ke-10 diubah
+menjadi membaca. Dua target katakana pada nomor 6 dan 8 diganti dengan
+誕生日 dan 部屋 pada konteks yang sama.
+
+Cakupan latihan N5 menggunakan kosakata dasar dalam snapshot N5 OpenJLPT
+serta Minna no Nihongo I, bab 1–25 (termasuk bentuk infleksi, penghitung,
+dan nama tempat/orang dalam latihan dasar). Ini cakupan belajar editorial,
+bukan daftar resmi JLPT. Kosakata pendukung yang lebih sulit disederhanakan,
+antara lain 首相 → 父, 国民 → 先生, 市役所 → 銀行, dan 森 → 公園.
+Target 高校 dan 林, yang berlabel N4 dalam snapshot kosakata, diadaptasi
+menjadi 学校 dan 木. Perubahan konteks lama pada 12 soal tersimpan di
+`data/n5-context-overrides.json`; identitas riwayatnya tetap sama.
+
+Setiap soal baru memiliki identitas konteks terpisah. Kalimat yang sama dengan
+target berbeda tetap merupakan soal berbeda. Pemilihan mendahulukan kata
+berbeda di antara soal dengan jumlah tampil yang sama, kemudian memakai
+variasi konteks bila diperlukan. Batas hitungan/tanggal dan urutan putaran
+tetap berlaku. Semua soal memiliki arti kata serta terjemahan kalimat, juga
+ketika jawaban salah atau waktu habis.
+
+Pengecoh on/kun mengikuti generator dan snapshot JMdict/KANJIDIC2 yang telah
+dijelaskan di atas. Snapshot bacaan alternatif diperluas untuk kata baru;
+398 soal sekarang memiliki pengecoh dari bacaan lain kanji yang sama.
+
+Bangun ulang secara offline:
+
+```sh
+node scripts/build_n5_reading.mjs
+node scripts/build_reading_choices.mjs
+npm test
+```
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau

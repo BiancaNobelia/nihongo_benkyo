@@ -1,4 +1,4 @@
-import { shuffle } from './core.js?v=20261014-kotoba-n3';
+import { shuffle } from './core.js?v=20261014-n5-pdf';
 
 export const KOTOBA_MODES = {
   'jp-id': { label:'Jepang → Indonesia', short:'JP → ID', caption:'Pilih arti kosakata berikut.', answerLanguage:'id' },

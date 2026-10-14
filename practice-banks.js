@@ -1,17 +1,24 @@
-import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261014-kotoba-n3';
-import { KANJI_WRITING } from './writing-data.js?v=20261014-kotoba-n3';
-import { ENGLISH_KATAKANA } from './english-katakana-data.js?v=20261014-kotoba-n3';
-import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261014-kotoba-n3';
-import { SPECIAL_READINGS } from './special-reading-data.js?v=20261014-kotoba-n3';
-import { KANJI } from './kanji-data.js?v=20261014-kotoba-n3';
-import { eligibleQuizCards } from './core.js?v=20261014-kotoba-n3';
-import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261014-kotoba-n3';
-import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261014-kotoba-n3';
-import { prepareReadingBank } from './reading-balance.js?v=20261014-kotoba-n3';
+import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261014-n5-pdf';
+import { KANJI_WRITING } from './writing-data.js?v=20261014-n5-pdf';
+import { ENGLISH_KATAKANA } from './english-katakana-data.js?v=20261014-n5-pdf';
+import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261014-n5-pdf';
+import { SPECIAL_READINGS } from './special-reading-data.js?v=20261014-n5-pdf';
+import { KANJI } from './kanji-data.js?v=20261014-n5-pdf';
+import { eligibleQuizCards } from './core.js?v=20261014-n5-pdf';
+import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261014-n5-pdf';
+import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261014-n5-pdf';
+import { prepareReadingBank } from './reading-balance.js?v=20261014-n5-pdf';
+import { N5_PDF_READINGS, N5_CONTEXT_OVERRIDES } from './n5-reading-data.js?v=20261014-n5-pdf';
+
+const originalReadings=prepareReadingBank(mergePracticeBank(READING_VOCABULARY,mergePracticeBank(mergePracticeBank(JLPT_READINGS,SIMILAR_READING),SPECIAL_READINGS)));
+const scopedReadings=originalReadings.map(q=>{
+  const context=q.level==='N5' && !q.contextKey && N5_CONTEXT_OVERRIDES[q.word];
+  return context ? {...q,sentence:context[0],sentenceMeaning:context[1]} : q;
+});
 
 export const PRACTICE_BANKS = {
   // Existing contextual questions win over duplicate new vocabulary entries.
-  'jlpt-reading':prepareReadingBank(mergePracticeBank(READING_VOCABULARY,mergePracticeBank(mergePracticeBank(JLPT_READINGS,SIMILAR_READING),SPECIAL_READINGS))),
+  'jlpt-reading':[...scopedReadings,...N5_PDF_READINGS],
   'hiragana-kanji':assignKanjiLevels(mergePracticeBank(KANJI_WRITING,SIMILAR_WRITING)),
   'english-katakana':ENGLISH_KATAKANA,
 };

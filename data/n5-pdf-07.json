@@ -1,0 +1,22 @@
+[
+ [1,"試験","しけん","Ujian","{target}が終わったら、飲みに行きませんか。","Setelah ujian selesai, mau pergi minum bersama?",["しげん","ししょく","しけい"],"noun"],
+ [2,"両親","りょうしん","Kedua orang tua","夜八時になったら、すぐ{target}に電話をかけます。","Begitu pukul delapan malam, saya langsung menelepon kedua orang tua.",["りゅうしん","りょうじん","りゅうじん"],"noun"],
+ [3,"考えて","かんがえて","Berpikir (bentuk te)","いくら{target}も、答えがわかりません。","Sebanyak apa pun saya berpikir, saya tetap tidak tahu jawabannya.",["おしえて","おえて","うえて"],"verb"],
+ [4,"作文","さくぶん","Karangan","ミラーさんは部屋で{target}を書いています。","Miller sedang menulis karangan di kamar.",["さぶん","さっぶん","さくぶ"],"noun"],
+ [5,"親切","しんせつ","Baik hati; suka menolong","田中部長は四十八歳です。とても{target}な人です。","Kepala bagian Tanaka berusia 48 tahun. Beliau orang yang sangat baik hati.",["たいせつ","てきせつ","おやきり"],"adjective"],
+ [6,"田舎","いなか","Desa; daerah pedesaan","年を取ったら、{target}に住みたいです。","Kalau sudah tua, saya ingin tinggal di pedesaan.",["おなか","たなか","みなか"],"noun"],
+ [7,"留学生","りゅうがくせい","Pelajar asing","会議室にいますから、{target}のカリナさんが来たら、教えてください。","Saya ada di ruang rapat. Tolong beri tahu saya kalau Karina, pelajar asing itu, datang.",["りゅうがせい","りゅがくせい","りゅうがっせい"],"noun"],
+ [8,"散歩","さんぽ","Jalan-jalan","父は毎朝公園を{target}します。","Ayah berjalan-jalan di taman setiap pagi.",["さんほう","さんぼ","さんぽう"],"noun"],
+ [9,"一億円","いちおくえん","Seratus juta yen","もし{target}あったら、何をしたいですか。","Jika punya seratus juta yen, apa yang ingin Anda lakukan?",["いちちょうえん","いちまんえん","いちひゃくえん"],"special"],
+ [10,"切手","きって","Prangko","バスを降りて郵便局で{target}を買いました。","Saya turun dari bus lalu membeli prangko di kantor pos.",["きっぷ","かって","きりて"],"noun"],
+ [11,"大使館","たいしかん","Kedutaan besar","パスポートは大切です。もしなくしたら、{target}へいってください。","Paspor itu penting. Jika hilang, pergilah ke kedutaan besar.",["びじゅつかん","としょかん","けいさつかん"],"noun"],
+ [12,"切る","きる","Memotong","あれは髪を{target}はさみです。","Itu gunting untuk memotong rambut.",["とる","しる","おる"],"verb"],
+ [13,"会議","かいぎ","Rapat","九時半になったら、{target}を始めましょう。","Mari mulai rapat saat pukul setengah sepuluh.",["あいぎ","かぎ","こうぎ"],"noun"],
+ [14,"使った","つかった","Menggunakan (bentuk lampau)","この言葉を{target}文を読みましょう。","Mari membaca kalimat yang menggunakan kata ini.",["さがった","もどった","まもった"],"verb"],
+ [15,"手紙","てがみ","Surat","この{target}を送ると、九百四十円です。","Biaya mengirim surat ini adalah 940 yen.",["てぶくろ","はがみ","えがき"],"noun"],
+ [16,"木","き","Pohon","{target}の下に犬がいます。","Ada anjing di bawah pohon.",["ほん","からだ","もく"],"noun"],
+ [17,"浴びて","あびて","Mandi; menyiram tubuh (bentuk te)","シャワーを{target}から、晩ご飯を食べます。","Setelah mandi dengan pancuran, saya makan malam.",["よびて","さびて","おびて"],"verb"],
+ [18,"薬","くすり","Obat","病院でもらった{target}を飲まなければなりません。","Saya harus minum obat yang diberikan di rumah sakit.",["らく","すり","ゆびり"],"noun"],
+ [19,"部長","ぶちょう","Kepala bagian","会社へ来るとき、{target}に会いました。","Saat datang ke kantor, saya bertemu kepala bagian.",["かちょう","しゃちょう","こうちょう"],"noun"],
+ [20,"左","ひだり","Kiri","このつまみを{target}へ回すと、音が小さくなります。","Jika kenop ini diputar ke kiri, suaranya menjadi lebih kecil.",["みぎ","となり","たより"],"noun"]
+]

@@ -1,0 +1,14 @@
+{
+ "海":["夏休みに友達と{target}へ行きます。","Saat liburan musim panas, saya pergi ke laut bersama teman."],
+ "池":["公園の{target}に魚がいます。","Ada ikan di kolam taman."],
+ "道":["この{target}を行くと、駅があります。","Jika menyusuri jalan ini, ada stasiun."],
+ "太い":["あの木はとても{target}です。","Batang pohon itu sangat besar."],
+ "持つ":["重いかばんを{target}。","Saya membawa tas yang berat."],
+ "晴れる":["あした{target}といいですね。","Semoga besok cerah, ya."],
+ "荷物":["この{target}は重いです。","Barang bawaan ini berat."],
+ "緑":["このかばんは{target}です。","Tas ini berwarna hijau."],
+ "地図":["この{target}に学校があります。","Sekolah ada di peta ini."],
+ "中国":["来月、{target}へ行きます。","Bulan depan saya pergi ke Tiongkok."],
+ "韓国":["友達は{target}から来ました。","Teman saya datang dari Korea Selatan."],
+ "東京":["電車で{target}へ行きます。","Saya pergi ke Tokyo dengan kereta."]
+}

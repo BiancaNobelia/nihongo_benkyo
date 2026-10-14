@@ -1,0 +1,22 @@
+[
+ [1,"学校","がっこう","Sekolah","先週の金曜日、{target}のとしょかんでレポートを書きました。","Jumat minggu lalu, saya menulis laporan di perpustakaan sekolah.",["がくこう","かくこう","かっこう"],"noun"],
+ [2,"今晩","こんばん","Malam ini","{target}、いっしょにビールを飲みませんか。","Maukah Anda minum bir bersama malam ini?",["けさ","いまばん","ゆうべ"],"noun"],
+ [3,"新聞","しんぶん","Koran","{target}を読みます。それから、CDを聞きます。","Saya membaca koran. Setelah itu, saya mendengarkan CD.",["じんぶん","しんふん","じんふん"],"noun"],
+ [4,"午後","ごご","Siang hingga malam (PM)","学校は{target}一時五十分からです。","Sekolah dimulai pukul 1.50 siang.",["ごぜん","ごあと","ごこ"],"noun"],
+ [5,"店","みせ","Toko","あの{target}で辞書を買いました。","Saya membeli kamus di toko itu.",["こえ","はな","かみ"],"noun"],
+ [6,"一人で","ひとりで","Sendirian","来月、{target}京都へ行きますか。","Apakah Anda akan pergi ke Kyoto sendirian bulan depan?",["いちひとで","いちにんで","いちじんで"],"special"],
+ [7,"見ます","みます","Melihat; menonton","よる、時々テレビを{target}。","Pada malam hari, saya kadang-kadang menonton televisi.",["のみます","たべます","すいます"],"verb"],
+ [8,"水","みず","Air","ちょっと休みませんか。{target}を飲みましょう。","Bagaimana kalau kita beristirahat sebentar? Mari minum air.",["か","こおり","うみ"],"noun"],
+ [9,"誕生日","たんじょうび","Ulang tahun","{target}は何月何日ですか。","Ulang tahun Anda tanggal dan bulan berapa?",["たんしょうにち","たんじょうひ","たんじょうにち"],"noun"],
+ [10,"午前","ごぜん","Pagi hingga sebelum tengah hari (AM)","ロサンゼルスは今{target}十一時です。","Sekarang pukul sebelas pagi di Los Angeles.",["ごご","ごまえ","しょうまえ"],"noun"],
+ [11,"お母さん","おかあさん","Ibu","いつ{target}に電話をかけますか。","Kapan Anda akan menelepon ibu?",["おかさん","おばさん","おばあさん"],"noun"],
+ [12,"お父さん","おとうさん","Ayah","{target}の誕生日になにをあげますか。","Apa yang akan Anda berikan pada ulang tahun ayah?",["おちちさん","おじいさん","おとさん"],"noun"],
+ [13,"昼ご飯","ひるごはん","Makan siang","もう{target}をたべましたか。","Apakah Anda sudah makan siang?",["ひまごはん","ひろごはん","ひくごはん"],"noun"],
+ [14,"傘","かさ","Payung","ホセさんの{target}はどれですか。","Yang mana payung Jose?",["かみ","くつ","ふくろ"],"noun"],
+ [15,"高い","たかい","Tinggi","富士山は{target}山です。そして、きれいな山です。","Gunung Fuji adalah gunung yang tinggi. Gunung itu juga indah.",["ふるい","ちいさい","ちかい"],"adjective"],
+ [16,"赤い","あかい","Merah","あの{target}かばんはだれのですか。","Tas merah itu milik siapa?",["しろい","おかい","くろい"],"adjective"],
+ [17,"夜","よる","Malam","この町は{target}とてもにぎやかですか。","Apakah kota ini sangat ramai pada malam hari?",["や","なか","ふゆ"],"noun"],
+ [18,"安い","やすい","Murah","あのレストランは{target}ですが、おいしくないです。","Restoran itu murah, tetapi makanannya tidak enak.",["ちかい","たかい","あんい"],"adjective"],
+ [19,"飲みます","のみます","Minum","毎朝、冷たいジュースを{target}。","Saya minum jus dingin setiap pagi.",["いたみます","たのしみます","すみます"],"verb"],
+ [20,"晩ご飯","ばんごはん","Makan malam","ワインを買います。それから、レストランで{target}を食べます。","Saya membeli anggur. Setelah itu, saya makan malam di restoran.",["あさごはん","ひるごはん","こんごはん"],"noun"]
+]

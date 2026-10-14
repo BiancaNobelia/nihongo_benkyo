@@ -1,0 +1,22 @@
+[
+ [1,"右","みぎ","Kanan","ほんだなの{target}に小さいいすがあります。","Ada kursi kecil di sebelah kanan rak buku.",["みに","ひだり","ひたり"],"noun"],
+ [2,"小さい","ちいさい","Kecil","ほんだなの右に{target}いすがあります。","Ada kursi kecil di sebelah kanan rak buku.",["こさい","しいさい","しょうさい"],"adjective"],
+ [3,"土曜日","どようび","Sabtu","{target}の朝、雨がたくさんふりました。","Hujan turun deras pada Sabtu pagi.",["かようび","すいようび","もくようび"],"noun"],
+ [4,"朝","あさ","Pagi","土曜日の{target}、雨がたくさんふりました。","Hujan turun deras pada Sabtu pagi.",["ばん","ひる","よる"],"noun"],
+ [5,"雨","あめ","Hujan","土曜日の朝、{target}がたくさんふりました。","Hujan turun deras pada Sabtu pagi.",["なつ","ゆき","あさ"],"noun"],
+ [6,"十日","とおか","Tanggal sepuluh","{target}のあさ七時にえきへ来てください。","Datanglah ke stasiun pukul tujuh pagi pada tanggal sepuluh.",["とっか","じゅうか","じゅっか"],"special"],
+ [7,"七時","しちじ","Pukul tujuh","十日のあさ{target}にえきへ来てください。","Datanglah ke stasiun pukul tujuh pagi pada tanggal sepuluh.",["しつじ","なにじ","なのじ"],"special"],
+ [8,"来て","きて","Datang (bentuk te)","十日のあさ七時にえきへ{target}ください。","Datanglah ke stasiun pukul tujuh pagi pada tanggal sepuluh.",["いいて","いって","きって"],"verb"],
+ [9,"学校","がっこう","Sekolah","この{target}にがくせいが何人いますか。","Ada berapa siswa di sekolah ini?",["がくに","がっこ","がくこう"],"noun"],
+ [10,"何人","なんにん","Berapa orang","この学校にがくせいが{target}いますか。","Ada berapa siswa di sekolah ini?",["なにじん","なににん","なんじん"],"special"],
+ [11,"銀行","ぎんこう","Bank","{target}は、この道を西へ四キロ行くと左がわにあります。","Jika menyusuri jalan ini empat kilometer ke barat, banknya ada di sebelah kiri.",["くんこう","ぎんこ","ぐんこう"],"noun"],
+ [12,"道","みち","Jalan","銀行は、この{target}を西へ四キロ行くと左がわにあります。","Jika menyusuri jalan ini empat kilometer ke barat, banknya ada di sebelah kiri.",["まち","かど","にわ"],"noun"],
+ [13,"西","にし","Barat","銀行は、この道を{target}へ四キロ行くと左がわにあります。","Jika menyusuri jalan ini empat kilometer ke barat, banknya ada di sebelah kiri.",["いし","にち","いち"],"noun"],
+ [14,"四キロ","よんきろ","Empat kilometer","銀行は、この道を西へ{target}行くと左がわにあります。","Jika menyusuri jalan ini empat kilometer ke barat, banknya ada di sebelah kiri.",["しいきろ","しちきろ","よっきろ"],"special"],
+ [15,"左がわ","ひだりがわ","Sebelah kiri","銀行は、この道を西へ四キロ行くと{target}にあります。","Jika menyusuri jalan ini empat kilometer ke barat, banknya ada di sebelah kiri.",["みぎがわ","みきがわ","ひたりがわ"],"noun"],
+ [16,"木","き","Pohon","{target}の下でラジオを聞きました。","Saya mendengarkan radio di bawah pohon.",["ほん","まど","と"],"noun"],
+ [17,"下","した","Bawah","木の{target}でラジオを聞きました。","Saya mendengarkan radio di bawah pohon.",["すた","すだ","しだ"],"noun"],
+ [18,"聞きました","ききました","Mendengar; mendengarkan (lampau)","木の下でラジオを{target}。","Saya mendengarkan radio di bawah pohon.",["おきました","ひきました","あきました"],"verb"],
+ [19,"天気","てんき","Cuaca","きょうは{target}がいいです。学校の北に白い山があります。","Cuaca hari ini cerah. Di sebelah utara sekolah ada gunung yang putih.",["げんき","けんき","でんき"],"noun"],
+ [20,"北","きた","Utara","きょうは天気がいいです。学校の{target}に白い山があります。","Cuaca hari ini cerah. Di sebelah utara sekolah ada gunung yang putih.",["みなみ","ひがし","にし"],"noun"]
+]

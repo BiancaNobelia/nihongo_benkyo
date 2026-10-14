@@ -1,4 +1,4 @@
-import { shuffle } from './core.js?v=20261014-kotoba-n3';
+import { shuffle } from './core.js?v=20261014-n5-pdf';
 
 export function createWritingQuiz(pool, count, random = Math.random) {
   return shuffle(pool, random).slice(0, Math.max(0, Math.min(count, pool.length))).map(q => ({

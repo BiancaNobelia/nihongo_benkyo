@@ -1,7 +1,7 @@
-import { shuffle } from './core.js?v=20261014-kotoba-n3';
-import { READING_METADATA } from './reading-metadata.js?v=20261014-kotoba-n3';
-import { readingQuestionKey } from './reading-history.js?v=20261014-kotoba-n3';
-import { withReadingSentence } from './reading-sentences.js?v=20261014-kotoba-n3';
+import { shuffle } from './core.js?v=20261014-n5-pdf';
+import { READING_METADATA } from './reading-metadata.js?v=20261014-n5-pdf';
+import { readingQuestionKey } from './reading-history.js?v=20261014-n5-pdf';
+import { withReadingSentence } from './reading-sentences.js?v=20261014-n5-pdf';
 
 export const READING_CATEGORIES = {
   noun:'Kata benda', verb:'Kata kerja', adjective:'Kata sifat', adverb:'Kata keterangan', special:'Hitungan & tanggal',
@@ -22,7 +22,7 @@ export function prepareReadingBank(bank) {
 
 // Round-robin category selection avoids weighting a category by its bank size.
 // Each pass changes order, and the final session is shuffled independently.
-function takeBalanced(pool, count, category, random) {
+function takeBalanced(pool, count, category, random, usedWords=new Set()) {
   const buckets=new Map();
   for(const q of shuffle(pool,random)) {
     const key=category(q);
@@ -31,11 +31,16 @@ function takeBalanced(pool, count, category, random) {
   }
   const result=[];
   while(result.length<count) {
-    const active=shuffle([...buckets.values()].filter(b=>b.length),random);
+    const available=[...buckets.values()].filter(b=>b.length);
+    const fresh=available.filter(b=>b.some(q=>!usedWords.has(`${q.word}:${q.reading}`)));
+    const active=shuffle(fresh.length ? fresh : available,random);
     if(!active.length)break;
     for(const bucket of active) {
       if(result.length===count)break;
-      result.push(bucket.pop());
+      const freshIndex=bucket.findIndex(q=>!usedWords.has(`${q.word}:${q.reading}`));
+      const [question]=bucket.splice(freshIndex<0 ? bucket.length-1 : freshIndex,1);
+      usedWords.add(`${question.word}:${question.reading}`);
+      result.push(question);
     }
   }
   return result;
@@ -48,8 +53,9 @@ function selectBalanced(pool, count, random) {
   // Normally at most 20% counting/date exercises. For a near-complete-bank
   // session, use remaining special exercises instead of repeating vocabulary.
   const specialCount=Math.min(special.length,Math.max(Math.floor(size/5),size-lexical.length));
-  const selected=takeBalanced(lexical,size-specialCount,q=>q.readingCategory || 'noun',random);
-  selected.push(...takeBalanced(special,specialCount,q=>q.topicIds?.includes('penghitung-benda') ? 'counter' : q.topicIds?.includes('nominal-yen') ? 'yen' : 'date',random));
+  const usedWords=new Set();
+  const selected=takeBalanced(lexical,size-specialCount,q=>q.readingCategory || 'noun',random,usedWords);
+  selected.push(...takeBalanced(special,specialCount,q=>q.topicIds?.includes('penghitung-benda') ? 'counter' : q.topicIds?.includes('nominal-yen') ? 'yen' : 'date',random,usedWords));
   return shuffle(selected,random);
 }
 

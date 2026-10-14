@@ -1,5 +1,5 @@
-import { KANJI } from './kanji-data.js?v=20261014-kotoba-n3';
-import { LEVELS } from './levels.js?v=20261014-kotoba-n3';
+import { KANJI } from './kanji-data.js?v=20261014-n5-pdf';
+import { LEVELS } from './levels.js?v=20261014-n5-pdf';
 
 const kanjiLevels=new Map(KANJI.map(k=>[k.char,k.level]));
 
