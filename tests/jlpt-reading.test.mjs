@@ -49,11 +49,14 @@ test('every question has three similar hiragana distractors, excluding accepted 
   }
 });
 
-test('先週 contains the exact requested example, with せんしゅう as the sole answer', () => {
+test('先週 mixes another real kanji reading with sound distractors, keeping one correct answer', () => {
   const q = JLPT_READINGS.find(q => q.word === '先週');
   const [question] = createReadingQuiz([q], 1, random);
   assert.equal(question.answer, 'せんしゅう');
-  assert.deepEqual([...question.options].sort(), ['せんしゅ', 'せんしゅう', 'ぜんしゅ', 'せんじゅう'].sort());
+  assert.equal(new Set(question.options).size,4);
+  assert.ok(question.options.includes('さきしゅう'));
+  assert.ok(question.options.includes('せんしゅ'));
+  assert.equal(question.options.filter(a=>a==='せんしゅう').length,1);
   assert.equal(question.meaning, 'Minggu lalu');
 });
 

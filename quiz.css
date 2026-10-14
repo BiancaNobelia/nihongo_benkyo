@@ -33,5 +33,12 @@
 .component-heading span{font-size:12px;font-weight:550;color:#536646}
 .answer-components li p{font-size:13px;line-height:1.9}
 .answer-components .component-tip{font-size:10px;color:var(--muted);margin-top:10px;line-height:1.7}
+.reading-rotation{grid-column:1/-1;background:#fff;border:1px solid #d6dfcb;border-radius:8px;padding:16px 18px}
+.reading-rotation strong{font-size:13px;color:#526744}
+.reading-rotation p{font-size:11px;margin:7px 0 0;line-height:1.8}
+.answer-other-readings{border-top:1px solid var(--line);margin-top:17px;padding-top:14px}
+.answer-other-readings ul{margin:8px 0;padding-left:19px;display:grid;gap:8px;font-size:13px;line-height:1.9}
+.answer-other-readings li [lang="ja"]{font-family:var(--serif);font-weight:600}
+.answer-other-readings p{font-size:11px;color:var(--muted)}
 .review-item{align-items:flex-start}.review-item>div{flex:1}.review-list .answer-details{padding:14px;margin-top:8px}.review-list .answer-word strong{font-size:17px}.review-list .answer-meaning p{font-size:13px}.review-list .answer-sentence p{font-size:15px}.review-list .answer-translation p{font-size:12px}
 @media(max-width:700px){.quiz-custom-count input{font-size:16px}.answer-details{padding:16px}.answer-word strong{font-size:20px}.answer-reading{font-size:14px}.answer-meaning p{font-size:15px}.answer-sentence p{font-size:16px}.answer-translation{padding:12px}.answer-translation p{font-size:13px}.review-item{gap:10px}.review-char{min-width:30px;font-size:19px}.review-list .answer-details{padding:12px}}

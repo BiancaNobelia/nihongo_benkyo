@@ -483,6 +483,43 @@ setelah pemutaran pertama selesai; navigasi menghentikan audio dan timer.
 Arti dan bacaan muncul setelah jawaban benar, salah, atau waktu habis. Hasil sesi
 lengkap tersimpan di browser bersama riwayat kuis lama, termasuk bab yang dipilih.
 
+### Rotasi soal dan pilihan onyomi/kunyomi — 14 Oktober 2026
+
+Kuis Kanji → Hiragana mempertahankan 464 soal. Pemilihan mendahulukan jumlah
+kemunculan terendah per kata dan konteks, lalu menyeimbangkan jenis kata dalam
+kelompok tersebut. Soal yang baru tampil langsung dicatat di `localStorage`,
+termasuk jika kuis dibatalkan; soal yang belum dibuka tidak dicatat. Riwayat
+berlaku di browser yang sama dan digunakan bersama saat berpindah level.
+Sesi yang melewati batas putaran menampilkan sisa soal baru sebelum mengulang.
+Konteks tanggal dan durasi `1日` tetap merupakan dua soal yang berbeda.
+Skor kuis lama tidak memuat identitas soal, sehingga tidak bisa mengisi riwayat
+kemunculan sebelum pembaruan ini.
+
+`data/reading-choice-source.json` menyimpan bacaan alternatif untuk 369 kata
+nonhitungan dari snapshot OpenJLPT serta JMdict via kanjiapi.dev, diambil
+14 Oktober 2026. Setiap kata mencatat URL indeks kamusnya. Bacaan untuk ejaan
+kata yang sama disaring secara konservatif, termasuk jika maknanya berbeda:
+contohnya `学生・がくしょう`, `景色・けいしょく`, dan `表す・ひょうす`.
+Kun yang tepat cocok dengan okurigana serta bacaan on/kun karakter tunggal
+juga dikecualikan. Hitungan dan tanggal memakai bacaan sah sesuai konteks
+kalimat dari data editorial yang sudah ada.
+
+`scripts/build_reading_choices.mjs` membuat `reading-choice-data.js` tanpa
+jaringan dari sumber yang disimpan dan `kanji-data.js`. Bacaan kanji mengikuti
+[format KANJIDIC2](https://www.edrdg.org/wiki/KANJIDIC_Project.html): titik
+memisahkan okurigana, tanda hubung menandai bentuk terikat. Pembagian kata
+ke bacaan tiap kanji harus cocok persis dan tidak ambigu; perubahan bunyi
+seperti rendaku/sokuon tidak ditebak. Untuk 290 soal yang cocok, satu atau dua
+pengecoh mengganti bacaan satu kanji dengan on/kun lain yang tercatat, sambil
+mempertahankan kana tertulis. Stem kunyomi dengan okurigana yang tidak cocok
+tidak digabung sembarangan. Pilihan tambahan ini sengaja bukan bacaan kata
+yang benar; penjelasan setelah menjawab membedakan bacaan karakter dari
+bacaan kata. Satu atau lebih pengecoh bunyi/ejaan tetap dipertahankan.
+Soal yang tidak cocok tetap memakai pengecoh bunyi, tanpa memaksakan pemisahan.
+
+Data turunan KANJIDIC2/JMdict ini memakai atribusi dan CC BY-SA 4.0 di atas.
+Bangun ulang dengan `node scripts/build_reading_choices.mjs`, lalu `npm test`.
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau

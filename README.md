@@ -27,13 +27,22 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
   muncul setelah jawaban benar, salah, atau waktu habis, serta pada ulasan hasil.
 - Bacaan ala JLPT: 464 soal N5–N1 dengan pilihan hiragana
   yang mirip, arti Indonesia, dan penjelasan bunyi panjang, dakuten, serta kana kecil.
+  Pada 290 soal, pilihan juga memakai onyomi/kunyomi lain dari kanji yang sama.
+  Bacaan kata alternatif yang sah disaring menggunakan JMdict/KANJIDIC2;
+  pembahasan menjelaskan bacaan kanji yang digunakan pada kata soal.
+  Riwayat soal yang sudah tampil disimpan di browser: soal yang paling jarang
+  tampil didahulukan, termasuk setelah reload atau berpindah level. Sesi baru
+  menghabiskan soal yang belum mendapat giliran sebelum mengulang. Sesi yang
+  dibatalkan hanya mencatat soal yang benar-benar sudah dibuka. Riwayat ini
+  dimulai sejak pembaruan, karena skor lama tidak menyimpan identitas soal.
   Buka langsung melalui `#kuis/jlpt`. Ini latihan buatan, bukan soal resmi ujian.
 - Ragam kosakata: kata benda, kata kerja, kata sifat, dan kata keterangan tersedia
   di setiap level. Seluruh soal lama tetap ada; 200 entri baru yang ditinjau
   menambah 184 soal unik setelah duplikasi digabung. N5 189, N4 73, N3 75,
   N2 65, N1 62. Komposisi bank dan jenis soal ditampilkan di kuis.
-- Sesi membaca memilih kelas kata secara seimbang. Hitungan/tanggal maksimal
-  20% selama bank kosakata cukup; sesi yang mendekati seluruh bank dapat
+- Sesi membaca memilih kelas kata secara seimbang di antara soal yang sama
+  jarangnya tampil. Hitungan/tanggal maksimal 20% selama kosakata pada putaran
+  tersebut cukup; sesi yang mendekati seluruh bank dapat
   menggunakan sisanya tanpa pengulangan. Contoh 10 soal N5: masing-masing
   2 kata benda, kata kerja, kata sifat, kata keterangan, serta hitungan/tanggal.
 - Bacaan khusus: 100 soal tambahan dalam kelompok latihan dasar N5 editorial.

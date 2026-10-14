@@ -1,7 +1,7 @@
-import { KOTOBA_ENTRIES, KOTOBA_CHAPTERS } from './kotoba-data.js?v=20261014-kotoba';
-import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261014-kotoba';
-import { requestedQuizCount } from './quiz-settings.js?v=20261014-kotoba';
-import { shuffle } from './core.js?v=20261014-kotoba';
+import { KOTOBA_ENTRIES, KOTOBA_CHAPTERS } from './kotoba-data.js?v=20261014-reading-rotation';
+import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261014-reading-rotation';
+import { requestedQuizCount } from './quiz-settings.js?v=20261014-reading-rotation';
+import { shuffle } from './core.js?v=20261014-reading-rotation';
 
 export function createKotobaView({root,escape,icon,heading,activity,recordSession}) {
   const types=[...new Set(KOTOBA_ENTRIES.map(e=>e.type))];

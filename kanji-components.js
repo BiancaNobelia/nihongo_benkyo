@@ -1,5 +1,5 @@
-import { KANJI } from './kanji-data.js?v=20261014-kotoba';
-import { KANJI_COMPONENTS } from './kanji-components-data.js?v=20261014-kotoba';
+import { KANJI } from './kanji-data.js?v=20261014-reading-rotation';
+import { KANJI_COMPONENTS } from './kanji-components-data.js?v=20261014-reading-rotation';
 
 const meanings = new Map(KANJI.map(k => [k.char, k.meaning]));
 

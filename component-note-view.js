@@ -1,4 +1,4 @@
-import { MON_COMPONENT_NOTES } from './mon-components-data.js?v=20261014-kotoba';
+import { MON_COMPONENT_NOTES } from './mon-components-data.js?v=20261014-reading-rotation';
 
 export const componentNoteFor = char => MON_COMPONENT_NOTES[char] || null;
 

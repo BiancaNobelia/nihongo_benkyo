@@ -1,4 +1,4 @@
-import { RADICAL_MEMBERS } from './radical-members.js?v=20261014-kotoba';
+import { RADICAL_MEMBERS } from './radical-members.js?v=20261014-reading-rotation';
 
 const normalize = value => String(value || '').normalize('NFKC').toLocaleLowerCase('id').trim();
 const cardText = card => [card.char,card.meaning,...card.on,...card.kun.map(r => r.replaceAll('.','')),card.example?.word,card.example?.reading].join(' ');

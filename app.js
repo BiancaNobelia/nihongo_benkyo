@@ -1,25 +1,27 @@
-import { KANJI } from './kanji-data.js?v=20261014-kotoba';
-import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-kotoba';
-import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-kotoba';
-import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-kotoba';
-import { groupsForCharacter } from './similar-core.js?v=20261014-kotoba';
-import { createSimilarView } from './similar-view.js?v=20261014-kotoba';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-kotoba';
-import { familiesForCharacter } from './radical-core.js?v=20261014-kotoba';
-import { componentNoteMarkup } from './component-note-view.js?v=20261014-kotoba';
+import { KANJI } from './kanji-data.js?v=20261014-reading-rotation';
+import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-reading-rotation';
+import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-reading-rotation';
+import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-reading-rotation';
+import { groupsForCharacter } from './similar-core.js?v=20261014-reading-rotation';
+import { createSimilarView } from './similar-view.js?v=20261014-reading-rotation';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-reading-rotation';
+import { familiesForCharacter } from './radical-core.js?v=20261014-reading-rotation';
+import { componentNoteMarkup } from './component-note-view.js?v=20261014-reading-rotation';
 
-import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-kotoba';
+import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-reading-rotation';
+import { READING_HISTORY_KEY, cleanReadingHistory, recordReadingShown, readingHistorySummary } from './reading-history.js?v=20261014-reading-rotation';
+import { readingOptions } from './reading-options.js?v=20261014-reading-rotation';
 
-import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261014-kotoba';
-import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-kotoba';
+import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261014-reading-rotation';
+import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-reading-rotation';
 
-import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-kotoba';
-import { requestedQuizCount } from './quiz-settings.js?v=20261014-kotoba';
-import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-kotoba';
-import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-kotoba';
-import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-kotoba';
-import { createKotobaView } from './kotoba-view.js?v=20261014-kotoba';
-import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261014-kotoba';
+import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-reading-rotation';
+import { requestedQuizCount } from './quiz-settings.js?v=20261014-reading-rotation';
+import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-reading-rotation';
+import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-reading-rotation';
+import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-reading-rotation';
+import { createKotobaView } from './kotoba-view.js?v=20261014-reading-rotation';
+import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261014-reading-rotation';
 
 const paths = {
   speaker:'<path d="m11 4-5 4H3v8h3l5 4zM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>',
@@ -57,6 +59,8 @@ let storageAvailable = true;
 let raw;
 try { raw = JSON.parse(localStorage.getItem(KEY)); } catch { storageAvailable = false; }
 let progress = cleanProgress(raw, KANJI);
+let readingHistory = {};
+try { readingHistory = cleanReadingHistory(JSON.parse(localStorage.getItem(READING_HISTORY_KEY)), practiceBanks['jlpt-reading']); } catch { /* Remember in memory if browser storage is unavailable. */ }
 let view = '';
 let filters = { level:'all', query:'', collection:'all' };
 const PAGE_SIZE = 24;
@@ -81,6 +85,11 @@ function save() {
   catch { storageAvailable = false; toast('Penyimpanan browser tidak tersedia. Progres hanya berlaku selama sesi ini.'); }
 }
 function activity() { const day = localDay(); if (!progress.days.includes(day)) progress.days.push(day); save(); }
+function rememberReadingQuestion(question) {
+  readingHistory = recordReadingShown(readingHistory, question);
+  try { localStorage.setItem(READING_HISTORY_KEY, JSON.stringify(readingHistory)); }
+  catch { toast('Riwayat soal hanya tersimpan selama halaman ini terbuka karena penyimpanan browser tidak tersedia.'); }
+}
 function markKnown(char, value) {
   progress.known = progress.known.filter(c => c !== char);
   if (value) progress.known.push(char);
@@ -189,11 +198,11 @@ function renderQuizSetup() {
 function quizIntro(mode, pool, level) {
   if(!practiceBanks[mode] || !pool.length)return '';
   const isWriting=mode!=='jlpt-reading';
-  const sample=pool[0];
+  const sample=mode==='jlpt-reading' ? pool.find(q=>q.word==='先週') || pool.find(q=>readingOptions(q,()=>0.5).readingAlternatives.length) || pool[0] : pool[0];
   const isEnglish=mode==='english-katakana';
-  const title=mode==='hiragana-kanji' ? 'Teliti bentuknya.<br> Kenali kanjinya.' : isEnglish ? 'Dari kata Inggris,<br> kenali katakananya.' : 'Mirip bunyinya,<br> beda jawabannya.';
-  const description=isEnglish ? 'Baca kata Inggris, lalu pilih kosakata katakana yang sesuai maknanya. Perhatikan bentuk huruf, tanda panjang, dan kana kecil. Arti dan contoh kalimat muncul setelah menjawab.' : isWriting ? 'Baca bagian bergaris bawah, lalu pilih penulisan yang tepat. Arti kata dan kalimat akan muncul setelah kamu menjawab.' : 'Kata benda, kata kerja, kata sifat, dan kata keterangan dipilih bergantian agar latihan beragam. Hitungan dan tanggal menjadi pelengkap.';
-  const options=isWriting ? [sample.answer,...sample.distractors] : [sample.distractors[0],sample.reading,...sample.distractors.slice(1)];
+  const title=mode==='hiragana-kanji' ? 'Teliti bentuknya.<br> Kenali kanjinya.' : isEnglish ? 'Dari kata Inggris,<br> kenali katakananya.' : 'Satu kanji,<br> beragam bacaan.';
+  const description=isEnglish ? 'Baca kata Inggris, lalu pilih kosakata katakana yang sesuai maknanya. Perhatikan bentuk huruf, tanda panjang, dan kana kecil. Arti dan contoh kalimat muncul setelah menjawab.' : isWriting ? 'Baca bagian bergaris bawah, lalu pilih penulisan yang tepat. Arti kata dan kalimat akan muncul setelah kamu menjawab.' : 'Latih kata benda, kata kerja, kata sifat, dan kata keterangan. Pilihan mencampurkan bunyi mirip serta onyomi/kunyomi lain dari kanji soal jika sesuai. Soal yang belum tampil didahulukan.';
+  const options=isWriting ? [sample.answer,...sample.distractors] : readingOptions(sample,()=>0.5).options;
   return `<div><span class="reading-label">${pool.length} SOAL TERSEDIA · ${level==='all' ? 'SEMUA LEVEL' : level}</span><h3>${title}</h3><p>${description}</p><div class="reading-tags"><span>Materi otomatis</span><span>Arti kata & kalimat</span></div></div><div class="reading-example ${isWriting ? 'writing-example' : ''}"><span>CONTOH ${sample.level} · ${isWriting ? 'PILIH TULISANNYA' : 'PILIH BACAANNYA'}</span><strong lang="${isEnglish ? 'en' : 'ja'}" class="${isEnglish ? 'english-cue' : ''}">${escape(isWriting ? sample.prompt : sample.word)}</strong>${sample.sentence && !isEnglish ? `<p class="quiz-example-context" lang="ja">${escape(sample.sentence.replace('{target}',isWriting ? sample.prompt : sample.word))}</p>` : ''}<div class="reading-example-options" lang="ja">${options.map(a=>`<span>${escape(a)}</span>`).join('')}</div></div>`;
 }
 function updateQuizLevels(selected) {
@@ -218,7 +227,10 @@ function quizNote() {
   document.querySelector('#quiz-level-note').textContent=mode==='jlpt-reading' ? 'Kosakata mengikuti level JLPT pada sumber belajar, bukan level kanji penyusunnya. Bacaan hitungan dan tanggal termasuk latihan dasar N5.' : mode==='english-katakana' ? 'Level mengikuti sumber kosakata dan pengelompokan latihan tambahan. Pilih padanan katakana yang digunakan dalam bahasa Jepang; bunyinya bisa berbeda dari bahasa Inggris.' : 'Materi otomatis mengikuti level kanji di katalog. Untuk kata gabungan, levelnya mengikuti kanji tersulit dalam kata tersebut.';
   document.querySelector('#quiz-intro').hidden=!practiceBanks[mode];
   document.querySelector('#quiz-intro').innerHTML=quizIntro(mode,pool,level);
-  if(mode==='jlpt-reading')document.querySelector('#quiz-intro').insertAdjacentHTML('beforeend',`<div class="reading-composition" aria-label="Cakupan kosakata"><h4>Cakupan latihan ${level==='all' ? 'semua level' : level}</h4><div>${readingComposition(pool).filter(c=>c.count).map(c=>`<span>${c.label}<strong>${c.count} soal</strong></span>`).join('')}</div><p>Hitungan dan tanggal maksimal 20% selama soal kosakata masih mencukupi. Semua soal tetap tersedia untuk sesi yang lebih panjang.</p></div>`);
+  if(mode==='jlpt-reading'){
+    const history=readingHistorySummary(pool,readingHistory);
+    document.querySelector('#quiz-intro').insertAdjacentHTML('beforeend',`<div class="reading-composition" aria-label="Cakupan kosakata"><h4>Cakupan latihan ${level==='all' ? 'semua level' : level}</h4><div>${readingComposition(pool).filter(c=>c.count).map(c=>`<span>${c.label}<strong>${c.count} soal</strong></span>`).join('')}</div><p>Jenis kata diseimbangkan di antara soal yang belum tampil. Hitungan dan tanggal maksimal 20% selama kosakata pada putaran ini masih mencukupi.</p></div><div class="reading-rotation" role="status"><strong>${history.unseen ? `${history.unseen} dari ${history.total} soal belum pernah tampil` : `Putaran ${history.round} · ${history.remaining} soal tersisa`}</strong><p>Riwayat tampil tersimpan di browser ini sejak pembaruan ini. Soal baru diulang setelah seluruh soal pada level pilihan mendapat giliran. Soal yang belum sempat dibuka tidak dihitung.</p></div>`);
+  }
   document.querySelector('#quiz-note').textContent=invalid ? 'Isi jumlah soal custom untuk memulai latihan.' : `${Math.min(count,pool.length)} soal acak dari ${pool.length} soal tersedia. ${count>pool.length ? `Permintaan ${count} soal disesuaikan dengan jumlah yang tersedia, tanpa mengulang soal.` : 'Arti ditampilkan setelah setiap jawaban.'}`;
   document.querySelector('[data-action="quiz-start"]').disabled=invalid || !pool.length;
 }
@@ -227,7 +239,7 @@ function startQuiz() {
   const {level,mode,count,time}=quizPreferences;
   if(count===null)return;
   const pool=getQuizPool(mode,level);
-  const questions=practiceBanks[mode] ? (mode==='jlpt-reading' ? createReadingQuiz : createWritingQuiz)(pool,count) : createQuiz(pool,mode,count);
+  const questions=mode==='jlpt-reading' ? createReadingQuiz(pool,count,Math.random,readingHistory) : practiceBanks[mode] ? createWritingQuiz(pool,count) : createQuiz(pool,mode,count);
   if(!questions.length){toast('Belum ada soal untuk pilihan ini. Coba level lain.');return;}
   quiz={level,mode,time,index:0,answers:[],questions,answered:false};
   activity();renderQuestion();
@@ -236,6 +248,7 @@ function startQuiz() {
 function renderQuestion() {
   clearInterval(quizTimer);
   const q = quiz.questions[quiz.index]; quiz.answered = false;
+  if (quiz.mode==='jlpt-reading') rememberReadingQuestion(q);
   const isEnglish = quiz.mode==='english-katakana';
   const isWriting = ['hiragana-kanji','english-katakana'].includes(quiz.mode);
   const hasSentence = Boolean(q.sentence) && !isEnglish;
@@ -356,7 +369,7 @@ document.addEventListener('click', e => {
   if (action === 'quiz-start') startQuiz();
   if (action === 'quiz-next' && quiz?.answered) { quiz.index++; if (quiz.index >= quiz.questions.length) finishQuiz(); else renderQuestion(); }
   if (action === 'quiz-again') renderQuizSetup();
-  if (action === 'quiz-exit') openModal(`<div class="prose"><h2 id="modal-title">Akhiri latihan ini?</h2><p>Hasil sesi yang belum selesai tidak akan masuk ke riwayat kuis. Kamu bisa memulai sesi baru kapan saja.</p><div class="modal-actions"><button class="secondary" data-action="close">Lanjutkan kuis</button><button class="primary" data-action="quiz-confirm-exit">Akhiri latihan</button></div></div>`);
+  if (action === 'quiz-exit') openModal(`<div class="prose"><h2 id="modal-title">Akhiri latihan ini?</h2><p>Skor sesi yang belum selesai tidak akan masuk ke riwayat kuis. ${quiz?.mode==='jlpt-reading' ? 'Soal yang sudah tampil tetap diingat untuk sesi berikutnya.' : 'Kamu bisa memulai sesi baru kapan saja.'}</p><div class="modal-actions"><button class="secondary" data-action="close">Lanjutkan kuis</button><button class="primary" data-action="quiz-confirm-exit">Akhiri latihan</button></div></div>`);
   if (action === 'quiz-confirm-exit') { modal.close(); renderQuizSetup(); }
   if (action === 'guide') openModal(`<div class="prose"><div class="section-kicker">BELAJAR DENGAN RITMEMU</div><h2 id="modal-title">Mulai dari satu kanji.</h2><ol><li><strong>Kenali.</strong> Buka Jelajahi Kanji, mulai dari level N5. Klik kartu untuk melihat arti, bacaan, dan contoh kata.</li><li><strong>Bedakan.</strong> Buka Kanji Mirip untuk membandingkan bentuk, melihat ciri pembeda, dan berlatih memilih kanji dari petunjuk visual.</li><li><strong>Ingat.</strong> Gunakan flashcard. Balik kartunya, lalu pilih “Sudah ingat” atau “Masih belajar”.</li><li><strong>Latih.</strong> Uji pemahaman lewat kuis arti atau bacaan kata. Mode Bacaan ala JLPT melatihmu membedakan pilihan hiragana yang mirip. Gunakan Hiragana → Kanji dan English → Katakana untuk melatih penulisan dengan pilihan bentuk yang mirip. Buka Kuis Kotoba untuk melatih kosakata Minna no Nihongo per bab dan jenis kata. Tinjau jawabanmu di akhir sesi.</li><li><strong>Ulangi.</strong> Simpan kanji yang ingin dipelajari lagi. Lihat perkembanganmu di Progres Saya.</li></ol><p>Onyomi adalah bacaan yang berasal dari bahasa Tionghoa. Kunyomi adalah bacaan asli Jepang. Bacaan yang digunakan bergantung pada kata, jadi selalu pelajari contoh penggunaannya.</p><button class="primary" data-action="close">Siap belajar ${icon('arrow')}</button></div>`);
   if (action === 'sources') openModal(`<div class="prose"><div class="section-kicker">MATERI YANG KITA PELAJARI</div><h2 id="modal-title">Tentang koleksi kanji</h2><p>Koleksi mencakup seluruh ${KANJI.length.toLocaleString('id-ID')} kanji dalam snapshot OpenJLPT yang digunakan, dari N5 sampai N1. Pembagian level mengikuti daftar komunitas Jonathan Waller dan tambahan joyo dari OpenJLPT, bukan daftar resmi JLPT. Seluruh arti Indonesia dan contoh kata ditinjau ulang secara editorial oleh AI pada 13 Oktober 2026 agar lebih jelas dan sesuai konteks. Arti pada kartu diringkas untuk belajar; arti Inggris tersedia sebagai pembanding. Rincian tinjauan dan rujukan kamus tersedia dalam catatan data.</p><p>Bacaan dan jumlah goresan bersumber dari <a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project" target="_blank" rel="noopener">KANJIDIC2</a>, hak cipta James William Breen dan Electronic Dictionary Research and Development Group, melalui <a href="https://github.com/evanclan/OpenJLPT" target="_blank" rel="noopener">OpenJLPT</a>. Contoh kata berasal dari JMdict dan daftar Jonathan Waller melalui OpenJLPT serta <a href="https://kanjiapi.dev/" target="_blank" rel="noopener">kanjiapi.dev</a>.</p><p>Data adaptasi dalam koleksi ini tersedia dengan <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Lihat <a href="https://www.edrdg.org/edrdg/licence.html" target="_blank" rel="noopener">ketentuan sumber</a> dan <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">catatan data</a>.</p><p>Keluarga radikal dan pembahasan bentuk kanji pada kuis menggunakan label komponen dari <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> oleh Ulrich Apel dan kontributor. Ekstrak komponen ini memakai <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>. Pengelompokan dan penjelasan Indonesia ditambahkan untuk membantu belajar.</p><p>Materi tersedia langsung di website. Progres dan simpanan disimpan di browser ini, tanpa akun.</p></div>`);
@@ -364,4 +377,10 @@ document.addEventListener('click', e => {
 modal.addEventListener('click', e => { if (e.target === modal) { const box = modal.getBoundingClientRect(); if (e.clientX < box.left || e.clientX > box.right || e.clientY < box.top || e.clientY > box.bottom) modal.close(); } });
 window.addEventListener('hashchange', route);
 window.addEventListener('storage', e => { if (e.key === KEY) { try { progress = cleanProgress(JSON.parse(e.newValue), KANJI); if (view === 'progres') renderProgress(); else if (view === 'beranda' || view === 'kanji') renderLibrary(view === 'beranda'); } catch { /* Keep the current valid session. */ } } });
+window.addEventListener('storage', e => {
+  if (e.key!==READING_HISTORY_KEY && e.key!==null) return;
+  try { readingHistory=cleanReadingHistory(JSON.parse(e.newValue),practiceBanks['jlpt-reading']); }
+  catch { return; }
+  if(view==='kuis' && !quiz)quizNote();
+});
 route();

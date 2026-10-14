@@ -1,4 +1,4 @@
-import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261014-kotoba';
+import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261014-reading-rotation';
 
 export function similarityQuizCallout(id) {
   const count=quizTopicCount(id);

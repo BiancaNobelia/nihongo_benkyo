@@ -1,13 +1,13 @@
-import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261014-kotoba';
-import { KANJI_WRITING } from './writing-data.js?v=20261014-kotoba';
-import { ENGLISH_KATAKANA } from './english-katakana-data.js?v=20261014-kotoba';
-import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261014-kotoba';
-import { SPECIAL_READINGS } from './special-reading-data.js?v=20261014-kotoba';
-import { KANJI } from './kanji-data.js?v=20261014-kotoba';
-import { eligibleQuizCards } from './core.js?v=20261014-kotoba';
-import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261014-kotoba';
-import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261014-kotoba';
-import { prepareReadingBank } from './reading-balance.js?v=20261014-kotoba';
+import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261014-reading-rotation';
+import { KANJI_WRITING } from './writing-data.js?v=20261014-reading-rotation';
+import { ENGLISH_KATAKANA } from './english-katakana-data.js?v=20261014-reading-rotation';
+import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261014-reading-rotation';
+import { SPECIAL_READINGS } from './special-reading-data.js?v=20261014-reading-rotation';
+import { KANJI } from './kanji-data.js?v=20261014-reading-rotation';
+import { eligibleQuizCards } from './core.js?v=20261014-reading-rotation';
+import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261014-reading-rotation';
+import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261014-reading-rotation';
+import { prepareReadingBank } from './reading-balance.js?v=20261014-reading-rotation';
 
 export const PRACTICE_BANKS = {
   // Existing contextual questions win over duplicate new vocabulary entries.
