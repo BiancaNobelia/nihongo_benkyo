@@ -1,4 +1,4 @@
-import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261014-mon-notes';
+import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261014-english-katakana';
 
 export function similarityQuizCallout(id) {
   const count=quizTopicCount(id);

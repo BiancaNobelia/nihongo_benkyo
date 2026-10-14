@@ -1,18 +1,19 @@
-import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261014-mon-notes';
-import { KANJI_WRITING, KATAKANA_WRITING } from './writing-data.js?v=20261014-mon-notes';
-import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261014-mon-notes';
-import { SPECIAL_READINGS } from './special-reading-data.js?v=20261014-mon-notes';
-import { KANJI } from './kanji-data.js?v=20261014-mon-notes';
-import { eligibleQuizCards } from './core.js?v=20261014-mon-notes';
-import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261014-mon-notes';
-import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261014-mon-notes';
-import { prepareReadingBank } from './reading-balance.js?v=20261014-mon-notes';
+import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261014-english-katakana';
+import { KANJI_WRITING } from './writing-data.js?v=20261014-english-katakana';
+import { ENGLISH_KATAKANA } from './english-katakana-data.js?v=20261014-english-katakana';
+import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261014-english-katakana';
+import { SPECIAL_READINGS } from './special-reading-data.js?v=20261014-english-katakana';
+import { KANJI } from './kanji-data.js?v=20261014-english-katakana';
+import { eligibleQuizCards } from './core.js?v=20261014-english-katakana';
+import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261014-english-katakana';
+import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261014-english-katakana';
+import { prepareReadingBank } from './reading-balance.js?v=20261014-english-katakana';
 
 export const PRACTICE_BANKS = {
   // Existing contextual questions win over duplicate new vocabulary entries.
   'jlpt-reading':prepareReadingBank(mergePracticeBank(READING_VOCABULARY,mergePracticeBank(mergePracticeBank(JLPT_READINGS,SIMILAR_READING),SPECIAL_READINGS))),
   'hiragana-kanji':assignKanjiLevels(mergePracticeBank(KANJI_WRITING,SIMILAR_WRITING)),
-  'hiragana-katakana':KATAKANA_WRITING,
+  'english-katakana':ENGLISH_KATAKANA,
 };
 
 // All material for a level participates, including counters and similar kanji.

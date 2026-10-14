@@ -15,6 +15,9 @@
 .answer-word strong{display:block;font-family:var(--serif);font-size:22px;font-weight:500;line-height:1.8}
 .answer-reading{font-size:16px;color:#526744}
 .answer-meaning{margin-top:16px}
+.answer-english{margin-top:16px}.answer-english p{font-family:var(--sans);font-size:15px;font-weight:500}
+.reading-question .quiz-prompt.english-cue{font-family:var(--sans);font-size:clamp(27px,4vw,43px);font-weight:550;line-height:1.4;letter-spacing:-.5px;overflow-wrap:break-word;margin:30px 0}
+.reading-example>strong.english-cue{font-family:var(--sans);font-size:27px;line-height:1.4;letter-spacing:-.4px;overflow-wrap:break-word;margin:15px 0 20px}
 .answer-details p{margin:0;line-height:1.8}
 .answer-meaning p{font-size:16px;font-weight:550}
 .answer-sentence{margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}

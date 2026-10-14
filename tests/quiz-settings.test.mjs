@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { KANJI } from '../kanji-data.js';
 import { LEVELS } from '../levels.js';
 import { JLPT_READINGS } from '../jlpt-reading-data.js';
-import { KATAKANA_WRITING } from '../writing-data.js';
+import { ENGLISH_KATAKANA } from '../english-katakana-data.js';
 import { PRACTICE_BANKS, getQuizPool } from '../practice-banks.js';
 import { kanjiWordLevel, assignKanjiLevels, requestedQuizCount } from '../quiz-settings.js';
 import { answerDetails, answerDetailsMarkup } from '../quiz-feedback.js';
@@ -11,8 +11,8 @@ import { createReadingQuiz } from '../jlpt-reading-core.js';
 import { createWritingQuiz } from '../writing-core.js';
 import { createQuiz, cleanProgress } from '../core.js';
 
-const modes=['jlpt-reading','hiragana-kanji','hiragana-katakana','meaning','kanji','reading'];
-const make=(mode,pool,count)=>mode==='jlpt-reading' ? createReadingQuiz(pool,count) : mode.startsWith('hiragana-') ? createWritingQuiz(pool,count) : createQuiz(pool,mode,count);
+const modes=['jlpt-reading','hiragana-kanji','english-katakana','meaning','kanji','reading'];
+const make=(mode,pool,count)=>mode==='jlpt-reading' ? createReadingQuiz(pool,count) : (mode==='english-katakana' || mode.startsWith('hiragana-')) ? createWritingQuiz(pool,count) : createQuiz(pool,mode,count);
 const escape=text=>String(text).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 
 test('question counts accept 10, 20, 50 and positive custom integers only',()=>{
@@ -29,7 +29,7 @@ test('compounds follow the hardest catalog kanji without changing source vocabul
   assert.equal(JSON.stringify(JLPT_READINGS),before);
   assert.ok(assigned.some((q,i)=>q.level!==JLPT_READINGS[i].level));
   assert.deepEqual(assigned.map(q=>q.vocabularyLevel),JLPT_READINGS.map(q=>q.level));
-  assert.deepEqual(PRACTICE_BANKS['hiragana-katakana'],KATAKANA_WRITING);
+  assert.deepEqual(PRACTICE_BANKS['english-katakana'],ENGLISH_KATAKANA);
 });
 
 test('all modes partition questions by their intended level policy',()=>{
@@ -40,7 +40,7 @@ test('all modes partition questions by their intended level policy',()=>{
       const pool=getQuizPool(mode,level);
       assert.ok(pool.length>0,`${mode} ${level}`);
       for(const q of pool){
-        if(mode==='hiragana-katakana' || mode==='jlpt-reading'){assert.equal(q.level,level);continue;}
+        if(mode==='english-katakana' || mode==='jlpt-reading'){assert.equal(q.level,level);continue;}
         const word=q.word || q.answer || (mode==='reading' ? q.example.word : q.char);
         const ranks=[...word].filter(c=>/\p{Unified_Ideograph}/u.test(c)).map(c=>{
           // Some N1 catalog examples include rare characters outside the catalog.

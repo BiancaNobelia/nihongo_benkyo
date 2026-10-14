@@ -90,7 +90,7 @@ test('all 31 calendar dates are present and 1日 keeps both disambiguated contex
 test('new topics are reading-only and do not leak into the 82 similar-kanji questions',()=>{
   assert.equal(bank.length,464);
   assert.equal(PRACTICE_BANKS['hiragana-kanji'].length,132);
-  assert.equal(PRACTICE_BANKS['hiragana-katakana'].length,50);
+  assert.equal(PRACTICE_BANKS['english-katakana'].length,54);
   assert.equal(filterTopicQuestions(bank,'similar').length,82);
   for(const [id,count] of [['bacaan-khusus',100],['penghitung-benda',44],['nominal-yen',18],['tanggal-hari',33],['bunyi-kata',5]]){
     assert.equal(filterTopicQuestions(bank,id).length,count,id);
@@ -103,7 +103,7 @@ test('new topics are reading-only and do not leak into the 82 similar-kanji ques
   }
   assert.equal(topicsForMode('hiragana-kanji').length,59);
   assert.equal(topicsForMode('jlpt-reading').length,73);
-  assert.deepEqual(topicsForMode('hiragana-katakana'),[]);
+  assert.deepEqual(topicsForMode('english-katakana'),[]);
   assert.equal(resolveQuizTopic('unknown-topic'),'all');
   assert.ok(bank.some(q=>q.word==='先週'));
 });

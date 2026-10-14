@@ -5,7 +5,7 @@ export function quizSetupPanel(icon) {
       <div class="field"><label for="quiz-mode">Yang ingin dilatih</label><select id="quiz-mode">
         <option value="jlpt-reading">Kanji → Hiragana · Bacaan ala JLPT</option>
         <option value="hiragana-kanji">Hiragana → Kanji · Bentuk mirip</option>
-        <option value="hiragana-katakana">Hiragana → Katakana · Bentuk mirip</option>
+        <option value="english-katakana">English → Katakana · Bentuk mirip</option>
         <option value="meaning">Kanji → Arti Indonesia</option>
         <option value="kanji">Arti Indonesia → Kanji</option>
         <option value="reading">Contoh kata → Hiragana</option>

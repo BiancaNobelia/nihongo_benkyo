@@ -1,0 +1,13 @@
+{
+  "reviewDate": "2026-10-14",
+  "baseSource": "data/writing-source.json",
+  "baseWordCount": 50,
+  "totalWordCount": 54,
+  "note": "English prompts are reviewed meaning cues, not literal transliterations or claims about etymology. Existing 50 source levels are retained. All Indonesian explanations, sentences and distractors are original editorial material.",
+  "additionalWords": [
+    {"word":"ランニング", "english":"running", "level":"N2", "levelBasis":"OpenJLPT pinned vocabulary", "sourceId":"9182744c76", "jmdictId":1140270},
+    {"word":"サンダル", "english":"sandal", "level":"N4", "levelBasis":"OpenJLPT pinned vocabulary", "sourceId":"4b94df57e2", "jmdictId":1058480},
+    {"word":"ジョギング", "english":"jogging", "level":"N3", "levelBasis":"Editorial practice grouping; absent from pinned vocabulary, not an official JLPT assignment", "reference":"https://kotobank.jp/word/%E3%81%98%E3%82%88%E3%81%8E%E3%82%93%E3%81%90-3155729"},
+    {"word":"アレルギー", "english":"allergy", "level":"N2", "levelBasis":"Editorial practice grouping; absent from pinned vocabulary, not an official JLPT assignment", "reference":"https://kotobank.jp/word/%E3%81%82%E3%82%8C%E3%82%8B%E3%81%8E%E3%83%BC-3142290", "note":"Spelling, English equivalent and German origin checked against Shogakukan Digital Daijisen; no medical guidance is provided."}
+  ]
+}

@@ -55,5 +55,5 @@ test('all focused kanji-bank notes exclude unrelated comparison kanji; kana note
     }
   }
   assert.match(PRACTICE_BANKS['jlpt-reading'].find(q=>q.word==='六本').explanation, /っ/);
-  assert.ok(PRACTICE_BANKS['hiragana-katakana'].every(q=>q.explanation));
+  assert.ok(PRACTICE_BANKS['english-katakana'].every(q=>q.explanation));
 });

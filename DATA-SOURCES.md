@@ -371,6 +371,28 @@ dibedakan dari bentuk lama: misalnya 関 dari 關, 闘 dari 鬪, serta isi 闌 p
 mengikuti Kanjipedia. Uraian bentuk bukan persamaan arti atau klaim etimologi.
 Perubahan ini tidak mengubah bank soal, level kanji, atau anggota keluarga lain.
 
+### English → Katakana
+
+Mode aktif `english-katakana` menggantikan pilihan Hiragana → Katakana.
+`english-katakana-data.js` memberi petunjuk Inggris untuk seluruh 50 kata
+katakana lama, lalu menambahkan running, jogging, allergy, dan sandal
+(shower sudah tersedia). Total 54 soal: N5 10, N4 11, N3 11, N2 12, N1 10.
+Level 50 kata lama tetap; running N2 dan sandal N4 mengikuti snapshot
+OpenJLPT yang sama. Jogging N3 dan allergy N2 merupakan pengelompokan
+latihan editorial, bukan penetapan level resmi JLPT. Rinciannya ada pada
+`data/english-katakana-source.json`; ejaan dan maknanya dicek di kamus.
+
+Petunjuk Inggris menyatakan makna yang perlu dicari dalam kosakata Jepang,
+bukan transliterasi harfiah atau klaim bahwa semua kata berasal dari Inggris.
+Contohnya signature → サイン, power outlet → コンセント, dan allergy →
+アレルギー (asal Jerman). Kalimat Jepang dan bacaan hiragana ditampilkan
+sesudah menjawab agar tidak membocorkan ejaan. Umpan balik benar/salah,
+waktu habis, dan ulasan akhir memakai padanan katakana, bacaan, arti Indonesia,
+serta contoh kalimat yang sama. Jumlah soal, pilihan level, dan timer tetap ada.
+Tautan lama `#kuis/hiragana-katakana` membuka mode baru; riwayat mode lama
+tetap disimpan dengan namanya semula. Angka bank katakana 50 di bagian-bagian
+sebelumnya mendokumentasikan bank dasar sebelum penggantian mode ini.
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau

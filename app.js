@@ -1,23 +1,23 @@
-import { KANJI } from './kanji-data.js?v=20261014-mon-notes';
-import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-mon-notes';
-import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-mon-notes';
-import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-mon-notes';
-import { groupsForCharacter } from './similar-core.js?v=20261014-mon-notes';
-import { createSimilarView } from './similar-view.js?v=20261014-mon-notes';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-mon-notes';
-import { familiesForCharacter } from './radical-core.js?v=20261014-mon-notes';
-import { componentNoteMarkup } from './component-note-view.js?v=20261014-mon-notes';
+import { KANJI } from './kanji-data.js?v=20261014-english-katakana';
+import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-english-katakana';
+import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-english-katakana';
+import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-english-katakana';
+import { groupsForCharacter } from './similar-core.js?v=20261014-english-katakana';
+import { createSimilarView } from './similar-view.js?v=20261014-english-katakana';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-english-katakana';
+import { familiesForCharacter } from './radical-core.js?v=20261014-english-katakana';
+import { componentNoteMarkup } from './component-note-view.js?v=20261014-english-katakana';
 
-import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-mon-notes';
+import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-english-katakana';
 
-import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261014-mon-notes';
-import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-mon-notes';
+import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261014-english-katakana';
+import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-english-katakana';
 
-import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-mon-notes';
-import { requestedQuizCount } from './quiz-settings.js?v=20261014-mon-notes';
-import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-mon-notes';
-import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-mon-notes';
-import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-mon-notes';
+import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-english-katakana';
+import { requestedQuizCount } from './quiz-settings.js?v=20261014-english-katakana';
+import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-english-katakana';
+import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-english-katakana';
+import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-english-katakana';
 
 const paths = {
   home:'<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>',
@@ -49,7 +49,7 @@ const modal = document.querySelector('#modal');
 const modalContent = document.querySelector('#modal-content');
 const KEY = 'nihongo-benkyo-progress-v1';
 const viewNames = { beranda:'Beranda', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', progres:'Progres Saya' };
-const modeNames = { meaning:'Kanji → Arti', kanji:'Arti → Kanji', reading:'Kata → Hiragana', 'jlpt-reading':'Kanji → Hiragana', 'hiragana-kanji':'Hiragana → Kanji', 'hiragana-katakana':'Hiragana → Katakana' };
+const modeNames = { meaning:'Kanji → Arti', kanji:'Arti → Kanji', reading:'Kata → Hiragana', 'jlpt-reading':'Kanji → Hiragana', 'hiragana-kanji':'Hiragana → Kanji', 'hiragana-katakana':'Hiragana → Katakana', 'english-katakana':'English → Katakana' };
 let storageAvailable = true;
 let raw;
 try { raw = JSON.parse(localStorage.getItem(KEY)); } catch { storageAvailable = false; }
@@ -183,10 +183,11 @@ function quizIntro(mode, pool, level) {
   if(!practiceBanks[mode] || !pool.length)return '';
   const isWriting=mode!=='jlpt-reading';
   const sample=pool[0];
-  const title=mode==='hiragana-kanji' ? 'Teliti bentuknya.<br> Kenali kanjinya.' : mode==='hiragana-katakana' ? 'Bedakan シ・ツ<br> dan ソ・ン.' : 'Mirip bunyinya,<br> beda jawabannya.';
-  const description=isWriting ? 'Baca bagian bergaris bawah, lalu pilih penulisan yang tepat. Arti kata dan kalimat akan muncul setelah kamu menjawab.' : 'Kata benda, kata kerja, kata sifat, dan kata keterangan dipilih bergantian agar latihan beragam. Hitungan dan tanggal menjadi pelengkap.';
+  const isEnglish=mode==='english-katakana';
+  const title=mode==='hiragana-kanji' ? 'Teliti bentuknya.<br> Kenali kanjinya.' : isEnglish ? 'Dari kata Inggris,<br> kenali katakananya.' : 'Mirip bunyinya,<br> beda jawabannya.';
+  const description=isEnglish ? 'Baca kata Inggris, lalu pilih kosakata katakana yang sesuai maknanya. Perhatikan bentuk huruf, tanda panjang, dan kana kecil. Arti dan contoh kalimat muncul setelah menjawab.' : isWriting ? 'Baca bagian bergaris bawah, lalu pilih penulisan yang tepat. Arti kata dan kalimat akan muncul setelah kamu menjawab.' : 'Kata benda, kata kerja, kata sifat, dan kata keterangan dipilih bergantian agar latihan beragam. Hitungan dan tanggal menjadi pelengkap.';
   const options=isWriting ? [sample.answer,...sample.distractors] : [sample.distractors[0],sample.reading,...sample.distractors.slice(1)];
-  return `<div><span class="reading-label">${pool.length} SOAL TERSEDIA · ${level==='all' ? 'SEMUA LEVEL' : level}</span><h3>${title}</h3><p>${description}</p><div class="reading-tags"><span>Materi otomatis</span><span>Arti kata & kalimat</span></div></div><div class="reading-example ${isWriting ? 'writing-example' : ''}"><span>CONTOH ${sample.level} · ${isWriting ? 'PILIH TULISANNYA' : 'PILIH BACAANNYA'}</span><strong lang="ja">${escape(isWriting ? sample.prompt : sample.word)}</strong>${sample.sentence ? `<p class="quiz-example-context" lang="ja">${escape(sample.sentence.replace('{target}',isWriting ? sample.prompt : sample.word))}</p>` : ''}<div class="reading-example-options" lang="ja">${options.map(a=>`<span>${escape(a)}</span>`).join('')}</div></div>`;
+  return `<div><span class="reading-label">${pool.length} SOAL TERSEDIA · ${level==='all' ? 'SEMUA LEVEL' : level}</span><h3>${title}</h3><p>${description}</p><div class="reading-tags"><span>Materi otomatis</span><span>Arti kata & kalimat</span></div></div><div class="reading-example ${isWriting ? 'writing-example' : ''}"><span>CONTOH ${sample.level} · ${isWriting ? 'PILIH TULISANNYA' : 'PILIH BACAANNYA'}</span><strong lang="${isEnglish ? 'en' : 'ja'}" class="${isEnglish ? 'english-cue' : ''}">${escape(isWriting ? sample.prompt : sample.word)}</strong>${sample.sentence && !isEnglish ? `<p class="quiz-example-context" lang="ja">${escape(sample.sentence.replace('{target}',isWriting ? sample.prompt : sample.word))}</p>` : ''}<div class="reading-example-options" lang="ja">${options.map(a=>`<span>${escape(a)}</span>`).join('')}</div></div>`;
 }
 function updateQuizLevels(selected) {
   const mode=document.querySelector('#quiz-mode').value;
@@ -207,7 +208,7 @@ function quizNote() {
   document.querySelector('#quiz-custom-field').hidden=countChoice!=='custom';
   document.querySelector('#quiz-count-error').hidden=!invalid;
   document.querySelector('#quiz-custom-count').setAttribute('aria-invalid',String(invalid));
-  document.querySelector('#quiz-level-note').textContent=mode==='jlpt-reading' ? 'Kosakata mengikuti level JLPT pada sumber belajar, bukan level kanji penyusunnya. Bacaan hitungan dan tanggal termasuk latihan dasar N5.' : mode==='hiragana-katakana' ? 'Materi otomatis mengikuti level kosakata katakana. Tidak perlu memilih topik satu per satu.' : 'Materi otomatis mengikuti level kanji di katalog. Untuk kata gabungan, levelnya mengikuti kanji tersulit dalam kata tersebut.';
+  document.querySelector('#quiz-level-note').textContent=mode==='jlpt-reading' ? 'Kosakata mengikuti level JLPT pada sumber belajar, bukan level kanji penyusunnya. Bacaan hitungan dan tanggal termasuk latihan dasar N5.' : mode==='english-katakana' ? 'Level mengikuti sumber kosakata dan pengelompokan latihan tambahan. Pilih padanan katakana yang digunakan dalam bahasa Jepang; bunyinya bisa berbeda dari bahasa Inggris.' : 'Materi otomatis mengikuti level kanji di katalog. Untuk kata gabungan, levelnya mengikuti kanji tersulit dalam kata tersebut.';
   document.querySelector('#quiz-intro').hidden=!practiceBanks[mode];
   document.querySelector('#quiz-intro').innerHTML=quizIntro(mode,pool,level);
   if(mode==='jlpt-reading')document.querySelector('#quiz-intro').insertAdjacentHTML('beforeend',`<div class="reading-composition" aria-label="Cakupan kosakata"><h4>Cakupan latihan ${level==='all' ? 'semua level' : level}</h4><div>${readingComposition(pool).filter(c=>c.count).map(c=>`<span>${c.label}<strong>${c.count} soal</strong></span>`).join('')}</div><p>Hitungan dan tanggal maksimal 20% selama soal kosakata masih mencukupi. Semua soal tetap tersedia untuk sesi yang lebih panjang.</p></div>`);
@@ -228,13 +229,14 @@ function startQuiz() {
 function renderQuestion() {
   clearInterval(quizTimer);
   const q = quiz.questions[quiz.index]; quiz.answered = false;
-  const isWriting = ['hiragana-kanji','hiragana-katakana'].includes(quiz.mode);
-  const hasSentence = Boolean(q.sentence);
+  const isEnglish = quiz.mode==='english-katakana';
+  const isWriting = ['hiragana-kanji','english-katakana'].includes(quiz.mode);
+  const hasSentence = Boolean(q.sentence) && !isEnglish;
   const questionTitle = practiceBanks[quiz.mode] ? modeNames[quiz.mode] : 'Kuis Kanji';
-  const caption = isWriting ? `Pilih penulisan ${quiz.mode === 'hiragana-kanji' ? 'kanji' : 'katakana'} untuk bagian bergaris bawah.` : hasSentence ? 'Pilih bacaan hiragana untuk kanji yang digarisbawahi.' : quiz.mode === 'meaning' ? 'Apa arti kanji ini?' : quiz.mode === 'kanji' ? 'Kanji mana yang sesuai dengan arti ini?' : 'Pilih bacaan hiragana yang tepat.';
+  const caption = isEnglish ? 'Pilih penulisan katakana yang sesuai dengan kata Inggris berikut.' : isWriting ? `Pilih penulisan ${quiz.mode === 'hiragana-kanji' ? 'kanji' : 'katakana'} untuk bagian bergaris bawah.` : hasSentence ? 'Pilih bacaan hiragana untuk kanji yang digarisbawahi.' : quiz.mode === 'meaning' ? 'Apa arti kanji ini?' : quiz.mode === 'kanji' ? 'Kanji mana yang sesuai dengan arti ini?' : 'Pilih bacaan hiragana yang tepat.';
   const prompt = hasSentence ? sentenceParts(q.sentence).map(escape).join(`<span class="writing-target">${escape(q.prompt)}</span>`) : escape(q.prompt);
   const category=quiz.mode==='jlpt-reading' ? `<span class="reading-category">${escape(READING_CATEGORIES[q.readingCategory] || 'Kosakata')} · ${q.level}</span>` : '';
-  root.innerHTML = `<div class="study-panel">${heading('WAKTUNYA MELATIH INGATAN', questionTitle, `${modeNames[quiz.mode]} · ${quiz.level === 'all' ? 'Semua level' : quiz.level}`)}<div class="study-top"><span>Soal <strong>${quiz.index + 1}</strong> / ${quiz.questions.length}</span>${quiz.time ? `<span class="timer">${icon('clock')}<span id="timer-value" role="timer">${quiz.time} dtk</span></span>` : '<span>Pelan-pelan juga boleh.</span>'}</div><div class="progress-track" role="progressbar" aria-label="Progres kuis" aria-valuemin="0" aria-valuemax="${quiz.questions.length}" aria-valuenow="${quiz.index}"><span style="width:${quiz.index / quiz.questions.length * 100}%"></span></div><div class="quiz-question ${practiceBanks[quiz.mode] ? 'reading-question' : ''} ${hasSentence ? `writing-question ${quiz.mode}` : ''}">${category}<span class="quiz-caption">${caption}</span><div tabindex="-1" class="quiz-prompt ${quiz.mode === 'kanji' ? 'meaning-prompt' : ''} ${hasSentence ? 'sentence-prompt' : ''}" ${quiz.mode !== 'kanji' ? 'lang="ja"' : ''}>${prompt}</div><div class="quiz-options ${practiceBanks[quiz.mode] && q.options.some(a => a.length > 6) ? 'long-readings' : ''}">${q.options.map((answer,i) => `<button class="quiz-option" data-answer="${i}"><span>${'ABCD'[i]}</span><span ${quiz.mode !== 'meaning' ? 'lang="ja"' : ''}>${escape(answer)}</span></button>`).join('')}</div><div id="quiz-feedback" class="quiz-feedback" role="status">Pilih satu jawaban yang paling tepat.</div></div><div class="quiz-next"><button class="text-button" data-action="quiz-exit">Akhiri latihan</button><button class="primary" data-action="quiz-next" disabled>${quiz.index === quiz.questions.length - 1 ? 'Lihat hasil' : 'Soal berikutnya'} ${icon('arrow')}</button></div></div>`;
+  root.innerHTML = `<div class="study-panel">${heading('WAKTUNYA MELATIH INGATAN', questionTitle, `${modeNames[quiz.mode]} · ${quiz.level === 'all' ? 'Semua level' : quiz.level}`)}<div class="study-top"><span>Soal <strong>${quiz.index + 1}</strong> / ${quiz.questions.length}</span>${quiz.time ? `<span class="timer">${icon('clock')}<span id="timer-value" role="timer">${quiz.time} dtk</span></span>` : '<span>Pelan-pelan juga boleh.</span>'}</div><div class="progress-track" role="progressbar" aria-label="Progres kuis" aria-valuemin="0" aria-valuemax="${quiz.questions.length}" aria-valuenow="${quiz.index}"><span style="width:${quiz.index / quiz.questions.length * 100}%"></span></div><div class="quiz-question ${practiceBanks[quiz.mode] ? 'reading-question' : ''} ${hasSentence ? `writing-question ${quiz.mode}` : ''}">${category}<span class="quiz-caption">${caption}</span><div tabindex="-1" class="quiz-prompt ${quiz.mode === 'kanji' ? 'meaning-prompt' : ''} ${isEnglish ? 'english-cue' : ''} ${hasSentence ? 'sentence-prompt' : ''}" ${isEnglish ? 'lang="en"' : quiz.mode !== 'kanji' ? 'lang="ja"' : ''}>${prompt}</div><div class="quiz-options ${practiceBanks[quiz.mode] && q.options.some(a => a.length > 6) ? 'long-readings' : ''}">${q.options.map((answer,i) => `<button class="quiz-option" data-answer="${i}"><span>${'ABCD'[i]}</span><span ${quiz.mode !== 'meaning' ? 'lang="ja"' : ''}>${escape(answer)}</span></button>`).join('')}</div><div id="quiz-feedback" class="quiz-feedback" role="status">Pilih satu jawaban yang paling tepat.</div></div><div class="quiz-next"><button class="text-button" data-action="quiz-exit">Akhiri latihan</button><button class="primary" data-action="quiz-next" disabled>${quiz.index === quiz.questions.length - 1 ? 'Lihat hasil' : 'Soal berikutnya'} ${icon('arrow')}</button></div></div>`;
   window.scrollTo({top:0, behavior:'instant'});
   document.querySelector('.quiz-prompt').focus({preventScroll:true});
   if (quiz.time) {
@@ -298,6 +300,7 @@ function route() {
   else if (view === 'flashcard') renderFlash();
   else if (view === 'kuis') {
     if (groupId === 'jlpt') quizPreferences.mode = 'jlpt-reading';
+    else if (groupId === 'hiragana-katakana') quizPreferences.mode = 'english-katakana';
     else if (Object.hasOwn(modeNames, groupId)) quizPreferences.mode=groupId;
     renderQuizSetup();
   }
@@ -346,7 +349,7 @@ document.addEventListener('click', e => {
   if (action === 'quiz-again') renderQuizSetup();
   if (action === 'quiz-exit') openModal(`<div class="prose"><h2 id="modal-title">Akhiri latihan ini?</h2><p>Hasil sesi yang belum selesai tidak akan masuk ke riwayat kuis. Kamu bisa memulai sesi baru kapan saja.</p><div class="modal-actions"><button class="secondary" data-action="close">Lanjutkan kuis</button><button class="primary" data-action="quiz-confirm-exit">Akhiri latihan</button></div></div>`);
   if (action === 'quiz-confirm-exit') { modal.close(); renderQuizSetup(); }
-  if (action === 'guide') openModal(`<div class="prose"><div class="section-kicker">BELAJAR DENGAN RITMEMU</div><h2 id="modal-title">Mulai dari satu kanji.</h2><ol><li><strong>Kenali.</strong> Buka Jelajahi Kanji, mulai dari level N5. Klik kartu untuk melihat arti, bacaan, dan contoh kata.</li><li><strong>Bedakan.</strong> Buka Kanji Mirip untuk membandingkan bentuk, melihat ciri pembeda, dan berlatih memilih kanji dari petunjuk visual.</li><li><strong>Ingat.</strong> Gunakan flashcard. Balik kartunya, lalu pilih “Sudah ingat” atau “Masih belajar”.</li><li><strong>Latih.</strong> Uji pemahaman lewat kuis arti atau bacaan kata. Mode Bacaan ala JLPT melatihmu membedakan pilihan hiragana yang mirip. Gunakan Hiragana → Kanji dan Hiragana → Katakana untuk melatih penulisan dengan pilihan bentuk yang mirip. Tinjau jawabanmu di akhir sesi.</li><li><strong>Ulangi.</strong> Simpan kanji yang ingin dipelajari lagi. Lihat perkembanganmu di Progres Saya.</li></ol><p>Onyomi adalah bacaan yang berasal dari bahasa Tionghoa. Kunyomi adalah bacaan asli Jepang. Bacaan yang digunakan bergantung pada kata, jadi selalu pelajari contoh penggunaannya.</p><button class="primary" data-action="close">Siap belajar ${icon('arrow')}</button></div>`);
+  if (action === 'guide') openModal(`<div class="prose"><div class="section-kicker">BELAJAR DENGAN RITMEMU</div><h2 id="modal-title">Mulai dari satu kanji.</h2><ol><li><strong>Kenali.</strong> Buka Jelajahi Kanji, mulai dari level N5. Klik kartu untuk melihat arti, bacaan, dan contoh kata.</li><li><strong>Bedakan.</strong> Buka Kanji Mirip untuk membandingkan bentuk, melihat ciri pembeda, dan berlatih memilih kanji dari petunjuk visual.</li><li><strong>Ingat.</strong> Gunakan flashcard. Balik kartunya, lalu pilih “Sudah ingat” atau “Masih belajar”.</li><li><strong>Latih.</strong> Uji pemahaman lewat kuis arti atau bacaan kata. Mode Bacaan ala JLPT melatihmu membedakan pilihan hiragana yang mirip. Gunakan Hiragana → Kanji dan English → Katakana untuk melatih penulisan dengan pilihan bentuk yang mirip. Tinjau jawabanmu di akhir sesi.</li><li><strong>Ulangi.</strong> Simpan kanji yang ingin dipelajari lagi. Lihat perkembanganmu di Progres Saya.</li></ol><p>Onyomi adalah bacaan yang berasal dari bahasa Tionghoa. Kunyomi adalah bacaan asli Jepang. Bacaan yang digunakan bergantung pada kata, jadi selalu pelajari contoh penggunaannya.</p><button class="primary" data-action="close">Siap belajar ${icon('arrow')}</button></div>`);
   if (action === 'sources') openModal(`<div class="prose"><div class="section-kicker">MATERI YANG KITA PELAJARI</div><h2 id="modal-title">Tentang koleksi kanji</h2><p>Koleksi mencakup seluruh ${KANJI.length.toLocaleString('id-ID')} kanji dalam snapshot OpenJLPT yang digunakan, dari N5 sampai N1. Pembagian level mengikuti daftar komunitas Jonathan Waller dan tambahan joyo dari OpenJLPT, bukan daftar resmi JLPT. Seluruh arti Indonesia dan contoh kata ditinjau ulang secara editorial oleh AI pada 13 Oktober 2026 agar lebih jelas dan sesuai konteks. Arti pada kartu diringkas untuk belajar; arti Inggris tersedia sebagai pembanding. Rincian tinjauan dan rujukan kamus tersedia dalam catatan data.</p><p>Bacaan dan jumlah goresan bersumber dari <a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project" target="_blank" rel="noopener">KANJIDIC2</a>, hak cipta James William Breen dan Electronic Dictionary Research and Development Group, melalui <a href="https://github.com/evanclan/OpenJLPT" target="_blank" rel="noopener">OpenJLPT</a>. Contoh kata berasal dari JMdict dan daftar Jonathan Waller melalui OpenJLPT serta <a href="https://kanjiapi.dev/" target="_blank" rel="noopener">kanjiapi.dev</a>.</p><p>Data adaptasi dalam koleksi ini tersedia dengan <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Lihat <a href="https://www.edrdg.org/edrdg/licence.html" target="_blank" rel="noopener">ketentuan sumber</a> dan <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">catatan data</a>.</p><p>Keluarga radikal dan pembahasan bentuk kanji pada kuis menggunakan label komponen dari <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> oleh Ulrich Apel dan kontributor. Ekstrak komponen ini memakai <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>. Pengelompokan dan penjelasan Indonesia ditambahkan untuk membantu belajar.</p><p>Materi tersedia langsung di website. Progres dan simpanan disimpan di browser ini, tanpa akun.</p></div>`);
 });
 modal.addEventListener('click', e => { if (e.target === modal) { const box = modal.getBoundingClientRect(); if (e.clientX < box.left || e.clientX > box.right || e.clientY < box.top || e.clientY > box.bottom) modal.close(); } });

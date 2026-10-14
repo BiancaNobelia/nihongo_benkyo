@@ -81,7 +81,7 @@ test('existing banks merge without duplicates and retain old-only vocabulary',()
   assert.equal(writings.find(q=>q.answer==='飲みました').prompt,'のみました');
   assert.ok(readings.find(q=>q.word==='練習').topicIds.includes('neru-ren'));
   for(const mode of ['jlpt-reading','hiragana-kanji'])assert.ok(supportsQuizTopics(mode));
-  for(const mode of ['hiragana-katakana','meaning','reading'])assert.ok(!supportsQuizTopics(mode));
+  for(const mode of ['english-katakana','meaning','reading'])assert.ok(!supportsQuizTopics(mode));
 });
 
 test('topic and level filters compose, and links safely reject unknown topic ids',()=>{
