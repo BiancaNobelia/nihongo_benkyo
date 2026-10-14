@@ -1,7 +1,7 @@
-import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261015-henkan';
-import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261015-henkan';
-import { requestedQuizCount } from './quiz-settings.js?v=20261015-henkan';
-import { shuffle } from './core.js?v=20261015-henkan';
+import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261015-henkan-forms';
+import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261015-henkan-forms';
+import { requestedQuizCount } from './quiz-settings.js?v=20261015-henkan-forms';
+import { shuffle } from './core.js?v=20261015-henkan-forms';
 
 export function createKotobaView({root,escape,icon,heading,activity,recordSession}) {
   let course=kotobaCourse('minna');

@@ -33,7 +33,7 @@ export const HENKAN_VERBS = [
   {"word":"教える","reading":"おしえる","group":"ichidan","meaning":"mengajar / memberi tahu","level":"N5","sources":["minna-row-246","minna-row-530","n4-pdf-8-1"],"review":"dictionary","id":"verb-0031"},
   {"word":"習う","reading":"ならう","group":"godan","meaning":"belajar dari seseorang","level":"N5","sources":["kanji-習","minna-row-1604","minna-row-247","n4-pdf-5-5","n4-pdf-9-14"],"review":"dictionary","normalized":true,"id":"verb-0032"},
   {"word":"掛ける","reading":"かける","group":"ichidan","meaning":"menelepon","level":"N5","sources":["minna-row-248","minna-row-790"],"review":"morphology","id":"verb-0033"},
-  {"word":"プレゼントする","reading":"ぷれぜんとする","group":"suru","meaning":"hadiah","level":"N5","sources":["minna-row-265"],"review":"dictionary","id":"verb-0034"},
+  {"word":"プレゼントする","reading":"ぷれぜんとする","group":"suru","meaning":"memberikan hadiah","level":"N5","sources":["minna-row-265"],"review":"dictionary","id":"verb-0034"},
   {"word":"生活する","reading":"せいかつする","group":"suru","meaning":"kehidupan sehari-hari","level":"N5","sources":["kanji-活","minna-row-315"],"review":"dictionary","id":"verb-0035"},
   {"word":"仕事する","reading":"しごとする","group":"suru","meaning":"pekerjaan","level":"N5","sources":["kanji-事","kanji-仕","minna-row-316","minna-row-902"],"review":"dictionary","id":"verb-0036"},
   {"word":"分かる","reading":"わかる","group":"godan","meaning":"mengerti","level":"N5","sources":["minna-row-321"],"review":"dictionary","id":"verb-0037","noPotential":true,"noPassive":true},

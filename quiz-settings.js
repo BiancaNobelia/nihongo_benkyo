@@ -1,5 +1,5 @@
-import { KANJI } from './kanji-data.js?v=20261015-henkan';
-import { LEVELS } from './levels.js?v=20261015-henkan';
+import { KANJI } from './kanji-data.js?v=20261015-henkan-forms';
+import { LEVELS } from './levels.js?v=20261015-henkan-forms';
 
 const kanjiLevels=new Map(KANJI.map(k=>[k.char,k.level]));
 

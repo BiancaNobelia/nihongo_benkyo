@@ -1,7 +1,7 @@
-import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261015-henkan';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-henkan';
-import { createRadicalView } from './radical-view.js?v=20261015-henkan';
-import { similarityQuizCallout } from './similar-quiz-view.js?v=20261015-henkan';
+import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261015-henkan-forms';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-henkan-forms';
+import { createRadicalView } from './radical-view.js?v=20261015-henkan-forms';
+import { similarityQuizCallout } from './similar-quiz-view.js?v=20261015-henkan-forms';
 
 export function createSimilarView({root, kanji, groups, categories, levels, escape, icon, activity}) {
   const byChar = new Map(kanji.map(k => [k.char, k]));

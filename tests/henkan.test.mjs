@@ -6,7 +6,7 @@ import {KOTOBA_ENTRIES} from '../kotoba-data.js';
 import {KOTOBA_N3_ENTRIES} from '../kotoba-n3-data.js';
 import {KANJI} from '../kanji-data.js';
 import {cleanProgress} from '../core.js';
-import {HENKAN_MODES,conjugateVerb,spellForm,henkanPool,createHenkanQuiz,henkanOptions,acceptedAnswers,cleanHenkanHistory,recordHenkanShown} from '../henkan-core.js';
+import {HENKAN_MODES,FORM_LABELS,conjugateVerb,spellForm,henkanPool,createHenkanQuiz,henkanOptions,acceptedAnswers,cleanHenkanHistory,recordHenkanShown} from '../henkan-core.js';
 import {henkanDetailMarkup} from '../henkan-view.js';
 const find=(word,reading)=>{const v=verbs.find(v=>v.word===word&&(!reading||v.reading===reading));assert.ok(v,word);return v;};
 const random=seed=>()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);
@@ -90,7 +90,7 @@ test('sessions vary verbs and forms, cap custom counts and prioritize exercises 
   for(const level of ['N5','N4','N3'])for(const count of [10,20,50]){
     const q=createHenkanQuiz(verbs,{level,count,modes:Object.keys(HENKAN_MODES)},{},random(count));
     assert.equal(q.length,count);assert.equal(new Set(q.map(q=>q.verb.id)).size,count);assert.equal(new Set(q.map(q=>q.id)).size,count);
-    assert.equal(new Set(q.map(q=>q.form)).size,7);
+    assert.equal(new Set(q.map(q=>q.form)).size,Math.min(count,Object.keys(FORM_LABELS).length));
   }
   const settings={level:'N5',modes:['te'],count:50};const first=createHenkanQuiz(verbs,settings,{},random(1));
   const history=first.reduce((h,q)=>recordHenkanShown(h,q.id),{});const second=createHenkanQuiz(verbs,settings,history,random(1));

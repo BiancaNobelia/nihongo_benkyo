@@ -95,12 +95,21 @@ pembaruan tersedia di [DATA-SOURCES.md](DATA-SOURCES.md).
 Menu `#henkan` melatih perubahan 1.201 kata kerja: N5 (178), N4 (363),
 dan N3 (660), dari kotoba Minna I–II, kompilasi N3, serta contoh dan soal
 kanji yang sudah tersedia. Pilih satu atau beberapa bentuk: futsū-kei,
-jisho-kei, te-kei, ta-kei, nai-kei, potensial, dan pasif.
+jisho-kei, te-kei, ta-kei, nai-kei, potensial, pasif, ikō-kei (niat/ajakan),
+meirei-kei (perintah), kinshi-kei (larangan), jōken-kei (syarat ～ば),
+shieki-kei (kausatif), dan sonkei-kei (hormat). Total 13 pilihan latihan.
 
 Futsū-kei mencakup empat pasangan bentuk sopan → biasa, termasuk negatif
 lampau. Pilihan yang tumpang tindih digabung. Level memilih kosakata, bukan
 membatasi bentuk tata bahasa. Verba yang sudah terkonjugasi dinormalisasi
 ke bentuk dasar; potensial/pasif yang kurang cocok tanpa konteks tidak diujikan.
+Sonkei memakai tindakan manusia yang ditinjau dalam `henkan-honorific.js`,
+dengan konteks membicarakan tindakan guru kepada teman. Soal menyebutkan
+pola hormat yang diminta: bentuk khusus, お＋batang ます＋になる,
+～する → ～なさる, atau ～（ら）れる. Kata yang sudah hormat/rendah hati
+dan perubahan keadaan benda tidak otomatis diberi awalan kehormatan.
+Varian benar seperti 食べよ/食べろ, せよ/しろ, bentuk kausatif singkat,
+serta alternatif sonkei tidak dijadikan pengecoh.
 
 Jumlah soal 10, 20, 50, atau custom, dengan timer opsional. Arti, golongan,
 pola perubahan dan tabel bentuk tersedia setelah menjawab. Soal yang belum
@@ -108,7 +117,7 @@ tampil diprioritaskan melalui riwayat lokal, dengan variasi kata kerja dan
 bentuk. Skor, ulasan jawaban, dan latihan ulang jawaban salah tersedia.
 
 Bangun ulang data terkurasi tanpa jaringan:
-`node scripts/build_henkan.mjs`. Validasi: `node --test tests/henkan.test.mjs`.
+`node scripts/build_henkan.mjs`. Validasi: `node --test tests/henkan*.test.mjs`.
 
 https://BiancaNobelia.github.io/nihongo_benkyo/
 

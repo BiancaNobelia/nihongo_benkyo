@@ -776,3 +776,30 @@ Aturan dan penjelasan Indonesia ditulis untuk latihan ini. Bentuk baku
 diprioritaskan; varian benar dan bentuk potensial percakapan tanpa ら
 tidak dipakai sebagai jawaban salah. Potensial dan pasif ichidan/来る yang
 berbentuk sama dijelaskan setelah menjawab.
+
+### Enam bentuk lanjutan — 15 Oktober 2026
+
+Ikō-kei, jōken-kei (khusus ～ば), dan shieki-kei mengikuti tabel MEXT di atas.
+Meirei-kei dan kinshi-kei mengacu pada [Irodori, tata bahasa 初級2](https://jpfbj.cn/irodori/resources/pdf/Z_Grammar_All.pdf)
+dan [Japan Foundation: instruksi, perintah, dan larangan](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201603.html).
+Kausatif singkat (misalnya 書かす/食べさす) dipisahkan dari jawaban salah,
+sesuai [Japan Foundation: 使役形](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00075/ja/render.do).
+Latihan menampilkan bentuk baku panjang seperti 書かせる/食べさせる.
+
+Sonkei dipilih secara leksikal dalam `henkan-honorific.js`, bukan dengan
+menambahkan お/ご ke semua verba. Rujukan: [bentuk hormat khusus Japan Foundation](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00088/ja/render.do),
+[bentuk hormat ～（ら）れる](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00085/ja/render.do),
+dan [Bunka: pola お（ご）…になる serta perbedaan sonkei/kenjōgo](https://www.bunka.go.jp/seisaku/kokugo_nihongo/kokugo_shisaku/keigo/chapter4/detail.html).
+Kumpulan ini mencakup bentuk khusus (いらっしゃる, おっしゃる, なさる,
+召し上がる, ご覧になる, 下さる, お休みになる, お召しになる),
+お＋batang ます＋になる, kata benda＋なさる, dan ～（ら）れる.
+Guru adalah pelaku tindakan dalam konteks soal; semua jawaban ditargetkan
+ke bentuk kamus. Kata rendah hati, kata yang sudah hormat, dan verba
+nonmanusia yang tidak cocok tidak diberi soal sonkei secara otomatis.
+Pengecoh tidak memakai alternatif hormat yang sah, terutama bentuk yang
+sama dengan pasif. Beberapa kandidat awalan お/ご dikecualikan secara
+konservatif dari pengecoh; pengecualian itu bukan daftar pola yang disarankan.
+
+Penjelasan Indonesia dan daftar verba untuk tiap pola disusun untuk situs
+ini. Level tetap mengikuti sumber kosakata N5–N3, bukan level tata bahasa.
+Riwayat soal lama tetap memakai ID yang sama ketika enam bentuk ditambahkan.

@@ -1,4 +1,4 @@
-import { MON_COMPONENT_NOTES } from './mon-components-data.js?v=20261015-henkan';
+import { MON_COMPONENT_NOTES } from './mon-components-data.js?v=20261015-henkan-forms';
 
 export const componentNoteFor = char => MON_COMPONENT_NOTES[char] || null;
 

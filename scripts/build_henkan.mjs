@@ -1,6 +1,6 @@
 import {readFileSync,writeFileSync} from 'node:fs';
 import assert from 'node:assert/strict';
-import {conjugateVerb,henkanOptions,HENKAN_LEVELS,VERB_GROUPS} from '../henkan-core.js';
+import {conjugateVerb,henkanOptions,HENKAN_LEVELS,VERB_GROUPS,FORM_LABELS} from '../henkan-core.js';
 const read=name=>JSON.parse(readFileSync(new URL(`../data/${name}`,import.meta.url),'utf8'));
 const verbs=read('henkan-verbs.json'),source=read('henkan-source.json');
 assert.equal(verbs.length,source.entryCount);
@@ -10,7 +10,7 @@ for(const v of verbs) {
   assert.ok(HENKAN_LEVELS.includes(v.level)&&VERB_GROUPS[v.group]&&v.meaning&&v.sources.length,v.word);
   assert.match(v.reading,/^[ぁ-ゖー]+$/u,v.word);
   const f=conjugateVerb(v);
-  for(const form of ['jisho','te','ta','nai','nakatta','potential','passive']) {
+  for(const form of Object.keys(FORM_LABELS)) {
     if(!f[form])continue;
     const options=henkanOptions(v,form,()=>0.5);
     assert.equal(new Set(options).size,4,`${v.word} ${form}`);

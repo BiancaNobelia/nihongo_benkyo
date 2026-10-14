@@ -1,5 +1,5 @@
-import { KATAKANA_WRITING } from './writing-data.js?v=20261015-henkan';
-import { KATAKANA_EXPANSION } from './katakana-expansion-data.js?v=20261015-henkan';
+import { KATAKANA_WRITING } from './writing-data.js?v=20261015-henkan-forms';
+import { KATAKANA_EXPANSION } from './katakana-expansion-data.js?v=20261015-henkan-forms';
 
 // English meaning cues, not a claim that every loanword came from English.
 // Existing readings, levels, contexts and spelling distractors are retained.
