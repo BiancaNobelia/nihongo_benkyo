@@ -1,5 +1,5 @@
-import { KANJI } from './kanji-data.js?v=20261014-english-katakana';
-import { LEVELS } from './levels.js?v=20261014-english-katakana';
+import { KANJI } from './kanji-data.js?v=20261014-katakana-expanded';
+import { LEVELS } from './levels.js?v=20261014-katakana-expanded';
 
 const kanjiLevels=new Map(KANJI.map(k=>[k.char,k.level]));
 

@@ -1,4 +1,4 @@
-import { componentDetailsMarkup } from './kanji-components.js?v=20261014-english-katakana';
+import { componentDetailsMarkup } from './kanji-components.js?v=20261014-katakana-expanded';
 
 // This block is shared by correct answers, incorrect answers, timeouts and review.
 // Meaning must never depend on whether an optional editorial explanation exists.

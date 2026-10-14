@@ -1,0 +1,1986 @@
+{
+  "source": "https://github.com/evanclan/OpenJLPT",
+  "commit": "0d1d3410bec90bd4098a7c72de820543cb4f707c",
+  "reviewDate": "2026-10-14",
+  "note": "Vocabulary facts checked against pinned OpenJLPT and Marugoto; no source sentences, accent notation or lesson sequence copied. Practice tiers for absent words are editorial, not official JLPT levels.",
+  "marugoto": {
+    "url": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf",
+    "sha256": "fc7041cc172ff5939aa71c47032b5e25fc7e31ec321d7e1d3d6fc44386fe5146"
+  },
+  "previousWordCount": 54,
+  "addedWordCount": 107,
+  "totalWordCount": 161,
+  "addedByLevel": {
+    "N4": 38,
+    "N3": 25,
+    "N5": 30,
+    "N1": 11,
+    "N2": 3
+  },
+  "coverage": [
+    {
+      "request": "ice hockey",
+      "answer": "アイスホッケー",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "illustration",
+      "answer": "イラスト",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "cricket",
+      "answer": "クリケット",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "group",
+      "answer": "グループ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "web site",
+      "answer": "ウェブサイト",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "sports",
+      "answer": "スポーツ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "team",
+      "answer": "チーム",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "teamwork",
+      "answer": "チームワーク",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "ticket",
+      "answer": "チケット",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "T-shirt",
+      "answer": "ティーシャツ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "television",
+      "answer": "テレビ",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "tennis",
+      "answer": "テニス",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "fan (supporter)",
+      "answer": "ファン",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "play (sports)",
+      "answer": "プレー",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "present",
+      "answer": "プレゼント",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "hockey",
+      "answer": "ホッケー",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "e-mail",
+      "answer": "メール",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "message",
+      "answer": "メッセージ",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "rugby",
+      "answer": "ラグビー",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "rule",
+      "answer": "ルール",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "flat / apartment",
+      "answer": "アパート",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "event",
+      "answer": "イベント",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "Internet",
+      "answer": "インターネット",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "cosplay",
+      "answer": "コスプレ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "computer",
+      "answer": "コンピューター",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "supermarket",
+      "answer": "スーパー",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "department store",
+      "answer": "デパート",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "convenience store",
+      "answer": "コンビニ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "stress",
+      "answer": "ストレス",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "barbecue",
+      "answer": "バーベキュー",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "condominium",
+      "answer": "マンション",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "memo",
+      "answer": "メモ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "restaurant",
+      "answer": "レストラン",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "internship",
+      "answer": "インターンシップ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "Australia",
+      "answer": "オーストラリア",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "cup noodles",
+      "answer": "カップラーメン",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "curry",
+      "answer": "カレー",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "jam",
+      "answer": "ジャム",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "gym",
+      "answer": "ジム",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "star fruit",
+      "answer": "スターフルーツ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "spice",
+      "answer": "スパイス",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "soft drink",
+      "answer": "ソフトドリンク",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "software",
+      "answer": "ソフトウェア",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "toast",
+      "answer": "トースト",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "drink",
+      "answer": "ドリンク",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "Turkey (country)",
+      "answer": "トルコ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "dolma",
+      "answer": "ドルマ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "Baumkuchen",
+      "answer": "バウムクーヘン",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "hamburger",
+      "answer": "ハンバーガー",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "pizza",
+      "answer": "ピザ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "personal computer",
+      "answer": "パソコン",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "fish and chips",
+      "answer": "フィッシュアンドチップス",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "ramen noodles",
+      "answer": "ラーメン",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "engineer",
+      "answer": "エンジニア",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "camera",
+      "answer": "カメラ",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "party",
+      "answer": "パーティー",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "CD",
+      "answer": "シーディー",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "slipper",
+      "answer": "スリッパ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "New York",
+      "answer": "ニューヨーク",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "blog",
+      "answer": "ブログ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "recipe",
+      "answer": "レシピ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "cafe",
+      "answer": "カフェ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "coffee",
+      "answer": "コーヒー",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "character (fictional)",
+      "answer": "キャラクター",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "course (study)",
+      "answer": "コース",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "news",
+      "answer": "ニュース",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "notebook",
+      "answer": "ノート",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "questionnaire",
+      "answer": "アンケート",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "interview",
+      "answer": "インタビュー",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "card",
+      "answer": "カード",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "cup",
+      "answer": "カップ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "cake",
+      "answer": "ケーキ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "speech",
+      "answer": "スピーチ",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "pair",
+      "answer": "ペア",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "advice",
+      "answer": "アドバイス",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "tobacco",
+      "answer": "タバコ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "happy",
+      "answer": "ハッピー",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "home",
+      "answer": "ホーム",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "ranking",
+      "answer": "ランキング",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "announcement",
+      "answer": "アナウンス",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "elevator",
+      "answer": "エレベーター",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "counter (service desk)",
+      "answer": "カウンター",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "gate",
+      "answer": "ゲート",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "game",
+      "answer": "ゲーム",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "comment",
+      "answer": "コメント",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "signboard",
+      "answer": "サインボード",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "switch",
+      "answer": "スイッチ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "suitcase",
+      "answer": "スーツケース",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "staff",
+      "answer": "スタッフ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "center",
+      "answer": "センター",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "check-in counter",
+      "answer": "チェックインカウンター",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "passport",
+      "answer": "パスポート",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "flight",
+      "answer": "フライト",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "bed",
+      "answer": "ベッド",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "hotel",
+      "answer": "ホテル",
+      "kind": "requested",
+      "status": "existing"
+    },
+    {
+      "request": "massage",
+      "answer": "マッサージ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "system",
+      "answer": "システム",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "freelance",
+      "answer": "フリーランス",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "Europe",
+      "answer": "ヨーロッパ",
+      "kind": "requested",
+      "status": "added"
+    },
+    {
+      "request": "ice cream",
+      "answer": "アイスクリーム",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "chocolate",
+      "answer": "チョコレート",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "sandwich",
+      "answer": "サンドイッチ",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "salad",
+      "answer": "サラダ",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "cheese",
+      "answer": "チーズ",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "yogurt",
+      "answer": "ヨーグルト",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "juice",
+      "answer": "ジュース",
+      "kind": "extra",
+      "status": "existing"
+    },
+    {
+      "request": "orange",
+      "answer": "オレンジ",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "banana",
+      "answer": "バナナ",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "bus",
+      "answer": "バス",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "taxi",
+      "answer": "タクシー",
+      "kind": "extra",
+      "status": "existing"
+    },
+    {
+      "request": "bicycle helmet",
+      "answer": "ヘルメット",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "smartphone",
+      "answer": "スマートフォン",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "password",
+      "answer": "パスワード",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "keyboard",
+      "answer": "キーボード",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "printer",
+      "answer": "プリンター",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "battery",
+      "answer": "バッテリー",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "volleyball",
+      "answer": "バレーボール",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "basketball",
+      "answer": "バスケットボール",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "soccer",
+      "answer": "サッカー",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "calendar",
+      "answer": "カレンダー",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "menu",
+      "answer": "メニュー",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "receipt",
+      "answer": "レシート",
+      "kind": "extra",
+      "status": "added"
+    },
+    {
+      "request": "air conditioner",
+      "answer": "エアコン",
+      "kind": "extra",
+      "status": "added"
+    }
+  ],
+  "words": [
+    {
+      "word": "アイスホッケー",
+      "english": "ice hockey",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "アイスホッケー"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "イラスト",
+      "english": "illustration",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "イラスト",
+        "イラストレーション"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "クリケット",
+      "english": "cricket",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "クリケット"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "グループ",
+      "english": "group",
+      "level": "N3",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "グループ"
+      ],
+      "sourceId": "1d4ec7c2db",
+      "jmdictId": 1047300,
+      "sourceWord": "グループ",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ウェブサイト",
+      "english": "web site",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ウェブ",
+        "ウェブサイト",
+        "ウエブサイト",
+        "サイト"
+      ]
+    },
+    {
+      "word": "スポーツ",
+      "english": "sports",
+      "level": "N5",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "スポーツ"
+      ],
+      "sourceId": "0a33903ccf",
+      "jmdictId": 1073210,
+      "sourceWord": "スポーツ",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "チーム",
+      "english": "team",
+      "level": "N3",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "チーム"
+      ],
+      "sourceId": "7864a376ed",
+      "jmdictId": 1077360,
+      "sourceWord": "チーム",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "チームワーク",
+      "english": "teamwork",
+      "level": "N1",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "チームワーク"
+      ],
+      "sourceId": "ac2bf15305",
+      "jmdictId": 1077370,
+      "sourceWord": "チームワーク",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "チケット",
+      "english": "ticket",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "チケット"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ティーシャツ",
+      "english": "T-shirt",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "Tシャツ",
+        "ティシャツ",
+        "ティーシャツ",
+        "Ｔシャツ"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "テニス",
+      "english": "tennis",
+      "level": "N4",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "テニス"
+      ],
+      "sourceId": "02dea2f4f6",
+      "jmdictId": 1080000,
+      "sourceWord": "テニス",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ファン",
+      "english": "fan (supporter)",
+      "level": "N1",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "ファン"
+      ],
+      "sourceId": "ed2719ab9d",
+      "jmdictId": 1108540,
+      "sourceWord": "ファン",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "プレー",
+      "english": "play (sports)",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "プレイ",
+        "プレー"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ホッケー",
+      "english": "hockey",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ホッケー"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "メール",
+      "english": "e-mail",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "Eメール",
+        "eメール",
+        "イーメール",
+        "メール",
+        "ｅメール"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ラグビー",
+      "english": "rugby",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ラグビー"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ルール",
+      "english": "rule",
+      "level": "N1",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "ルール"
+      ],
+      "sourceId": "118dd946b4",
+      "jmdictId": 1143920,
+      "sourceWord": "ルール",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "アパート",
+      "english": "flat / apartment",
+      "level": "N5",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "アパート",
+        "マンション"
+      ],
+      "sourceId": "0cf05b3a0d",
+      "jmdictId": 1017760,
+      "sourceWord": "アパート",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "イベント",
+      "english": "event",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "イベント"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "インターネット",
+      "english": "Internet",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "インターネット"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "コスプレ",
+      "english": "cosplay",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "コスチュームプレイ",
+        "コスチュームプレー",
+        "コスプレ"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "コンピューター",
+      "english": "computer",
+      "level": "N3",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "コンピュータ",
+        "コンピューター",
+        "パソコン"
+      ],
+      "sourceId": "5044be2999",
+      "jmdictId": 1053350,
+      "sourceWord": "コンピューター",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "スーパー",
+      "english": "supermarket",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "スーパー",
+        "スーパーマーケット"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "デパート",
+      "english": "department store",
+      "level": "N5",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "デパート"
+      ],
+      "sourceId": "0144505953",
+      "jmdictId": 1083590,
+      "sourceWord": "デパート",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "コンビニ",
+      "english": "convenience store",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "コンビニ",
+        "コンビニエンスストア"
+      ]
+    },
+    {
+      "word": "ストレス",
+      "english": "stress",
+      "level": "N1",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "ストレス"
+      ],
+      "sourceId": "5be448e6cb",
+      "jmdictId": 1071490,
+      "sourceWord": "ストレス",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "バーベキュー",
+      "english": "barbecue",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "バーベキュー"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "マンション",
+      "english": "condominium",
+      "level": "N2",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "アパート",
+        "コンドミニアム",
+        "マンション"
+      ],
+      "sourceId": "0d4a82941e",
+      "jmdictId": 1130040,
+      "sourceWord": "マンション",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "メモ",
+      "english": "memo",
+      "level": "N3",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "メモ"
+      ],
+      "sourceId": "c13f4ea321",
+      "jmdictId": 1133830,
+      "sourceWord": "メモ",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "インターンシップ",
+      "english": "internship",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "インターンシップ"
+      ]
+    },
+    {
+      "word": "オーストラリア",
+      "english": "Australia",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "オーストラリア"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "カップラーメン",
+      "english": "cup noodles",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "カップめん",
+        "カップヌードル",
+        "カップラーメン",
+        "カップ麺"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "カレー",
+      "english": "curry",
+      "level": "N5",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "カレー"
+      ],
+      "sourceId": "9decc44f4e",
+      "jmdictId": 1039140,
+      "sourceWord": "カレー"
+    },
+    {
+      "word": "ジャム",
+      "english": "jam",
+      "level": "N4",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "ジャム"
+      ],
+      "sourceId": "ddfb670acf",
+      "jmdictId": 1065680,
+      "sourceWord": "ジャム",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ジム",
+      "english": "gym",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ジム"
+      ]
+    },
+    {
+      "word": "スターフルーツ",
+      "english": "star fruit",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "スターフルーツ"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "スパイス",
+      "english": "spice",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "スパイス"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ソフトドリンク",
+      "english": "soft drink",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ソフトドリンク"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ソフトウェア",
+      "english": "software",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ソフト",
+        "ソフトウェア",
+        "ソフトウエア"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "トースト",
+      "english": "toast",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "トースト"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ドリンク",
+      "english": "drink",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ドリンク"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "トルコ",
+      "english": "Turkey (country)",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "トルコ"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ドルマ",
+      "english": "dolma",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ドルマ"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "バウムクーヘン",
+      "english": "Baumkuchen",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "バウムクーヘン",
+        "バームクーヘン"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ハンバーガー",
+      "english": "hamburger",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ハンバーガー"
+      ]
+    },
+    {
+      "word": "ピザ",
+      "english": "pizza",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ピザ",
+        "ピッツァ"
+      ]
+    },
+    {
+      "word": "フィッシュアンドチップス",
+      "english": "fish and chips",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "フィッシュアンドチップス",
+        "フィッシュ・アンド・チップス",
+        "フィッシュ＆チップス"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ラーメン",
+      "english": "ramen noodles",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ラーメン"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "エンジニア",
+      "english": "engineer",
+      "level": "N1",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "エンジニア"
+      ],
+      "sourceId": "e5d4fba484",
+      "jmdictId": 1030910,
+      "sourceWord": "エンジニア",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "パーティー",
+      "english": "party",
+      "level": "N5",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "パーティ",
+        "パーティー"
+      ],
+      "sourceId": "28111455cd",
+      "jmdictId": 1100760,
+      "sourceWord": "パーティー",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "シーディー",
+      "english": "CD",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "CD",
+        "シーディー",
+        "ＣＤ"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "スリッパ",
+      "english": "slipper",
+      "level": "N5",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "スリッパ"
+      ],
+      "sourceId": "508131fe89",
+      "jmdictId": 1073900,
+      "sourceWord": "スリッパ",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ニューヨーク",
+      "english": "New York",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ニューヨーク"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ブログ",
+      "english": "blog",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ブログ"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "レシピ",
+      "english": "recipe",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "レシピ"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "カフェ",
+      "english": "cafe",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "カッフェ",
+        "カフェ",
+        "カフエ"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "キャラクター",
+      "english": "character (fictional)",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "キャラ",
+        "キャラクタ",
+        "キャラクター"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "コース",
+      "english": "course (study)",
+      "level": "N2",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "コース"
+      ],
+      "sourceId": "fad45b8c0a",
+      "jmdictId": 1048830,
+      "sourceWord": "コース",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ニュース",
+      "english": "news",
+      "level": "N5",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "ニュース"
+      ],
+      "sourceId": "b824bec2c5",
+      "jmdictId": 1091500,
+      "sourceWord": "ニュース",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "アンケート",
+      "english": "questionnaire",
+      "level": "N1",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "アンケート"
+      ],
+      "sourceId": "44c50f365c",
+      "jmdictId": 1019940,
+      "sourceWord": "アンケート",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "カード",
+      "english": "card",
+      "level": "N3",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "カード"
+      ],
+      "sourceId": "c139bcdcb4",
+      "jmdictId": 1036400,
+      "sourceWord": "カード",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "カップ",
+      "english": "cup",
+      "level": "N5",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "カップ"
+      ],
+      "sourceId": "613c41bd1d",
+      "jmdictId": 1037670,
+      "sourceWord": "カップ",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ケーキ",
+      "english": "cake",
+      "level": "N4",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "ケーキ"
+      ],
+      "sourceId": "8426193f36",
+      "jmdictId": 1047860,
+      "sourceWord": "ケーキ",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ペア",
+      "english": "pair",
+      "level": "N1",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "ペア"
+      ],
+      "sourceId": "47e4de1f65",
+      "jmdictId": 1120690,
+      "sourceWord": "ペア",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "アドバイス",
+      "english": "advice",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "アドバイス"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "タバコ",
+      "english": "tobacco",
+      "level": "N5",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "たばこ",
+        "タバコ",
+        "煙草"
+      ],
+      "sourceId": "80beed00bf",
+      "jmdictId": 1597150,
+      "sourceWord": "たばこ",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ハッピー",
+      "english": "happy",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ハッピー"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ホーム",
+      "english": "home",
+      "level": "N3",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "ホーム"
+      ],
+      "sourceId": "e11ef6d7e3",
+      "jmdictId": 1121740,
+      "sourceWord": "ホーム",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ランキング",
+      "english": "ranking",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ランキング"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "アナウンス",
+      "english": "announcement",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "アナウンス"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "エレベーター",
+      "english": "elevator",
+      "level": "N5",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "エレベータ",
+        "エレベーター"
+      ],
+      "sourceId": "eb1695baf6",
+      "jmdictId": 1030630,
+      "sourceWord": "エレベーター",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "カウンター",
+      "english": "counter (service desk)",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "カウンタ",
+        "カウンター"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ゲート",
+      "english": "gate",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ゲート"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ゲーム",
+      "english": "game",
+      "level": "N3",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "ゲーム"
+      ],
+      "sourceId": "b3310e5721",
+      "jmdictId": 1048400,
+      "sourceWord": "ゲーム",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "コメント",
+      "english": "comment",
+      "level": "N1",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "コメント"
+      ],
+      "sourceId": "969ea280e7",
+      "jmdictId": 1051230,
+      "sourceWord": "コメント",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "サインボード",
+      "english": "signboard",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "かんばん",
+        "サインボード",
+        "看板"
+      ]
+    },
+    {
+      "word": "スイッチ",
+      "english": "switch",
+      "level": "N3",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "スイッチ"
+      ],
+      "sourceId": "9a2b28ced4",
+      "jmdictId": 1067210,
+      "sourceWord": "スイッチ",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "スタッフ",
+      "english": "staff",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "スタッフ"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "センター",
+      "english": "center",
+      "level": "N3",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "センタ",
+        "センター"
+      ],
+      "sourceId": "fee426e7d0",
+      "jmdictId": 1075040,
+      "sourceWord": "センター",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "チェックインカウンター",
+      "english": "check-in counter",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "チェックインカウンター"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "フライト",
+      "english": "flight",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "フライト"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "マッサージ",
+      "english": "massage",
+      "level": "N1",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "マッサージ"
+      ],
+      "sourceId": "8724f25af8",
+      "jmdictId": 1128360,
+      "sourceWord": "マッサージ",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "システム",
+      "english": "system",
+      "level": "N1",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "システム"
+      ],
+      "sourceId": "35d3365a8f",
+      "jmdictId": 1060300,
+      "sourceWord": "システム",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "フリーランス",
+      "english": "freelance",
+      "level": "N3",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "フリーランス"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ヨーロッパ",
+      "english": "Europe",
+      "level": "N3",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "ヨーロッパ"
+      ],
+      "sourceId": "bb4b5f7ee0",
+      "jmdictId": 1137570,
+      "sourceWord": "ヨーロッパ",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "アイスクリーム",
+      "english": "ice cream",
+      "level": "N3",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "アイスクリーム"
+      ],
+      "sourceId": "9452242b03",
+      "jmdictId": 1013980,
+      "sourceWord": "アイスクリーム"
+    },
+    {
+      "word": "チョコレート",
+      "english": "chocolate",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "チョコレート"
+      ]
+    },
+    {
+      "word": "サンドイッチ",
+      "english": "sandwich",
+      "level": "N4",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "サンドイッチ",
+        "サンドウィッチ",
+        "サンドウイッチ"
+      ],
+      "sourceId": "f919deef04",
+      "jmdictId": 1058580,
+      "sourceWord": "サンドイッチ"
+    },
+    {
+      "word": "サラダ",
+      "english": "salad",
+      "level": "N4",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "サラダ"
+      ],
+      "sourceId": "43f6c947f9",
+      "jmdictId": 1057850,
+      "sourceWord": "サラダ"
+    },
+    {
+      "word": "チーズ",
+      "english": "cheese",
+      "level": "N3",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "チーズ"
+      ],
+      "sourceId": "ed560b721e",
+      "jmdictId": 1077330,
+      "sourceWord": "チーズ"
+    },
+    {
+      "word": "ヨーグルト",
+      "english": "yogurt",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ヨーグルト"
+      ]
+    },
+    {
+      "word": "オレンジ",
+      "english": "orange",
+      "level": "N1",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "オレンジ"
+      ],
+      "sourceId": "cfae27ab7c",
+      "jmdictId": 1035860,
+      "sourceWord": "オレンジ"
+    },
+    {
+      "word": "バナナ",
+      "english": "banana",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "バナナ"
+      ]
+    },
+    {
+      "word": "バス",
+      "english": "bus",
+      "level": "N5",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "バス"
+      ],
+      "sourceId": "bd7df6c7a2",
+      "jmdictId": 1098390,
+      "sourceWord": "バス",
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "ヘルメット",
+      "english": "bicycle helmet",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "ヘルメット"
+      ]
+    },
+    {
+      "word": "スマートフォン",
+      "english": "smartphone",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "スマホ",
+        "スマートフォン",
+        "スマートフォーン",
+        "スマートホン"
+      ]
+    },
+    {
+      "word": "パスワード",
+      "english": "password",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "パスワード"
+      ]
+    },
+    {
+      "word": "キーボード",
+      "english": "keyboard",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "キーボード"
+      ]
+    },
+    {
+      "word": "プリンター",
+      "english": "printer",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "プリンタ",
+        "プリンター"
+      ]
+    },
+    {
+      "word": "バッテリー",
+      "english": "battery",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "バッテリー"
+      ]
+    },
+    {
+      "word": "バレーボール",
+      "english": "volleyball",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "バレーボール"
+      ]
+    },
+    {
+      "word": "バスケットボール",
+      "english": "basketball",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "バスケットボール"
+      ]
+    },
+    {
+      "word": "サッカー",
+      "english": "soccer",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "サッカー"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    },
+    {
+      "word": "カレンダー",
+      "english": "calendar",
+      "level": "N5",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "カレンダー"
+      ],
+      "sourceId": "6382448bd3",
+      "jmdictId": 1039220,
+      "sourceWord": "カレンダー"
+    },
+    {
+      "word": "メニュー",
+      "english": "menu",
+      "level": "N2",
+      "levelBasis": "pinned-vocabulary",
+      "acceptedSpellings": [
+        "メニュー"
+      ],
+      "sourceId": "5af15108d0",
+      "jmdictId": 1133790,
+      "sourceWord": "メニュー"
+    },
+    {
+      "word": "レシート",
+      "english": "receipt",
+      "level": "N4",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "レシート"
+      ]
+    },
+    {
+      "word": "エアコン",
+      "english": "air conditioner",
+      "level": "N5",
+      "levelBasis": "editorial-practice-tier",
+      "acceptedSpellings": [
+        "エアコン",
+        "エアコンディショナ",
+        "エアコンディショナー"
+      ],
+      "spellingReference": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf"
+    }
+  ]
+}

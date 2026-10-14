@@ -1,5 +1,5 @@
-import { shuffle } from './core.js?v=20261014-english-katakana';
-import { READING_METADATA } from './reading-metadata.js?v=20261014-english-katakana';
+import { shuffle } from './core.js?v=20261014-katakana-expanded';
+import { READING_METADATA } from './reading-metadata.js?v=20261014-katakana-expanded';
 
 export const READING_CATEGORIES = {
   noun:'Kata benda', verb:'Kata kerja', adjective:'Kata sifat', adverb:'Kata keterangan', special:'Hitungan & tanggal',

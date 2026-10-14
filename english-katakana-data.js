@@ -1,4 +1,5 @@
-import { KATAKANA_WRITING } from './writing-data.js?v=20261014-english-katakana';
+import { KATAKANA_WRITING } from './writing-data.js?v=20261014-katakana-expanded';
+import { KATAKANA_EXPANSION } from './katakana-expansion-data.js?v=20261014-katakana-expanded';
 
 // English meaning cues, not a claim that every loanword came from English.
 // Existing readings, levels, contexts and spelling distractors are retained.
@@ -57,4 +58,5 @@ const ADDITIONAL_WORDS = [
 export const ENGLISH_KATAKANA = [
   ...KATAKANA_WRITING.map(q => ({...q, reading:q.prompt, prompt:ENGLISH_CUES[q.answer]})),
   ...ADDITIONAL_WORDS.map(q => ({...q, sourceWord:q.answer})),
+  ...KATAKANA_EXPANSION,
 ].map(q => ({...q, id:`english-katakana:${q.answer}`, mode:'english-katakana'}));

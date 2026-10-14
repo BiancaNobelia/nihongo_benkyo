@@ -1,23 +1,23 @@
-import { KANJI } from './kanji-data.js?v=20261014-english-katakana';
-import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-english-katakana';
-import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-english-katakana';
-import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-english-katakana';
-import { groupsForCharacter } from './similar-core.js?v=20261014-english-katakana';
-import { createSimilarView } from './similar-view.js?v=20261014-english-katakana';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-english-katakana';
-import { familiesForCharacter } from './radical-core.js?v=20261014-english-katakana';
-import { componentNoteMarkup } from './component-note-view.js?v=20261014-english-katakana';
+import { KANJI } from './kanji-data.js?v=20261014-katakana-expanded';
+import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-katakana-expanded';
+import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-katakana-expanded';
+import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-katakana-expanded';
+import { groupsForCharacter } from './similar-core.js?v=20261014-katakana-expanded';
+import { createSimilarView } from './similar-view.js?v=20261014-katakana-expanded';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-katakana-expanded';
+import { familiesForCharacter } from './radical-core.js?v=20261014-katakana-expanded';
+import { componentNoteMarkup } from './component-note-view.js?v=20261014-katakana-expanded';
 
-import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-english-katakana';
+import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-katakana-expanded';
 
-import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261014-english-katakana';
-import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-english-katakana';
+import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261014-katakana-expanded';
+import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-katakana-expanded';
 
-import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-english-katakana';
-import { requestedQuizCount } from './quiz-settings.js?v=20261014-english-katakana';
-import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-english-katakana';
-import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-english-katakana';
-import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-english-katakana';
+import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-katakana-expanded';
+import { requestedQuizCount } from './quiz-settings.js?v=20261014-katakana-expanded';
+import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-katakana-expanded';
+import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-katakana-expanded';
+import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-katakana-expanded';
 
 const paths = {
   home:'<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>',
@@ -236,7 +236,7 @@ function renderQuestion() {
   const caption = isEnglish ? 'Pilih penulisan katakana yang sesuai dengan kata Inggris berikut.' : isWriting ? `Pilih penulisan ${quiz.mode === 'hiragana-kanji' ? 'kanji' : 'katakana'} untuk bagian bergaris bawah.` : hasSentence ? 'Pilih bacaan hiragana untuk kanji yang digarisbawahi.' : quiz.mode === 'meaning' ? 'Apa arti kanji ini?' : quiz.mode === 'kanji' ? 'Kanji mana yang sesuai dengan arti ini?' : 'Pilih bacaan hiragana yang tepat.';
   const prompt = hasSentence ? sentenceParts(q.sentence).map(escape).join(`<span class="writing-target">${escape(q.prompt)}</span>`) : escape(q.prompt);
   const category=quiz.mode==='jlpt-reading' ? `<span class="reading-category">${escape(READING_CATEGORIES[q.readingCategory] || 'Kosakata')} · ${q.level}</span>` : '';
-  root.innerHTML = `<div class="study-panel">${heading('WAKTUNYA MELATIH INGATAN', questionTitle, `${modeNames[quiz.mode]} · ${quiz.level === 'all' ? 'Semua level' : quiz.level}`)}<div class="study-top"><span>Soal <strong>${quiz.index + 1}</strong> / ${quiz.questions.length}</span>${quiz.time ? `<span class="timer">${icon('clock')}<span id="timer-value" role="timer">${quiz.time} dtk</span></span>` : '<span>Pelan-pelan juga boleh.</span>'}</div><div class="progress-track" role="progressbar" aria-label="Progres kuis" aria-valuemin="0" aria-valuemax="${quiz.questions.length}" aria-valuenow="${quiz.index}"><span style="width:${quiz.index / quiz.questions.length * 100}%"></span></div><div class="quiz-question ${practiceBanks[quiz.mode] ? 'reading-question' : ''} ${hasSentence ? `writing-question ${quiz.mode}` : ''}">${category}<span class="quiz-caption">${caption}</span><div tabindex="-1" class="quiz-prompt ${quiz.mode === 'kanji' ? 'meaning-prompt' : ''} ${isEnglish ? 'english-cue' : ''} ${hasSentence ? 'sentence-prompt' : ''}" ${isEnglish ? 'lang="en"' : quiz.mode !== 'kanji' ? 'lang="ja"' : ''}>${prompt}</div><div class="quiz-options ${practiceBanks[quiz.mode] && q.options.some(a => a.length > 6) ? 'long-readings' : ''}">${q.options.map((answer,i) => `<button class="quiz-option" data-answer="${i}"><span>${'ABCD'[i]}</span><span ${quiz.mode !== 'meaning' ? 'lang="ja"' : ''}>${escape(answer)}</span></button>`).join('')}</div><div id="quiz-feedback" class="quiz-feedback" role="status">Pilih satu jawaban yang paling tepat.</div></div><div class="quiz-next"><button class="text-button" data-action="quiz-exit">Akhiri latihan</button><button class="primary" data-action="quiz-next" disabled>${quiz.index === quiz.questions.length - 1 ? 'Lihat hasil' : 'Soal berikutnya'} ${icon('arrow')}</button></div></div>`;
+  root.innerHTML = `<div class="study-panel">${heading('WAKTUNYA MELATIH INGATAN', questionTitle, `${modeNames[quiz.mode]} · ${quiz.level === 'all' ? 'Semua level' : quiz.level}`)}<div class="study-top"><span>Soal <strong>${quiz.index + 1}</strong> / ${quiz.questions.length}</span>${quiz.time ? `<span class="timer">${icon('clock')}<span id="timer-value" role="timer">${quiz.time} dtk</span></span>` : '<span>Pelan-pelan juga boleh.</span>'}</div><div class="progress-track" role="progressbar" aria-label="Progres kuis" aria-valuemin="0" aria-valuemax="${quiz.questions.length}" aria-valuenow="${quiz.index}"><span style="width:${quiz.index / quiz.questions.length * 100}%"></span></div><div class="quiz-question ${practiceBanks[quiz.mode] ? 'reading-question' : ''} ${hasSentence ? `writing-question ${quiz.mode}` : ''}">${category}<span class="quiz-caption">${caption}</span><div tabindex="-1" class="quiz-prompt ${quiz.mode === 'kanji' ? 'meaning-prompt' : ''} ${isEnglish ? 'english-cue' : ''} ${hasSentence ? 'sentence-prompt' : ''}" ${isEnglish ? 'lang="en"' : quiz.mode !== 'kanji' ? 'lang="ja"' : ''}>${prompt}</div><div class="quiz-options ${practiceBanks[quiz.mode] && q.options.some(a => a.length > (isEnglish ? 5 : 6)) ? 'long-readings' : ''}">${q.options.map((answer,i) => `<button class="quiz-option" data-answer="${i}"><span>${'ABCD'[i]}</span><span ${quiz.mode !== 'meaning' ? 'lang="ja"' : ''}>${escape(answer)}</span></button>`).join('')}</div><div id="quiz-feedback" class="quiz-feedback" role="status">Pilih satu jawaban yang paling tepat.</div></div><div class="quiz-next"><button class="text-button" data-action="quiz-exit">Akhiri latihan</button><button class="primary" data-action="quiz-next" disabled>${quiz.index === quiz.questions.length - 1 ? 'Lihat hasil' : 'Soal berikutnya'} ${icon('arrow')}</button></div></div>`;
   window.scrollTo({top:0, behavior:'instant'});
   document.querySelector('.quiz-prompt').focus({preventScroll:true});
   if (quiz.time) {

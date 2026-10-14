@@ -1,4 +1,4 @@
-import { RADICAL_MEMBERS } from './radical-members.js?v=20261014-english-katakana';
+import { RADICAL_MEMBERS } from './radical-members.js?v=20261014-katakana-expanded';
 
 const normalize = value => String(value || '').normalize('NFKC').toLocaleLowerCase('id').trim();
 const cardText = card => [card.char,card.meaning,...card.on,...card.kun.map(r => r.replaceAll('.','')),card.example?.word,card.example?.reading].join(' ');

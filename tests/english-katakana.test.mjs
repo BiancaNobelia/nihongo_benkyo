@@ -18,9 +18,9 @@ test('English mode replaces the old selector and retains all 50 words with Engli
   assert.ok(setup.includes('value="english-katakana"'));
   assert.ok(!setup.includes('hiragana-katakana'));
   assert.ok(!Object.hasOwn(PRACTICE_BANKS,'hiragana-katakana'));
-  assert.equal(ENGLISH_KATAKANA.length,54);
-  assert.equal(new Set(ENGLISH_KATAKANA.map(q=>q.prompt)).size,54);
-  assert.equal(new Set(ENGLISH_KATAKANA.map(q=>q.id)).size,54);
+  assert.equal(ENGLISH_KATAKANA.length,161);
+  assert.equal(new Set(ENGLISH_KATAKANA.map(q=>q.prompt)).size,161);
+  assert.equal(new Set(ENGLISH_KATAKANA.map(q=>q.id)).size,161);
   for(const old of KATAKANA_WRITING){
     const q=ENGLISH_KATAKANA.find(q=>q.answer===old.answer);
     assert.ok(q,old.answer);
@@ -30,7 +30,7 @@ test('English mode replaces the old selector and retains all 50 words with Engli
     assert.deepEqual(q.distractors,old.distractors);
   }
   for(const q of ENGLISH_KATAKANA){
-    assert.match(q.prompt,/^[a-z][a-z ()-]*$/);
+    assert.match(q.prompt,/^[A-Za-z][A-Za-z /()-]*$/);
     assert.equal(q.reading,hiragana(q.answer));
     assert.equal(new Set([q.answer,...q.distractors]).size,4);
     for(const a of [q.answer,...q.distractors])assert.match(a,/^[ァ-ヶー]+$/);
@@ -55,7 +55,7 @@ test('sessions and feedback keep English separate from Japanese readings and pre
   const before=JSON.stringify(ENGLISH_KATAKANA);
   for(const level of ['all','N5','N4','N3','N2','N1']){
     const pool=getQuizPool('english-katakana',level);
-    const quiz=createWritingQuiz(pool,100);
+    const quiz=createWritingQuiz(pool,pool.length);
     assert.equal(quiz.length,pool.length);
     assert.equal(new Set(quiz.map(q=>q.prompt)).size,quiz.length);
     for(const q of quiz){

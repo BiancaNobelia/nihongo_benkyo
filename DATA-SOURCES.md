@@ -393,6 +393,49 @@ Tautan lama `#kuis/hiragana-katakana` membuka mode baru; riwayat mode lama
 tetap disimpan dengan namanya semula. Angka bank katakana 50 di bagian-bagian
 sebelumnya mendokumentasikan bank dasar sebelum penggantian mode ini.
 
+### Perluasan kosakata English → Katakana
+
+Bank aktif kini berisi **161 soal**: N5 40, N4 49, N3 36, N2 15, N1 21.
+Seluruh 99 kata permintaan tercakup: 14 sudah ada dan 85 ditambahkan.
+Sebanyak 22 kata tambahan lain melengkapi makanan, teknologi, perjalanan,
+dan olahraga, misalnya smartphone, keyboard, air conditioner, dan volleyball.
+Kata yang sudah ada tidak digandakan. Riwayat dan ID 54 soal sebelumnya tetap.
+
+`data/katakana-expansion-editorial.json` menyimpan ejaan, arti Indonesia,
+pilihan salah, varian yang sah, dan konteks latihan. Pembentukan bank dilakukan
+oleh `scripts/build_katakana_expansion.py`, menghasilkan
+`katakana-expansion-data.js` dan `data/katakana-expansion-source.json`.
+Manifest mencatat cakupan setiap kata permintaan, tingkat latihan, dan sumber.
+Level kata yang ditemukan persis mengikuti OpenJLPT terkunci. Untuk kata yang
+tidak ada, level merupakan pengelompokan latihan editorial N5/N4/N3; tingkat
+A2/B1 Marugoto tidak dianggap setara langsung dengan level JLPT.
+
+Ejaan dan makna dicocokkan dengan [indeks kosakata Marugoto A2/B1, Japan
+Foundation](https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf)
+serta kamus. PDF disimpan hanya di cache; versi sumber dicatat dengan SHA-256
+di manifest. Tidak ada kalimat contoh, urutan pelajaran, atau notasi aksen
+Marugoto yang disalin. Kalimat dan penjelasan Indonesia dibuat untuk latihan ini.
+Fakta kosakata dari OpenJLPT/JMdict tetap mengikuti atribusi dan CC BY-SA 4.0
+yang dijelaskan di atas.
+
+Petunjuk Inggris diperjelas jika ambigu: fan (supporter), Turkey (country),
+play (sports), dan counter (service desk). “Convenient store” dibetulkan menjadi
+“convenience store”. Bentuk alternatif sah tidak menjadi pengecoh, termasuk
+コンピュータ, プレイ, dan バームクーヘン. Varian ejaan
+[Baumkuchen diperiksa di Digital Daijisen](https://kotobank.jp/word/%E3%81%B0%E3%81%86%E3%82%80%E3%81%8F%E3%83%BC%E3%81%B8%E3%82%93-3164065).
+[サインボード](https://kotobank.jp/word/%E3%81%95%E3%81%84%E3%82%93%E3%81%BC%E3%83%BC%E3%81%A9-1323324)
+dan [condominium](https://kotobank.jp/ejword/condominium) juga diperiksa;
+istilah Jepang yang sepadan dapat berbeda dari transliterasi Inggrisnya.
+
+Untuk membangun ulang, sediakan cache OpenJLPT yang terkunci, unduh PDF pada
+tautan di atas ke `.cache/marugoto-preintermediate-en.pdf`, lalu jalankan:
+
+```sh
+pdftotext -layout .cache/marugoto-preintermediate-en.pdf .cache/marugoto-preintermediate-en.txt
+python scripts/build_katakana_expansion.py
+npm test
+```
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau
