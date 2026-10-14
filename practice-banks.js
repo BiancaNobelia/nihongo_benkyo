@@ -1,13 +1,13 @@
-import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261014-sentence-modes';
-import { KANJI_WRITING } from './writing-data.js?v=20261014-sentence-modes';
-import { ENGLISH_KATAKANA } from './english-katakana-data.js?v=20261014-sentence-modes';
-import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261014-sentence-modes';
-import { SPECIAL_READINGS } from './special-reading-data.js?v=20261014-sentence-modes';
-import { KANJI } from './kanji-data.js?v=20261014-sentence-modes';
-import { eligibleQuizCards } from './core.js?v=20261014-sentence-modes';
-import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261014-sentence-modes';
-import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261014-sentence-modes';
-import { prepareReadingBank } from './reading-balance.js?v=20261014-sentence-modes';
+import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261014-kotoba-n3';
+import { KANJI_WRITING } from './writing-data.js?v=20261014-kotoba-n3';
+import { ENGLISH_KATAKANA } from './english-katakana-data.js?v=20261014-kotoba-n3';
+import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261014-kotoba-n3';
+import { SPECIAL_READINGS } from './special-reading-data.js?v=20261014-kotoba-n3';
+import { KANJI } from './kanji-data.js?v=20261014-kotoba-n3';
+import { eligibleQuizCards } from './core.js?v=20261014-kotoba-n3';
+import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261014-kotoba-n3';
+import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261014-kotoba-n3';
+import { prepareReadingBank } from './reading-balance.js?v=20261014-kotoba-n3';
 
 export const PRACTICE_BANKS = {
   // Existing contextual questions win over duplicate new vocabulary entries.

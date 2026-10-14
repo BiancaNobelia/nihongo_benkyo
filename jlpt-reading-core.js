@@ -1,6 +1,6 @@
-import { selectReadingQuestions } from './reading-balance.js?v=20261014-sentence-modes';
-import { readingOptions } from './reading-options.js?v=20261014-sentence-modes';
-import { withReadingSentence } from './reading-sentences.js?v=20261014-sentence-modes';
+import { selectReadingQuestions } from './reading-balance.js?v=20261014-kotoba-n3';
+import { readingOptions } from './reading-options.js?v=20261014-kotoba-n3';
+import { withReadingSentence } from './reading-sentences.js?v=20261014-kotoba-n3';
 
 export function filterReadingQuestions(bank, level = 'all') {
   return bank.filter(q => level === 'all' || q.level === level);

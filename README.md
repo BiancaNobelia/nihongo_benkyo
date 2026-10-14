@@ -5,6 +5,11 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 
 ## Fitur
 
+- Kuis Kotoba JLPT N3: seluruh 2.276 entri workbook pengguna di `#kotoba/n3`,
+  terpisah dari Minna no Nihongo. Filter jenis kata, 1.659 entri inti atau
+  617 tambahan, pencarian, lima mode latihan, jumlah custom, dan riwayat skor.
+  Arti Indonesia mengikuti terjemahan otomatis sumber dengan koreksi terbatas;
+  arti Inggris rujukan bisa dibuka setelah menjawab.
 - 2.383 kanji N5–N1 dengan arti Indonesia, bacaan on/kun, dan jumlah goresan.
 - N5: 84 · N4: 169 · N3: 387 · N2: 398 · N1: 1.345.
 - 2.378 kanji memiliki contoh kata; 5 karakter langka menampilkan keterangan

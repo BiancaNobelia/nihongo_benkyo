@@ -1,7 +1,7 @@
-import { shuffle } from './core.js?v=20261014-sentence-modes';
-import { READING_METADATA } from './reading-metadata.js?v=20261014-sentence-modes';
-import { readingQuestionKey } from './reading-history.js?v=20261014-sentence-modes';
-import { withReadingSentence } from './reading-sentences.js?v=20261014-sentence-modes';
+import { shuffle } from './core.js?v=20261014-kotoba-n3';
+import { READING_METADATA } from './reading-metadata.js?v=20261014-kotoba-n3';
+import { readingQuestionKey } from './reading-history.js?v=20261014-kotoba-n3';
+import { withReadingSentence } from './reading-sentences.js?v=20261014-kotoba-n3';
 
 export const READING_CATEGORIES = {
   noun:'Kata benda', verb:'Kata kerja', adjective:'Kata sifat', adverb:'Kata keterangan', special:'Hitungan & tanggal',

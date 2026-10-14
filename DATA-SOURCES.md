@@ -546,6 +546,58 @@ menetapkan pemisahan tampilan yang sama untuk pratinjau dan soal sebenarnya.
 Nama mode berubah untuk memperjelas pilihan, sementara ID penyimpanan riwayat
 tetap sama.
 
+### Kuis Kotoba JLPT N3 — 14 Oktober 2026
+
+Sumber adalah workbook pengguna `JLPT%20N3%20-%20Kompilasi%20Kotoba%202026.xlsx`,
+sheet `Kotoba N3`, baris 2–2277. Seluruh **2.276 entri** diimpor ke
+`kotoba-n3-data.js`: bacaan, penulisan, arti Indonesia, arti Inggris rujukan,
+16 kategori kata, serta pembagian 1.659 entri inti dan 617 entri tambahan.
+Tidak ada pembagian bab buatan. File Excel asli dan kolom status hafalan pribadi
+tidak dipublikasikan. `data/kotoba-n3-source.json` mencatat hash workbook,
+jumlah menurut kategori, nomor baris, dan setiap perubahan arti.
+
+Sumber komunitas yang tercatat di workbook:
+
+- [OpenJLPT](https://github.com/evanclan/OpenJLPT), dengan data JMdict milik
+  Electronic Dictionary Research and Development Group (EDRDG), CC BY-SA 4.0.
+  Lihat juga [NOTICE OpenJLPT](data/licenses/OpenJLPT-NOTICE.md).
+- [Open Anki JLPT Decks](https://github.com/jamsinclair/open-anki-jlpt-decks),
+  Jamie Sinclair dan kontributor. [Lisensi MIT](data/licenses/OpenAnki-MIT.txt)
+  dipertahankan; atribusi sumber data asal tetap berlaku.
+- [Yomitan JLPT Vocab](https://github.com/stephenmk/yomitan-jlpt-vocab),
+  stephenmk dan kontributor, CC BY-SA 4.0; bersumber dari daftar JLPT
+  Jonathan Waller ([Tanos](https://www.tanos.co.uk/jlpt/), CC BY) dan JMdict.
+
+Data N3 dan adaptasi arti Indonesia di website dibagikan di bawah
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), dengan atribusi
+di atas. Level dan status inti/tambahan mengikuti snapshot workbook, bukan
+daftar resmi JLPT maupun hasil verifikasi ulang seluruh entri.
+
+Arti Indonesia pada workbook diterjemahkan otomatis. Saat impor, kata “untuk”
+yang berasal dari infinitif Inggris dirapikan pada awal gloss kata kerja,
+serta tanda baca akhir dirapikan. Sebanyak 28 koreksi editorial AI tersimpan
+di `data/kotoba-n3-overrides.json`, termasuk kesalahan makna seperti 相手,
+交際, 宛てる, 越す, dan pasangan transitif/intransitif. Rujukan kamus tambahan:
+[宛てる — Kanjipedia](https://www.kanjipedia.jp/kotoba/0000075200) dan
+[越す — Digital Daijisen/Kotobank](https://kotobank.jp/word/越す-501659).
+Ini bukan tinjauan menyeluruh atas seluruh terjemahan. Arti Inggris asli tetap
+tersedia sebagai rujukan setelah menjawab.
+
+Kelima mode memakai bank N3 yang sama. Mode bacaan hanya mengambil entri dengan
+kanji; mode audio Jepang menghindari placeholder yang tidak bisa dibaca sebagai
+kata mandiri. Pengecoh mengikuti cakupan yang dipilih, dengan prioritas jenis
+kata serupa. Homofon, penulisan sama, dan arti yang beririsan dalam bahasa
+Indonesia atau Inggris dihindari sebagai pilihan salah. Satu entri tidak
+diulang dalam sesi yang sama. Riwayat menyimpan penanda `course: n3`, sementara
+riwayat Minna lama tetap dikenali.
+
+Bangun ulang dari workbook yang sama (tanpa mengubah workbook):
+
+```sh
+python scripts/build_kotoba_n3.py /path/to/workbook.xlsx
+npm test
+```
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau

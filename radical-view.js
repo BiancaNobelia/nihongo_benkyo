@@ -1,7 +1,7 @@
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-sentence-modes';
-import { filterRadicalFamilies, filterRadicalKanji, paginateRadicals } from './radical-core.js?v=20261014-sentence-modes';
-import { similarityQuizCallout } from './similar-quiz-view.js?v=20261014-sentence-modes';
-import { explainedKanjiCard } from './component-note-view.js?v=20261014-sentence-modes';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-kotoba-n3';
+import { filterRadicalFamilies, filterRadicalKanji, paginateRadicals } from './radical-core.js?v=20261014-kotoba-n3';
+import { similarityQuizCallout } from './similar-quiz-view.js?v=20261014-kotoba-n3';
+import { explainedKanjiCard } from './component-note-view.js?v=20261014-kotoba-n3';
 
 export function createRadicalView({root, kanji, levels, escape, icon}) {
   const byChar = new Map(kanji.map(k => [k.char,k]));

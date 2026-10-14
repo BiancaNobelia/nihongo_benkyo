@@ -1,7 +1,7 @@
-import { SIMILAR_VOCABULARY } from './similar-quiz-data.js?v=20261014-sentence-modes';
-import { SIMILAR_GROUPS } from './similar-data.js?v=20261014-sentence-modes';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-sentence-modes';
-import { READING_TOPICS } from './special-reading-data.js?v=20261014-sentence-modes';
+import { SIMILAR_VOCABULARY } from './similar-quiz-data.js?v=20261014-kotoba-n3';
+import { SIMILAR_GROUPS } from './similar-data.js?v=20261014-kotoba-n3';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-kotoba-n3';
+import { READING_TOPICS } from './special-reading-data.js?v=20261014-kotoba-n3';
 
 export const QUIZ_TOPICS = [
   ...RADICAL_FAMILIES.map(f => ({id:f.id,kind:'family',label:`${f.symbol} · ${f.title}`,chars:f.members})),

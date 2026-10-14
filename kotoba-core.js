@@ -1,4 +1,4 @@
-import { shuffle } from './core.js?v=20261014-sentence-modes';
+import { shuffle } from './core.js?v=20261014-kotoba-n3';
 
 export const KOTOBA_MODES = {
   'jp-id': { label:'Jepang → Indonesia', short:'JP → ID', caption:'Pilih arti kosakata berikut.', answerLanguage:'id' },
@@ -17,29 +17,36 @@ const unique = values => [...new Map(values.map(s=>[normalize(s),s])).values()];
 // meaning. Shared senses must never appear as competing answers.
 export function meaningKeys(value) {
   return [...new Set(value.normalize('NFKC').toLocaleLowerCase('id')
-    .replace(/\([^)]*\)/g,'').split(/\s*[/;]\s*|\s+atau\s+/)
+    .replace(/\([^)]*\)/g,'').split(/\s*[/;,]\s*|\s+atau\s+/)
     .map(s=>s.replace(/[.!?…]/g,'').replace(/\s+/g,' ').trim()).filter(Boolean))];
 }
 const intersects = (a,b) => a.some(value=>b.includes(value));
 
-export function getKotobaPool(entries, { chapters=ALL_CHAPTERS, type='all', mode='jp-id' }={}) {
-  const selected = new Set(chapters);
+export function getKotobaPool(entries, { chapters=null, type='all', mode='jp-id', sourceGroup='all' }={}) {
+  const selected = Array.isArray(chapters) ? new Set(chapters) : null;
   const grouped = new Map();
   for (const e of entries) {
-    if (!selected.has(e.chapter) || (type!=='all' && type!==e.type)) continue;
+    if ((selected && !selected.has(e.chapter)) || (type!=='all' && type!==e.type)
+      || (sourceGroup!=='all' && sourceGroup!==e.sourceGroup)) continue;
     const word=e.spelling || e.reading;
     if (mode==='reading' && !/\p{Script=Han}/u.test(word)) continue;
     // A suffix placeholder cannot be pronounced as an independent word.
     if (mode==='audio-jp' && /[～〜]/u.test(e.reading)) continue;
     const key=`${normalize(word)}|${kanaKey(e.reading)}`;
-    if (!grouped.has(key)) grouped.set(key,{id:key,word,reading:e.reading,meanings:[],chapters:[],types:[],sourceRows:[]});
+    if (!grouped.has(key)) grouped.set(key,{id:key,word,reading:e.reading,meanings:[],chapters:[],types:[],sourceRows:[],levels:[],sourceGroups:[],meaningsEn:[]});
     const q=grouped.get(key);
-    q.meanings.push(e.meaning); q.chapters.push(e.chapter); q.types.push(e.type); q.sourceRows.push(e.sourceRow);
+    q.meanings.push(e.meaning); if(e.chapter) q.chapters.push(e.chapter);
+    q.types.push(e.type); q.sourceRows.push(e.sourceRow);
+    if(e.level) q.levels.push(e.level);
+    if(e.sourceGroup) q.sourceGroups.push(e.sourceGroup);
+    if(e.meaningEn) q.meaningsEn.push(e.meaningEn);
   }
   return [...grouped.values()].map(q=>({...q,
     meanings:unique(q.meanings), meaning:unique(q.meanings).join('; '),
     chapters:[...new Set(q.chapters)].sort((a,b)=>a-b), types:[...new Set(q.types)],
+    levels:[...new Set(q.levels)], sourceGroups:[...new Set(q.sourceGroups)], meaningsEn:unique(q.meaningsEn),
     senses:[...new Set(q.meanings.flatMap(meaningKeys))], wordKey:normalize(q.word), readingKey:kanaKey(q.reading),
+    englishSenses:[...new Set(q.meaningsEn.flatMap(meaningKeys))],
   }));
 }
 
@@ -60,19 +67,20 @@ export function createKotobaQuiz(entries, settings, random=Math.random) {
   if (!Object.hasOwn(KOTOBA_MODES,mode) || !Number.isSafeInteger(count) || count<1) return [];
   const targets=shuffle(getKotobaPool(entries,settings),random);
   // Distractors may use other word types, but always stay in the selected chapters.
-  const candidates=getKotobaPool(entries,{chapters:settings.chapters});
+  const candidates=getKotobaPool(entries,{chapters:settings.chapters,sourceGroup:settings.sourceGroup});
   const complete=getKotobaPool(entries);
   const isMeaning=mode==='jp-id' || mode==='audio-jp';
   const isReading=mode==='reading';
   const answerOf=q=>isMeaning ? q.meaning : isReading ? q.reading : q.word;
   const questions=[];
   for(const q of targets) {
-    const equivalents=complete.filter(other=>other.wordKey===q.wordKey || other.readingKey===q.readingKey || intersects(q.senses,other.senses));
+    const equivalents=complete.filter(other=>other.wordKey===q.wordKey || other.readingKey===q.readingKey || intersects(q.senses,other.senses) || intersects(q.englishSenses,other.englishSenses));
     const validWords=new Set(equivalents.map(other=>other.wordKey));
     const validReadings=new Set(equivalents.map(other=>other.readingKey));
     const validSenses=[...new Set(equivalents.flatMap(other=>other.senses))];
+    const validEnglishSenses=[...new Set(equivalents.flatMap(other=>other.englishSenses))];
     const safe=candidates.filter(other=>!validWords.has(other.wordKey) && !validReadings.has(other.readingKey)
-      && !intersects(validSenses,other.senses));
+      && !intersects(validSenses,other.senses) && !intersects(validEnglishSenses,other.englishSenses));
     const sameType=shuffle(safe.filter(other=>intersects(q.types,other.types)),random);
     const others=shuffle(safe.filter(other=>!intersects(q.types,other.types)),random);
     const answer=answerOf(q);

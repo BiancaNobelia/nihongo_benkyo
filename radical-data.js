@@ -1,4 +1,4 @@
-import { RADICAL_MEMBERS } from './radical-members.js?v=20261014-sentence-modes';
+import { RADICAL_MEMBERS } from './radical-members.js?v=20261014-kotoba-n3';
 
 // Editorial teaching notes. Membership comes from complete components in
 // KanjiVG (including nested 門); meanings/readings use the reviewed catalog.

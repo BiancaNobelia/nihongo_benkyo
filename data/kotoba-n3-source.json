@@ -1,0 +1,912 @@
+{
+  "filename": "JLPT%20N3%20-%20Kompilasi%20Kotoba%202026.xlsx",
+  "sha256": "5100b6ed7f9ef2ebd8db22094725faed1ae03273cbb85c831c17aa8014e11cd1",
+  "sheet": "Kotoba N3",
+  "range": "A2:J2277",
+  "entryCount": 2276,
+  "types": {
+    "kata benda": 806,
+    "belum diklasifikasi": 435,
+    "kata benda / kerja (する)": 295,
+    "kata kerja": 233,
+    "kata sifat-na": 119,
+    "kata kerja (perkiraan)": 194,
+    "kata sifat-i (perkiraan)": 1,
+    "kata keterangan": 112,
+    "interjeksi": 10,
+    "kata sifat-i": 20,
+    "kata ganti": 7,
+    "kata sambung": 18,
+    "awalan": 6,
+    "kata bantu bilangan": 11,
+    "ungkapan": 6,
+    "akhiran": 3
+  },
+  "sourceGroups": {
+    "core": 1659,
+    "extra": 617
+  },
+  "changes": [
+    {
+      "sourceRow": 8,
+      "original": "untuk mencintai",
+      "meaning": "mencintai"
+    },
+    {
+      "sourceRow": 9,
+      "original": "pendamping; mitra; perusahaan",
+      "meaning": "Lawan; pasangan; mitra; orang yang dihadapi"
+    },
+    {
+      "sourceRow": 23,
+      "original": "untuk menyebutkan; untuk membuat daftar, untuk mengutip",
+      "meaning": "menyebutkan; membuat daftar, mengutip"
+    },
+    {
+      "sourceRow": 27,
+      "original": "keringat;",
+      "meaning": "keringat"
+    },
+    {
+      "sourceRow": 31,
+      "original": "untuk pemanasan",
+      "meaning": "Menjadi hangat; menghangat"
+    },
+    {
+      "sourceRow": 33,
+      "original": "untuk bersikap ramah (kepada seseorang/sesuatu), untuk menghangatkan (seseorang/sesuatu)",
+      "meaning": "Menghangatkan"
+    },
+    {
+      "sourceRow": 43,
+      "original": "untuk membahas, untuk menyampaikan",
+      "meaning": "Mengalamatkan; menujukan surat atau pesan kepada seseorang"
+    },
+    {
+      "sourceRow": 44,
+      "original": "untuk memukul; untuk memasang tambalan",
+      "meaning": "memukul; memasang tambalan"
+    },
+    {
+      "sourceRow": 55,
+      "original": "untuk membantah, untuk berdebat, untuk berkelahi",
+      "meaning": "membantah, berdebat, berkelahi"
+    },
+    {
+      "sourceRow": 58,
+      "original": "untuk menunjukkan; untuk mengindikasikan; untuk menampilkan",
+      "meaning": "menunjukkan; mengindikasikan; menampilkan"
+    },
+    {
+      "sourceRow": 59,
+      "original": "untuk menulis, untuk menerbitkan",
+      "meaning": "menulis, menerbitkan"
+    },
+    {
+      "sourceRow": 60,
+      "original": "untuk menyatakan; untuk menunjukkan; untuk mengungkapkan",
+      "meaning": "menyatakan; menunjukkan; mengungkapkan"
+    },
+    {
+      "sourceRow": 65,
+      "original": "untuk hidup, untuk ada, untuk eksis",
+      "meaning": "hidup, ada, eksis"
+    },
+    {
+      "sourceRow": 69,
+      "original": "untuk bergabung bersama; untuk menjadi berlawanan; untuk berhadapan; untuk bersatu",
+      "meaning": "bergabung bersama; menjadi berlawanan; berhadapan; bersatu"
+    },
+    {
+      "sourceRow": 73,
+      "original": "mendadak",
+      "meaning": "Di luar dugaan; ternyata"
+    },
+    {
+      "sourceRow": 74,
+      "original": "menghafal; belajar dengan hati",
+      "meaning": "Hafalan; menghafal"
+    },
+    {
+      "sourceRow": 79,
+      "original": "akan",
+      "meaning": "Niat; kehendak; pikiran"
+    },
+    {
+      "sourceRow": 81,
+      "original": "perut",
+      "meaning": "Lambung"
+    },
+    {
+      "sourceRow": 117,
+      "original": "untuk menumis",
+      "meaning": "menumis"
+    },
+    {
+      "sourceRow": 164,
+      "original": "untuk memberi selamat; untuk merayakan",
+      "meaning": "memberi selamat; merayakan"
+    },
+    {
+      "sourceRow": 180,
+      "original": "sapi;",
+      "meaning": "sapi"
+    },
+    {
+      "sourceRow": 189,
+      "original": "untuk menghilangkan; untuk memindahkan; untuk menginfeksi",
+      "meaning": "menghilangkan; memindahkan; menginfeksi"
+    },
+    {
+      "sourceRow": 191,
+      "original": "untuk menuntut (seseorang); untuk menggunakan; untuk mengajukan banding ke",
+      "meaning": "menuntut (seseorang); menggunakan; mengajukan banding ke"
+    },
+    {
+      "sourceRow": 192,
+      "original": "untuk dipantulkan, untuk muncul (foto)",
+      "meaning": "dipantulkan, muncul (foto)"
+    },
+    {
+      "sourceRow": 193,
+      "original": "untuk difoto, untuk diproyeksikan",
+      "meaning": "difoto, diproyeksikan"
+    },
+    {
+      "sourceRow": 195,
+      "original": "untuk merebut",
+      "meaning": "merebut"
+    },
+    {
+      "sourceRow": 197,
+      "original": "untuk dikuburkan, untuk diisi",
+      "meaning": "dikuburkan, diisi"
+    },
+    {
+      "sourceRow": 208,
+      "original": "untuk dijual",
+      "meaning": "Laku; terjual"
+    },
+    {
+      "sourceRow": 236,
+      "original": "untuk menyalip; untuk mengejar (kecepatan)",
+      "meaning": "menyalip; mengejar (kecepatan)"
+    },
+    {
+      "sourceRow": 243,
+      "original": "untuk menanggapi; untuk memuaskan; untuk menerima; untuk mematuhi; untuk mengajukan permohonan",
+      "meaning": "menanggapi; memuaskan; menerima; mematuhi; mengajukan permohonan"
+    },
+    {
+      "sourceRow": 245,
+      "original": "untuk menyelesaikan",
+      "meaning": "menyelesaikan"
+    },
+    {
+      "sourceRow": 247,
+      "original": "untuk menutupi; untuk menyembunyikan; untuk merahasiakan; untuk membungkus; untuk menyamarkan",
+      "meaning": "menutupi; menyembunyikan; merahasiakan; membungkus; menyamarkan"
+    },
+    {
+      "sourceRow": 256,
+      "original": "untuk menghentikan, untuk menahan, untuk menekan",
+      "meaning": "menghentikan, menahan, menekan"
+    },
+    {
+      "sourceRow": 258,
+      "original": "untuk memerintah, untuk mengelola; untuk menaklukkan",
+      "meaning": "memerintah, mengelola; menaklukkan"
+    },
+    {
+      "sourceRow": 271,
+      "original": "untuk diajarkan",
+      "meaning": "Belajar dari seseorang; menerima pengajaran"
+    },
+    {
+      "sourceRow": 288,
+      "original": "untuk bertemu (seseorang dengan status lebih tinggi)",
+      "meaning": "bertemu (seseorang dengan status lebih tinggi)"
+    },
+    {
+      "sourceRow": 297,
+      "original": "untuk menjadi (hidup); untuk ada; untuk eksis",
+      "meaning": "Ada; berada (untuk makhluk hidup; bentuk rendah hati atau dialek)"
+    },
+    {
+      "sourceRow": 301,
+      "original": "untuk menjatuhkan; untuk meluncurkan; untuk menjatuhkan",
+      "meaning": "Menurunkan (orang atau barang)"
+    },
+    {
+      "sourceRow": 327,
+      "original": "menyenangkan; nyaman;",
+      "meaning": "menyenangkan; nyaman"
+    },
+    {
+      "sourceRow": 330,
+      "original": "untuk dikembalikan",
+      "meaning": "Memulangkan; menyuruh pulang"
+    },
+    {
+      "sourceRow": 331,
+      "original": "untuk menukar; untuk mempertukarkan; untuk mengganti;",
+      "meaning": "menukar; mempertukarkan; mengganti"
+    },
+    {
+      "sourceRow": 332,
+      "original": "untuk menukar; untuk mempertukarkan; untuk mengganti;",
+      "meaning": "menukar; mempertukarkan; mengganti"
+    },
+    {
+      "sourceRow": 333,
+      "original": "untuk menukar, untuk mempertukarkan, untuk mengganti",
+      "meaning": "menukar, mempertukarkan, mengganti"
+    },
+    {
+      "sourceRow": 348,
+      "original": "untuk menggaruk",
+      "meaning": "menggaruk"
+    },
+    {
+      "sourceRow": 366,
+      "original": "untuk berlari",
+      "meaning": "berlari"
+    },
+    {
+      "sourceRow": 383,
+      "original": "untuk mendapatkan penghasilan; untuk bekerja",
+      "meaning": "mendapatkan penghasilan; bekerja"
+    },
+    {
+      "sourceRow": 384,
+      "original": "untuk menghitung",
+      "meaning": "menghitung"
+    },
+    {
+      "sourceRow": 391,
+      "original": "untuk menata, untuk menyelesaikan",
+      "meaning": "Menjadi rapi; beres; selesai"
+    },
+    {
+      "sourceRow": 415,
+      "original": "untuk mengenakan (di atas kepala); untuk memakai; untuk mengenakan; untuk menarik (ke atas kepala)",
+      "meaning": "mengenakan (di atas kepala); memakai; mengenakan; menarik (ke atas kepala)"
+    },
+    {
+      "sourceRow": 416,
+      "original": "untuk memperhatikan, untuk mempedulikan, untuk mengkhawatirkan",
+      "meaning": "memperhatikan, mempedulikan, mengkhawatirkan"
+    },
+    {
+      "sourceRow": 442,
+      "original": "untuk mengeringkan",
+      "meaning": "mengeringkan"
+    },
+    {
+      "sourceRow": 444,
+      "original": "untuk menggantikan, untuk meringankan, untuk menjadi pengganti",
+      "meaning": "menggantikan, meringankan, menjadi pengganti"
+    },
+    {
+      "sourceRow": 602,
+      "original": "untuk mengambil, untuk menyendok, untuk memompa",
+      "meaning": "mengambil, menyendok, memompa"
+    },
+    {
+      "sourceRow": 603,
+      "original": "untuk menyajikan sake",
+      "meaning": "menyajikan sake"
+    },
+    {
+      "sourceRow": 604,
+      "original": "untuk menyusun",
+      "meaning": "menyusun"
+    },
+    {
+      "sourceRow": 610,
+      "original": "untuk hidup; untuk bergaul dengan baik",
+      "meaning": "hidup; bergaul dengan baik"
+    },
+    {
+      "sourceRow": 625,
+      "original": "untuk ikut serta; untuk menyetujui; untuk meningkatkan; untuk mendapatkan (pengaruh)",
+      "meaning": "ikut serta; menyetujui; meningkatkan; mendapatkan (pengaruh)"
+    },
+    {
+      "sourceRow": 662,
+      "original": "pada akhirnya;",
+      "meaning": "pada akhirnya"
+    },
+    {
+      "sourceRow": 671,
+      "original": "untuk menendang",
+      "meaning": "menendang"
+    },
+    {
+      "sourceRow": 719,
+      "original": "perusahaan; persahabatan; perkumpulan; masyarakat; kenalan",
+      "meaning": "Pergaulan; hubungan sosial; berpacaran"
+    },
+    {
+      "sourceRow": 761,
+      "original": "untuk membahas (misalnya, dengan audiens)",
+      "meaning": "Melewati; melampaui; menyeberangi; pindah tempat tinggal"
+    },
+    {
+      "sourceRow": 787,
+      "original": "untuk membunuh",
+      "meaning": "membunuh"
+    },
+    {
+      "sourceRow": 828,
+      "original": "untuk menghindari (kontak fisik); untuk menangkis; untuk mencegah",
+      "meaning": "menghindari (kontak fisik); menangkis; mencegah"
+    },
+    {
+      "sourceRow": 846,
+      "original": "untuk menilai",
+      "meaning": "menilai"
+    },
+    {
+      "sourceRow": 850,
+      "original": "untuk membangunkan",
+      "meaning": "membangunkan"
+    },
+    {
+      "sourceRow": 852,
+      "original": "untuk bangun; untuk bangun",
+      "meaning": "bangun; bangun"
+    },
+    {
+      "sourceRow": 867,
+      "original": "Tuan; Nyonya; Nona;",
+      "meaning": "Tuan; Nyonya; Nona"
+    },
+    {
+      "sourceRow": 907,
+      "original": "untuk mematuhi (aturan); untuk menaati; untuk mengikuti; untuk menemani",
+      "meaning": "mematuhi (aturan); menaati; mengikuti; menemani"
+    },
+    {
+      "sourceRow": 936,
+      "original": "untuk membayar",
+      "meaning": "membayar"
+    },
+    {
+      "sourceRow": 952,
+      "original": "untuk menunjukkan; untuk memperlihatkan; untuk menunjuk; untuk mengindikasikan",
+      "meaning": "menunjukkan; memperlihatkan; menunjuk; mengindikasikan"
+    },
+    {
+      "sourceRow": 1084,
+      "original": "untuk percaya; untuk menaruh kepercayaan pada",
+      "meaning": "percaya; menaruh kepercayaan pada"
+    },
+    {
+      "sourceRow": 1126,
+      "original": "untuk memajukan; untuk meningkatkan; untuk mempercepat",
+      "meaning": "memajukan; meningkatkan; mempercepat"
+    },
+    {
+      "sourceRow": 1145,
+      "original": "untuk menjadi cerah (misalnya, cuaca), menjadi transparan",
+      "meaning": "menjadi cerah (misalnya, cuaca), menjadi transparan"
+    },
+    {
+      "sourceRow": 1146,
+      "original": "untuk menjadi cerah (misalnya, cuaca), menjadi transparan",
+      "meaning": "menjadi cerah (misalnya, cuaca), menjadi transparan"
+    },
+    {
+      "sourceRow": 1148,
+      "original": "untuk mencetak",
+      "meaning": "mencetak"
+    },
+    {
+      "sourceRow": 1151,
+      "original": "untuk saling berpapasan",
+      "meaning": "saling berpapasan"
+    },
+    {
+      "sourceRow": 1235,
+      "original": "untuk menemani, untuk mematuhi",
+      "meaning": "menemani, mematuhi"
+    },
+    {
+      "sourceRow": 1258,
+      "original": "untuk dilengkapi dengan",
+      "meaning": "dilengkapi dengan"
+    },
+    {
+      "sourceRow": 1270,
+      "original": "untuk menjadi sempurna, untuk menjadi setara",
+      "meaning": "menjadi sempurna, menjadi setara"
+    },
+    {
+      "sourceRow": 1271,
+      "original": "untuk menata segala sesuatu, untuk mengatur",
+      "meaning": "menata segala sesuatu, mengatur"
+    },
+    {
+      "sourceRow": 1315,
+      "original": "untuk menjatuhkan; untuk mengalahkan; untuk merobohkan; untuk meniup hingga roboh",
+      "meaning": "menjatuhkan; mengalahkan; merobohkan; meniup hingga roboh"
+    },
+    {
+      "sourceRow": 1319,
+      "original": "untuk naik; untuk tumbuh; untuk mendaki (v.i.)",
+      "meaning": "naik; tumbuh; mendaki (v.i.)"
+    },
+    {
+      "sourceRow": 1320,
+      "original": "untuk mengangkat, untuk menaikkan, untuk meningkatkan",
+      "meaning": "mengangkat, menaikkan, meningkatkan"
+    },
+    {
+      "sourceRow": 1328,
+      "original": "untuk memastikan",
+      "meaning": "memastikan"
+    },
+    {
+      "sourceRow": 1331,
+      "original": "untuk membantu; untuk menyelamatkan; untuk menolong",
+      "meaning": "membantu; menyelamatkan; menolong"
+    },
+    {
+      "sourceRow": 1336,
+      "original": "untuk bertarung; untuk berperang; untuk bertempur",
+      "meaning": "bertarung; berperang; bertempur"
+    },
+    {
+      "sourceRow": 1338,
+      "original": "segera; langsung; secara pribadi;",
+      "meaning": "segera; langsung; secara pribadi"
+    },
+    {
+      "sourceRow": 1340,
+      "original": "untuk berdiri",
+      "meaning": "berdiri"
+    },
+    {
+      "sourceRow": 1344,
+      "original": "untuk memutuskan, untuk memotong",
+      "meaning": "memutuskan, memotong"
+    },
+    {
+      "sourceRow": 1345,
+      "original": "untuk mencapai; untuk sampai ke",
+      "meaning": "mencapai; sampai ke"
+    },
+    {
+      "sourceRow": 1370,
+      "original": "untuk diam",
+      "meaning": "diam"
+    },
+    {
+      "sourceRow": 1373,
+      "original": "untuk mencoba; untuk menguji",
+      "meaning": "mencoba; menguji"
+    },
+    {
+      "sourceRow": 1376,
+      "original": "untuk mengandalkan; untuk menggunakan; bergantung pada",
+      "meaning": "mengandalkan; menggunakan; bergantung pada"
+    },
+    {
+      "sourceRow": 1426,
+      "original": "puncak; titik tertinggi;",
+      "meaning": "puncak; titik tertinggi"
+    },
+    {
+      "sourceRow": 1433,
+      "original": "untuk menyebar, untuk menyebarkan, mendistribusikan",
+      "meaning": "menyebar, menyebarkan, mendistribusikan"
+    },
+    {
+      "sourceRow": 1448,
+      "original": "untuk merebut; untuk menangkap; untuk menggenggam",
+      "meaning": "merebut; menangkap; menggenggam"
+    },
+    {
+      "sourceRow": 1455,
+      "original": "untuk berdampingan, untuk terpasang, untuk melekat",
+      "meaning": "berdampingan, terpasang, melekat"
+    },
+    {
+      "sourceRow": 1456,
+      "original": "untuk berhasil (seseorang dalam bisnis atau warisan)",
+      "meaning": "berhasil (seseorang dalam bisnis atau warisan)"
+    },
+    {
+      "sourceRow": 1458,
+      "original": "untuk menggabungkan; untuk menyatukan; untuk memasang (tulang); untuk mencangkok (pohon)",
+      "meaning": "menggabungkan; menyatukan; memasang (tulang); mencangkok (pohon)"
+    },
+    {
+      "sourceRow": 1460,
+      "original": "untuk mengenakan, memakai; untuk menyiapkan",
+      "meaning": "mengenakan, memakai; menyiapkan"
+    },
+    {
+      "sourceRow": 1461,
+      "original": "untuk melampirkan; untuk menggabungkan; untuk menambahkan; untuk menyisipkan",
+      "meaning": "melampirkan; menggabungkan; menambahkan; menyisipkan"
+    },
+    {
+      "sourceRow": 1462,
+      "original": "untuk diwariskan, untuk ditransmisikan",
+      "meaning": "diwariskan, ditransmisikan"
+    },
+    {
+      "sourceRow": 1470,
+      "original": "untuk terhubung",
+      "meaning": "terhubung"
+    },
+    {
+      "sourceRow": 1477,
+      "original": "untuk memetik, untuk mengambil, untuk memangkas",
+      "meaning": "memetik, mengambil, memangkas"
+    },
+    {
+      "sourceRow": 1483,
+      "original": "untuk memperkuat, untuk menekankan",
+      "meaning": "memperkuat, menekankan"
+    },
+    {
+      "sourceRow": 1536,
+      "original": "untuk bertanya, untuk mempertanyakan",
+      "meaning": "bertanya, mempertanyakan"
+    },
+    {
+      "sourceRow": 1564,
+      "original": "untuk membuka",
+      "meaning": "membuka"
+    },
+    {
+      "sourceRow": 1565,
+      "original": "untuk menjelaskan, untuk membela",
+      "meaning": "menjelaskan, membela"
+    },
+    {
+      "sourceRow": 1586,
+      "original": "untuk mengikat, untuk menyimpan",
+      "meaning": "mengikat, menyimpan"
+    },
+    {
+      "sourceRow": 1592,
+      "original": "untuk mencapai",
+      "meaning": "mencapai"
+    },
+    {
+      "sourceRow": 1594,
+      "original": "untuk melewatkan; untuk mengabaikan",
+      "meaning": "melewatkan; mengabaikan"
+    },
+    {
+      "sourceRow": 1597,
+      "original": "untuk mengencangkan; untuk mematikan; untuk menahan",
+      "meaning": "mengencangkan; mematikan; menahan"
+    },
+    {
+      "sourceRow": 1611,
+      "original": "untuk dilepas; untuk diambil; untuk disingkirkan",
+      "meaning": "dilepas; diambil; disingkirkan"
+    },
+    {
+      "sourceRow": 1624,
+      "original": "untuk mengeringkan; untuk mengapung; untuk menumpahkan (darah, air mata); untuk melaju (misalnya taksi)",
+      "meaning": "mengeringkan; mengapung; menumpahkan (darah, air mata); melaju (misalnya taksi)"
+    },
+    {
+      "sourceRow": 1631,
+      "original": "untuk melihat; untuk menatap",
+      "meaning": "melihat; menatap"
+    },
+    {
+      "sourceRow": 1635,
+      "original": "untuk memukul; untuk meninju;",
+      "meaning": "memukul; meninju"
+    },
+    {
+      "sourceRow": 1651,
+      "original": "untuk membiasakan",
+      "meaning": "membiasakan"
+    },
+    {
+      "sourceRow": 1652,
+      "original": "untuk menjinakkan, untuk memelihara",
+      "meaning": "menjinakkan, memelihara"
+    },
+    {
+      "sourceRow": 1654,
+      "original": "untuk berubah, untuk berguna, untuk mencapai",
+      "meaning": "berubah, berguna, mencapai"
+    },
+    {
+      "sourceRow": 1655,
+      "original": "untuk menjadi",
+      "meaning": "menjadi"
+    },
+    {
+      "sourceRow": 1663,
+      "original": "cocok; sesuai; menjadi; seperti",
+      "meaning": "Cocok; serasi (dengan penampilan seseorang)"
+    },
+    {
+      "sourceRow": 1667,
+      "original": "untuk menggenggam; untuk merebut; untuk membentuk sushi",
+      "meaning": "menggenggam; merebut; membentuk sushi"
+    },
+    {
+      "sourceRow": 1680,
+      "original": "untuk mengekstrak; untuk menghilangkan; untuk melampaui; untuk mengeluarkan; untuk mencabut",
+      "meaning": "mengekstrak; menghilangkan; melampaui; mengeluarkan; mencabut"
+    },
+    {
+      "sourceRow": 1681,
+      "original": "untuk keluar; untuk jatuh; untuk dihilangkan",
+      "meaning": "keluar; jatuh; dihilangkan"
+    },
+    {
+      "sourceRow": 1713,
+      "original": "untuk menempatkan (pada sesuatu); untuk menerbitkan",
+      "meaning": "menempatkan (pada sesuatu); menerbitkan"
+    },
+    {
+      "sourceRow": 1715,
+      "original": "untuk menghapus; untuk mengecualikan; untuk memisahkan",
+      "meaning": "menghapus; mengecualikan; memisahkan"
+    },
+    {
+      "sourceRow": 1719,
+      "original": "untuk melihat, menghadapi, menghadiri (acara)",
+      "meaning": "melihat, menghadapi, menghadiri (acara)"
+    },
+    {
+      "sourceRow": 1722,
+      "original": "untuk memperpanjang, untuk meregangkan, untuk menjangkau",
+      "meaning": "memperpanjang, meregangkan, menjangkau"
+    },
+    {
+      "sourceRow": 1725,
+      "original": "untuk meregangkan; untuk memperpanjang; untuk membuat kemajuan; untuk tumbuh (janggut, tinggi badan)",
+      "meaning": "Memanjang; tumbuh; berkembang"
+    },
+    {
+      "sourceRow": 1729,
+      "original": "untuk muncul (dalam bentuk cetak), untuk dicatat",
+      "meaning": "muncul (dalam bentuk cetak), dicatat"
+    },
+    {
+      "sourceRow": 1768,
+      "original": "untuk membuka ikatan; untuk melepaskan",
+      "meaning": "membuka ikatan; melepaskan"
+    },
+    {
+      "sourceRow": 1782,
+      "original": "untuk menghukum; untuk memberi sanksi",
+      "meaning": "menghukum; memberi sanksi"
+    },
+    {
+      "sourceRow": 1789,
+      "original": "untuk berdiskusi; untuk berbicara bersama",
+      "meaning": "berdiskusi; berbicara bersama"
+    },
+    {
+      "sourceRow": 1790,
+      "original": "untuk memisahkan; untuk membebaskan",
+      "meaning": "memisahkan; membebaskan"
+    },
+    {
+      "sourceRow": 1792,
+      "original": "untuk pergi, untuk membebaskan diri, untuk melepaskan diri",
+      "meaning": "pergi, membebaskan diri, melepaskan diri"
+    },
+    {
+      "sourceRow": 1798,
+      "original": "untuk menghilangkan; untuk menyingkirkan; untuk mengurangi; untuk menghemat",
+      "meaning": "menghilangkan; menyingkirkan; mengurangi; menghemat"
+    },
+    {
+      "sourceRow": 1806,
+      "original": "untuk menempelkan; untuk merekatkan",
+      "meaning": "menempelkan; merekatkan"
+    },
+    {
+      "sourceRow": 1864,
+      "original": "untuk menyebar; untuk memperluas; untuk meregangkan; untuk mencapai; untuk berkeliling",
+      "meaning": "Meluas; menyebar; membentang"
+    },
+    {
+      "sourceRow": 1867,
+      "original": "untuk memperluas, untuk menyebarluaskan",
+      "meaning": "memperluas, menyebarluaskan"
+    },
+    {
+      "sourceRow": 1881,
+      "original": "untuk memperdalam",
+      "meaning": "Menjadi semakin dalam; semakin erat"
+    },
+    {
+      "sourceRow": 1882,
+      "original": "untuk memperdalam, untuk meningkatkan, untuk mengintensifkan",
+      "meaning": "memperdalam, meningkatkan, mengintensifkan"
+    },
+    {
+      "sourceRow": 1884,
+      "original": "untuk menyeka, untuk mengeringkan",
+      "meaning": "menyeka, mengeringkan"
+    },
+    {
+      "sourceRow": 1887,
+      "original": "untuk menahan di dalam mulut; untuk mengingat",
+      "meaning": "Mengandung; mencakup; menahan di dalam mulut"
+    },
+    {
+      "sourceRow": 1898,
+      "original": "untuk membela (terhadap); untuk melindungi; untuk mencegah",
+      "meaning": "membela (terhadap); melindungi; mencegah"
+    },
+    {
+      "sourceRow": 1909,
+      "original": "untuk mengetuk, untuk memukul dengan keras, untuk memukul dan menyerang",
+      "meaning": "mengetuk, memukul dengan keras, memukul dan menyerang"
+    },
+    {
+      "sourceRow": 1919,
+      "original": "untuk meningkatkan, untuk menambah",
+      "meaning": "meningkatkan, menambah"
+    },
+    {
+      "sourceRow": 2002,
+      "original": "untuk menabur, untuk memercikkan, menabur",
+      "meaning": "menabur, memercikkan, menabur"
+    },
+    {
+      "sourceRow": 2010,
+      "original": "untuk dicampur, untuk berbaur dengan",
+      "meaning": "Bercampur; berbaur"
+    },
+    {
+      "sourceRow": 2011,
+      "original": "untuk dicampur, untuk berbaur dengan",
+      "meaning": "Bercampur; berbaur"
+    },
+    {
+      "sourceRow": 2013,
+      "original": "untuk dicampur, untuk berbaur dengan",
+      "meaning": "Bercampur; berbaur"
+    },
+    {
+      "sourceRow": 2014,
+      "original": "untuk dicampur, untuk berbaur dengan",
+      "meaning": "Bercampur; berbaur"
+    },
+    {
+      "sourceRow": 2020,
+      "original": "untuk dicampur, untuk dipadukan dengan",
+      "meaning": "Mencampurkan; membaurkan"
+    },
+    {
+      "sourceRow": 2033,
+      "original": "untuk dikumpulkan, untuk diselesaikan, untuk tertata",
+      "meaning": "dikumpulkan, diselesaikan, tertata"
+    },
+    {
+      "sourceRow": 2034,
+      "original": "untuk menata, mengumpulkan, menyimpulkan",
+      "meaning": "menata, mengumpulkan, menyimpulkan"
+    },
+    {
+      "sourceRow": 2035,
+      "original": "untuk mempelajari (secara mendalam); untuk belajar; untuk mengikuti pelajaran",
+      "meaning": "mempelajari (secara mendalam); belajar; mengikuti pelajaran"
+    },
+    {
+      "sourceRow": 2037,
+      "original": "untuk mengundang",
+      "meaning": "mengundang"
+    },
+    {
+      "sourceRow": 2041,
+      "original": "untuk melindungi; untuk mematuhi; untuk menjaga; untuk menaati (aturan)",
+      "meaning": "melindungi; mematuhi; menjaga; menaati (aturan)"
+    },
+    {
+      "sourceRow": 2059,
+      "original": "untuk mengenali; untuk menghargai; untuk menyetujui; untuk mengakui; untuk memperhatikan",
+      "meaning": "mengenali; menghargai; menyetujui; mengakui; memperhatikan"
+    },
+    {
+      "sourceRow": 2067,
+      "original": "untuk memeriksa (pasien)",
+      "meaning": "memeriksa (pasien)"
+    },
+    {
+      "sourceRow": 2073,
+      "original": "untuk menghadapi",
+      "meaning": "menghadapi"
+    },
+    {
+      "sourceRow": 2075,
+      "original": "untuk berbalik ke arah; untuk menunjuk",
+      "meaning": "berbalik ke arah; menunjuk"
+    },
+    {
+      "sourceRow": 2090,
+      "original": "untuk memberi perintah; untuk memerintah; untuk menunjuk",
+      "meaning": "memberi perintah; memerintah; menunjuk"
+    },
+    {
+      "sourceRow": 2106,
+      "original": "untuk mengajukan permohonan; untuk membuat permohonan",
+      "meaning": "mengajukan permohonan; membuat permohonan"
+    },
+    {
+      "sourceRow": 2109,
+      "original": "untuk membakar",
+      "meaning": "Terbakar; menyala"
+    },
+    {
+      "sourceRow": 2124,
+      "original": "untuk mengembalikan; untuk menempatkan kembali; untuk mengembalikan",
+      "meaning": "mengembalikan; menempatkan kembali; mengembalikan"
+    },
+    {
+      "sourceRow": 2131,
+      "original": "untuk membakar",
+      "meaning": "Membakar"
+    },
+    {
+      "sourceRow": 2133,
+      "original": "untuk menerima",
+      "meaning": "menerima"
+    },
+    {
+      "sourceRow": 2140,
+      "original": "untuk menerjemahkan",
+      "meaning": "menerjemahkan"
+    },
+    {
+      "sourceRow": 2153,
+      "original": "untuk mengatakan",
+      "meaning": "mengatakan"
+    },
+    {
+      "sourceRow": 2155,
+      "original": "keberanian; kegagahan; keteguhan hati; kenekatan;",
+      "meaning": "keberanian; kegagahan; keteguhan hati; kenekatan"
+    },
+    {
+      "sourceRow": 2171,
+      "original": "untuk menyerahkan; untuk menugaskan; untuk memberikan",
+      "meaning": "menyerahkan; menugaskan; memberikan"
+    },
+    {
+      "sourceRow": 2174,
+      "original": "untuk merebus",
+      "meaning": "merebus"
+    },
+    {
+      "sourceRow": 2220,
+      "original": "untuk melemahkan",
+      "meaning": "melemahkan"
+    },
+    {
+      "sourceRow": 2242,
+      "original": "contoh; kasus;",
+      "meaning": "contoh; kasus"
+    },
+    {
+      "sourceRow": 2258,
+      "original": "cincin; lingkaran;",
+      "meaning": "cincin; lingkaran"
+    },
+    {
+      "sourceRow": 2266,
+      "original": "untuk membagi; untuk memisahkan",
+      "meaning": "membagi; memisahkan"
+    }
+  ],
+  "note": "Arti Indonesia dari terjemahan otomatis workbook dengan koreksi terbatas; belum ditinjau seluruhnya. Status hafalan pribadi tidak diimpor."
+}
