@@ -737,3 +737,42 @@ Bangun ulang, lalu jalankan pengujian sebelum deployment.
 Jika mengganti commit sumber, bersihkan cache `.cache/openjlpt` sebelumnya.
 Tinjau versi sumber secara berkala, setidaknya bulanan selama data ini
 didistribusikan, agar mengikuti pembaruan kamus EDRDG.
+
+## Kuis Henkan — 15 Oktober 2026
+
+Kuis perubahan kata kerja memakai kosakata yang sudah ada di `kotoba-data.js`,
+`kotoba-n3-data.js`, bank bacaan JLPT N5–N3, dan contoh kata katalog N5–N3.
+Daftar sumber/normalisasi ada di `data/henkan-source.json`; entri terkurasi
+di `data/henkan-verbs.json`. `scripts/build_henkan.mjs` memvalidasi dan membangun
+`henkan-data.js` secara offline. Total 1.201 verba unik: N5 178, N4 363, N3 660.
+
+Golongan berasal dari POS JMdict pada snapshot OpenJLPT yang sudah dipakai
+proyek (`0d1d3410bec90bd4098a7c72de820543cb4f707c`), dibantu analisis
+Janome/IPADIC dan koreksi editorial. Atribusi dan ketentuan berbagi-serupa
+OpenJLPT/JMdict pada bagian sumber sebelumnya tetap berlaku untuk turunan
+data ini. Arti dasar diwarisi dari kosakata proyek dengan koreksi terbatas;
+arti kompilasi N3 sebelumnya belum seluruhnya ditinjau manusia.
+
+Semua entri berlabel kata kerja dalam dua kompilasi diperhitungkan. Bentuk
+sopan, progresif, kausatif, dan potensial yang sudah ada digabung ke kata
+kerja asal; varian ejaan yang jelas digabung. Satu entri berlabel perkiraan,
+よると “menurut”, dikecualikan sebagai ungkapan, bukan verba mandiri.
+得る dilatih dengan bacaan える; うる tidak dipakai sebagai pengecoh.
+
+Level merupakan cakupan kosakata sumber, bukan klaim daftar resmi JLPT:
+Minna bab 1–25 dikelompokkan N5, bab 26–50 N4, kompilasi N3 tetap N3,
+dan kata yang sudah ada di level lebih dasar memakai level tersebut.
+Semua pilihan bentuk tersedia pada tiap level. Beberapa potensial verba
+keadaan/nonkehendak dan pasif yang kurang cocok untuk soal tanpa konteks
+dikecualikan. Pasif verba intransitif yang dilatih dapat menyatakan dampak
+yang dialami seseorang, bukan selalu terjemahan langsung dengan awalan “di-”.
+
+Pola dasar mengacu pada [tabel konjugasi MEXT](https://tsunagarujp.mext.go.jp/assets/download/conjugation_of_verbs_2_ver202404.pdf)
+dan [tabel bentuk biasa Japan Foundation](https://www.jpf.go.jp/j/project/japanese/survey/area/country/syllabus/pdf/sy_honyaku_6-2NZ.pdf).
+Pengecualian 問う → 問うて/問うた dibandingkan dengan
+[Digital Daijisen melalui Kotobank](https://kotobank.jp/word/問う-579356),
+dan 罰する → 罰せられる dengan [Mainichi Kotoba](https://salon.mainichi-kotoba.jp/archives/184222).
+Aturan dan penjelasan Indonesia ditulis untuk latihan ini. Bentuk baku
+diprioritaskan; varian benar dan bentuk potensial percakapan tanpa ら
+tidak dipakai sebagai jawaban salah. Potensial dan pasif ichidan/来る yang
+berbentuk sama dijelaskan setelah menjawab.

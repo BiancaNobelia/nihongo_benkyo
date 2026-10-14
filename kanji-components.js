@@ -1,5 +1,5 @@
-import { KANJI } from './kanji-data.js?v=20261015-n4-pdf';
-import { KANJI_COMPONENTS } from './kanji-components-data.js?v=20261015-n4-pdf';
+import { KANJI } from './kanji-data.js?v=20261015-henkan';
+import { KANJI_COMPONENTS } from './kanji-components-data.js?v=20261015-henkan';
 
 const meanings = new Map(KANJI.map(k => [k.char, k.meaning]));
 

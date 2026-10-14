@@ -90,6 +90,26 @@ pembaruan tersedia di [DATA-SOURCES.md](DATA-SOURCES.md).
 
 ## Website
 
+### Kuis Henkan
+
+Menu `#henkan` melatih perubahan 1.201 kata kerja: N5 (178), N4 (363),
+dan N3 (660), dari kotoba Minna I–II, kompilasi N3, serta contoh dan soal
+kanji yang sudah tersedia. Pilih satu atau beberapa bentuk: futsū-kei,
+jisho-kei, te-kei, ta-kei, nai-kei, potensial, dan pasif.
+
+Futsū-kei mencakup empat pasangan bentuk sopan → biasa, termasuk negatif
+lampau. Pilihan yang tumpang tindih digabung. Level memilih kosakata, bukan
+membatasi bentuk tata bahasa. Verba yang sudah terkonjugasi dinormalisasi
+ke bentuk dasar; potensial/pasif yang kurang cocok tanpa konteks tidak diujikan.
+
+Jumlah soal 10, 20, 50, atau custom, dengan timer opsional. Arti, golongan,
+pola perubahan dan tabel bentuk tersedia setelah menjawab. Soal yang belum
+tampil diprioritaskan melalui riwayat lokal, dengan variasi kata kerja dan
+bentuk. Skor, ulasan jawaban, dan latihan ulang jawaban salah tersedia.
+
+Bangun ulang data terkurasi tanpa jaringan:
+`node scripts/build_henkan.mjs`. Validasi: `node --test tests/henkan.test.mjs`.
+
 https://BiancaNobelia.github.io/nihongo_benkyo/
 
 ## Deployment

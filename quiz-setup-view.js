@@ -1,5 +1,5 @@
 export function quizSetupPanel(icon) {
-  return `<div class="setup-panel">
+  return `<a class="kotoba-home-banner henkan-banner" href="#henkan"><span lang="ja">変換</span><div><strong>Kuis Henkan · Perubahan kata kerja</strong><small>Latih bentuk kamus, futsū-kei, て, た, ない, potensial, dan pasif · N5–N3.</small></div>${icon('arrow')}</a><div class="setup-panel">
     <div class="setup-title"><span class="stat-icon">${icon('sparkles')}</span><div><h2>Racik sesi belajarmu</h2><p>Pilih level, lalu atur jumlah soal dan ritme belajarmu.</p></div></div>
     <div class="setup-grid">
       <div class="field"><label for="quiz-mode">Yang ingin dilatih</label><select id="quiz-mode">
