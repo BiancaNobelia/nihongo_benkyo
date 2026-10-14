@@ -1,25 +1,28 @@
-import { KANJI } from './kanji-data.js?v=20261014-katakana-expanded';
-import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-katakana-expanded';
-import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-katakana-expanded';
-import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-katakana-expanded';
-import { groupsForCharacter } from './similar-core.js?v=20261014-katakana-expanded';
-import { createSimilarView } from './similar-view.js?v=20261014-katakana-expanded';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-katakana-expanded';
-import { familiesForCharacter } from './radical-core.js?v=20261014-katakana-expanded';
-import { componentNoteMarkup } from './component-note-view.js?v=20261014-katakana-expanded';
+import { KANJI } from './kanji-data.js?v=20261014-kotoba';
+import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261014-kotoba';
+import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261014-kotoba';
+import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261014-kotoba';
+import { groupsForCharacter } from './similar-core.js?v=20261014-kotoba';
+import { createSimilarView } from './similar-view.js?v=20261014-kotoba';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261014-kotoba';
+import { familiesForCharacter } from './radical-core.js?v=20261014-kotoba';
+import { componentNoteMarkup } from './component-note-view.js?v=20261014-kotoba';
 
-import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-katakana-expanded';
+import { createReadingQuiz } from './jlpt-reading-core.js?v=20261014-kotoba';
 
-import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261014-katakana-expanded';
-import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-katakana-expanded';
+import { createWritingQuiz, sentenceParts } from './writing-core.js?v=20261014-kotoba';
+import { questionTopicLinks } from './similar-quiz-view.js?v=20261014-kotoba';
 
-import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-katakana-expanded';
-import { requestedQuizCount } from './quiz-settings.js?v=20261014-katakana-expanded';
-import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-katakana-expanded';
-import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-katakana-expanded';
-import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-katakana-expanded';
+import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261014-kotoba';
+import { requestedQuizCount } from './quiz-settings.js?v=20261014-kotoba';
+import { quizSetupPanel } from './quiz-setup-view.js?v=20261014-kotoba';
+import { answerDetailsMarkup } from './quiz-feedback.js?v=20261014-kotoba';
+import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261014-kotoba';
+import { createKotobaView } from './kotoba-view.js?v=20261014-kotoba';
+import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261014-kotoba';
 
 const paths = {
+  speaker:'<path d="m11 4-5 4H3v8h3l5 4zM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>',
   home:'<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>',
   book:'<path d="M12 5v16M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3z"/>',
   cards:'<rect x="7" y="5" width="13" height="16" rx="2"/><path d="m4 17-2-13a2 2 0 0 1 2-2l11-1M11 10h5m-5 4h3"/>',
@@ -48,8 +51,8 @@ const root = document.querySelector('#view-root');
 const modal = document.querySelector('#modal');
 const modalContent = document.querySelector('#modal-content');
 const KEY = 'nihongo-benkyo-progress-v1';
-const viewNames = { beranda:'Beranda', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', progres:'Progres Saya' };
-const modeNames = { meaning:'Kanji → Arti', kanji:'Arti → Kanji', reading:'Kata → Hiragana', 'jlpt-reading':'Kanji → Hiragana', 'hiragana-kanji':'Hiragana → Kanji', 'hiragana-katakana':'Hiragana → Katakana', 'english-katakana':'English → Katakana' };
+const viewNames = { beranda:'Beranda', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', kotoba:'Kuis Kotoba', progres:'Progres Saya' };
+const modeNames = { meaning:'Kanji → Arti', kanji:'Arti → Kanji', reading:'Kata → Hiragana', 'jlpt-reading':'Kanji → Hiragana', 'hiragana-kanji':'Hiragana → Kanji', 'hiragana-katakana':'Hiragana → Katakana', 'english-katakana':'English → Katakana', ...Object.fromEntries(Object.entries(KOTOBA_MODES).map(([id,m])=>[`kotoba-${id}`,`Kotoba · ${m.label}`])) };
 let storageAvailable = true;
 let raw;
 try { raw = JSON.parse(localStorage.getItem(KEY)); } catch { storageAvailable = false; }
@@ -64,6 +67,9 @@ let quizPreferences = {level:'N5',mode:'jlpt-reading',count:10,countChoice:'10',
 let quizTimer;
 let toastTimeout;
 const similarView = createSimilarView({root, kanji:KANJI, groups:SIMILAR_GROUPS, categories:SIMILAR_CATEGORIES, levels, escape, icon, activity});
+const kotobaView = createKotobaView({root,escape,icon,heading,activity,recordSession(entry){
+  progress.history.push(entry);progress.history=progress.history.slice(-50);activity();
+}});
 
 function toast(text) {
   const el = document.querySelector('#toast');
@@ -97,6 +103,7 @@ function heading(kicker, title, description) {
 }
 function renderLibrary(home = false) {
   root.innerHTML = `${home ? `<section class="hero"><div class="hero-copy"><div class="eyebrow">${icon('leaf')} PERJALANAN KECIL, MAKNA BESAR</div><h1>Satu kanji,<br><em>selangkah lebih dekat.</em></h1><p class="hero-description">Kenali bentuknya, pahami maknanya, dan temukan serunya belajar bahasa Jepang. Mulai dari satu kanji hari ini.</p><div class="hero-buttons"><a class="primary" href="#flashcard">Mulai belajar ${icon('arrow')}</a><a class="text-button" href="#kanji">Jelajahi kanji ${icon('arrow-up')}</a></div></div><div class="hero-art" aria-hidden="true"><span class="orbit"></span><span class="sun-disc"></span><span class="art-stamp">日<br>本</span><div class="hero-card"><span class="hero-kanji" lang="ja">学</span><span class="hero-card-caption">MANABU · BELAJAR</span></div><span class="art-label" lang="ja">学ぶことは、楽しい。</span><div class="art-caption"><span>${icon('leaf')}</span><div>Pelan-pelan, jadi paham.<small>Setiap langkah itu berarti.</small></div></div></div></section>${stats()}` : heading('KOLEKSI KANJI', 'Kenali setiap karakter.', `${KANJI.length.toLocaleString('id-ID')} kanji dari N5 sampai N1 untuk perjalanan belajarmu. Klik kartu untuk mengenal arti, bacaan, dan contoh penggunaannya.`)}
+    ${home ? `<a class="kotoba-home-banner" href="#kotoba"><span lang="ja">言葉</span><div><strong>Baru: Kuis Kotoba Bab 1–50</strong><small>Latihan Minna no Nihongo I & II · Pilih bab, arti, atau bacaan.</small></div>${icon('arrow')}</a>` : ''}
     <a class="similar-banner" href="#mirip"><span class="similar-banner-glyphs" lang="ja">未 末</span><span><strong>Serupa, tapi tidak sama.</strong><small>Bandingkan kanji mirip dan ingat ciri pembeda tiap bentuk.</small></span><span class="similar-banner-arrow">Kanji Mirip ${icon('arrow')}</span></a>
     <section aria-label="Koleksi kanji"><div class="section-head"><div>${home ? '<div class="section-kicker">MULAI DARI RASA INGIN TAHU</div><h2>Kenali, pahami, ingat.</h2><p>Temukan kanji pertamamu. Atau, kenali yang baru.</p>' : '<h2>Jelajahi kanji</h2><p>Belajar sedikit demi sedikit, sesuai levelmu.</p>'}</div><select id="collection" class="collection-select" aria-label="Filter koleksi"><option value="all">Semua kanji</option><option value="saved">Tersimpan</option><option value="known">Sudah dikuasai</option><option value="new">Belum dikuasai</option></select></div>
     <div class="library-actions"><div class="level-tabs" aria-label="Filter level"><button class="level-tab ${filters.level === 'all' ? 'active' : ''}" data-level="all" aria-pressed="${filters.level === 'all'}">Semua level</button>${levels.map(l => `<button class="level-tab ${filters.level === l ? 'active' : ''}" data-level="${l}" aria-label="Level ${l}, ${KANJI.filter(k => k.level === l).length} kanji" aria-pressed="${filters.level === l}">${l}<small>${KANJI.filter(k => k.level === l).length}</small></button>`).join('')}</div><label class="search-wrap">${icon('search')}<input id="kanji-search" type="search" autocomplete="off" placeholder="Cari kanji, bacaan, atau arti..." aria-label="Cari kanji, bacaan, atau arti" value="${escape(filters.query)}"></label></div><div id="kanji-grid" class="kanji-grid"></div><div id="library-bottom" class="library-bottom"></div></section>
@@ -285,12 +292,13 @@ function renderProgress() {
     const total = KANJI.filter(k => k.level === l).length;
     const known = KANJI.filter(k => k.level === l && progress.known.includes(k.char)).length;
     return `<div class="level-progress"><div><span>${l} · ${levelNames[l]}</span><small>${known} / ${total} kanji</small></div><div class="progress-track" role="progressbar" aria-label="Kanji ${l} dikuasai" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${known}"><span style="width:${known / total * 100}%"></span></div></div>`;
-  }).join('')}<a class="text-button" href="#flashcard">Lanjutkan dengan flashcard ${icon('arrow')}</a></section><section class="panel"><h2>Catatan latihan kuis</h2>${progress.history.length ? [...progress.history].reverse().slice(0,5).map(h => `<div class="history-item"><div>${modeNames[h.mode]}<small>${new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(new Date(h.date))} · ${h.total} soal</small></div><span class="history-score">${h.correct}/${h.total} benar</span></div>`).join('') : `<div class="empty"><h3>Halaman baru untuk ceritamu.</h3><p>Hasil kuis pertamamu akan muncul di sini.</p><a class="text-button" href="#kuis">Mulai kuis ${icon('arrow')}</a></div>`}</section></div><div class="daily"><span lang="ja">歩</span><div><h3>Belajar hari ini, tumbuh setiap hari.</h3><p>${progress.days.includes(localDay()) ? 'Kamu sudah belajar hari ini. Pertahankan langkah kecilmu!' : 'Satu kanji baru hari ini bisa jadi awal kebiasaan baik.'}</p></div><a class="secondary" href="#flashcard">Lanjut belajar ${icon('arrow')}</a></div><p class="storage-note">${icon('lock')}${storageAvailable ? 'Progres tersimpan di browser dan perangkat ini. Menghapus data browser akan menghapus progres.' : 'Penyimpanan browser tidak tersedia. Progres hanya tersimpan selama sesi ini.'}</p>`;
+  }).join('')}<a class="text-button" href="#flashcard">Lanjutkan dengan flashcard ${icon('arrow')}</a></section><section class="panel"><h2>Catatan latihan kuis</h2>${progress.history.length ? [...progress.history].reverse().slice(0,5).map(h => `<div class="history-item"><div>${modeNames[h.mode]}<small>${new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(new Date(h.date))} · ${h.total} soal${h.mode.startsWith('kotoba-') && h.chapters?.length ? ` · ${chapterLabel(h.chapters)}` : ''}</small></div><span class="history-score">${h.correct}/${h.total} benar</span></div>`).join('') : `<div class="empty"><h3>Halaman baru untuk ceritamu.</h3><p>Hasil kuis pertamamu akan muncul di sini.</p><a class="text-button" href="#kuis">Mulai kuis ${icon('arrow')}</a></div>`}</section></div><div class="daily"><span lang="ja">歩</span><div><h3>Belajar hari ini, tumbuh setiap hari.</h3><p>${progress.days.includes(localDay()) ? 'Kamu sudah belajar hari ini. Pertahankan langkah kecilmu!' : 'Satu kanji baru hari ini bisa jadi awal kebiasaan baik.'}</p></div><a class="secondary" href="#flashcard">Lanjut belajar ${icon('arrow')}</a></div><p class="storage-note">${icon('lock')}${storageAvailable ? 'Progres tersimpan di browser dan perangkat ini. Menghapus data browser akan menghapus progres.' : 'Penyimpanan browser tidak tersedia. Progres hanya tersimpan selama sesi ini.'}</p>`;
 }
 function route() {
   const [next, groupId] = location.hash.slice(1).split('/');
   view = viewNames[next] ? next : 'beranda';
   modal.close();
+  kotobaView.dispose();
   clearInterval(quizTimer); quiz = null;
   document.querySelectorAll('[data-nav]').forEach(a => { a.classList.toggle('active', a.dataset.nav === view); a.toggleAttribute('aria-current', a.dataset.nav === view); if (a.dataset.nav === view) a.setAttribute('aria-current','page'); });
   document.querySelector('#breadcrumb-current').textContent = viewNames[view];
@@ -298,10 +306,11 @@ function route() {
   if (view === 'beranda' || view === 'kanji') renderLibrary(view === 'beranda');
   else if (view === 'mirip') similarView.render(groupId);
   else if (view === 'flashcard') renderFlash();
+  else if (view === 'kotoba') kotobaView.render();
   else if (view === 'kuis') {
     if (groupId === 'jlpt') quizPreferences.mode = 'jlpt-reading';
     else if (groupId === 'hiragana-katakana') quizPreferences.mode = 'english-katakana';
-    else if (Object.hasOwn(modeNames, groupId)) quizPreferences.mode=groupId;
+    else if (Object.hasOwn(modeNames, groupId) && !groupId.startsWith('kotoba-')) quizPreferences.mode=groupId;
     renderQuizSetup();
   }
   else renderProgress();
@@ -349,7 +358,7 @@ document.addEventListener('click', e => {
   if (action === 'quiz-again') renderQuizSetup();
   if (action === 'quiz-exit') openModal(`<div class="prose"><h2 id="modal-title">Akhiri latihan ini?</h2><p>Hasil sesi yang belum selesai tidak akan masuk ke riwayat kuis. Kamu bisa memulai sesi baru kapan saja.</p><div class="modal-actions"><button class="secondary" data-action="close">Lanjutkan kuis</button><button class="primary" data-action="quiz-confirm-exit">Akhiri latihan</button></div></div>`);
   if (action === 'quiz-confirm-exit') { modal.close(); renderQuizSetup(); }
-  if (action === 'guide') openModal(`<div class="prose"><div class="section-kicker">BELAJAR DENGAN RITMEMU</div><h2 id="modal-title">Mulai dari satu kanji.</h2><ol><li><strong>Kenali.</strong> Buka Jelajahi Kanji, mulai dari level N5. Klik kartu untuk melihat arti, bacaan, dan contoh kata.</li><li><strong>Bedakan.</strong> Buka Kanji Mirip untuk membandingkan bentuk, melihat ciri pembeda, dan berlatih memilih kanji dari petunjuk visual.</li><li><strong>Ingat.</strong> Gunakan flashcard. Balik kartunya, lalu pilih “Sudah ingat” atau “Masih belajar”.</li><li><strong>Latih.</strong> Uji pemahaman lewat kuis arti atau bacaan kata. Mode Bacaan ala JLPT melatihmu membedakan pilihan hiragana yang mirip. Gunakan Hiragana → Kanji dan English → Katakana untuk melatih penulisan dengan pilihan bentuk yang mirip. Tinjau jawabanmu di akhir sesi.</li><li><strong>Ulangi.</strong> Simpan kanji yang ingin dipelajari lagi. Lihat perkembanganmu di Progres Saya.</li></ol><p>Onyomi adalah bacaan yang berasal dari bahasa Tionghoa. Kunyomi adalah bacaan asli Jepang. Bacaan yang digunakan bergantung pada kata, jadi selalu pelajari contoh penggunaannya.</p><button class="primary" data-action="close">Siap belajar ${icon('arrow')}</button></div>`);
+  if (action === 'guide') openModal(`<div class="prose"><div class="section-kicker">BELAJAR DENGAN RITMEMU</div><h2 id="modal-title">Mulai dari satu kanji.</h2><ol><li><strong>Kenali.</strong> Buka Jelajahi Kanji, mulai dari level N5. Klik kartu untuk melihat arti, bacaan, dan contoh kata.</li><li><strong>Bedakan.</strong> Buka Kanji Mirip untuk membandingkan bentuk, melihat ciri pembeda, dan berlatih memilih kanji dari petunjuk visual.</li><li><strong>Ingat.</strong> Gunakan flashcard. Balik kartunya, lalu pilih “Sudah ingat” atau “Masih belajar”.</li><li><strong>Latih.</strong> Uji pemahaman lewat kuis arti atau bacaan kata. Mode Bacaan ala JLPT melatihmu membedakan pilihan hiragana yang mirip. Gunakan Hiragana → Kanji dan English → Katakana untuk melatih penulisan dengan pilihan bentuk yang mirip. Buka Kuis Kotoba untuk melatih kosakata Minna no Nihongo per bab dan jenis kata. Tinjau jawabanmu di akhir sesi.</li><li><strong>Ulangi.</strong> Simpan kanji yang ingin dipelajari lagi. Lihat perkembanganmu di Progres Saya.</li></ol><p>Onyomi adalah bacaan yang berasal dari bahasa Tionghoa. Kunyomi adalah bacaan asli Jepang. Bacaan yang digunakan bergantung pada kata, jadi selalu pelajari contoh penggunaannya.</p><button class="primary" data-action="close">Siap belajar ${icon('arrow')}</button></div>`);
   if (action === 'sources') openModal(`<div class="prose"><div class="section-kicker">MATERI YANG KITA PELAJARI</div><h2 id="modal-title">Tentang koleksi kanji</h2><p>Koleksi mencakup seluruh ${KANJI.length.toLocaleString('id-ID')} kanji dalam snapshot OpenJLPT yang digunakan, dari N5 sampai N1. Pembagian level mengikuti daftar komunitas Jonathan Waller dan tambahan joyo dari OpenJLPT, bukan daftar resmi JLPT. Seluruh arti Indonesia dan contoh kata ditinjau ulang secara editorial oleh AI pada 13 Oktober 2026 agar lebih jelas dan sesuai konteks. Arti pada kartu diringkas untuk belajar; arti Inggris tersedia sebagai pembanding. Rincian tinjauan dan rujukan kamus tersedia dalam catatan data.</p><p>Bacaan dan jumlah goresan bersumber dari <a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project" target="_blank" rel="noopener">KANJIDIC2</a>, hak cipta James William Breen dan Electronic Dictionary Research and Development Group, melalui <a href="https://github.com/evanclan/OpenJLPT" target="_blank" rel="noopener">OpenJLPT</a>. Contoh kata berasal dari JMdict dan daftar Jonathan Waller melalui OpenJLPT serta <a href="https://kanjiapi.dev/" target="_blank" rel="noopener">kanjiapi.dev</a>.</p><p>Data adaptasi dalam koleksi ini tersedia dengan <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Lihat <a href="https://www.edrdg.org/edrdg/licence.html" target="_blank" rel="noopener">ketentuan sumber</a> dan <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">catatan data</a>.</p><p>Keluarga radikal dan pembahasan bentuk kanji pada kuis menggunakan label komponen dari <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> oleh Ulrich Apel dan kontributor. Ekstrak komponen ini memakai <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>. Pengelompokan dan penjelasan Indonesia ditambahkan untuk membantu belajar.</p><p>Materi tersedia langsung di website. Progres dan simpanan disimpan di browser ini, tanpa akun.</p></div>`);
 });
 modal.addEventListener('click', e => { if (e.target === modal) { const box = modal.getBoundingClientRect(); if (e.clientX < box.left || e.clientX > box.right || e.clientY < box.top || e.clientY > box.bottom) modal.close(); } });

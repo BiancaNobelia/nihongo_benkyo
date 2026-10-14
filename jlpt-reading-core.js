@@ -1,5 +1,5 @@
-import { shuffle } from './core.js?v=20261014-katakana-expanded';
-import { selectReadingQuestions } from './reading-balance.js?v=20261014-katakana-expanded';
+import { shuffle } from './core.js?v=20261014-kotoba';
+import { selectReadingQuestions } from './reading-balance.js?v=20261014-kotoba';
 
 export function filterReadingQuestions(bank, level = 'all') {
   return bank.filter(q => level === 'all' || q.level === level);

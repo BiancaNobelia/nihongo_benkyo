@@ -1,0 +1,276 @@
+{
+  "filename": "Minna_No_Nihongo_Latihan_Bab_1-50_Jenis_Kata.xlsx",
+  "sha256": "cc82cde3e32c2a2c0018e3f6cd894b5b3140db4fe034a8fd2ee2bdae6f7c7e8e",
+  "sheet": "Kotoba Bab 1-50",
+  "range": "A2:E1691",
+  "entryCount": 1690,
+  "book1Count": 904,
+  "book2Count": 786,
+  "note": "Kompilasi latihan Bab 1–50 dari file pengguna yang mengikuti topik Minna no Nihongo I & II; bukan daftar resmi lengkap buku.",
+  "types": {
+    "kata ganti / penunjuk": 25,
+    "akhiran / pola": 4,
+    "kata benda": 765,
+    "kata tanya": 28,
+    "ungkapan / frasa": 68,
+    "bilangan / penyukat": 26,
+    "kata keterangan": 115,
+    "kata kerja": 540,
+    "kata sambung": 7,
+    "kata sifat-na": 45,
+    "kata sifat-i": 65,
+    "partikel / pola": 2
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "count": 35,
+      "title": "Perkenalan diri dan profesi"
+    },
+    {
+      "number": 2,
+      "count": 40,
+      "title": "Benda dan kata tunjuk"
+    },
+    {
+      "number": 3,
+      "count": 39,
+      "title": "Lokasi, gedung, dan harga"
+    },
+    {
+      "number": 4,
+      "count": 41,
+      "title": "Waktu, hari, dan rutinitas"
+    },
+    {
+      "number": 5,
+      "count": 40,
+      "title": "Perjalanan dan transportasi"
+    },
+    {
+      "number": 6,
+      "count": 43,
+      "title": "Aktivitas sehari-hari"
+    },
+    {
+      "number": 7,
+      "count": 38,
+      "title": "Memberi, menerima, dan alat"
+    },
+    {
+      "number": 8,
+      "count": 43,
+      "title": "Kata sifat dan deskripsi"
+    },
+    {
+      "number": 9,
+      "count": 42,
+      "title": "Kesukaan, kemampuan, dan alasan"
+    },
+    {
+      "number": 10,
+      "count": 39,
+      "title": "Keberadaan dan posisi"
+    },
+    {
+      "number": 11,
+      "count": 39,
+      "title": "Jumlah, satuan hitung, dan keluarga"
+    },
+    {
+      "number": 12,
+      "count": 40,
+      "title": "Musim dan perbandingan"
+    },
+    {
+      "number": 13,
+      "count": 35,
+      "title": "Keinginan dan aktivitas"
+    },
+    {
+      "number": 14,
+      "count": 36,
+      "title": "Permintaan dan petunjuk"
+    },
+    {
+      "number": 15,
+      "count": 32,
+      "title": "Kebiasaan dan keadaan"
+    },
+    {
+      "number": 16,
+      "count": 38,
+      "title": "Urutan aktivitas dan ciri fisik"
+    },
+    {
+      "number": 17,
+      "count": 35,
+      "title": "Larangan, kewajiban, dan kesehatan"
+    },
+    {
+      "number": 18,
+      "count": 33,
+      "title": "Kemampuan dan hobi"
+    },
+    {
+      "number": 19,
+      "count": 33,
+      "title": "Pengalaman dan perubahan"
+    },
+    {
+      "number": 20,
+      "count": 32,
+      "title": "Percakapan bentuk kasual"
+    },
+    {
+      "number": 21,
+      "count": 32,
+      "title": "Pendapat dan kutipan"
+    },
+    {
+      "number": 22,
+      "count": 31,
+      "title": "Pakaian dan deskripsi orang"
+    },
+    {
+      "number": 23,
+      "count": 28,
+      "title": "Petunjuk, mesin, dan waktu"
+    },
+    {
+      "number": 24,
+      "count": 29,
+      "title": "Bantuan dan ungkapan memberi-menerima"
+    },
+    {
+      "number": 25,
+      "count": 31,
+      "title": "Pengandaian dan situasi masa depan"
+    },
+    {
+      "number": 26,
+      "count": 34,
+      "title": "Penjelasan, meminta bantuan, dan situasi sehari-hari"
+    },
+    {
+      "number": 27,
+      "count": 33,
+      "title": "Kemampuan, penglihatan, pendengaran, dan lingkungan"
+    },
+    {
+      "number": 28,
+      "count": 33,
+      "title": "Kebiasaan, aktivitas bersamaan, dan pendapat"
+    },
+    {
+      "number": 29,
+      "count": 32,
+      "title": "Keadaan benda dan peristiwa tak disengaja"
+    },
+    {
+      "number": 30,
+      "count": 32,
+      "title": "Menyiapkan dan menata sesuatu"
+    },
+    {
+      "number": 31,
+      "count": 31,
+      "title": "Rencana, niat, dan keputusan"
+    },
+    {
+      "number": 32,
+      "count": 31,
+      "title": "Saran, prediksi, dan kemungkinan"
+    },
+    {
+      "number": 33,
+      "count": 30,
+      "title": "Perintah, larangan, dan petunjuk keselamatan"
+    },
+    {
+      "number": 34,
+      "count": 32,
+      "title": "Urutan langkah dan mengikuti instruksi"
+    },
+    {
+      "number": 35,
+      "count": 31,
+      "title": "Kondisi, aturan, dan pilihan"
+    },
+    {
+      "number": 36,
+      "count": 31,
+      "title": "Perubahan kemampuan dan pembiasaan diri"
+    },
+    {
+      "number": 37,
+      "count": 30,
+      "title": "Bentuk pasif dan peristiwa yang dialami"
+    },
+    {
+      "number": 38,
+      "count": 31,
+      "title": "Menjadikan aktivitas sebagai topik"
+    },
+    {
+      "number": 39,
+      "count": 32,
+      "title": "Sebab, perasaan, dan dampak kejadian"
+    },
+    {
+      "number": 40,
+      "count": 32,
+      "title": "Pertanyaan tersisip dan mencoba sesuatu"
+    },
+    {
+      "number": 41,
+      "count": 30,
+      "title": "Menerima bantuan dan bahasa hormat"
+    },
+    {
+      "number": 42,
+      "count": 32,
+      "title": "Tujuan, penggunaan, dan manfaat benda"
+    },
+    {
+      "number": 43,
+      "count": 31,
+      "title": "Perubahan situasi dan kesan yang terlihat"
+    },
+    {
+      "number": 44,
+      "count": 31,
+      "title": "Berlebihan, kemudahan, dan kesulitan melakukan sesuatu"
+    },
+    {
+      "number": 45,
+      "count": 31,
+      "title": "Kondisi tak terduga dan masalah"
+    },
+    {
+      "number": 46,
+      "count": 31,
+      "title": "Tahap pekerjaan dan perkiraan yang masuk akal"
+    },
+    {
+      "number": 47,
+      "count": 30,
+      "title": "Kabar yang didengar dan dugaan berdasarkan bukti"
+    },
+    {
+      "number": 48,
+      "count": 32,
+      "title": "Bentuk kausatif: membuat atau membiarkan"
+    },
+    {
+      "number": 49,
+      "count": 31,
+      "title": "Bahasa hormat (sonkeigo)"
+    },
+    {
+      "number": 50,
+      "count": 32,
+      "title": "Bahasa merendah (kenjougo)"
+    }
+  ]
+}

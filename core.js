@@ -48,6 +48,7 @@ export function cleanProgress(raw, data) {
   const safe = raw && typeof raw === 'object' ? raw : {};
   const list = value => Array.isArray(value) ? [...new Set(value.filter(c => chars.has(c)))] : [];
   const days = Array.isArray(safe.days) ? [...new Set(safe.days.filter(d => typeof d === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(d)))].slice(-366) : [];
-  const history = Array.isArray(safe.history) ? safe.history.filter(h => h && Number.isInteger(h.total) && h.total > 0 && h.total <= data.length && Number.isInteger(h.correct) && h.correct >= 0 && h.correct <= h.total && typeof h.date === 'string' && !Number.isNaN(Date.parse(h.date)) && ['meaning', 'kanji', 'reading', 'jlpt-reading', 'hiragana-kanji', 'hiragana-katakana', 'english-katakana'].includes(h.mode)).slice(-50) : [];
+  const historyModes=['meaning','kanji','reading','jlpt-reading','hiragana-kanji','hiragana-katakana','english-katakana','kotoba-jp-id','kotoba-id-jp','kotoba-reading','kotoba-audio-jp','kotoba-audio-id'];
+  const history = Array.isArray(safe.history) ? safe.history.filter(h => h && Number.isInteger(h.total) && h.total > 0 && h.total <= data.length && Number.isInteger(h.correct) && h.correct >= 0 && h.correct <= h.total && typeof h.date === 'string' && !Number.isNaN(Date.parse(h.date)) && historyModes.includes(h.mode)).slice(-50).map(h=>h.mode.startsWith('kotoba-') ? {...h,chapters:Array.isArray(h.chapters) ? [...new Set(h.chapters.filter(n=>Number.isInteger(n) && n>=1 && n<=50))] : []} : h) : [];
   return { known: list(safe.known), saved: list(safe.saved), days, history };
 }

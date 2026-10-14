@@ -436,6 +436,53 @@ python scripts/build_katakana_expansion.py
 npm test
 ```
 
+### Kuis Kotoba Bab 1–50
+
+Sumber adalah workbook pengguna `Minna_No_Nihongo_Latihan_Bab_1-50_Jenis_Kata.xlsx`,
+sheet `Kotoba Bab 1-50`, sel A2:E1691. Seluruh **1.690 entri** dipertahankan,
+termasuk bacaan, penulisan, arti Indonesia, bab, dan jenis kata: 904 entri
+Bab 1–25 dan 786 entri Bab 26–50, dengan 12 kategori jenis kata.
+Jumlah setiap bab direkonsiliasi dengan sheet `Ringkasan`.
+
+Sheet `Panduan` menyebut sumber sebagai kompilasi latihan orisinal yang mengikuti
+topik Minna no Nihongo I dan II, bukan transkripsi atau daftar resmi lengkap buku.
+Website mempertahankan batas cakupan itu. Data ini berasal dari file pengguna,
+bukan OpenJLPT/JMdict; atribusi dan lisensi sumber kanji di atas tidak otomatis
+diterapkan pada workbook ini. Workbook asli tidak diubah atau diunggah.
+
+`scripts/build_kotoba.py` membaca XLSX menggunakan pustaka standar Python.
+Hasilnya `kotoba-data.js` dan manifest `data/kotoba-source.json`; manifest mencatat
+nama file, SHA-256, rentang sel, jumlah bab, dan kategori. Setiap entri menyimpan
+nomor baris sumber. Untuk membangun ulang:
+
+```sh
+python scripts/build_kotoba.py /path/to/Minna_No_Nihongo_Latihan_Bab_1-50_Jenis_Kata.xlsx
+npm test
+```
+
+Kata dengan penulisan dan bacaan yang sama digabung saat membentuk sesi;
+arti, jenis kata, nomor baris, dan babnya tetap dipertahankan. Seluruh bab
+menghasilkan 1.571 kartu kosakata unik. Mode bacaan hanya menguji kata yang
+memiliki kanji (1.316 kartu); kana tidak ditampilkan sebagai petunjuk jawaban.
+Mode dengar Jepang mengecualikan lima pola berpenanda ～ yang bukan kata mandiri.
+Jumlah yang tampil selalu mengikuti bab, jenis kata, dan mode yang dipilih.
+
+Pilihan salah tetap berasal dari bab yang dipilih, mengutamakan jenis kata yang
+sama. Penulisan sama, homofon, bacaan alternatif, dan arti Indonesia yang saling
+tumpang tindih disaring agar tidak menjadi jawaban salah. Pencocokan arti bersifat
+konservatif berdasarkan padanan dalam workbook; ini bukan pemeriksaan kamus
+menyeluruh untuk semua kemungkinan makna. Pengguna dapat memilih 10/20/50 soal
+atau jumlah custom; permintaan besar dibatasi ke jumlah kartu tanpa pengulangan.
+
+Lima mode mencakup Jepang–Indonesia, Indonesia–Jepang, bacaan kana, suara Jepang
+ke arti, dan suara Indonesia ke Jepang. Audio memakai Web Speech API dengan
+[suara bahasa yang tersedia di perangkat](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices).
+Mode suara hanya aktif jika suara bahasa tersebut ditemukan; suara bahasa lain
+tidak dijadikan pengganti. Audio diputar setelah tombol ditekan. Timer dimulai
+setelah pemutaran pertama selesai; navigasi menghentikan audio dan timer.
+Arti dan bacaan muncul setelah jawaban benar, salah, atau waktu habis. Hasil sesi
+lengkap tersimpan di browser bersama riwayat kuis lama, termasuk bab yang dipilih.
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau
