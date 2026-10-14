@@ -1,0 +1,22 @@
+[
+ [1, "教えて", "おしえて", "Mengajarkan; memberi tahu", "先輩にいろいろ{target}いただいたので、早く上手になりました。", "Berkat banyak hal yang diajarkan oleh senior, saya cepat menjadi mahir.", ["かえて", "ならべて", "ふえて"], "verb"],
+ [2, "早く", "はやく", "Dengan cepat; lebih awal", "先輩にいろいろ教えていただいたので、{target}上手になりました。", "Berkat banyak hal yang diajarkan oleh senior, saya cepat menjadi mahir.", ["そく", "すく", "よく"], "adverb"],
+ [3, "上手", "じょうず", "Mahir; pandai", "先輩にいろいろ教えていただいたので、早く{target}になりました。", "Berkat banyak hal yang diajarkan oleh senior, saya cepat menjadi mahir.", ["うえて", "うわて", "じょうし"], "adjective"],
+ [4, "店", "みせ", "Toko", "大きい{target}には品物がたくさんあるので、お土産を買いやすいと思います。", "Menurut saya, membeli oleh-oleh lebih mudah di toko besar karena barangnya banyak.", ["てん", "ところ", "にせ"], "noun"],
+ [5, "品物", "しなもの", "Barang dagangan; barang", "大きい店には{target}がたくさんあるので、お土産を買いやすいと思います。", "Menurut saya, membeli oleh-oleh lebih mudah di toko besar karena barangnya banyak.", ["しみの", "ひんもの", "ひんぶつ"], "noun"],
+ [6, "思います", "おもいます", "Berpikir; berpendapat", "大きい店には品物がたくさんあるので、お土産を買いやすいと{target}。", "Menurut saya, membeli oleh-oleh lebih mudah di toko besar karena barangnya banyak.", ["おいます", "いいます", "もいます"], "verb"],
+ [7, "教会", "きょうかい", "Gereja", "{target}の写真を写すのが好きなので、よくヨーロッパへ行きます。", "Saya sering pergi ke Eropa karena suka memotret gereja.", ["きょかい", "きょうがい", "きかい"], "noun"],
+ [8, "写す", "うつす", "Memotret; menyalin", "教会の写真を{target}のが好きなので、よくヨーロッパへ行きます。", "Saya sering pergi ke Eropa karena suka memotret gereja.", ["しゃす", "とす", "うす"], "verb"],
+ [9, "行きます", "いきます", "Pergi", "教会の写真を写すのが好きなので、よくヨーロッパへ{target}。", "Saya sering pergi ke Eropa karena suka memotret gereja.", ["えきます", "ききます", "こきます"], "verb"],
+ [10, "木曜日", "もくようび", "Hari Kamis", "{target}にスミスさんから、東京に着いたという電話がありました。", "Pada hari Kamis, Smith menelepon untuk memberi tahu bahwa ia sudah tiba di Tokyo.", ["きようび", "きんようび", "くようび"], "noun"],
+ [11, "東京", "とうきょう", "Tokyo", "木曜日にスミスさんから、{target}に着いたという電話がありました。", "Pada hari Kamis, Smith menelepon untuk memberi tahu bahwa ia sudah tiba di Tokyo.", ["ときょう", "ときお", "とうきょ"], "noun"],
+ [12, "電話", "でんわ", "Telepon", "木曜日にスミスさんから、東京に着いたという{target}がありました。", "Pada hari Kamis, Smith menelepon untuk memberi tahu bahwa ia sudah tiba di Tokyo.", ["てんわ", "でわ", "でんき"], "noun"],
+ [13, "荷物", "にもつ", "Barang bawaan; bagasi", "{target}がとても重いので、田中さんに持ってもらいました。", "Karena barang bawaan saya sangat berat, Tanaka membantu membawakannya.", ["かもつ", "かぶつ", "にぶつ"], "noun"],
+ [14, "重い", "おもい", "Berat", "荷物がとても{target}ので、田中さんに持ってもらいました。", "Karena barang bawaan saya sangat berat, Tanaka membantu membawakannya.", ["かるい", "ふかい", "ふるい"], "adjective"],
+ [15, "持って", "もって", "Memegang; membawa", "荷物がとても重いので、田中さんに{target}もらいました。", "Karena barang bawaan saya sangat berat, Tanaka membantu membawakannya.", ["かって", "まって", "はって"], "verb"],
+ [16, "駅", "えき", "Stasiun", "{target}まで歩いて15分ですが、自転車なら5分で行けます。", "Ke stasiun memerlukan 15 menit berjalan kaki, tetapi dengan sepeda hanya lima menit.", ["えぎ", "とき", "あき"], "noun"],
+ [17, "歩いて", "あるいて", "Berjalan kaki", "駅まで{target}15分ですが、自転車なら5分で行けます。", "Ke stasiun memerlukan 15 menit berjalan kaki, tetapi dengan sepeda hanya lima menit.", ["はいて", "あいて", "ほいて"], "verb"],
+ [18, "自転車", "じてんしゃ", "Sepeda", "駅まで歩いて15分ですが、{target}なら5分で行けます。", "Ke stasiun memerlukan 15 menit berjalan kaki, tetapi dengan sepeda hanya lima menit.", ["じでんしゃ", "じてんさ", "じどうしゃ"], "noun"],
+ [19, "運ぶ", "はこぶ", "Mengangkut; membawa", "遠くへ荷物を{target}車は、だいたい夜遅くに出発するそうです。", "Katanya kendaraan yang mengangkut barang ke tempat jauh biasanya berangkat larut malam.", ["えらぶ", "とぶ", "うぶ"], "verb"],
+ [20, "夜", "よる", "Malam", "遠くへ荷物を運ぶ車は、だいたい{target}遅くに出発するそうです。", "Katanya kendaraan yang mengangkut barang ke tempat jauh biasanya berangkat larut malam.", ["おる", "や", "ばん"], "noun"]
+]

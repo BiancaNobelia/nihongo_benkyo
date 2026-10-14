@@ -1,5 +1,5 @@
-import { componentDetailsMarkup } from './kanji-components.js?v=20261014-n5-pdf';
-import { readingAlternativesMarkup } from './reading-options.js?v=20261014-n5-pdf';
+import { componentDetailsMarkup } from './kanji-components.js?v=20261015-n4-pdf';
+import { readingAlternativesMarkup } from './reading-options.js?v=20261015-n4-pdf';
 
 // This block is shared by correct answers, incorrect answers, timeouts and review.
 // Meaning must never depend on whether an optional editorial explanation exists.

@@ -23,8 +23,8 @@ test('all supplied PDF question numbers are represented by reviewed N5 adaptatio
     });
   }
   assert.equal(getQuizPool('jlpt-reading','N5').length,388);
-  assert.equal(new Set(getQuizPool('jlpt-reading').map(readingQuestionKey)).size,663);
-  for(const level of ['N4','N3','N2','N1'])assert.ok(getQuizPool('jlpt-reading',level).every(q=>!q.source));
+  assert.equal(new Set(getQuizPool('jlpt-reading').map(readingQuestionKey)).size,863);
+  for(const level of ['N3','N2','N1'])assert.ok(getQuizPool('jlpt-reading',level).every(q=>!q.source));
 });
 
 test('multiple kanji remain visible while exactly the requested target is underlined',()=>{

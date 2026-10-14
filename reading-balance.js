@@ -1,7 +1,7 @@
-import { shuffle } from './core.js?v=20261014-n5-pdf';
-import { READING_METADATA } from './reading-metadata.js?v=20261014-n5-pdf';
-import { readingQuestionKey } from './reading-history.js?v=20261014-n5-pdf';
-import { withReadingSentence } from './reading-sentences.js?v=20261014-n5-pdf';
+import { shuffle } from './core.js?v=20261015-n4-pdf';
+import { READING_METADATA } from './reading-metadata.js?v=20261015-n4-pdf';
+import { readingQuestionKey } from './reading-history.js?v=20261015-n4-pdf';
+import { withReadingSentence } from './reading-sentences.js?v=20261015-n4-pdf';
 
 export const READING_CATEGORIES = {
   noun:'Kata benda', verb:'Kata kerja', adjective:'Kata sifat', adverb:'Kata keterangan', special:'Hitungan & tanggal',

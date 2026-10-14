@@ -1,7 +1,7 @@
-import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261014-n5-pdf';
-import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261014-n5-pdf';
-import { requestedQuizCount } from './quiz-settings.js?v=20261014-n5-pdf';
-import { shuffle } from './core.js?v=20261014-n5-pdf';
+import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261015-n4-pdf';
+import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261015-n4-pdf';
+import { requestedQuizCount } from './quiz-settings.js?v=20261015-n4-pdf';
+import { shuffle } from './core.js?v=20261015-n4-pdf';
 
 export function createKotobaView({root,escape,icon,heading,activity,recordSession}) {
   let course=kotobaCourse('minna');

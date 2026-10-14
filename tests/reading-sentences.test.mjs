@@ -13,9 +13,9 @@ import {N5_CONTEXT_OVERRIDES} from '../n5-reading-data.js';
 const escape=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const seeded=seed=>()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);
 
-test('all 663 JLPT questions have one target in context and an Indonesian translation',()=>{
+test('all 863 JLPT questions have one target in context and an Indonesian translation',()=>{
   const pool=getQuizPool('jlpt-reading');
-  assert.equal(pool.length,663);
+  assert.equal(pool.length,863);
   assert.equal(READING_SENTENCES.size,282);
   for(const q of pool){
     assert.equal(q.sentence.split('{target}').length,2,q.word);

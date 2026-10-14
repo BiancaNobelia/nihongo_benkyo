@@ -1,4 +1,4 @@
-import { MON_COMPONENT_NOTES } from './mon-components-data.js?v=20261014-n5-pdf';
+import { MON_COMPONENT_NOTES } from './mon-components-data.js?v=20261015-n4-pdf';
 
 export const componentNoteFor = char => MON_COMPONENT_NOTES[char] || null;
 

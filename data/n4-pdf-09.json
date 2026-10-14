@@ -1,0 +1,22 @@
+[
+ [1, "教室", "きょうしつ", "Ruang kelas", "隣の{target}で学生が騒いでいます。まだ講義が始まっていないのでしょう。", "Para mahasiswa sedang ribut di ruang kelas sebelah. Mungkin perkuliahannya belum dimulai.", ["きょしつ", "すうしつ", "きょうし"], "noun"],
+ [2, "学生", "がくせい", "Pelajar; mahasiswa", "隣の教室で{target}が騒いでいます。まだ講義が始まっていないのでしょう。", "Para mahasiswa sedang ribut di ruang kelas sebelah. Mungkin perkuliahannya belum dimulai.", ["かくせ", "がくせ", "かくせい"], "noun"],
+ [3, "始まって", "はじまって", "Dimulai (bagian dari 始まっていない)", "隣の教室で学生が騒いでいます。まだ講義が{target}いないのでしょう。", "Para mahasiswa sedang ribut di ruang kelas sebelah. Mungkin perkuliahannya belum dimulai.", ["じまって", "はまって", "おわって"], "verb"],
+ [4, "川", "かわ", "Sungai", "{target}で釣れた魚をすぐ料理して食べたので、とてもおいしかったです。", "Ikan hasil pancingan di sungai langsung dimasak dan dimakan, jadi rasanya sangat enak.", ["か", "わ", "がわ"], "noun"],
+ [5, "魚", "さかな", "Ikan", "川で釣れた{target}をすぐ料理して食べたので、とてもおいしかったです。", "Ikan hasil pancingan di sungai langsung dimasak dan dimakan, jadi rasanya sangat enak.", ["さか", "ぎょ", "さがな"], "noun"],
+ [6, "料理", "りょうり", "Masakan; memasak", "川で釣れた魚をすぐ{target}して食べたので、とてもおいしかったです。", "Ikan hasil pancingan di sungai langsung dimasak dan dimakan, jadi rasanya sangat enak.", ["りょり", "ろうり", "りゅうり"], "noun"],
+ [7, "屋", "や", "Toko; akhiran untuk jenis toko", "今、あのカメラ{target}でビデオカメラを安く売っていますよ。", "Sekarang toko kamera itu menjual kamera video dengan harga murah.", ["よ", "と", "お"], "noun"],
+ [8, "安く", "やすく", "Dengan harga murah", "今、あのカメラ屋でビデオカメラを{target}売っていますよ。", "Sekarang toko kamera itu menjual kamera video dengan harga murah.", ["あんく", "おおく", "ひくく"], "adverb"],
+ [9, "売って", "うって", "Menjual", "今、あのカメラ屋でビデオカメラを安く{target}いますよ。", "Sekarang toko kamera itu menjual kamera video dengan harga murah.", ["かって", "しって", "とって"], "verb"],
+ [10, "車", "くるま", "Mobil; kendaraan", "日本では、{target}は道の左を走らなければなりません。", "Di Jepang, mobil harus berjalan di sisi kiri jalan.", ["うま", "くま", "しゃ"], "noun"],
+ [11, "走らなければ", "はしらなければ", "Jika tidak berjalan (dalam pola harus berjalan)", "日本では、車は道の左を{target}なりません。", "Di Jepang, mobil harus berjalan di sisi kiri jalan.", ["あらなければ", "しらなければ", "あしらなければ"], "verb"],
+ [12, "自分", "じぶん", "Diri sendiri", "やはり会話の勉強は、{target}一人でするより、だれかに習ったほうがいいです。", "Untuk belajar percakapan, memang lebih baik belajar dari seseorang daripada belajar sendirian.", ["きぶん", "こふん", "しぶん"], "noun"],
+ [13, "一人", "ひとり", "Satu orang; sendirian", "やはり会話の勉強は、自分{target}でするより、だれかに習ったほうがいいです。", "Untuk belajar percakapan, memang lebih baik belajar dari seseorang daripada belajar sendirian.", ["ふたり", "いちひと", "いちにん"], "special"],
+ [14, "習った", "ならった", "Belajar dari seseorang (bentuk lampau)", "やはり会話の勉強は、自分一人でするより、だれかに{target}ほうがいいです。", "Untuk belajar percakapan, memang lebih baik belajar dari seseorang daripada belajar sendirian.", ["うった", "うたった", "もらった"], "verb"],
+ [15, "切手", "きって", "Prangko", "{target}を集めるのが趣味なので、人からよくもらいます。", "Karena hobi saya mengoleksi prangko, saya sering mendapatkannya dari orang lain.", ["きて", "きりて", "きいて"], "noun"],
+ [16, "集める", "あつめる", "Mengumpulkan; mengoleksi", "切手を{target}のが趣味なので、人からよくもらいます。", "Karena hobi saya mengoleksi prangko, saya sering mendapatkannya dari orang lain.", ["あめる", "とめる", "つめる"], "verb"],
+ [17, "人", "ひと", "Orang", "切手を集めるのが趣味なので、{target}からよくもらいます。", "Karena hobi saya mengoleksi prangko, saya sering mendapatkannya dari orang lain.", ["にん", "じん", "ひとり"], "noun"],
+ [18, "夕飯", "ゆうはん", "Makan malam", "きのうは{target}を食べてすぐ寝たのに、12時ごろ電話の音で起きてしまいました。", "Kemarin saya langsung tidur setelah makan malam, tetapi sekitar pukul dua belas saya terbangun karena bunyi telepon.", ["たはん", "ごはん", "ゆはん"], "noun"],
+ [19, "起きて", "おきて", "Bangun; terbangun", "きのうは夕飯を食べてすぐ寝たのに、12時ごろ電話の音で{target}しまいました。", "Kemarin saya langsung tidur setelah makan malam, tetapi sekitar pukul dua belas saya terbangun karena bunyi telepon.", ["ききて", "こきて", "たきて"], "verb"],
+ [20, "別れた", "わかれた", "Berpisah (bentuk lampau)", "年を取ると、昔{target}友だちに会いたくなります。", "Seiring bertambahnya usia, kita jadi ingin bertemu lagi dengan teman yang sudah lama berpisah.", ["はなれた", "わけれた", "べつれた"], "verb"]
+]

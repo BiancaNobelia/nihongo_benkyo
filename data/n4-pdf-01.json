@@ -1,0 +1,22 @@
+[
+ [1, "旅行", "りょこう", "Perjalanan; wisata", "{target}の計画について、意見のある方はどんどん言ってください。", "Silakan sampaikan pendapat Anda tentang rencana perjalanan ini tanpa ragu.", ["りょうこ", "りょうこう", "りょこ"], "noun"],
+ [2, "計画", "けいかく", "Rencana", "旅行の{target}について、意見のある方はどんどん言ってください。", "Silakan sampaikan pendapat Anda tentang rencana perjalanan ini tanpa ragu.", ["けえかく", "けいが", "けえがく"], "noun"],
+ [3, "意見", "いけん", "Pendapat", "旅行の計画について、{target}のある方はどんどん言ってください。", "Silakan sampaikan pendapat Anda tentang rencana perjalanan ini tanpa ragu.", ["いみ", "いけ", "いし"], "noun"],
+ [4, "言って", "いって", "Mengatakan; menyampaikan", "旅行の計画について、意見のある方はどんどん{target}ください。", "Silakan sampaikan pendapat Anda tentang rencana perjalanan ini tanpa ragu.", ["たって", "うって", "きって"], "verb"],
+ [5, "先月", "せんげつ", "Bulan lalu", "{target}、コンピューターを買いました。毎日、子どもも勉強に使っています。", "Bulan lalu saya membeli komputer. Anak saya juga menggunakannya untuk belajar setiap hari.", ["さぎげつ", "せんけつ", "さきげつ"], "noun"],
+ [6, "買いました", "かいました", "Membeli (bentuk lampau)", "先月、コンピューターを{target}。毎日、子どもも勉強に使っています。", "Bulan lalu saya membeli komputer. Anak saya juga menggunakannya untuk belajar setiap hari.", ["こいました", "ばいました", "もらいました"], "verb"],
+ [7, "毎日", "まいにち", "Setiap hari", "先月、コンピューターを買いました。{target}、子どもも勉強に使っています。", "Bulan lalu saya membeli komputer. Anak saya juga menggunakannya untuk belajar setiap hari.", ["まいひ", "まいび", "まいじつ"], "noun"],
+ [8, "勉強", "べんきょう", "Belajar", "先月、コンピューターを買いました。毎日、子どもも{target}に使っています。", "Bulan lalu saya membeli komputer. Anak saya juga menggunakannya untuk belajar setiap hari.", ["べんき", "べんきょ", "はんきょう"], "noun"],
+ [9, "使って", "つかって", "Menggunakan", "先月、コンピューターを買いました。毎日、子どもも勉強に{target}います。", "Bulan lalu saya membeli komputer. Anak saya juga menggunakannya untuk belajar setiap hari.", ["つくって", "もって", "しって"], "verb"],
+ [10, "道", "みち", "Jalan", "{target}がわからないので、住所と地図を見ながら大使館へ行きます。", "Karena tidak tahu jalannya, saya pergi ke kedutaan sambil melihat alamat dan peta.", ["いち", "どう", "とおり"], "noun"],
+ [11, "住所", "じゅうしょ", "Alamat", "道がわからないので、{target}と地図を見ながら大使館へ行きます。", "Karena tidak tahu jalannya, saya pergi ke kedutaan sambil melihat alamat dan peta.", ["じしょ", "じゅしょ", "しゅうしょ"], "noun"],
+ [12, "地図", "ちず", "Peta", "道がわからないので、住所と{target}を見ながら大使館へ行きます。", "Karena tidak tahu jalannya, saya pergi ke kedutaan sambil melihat alamat dan peta.", ["ちと", "じと", "いず"], "noun"],
+ [13, "大使館", "たいしかん", "Kedutaan besar", "道がわからないので、住所と地図を見ながら{target}へ行きます。", "Karena tidak tahu jalannya, saya pergi ke kedutaan sambil melihat alamat dan peta.", ["たしかん", "だいしかん", "たいじかん"], "noun"],
+ [14, "急に", "きゅうに", "Tiba-tiba", "父が{target}死んだので、大学の入学試験を受けられませんでした。", "Karena ayah saya tiba-tiba meninggal, saya tidak dapat mengikuti ujian masuk universitas.", ["いそに", "いそいに", "きゅに"], "adverb"],
+ [15, "死んだ", "しんだ", "Meninggal (bentuk lampau)", "父が急に{target}ので、大学の入学試験を受けられませんでした。", "Karena ayah saya tiba-tiba meninggal, saya tidak dapat mengikuti ujian masuk universitas.", ["そんだ", "うんだ", "とんだ"], "verb"],
+ [16, "入学", "にゅうがく", "Masuk sekolah atau universitas", "父が急に死んだので、大学の{target}試験を受けられませんでした。", "Karena ayah saya tiba-tiba meninggal, saya tidak dapat mengikuti ujian masuk universitas.", ["たいがく", "だいがく", "にゅがく"], "noun"],
+ [17, "日曜日", "にちようび", "Hari Minggu", "{target}に友だちと海へ行きました。泳いだり歌ったりして楽しかったです。", "Pada hari Minggu saya pergi ke pantai bersama teman. Kami berenang, bernyanyi, dan bersenang-senang.", ["どようび", "ひようび", "かようび"], "noun"],
+ [18, "海", "うみ", "Laut", "日曜日に友だちと{target}へ行きました。泳いだり歌ったりして楽しかったです。", "Pada hari Minggu saya pergi ke pantai bersama teman. Kami berenang, bernyanyi, dan bersenang-senang.", ["み", "うに", "かい"], "noun"],
+ [19, "歌ったり", "うたったり", "Bernyanyi (salah satu kegiatan)", "日曜日に友だちと海へ行きました。泳いだり{target}して楽しかったです。", "Pada hari Minggu saya pergi ke pantai bersama teman. Kami berenang, bernyanyi, dan bersenang-senang.", ["おどったり", "かったり", "とったり"], "verb"],
+ [20, "楽しかった", "たのしかった", "Menyenangkan (bentuk lampau)", "日曜日に友だちと海へ行きました。泳いだり歌ったりして{target}です。", "Pada hari Minggu saya pergi ke pantai bersama teman. Kami berenang, bernyanyi, dan bersenang-senang.", ["がくしかった", "うれしかった", "かなしかった"], "adjective"]
+]

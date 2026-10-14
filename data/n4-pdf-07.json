@@ -1,0 +1,22 @@
+[
+ [1, "食事", "しょくじ", "Makan; santapan", "友だちと{target}をしながら、きのう見た映画の話をしました。", "Sambil makan bersama teman, saya membicarakan film yang ditonton kemarin.", ["しょじ", "たべこと", "たべごと"], "noun"],
+ [2, "映画", "えいが", "Film", "友だちと食事をしながら、きのう見た{target}の話をしました。", "Sambil makan bersama teman, saya membicarakan film yang ditonton kemarin.", ["えが", "かいが", "えか"], "noun"],
+ [3, "話", "はなし", "Cerita; pembicaraan", "友だちと食事をしながら、きのう見た映画の{target}をしました。", "Sambil makan bersama teman, saya membicarakan film yang ditonton kemarin.", ["はなしい", "わ", "はし"], "noun"],
+ [4, "兄", "あに", "Kakak laki-laki sendiri", "{target}は去年からタクシーの運転手をしています。", "Kakak laki-laki saya bekerja sebagai sopir taksi sejak tahun lalu.", ["おとうと", "あね", "ちち"], "noun"],
+ [5, "去年", "きょねん", "Tahun lalu", "兄は{target}からタクシーの運転手をしています。", "Kakak laki-laki saya bekerja sebagai sopir taksi sejak tahun lalu.", ["さくねん", "きねん", "せんねん"], "noun"],
+ [6, "運転手", "うんてんしゅ", "Sopir; pengemudi", "兄は去年からタクシーの{target}をしています。", "Kakak laki-laki saya bekerja sebagai sopir taksi sejak tahun lalu.", ["うんてんて", "うてんしゅ", "つうてんしゅ"], "noun"],
+ [7, "来ない", "こない", "Tidak datang; belum datang", "説明する人が{target}ので、どのボタンを押すと機械が正しい動き方をするかわかりません。", "Karena orang yang akan menjelaskan belum datang, saya tidak tahu tombol mana yang harus ditekan agar mesin bergerak dengan benar.", ["きない", "くない", "かない"], "verb"],
+ [8, "正しい", "ただしい", "Benar; tepat", "説明する人が来ないので、どのボタンを押すと機械が{target}動き方をするかわかりません。", "Karena orang yang akan menjelaskan belum datang, saya tidak tahu tombol mana yang harus ditekan agar mesin bergerak dengan benar.", ["たたしい", "せいしい", "だたしい"], "adjective"],
+ [9, "動き方", "うごきかた", "Cara bergerak", "説明する人が来ないので、どのボタンを押すと機械が正しい{target}をするかわかりません。", "Karena orang yang akan menjelaskan belum datang, saya tidak tahu tombol mana yang harus ditekan agar mesin bergerak dengan benar.", ["どうきほう", "うごきほう", "どうきかた"], "noun"],
+ [10, "用", "よう", "Untuk; diperuntukkan bagi", "男性{target}の服や下着の売り場は、階段を下りたところにありますよ。", "Bagian pakaian dan pakaian dalam pria ada setelah Anda turun tangga.", ["じ", "いん", "よん"], "noun"],
+ [11, "下着", "したぎ", "Pakaian dalam", "男性用の服や{target}の売り場は、階段を下りたところにありますよ。", "Bagian pakaian dan pakaian dalam pria ada setelah Anda turun tangga.", ["したき", "かぎ", "うわぎ"], "noun"],
+ [12, "売り場", "うりば", "Bagian penjualan; tempat berjualan", "男性用の服や下着の{target}は、階段を下りたところにありますよ。", "Bagian pakaian dan pakaian dalam pria ada setelah Anda turun tangga.", ["かりじょう", "かりば", "うりじょう"], "noun"],
+ [13, "先週", "せんしゅう", "Minggu lalu", "{target}、友だちに1万円貸しました。きょう返してもらいました。", "Minggu lalu saya meminjamkan 10.000 yen kepada teman. Hari ini uangnya dikembalikan kepada saya.", ["こんしゅう", "らいしゅう", "さきしゅう"], "noun"],
+ [14, "貸しました", "かしました", "Meminjamkan (bentuk lampau)", "先週、友だちに1万円{target}。きょう返してもらいました。", "Minggu lalu saya meminjamkan 10.000 yen kepada teman. Hari ini uangnya dikembalikan kepada saya.", ["よしました", "としました", "たしました"], "verb"],
+ [15, "返して", "かえして", "Mengembalikan", "先週、友だちに1万円貸しました。きょう{target}もらいました。", "Minggu lalu saya meminjamkan 10.000 yen kepada teman. Hari ini uangnya dikembalikan kepada saya.", ["へんして", "かりして", "かして"], "verb"],
+ [16, "笑い", "わらい", "Tersenyum; tertawa (dalam 笑いながら)", "先生は{target}ながら、私の変な質問に丁寧に答えてくださいました。", "Sambil tersenyum, guru menjawab pertanyaan saya yang aneh dengan saksama.", ["はらい", "からい", "ならい"], "verb"],
+ [17, "質問", "しつもん", "Pertanyaan", "先生は笑いながら、私の変な{target}に丁寧に答えてくださいました。", "Sambil tersenyum, guru menjawab pertanyaan saya yang aneh dengan saksama.", ["しもん", "しちもん", "しづもん"], "noun"],
+ [18, "答えて", "こたえて", "Menjawab", "先生は笑いながら、私の変な質問に丁寧に{target}くださいました。", "Sambil tersenyum, guru menjawab pertanyaan saya yang aneh dengan saksama.", ["とうえて", "かえて", "おしえて"], "verb"],
+ [19, "入り口", "いりぐち", "Pintu masuk", "駐車場の{target}は建物の後ろにあります。", "Pintu masuk tempat parkir berada di belakang bangunan.", ["はいりくち", "いりくち", "はいりぐち"], "noun"],
+ [20, "建物", "たてもの", "Bangunan", "駐車場の入り口は{target}の後ろにあります。", "Pintu masuk tempat parkir berada di belakang bangunan.", ["たてぶつ", "けんぶつ", "けんもの"], "noun"]
+]

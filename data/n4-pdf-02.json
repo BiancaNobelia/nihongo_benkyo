@@ -1,0 +1,22 @@
+[
+ [1, "半", "はん", "Setengah; lewat 30 menit pada jam", "6時{target}に集まって、すぐ出発したので、9時ごろには湖に着きました。", "Kami berkumpul pukul setengah tujuh dan langsung berangkat, sehingga tiba di danau sekitar pukul sembilan.", ["かん", "ほん", "ばん"], "special"],
+ [2, "集まって", "あつまって", "Berkumpul", "6時半に{target}、すぐ出発したので、9時ごろには湖に着きました。", "Kami berkumpul pukul setengah tujuh dan langsung berangkat, sehingga tiba di danau sekitar pukul sembilan.", ["あまって", "とまって", "つまって"], "verb"],
+ [3, "出発", "しゅっぱつ", "Keberangkatan; berangkat", "6時半に集まって、すぐ{target}したので、9時ごろには湖に着きました。", "Kami berkumpul pukul setengah tujuh dan langsung berangkat, sehingga tiba di danau sekitar pukul sembilan.", ["しゅぱつ", "しはつ", "しっぱつ"], "noun"],
+ [4, "着きました", "つきました", "Tiba; sampai (bentuk lampau)", "6時半に集まって、すぐ出発したので、9時ごろには湖に{target}。", "Kami berkumpul pukul setengah tujuh dan langsung berangkat, sehingga tiba di danau sekitar pukul sembilan.", ["かきました", "できました", "ときました"], "verb"],
+ [5, "会社", "かいしゃ", "Perusahaan", "おじはガスの{target}の社長で、大きい家に住んでいます。", "Paman saya adalah direktur perusahaan gas dan tinggal di rumah besar.", ["けいしゃ", "しゃじょう", "かいじゃ"], "noun"],
+ [6, "社長", "しゃちょう", "Direktur utama perusahaan", "おじはガスの会社の{target}で、大きい家に住んでいます。", "Paman saya adalah direktur perusahaan gas dan tinggal di rumah besar.", ["しゃちょ", "しゃじょう", "しゃちゅう"], "noun"],
+ [7, "家", "いえ", "Rumah", "おじはガスの会社の社長で、大きい{target}に住んでいます。", "Paman saya adalah direktur perusahaan gas dan tinggal di rumah besar.", ["か", "や", "あち"], "noun"],
+ [8, "住んで", "すんで", "Tinggal; menetap", "おじはガスの会社の社長で、大きい家に{target}います。", "Paman saya adalah direktur perusahaan gas dan tinggal di rumah besar.", ["そんで", "つんで", "うんで"], "verb"],
+ [9, "小さい", "ちいさい", "Kecil", "山の{target}町で、世界の人が集まるスキーの試合が開かれるそうです。", "Katanya pertandingan ski yang mempertemukan orang dari seluruh dunia akan diadakan di sebuah kota kecil di pegunungan.", ["ちいさ", "こさい", "すこしい"], "adjective"],
+ [10, "世界", "せかい", "Dunia", "山の小さい町で、{target}の人が集まるスキーの試合が開かれるそうです。", "Katanya pertandingan ski yang mempertemukan orang dari seluruh dunia akan diadakan di sebuah kota kecil di pegunungan.", ["せがい", "せか", "せいかい"], "noun"],
+ [11, "試合", "しあい", "Pertandingan", "山の小さい町で、世界の人が集まるスキーの{target}が開かれるそうです。", "Katanya pertandingan ski yang mempertemukan orang dari seluruh dunia akan diadakan di sebuah kota kecil di pegunungan.", ["しがい", "しいあい", "じあい"], "noun"],
+ [12, "開かれる", "ひらかれる", "Diselenggarakan", "山の小さい町で、世界の人が集まるスキーの試合が{target}そうです。", "Katanya pertandingan ski yang mempertemukan orang dari seluruh dunia akan diadakan di sebuah kota kecil di pegunungan.", ["あかれる", "ひかれる", "とかれる"], "verb"],
+ [13, "今朝", "けさ", "Tadi pagi; pagi ini", "{target}、何か変な物を食べたのでしょう。おなかがすごく痛くて気分が悪いです。", "Sepertinya tadi pagi saya makan sesuatu yang tidak beres. Perut saya sangat sakit dan saya merasa tidak enak badan.", ["こあさ", "こんあさ", "きょう"], "noun"],
+ [14, "何か", "なにか", "Sesuatu", "今朝、{target}変な物を食べたのでしょう。おなかがすごく痛くて気分が悪いです。", "Sepertinya tadi pagi saya makan sesuatu yang tidak beres. Perut saya sangat sakit dan saya merasa tidak enak badan.", ["どれか", "いつか", "だれか"], "noun"],
+ [15, "物", "もの", "Benda; sesuatu", "今朝、何か変な{target}を食べたのでしょう。おなかがすごく痛くて気分が悪いです。", "Sepertinya tadi pagi saya makan sesuatu yang tidak beres. Perut saya sangat sakit dan saya merasa tidak enak badan.", ["ぶつ", "ところ", "しな"], "noun"],
+ [16, "気分", "きぶん", "Kondisi perasaan atau badan", "今朝、何か変な物を食べたのでしょう。おなかがすごく痛くて{target}が悪いです。", "Sepertinya tadi pagi saya makan sesuatu yang tidak beres. Perut saya sangat sakit dan saya merasa tidak enak badan.", ["きふん", "けぶん", "きわけ"], "noun"],
+ [17, "特急", "とっきゅう", "Kereta ekspres terbatas", "この{target}電車はその駅には止まりません。後の急行に乗ってください。", "Kereta ekspres terbatas ini tidak berhenti di stasiun itu. Silakan naik kereta ekspres yang datang setelahnya.", ["とうきゅう", "とっきゅ", "とっぎゅう"], "noun"],
+ [18, "電車", "でんしゃ", "Kereta listrik", "この特急{target}はその駅には止まりません。後の急行に乗ってください。", "Kereta ekspres terbatas ini tidak berhenti di stasiun itu. Silakan naik kereta ekspres yang datang setelahnya.", ["てんしゃ", "てんじゃ", "でんさ"], "noun"],
+ [19, "止まり", "とまり", "Berhenti (bagian dari 止まりません)", "この特急電車はその駅には{target}ません。後の急行に乗ってください。", "Kereta ekspres terbatas ini tidak berhenti di stasiun itu. Silakan naik kereta ekspres yang datang setelahnya.", ["やまり", "たまり", "こまり"], "verb"],
+ [20, "急行", "きゅうこう", "Kereta ekspres", "この特急電車はその駅には止まりません。後の{target}に乗ってください。", "Kereta ekspres terbatas ini tidak berhenti di stasiun itu. Silakan naik kereta ekspres yang datang setelahnya.", ["きこう", "きゅこう", "きゅうごう"], "noun"]
+]

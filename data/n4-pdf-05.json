@@ -1,0 +1,22 @@
+[
+ [1, "年", "とし", "Usia; umur", "山田先生は、{target}を取った方にとても親切で、心のやさしいお医者さんだそうです。", "Katanya Dokter Yamada sangat ramah kepada orang lanjut usia dan merupakan dokter yang baik hati.", ["ねん", "えん", "とり"], "noun"],
+ [2, "親切", "しんせつ", "Ramah; suka menolong", "山田先生は、年を取った方にとても{target}で、心のやさしいお医者さんだそうです。", "Katanya Dokter Yamada sangat ramah kepada orang lanjut usia dan merupakan dokter yang baik hati.", ["いんせつ", "ちんせつ", "おやせつ"], "adjective"],
+ [3, "心", "こころ", "Hati; perasaan", "山田先生は、年を取った方にとても親切で、{target}のやさしいお医者さんだそうです。", "Katanya Dokter Yamada sangat ramah kepada orang lanjut usia dan merupakan dokter yang baik hati.", ["こごろ", "しん", "じん"], "noun"],
+ [4, "今週", "こんしゅう", "Minggu ini", "{target}の土曜日の午前中に、新しい機械の使い方を習う予定です。", "Saya berencana belajar cara menggunakan mesin baru pada Sabtu pagi minggu ini.", ["いましゅう", "こしゅう", "まいしゅう"], "noun"],
+ [5, "習う", "ならう", "Belajar dari seseorang", "今週の土曜日の午前中に、新しい機械の使い方を{target}予定です。", "Saya berencana belajar cara menggunakan mesin baru pada Sabtu pagi minggu ini.", ["うたう", "あたう", "へたう"], "verb"],
+ [6, "冬", "ふゆ", "Musim dingin", "この辺は{target}になると強い北の風が吹いて、外には人も動物もいなくなります。", "Saat musim dingin tiba, angin utara bertiup kencang di daerah ini sehingga tidak ada orang maupun binatang di luar.", ["なつ", "あき", "はる"], "noun"],
+ [7, "北", "きた", "Utara", "この辺は冬になると強い{target}の風が吹いて、外には人も動物もいなくなります。", "Saat musim dingin tiba, angin utara bertiup kencang di daerah ini sehingga tidak ada orang maupun binatang di luar.", ["ひがし", "みなみ", "にし"], "noun"],
+ [8, "風", "かぜ", "Angin", "この辺は冬になると強い北の{target}が吹いて、外には人も動物もいなくなります。", "Saat musim dingin tiba, angin utara bertiup kencang di daerah ini sehingga tidak ada orang maupun binatang di luar.", ["かせ", "ふう", "ほう"], "noun"],
+ [9, "動物", "どうぶつ", "Binatang; hewan", "この辺は冬になると強い北の風が吹いて、外には人も{target}もいなくなります。", "Saat musim dingin tiba, angin utara bertiup kencang di daerah ini sehingga tidak ada orang maupun binatang di luar.", ["とうぶつ", "どうふつ", "どぶつ"], "noun"],
+ [10, "来月", "らいげつ", "Bulan depan", "{target}の6日に久しぶりに国へ帰って、母が作った料理を食べるのが楽しみです。", "Saya menantikan pulang ke negara asal pada tanggal enam bulan depan setelah lama tidak pulang, lalu menikmati masakan ibu.", ["きげつ", "らいつき", "らいがつ"], "noun"],
+ [11, "6日", "むいか", "Tanggal enam", "来月の{target}に久しぶりに国へ帰って、母が作った料理を食べるのが楽しみです。", "Saya menantikan pulang ke negara asal pada tanggal enam bulan depan setelah lama tidak pulang, lalu menikmati masakan ibu.", ["よっか", "ようか", "なのか"], "special"],
+ [12, "作った", "つくった", "Membuat (bentuk lampau)", "来月の6日に久しぶりに国へ帰って、母が{target}料理を食べるのが楽しみです。", "Saya menantikan pulang ke negara asal pada tanggal enam bulan depan setelah lama tidak pulang, lalu menikmati masakan ibu.", ["つかった", "おくった", "むかった"], "verb"],
+ [13, "楽しみ", "たのしみ", "Hal yang dinantikan dengan senang hati", "来月の6日に久しぶりに国へ帰って、母が作った料理を食べるのが{target}です。", "Saya menantikan pulang ke negara asal pada tanggal enam bulan depan setelah lama tidak pulang, lalu menikmati masakan ibu.", ["がくしみ", "たしみ", "がしみ"], "noun"],
+ [14, "会った", "あった", "Bertemu (bentuk lampau)", "きのう{target}友だちのお兄さんは、もう社会に出て、銀行員になっているそうです。", "Katanya kakak laki-laki teman yang saya temui kemarin sudah memasuki dunia kerja dan menjadi pegawai bank.", ["みった", "かいった", "はった"], "verb"],
+ [15, "お兄さん", "おにいさん", "Kakak laki-laki", "きのう会った友だちの{target}は、もう社会に出て、銀行員になっているそうです。", "Katanya kakak laki-laki teman yang saya temui kemarin sudah memasuki dunia kerja dan menjadi pegawai bank.", ["おにさん", "おねさん", "おねえさん"], "noun"],
+ [16, "社会", "しゃかい", "Masyarakat; dunia kerja dalam 社会に出る", "きのう会った友だちのお兄さんは、もう{target}に出て、銀行員になっているそうです。", "Katanya kakak laki-laki teman yang saya temui kemarin sudah memasuki dunia kerja dan menjadi pegawai bank.", ["かいしゃ", "しゃがい", "しゃこう"], "noun"],
+ [17, "銀行員", "ぎんこういん", "Pegawai bank", "きのう会った友だちのお兄さんは、もう社会に出て、{target}になっているそうです。", "Katanya kakak laki-laki teman yang saya temui kemarin sudah memasuki dunia kerja dan menjadi pegawai bank.", ["きんこういん", "きんこいん", "ぎんこいん"], "noun"],
+ [18, "自転車", "じてんしゃ", "Sepeda", "旅館の{target}を借りて、町を見物しに出かけました。", "Saya meminjam sepeda milik penginapan Jepang, lalu pergi melihat-lihat kota.", ["じどうしゃ", "じてんじゃ", "じでんしゃ"], "noun"],
+ [19, "見物", "けんぶつ", "Melihat-lihat tempat; berwisata", "旅館の自転車を借りて、町を{target}しに出かけました。", "Saya meminjam sepeda milik penginapan Jepang, lalu pergi melihat-lihat kota.", ["けんふつ", "げんぶつ", "みもの"], "noun"],
+ [20, "昼間", "ひるま", "Siang hari", "{target}は大学で勉強して、夜は店員として働いています。", "Pada siang hari saya belajar di universitas, dan pada malam hari bekerja sebagai pegawai toko.", ["ひろま", "ちゅうま", "ひるかん"], "noun"]
+]

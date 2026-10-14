@@ -1,0 +1,22 @@
+[
+ [1, "図書館", "としょかん", "Perpustakaan", "{target}で新しい本を借りることができました。", "Saya berhasil meminjam buku baru di perpustakaan.", ["としょか", "としょうか", "ずしょかん"], "noun"],
+ [2, "新しい", "あたらしい", "Baru", "図書館で{target}本を借りることができました。", "Saya berhasil meminjam buku baru di perpustakaan.", ["あし", "しんしい", "あらしい"], "adjective"],
+ [3, "借りる", "かりる", "Meminjam", "図書館で新しい本を{target}ことができました。", "Saya berhasil meminjam buku baru di perpustakaan.", ["とりる", "こりる", "しゃりる"], "verb"],
+ [4, "味", "あじ", "Rasa", "この料理は塩と砂糖としょうゆで{target}をつけます。ガスの火は強いほうがいいです。", "Masakan ini dibumbui dengan garam, gula, dan kecap Jepang. Sebaiknya gunakan api kompor yang besar.", ["み", "あし", "みじ"], "noun"],
+ [5, "火", "ひ", "Api", "この料理は塩と砂糖としょうゆで味をつけます。ガスの{target}は強いほうがいいです。", "Masakan ini dibumbui dengan garam, gula, dan kecap Jepang. Sebaiknya gunakan api kompor yang besar.", ["か", "ほ", "じゅ"], "noun"],
+ [6, "強い", "つよい", "Kuat; besar (api)", "この料理は塩と砂糖としょうゆで味をつけます。ガスの火は{target}ほうがいいです。", "Masakan ini dibumbui dengan garam, gula, dan kecap Jepang. Sebaiknya gunakan api kompor yang besar.", ["ひろい", "ひくい", "よわい"], "adjective"],
+ [7, "中学校", "ちゅうがっこう", "Sekolah menengah pertama (SMP)", "私の{target}には広い運動場やプールがあって、よくスポーツをしました。", "SMP saya memiliki lapangan olahraga yang luas dan kolam renang, sehingga kami sering berolahraga.", ["ちゅうがっこ", "ちゅうかっこ", "なかがっこう"], "noun"],
+ [8, "広い", "ひろい", "Luas", "私の中学校には{target}運動場やプールがあって、よくスポーツをしました。", "SMP saya memiliki lapangan olahraga yang luas dan kolam renang, sehingga kami sering berolahraga.", ["くろい", "しろい", "せまい"], "adjective"],
+ [9, "運動場", "うんどうじょう", "Lapangan olahraga", "私の中学校には広い{target}やプールがあって、よくスポーツをしました。", "SMP saya memiliki lapangan olahraga yang luas dan kolam renang, sehingga kami sering berolahraga.", ["うんとうじょう", "うんどじょう", "うんとじょう"], "noun"],
+ [10, "会話", "かいわ", "Percakapan", "日本語の{target}や発音は大丈夫ですが、漢字がなかなか覚えられません。", "Saya cukup bisa bercakap-cakap dan melafalkan bahasa Jepang, tetapi masih sulit menghafal kanji.", ["かいがわ", "かわ", "あいわ"], "noun"],
+ [11, "発音", "はつおん", "Pelafalan; pengucapan", "日本語の会話や{target}は大丈夫ですが、漢字がなかなか覚えられません。", "Saya cukup bisa bercakap-cakap dan melafalkan bahasa Jepang, tetapi masih sulit menghafal kanji.", ["はつおと", "はつお", "ぱつおん"], "noun"],
+ [12, "漢字", "かんじ", "Kanji; aksara Tionghoa dalam bahasa Jepang", "日本語の会話や発音は大丈夫ですが、{target}がなかなか覚えられません。", "Saya cukup bisa bercakap-cakap dan melafalkan bahasa Jepang, tetapi masih sulit menghafal kanji.", ["はんじ", "ぶんじ", "もじ"], "noun"],
+ [13, "食堂", "しょくどう", "Kantin; ruang makan", "会社の{target}はいつも同じメニューですから、ときどき外のレストランで食事します。", "Karena menu kantin kantor selalu sama, saya kadang-kadang makan di restoran di luar kantor.", ["しょくじ", "しょくど", "しょくとう"], "noun"],
+ [14, "同じ", "おなじ", "Sama", "会社の食堂はいつも{target}メニューですから、ときどき外のレストランで食事します。", "Karena menu kantin kantor selalu sama, saya kadang-kadang makan di restoran di luar kantor.", ["どうじ", "おんじ", "とうじ"], "adjective"],
+ [15, "外", "そと", "Luar", "会社の食堂はいつも同じメニューですから、ときどき{target}のレストランで食事します。", "Karena menu kantin kantor selalu sama, saya kadang-kadang makan di restoran di luar kantor.", ["がい", "うち", "うら"], "noun"],
+ [16, "西洋", "せいよう", "Barat (wilayah atau budaya Barat)", "{target}の人を見ると、フランスにいる両親を思い出して、寂しい気持ちになります。", "Saat melihat orang Barat, saya teringat orang tua yang berada di Prancis dan merasa kesepian.", ["にしよう", "さいよう", "とうよう"], "noun"],
+ [17, "思い出して", "おもいだして", "Teringat; mengingat kembali", "西洋の人を見ると、フランスにいる両親を{target}、寂しい気持ちになります。", "Saat melihat orang Barat, saya teringat orang tua yang berada di Prancis dan merasa kesepian.", ["おいだして", "みいだして", "おもいでして"], "verb"],
+ [18, "気持ち", "きもち", "Perasaan", "西洋の人を見ると、フランスにいる両親を思い出して、寂しい{target}になります。", "Saat melihat orang Barat, saya teringat orang tua yang berada di Prancis dan merasa kesepian.", ["きまち", "きおち", "きみち"], "noun"],
+ [19, "仕方", "しかた", "Cara melakukan sesuatu", "最初は練習の{target}がわからなかったので、何度も先輩に聞きました。", "Awalnya saya tidak tahu cara berlatih, jadi saya berkali-kali bertanya kepada senior.", ["いかた", "しほう", "やりかた"], "noun"],
+ [20, "何度", "なんど", "Berapa kali (何度も: berkali-kali)", "最初は練習の仕方がわからなかったので、{target}も先輩に聞きました。", "Awalnya saya tidak tahu cara berlatih, jadi saya berkali-kali bertanya kepada senior.", ["なんと", "など", "なに"], "special"]
+]

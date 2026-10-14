@@ -1,5 +1,5 @@
-import { KATAKANA_WRITING } from './writing-data.js?v=20261014-n5-pdf';
-import { KATAKANA_EXPANSION } from './katakana-expansion-data.js?v=20261014-n5-pdf';
+import { KATAKANA_WRITING } from './writing-data.js?v=20261015-n4-pdf';
+import { KATAKANA_EXPANSION } from './katakana-expansion-data.js?v=20261015-n4-pdf';
 
 // English meaning cues, not a claim that every loanword came from English.
 // Existing readings, levels, contexts and spelling distractors are retained.

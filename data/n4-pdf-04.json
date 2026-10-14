@@ -1,0 +1,22 @@
+[
+ [1, "今夜", "こんや", "Malam ini", "{target}は月が明るくて、空に星がいっぱい出ている、きれいな夜です。", "Malam ini indah: bulan bersinar terang dan langit dipenuhi bintang.", ["こや", "いまや", "きょうや"], "noun"],
+ [2, "月", "つき", "Bulan (benda langit)", "今夜は{target}が明るくて、空に星がいっぱい出ている、きれいな夜です。", "Malam ini indah: bulan bersinar terang dan langit dipenuhi bintang.", ["げつ", "づき", "がつ"], "noun"],
+ [3, "明るくて", "あかるくて", "Terang (bentuk penghubung)", "今夜は月が{target}、空に星がいっぱい出ている、きれいな夜です。", "Malam ini indah: bulan bersinar terang dan langit dipenuhi bintang.", ["あるくて", "くるくて", "かるくて"], "adjective"],
+ [4, "空", "そら", "Langit", "今夜は月が明るくて、{target}に星がいっぱい出ている、きれいな夜です。", "Malam ini indah: bulan bersinar terang dan langit dipenuhi bintang.", ["くう", "おら", "すう"], "noun"],
+ [5, "火曜日", "かようび", "Hari Selasa", "山田さんの{target}の洋服は、確か茶色の上着でした。", "Kalau tidak salah, pakaian Yamada pada hari Selasa adalah jaket cokelat.", ["かようひ", "がようび", "がようひ"], "noun"],
+ [6, "洋服", "ようふく", "Pakaian gaya Barat", "山田さんの火曜日の{target}は、確か茶色の上着でした。", "Kalau tidak salah, pakaian Yamada pada hari Selasa adalah jaket cokelat.", ["おうふく", "わふく", "とうふく"], "noun"],
+ [7, "茶色", "ちゃいろ", "Warna cokelat", "山田さんの火曜日の洋服は、確か{target}の上着でした。", "Kalau tidak salah, pakaian Yamada pada hari Selasa adalah jaket cokelat.", ["きいろ", "ちょいろ", "ちいろ"], "noun"],
+ [8, "上着", "うわぎ", "Jaket; pakaian luar bagian atas", "山田さんの火曜日の洋服は、確か茶色の{target}でした。", "Kalau tidak salah, pakaian Yamada pada hari Selasa adalah jaket cokelat.", ["かみぎ", "うえぎ", "うえき"], "noun"],
+ [9, "昼", "ひる", "Siang", "{target}から始めたのに、夕方になっても仕事は終わりませんでした。", "Walaupun sudah dimulai sejak siang, pekerjaan itu belum selesai hingga sore.", ["いる", "きる", "よる"], "noun"],
+ [10, "始めた", "はじめた", "Memulai (bentuk lampau)", "昼から{target}のに、夕方になっても仕事は終わりませんでした。", "Walaupun sudah dimulai sejak siang, pekerjaan itu belum selesai hingga sore.", ["しめた", "はしめた", "じめた"], "verb"],
+ [11, "夕方", "ゆうがた", "Sore", "昼から始めたのに、{target}になっても仕事は終わりませんでした。", "Walaupun sudah dimulai sejak siang, pekerjaan itu belum selesai hingga sore.", ["たがた", "ゆがた", "ゆかた"], "noun"],
+ [12, "仕事", "しごと", "Pekerjaan", "昼から始めたのに、夕方になっても{target}は終わりませんでした。", "Walaupun sudah dimulai sejak siang, pekerjaan itu belum selesai hingga sore.", ["じごと", "しこと", "みこと"], "noun"],
+ [13, "終わり", "おわり", "Selesai (bagian dari 終わりませんでした)", "昼から始めたのに、夕方になっても仕事は{target}ませんでした。", "Walaupun sudah dimulai sejak siang, pekerjaan itu belum selesai hingga sore.", ["とわり", "しわり", "かわり"], "verb"],
+ [14, "映画館", "えいがかん", "Bioskop", "{target}の席が全然空いていなかったので、後ろで立って見ました。", "Karena tidak ada kursi kosong di bioskop, saya menonton sambil berdiri di belakang.", ["えがかん", "えいかかん", "えかかん"], "noun"],
+ [15, "空いて", "あいて", "Kosong; tersedia (kursi)", "映画館の席が全然{target}いなかったので、後ろで立って見ました。", "Karena tidak ada kursi kosong di bioskop, saya menonton sambil berdiri di belakang.", ["くいて", "さいて", "おいて"], "verb"],
+ [16, "後ろ", "うしろ", "Belakang", "映画館の席が全然空いていなかったので、{target}で立って見ました。", "Karena tidak ada kursi kosong di bioskop, saya menonton sambil berdiri di belakang.", ["あとろ", "ところ", "ごろ"], "noun"],
+ [17, "立って", "たって", "Berdiri", "映画館の席が全然空いていなかったので、後ろで{target}見ました。", "Karena tidak ada kursi kosong di bioskop, saya menonton sambil berdiri di belakang.", ["りって", "とって", "てって"], "verb"],
+ [18, "お正月", "おしょうがつ", "Tahun Baru", "もうすぐ{target}です。お母さんとお姉さんは今から特別な料理の用意をしています。", "Sebentar lagi Tahun Baru. Ibu dan kakak perempuan sudah mulai menyiapkan hidangan istimewa.", ["おしょうつき", "おしょうづき", "おしょがつ"], "noun"],
+ [19, "お姉さん", "おねえさん", "Kakak perempuan", "もうすぐお正月です。お母さんと{target}は今から特別な料理の用意をしています。", "Sebentar lagi Tahun Baru. Ibu dan kakak perempuan sudah mulai menyiapkan hidangan istimewa.", ["おにいさん", "おにさん", "おねさん"], "noun"],
+ [20, "特別な", "とくべつな", "Istimewa; khusus", "もうすぐお正月です。お母さんとお姉さんは今から{target}料理の用意をしています。", "Sebentar lagi Tahun Baru. Ibu dan kakak perempuan sudah mulai menyiapkan hidangan istimewa.", ["とぐべつな", "とくへつな", "どくべつな"], "adjective"]
+]

@@ -649,6 +649,60 @@ node scripts/build_reading_choices.mjs
 npm test
 ```
 
+## Adaptasi PDF N4 pengguna (15 Oktober 2026)
+
+Ditambahkan **200 adaptasi soal** dari `N4_1.pdf`–`N4_10.pdf`, masing-masing
+20 soal. Seluruh 50 halaman diperiksa secara visual, termasuk garis bawah dan
+pilihan jawabannya. Bank membaca JLPT sekarang **863 soal**: N5 388, N4 273,
+N3 75, N2 65, N1 62. Semua soal lama tetap tersedia dengan identitas riwayat
+yang sama.
+
+Data editorial ada di `data/n4-pdf-01.json`–`data/n4-pdf-10.json` dan dibangun
+menjadi `n4-reading-data.js`. `data/n4-pdf-source.json` mencatat SHA-256 tiap
+PDF, jumlah halaman, nomor soal, cakupan, dan pembetulan. Berkas PDF asli tidak
+diunggah. Hak atas materi sumber tetap pada pemiliknya; penambahan ini tidak
+mengubah lisensi materi tersebut menjadi lisensi kamus EDRDG.
+
+Level latihan mengikuti kumpulan PDF N4, dengan kosakata kumulatif hingga N4
+dan Minna no Nihongo I–II (bab 1–50). Karena itu, beberapa kata dasar N5 juga
+muncul dalam konteks latihan N4. Cakupan ditinjau secara editorial dan dibantu
+pemeriksaan bentuk dasar terhadap snapshot OpenJLPT serta workbook Minna
+pengguna. Nama orang/tempat, variasi ejaan seperti 入り口/入口, dan gabungan
+dasar seperti 使い方 tetap dipakai. Ini pengelompokan belajar, bukan daftar
+kosakata resmi JLPT.
+
+Penyesuaian penting:
+
+- Soal menulis pada PDF 5 nomor 18–20, PDF 6 nomor 20, dan PDF 9 nomor 20
+  diubah menjadi soal membaca dengan pilihan hiragana.
+- Garis bawah yang hilang, ganda, atau tertukar dibetulkan. Misalnya, PDF 3
+  nomor 1–4 menargetkan 来週, 水曜日, 作文, dan 出して secara terpisah.
+- Pilihan yang tidak memiliki jawaban benar atau tertukar dibetulkan, termasuk
+  会社, 電車/止まり, 白, 習う, 社会, serta 動き方. 青 dibaca あお sesuai
+  bentuk kata bendanya; 明るくて memakai bacaan lengkap あかるくて.
+- Salah ketik kalimat diperbaiki, seperti 死んだ野 → 死んだので,
+  年前中 → 午前中, dan 着いた言う → 着いたという. PDF 2 nomor 4 memakai
+  着きました (tiba) sesuai konteks perjalanan, menggantikan 書きました.
+- PDF 2 nomor 11 memakai 試合 dan PDF 9 nomor 19 memakai 起きて agar target
+  tetap dalam cakupan kosakata. Beberapa kata pendukung juga disederhanakan.
+- Arti kata dan terjemahan Indonesia ditambahkan sesuai konteks. Kalimat dapat
+  memuat beberapa kanji, tetapi hanya satu target yang digarisbawahi.
+
+Pilihan membaca memakai generator JMdict/KANJIDIC2 yang sama. Bacaan kata
+alternatif yang sah dikeluarkan dari pengecoh; sekarang **536 soal** memiliki
+pengecoh on/kun, termasuk **197 soal N4**. Pilihan dalam satu soal tetap unik.
+Pengacakan memprioritaskan kata berbeda dan soal yang belum tampil; riwayat
+setiap konteks dipertahankan. Arti tetap muncul setelah benar, salah, atau
+waktu habis.
+
+Bangun ulang dari data yang telah disimpan, tanpa jaringan:
+
+```sh
+node scripts/build_n4_reading.mjs
+node scripts/build_reading_choices.mjs
+npm test
+```
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau

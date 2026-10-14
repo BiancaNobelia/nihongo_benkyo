@@ -1,4 +1,4 @@
-import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261014-n5-pdf';
+import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261015-n4-pdf';
 
 export function similarityQuizCallout(id) {
   const count=quizTopicCount(id);

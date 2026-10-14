@@ -1,0 +1,22 @@
+[
+ [1, "来週", "らいしゅう", "Minggu depan", "{target}の水曜日までに作文を書いて出してください。", "Tolong tulis dan kumpulkan karangan paling lambat hari Rabu minggu depan.", ["せんしゅう", "こんしゅう", "きしゅう"], "noun"],
+ [2, "水曜日", "すいようび", "Hari Rabu", "来週の{target}までに作文を書いて出してください。", "Tolong tulis dan kumpulkan karangan paling lambat hari Rabu minggu depan.", ["すようび", "みずようび", "すいよび"], "noun"],
+ [3, "作文", "さくぶん", "Karangan; tulisan", "来週の水曜日までに{target}を書いて出してください。", "Tolong tulis dan kumpulkan karangan paling lambat hari Rabu minggu depan.", ["そくぶん", "きぶん", "ろんぶん"], "noun"],
+ [4, "出して", "だして", "Menyerahkan; mengumpulkan", "来週の水曜日までに作文を書いて{target}ください。", "Tolong tulis dan kumpulkan karangan paling lambat hari Rabu minggu depan.", ["でして", "でて", "かして"], "verb"],
+ [5, "英語", "えいご", "Bahasa Inggris", "{target}は大丈夫ですが、日本語で手紙を書くのはまだ下手です。", "Saya cukup bisa berbahasa Inggris, tetapi masih kurang mahir menulis surat dalam bahasa Jepang.", ["ええご", "えいごう", "えいこう"], "noun"],
+ [6, "手紙", "てがみ", "Surat", "英語は大丈夫ですが、日本語で{target}を書くのはまだ下手です。", "Saya cukup bisa berbahasa Inggris, tetapi masih kurang mahir menulis surat dalam bahasa Jepang.", ["てかみ", "しゅがみ", "でがみ"], "noun"],
+ [7, "書く", "かく", "Menulis", "英語は大丈夫ですが、日本語で手紙を{target}のはまだ下手です。", "Saya cukup bisa berbahasa Inggris, tetapi masih kurang mahir menulis surat dalam bahasa Jepang.", ["おく", "はく", "がく"], "verb"],
+ [8, "下手", "へた", "Kurang mahir; tidak pandai", "英語は大丈夫ですが、日本語で手紙を書くのはまだ{target}です。", "Saya cukup bisa berbahasa Inggris, tetapi masih kurang mahir menulis surat dalam bahasa Jepang.", ["したて", "したで", "べた"], "adjective"],
+ [9, "日", "ひ", "Hari", "休みの{target}は音楽を聞いたり、買い物に行ったり、部屋を片づけたりします。", "Pada hari libur, saya mendengarkan musik, berbelanja, merapikan kamar, dan melakukan kegiatan lainnya.", ["にち", "び", "とき"], "noun"],
+ [10, "音楽", "おんがく", "Musik", "休みの日は{target}を聞いたり、買い物に行ったり、部屋を片づけたりします。", "Pada hari libur, saya mendengarkan musik, berbelanja, merapikan kamar, dan melakukan kegiatan lainnya.", ["おとかく", "おんかく", "おとがく"], "noun"],
+ [11, "聞いたり", "きいたり", "Mendengarkan (salah satu kegiatan)", "休みの日は音楽を{target}、買い物に行ったり、部屋を片づけたりします。", "Pada hari libur, saya mendengarkan musik, berbelanja, merapikan kamar, dan melakukan kegiatan lainnya.", ["まいたり", "かいたり", "きたり"], "verb"],
+ [12, "買い物", "かいもの", "Belanja; barang belanjaan", "休みの日は音楽を聞いたり、{target}に行ったり、部屋を片づけたりします。", "Pada hari libur, saya mendengarkan musik, berbelanja, merapikan kamar, dan melakukan kegiatan lainnya.", ["がいもの", "かいぶつ", "かいぼく"], "noun"],
+ [13, "午後", "ごご", "Siang hingga malam (PM)", "{target}から子どもが4人来るので、赤や青の紙を動物の形に切って、壁にはりました。", "Karena empat anak akan datang siang nanti, saya menggunting kertas merah dan biru menjadi bentuk binatang, lalu menempelkannya di dinding.", ["ごぜん", "ごうご", "ごうぜん"], "noun"],
+ [14, "青", "あお", "Warna biru", "午後から子どもが4人来るので、赤や{target}の紙を動物の形に切って、壁にはりました。", "Karena empat anak akan datang siang nanti, saya menggunting kertas merah dan biru menjadi bentuk binatang, lalu menempelkannya di dinding.", ["あか", "あおい", "みどり"], "noun"],
+ [15, "紙", "かみ", "Kertas", "午後から子どもが4人来るので、赤や青の{target}を動物の形に切って、壁にはりました。", "Karena empat anak akan datang siang nanti, saya menggunting kertas merah dan biru menjadi bentuk binatang, lalu menempelkannya di dinding.", ["がみ", "ごみ", "こみ"], "noun"],
+ [16, "切って", "きって", "Memotong; menggunting", "午後から子どもが4人来るので、赤や青の紙を動物の形に{target}、壁にはりました。", "Karena empat anak akan datang siang nanti, saya menggunting kertas merah dan biru menjadi bentuk binatang, lalu menempelkannya di dinding.", ["とって", "はって", "やって"], "verb"],
+ [17, "黒", "くろ", "Warna hitam", "このシャツは{target}と白以外にもいろいろな色がありますから、ゆっくり選んでください。", "Kemeja ini tersedia dalam berbagai warna selain hitam dan putih, jadi silakan memilih tanpa terburu-buru.", ["ころ", "こく", "ぐろ"], "noun"],
+ [18, "白", "しろ", "Warna putih", "このシャツは黒と{target}以外にもいろいろな色がありますから、ゆっくり選んでください。", "Kemeja ini tersedia dalam berbagai warna selain hitam dan putih, jadi silakan memilih tanpa terburu-buru.", ["しら", "しる", "じろ"], "noun"],
+ [19, "以外", "いがい", "Selain; di luar", "このシャツは黒と白{target}にもいろいろな色がありますから、ゆっくり選んでください。", "Kemeja ini tersedia dalam berbagai warna selain hitam dan putih, jadi silakan memilih tanpa terburu-buru.", ["いかい", "いそと", "いじょう"], "noun"],
+ [20, "色", "いろ", "Warna", "このシャツは黒と白以外にもいろいろな{target}がありますから、ゆっくり選んでください。", "Kemeja ini tersedia dalam berbagai warna selain hitam dan putih, jadi silakan memilih tanpa terburu-buru.", ["きろ", "じろ", "しろ"], "noun"]
+]

@@ -51,7 +51,7 @@ test('200 reviewed vocabulary entries retain source readings, levels, and gramma
 
 test('all previous questions remain and ordinary vocabulary returns to its source level',()=>{
   const pool=getQuizPool('jlpt-reading');
-  assert.equal(pool.length,663);
+  assert.equal(pool.length,863);
   for(const q of [...JLPT_READINGS,...SIMILAR_READING,...SPECIAL_READINGS]){
     const current=pool.find(p=>practiceQuestionKey(p)===practiceQuestionKey(q));
     assert.ok(current,`missing old question: ${q.word}`);

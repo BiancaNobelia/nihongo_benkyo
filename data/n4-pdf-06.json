@@ -1,0 +1,22 @@
+[
+ [1, "注意", "ちゅうい", "Perhatian; kehati-hatian", "{target}するというのは、気をつけるという意味です。", "Memberi perhatian berarti berhati-hati.", ["ちょうい", "ちょい", "ちゅい"], "noun"],
+ [2, "気", "き", "Perhatian (dalam 気をつける: berhati-hati)", "注意するというのは、{target}をつけるという意味です。", "Memberi perhatian berarti berhati-hati.", ["け", "い", "て"], "noun"],
+ [3, "意味", "いみ", "Arti; makna", "注意するというのは、気をつけるという{target}です。", "Memberi perhatian berarti berhati-hati.", ["いじ", "いぎ", "いけん"], "noun"],
+ [4, "十分", "じゅうぶん", "Sepenuhnya; dengan cukup saksama", "道を渡るときは{target}注意してください。", "Berhati-hatilah dengan sungguh-sungguh saat menyeberang jalan.", ["じゅうぶ", "ちゅうぶ", "ちゅうぶん"], "adverb"],
+ [5, "2か月", "にかげつ", "Dua bulan (jangka waktu)", "{target}以内に研究を終わらせなければいけないので、急いでやっています。", "Karena penelitian harus diselesaikan dalam waktu paling lama dua bulan, saya mengerjakannya dengan segera.", ["にかつき", "にかづき", "にかがつ"], "special"],
+ [6, "以内", "いない", "Dalam batas; paling lama", "2か月{target}に研究を終わらせなければいけないので、急いでやっています。", "Karena penelitian harus diselesaikan dalam waktu paling lama dua bulan, saya mengerjakannya dengan segera.", ["いがい", "いうち", "いじょう"], "noun"],
+ [7, "研究", "けんきゅう", "Penelitian", "2か月以内に{target}を終わらせなければいけないので、急いでやっています。", "Karena penelitian harus diselesaikan dalam waktu paling lama dua bulan, saya mengerjakannya dengan segera.", ["けんきゅ", "きんきゅう", "きんきゅ"], "noun"],
+ [8, "急いで", "いそいで", "Bergegas; dengan segera", "2か月以内に研究を終わらせなければいけないので、{target}やっています。", "Karena penelitian harus diselesaikan dalam waktu paling lama dua bulan, saya mengerjakannya dengan segera.", ["いいで", "きそいで", "きゅうで"], "verb"],
+ [9, "体", "からだ", "Tubuh; badan", "彼は{target}の具合が悪いので、病院に通っているそうです。", "Katanya dia rutin berobat ke rumah sakit karena kondisi tubuhnya kurang baik.", ["たい", "からた", "からて"], "noun"],
+ [10, "病院", "びょういん", "Rumah sakit", "彼は体の具合が悪いので、{target}に通っているそうです。", "Katanya dia rutin berobat ke rumah sakit karena kondisi tubuhnya kurang baik.", ["びょいん", "ぴょういん", "びういん"], "noun"],
+ [11, "通って", "かよって", "Pergi secara rutin; rutin berobat", "彼は体の具合が悪いので、病院に{target}いるそうです。", "Katanya dia rutin berobat ke rumah sakit karena kondisi tubuhnya kurang baik.", ["とおって", "とうって", "とおおって"], "verb"],
+ [12, "台風", "たいふう", "Topan", "大きい{target}が来たので、食料品が足りなくなったり、水道から黄色い水が出たりしました。", "Akibat datangnya topan besar, persediaan bahan makanan berkurang dan air keran menjadi kekuningan.", ["だいぶ", "たいふん", "だいふう"], "noun"],
+ [13, "食料品", "しょくりょうひん", "Bahan makanan; kebutuhan pangan", "大きい台風が来たので、{target}が足りなくなったり、水道から黄色い水が出たりしました。", "Akibat datangnya topan besar, persediaan bahan makanan berkurang dan air keran menjadi kekuningan.", ["しょりょうひん", "たべりょうひん", "しょくりょひん"], "noun"],
+ [14, "水道", "すいどう", "Saluran air; air ledeng", "大きい台風が来たので、食料品が足りなくなったり、{target}から黄色い水が出たりしました。", "Akibat datangnya topan besar, persediaan bahan makanan berkurang dan air keran menjadi kekuningan.", ["すいとう", "すいど", "みずどう"], "noun"],
+ [15, "水", "みず", "Air", "大きい台風が来たので、食料品が足りなくなったり、水道から黄色い{target}が出たりしました。", "Akibat datangnya topan besar, persediaan bahan makanan berkurang dan air keran menjadi kekuningan.", ["みじ", "みじゅ", "みづ"], "noun"],
+ [16, "時代", "じだい", "Masa; zaman", "大学{target}は特に地理と文学が好きで、小説を書いてみたりしました。", "Saat kuliah, saya terutama menyukai geografi dan sastra, dan pernah mencoba menulis novel.", ["ときょ", "とだい", "しだい"], "noun"],
+ [17, "特に", "とくに", "Terutama; khususnya", "大学時代は{target}地理と文学が好きで、小説を書いてみたりしました。", "Saat kuliah, saya terutama menyukai geografi dan sastra, dan pernah mencoba menulis novel.", ["とうに", "まくに", "もくに"], "adverb"],
+ [18, "地理", "ちり", "Geografi; ilmu bumi", "大学時代は特に{target}と文学が好きで、小説を書いてみたりしました。", "Saat kuliah, saya terutama menyukai geografi dan sastra, dan pernah mencoba menulis novel.", ["とり", "ちりょう", "ちきゅう"], "noun"],
+ [19, "文学", "ぶんがく", "Sastra", "大学時代は特に地理と{target}が好きで、小説を書いてみたりしました。", "Saat kuliah, saya terutama menyukai geografi dan sastra, dan pernah mencoba menulis novel.", ["もじ", "もんがく", "ふんがく"], "noun"],
+ [20, "運転手", "うんてんしゅ", "Sopir; pengemudi", "{target}さんは道をよく知っていましたが、通りが混んでいたので、時間に間に合いませんでした。", "Sopirnya mengenal jalan dengan baik, tetapi kami tidak tiba tepat waktu karena jalanan macet.", ["うんてんしゅう", "うんでんしゅ", "うんてんじゅ"], "noun"]
+]

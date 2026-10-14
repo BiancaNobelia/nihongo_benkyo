@@ -30,13 +30,16 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
   Kanji → Hiragana dan katakana mengikuti level kosakata sumber. Penulisan kanji
   dan contoh kata katalog mengikuti kanji tersulit. Arti kata/kanji dan terjemahan kalimat selalu
   muncul setelah jawaban benar, salah, atau waktu habis, serta pada ulasan hasil.
-- Kanji → Hiragana · JLPT (kalimat): seluruh 663 soal N5–N1 menampilkan konteks
+- Kanji → Hiragana · JLPT (kalimat): seluruh 863 soal N5–N1 menampilkan konteks
   kalimat dengan satu target bergaris bawah dan empat pilihan hiragana.
-  Setelah menjawab, tampil bacaan, arti kata, dan terjemahan kalimat. Sebanyak
-  Bank dasar 464 soal kini dilengkapi 199 adaptasi dari sepuluh PDF N5 pengguna.
+  Setelah menjawab, tampil bacaan, arti kata, dan terjemahan kalimat.
+  Bank dasar 464 soal dilengkapi 199 adaptasi PDF N5 dan 200 adaptasi PDF N4 pengguna.
   N5 memakai kosakata dasar N5 / Minna no Nihongo I (bab 1–25); 12 konteks lama
-  disederhanakan. Kalimat boleh berisi beberapa kanji, hanya target digarisbawahi.
-  Pada 398 soal, pilihan juga memakai onyomi/kunyomi lain dari kanji yang sama.
+  disederhanakan. N4 memakai kosakata hingga N4 / Minna no Nihongo I–II
+  (bab 1–50), termasuk kosakata dasar N5 dalam latihan N4. Salah ketik dan
+  pilihan yang tertukar pada PDF dibetulkan; soal menulis diadaptasi ke membaca.
+  Kalimat boleh berisi beberapa kanji, hanya target digarisbawahi.
+  Pada 536 soal, pilihan juga memakai onyomi/kunyomi lain dari kanji yang sama.
   Bacaan kata alternatif yang sah disaring menggunakan JMdict/KANJIDIC2;
   pembahasan menjelaskan bacaan kanji yang digunakan pada kata soal.
   Riwayat soal yang sudah tampil disimpan di browser: soal yang paling jarang
@@ -51,7 +54,7 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
   Buka melalui `#kuis/reading`. Kedua mode mempertahankan ID riwayat lama.
 - Ragam kosakata: kata benda, kata kerja, kata sifat, dan kata keterangan tersedia
   di setiap level. Seluruh soal lama tetap ada; 200 entri baru yang ditinjau
-  menambah 184 soal unik setelah duplikasi digabung. Setelah adaptasi PDF: N5 388, N4 73, N3 75,
+  menambah 184 soal unik setelah duplikasi digabung. Setelah adaptasi PDF: N5 388, N4 273, N3 75,
   N2 65, N1 62. Komposisi bank dan jenis soal ditampilkan di kuis.
 - Sesi membaca memilih kelas kata secara seimbang di antara soal yang sama
   jarangnya tampil. Hitungan/tanggal maksimal 20% selama kosakata pada putaran
