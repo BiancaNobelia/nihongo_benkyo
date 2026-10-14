@@ -1,6 +1,6 @@
-import { shuffle } from './core.js?v=20261014-reading-rotation';
-import { READING_CHOICES } from './reading-choice-data.js?v=20261014-reading-rotation';
-import { readingQuestionKey } from './reading-history.js?v=20261014-reading-rotation';
+import { shuffle } from './core.js?v=20261014-sentence-modes';
+import { READING_CHOICES } from './reading-choice-data.js?v=20261014-sentence-modes';
+import { readingQuestionKey } from './reading-history.js?v=20261014-sentence-modes';
 
 const choicesByQuestion=new Map(READING_CHOICES.map(q=>[q.key,q]));
 

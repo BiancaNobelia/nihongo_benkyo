@@ -1,12 +1,13 @@
-import { selectReadingQuestions } from './reading-balance.js?v=20261014-reading-rotation';
-import { readingOptions } from './reading-options.js?v=20261014-reading-rotation';
+import { selectReadingQuestions } from './reading-balance.js?v=20261014-sentence-modes';
+import { readingOptions } from './reading-options.js?v=20261014-sentence-modes';
+import { withReadingSentence } from './reading-sentences.js?v=20261014-sentence-modes';
 
 export function filterReadingQuestions(bank, level = 'all') {
   return bank.filter(q => level === 'all' || q.level === level);
 }
 
 export function createReadingQuiz(pool, count, random = Math.random, history = {}) {
-  return selectReadingQuestions(pool,count,random,history).map(q => ({
+  return selectReadingQuestions(pool,count,random,history).map(withReadingSentence).map(q => ({
     id:q.id, contextKey:q.contextKey,
     readingCategory:q.readingCategory,
     prompt: q.word,

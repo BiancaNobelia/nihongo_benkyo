@@ -520,6 +520,32 @@ Soal yang tidak cocok tetap memakai pengecoh bunyi, tanpa memaksakan pemisahan.
 Data turunan KANJIDIC2/JMdict ini memakai atribusi dan CC BY-SA 4.0 di atas.
 Bangun ulang dengan `node scripts/build_reading_choices.mjs`, lalu `npm test`.
 
+### Soal JLPT dalam kalimat dan mode per kata — 14 Oktober 2026
+
+PDF pengguna `N5_1.pdf` (Kanji123, “N5 - Kanji Test - Test 1”) dipakai sebagai
+acuan tampilan: kalimat, satu kata target bergaris bawah, dan empat pilihan
+bacaan. Tidak ada soal atau halaman PDF yang disalin maupun diunggah.
+
+`reading-sentences.js` menambahkan 282 kalimat latihan orisinal beserta
+terjemahan Indonesia, ditulis dan ditinjau secara editorial oleh AI. Sebanyak
+182 kalimat yang sudah ada tetap dipertahankan. Seluruh 464 soal Kanji → Hiragana
+JLPT kini memiliki satu kalimat dengan tepat satu penanda `{target}`. Teks di
+luar target memakai kana agar pengguna dapat berfokus pada bacaan yang diuji.
+Label N5–N1 mengikuti kosakata target yang sudah ada, bukan klaim bahwa seluruh
+tata bahasa kalimat telah diklasifikasikan resmi oleh JLPT.
+
+Arti kata, terjemahan kalimat, dan penjelasan muncul setelah jawaban benar,
+salah, atau waktu habis, serta saat meninjau hasil. Bacaan dan pengecoh tidak
+berubah. Identitas soal tetap memakai kata dan konteks semula sehingga riwayat
+kemunculan dari pembaruan sebelumnya terus berlaku, termasuk dua konteks `1日`.
+
+Mode `reading` diberi label “Kata/Kanji → Hiragana · Per kata”. Mode ini tetap
+memakai contoh kosakata katalog tanpa menampilkan kalimat pada soal maupun
+pembahasan; arti kata dan bacaannya tetap ditampilkan. `quiz-prompt.js`
+menetapkan pemisahan tampilan yang sama untuk pratinjau dan soal sebenarnya.
+Nama mode berubah untuk memperjelas pilihan, sementara ID penyimpanan riwayat
+tetap sama.
+
 ### Membangun katalog
 
 Website memakai snapshot lokal dan tidak memanggil layanan kamus atau

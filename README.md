@@ -25,8 +25,11 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
   Kanji → Hiragana dan katakana mengikuti level kosakata sumber. Penulisan kanji
   dan contoh kata katalog mengikuti kanji tersulit. Arti kata/kanji dan terjemahan kalimat selalu
   muncul setelah jawaban benar, salah, atau waktu habis, serta pada ulasan hasil.
-- Bacaan ala JLPT: 464 soal N5–N1 dengan pilihan hiragana
-  yang mirip, arti Indonesia, dan penjelasan bunyi panjang, dakuten, serta kana kecil.
+- Kanji → Hiragana · JLPT (kalimat): seluruh 464 soal N5–N1 menampilkan satu
+  kalimat dengan satu kata target bergaris bawah dan empat pilihan hiragana.
+  Setelah menjawab, tampil bacaan, arti kata, dan terjemahan kalimat. Sebanyak
+  282 kalimat orisinal melengkapi 182 soal berkonteks yang sudah ada.
+  Format mengikuti contoh PDF pengguna; soal PDF tidak disalin.
   Pada 290 soal, pilihan juga memakai onyomi/kunyomi lain dari kanji yang sama.
   Bacaan kata alternatif yang sah disaring menggunakan JMdict/KANJIDIC2;
   pembahasan menjelaskan bacaan kanji yang digunakan pada kata soal.
@@ -36,6 +39,10 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
   dibatalkan hanya mencatat soal yang benar-benar sudah dibuka. Riwayat ini
   dimulai sejak pembaruan, karena skor lama tidak menyimpan identitas soal.
   Buka langsung melalui `#kuis/jlpt`. Ini latihan buatan, bukan soal resmi ujian.
+- Kata/Kanji → Hiragana · Per kata: contoh kosakata katalog tampil tanpa
+  kalimat, disertai bacaan dan arti Indonesia setelah menjawab. Mode ini tetap
+  memakai contoh kata dari 2.378 kartu katalog dan level kanji penyusunnya.
+  Buka melalui `#kuis/reading`. Kedua mode mempertahankan ID riwayat lama.
 - Ragam kosakata: kata benda, kata kerja, kata sifat, dan kata keterangan tersedia
   di setiap level. Seluruh soal lama tetap ada; 200 entri baru yang ditinjau
   menambah 184 soal unik setelah duplikasi digabung. N5 189, N4 73, N3 75,

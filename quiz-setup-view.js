@@ -3,12 +3,12 @@ export function quizSetupPanel(icon) {
     <div class="setup-title"><span class="stat-icon">${icon('sparkles')}</span><div><h2>Racik sesi belajarmu</h2><p>Pilih level, lalu atur jumlah soal dan ritme belajarmu.</p></div></div>
     <div class="setup-grid">
       <div class="field"><label for="quiz-mode">Yang ingin dilatih</label><select id="quiz-mode">
-        <option value="jlpt-reading">Kanji → Hiragana · Bacaan ala JLPT</option>
+        <option value="jlpt-reading">Kanji → Hiragana · JLPT (kalimat)</option>
+        <option value="reading">Kata/Kanji → Hiragana · Per kata</option>
         <option value="hiragana-kanji">Hiragana → Kanji · Bentuk mirip</option>
         <option value="english-katakana">English → Katakana · Bentuk mirip</option>
         <option value="meaning">Kanji → Arti Indonesia</option>
         <option value="kanji">Arti Indonesia → Kanji</option>
-        <option value="reading">Contoh kata → Hiragana</option>
       </select></div>
       <div class="field"><label for="quiz-level">Level latihan</label><select id="quiz-level" aria-describedby="quiz-level-note"></select></div>
       <div class="field"><label for="quiz-count">Jumlah soal</label><select id="quiz-count">

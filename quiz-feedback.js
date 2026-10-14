@@ -1,5 +1,5 @@
-import { componentDetailsMarkup } from './kanji-components.js?v=20261014-reading-rotation';
-import { readingAlternativesMarkup } from './reading-options.js?v=20261014-reading-rotation';
+import { componentDetailsMarkup } from './kanji-components.js?v=20261014-sentence-modes';
+import { readingAlternativesMarkup } from './reading-options.js?v=20261014-sentence-modes';
 
 // This block is shared by correct answers, incorrect answers, timeouts and review.
 // Meaning must never depend on whether an optional editorial explanation exists.
@@ -11,8 +11,8 @@ export function answerDetails(question, mode) {
     english:mode==='english-katakana' ? question.prompt : '',
     reading:question.reading || ((mode==='jlpt-reading' || mode==='reading') ? question.answer : isWriting && mode!=='english-katakana' ? question.prompt : ''),
     meaning:question.meaning || (mode==='reading' ? question.kanji?.example?.meaning : question.kanji?.meaning) || '',
-    sentence:question.sentence ? question.sentence.replace('{target}',word) : '',
-    sentenceMeaning:question.sentenceMeaning || '',
+    sentence:mode!=='reading' && question.sentence ? question.sentence.replace('{target}',word) : '',
+    sentenceMeaning:mode==='reading' ? '' : question.sentenceMeaning || '',
     explanation:question.explanation || '',
     meaningLabel:mode==='meaning' || mode==='kanji' ? 'Arti kanji' : 'Arti kata',
   };

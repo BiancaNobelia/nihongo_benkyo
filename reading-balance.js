@@ -1,6 +1,7 @@
-import { shuffle } from './core.js?v=20261014-reading-rotation';
-import { READING_METADATA } from './reading-metadata.js?v=20261014-reading-rotation';
-import { readingQuestionKey } from './reading-history.js?v=20261014-reading-rotation';
+import { shuffle } from './core.js?v=20261014-sentence-modes';
+import { READING_METADATA } from './reading-metadata.js?v=20261014-sentence-modes';
+import { readingQuestionKey } from './reading-history.js?v=20261014-sentence-modes';
+import { withReadingSentence } from './reading-sentences.js?v=20261014-sentence-modes';
 
 export const READING_CATEGORIES = {
   noun:'Kata benda', verb:'Kata kerja', adjective:'Kata sifat', adverb:'Kata keterangan', special:'Hitungan & tanggal',
@@ -11,7 +12,7 @@ export function prepareReadingBank(bank) {
   return bank.map(q=>{
     const source=metadata.get(`${q.word}:${q.reading}`);
     const special=q.topicIds?.includes('bacaan-khusus') && !q.topicIds.includes('bunyi-kata');
-    return {...q,
+    return {...withReadingSentence(q),
       level:source?.level || q.level,
       levelBasis:source ? 'vocabulary-source' : q.levelBasis,
       readingCategory:special ? 'special' : source?.category || q.readingCategory || 'noun',
