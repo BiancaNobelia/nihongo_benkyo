@@ -1,4 +1,4 @@
-import {shuffle} from './core.js?v=20261015-word-reading';
+import {shuffle} from './core.js?v=20261015-henkan-adjectives';
 
 export const BUNPOU_HISTORY_KEY='nihongo-benkyo-bunpou-history-v1';
 export const BUNPOU_ALL_CHAPTERS=Array.from({length:50},(_,i)=>i+1);

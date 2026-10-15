@@ -1,4 +1,4 @@
-import { shuffle } from './core.js?v=20261015-word-reading';
+import { shuffle } from './core.js?v=20261015-henkan-adjectives';
 
 export const KOTOBA_MODES = {
   'jp-id': { label:'Jepang → Indonesia', short:'JP → ID', caption:'Pilih arti kosakata berikut.', answerLanguage:'id' },

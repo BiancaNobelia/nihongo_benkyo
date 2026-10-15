@@ -1,5 +1,5 @@
-import {shuffle} from './core.js?v=20261015-word-reading';
-import {createBunpouQuiz} from './bunpou-core.js?v=20261015-word-reading';
+import {shuffle} from './core.js?v=20261015-henkan-adjectives';
+import {createBunpouQuiz} from './bunpou-core.js?v=20261015-henkan-adjectives';
 
 export const BUNPOU_ORDER_HISTORY_KEY='nihongo-benkyo-bunpou-order-history-v1';
 

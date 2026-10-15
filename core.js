@@ -1,4 +1,4 @@
-import { wordReadingDistractors } from './word-reading-options.js?v=20261015-word-reading';
+import { wordReadingDistractors } from './word-reading-options.js?v=20261015-henkan-adjectives';
 
 export function shuffle(items, random = Math.random) {
   const result = [...items];

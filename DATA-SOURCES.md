@@ -907,3 +907,34 @@ yang sama dikecualikan secara konservatif agar tidak menjadi jawaban salah.
 Pilihan bentuk mirip berasal dari kelompok pembanding yang sudah ditinjau.
 Pengecoh buatan bertujuan menguji bacaan, bukan menyatakan kosakata tersebut
 sebagai kata Jepang yang benar. Atribusi dan lisensi data di atas tetap berlaku.
+
+### Henkan kata sifat — 15 Oktober 2026
+
+`scripts/build_henkan_adjectives.mjs` menyiapkan 212 kata sifat dari 250 baris
+kata sifat pada workbook Minna I–II dan kompilasi N3 yang sudah digunakan.
+Entri sama digabung dan ditempatkan pada level sumber paling awal: 76 N5,
+25 N4, dan 111 N3. Ini pembagian materi sumber belajar, bukan daftar resmi JLPT.
+Attribution dan ketentuan lisensi sumber Kotoba di atas tetap berlaku.
+`data/henkan-adjective-source.json` mencatat sumber, normalisasi お忙しい/よい,
+serta 21 entri yang dikecualikan karena berupa nomina, adverb, atau ungkapan
+yang memerlukan konteks khusus. Glos Indonesia disesuaikan dengan fungsi
+kata sifat, misalnya 自然 = alami/wajar dan 清潔 = bersih/higienis.
+
+Enam latihan mencakup negatif, lampau, negatif lampau (bentuk biasa),
+penghubung ～くて/～で, keterangan ～く/～に, dan nominalisasi ～さ.
+Nominalisasi dibatasi pada 107 kata dengan arti nomina yang ditinjau;
+tidak semua kata diberi ～さ secara otomatis. Frasa seperti 背が高い tidak
+dinominalkan otomatis karena partikel perlu berubah. Bentuk seperti 悲しみ
+berada di luar cakupan mode yang secara eksplisit meminta ～さ.
+いい dan frasa dengan いい memakai dasar よ; きれい/嫌い tetap kelompok な.
+Negatif な menerima variasi じゃない/ではない dan じゃなかった/ではなかった;
+variasi sah tidak digunakan sebagai pengecoh. Pilihan salah sengaja memakai
+kesalahan penggolongan atau akhiran untuk latihan, bukan kosakata baku.
+
+Rujukan aturan: [bentuk biasa kata sifat, TUFS](https://www.coelang.tufs.ac.jp/mt/ja/gmod/courses/c02/lesson22/step1/card/040.html),
+[penghubung kata sifat, TUFS](https://www.coelang.tufs.ac.jp/mt/ja/gmod/courses/c02/lesson26/step1/card/049.html),
+[Aく/ANに, Japan Foundation](https://www.jpf.go.jp/j/urawa/j_rsorcs/textbook/dl/setsumei/setsumei_all.pdf),
+dan [kajian nominalisasi ～さ oleh 新屋映子 (2006)](https://www.jstage.jst.go.jp/article/nihongonokenkyu/2/4/2_KJ00004590251/_article/-char/ja).
+Soal konversi dan penjelasan Indonesia ditulis untuk website; contoh sumber
+tata bahasa tidak disalin menjadi bank soal. Riwayat paparan kata sifat
+memakai kunci penyimpanan sendiri sehingga riwayat kata kerja tetap berlaku.

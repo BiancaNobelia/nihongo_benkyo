@@ -1,7 +1,7 @@
-import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261015-word-reading';
-import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261015-word-reading';
-import { requestedQuizCount } from './quiz-settings.js?v=20261015-word-reading';
-import { shuffle } from './core.js?v=20261015-word-reading';
+import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261015-henkan-adjectives';
+import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261015-henkan-adjectives';
+import { requestedQuizCount } from './quiz-settings.js?v=20261015-henkan-adjectives';
+import { shuffle } from './core.js?v=20261015-henkan-adjectives';
 
 export function createKotobaView({root,escape,icon,heading,activity,recordSession}) {
   let course=kotobaCourse('minna');

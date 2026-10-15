@@ -1,15 +1,15 @@
-import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261015-word-reading';
-import { KANJI_WRITING } from './writing-data.js?v=20261015-word-reading';
-import { ENGLISH_KATAKANA } from './english-katakana-data.js?v=20261015-word-reading';
-import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261015-word-reading';
-import { SPECIAL_READINGS } from './special-reading-data.js?v=20261015-word-reading';
-import { KANJI } from './kanji-data.js?v=20261015-word-reading';
-import { eligibleQuizCards } from './core.js?v=20261015-word-reading';
-import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261015-word-reading';
-import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261015-word-reading';
-import { prepareReadingBank } from './reading-balance.js?v=20261015-word-reading';
-import { N5_PDF_READINGS, N5_CONTEXT_OVERRIDES } from './n5-reading-data.js?v=20261015-word-reading';
-import { N4_PDF_READINGS } from './n4-reading-data.js?v=20261015-word-reading';
+import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261015-henkan-adjectives';
+import { KANJI_WRITING } from './writing-data.js?v=20261015-henkan-adjectives';
+import { ENGLISH_KATAKANA } from './english-katakana-data.js?v=20261015-henkan-adjectives';
+import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261015-henkan-adjectives';
+import { SPECIAL_READINGS } from './special-reading-data.js?v=20261015-henkan-adjectives';
+import { KANJI } from './kanji-data.js?v=20261015-henkan-adjectives';
+import { eligibleQuizCards } from './core.js?v=20261015-henkan-adjectives';
+import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261015-henkan-adjectives';
+import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261015-henkan-adjectives';
+import { prepareReadingBank } from './reading-balance.js?v=20261015-henkan-adjectives';
+import { N5_PDF_READINGS, N5_CONTEXT_OVERRIDES } from './n5-reading-data.js?v=20261015-henkan-adjectives';
+import { N4_PDF_READINGS } from './n4-reading-data.js?v=20261015-henkan-adjectives';
 
 const originalReadings=prepareReadingBank(mergePracticeBank(READING_VOCABULARY,mergePracticeBank(mergePracticeBank(JLPT_READINGS,SIMILAR_READING),SPECIAL_READINGS)));
 const scopedReadings=originalReadings.map(q=>{

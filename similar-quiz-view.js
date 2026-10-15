@@ -1,4 +1,4 @@
-import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261015-word-reading';
+import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261015-henkan-adjectives';
 
 export function similarityQuizCallout(id) {
   const count=quizTopicCount(id);
