@@ -1,5 +1,5 @@
-import { KANJI } from './kanji-data.js?v=20261015-bunpou-expanded';
-import { LEVELS } from './levels.js?v=20261015-bunpou-expanded';
+import { KANJI } from './kanji-data.js?v=20261015-word-reading';
+import { LEVELS } from './levels.js?v=20261015-word-reading';
 
 const kanjiLevels=new Map(KANJI.map(k=>[k.char,k.level]));
 

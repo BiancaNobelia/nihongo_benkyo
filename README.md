@@ -217,3 +217,16 @@ build menolak data baru atau berubah yang belum ditinjau.
 
 Font DM Sans dan Noto Serif JP dimuat dari Google Fonts dengan font sistem
 sebagai cadangan. Semua fitur belajar menggunakan data lokal.
+
+### Pilihan bacaan per kata
+
+Mode **Kata/Kanji → Hiragana · Per kata** memakai pengecoh ejaan dekat,
+campuran onyomi–kunyomi pada satu atau dua kanji, serta bacaan dari kelompok
+bentuk mirip. Tiga contoh editorial: 午前 → ごご／ごまえ／うままえ,
+本 → ぽん／き／もく, dan 右 → ひだり／ともだち／いし.
+`word-reading-options.js` menyusun pilihan dari katalog yang sudah ada,
+mengecualikan bacaan sah dari snapshot kamus untuk seluruh 2.249 ejaan unik,
+dan tidak menebak pemisahan
+bacaan tidak beraturan. Arti dan penjelasan bacaan komponen soal muncul setelah
+menjawab. Mode JLPT dalam kalimat tetap memakai bank pengecohnya sendiri.
+Validasi: `node --test tests/word-reading-options.test.mjs`.

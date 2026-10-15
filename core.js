@@ -1,3 +1,5 @@
+import { wordReadingDistractors } from './word-reading-options.js?v=20261015-word-reading';
+
 export function shuffle(items, random = Math.random) {
   const result = [...items];
   for (let i = result.length - 1; i > 0; i--) {
@@ -27,17 +29,18 @@ export function createQuiz(pool, mode, count, random = Math.random) {
   const meaningSets = new Map(eligible.map(k => [k.char, meanings(k)]));
   return shuffle(eligible, random).slice(0, Math.min(count, eligible.length)).map(k => {
     const answer = getAnswer(k);
+    const wordChoices=mode==='reading' ? wordReadingDistractors(k,random) : null;
     const accepted = new Set(mode === 'reading' ? [answer, ...(k.example.readings || [])] : [answer]);
-    const candidates = eligible.filter(other => other.char !== k.char && (mode === 'reading'
-      ? !accepted.has(getAnswer(other))
-      : ![...meaningSets.get(k.char)].some(sense => meaningSets.get(other.char).has(sense))));
-    const distractors = [...new Set(candidates.map(getAnswer))].filter(a => !accepted.has(a));
+    const candidates = wordChoices ? [] : eligible.filter(other => other.char !== k.char
+      && ![...meaningSets.get(k.char)].some(sense => meaningSets.get(other.char).has(sense)));
+    const distractors = wordChoices?.distractors || shuffle([...new Set(candidates.map(getAnswer))].filter(a => !accepted.has(a)),random).slice(0,3);
     return { kanji:k, level:k.quizLevel || k.level,
       word:mode==='reading' ? k.example.word : k.char,
       meaning:mode==='reading' ? k.example.meaning : k.meaning,
       reading:mode==='reading' ? k.example.reading : '',
       prompt: mode === 'kanji' ? k.meaning : mode === 'reading' ? k.example.word : k.char,
-      answer, options: shuffle([answer, ...shuffle(distractors, random).slice(0, 3)], random) };
+      ...(wordChoices ? {readingAlternatives:wordChoices.readingAlternatives,wordDistractors:wordChoices.wordDistractors} : {}),
+      answer, options: shuffle([answer, ...distractors], random) };
   });
 }
 export function localDay(date = new Date()) {

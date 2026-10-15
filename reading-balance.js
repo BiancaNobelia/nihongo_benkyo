@@ -1,7 +1,7 @@
-import { shuffle } from './core.js?v=20261015-bunpou-expanded';
-import { READING_METADATA } from './reading-metadata.js?v=20261015-bunpou-expanded';
-import { readingQuestionKey } from './reading-history.js?v=20261015-bunpou-expanded';
-import { withReadingSentence } from './reading-sentences.js?v=20261015-bunpou-expanded';
+import { shuffle } from './core.js?v=20261015-word-reading';
+import { READING_METADATA } from './reading-metadata.js?v=20261015-word-reading';
+import { readingQuestionKey } from './reading-history.js?v=20261015-word-reading';
+import { withReadingSentence } from './reading-sentences.js?v=20261015-word-reading';
 
 export const READING_CATEGORIES = {
   noun:'Kata benda', verb:'Kata kerja', adjective:'Kata sifat', adverb:'Kata keterangan', special:'Hitungan & tanggal',

@@ -888,3 +888,22 @@ atau target jawaban yang tidak unik. Batas kosakata ini berlaku pada
 Arti Indonesia dan furigana tersedia pada kedua mode. Daftar pertukaran
 frasa di `data/bunpou-expansion-order.json` menerima alternatif susunan
 yang ditinjau dengan tetap menjaga peran partikel.
+
+### Pengecoh mode bacaan per kata — 15 Oktober 2026
+
+`word-reading-options.js` memakai data KANJIDIC2/JMdict dalam `kanji-data.js`
+dan kelompok visual editorial `similar-data.js`. Snapshot tambahan `data/word-reading-exclusions.json` mencatat seluruh bacaan
+yang ditemukan untuk 2.249 ejaan unik melalui indeks JMdict di kanjiapi.dev.
+Semua ejaan cocok secara persis. `scripts/collect_word_reading_exclusions.mjs`
+menyimpan rujukan indeks dan menghasilkan `word-reading-exclusions.js`.
+Tidak ada permintaan jaringan saat latihan. Tiga himpunan pilihan untuk 午前, 本, 右
+mengikuti contoh pengguna; bacaan sah yang tercatat tetap dikecualikan.
+
+Kata gabungan yang dapat dipisahkan secara unik mendapat variasi satu maupun
+dua komponen. Kunyomi berokurigana hanya digunakan ketika akhiran sesuai.
+Bacaan tidak beraturan menggunakan variasi ejaan tanpa mengarang batas
+komponen. Untuk satu kanji tanpa konteks, onyomi dan kunyomi lain dari kanji
+yang sama dikecualikan secara konservatif agar tidak menjadi jawaban salah.
+Pilihan bentuk mirip berasal dari kelompok pembanding yang sudah ditinjau.
+Pengecoh buatan bertujuan menguji bacaan, bukan menyatakan kosakata tersebut
+sebagai kata Jepang yang benar. Atribusi dan lisensi data di atas tetap berlaku.

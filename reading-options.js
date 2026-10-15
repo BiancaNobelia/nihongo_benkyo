@@ -1,6 +1,6 @@
-import { shuffle } from './core.js?v=20261015-bunpou-expanded';
-import { READING_CHOICES } from './reading-choice-data.js?v=20261015-bunpou-expanded';
-import { readingQuestionKey } from './reading-history.js?v=20261015-bunpou-expanded';
+import { shuffle } from './core.js?v=20261015-word-reading';
+import { READING_CHOICES } from './reading-choice-data.js?v=20261015-word-reading';
+import { readingQuestionKey } from './reading-history.js?v=20261015-word-reading';
 
 const choicesByQuestion=new Map(READING_CHOICES.map(q=>[q.key,q]));
 

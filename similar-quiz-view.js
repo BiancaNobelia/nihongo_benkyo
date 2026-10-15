@@ -1,4 +1,4 @@
-import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261015-bunpou-expanded';
+import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261015-word-reading';
 
 export function similarityQuizCallout(id) {
   const count=quizTopicCount(id);

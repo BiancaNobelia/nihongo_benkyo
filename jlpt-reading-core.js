@@ -1,6 +1,6 @@
-import { selectReadingQuestions } from './reading-balance.js?v=20261015-bunpou-expanded';
-import { readingOptions } from './reading-options.js?v=20261015-bunpou-expanded';
-import { withReadingSentence } from './reading-sentences.js?v=20261015-bunpou-expanded';
+import { selectReadingQuestions } from './reading-balance.js?v=20261015-word-reading';
+import { readingOptions } from './reading-options.js?v=20261015-word-reading';
+import { withReadingSentence } from './reading-sentences.js?v=20261015-word-reading';
 
 export function filterReadingQuestions(bank, level = 'all') {
   return bank.filter(q => level === 'all' || q.level === level);
