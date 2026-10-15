@@ -1,4 +1,4 @@
-import { RADICAL_MEMBERS } from './radical-members.js?v=20261015-particles-expanded';
+import { RADICAL_MEMBERS } from './radical-members.js?v=20261015-jidoushi-tadoushi';
 
 // Editorial teaching notes. Membership comes from complete components in
 // KanjiVG (including nested 門); meanings/readings use the reviewed catalog.

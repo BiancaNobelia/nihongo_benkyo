@@ -990,3 +990,39 @@ Rujukan tambahan: [Japan Foundation, しか…否定](https://www.kyozai.jpf.go.
 serta [Shogakukan, entri とか melalui Kotobank](https://kotobank.jp/word/%E3%81%A8%E3%81%8B-582055).
 Uraian も dan hubungan dengan partikel lain juga diperiksa pada rujukan TUFS
 tentang partikel penonjolan di atas. Kalimat baru ditulis untuk latihan ini.
+
+### Kuis Jidōshi–Tadōshi — 15 Oktober 2026
+
+`data/transitivity-source.mjs` mencatat 29 pasangan kata kerja dari foto
+pengguna `WhatsApp Image 2026-10-15 at 17.58.26.jpeg` dan
+`WhatsApp Image 2026-10-15 at 17.58.25.jpeg` (tabel halaman 163–164).
+Kosakata, bentuk ます, dan bentuk て ditranskripsikan lalu diperiksa;
+kalimat Jepang, arti Indonesia, serta pembahasan ditulis tersendiri.
+Setiap pasangan memiliki dua konteks jidōshi dan dua konteks tadōshi,
+total 116 soal dengan 58 soal untuk tiap jenis. Tidak ada gambar buku
+atau salinan seluruh tabel contoh Inggris yang disertakan di website.
+
+`scripts/build_transitivity.mjs` menghasilkan `transitivity-data.js` dan
+memvalidasi identitas soal, pasangan, serta cakupan furigana. Soal hanya
+menampilkan kalimat Indonesia. Mode kata kerja menawarkan kedua kata
+dalam bentuk ます; mode klasifikasi menawarkan Jidōshi/Tadōshi. Label jenis
+tidak muncul pada pilihan kata kerja sebelum dijawab. Kalimat lengkap
+dengan infleksi yang sesuai dan furigana muncul setelah menjawab.
+Riwayat soal disimpan terpisah dari kuis lain; sesi memvariasikan pasangan
+dan kedua jenis, dengan soal belum tampil didahulukan.
+
+Catatan editorial: 気をつける berarti berhati-hati/perhatikan, sedangkan
+気がつく berarti menyadari. Keduanya dibahas sebagai ungkapan terkait di
+panduan, bukan dijadikan pasangan langsung yang diujikan. 直す／直る dipakai
+untuk perbaikan benda, dengan catatan 治す／治る untuk penyakit. 売れる,
+切れる, dan 焼ける diuji dalam makna leksikal intransitif pada konteksnya,
+bukan sebagai bentuk potensial. Jidōshi dibedakan dari pasif; “tidak
+sengaja” tidak dianggap penentu jenis kata kerja. Contoh 部屋を出る
+menjelaskan bahwa を pada tempat yang ditinggalkan bukan objek langsung.
+
+Pemeriksaan kaidah mengacu pada
+[Japan Foundation, 日本語からことばを考えよう 第12回](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/language/202412.html),
+yang membedakan struktur objek langsung dan bentuk pasangan, serta
+[資料 意志動詞と無意志動詞, Japan Foundation](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00003/ja/render.do)
+untuk perbedaan kehendak dan kategori kata kerja. Materi tersebut digunakan
+sebagai rujukan konsep; soal latihan baru tidak disalin dari contoh sumber.

@@ -1,9 +1,9 @@
-import { HENKAN_VERBS } from './henkan-data.js?v=20261015-particles-expanded';
-import { HENKAN_LEVELS, HENKAN_MODES, FORM_LABELS, FORM_MEANINGS, VERB_GROUPS, conjugateVerb, spellForm, formExplanation, henkanPool, createHenkanQuiz, HENKAN_HISTORY_KEY, cleanHenkanHistory, recordHenkanShown } from './henkan-core.js?v=20261015-particles-expanded';
-import { requestedQuizCount } from './quiz-settings.js?v=20261015-particles-expanded';
-import { shuffle } from './core.js?v=20261015-particles-expanded';
-import { HENKAN_ADJECTIVES } from './henkan-adjective-data.js?v=20261015-particles-expanded';
-import { ADJECTIVE_GROUPS, ADJECTIVE_MODES, ADJECTIVE_FORM_MEANINGS, conjugateAdjective, adjectiveExplanation, adjectivePool, createAdjectiveQuiz, ADJECTIVE_HISTORY_KEY, cleanAdjectiveHistory } from './henkan-adjective-core.js?v=20261015-particles-expanded';
+import { HENKAN_VERBS } from './henkan-data.js?v=20261015-jidoushi-tadoushi';
+import { HENKAN_LEVELS, HENKAN_MODES, FORM_LABELS, FORM_MEANINGS, VERB_GROUPS, conjugateVerb, spellForm, formExplanation, henkanPool, createHenkanQuiz, HENKAN_HISTORY_KEY, cleanHenkanHistory, recordHenkanShown } from './henkan-core.js?v=20261015-jidoushi-tadoushi';
+import { requestedQuizCount } from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
+import { shuffle } from './core.js?v=20261015-jidoushi-tadoushi';
+import { HENKAN_ADJECTIVES } from './henkan-adjective-data.js?v=20261015-jidoushi-tadoushi';
+import { ADJECTIVE_GROUPS, ADJECTIVE_MODES, ADJECTIVE_FORM_MEANINGS, conjugateAdjective, adjectiveExplanation, adjectivePool, createAdjectiveQuiz, ADJECTIVE_HISTORY_KEY, cleanAdjectiveHistory } from './henkan-adjective-core.js?v=20261015-jidoushi-tadoushi';
 
 const formLabel=q=>q.adjective?ADJECTIVE_MODES[q.form].label:FORM_LABELS[q.form];
 

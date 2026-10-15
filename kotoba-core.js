@@ -1,4 +1,4 @@
-import { shuffle } from './core.js?v=20261015-particles-expanded';
+import { shuffle } from './core.js?v=20261015-jidoushi-tadoushi';
 
 export const KOTOBA_MODES = {
   'jp-id': { label:'Jepang → Indonesia', short:'JP → ID', caption:'Pilih arti kosakata berikut.', answerLanguage:'id' },

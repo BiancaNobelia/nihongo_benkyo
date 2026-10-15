@@ -1,9 +1,9 @@
-import {BUNPOU_ORDER_HISTORY_KEY,createBunpouOrderQuiz,shuffleOrderTiles,moveOrderTile,orderAnswerText,checkOrderAnswer,orderHintMarkup,orderFeedbackEntry} from './bunpou-order-core.js?v=20261015-particles-expanded';
-import {BUNPOU_ENTRIES,BUNPOU_PATTERNS,BUNPOU_CHAPTERS} from './bunpou-data.js?v=20261015-particles-expanded';
-import {BUNPOU_HISTORY_KEY,BUNPOU_ALL_CHAPTERS,bunpouPool,createBunpouQuiz,cleanBunpouHistory,recordBunpouShown,bunpouPromptMarkup,bunpouFeedbackMarkup} from './bunpou-core.js?v=20261015-particles-expanded';
-import {chapterLabel} from './kotoba-core.js?v=20261015-particles-expanded';
-import {requestedQuizCount} from './quiz-settings.js?v=20261015-particles-expanded';
-import {shuffle} from './core.js?v=20261015-particles-expanded';
+import {BUNPOU_ORDER_HISTORY_KEY,createBunpouOrderQuiz,shuffleOrderTiles,moveOrderTile,orderAnswerText,checkOrderAnswer,orderHintMarkup,orderFeedbackEntry} from './bunpou-order-core.js?v=20261015-jidoushi-tadoushi';
+import {BUNPOU_ENTRIES,BUNPOU_PATTERNS,BUNPOU_CHAPTERS} from './bunpou-data.js?v=20261015-jidoushi-tadoushi';
+import {BUNPOU_HISTORY_KEY,BUNPOU_ALL_CHAPTERS,bunpouPool,createBunpouQuiz,cleanBunpouHistory,recordBunpouShown,bunpouPromptMarkup,bunpouFeedbackMarkup} from './bunpou-core.js?v=20261015-jidoushi-tadoushi';
+import {chapterLabel} from './kotoba-core.js?v=20261015-jidoushi-tadoushi';
+import {requestedQuizCount} from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
+import {shuffle} from './core.js?v=20261015-jidoushi-tadoushi';
 
 export function createBunpouView({root,escape,icon,heading,activity,recordSession}) {
   const preferences={mode:'cloze',chapters:[...BUNPOU_ALL_CHAPTERS],countChoice:'10',customCount:'30',time:0};

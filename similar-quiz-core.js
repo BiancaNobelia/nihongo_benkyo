@@ -1,7 +1,7 @@
-import { SIMILAR_VOCABULARY } from './similar-quiz-data.js?v=20261015-particles-expanded';
-import { SIMILAR_GROUPS } from './similar-data.js?v=20261015-particles-expanded';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-particles-expanded';
-import { READING_TOPICS } from './special-reading-data.js?v=20261015-particles-expanded';
+import { SIMILAR_VOCABULARY } from './similar-quiz-data.js?v=20261015-jidoushi-tadoushi';
+import { SIMILAR_GROUPS } from './similar-data.js?v=20261015-jidoushi-tadoushi';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-jidoushi-tadoushi';
+import { READING_TOPICS } from './special-reading-data.js?v=20261015-jidoushi-tadoushi';
 
 export const QUIZ_TOPICS = [
   ...RADICAL_FAMILIES.map(f => ({id:f.id,kind:'family',label:`${f.symbol} · ${f.title}`,chars:f.members})),

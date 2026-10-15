@@ -1,5 +1,5 @@
-import { KANJI } from './kanji-data.js?v=20261015-particles-expanded';
-import { LEVELS } from './levels.js?v=20261015-particles-expanded';
+import { KANJI } from './kanji-data.js?v=20261015-jidoushi-tadoushi';
+import { LEVELS } from './levels.js?v=20261015-jidoushi-tadoushi';
 
 const kanjiLevels=new Map(KANJI.map(k=>[k.char,k.level]));
 

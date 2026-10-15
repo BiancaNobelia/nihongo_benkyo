@@ -1,5 +1,5 @@
-import {shuffle} from './core.js?v=20261015-particles-expanded';
-import {createBunpouQuiz} from './bunpou-core.js?v=20261015-particles-expanded';
+import {shuffle} from './core.js?v=20261015-jidoushi-tadoushi';
+import {createBunpouQuiz} from './bunpou-core.js?v=20261015-jidoushi-tadoushi';
 
 export const BUNPOU_ORDER_HISTORY_KEY='nihongo-benkyo-bunpou-order-history-v1';
 

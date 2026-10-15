@@ -1,6 +1,6 @@
-import {shuffle} from './core.js?v=20261015-particles-expanded';
-import {PARTICLE_TOPICS} from './particle-data.js?v=20261015-particles-expanded';
-import {cleanBunpouHistory,recordBunpouShown,bunpouPromptMarkup,bunpouSentenceMarkup} from './bunpou-core.js?v=20261015-particles-expanded';
+import {shuffle} from './core.js?v=20261015-jidoushi-tadoushi';
+import {PARTICLE_TOPICS} from './particle-data.js?v=20261015-jidoushi-tadoushi';
+import {cleanBunpouHistory,recordBunpouShown,bunpouPromptMarkup,bunpouSentenceMarkup} from './bunpou-core.js?v=20261015-jidoushi-tadoushi';
 
 export const PARTICLE_HISTORY_KEY='nihongo-benkyo-particle-history-v1';
 export const PARTICLE_TOPIC_IDS=PARTICLE_TOPICS.map(t=>t.id);

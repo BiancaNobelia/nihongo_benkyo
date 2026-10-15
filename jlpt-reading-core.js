@@ -1,6 +1,6 @@
-import { selectReadingQuestions } from './reading-balance.js?v=20261015-particles-expanded';
-import { readingOptions } from './reading-options.js?v=20261015-particles-expanded';
-import { withReadingSentence } from './reading-sentences.js?v=20261015-particles-expanded';
+import { selectReadingQuestions } from './reading-balance.js?v=20261015-jidoushi-tadoushi';
+import { readingOptions } from './reading-options.js?v=20261015-jidoushi-tadoushi';
+import { withReadingSentence } from './reading-sentences.js?v=20261015-jidoushi-tadoushi';
 
 export function filterReadingQuestions(bank, level = 'all') {
   return bank.filter(q => level === 'all' || q.level === level);

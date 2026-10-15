@@ -1,7 +1,7 @@
-import {PARTICLE_ENTRIES,PARTICLE_TOPICS} from './particle-data.js?v=20261015-particles-expanded';
-import {PARTICLE_HISTORY_KEY,PARTICLE_TOPIC_IDS,particlePool,createParticleQuiz,checkParticleAnswer,cleanParticleHistory,recordParticleShown,particlePromptMarkup,particleFeedbackMarkup} from './particle-core.js?v=20261015-particles-expanded';
-import {requestedQuizCount} from './quiz-settings.js?v=20261015-particles-expanded';
-import {shuffle} from './core.js?v=20261015-particles-expanded';
+import {PARTICLE_ENTRIES,PARTICLE_TOPICS} from './particle-data.js?v=20261015-jidoushi-tadoushi';
+import {PARTICLE_HISTORY_KEY,PARTICLE_TOPIC_IDS,particlePool,createParticleQuiz,checkParticleAnswer,cleanParticleHistory,recordParticleShown,particlePromptMarkup,particleFeedbackMarkup} from './particle-core.js?v=20261015-jidoushi-tadoushi';
+import {requestedQuizCount} from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
+import {shuffle} from './core.js?v=20261015-jidoushi-tadoushi';
 
 export function createParticleView({root,escape,icon,heading,activity,recordSession}) {
   const preferences={topics:[...PARTICLE_TOPIC_IDS],countChoice:'10',customCount:'30',time:0};

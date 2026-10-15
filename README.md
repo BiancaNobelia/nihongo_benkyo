@@ -5,6 +5,13 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 
 ## Fitur
 
+- Kuis Jidōshi–Tadōshi di `#jidoushi`: 29 pasangan dari dua foto pengguna,
+  116 soal kalimat Indonesia, dan tepat dua pilihan. Pilih kata kerja bentuk
+  ます atau tentukan jenisnya. Sesudah menjawab, tampil kalimat Jepang dengan
+  furigana, alasan, serta kedua kata dalam bentuk kamus, ます, dan て.
+  Jumlah 10/20/50/custom, filter pasangan, timer, riwayat, ulasan, dan ulangi
+  jawaban salah. Bangun ulang: `node scripts/build_transitivity.mjs`;
+  validasi: `node --test tests/transitivity.test.mjs`.
 - Kuis Partikel di `#partikel`: 210 kalimat dalam 21 topik, mencakup
   へ・に・で・の・は・も・が・を・と・から・か・しか・とか serta
   への・での・では・には・へは・のは・のに・のでは.

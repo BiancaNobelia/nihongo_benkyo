@@ -1,15 +1,15 @@
-import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261015-particles-expanded';
-import { KANJI_WRITING } from './writing-data.js?v=20261015-particles-expanded';
-import { ENGLISH_KATAKANA } from './english-katakana-data.js?v=20261015-particles-expanded';
-import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261015-particles-expanded';
-import { SPECIAL_READINGS } from './special-reading-data.js?v=20261015-particles-expanded';
-import { KANJI } from './kanji-data.js?v=20261015-particles-expanded';
-import { eligibleQuizCards } from './core.js?v=20261015-particles-expanded';
-import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261015-particles-expanded';
-import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261015-particles-expanded';
-import { prepareReadingBank } from './reading-balance.js?v=20261015-particles-expanded';
-import { N5_PDF_READINGS, N5_CONTEXT_OVERRIDES } from './n5-reading-data.js?v=20261015-particles-expanded';
-import { N4_PDF_READINGS } from './n4-reading-data.js?v=20261015-particles-expanded';
+import { JLPT_READINGS } from './jlpt-reading-data.js?v=20261015-jidoushi-tadoushi';
+import { KANJI_WRITING } from './writing-data.js?v=20261015-jidoushi-tadoushi';
+import { ENGLISH_KATAKANA } from './english-katakana-data.js?v=20261015-jidoushi-tadoushi';
+import { SIMILAR_READING, SIMILAR_WRITING, mergePracticeBank } from './similar-quiz-core.js?v=20261015-jidoushi-tadoushi';
+import { SPECIAL_READINGS } from './special-reading-data.js?v=20261015-jidoushi-tadoushi';
+import { KANJI } from './kanji-data.js?v=20261015-jidoushi-tadoushi';
+import { eligibleQuizCards } from './core.js?v=20261015-jidoushi-tadoushi';
+import { assignKanjiLevels, kanjiWordLevel } from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
+import { READING_VOCABULARY } from './reading-vocabulary-data.js?v=20261015-jidoushi-tadoushi';
+import { prepareReadingBank } from './reading-balance.js?v=20261015-jidoushi-tadoushi';
+import { N5_PDF_READINGS, N5_CONTEXT_OVERRIDES } from './n5-reading-data.js?v=20261015-jidoushi-tadoushi';
+import { N4_PDF_READINGS } from './n4-reading-data.js?v=20261015-jidoushi-tadoushi';
 
 const originalReadings=prepareReadingBank(mergePracticeBank(READING_VOCABULARY,mergePracticeBank(mergePracticeBank(JLPT_READINGS,SIMILAR_READING),SPECIAL_READINGS)));
 const scopedReadings=originalReadings.map(q=>{
