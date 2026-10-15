@@ -938,3 +938,35 @@ dan [kajian nominalisasi ～さ oleh 新屋映子 (2006)](https://www.jstage.jst
 Soal konversi dan penjelasan Indonesia ditulis untuk website; contoh sumber
 tata bahasa tidak disalin menjadi bank soal. Riwayat paparan kata sifat
 memakai kunci penyimpanan sendiri sehingga riwayat kata kerja tetap berlaku.
+
+### Kuis partikel — 15 Oktober 2026
+
+`data/particle-source.mjs` berisi 130 kalimat latihan asli, masing-masing
+10 soal untuk へ、に、で、の、は、への、での、では、には、へは、のは、のに、のでは.
+Ini bank latihan berdasarkan fungsi, bukan daftar soal resmi JLPT atau
+salinan contoh suatu buku. `scripts/build_particles.mjs` menghasilkan
+`particle-data.js`, memvalidasi satu bagian kosong, empat pilihan unik,
+kalimat unik, dan bacaan untuk seluruh kanji. Arti Indonesia ditampilkan
+sebagai konteks soal; kalimat lengkap, furigana, dan penjelasan muncul
+setelah menjawab serta dalam tinjauan.
+
+Pilihan pengecoh ditinjau dalam konteks kalimat lengkap. へ dan に pada
+tujuan perjalanan tidak dijadikan pasangan benar/salah. Demikian pula
+には/へは dan kasus ketika で atau へ saja dapat terhubung langsung dengan
+predikat, bukan menjadi pewatas nomina melalui での/への. Kolom `accepted`
+mencatat variasi yang dikecualikan dari pengecoh; catatan menjelaskan
+perbedaan hubungan kata jika relevan. Arti Indonesia membantu membedakan
+fungsi yang mengubah makna, seperti pemilik surat versus penerima surat.
+
+では dalam konteks tempat dibedakan dari bentuk negatif predikat nomina;
+のに untuk kegunaan dibedakan dari penghubung pertentangan. のは dan のでは
+dijelaskan sebagai pola yang juga melibatkan nominalisasi klausa. Gabungan
+にの dicantumkan hanya sebagai contoh pilihan keliru, bukan pola baku.
+
+Rujukan aturan: [Japan Foundation, に sebagai titik tujuan](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00040/ja/render.do),
+[TUFS, は dan partikel penonjolan](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/095.html),
+[TUFS, nominalisasi Vこと/Vの](https://www.coelang.tufs.ac.jp/mt/ja/gmod/courses/c02/lesson40/step1/card/080.html),
+[Japan Foundation, catatan tata bahasa Marugoto A2/B1, pola partikel + の](https://md.jpf.go.jp/userfiles/file/2018/Lengua%20Japonesa/Gramatica/A2-B1-JP_rev.pdf),
+dan [Bates College, penghubung のに](https://abacus.bates.edu/~kofuji/Usage/noni.html).
+Soal dan penjelasan Indonesia ditulis tersendiri; sumber tersebut digunakan
+untuk pemeriksaan kaidah, bukan disalin menjadi kumpulan soal.

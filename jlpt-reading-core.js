@@ -1,6 +1,6 @@
-import { selectReadingQuestions } from './reading-balance.js?v=20261015-henkan-adjectives';
-import { readingOptions } from './reading-options.js?v=20261015-henkan-adjectives';
-import { withReadingSentence } from './reading-sentences.js?v=20261015-henkan-adjectives';
+import { selectReadingQuestions } from './reading-balance.js?v=20261015-particles';
+import { readingOptions } from './reading-options.js?v=20261015-particles';
+import { withReadingSentence } from './reading-sentences.js?v=20261015-particles';
 
 export function filterReadingQuestions(bank, level = 'all') {
   return bank.filter(q => level === 'all' || q.level === level);

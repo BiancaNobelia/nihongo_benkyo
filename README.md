@@ -5,6 +5,13 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 
 ## Fitur
 
+- Kuis Partikel di `#partikel`: 130 kalimat dalam 13 topik, mencakup
+  へ・に・で・の・は dan への・での・では・には・へは・のは・のに・のでは.
+  Pilih topik, 10/20/50 soal atau custom, dan timer opsional. Setelah menjawab,
+  tampil arti Indonesia, furigana, pola, serta alasan pemilihan partikel.
+  Soal yang belum tampil didahulukan, dengan skor dan ulasan jawaban.
+  Bangun ulang: `node scripts/build_particles.mjs`;
+  validasi: `node --test tests/particles.test.mjs`.
 - Kuis Kotoba JLPT N3: seluruh 2.276 entri workbook pengguna di `#kotoba/n3`,
   terpisah dari Minna no Nihongo. Filter jenis kata, 1.659 entri inti atau
   617 tambahan, pencarian, lima mode latihan, jumlah custom, dan riwayat skor.

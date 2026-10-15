@@ -1,5 +1,5 @@
-import { KANJI } from './kanji-data.js?v=20261015-henkan-adjectives';
-import { KANJI_COMPONENTS } from './kanji-components-data.js?v=20261015-henkan-adjectives';
+import { KANJI } from './kanji-data.js?v=20261015-particles';
+import { KANJI_COMPONENTS } from './kanji-components-data.js?v=20261015-particles';
 
 const meanings = new Map(KANJI.map(k => [k.char, k.meaning]));
 

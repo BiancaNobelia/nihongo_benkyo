@@ -1,30 +1,31 @@
-import { createBunpouView } from './bunpou-view.js?v=20261015-henkan-adjectives';
-import { KANJI } from './kanji-data.js?v=20261015-henkan-adjectives';
-import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261015-henkan-adjectives';
-import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261015-henkan-adjectives';
-import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261015-henkan-adjectives';
-import { groupsForCharacter } from './similar-core.js?v=20261015-henkan-adjectives';
-import { createSimilarView } from './similar-view.js?v=20261015-henkan-adjectives';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-henkan-adjectives';
-import { familiesForCharacter } from './radical-core.js?v=20261015-henkan-adjectives';
-import { componentNoteMarkup } from './component-note-view.js?v=20261015-henkan-adjectives';
+import { createBunpouView } from './bunpou-view.js?v=20261015-particles';
+import { KANJI } from './kanji-data.js?v=20261015-particles';
+import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261015-particles';
+import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261015-particles';
+import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261015-particles';
+import { groupsForCharacter } from './similar-core.js?v=20261015-particles';
+import { createSimilarView } from './similar-view.js?v=20261015-particles';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-particles';
+import { familiesForCharacter } from './radical-core.js?v=20261015-particles';
+import { componentNoteMarkup } from './component-note-view.js?v=20261015-particles';
 
-import { createReadingQuiz } from './jlpt-reading-core.js?v=20261015-henkan-adjectives';
-import { READING_HISTORY_KEY, cleanReadingHistory, recordReadingShown, readingHistorySummary } from './reading-history.js?v=20261015-henkan-adjectives';
-import { readingOptions } from './reading-options.js?v=20261015-henkan-adjectives';
+import { createReadingQuiz } from './jlpt-reading-core.js?v=20261015-particles';
+import { READING_HISTORY_KEY, cleanReadingHistory, recordReadingShown, readingHistorySummary } from './reading-history.js?v=20261015-particles';
+import { readingOptions } from './reading-options.js?v=20261015-particles';
 
-import { createWritingQuiz } from './writing-core.js?v=20261015-henkan-adjectives';
-import { READING_MODE_NAMES, usesSentence, quizPromptMarkup } from './quiz-prompt.js?v=20261015-henkan-adjectives';
-import { questionTopicLinks } from './similar-quiz-view.js?v=20261015-henkan-adjectives';
+import { createWritingQuiz } from './writing-core.js?v=20261015-particles';
+import { READING_MODE_NAMES, usesSentence, quizPromptMarkup } from './quiz-prompt.js?v=20261015-particles';
+import { questionTopicLinks } from './similar-quiz-view.js?v=20261015-particles';
 
-import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261015-henkan-adjectives';
-import { requestedQuizCount } from './quiz-settings.js?v=20261015-henkan-adjectives';
-import { quizSetupPanel } from './quiz-setup-view.js?v=20261015-henkan-adjectives';
-import { answerDetailsMarkup } from './quiz-feedback.js?v=20261015-henkan-adjectives';
-import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261015-henkan-adjectives';
-import { createKotobaView } from './kotoba-view.js?v=20261015-henkan-adjectives';
-import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261015-henkan-adjectives';
-import { createHenkanView } from './henkan-view.js?v=20261015-henkan-adjectives';
+import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261015-particles';
+import { requestedQuizCount } from './quiz-settings.js?v=20261015-particles';
+import { quizSetupPanel } from './quiz-setup-view.js?v=20261015-particles';
+import { answerDetailsMarkup } from './quiz-feedback.js?v=20261015-particles';
+import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261015-particles';
+import { createKotobaView } from './kotoba-view.js?v=20261015-particles';
+import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261015-particles';
+import { createHenkanView } from './henkan-view.js?v=20261015-particles';
+import { createParticleView } from './particle-view.js?v=20261015-particles';
 
 const paths = {
   speaker:'<path d="m11 4-5 4H3v8h3l5 4zM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>',
@@ -56,11 +57,12 @@ const root = document.querySelector('#view-root');
 const modal = document.querySelector('#modal');
 const modalContent = document.querySelector('#modal-content');
 const KEY = 'nihongo-benkyo-progress-v1';
-const viewNames = { beranda:'Beranda', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', kotoba:'Kuis Kotoba', henkan:'Kuis Henkan', bunpou:'Kuis Bunpou', progres:'Progres Saya' };
+const viewNames = { beranda:'Beranda', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', kotoba:'Kuis Kotoba', henkan:'Kuis Henkan', bunpou:'Kuis Bunpou', partikel:'Kuis Partikel', progres:'Progres Saya' };
 const modeNames = { meaning:'Kanji → Arti', kanji:'Arti → Kanji', ...READING_MODE_NAMES, 'hiragana-kanji':'Hiragana → Kanji', 'hiragana-katakana':'Hiragana → Katakana', 'english-katakana':'English → Katakana', ...Object.fromEntries(Object.entries(KOTOBA_MODES).map(([id,m])=>[`kotoba-${id}`,`Kotoba · ${m.label}`])) };
 modeNames.bunpou='Bunpou · Lengkapi kalimat';
 modeNames['bunpou-order']='Bunpou · Susun kalimat';
 modeNames.henkan='Henkan · Perubahan kata kerja';
+modeNames.particle='Partikel · Lengkapi kalimat';
 let storageAvailable = true;
 let raw;
 try { raw = JSON.parse(localStorage.getItem(KEY)); } catch { storageAvailable = false; }
@@ -84,6 +86,9 @@ const bunpouView = createBunpouView({root,escape,icon,heading,activity,recordSes
   progress.history.push(entry);progress.history=progress.history.slice(-50);activity();
 }});
 const henkanView = createHenkanView({root,escape,icon,heading,activity,recordSession(entry){
+  progress.history.push(entry);progress.history=progress.history.slice(-50);activity();
+}});
+const particleView = createParticleView({root,escape,icon,heading,activity,recordSession(entry){
   progress.history.push(entry);progress.history=progress.history.slice(-50);activity();
 }});
 
@@ -127,6 +132,7 @@ function renderLibrary(home = false) {
     ${home ? `<a class="kotoba-home-banner" href="#kotoba"><span lang="ja">言葉</span><div><strong>Kuis Kotoba Minna & JLPT N3</strong><small>Minna Bab 1–50 dan 2.276 kosakata N3 · Latih arti atau bacaan.</small></div>${icon('arrow')}</a>` : ''}
     ${home ? `<a class="kotoba-home-banner henkan-banner" href="#henkan"><span lang="ja">変換</span><div><strong>Kuis Henkan · Kata kerja & kata sifat</strong><small>Kata kerja: 13 pilihan bentuk · Kata sifat い・な: 6 bentuk · N5–N3.</small></div>${icon('arrow')}</a>` : ''}
     ${home ? `<a class="kotoba-home-banner bunpou-banner" href="#bunpou"><span lang="ja">文法</span><div><strong>Kuis Bunpou · Pahami pola kalimat</strong><small>330 pola Minna Bab 1–50 · Lengkapi atau susun kalimat dengan pola dan arti Indonesia.</small></div>${icon('arrow')}</a>` : ''}
+    ${home ? `<a class="kotoba-home-banner particle-banner" href="#partikel"><span lang="ja">助詞</span><div><strong>Kuis Partikel · Pahami hubungan antarkata</strong><small>130 kalimat · へ・に・で・の・は dan 8 gabungan · Arti dan penjelasan.</small></div>${icon('arrow')}</a>` : ''}
     <a class="similar-banner" href="#mirip"><span class="similar-banner-glyphs" lang="ja">未 末</span><span><strong>Serupa, tapi tidak sama.</strong><small>Bandingkan kanji mirip dan ingat ciri pembeda tiap bentuk.</small></span><span class="similar-banner-arrow">Kanji Mirip ${icon('arrow')}</span></a>
     <section aria-label="Koleksi kanji"><div class="section-head"><div>${home ? '<div class="section-kicker">MULAI DARI RASA INGIN TAHU</div><h2>Kenali, pahami, ingat.</h2><p>Temukan kanji pertamamu. Atau, kenali yang baru.</p>' : '<h2>Jelajahi kanji</h2><p>Belajar sedikit demi sedikit, sesuai levelmu.</p>'}</div><select id="collection" class="collection-select" aria-label="Filter koleksi"><option value="all">Semua kanji</option><option value="saved">Tersimpan</option><option value="known">Sudah dikuasai</option><option value="new">Belum dikuasai</option></select></div>
     <div class="library-actions"><div class="level-tabs" aria-label="Filter level"><button class="level-tab ${filters.level === 'all' ? 'active' : ''}" data-level="all" aria-pressed="${filters.level === 'all'}">Semua level</button>${levels.map(l => `<button class="level-tab ${filters.level === l ? 'active' : ''}" data-level="${l}" aria-label="Level ${l}, ${KANJI.filter(k => k.level === l).length} kanji" aria-pressed="${filters.level === l}">${l}<small>${KANJI.filter(k => k.level === l).length}</small></button>`).join('')}</div><label class="search-wrap">${icon('search')}<input id="kanji-search" type="search" autocomplete="off" placeholder="Cari kanji, bacaan, atau arti..." aria-label="Cari kanji, bacaan, atau arti" value="${escape(filters.query)}"></label></div><div id="kanji-grid" class="kanji-grid"></div><div id="library-bottom" class="library-bottom"></div></section>
@@ -335,6 +341,7 @@ function route() {
   kotobaView.dispose();
   henkanView.dispose();
   bunpouView.dispose();
+  particleView.dispose();
   clearInterval(quizTimer); quiz = null;
   document.querySelectorAll('[data-nav]').forEach(a => { a.classList.toggle('active', a.dataset.nav === view); a.toggleAttribute('aria-current', a.dataset.nav === view); if (a.dataset.nav === view) a.setAttribute('aria-current','page'); });
   document.querySelector('#breadcrumb-current').textContent = viewNames[view];
@@ -344,11 +351,12 @@ function route() {
   else if (view === 'flashcard') renderFlash();
   else if (view === 'kotoba') kotobaView.render(groupId || undefined);
   else if (view === 'henkan') henkanView.render();
+  else if (view === 'partikel') particleView.render();
   else if (view === 'bunpou') bunpouView.render(groupId==='susun'?'order':undefined);
   else if (view === 'kuis') {
     if (groupId === 'jlpt') quizPreferences.mode = 'jlpt-reading';
     else if (groupId === 'hiragana-katakana') quizPreferences.mode = 'english-katakana';
-    else if (Object.hasOwn(modeNames, groupId) && !groupId.startsWith('kotoba-') && groupId!=='henkan' && !groupId.startsWith('bunpou')) quizPreferences.mode=groupId;
+    else if (Object.hasOwn(modeNames, groupId) && !groupId.startsWith('kotoba-') && !['henkan','particle'].includes(groupId) && !groupId.startsWith('bunpou')) quizPreferences.mode=groupId;
     renderQuizSetup();
   }
   else renderProgress();

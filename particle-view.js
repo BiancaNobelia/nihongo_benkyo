@@ -1,0 +1,80 @@
+import {PARTICLE_ENTRIES,PARTICLE_TOPICS} from './particle-data.js?v=20261015-particles';
+import {PARTICLE_HISTORY_KEY,PARTICLE_TOPIC_IDS,particlePool,createParticleQuiz,checkParticleAnswer,cleanParticleHistory,recordParticleShown,particlePromptMarkup,particleFeedbackMarkup} from './particle-core.js?v=20261015-particles';
+import {requestedQuizCount} from './quiz-settings.js?v=20261015-particles';
+import {shuffle} from './core.js?v=20261015-particles';
+
+export function createParticleView({root,escape,icon,heading,activity,recordSession}) {
+  const preferences={topics:[...PARTICLE_TOPIC_IDS],countChoice:'10',customCount:'30',time:0};
+  let active=false,session=null,lastSession=null,reviewPage=0,timer=null,history={},storageAvailable=true;
+  try{history=cleanParticleHistory(JSON.parse(localStorage.getItem(PARTICLE_HISTORY_KEY)),PARTICLE_ENTRIES);}catch{storageAvailable=false;}
+  const find=s=>root.querySelector(s),num=n=>n.toLocaleString('id-ID');
+  const stop=()=>{clearInterval(timer);timer=null;};
+  const top=()=>window.scrollTo({top:0,behavior:'instant'});
+
+  function render() {
+    stop();active=true;session=null;lastSession=null;
+    root.innerHTML=`<div class="particle-view"><section class="bunpou-hero particle-hero"><div><div class="section-kicker">JOSHI · KUIS PARTIKEL</div><h1>Kecil bentuknya.<br><em>Besar perannya.</em></h1><p>Temukan hubungan antarkata. Bedakan arah, tempat, waktu, topik, dan gabungannya lewat kalimat dengan arti Indonesia.</p><div class="kotoba-metrics"><span><strong>${PARTICLE_ENTRIES.length}</strong> soal kalimat</span><span><strong>5 + 8</strong> dasar & gabungan</span><span><strong>1 konteks</strong> setiap pertanyaan</span></div></div><div class="particle-hero-art"><span>PARTIKEL MENGHUBUNGKAN MAKNA</span><p lang="ja">学校 <strong>へ</strong> 行きます。</p><p lang="ja">学校 <strong>で</strong> 勉強します。</p><small>Ke sekolah. Belajar di sekolah.</small></div></section>
+      <div class="kotoba-layout"><section class="kotoba-panel"><div class="kotoba-section-title"><span class="kotoba-step">01</span><div><h2>Pilih partikel yang ingin dilatih</h2><p>Campur beberapa topik atau fokus pada satu bentuk.</p></div></div><div class="kotoba-ranges particle-ranges" aria-label="Kelompok partikel"><button data-particle-group="all" aria-pressed="false">Semua</button><button data-particle-group="basic" aria-pressed="false">Partikel dasar</button><button data-particle-group="combined" aria-pressed="false">Gabungan & penghubung</button><button data-particle="clear" class="text-button">Kosongkan</button></div>${['basic','combined'].map(kind=>`<h3 class="particle-section-label">${kind==='basic'?'PARTIKEL DASAR':'GABUNGAN & PENGHUBUNG'}</h3><div class="particle-topic-grid" role="group" aria-label="${kind==='basic'?'Pilih partikel dasar':'Pilih gabungan partikel'}">${PARTICLE_TOPICS.filter(t=>t.kind===kind).map(t=>`<button data-particle-topic="${t.id}" aria-pressed="false"><span lang="ja">${escape(t.label)}</span><small>${escape(t.reading)}</small><strong>${escape(t.meaning)}</strong><span class="particle-check" aria-hidden="true">${icon('check')}</span></button>`).join('')}</div>`).join('')}<p class="bunpou-note">Partikel “e” ditulis <span lang="ja">へ</span>, dan “wa” ditulis <span lang="ja">は</span>. Gabungan dibaca mengikuti fungsi tiap bagian, misalnya への = e no.</p></section>
+      <section class="kotoba-panel particle-settings"><div class="kotoba-section-title"><span class="kotoba-step">02</span><div><h2>Atur sesi latihanmu</h2><p>Baca kalimatnya, perhatikan maksudnya.</p></div></div><div class="kotoba-fields"><div class="field"><label for="particle-count">Jumlah soal</label><select id="particle-count"><option value="10">10 soal</option><option value="20">20 soal</option><option value="50">50 soal</option><option value="custom">Custom · Isi sendiri</option></select></div><div class="field"><label for="particle-time">Waktu per soal</label><select id="particle-time"><option value="0">Tanpa timer</option><option value="15">15 detik</option><option value="30">30 detik</option></select></div></div><div class="field kotoba-custom" id="particle-custom-field" hidden><label for="particle-custom">Jumlah soal custom</label><input id="particle-custom" type="number" min="1" step="1" inputmode="numeric" aria-describedby="particle-count-error"><small id="particle-count-error" role="alert" hidden>Isi bilangan bulat minimal 1.</small></div><div class="kotoba-session-summary" id="particle-summary" role="status"></div><button class="primary kotoba-start" data-particle="start">Mulai kuis partikel ${icon('arrow')}</button><p class="kotoba-small">Setelah menjawab, lihat arti, furigana, dan alasan pemilihan partikelnya. Hasil tersimpan di Progres Saya.</p><div class="particle-context-note"><strong>Konteks menentukan pilihan.</strong><p>Partikel tidak selalu punya satu padanan Indonesia. Dua bentuk yang sama-sama sah, seperti へ dan に pada tujuan perjalanan, tidak dijadikan pilihan yang saling menyalahkan.</p></div></section></div>
+      <details class="kotoba-panel particle-guide"><summary>Panduan singkat: fungsi dan gabungan partikel</summary><p class="bunpou-note">のは, のに, dan のでは juga dapat melibatkan pembentukan nomina atau penghubung klausa. Perhatikan fungsinya dalam setiap kalimat.</p><div>${PARTICLE_TOPICS.map(t=>`<details class="particle-guide-item"><summary><strong lang="ja">${escape(t.label)}</strong><span>${escape(t.meaning)}</span><small>${escape(t.reading)}</small></summary><p>${escape(t.explanation)}</p><p class="particle-pattern">${escape(t.pattern)}</p></details>`).join('')}</div></details><p class="kotoba-source-note">Kalimat latihan ditulis untuk website, dengan kosakata keseharian dan penjelasan Indonesia. Bentuk dasar dan gabungan dikelompokkan berdasarkan fungsi. <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">Sumber materi ${icon('arrow-up')}</a></p></div>`;
+    find('#particle-count').value=preferences.countChoice;find('#particle-custom').value=preferences.customCount;find('#particle-time').value=String(preferences.time);update();
+  }
+  function update() {
+    Object.assign(preferences,{countChoice:find('#particle-count').value,customCount:find('#particle-custom').value,time:Number(find('#particle-time').value)});
+    root.querySelectorAll('[data-particle-topic]').forEach(b=>b.setAttribute('aria-pressed',String(preferences.topics.includes(b.dataset.particleTopic))));
+    root.querySelectorAll('[data-particle-group]').forEach(b=>{const ids=PARTICLE_TOPICS.filter(t=>b.dataset.particleGroup==='all'||t.kind===b.dataset.particleGroup).map(t=>t.id);b.setAttribute('aria-pressed',String(ids.length===preferences.topics.length&&ids.every(id=>preferences.topics.includes(id))));});
+    const count=requestedQuizCount(preferences.countChoice,preferences.customCount),pool=particlePool(PARTICLE_ENTRIES,preferences),unseen=pool.filter(q=>!history[q.id]).length;
+    find('#particle-custom-field').hidden=preferences.countChoice!=='custom';find('#particle-count-error').hidden=count!==null;find('#particle-custom').setAttribute('aria-invalid',String(count===null));
+    find('#particle-summary').innerHTML=`<strong>${num(pool.length)} soal tersedia</strong><span>${!pool.length?'Pilih minimal satu partikel untuk mulai.':count===null?'Isi jumlah soal yang valid.':`${Math.min(count,pool.length)} soal · ${preferences.topics.length} topik dipilih`}</span><small>${unseen?`${unseen} soal belum pernah tampil.`:pool.length?'Semua soal pernah tampil; giliran berikutnya diprioritaskan merata.':''} Topik divariasikan dan soal yang sama tidak diulang dalam satu sesi.${count>pool.length&&pool.length?' Jumlah soal disesuaikan dengan bank yang tersedia.':''}${!storageAvailable?' Riwayat sementara hanya berlaku selama halaman ini terbuka.':''}</small>`;
+    find('[data-particle="start"]').disabled=count===null||!pool.length;
+  }
+  function start(questions=null) {
+    stop();if(!questions){update();if(find('[data-particle="start"]').disabled)return;questions=createParticleQuiz(PARTICLE_ENTRIES,{...preferences,count:requestedQuizCount(preferences.countChoice,preferences.customCount)},history);}
+    if(!questions.length)return;
+    session={questions,index:0,answers:[],answered:false,topics:[...preferences.topics],time:preferences.time};lastSession=null;activity();renderQuestion();
+  }
+  function renderQuestion() {
+    stop();session.answered=false;const q=session.questions[session.index];history=recordParticleShown(history,q.id);
+    try{localStorage.setItem(PARTICLE_HISTORY_KEY,JSON.stringify(history));}catch{storageAvailable=false;}
+    // Neither the topic name nor its pattern is revealed before answering.
+    root.innerHTML=`<div class="study-panel particle-session">${heading('KUIS PARTIKEL','Sambungkan kata, temukan makna.','Isi bagian kosong sesuai maksud kalimat.')}<div class="study-top"><span>Soal <strong>${session.index+1}</strong> / ${session.questions.length}</span><span id="particle-timer" role="timer">${session.time?`${session.time} dtk`:'Tanpa timer'}</span></div><div class="progress-track" role="progressbar" aria-label="Progres kuis partikel" aria-valuemin="0" aria-valuemax="${session.questions.length}" aria-valuenow="${session.index}"><span style="width:${session.index/session.questions.length*100}%"></span></div><div class="quiz-question bunpou-question"><p class="bunpou-intent"><span>MAKSUD KALIMAT</span>${escape(q.translation)}</p><div class="bunpou-sentence" tabindex="-1">${particlePromptMarkup(q,escape)}</div><p class="quiz-caption">Pilih partikel atau gabungan yang tepat dari pilihan berikut.</p><div class="quiz-options particle-options">${q.options.map((a,i)=>`<button class="quiz-option" data-particle-answer="${i}"><span>${'ABCD'[i]}</span><span lang="ja">${escape(a)}</span></button>`).join('')}</div><div id="particle-feedback" class="quiz-feedback" role="status">Arti dan penjelasan lengkap muncul setelah menjawab.</div></div><div class="quiz-next"><button class="text-button" data-particle="exit">Akhiri latihan</button><button class="primary" data-particle="next" disabled>${session.index===session.questions.length-1?'Lihat hasil':'Soal berikutnya'} ${icon('arrow')}</button></div><div id="particle-exit-confirm" hidden><div class="kotoba-exit-box"><p>Akhiri sesi ini? Skor yang belum selesai tidak disimpan. Soal yang sudah tampil tetap diingat.</p><button class="secondary" data-particle="continue">Lanjutkan kuis</button><button class="primary" data-particle="setup">Akhiri sesi</button></div></div>${!storageAvailable?'<p class="bunpou-note">Penyimpanan browser tidak tersedia. Riwayat sementara hanya berlaku selama halaman ini terbuka.</p>':''}</div>`;
+    top();find('.bunpou-sentence').focus({preventScroll:true});
+    if(session.time){session.deadline=Date.now()+session.time*1000;timer=setInterval(()=>{if(!session||session.answered)return;const remaining=Math.max(0,Math.ceil((session.deadline-Date.now())/1000));find('#particle-timer').textContent=`${remaining} dtk`;if(!remaining)answer(null);},250);}
+  }
+  function answer(index) {
+    if(!session||session.answered)return;
+    if(index!==null&&session.time&&Date.now()>=session.deadline)index=null;
+    const q=session.questions[session.index];if(index!==null&&(!Number.isInteger(index)||index<0||index>=q.options.length))return;
+    stop();session.answered=true;const chosen=index===null?null:q.options[index],correct=checkParticleAnswer(q,chosen);session.answers.push({chosen,correct});
+    root.querySelectorAll('[data-particle-answer]').forEach(b=>{b.disabled=true;const a=q.options[Number(b.dataset.particleAnswer)];b.classList.toggle('correct',checkParticleAnswer(q,a));b.classList.toggle('wrong',a===chosen&&!correct);});
+    const feedback=find('#particle-feedback');feedback.className=`quiz-feedback ${correct?'success':'error'}`;feedback.innerHTML=`<p class="answer-status">${correct?'Tepat! Hubungan katanya sudah pas.':chosen===null?'Waktunya habis. Mari pahami fungsinya.':'Belum tepat. Perhatikan hubungan antarkatanya.'}</p>${particleFeedbackMarkup(q,escape)}`;find('[data-particle="next"]').disabled=false;activity();
+  }
+  function finish() {
+    stop();const correct=session.answers.filter(a=>a.correct).length,total=session.questions.length;
+    recordSession({date:new Date().toISOString(),correct,total,mode:'particle',topics:session.topics});lastSession=session;session=null;reviewPage=0;
+    root.innerHTML=`<div class="study-panel particle-session"><div class="results"><div class="section-kicker">LATIHAN PARTIKEL SELESAI</div><div class="result-circle">${Math.round(correct/total*100)}%<small>JAWABAN BENAR</small></div><h1>Semakin paham hubungannya.</h1><p>${correct} dari ${total} jawaban benar</p><div class="result-buttons"><button class="primary" data-particle="setup">Latihan baru ${icon('arrow')}</button>${correct<total?'<button class="secondary" data-particle="retry">Ulangi yang salah</button>':''}<a class="text-button" href="#progres">Lihat progres ${icon('arrow')}</a></div></div><section class="bunpou-review"><h2>Tinjau partikel dan maknanya</h2><div id="particle-review-list"></div><div class="henkan-pagination"><button class="secondary" data-particle="review-prev">Sebelumnya</button><span id="particle-review-page"></span><button class="secondary" data-particle="review-next">Berikutnya</button></div></section></div>`;renderReview();top();
+  }
+  function renderReview() {
+    const pages=Math.ceil(lastSession.questions.length/10);reviewPage=Math.max(0,Math.min(reviewPage,pages-1));
+    find('#particle-review-list').innerHTML=lastSession.questions.slice(reviewPage*10,reviewPage*10+10).map((q,i)=>{const a=lastSession.answers[reviewPage*10+i];return `<article class="kotoba-review-item ${a.correct?'':'incorrect'}"><div class="kotoba-review-status">${icon(a.correct?'check':'close')} Soal ${reviewPage*10+i+1} · ${a.correct?'Benar':'Belum tepat'}</div>${!a.correct?`<p>Jawabanmu: <strong lang="ja">${escape(a.chosen||'Tidak dijawab')}</strong></p>`:''}${particleFeedbackMarkup(q,escape)}</article>`;}).join('');
+    find('#particle-review-page').textContent=`${reviewPage+1} / ${pages}`;find('[data-particle="review-prev"]').disabled=reviewPage===0;find('[data-particle="review-next"]').disabled=reviewPage===pages-1;
+  }
+  root.addEventListener('click',e=>{
+    if(!active)return;const b=e.target.closest('button');if(!b||b.disabled)return;
+    if(b.dataset.particleTopic){const id=b.dataset.particleTopic;preferences.topics=preferences.topics.includes(id)?preferences.topics.filter(t=>t!==id):[...preferences.topics,id];update();return;}
+    if(b.dataset.particleGroup){preferences.topics=PARTICLE_TOPICS.filter(t=>b.dataset.particleGroup==='all'||t.kind===b.dataset.particleGroup).map(t=>t.id);update();return;}
+    if(b.dataset.particleAnswer!==undefined){answer(Number(b.dataset.particleAnswer));return;}
+    const action=b.dataset.particle;
+    if(action==='clear'){preferences.topics=[];update();}
+    if(action==='start')start();
+    if(action==='next'&&session?.answered){session.index++;if(session.index===session.questions.length)finish();else renderQuestion();}
+    if(action==='setup'){render();top();}
+    if(action==='exit'&&session){find('#particle-exit-confirm').hidden=false;find('[data-particle="continue"]').focus();}
+    if(action==='continue')find('#particle-exit-confirm').hidden=true;
+    if(action==='retry'&&lastSession)start(shuffle(lastSession.questions.filter((q,i)=>!lastSession.answers[i].correct)).map(q=>({...q,options:shuffle(q.options)})));
+    if(action==='review-prev'||action==='review-next'){reviewPage+=action==='review-next'?1:-1;renderReview();find('.bunpou-review').scrollIntoView({block:'start'});}
+  });
+  root.addEventListener('change',e=>{if(active&&!session&&['particle-count','particle-time'].includes(e.target.id))update();});
+  root.addEventListener('input',e=>{if(active&&!session&&e.target.id==='particle-custom')update();});
+  return {render,dispose(){active=false;stop();session=null;lastSession=null;}};
+}
