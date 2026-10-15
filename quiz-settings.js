@@ -14,7 +14,7 @@ export function assignKanjiLevels(bank) {
   return bank.map(q=>({...q,vocabularyLevel:q.level,level:kanjiWordLevel(q.word || q.answer,q.level),levelBasis:'kanji-catalog'}));
 }
 
-export const QUIZ_COUNT_PRESETS=[10,20,50];
+export const QUIZ_COUNT_PRESETS=[10,20,30,50];
 
 export function requestedQuizCount(choice, customValue) {
   if (choice!=='custom') return QUIZ_COUNT_PRESETS.includes(Number(choice)) ? Number(choice) : null;

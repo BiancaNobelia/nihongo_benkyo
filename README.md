@@ -5,6 +5,12 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 
 ## Fitur
 
+- Kuis Henkan: pilihan ganda atau ketik sendiri untuk kata kerja dan kata
+  sifat. Jawaban ketik menerima hiragana/katakana dan ejaan kanji yang tersedia,
+  termasuk varian yang didukung bank; sonkei mengikuti pola yang diminta.
+  Jumlah 10/20/30/50/kustom dan timer bebas/15/30 detik dipilih lewat tombol.
+  Mode jawaban ikut tersimpan dalam riwayat. Validasi:
+  `node --test tests/henkan-answer.test.mjs`.
 - Kuis Jidōshi–Tadōshi di `#jidoushi`: 29 pasangan dari dua foto pengguna,
   116 soal kalimat Indonesia, dan tepat dua pilihan. Pilih kata kerja bentuk
   ます atau tentukan jenisnya. Sesudah menjawab, tampil kalimat Jepang dengan

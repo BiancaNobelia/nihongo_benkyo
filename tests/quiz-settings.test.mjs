@@ -15,8 +15,8 @@ const modes=['jlpt-reading','hiragana-kanji','english-katakana','meaning','kanji
 const make=(mode,pool,count)=>mode==='jlpt-reading' ? createReadingQuiz(pool,count) : (mode==='english-katakana' || mode.startsWith('hiragana-')) ? createWritingQuiz(pool,count) : createQuiz(pool,mode,count);
 const escape=text=>String(text).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 
-test('question counts accept 10, 20, 50 and positive custom integers only',()=>{
-  for(const n of [10,20,50])assert.equal(requestedQuizCount(String(n)),n);
+test('question counts accept 10, 20, 30, 50 and positive custom integers only',()=>{
+  for(const n of [10,20,30,50])assert.equal(requestedQuizCount(String(n)),n);
   for(const n of ['1','37',' 80 ','100000'])assert.equal(requestedQuizCount('custom',n),Number(n));
   for(const n of ['',0,-1,'2.5','abc','1e2','Infinity','9007199254740992'])assert.equal(requestedQuizCount('custom',n),null,String(n));
   assert.equal(requestedQuizCount('5'),null);

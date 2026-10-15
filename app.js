@@ -27,7 +27,7 @@ import { answerDetailsMarkup } from './quiz-feedback.js?v=20261015-jidoushi-tado
 import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261015-jidoushi-tadoushi';
 import { createKotobaView } from './kotoba-view.js?v=20261015-jidoushi-tadoushi';
 import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261015-jidoushi-tadoushi';
-import { createHenkanView } from './henkan-view.js?v=20261015-jidoushi-tadoushi';
+import { createHenkanView } from './henkan-view.js?v=20261015-henkan-input';
 import { createParticleView } from './particle-view.js?v=20261015-jidoushi-tadoushi';
 
 const paths = {
@@ -44,6 +44,7 @@ const paths = {
   back:'<path d="M20 12H4m6-6-6 6 6 6"/>',
   leaf:'<path d="M20 3C5 1 2 8 5 14s15 6 15-11ZM4 21 15 9"/>',
   check:'<path d="m5 12 4 4L19 6"/>',
+  edit:'<path d="m15 4 5 5M4 20l5-1L21 7a2 2 0 0 0-5-5L4 14zM3 22h18"/>',
   search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
   bookmark:'<path d="M6 3h12v18l-6-4-6 4z"/>',
   close:'<path d="m6 6 12 12M6 18 18 6"/>',
@@ -342,7 +343,7 @@ function renderProgress() {
     const total = KANJI.filter(k => k.level === l).length;
     const known = KANJI.filter(k => k.level === l && progress.known.includes(k.char)).length;
     return `<div class="level-progress"><div><span>${l} · ${levelNames[l]}</span><small>${known} / ${total} kanji</small></div><div class="progress-track" role="progressbar" aria-label="Kanji ${l} dikuasai" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${known}"><span style="width:${known / total * 100}%"></span></div></div>`;
-  }).join('')}<a class="text-button" href="#flashcard">Lanjutkan dengan flashcard ${icon('arrow')}</a></section><section class="panel"><h2>Catatan latihan kuis</h2>${progress.history.length ? [...progress.history].reverse().slice(0,5).map(h => `<div class="history-item"><div>${h.mode==='henkan'&&h.wordType==='adjective'?'Henkan · Perubahan kata sifat':modeNames[h.mode]}<small>${new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(new Date(h.date))} · ${h.total} soal${h.mode.startsWith('kotoba-') && h.course==='n3' ? ' · JLPT N3' : (h.mode.startsWith('kotoba-') || ['bunpou','bunpou-order'].includes(h.mode)) && h.chapters?.length ? ` · ${chapterLabel(h.chapters)}` : ''}</small></div><span class="history-score">${h.correct}/${h.total} benar</span></div>`).join('') : `<div class="empty"><h3>Halaman baru untuk ceritamu.</h3><p>Hasil kuis pertamamu akan muncul di sini.</p><a class="text-button" href="#kuis">Mulai kuis ${icon('arrow')}</a></div>`}</section></div><div class="daily"><span lang="ja">歩</span><div><h3>Belajar hari ini, tumbuh setiap hari.</h3><p>${progress.days.includes(localDay()) ? 'Kamu sudah belajar hari ini. Pertahankan langkah kecilmu!' : 'Satu kanji baru hari ini bisa jadi awal kebiasaan baik.'}</p></div><a class="secondary" href="#flashcard">Lanjut belajar ${icon('arrow')}</a></div><p class="storage-note">${icon('lock')}${storageAvailable ? 'Progres tersimpan di browser dan perangkat ini. Menghapus data browser akan menghapus progres.' : 'Penyimpanan browser tidak tersedia. Progres hanya tersimpan selama sesi ini.'}</p>`;
+  }).join('')}<a class="text-button" href="#flashcard">Lanjutkan dengan flashcard ${icon('arrow')}</a></section><section class="panel"><h2>Catatan latihan kuis</h2>${progress.history.length ? [...progress.history].reverse().slice(0,5).map(h => `<div class="history-item"><div>${h.mode==='henkan'&&h.wordType==='adjective'?'Henkan · Perubahan kata sifat':modeNames[h.mode]}<small>${new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(new Date(h.date))} · ${h.total} soal${h.mode==='henkan'?` · ${h.answerMode==='typing'?'Ketik sendiri':'Pilihan ganda'}`:''}${h.mode.startsWith('kotoba-') && h.course==='n3' ? ' · JLPT N3' : (h.mode.startsWith('kotoba-') || ['bunpou','bunpou-order'].includes(h.mode)) && h.chapters?.length ? ` · ${chapterLabel(h.chapters)}` : ''}</small></div><span class="history-score">${h.correct}/${h.total} benar</span></div>`).join('') : `<div class="empty"><h3>Halaman baru untuk ceritamu.</h3><p>Hasil kuis pertamamu akan muncul di sini.</p><a class="text-button" href="#kuis">Mulai kuis ${icon('arrow')}</a></div>`}</section></div><div class="daily"><span lang="ja">歩</span><div><h3>Belajar hari ini, tumbuh setiap hari.</h3><p>${progress.days.includes(localDay()) ? 'Kamu sudah belajar hari ini. Pertahankan langkah kecilmu!' : 'Satu kanji baru hari ini bisa jadi awal kebiasaan baik.'}</p></div><a class="secondary" href="#flashcard">Lanjut belajar ${icon('arrow')}</a></div><p class="storage-note">${icon('lock')}${storageAvailable ? 'Progres tersimpan di browser dan perangkat ini. Menghapus data browser akan menghapus progres.' : 'Penyimpanan browser tidak tersedia. Progres hanya tersimpan selama sesi ini.'}</p>`;
 }
 function route() {
   const [next, groupId] = location.hash.slice(1).split('/');
