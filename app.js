@@ -2,6 +2,7 @@ import {createTransitivityView} from './transitivity-view.js?v=20261015-jidoushi
 import {TRANSITIVITY_PAIRS,TRANSITIVITY_ENTRIES} from './transitivity-data.js?v=20261015-jidoushi-tadoushi';
 import {PARTICLE_ENTRIES,PARTICLE_TOPICS} from './particle-data.js?v=20261015-jidoushi-tadoushi';
 import { createBunpouView } from './bunpou-view.js?v=20261015-jidoushi-tadoushi';
+import { createMateriView } from './materi-view.js?v=20261016-materi';
 import { KANJI } from './kanji-data.js?v=20261015-jidoushi-tadoushi';
 import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261015-jidoushi-tadoushi';
 import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261015-jidoushi-tadoushi';
@@ -61,7 +62,7 @@ const root = document.querySelector('#view-root');
 const modal = document.querySelector('#modal');
 const modalContent = document.querySelector('#modal-content');
 const KEY = 'nihongo-benkyo-progress-v1';
-const viewNames = { beranda:'Beranda', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', kotoba:'Kuis Kotoba', henkan:'Kuis Henkan', bunpou:'Kuis Bunpou', partikel:'Kuis Partikel', jidoushi:'Jidōshi–Tadōshi', progres:'Progres Saya' };
+const viewNames = { beranda:'Beranda', materi:'List Materi', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', kotoba:'Kuis Kotoba', henkan:'Kuis Henkan', bunpou:'Kuis Bunpou', partikel:'Kuis Partikel', jidoushi:'Jidōshi–Tadōshi', progres:'Progres Saya' };
 const modeNames = { meaning:'Kanji → Arti', kanji:'Arti → Kanji', ...READING_MODE_NAMES, 'hiragana-kanji':'Hiragana → Kanji', 'hiragana-katakana':'Hiragana → Katakana', 'english-katakana':'English → Katakana', ...Object.fromEntries(Object.entries(KOTOBA_MODES).map(([id,m])=>[`kotoba-${id}`,`Kotoba · ${m.label}`])) };
 modeNames.bunpou='Bunpou · Lengkapi kalimat';
 modeNames['bunpou-order']='Bunpou · Susun kalimat';
@@ -85,6 +86,7 @@ let quizPreferences = {level:'N5',mode:'jlpt-reading',count:10,countChoice:'10',
 let quizTimer;
 let toastTimeout;
 const similarView = createSimilarView({root, kanji:KANJI, groups:SIMILAR_GROUPS, categories:SIMILAR_CATEGORIES, levels, escape, icon, activity});
+const materiView = createMateriView({root,escape,icon});
 const kotobaView = createKotobaView({root,escape,icon,heading,activity,recordSession(entry){
   progress.history.push(entry);progress.history=progress.history.slice(-50);activity();
 }});
@@ -147,6 +149,7 @@ function renderLibrary(home = false) {
     ${home ? `<a class="kotoba-home-banner transitivity-banner" href="#jidoushi"><span lang="ja">自他</span><div><strong>Kuis Jidōshi–Tadōshi</strong><small>${TRANSITIVITY_PAIRS.length} pasangan · ${TRANSITIVITY_ENTRIES.length} soal Indonesia · Dua pilihan.</small></div>${icon('arrow')}</a>` : ''}
     <a class="similar-banner" href="#mirip"><span class="similar-banner-glyphs" lang="ja">未 末</span><span><strong>Serupa, tapi tidak sama.</strong><small>Bandingkan kanji mirip dan ingat ciri pembeda tiap bentuk.</small></span><span class="similar-banner-arrow">Kanji Mirip ${icon('arrow')}</span></a>
     ${home ? '</section>' : ''}
+    ${home ? `<a class="materi-home-banner" href="#materi"><span>${icon('book')}</span><div><strong>List Materi · Minna no Nihongo I & II</strong><small>Baca 330 pola bunpou dan 1.690 entri kotoba, lengkap per bab 1–50.</small></div>${icon('arrow')}</a>` : ''}
     <section aria-label="Koleksi kanji"><div class="section-head"><div>${home ? '<div class="section-kicker">MULAI DARI RASA INGIN TAHU</div><h2>Kenali, pahami, ingat.</h2><p>Temukan kanji pertamamu. Atau, kenali yang baru.</p>' : '<h2>Jelajahi kanji</h2><p>Belajar sedikit demi sedikit, sesuai levelmu.</p>'}</div><select id="collection" class="collection-select" aria-label="Filter koleksi"><option value="all">Semua kanji</option><option value="saved">Tersimpan</option><option value="known">Sudah dikuasai</option><option value="new">Belum dikuasai</option></select></div>
     <div class="library-actions"><div class="level-tabs" aria-label="Filter level"><button class="level-tab ${filters.level === 'all' ? 'active' : ''}" data-level="all" aria-pressed="${filters.level === 'all'}">Semua level</button>${levels.map(l => `<button class="level-tab ${filters.level === l ? 'active' : ''}" data-level="${l}" aria-label="Level ${l}, ${KANJI.filter(k => k.level === l).length} kanji" aria-pressed="${filters.level === l}">${l}<small>${KANJI.filter(k => k.level === l).length}</small></button>`).join('')}</div><label class="search-wrap">${icon('search')}<input id="kanji-search" type="search" autocomplete="off" placeholder="Cari kanji, bacaan, atau arti..." aria-label="Cari kanji, bacaan, atau arti" value="${escape(filters.query)}"></label></div><div id="kanji-grid" class="kanji-grid"></div><div id="library-bottom" class="library-bottom"></div></section>
     ${home ? `<div class="learning-row"><a href="#flashcard" class="learning-card"><span class="learning-illustration">${icon('cards')}</span><div><h3>Kenalan lewat flashcard</h3><p>Balik kartunya. Latih ingatanmu.</p></div><span class="round-link">${icon('arrow')}</span></a><a href="#kuis" class="learning-card"><span class="learning-illustration">${icon('sparkles')}</span><div><h3>Siap uji pemahaman?</h3><p>Kuis singkat, langkah yang berarti.</p></div><span class="round-link">${icon('arrow')}</span></a></div>` : ''}`;
@@ -354,6 +357,7 @@ function route() {
   kotobaView.dispose();
   henkanView.dispose();
   bunpouView.dispose();
+  materiView.dispose();
   particleView.dispose();
   transitivityView.dispose();
   clearInterval(quizTimer); quiz = null;
@@ -361,6 +365,7 @@ function route() {
   document.querySelector('#breadcrumb-current').textContent = viewNames[view];
   document.title = `${viewNames[view]} — Nihongo Benkyo`;
   if (view === 'beranda' || view === 'kanji') renderLibrary(view === 'beranda');
+  else if (view === 'materi') materiView.render(groupId);
   else if (view === 'mirip') similarView.render(groupId);
   else if (view === 'flashcard') renderFlash();
   else if (view === 'kotoba') kotobaView.render(groupId || undefined);
