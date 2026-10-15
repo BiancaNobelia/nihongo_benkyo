@@ -1,4 +1,4 @@
-import { MON_COMPONENT_NOTES } from './mon-components-data.js?v=20261015-particles';
+import { MON_COMPONENT_NOTES } from './mon-components-data.js?v=20261015-particles-expanded';
 
 export const componentNoteFor = char => MON_COMPONENT_NOTES[char] || null;
 

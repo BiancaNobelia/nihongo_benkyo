@@ -1,4 +1,4 @@
-import {shuffle} from './core.js?v=20261015-particles';
+import {shuffle} from './core.js?v=20261015-particles-expanded';
 
 export const ADJECTIVE_GROUPS={i:'Kata sifat い',na:'Kata sifat な'};
 export const ADJECTIVE_MODES={

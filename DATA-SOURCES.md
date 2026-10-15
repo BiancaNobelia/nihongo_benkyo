@@ -941,8 +941,9 @@ memakai kunci penyimpanan sendiri sehingga riwayat kata kerja tetap berlaku.
 
 ### Kuis partikel — 15 Oktober 2026
 
-`data/particle-source.mjs` berisi 130 kalimat latihan asli, masing-masing
-10 soal untuk へ、に、で、の、は、への、での、では、には、へは、のは、のに、のでは.
+`data/particle-source.mjs` berisi 210 kalimat latihan asli, masing-masing
+10 soal untuk へ、に、で、の、は、も、が、を、と、から、か、しか、とか serta
+への、での、では、には、へは、のは、のに、のでは.
 Ini bank latihan berdasarkan fungsi, bukan daftar soal resmi JLPT atau
 salinan contoh suatu buku. `scripts/build_particles.mjs` menghasilkan
 `particle-data.js`, memvalidasi satu bagian kosong, empat pilihan unik,
@@ -970,3 +971,22 @@ Rujukan aturan: [Japan Foundation, に sebagai titik tujuan](https://www.kyozai.
 dan [Bates College, penghubung のに](https://abacus.bates.edu/~kofuji/Usage/noni.html).
 Soal dan penjelasan Indonesia ditulis tersendiri; sumber tersebut digunakan
 untuk pemeriksaan kaidah, bukan disalin menjadi kumpulan soal.
+
+Tambahan 80 soal mempertahankan ID dan riwayat 130 soal awal. Pemakaian baru
+meliputi も untuk penambahan, penegasan jumlah, dan kata tanya dengan negatif;
+が untuk subjek/keadaan serta penghubung pertentangan; を untuk objek, lintasan,
+dan tempat yang ditinggalkan; と untuk rekan kegiatan, daftar, kutipan, dan
+akibat suatu kondisi; から untuk titik awal, sumber, alasan, dan urutan ～てから;
+か untuk pertanyaan, alternatif, kata belum tertentu, dan pertanyaan tidak
+langsung; しか dengan predikat negatif; serta とか untuk contoh benda/kegiatan.
+にも・でも・にしか・でしか juga muncul melalui partikel yang sudah diberikan
+sebelum bagian kosong. Terjemahan memperjelas fungsi yang diminta, misalnya
+“juga” untuk も dan “hanya” untuk しか～ない. Bentuk yang tetap gramatikal
+tetapi berbeda makna dijelaskan dalam konteks, bukan disebut selalu salah.
+
+Rujukan tambahan: [Japan Foundation, しか…否定](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00122/ja/render.do),
+[NINJAL, しか～ない dan だけ](https://kotoba.ninjal.ac.jp/qa/yokuaru/qa-203/),
+[Japan Foundation, alasan dengan から](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201612.html),
+serta [Shogakukan, entri とか melalui Kotobank](https://kotobank.jp/word/%E3%81%A8%E3%81%8B-582055).
+Uraian も dan hubungan dengan partikel lain juga diperiksa pada rujukan TUFS
+tentang partikel penonjolan di atas. Kalimat baru ditulis untuk latihan ini.

@@ -1,4 +1,4 @@
-import { wordReadingDistractors } from './word-reading-options.js?v=20261015-particles';
+import { wordReadingDistractors } from './word-reading-options.js?v=20261015-particles-expanded';
 
 export function shuffle(items, random = Math.random) {
   const result = [...items];

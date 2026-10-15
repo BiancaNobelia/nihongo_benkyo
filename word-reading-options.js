@@ -1,7 +1,7 @@
-import { KANJI } from './kanji-data.js?v=20261015-particles';
-import { SIMILAR_GROUPS } from './similar-data.js?v=20261015-particles';
-import { READING_CHOICES } from './reading-choice-data.js?v=20261015-particles';
-import { WORD_READING_EXCLUSIONS } from './word-reading-exclusions.js?v=20261015-particles';
+import { KANJI } from './kanji-data.js?v=20261015-particles-expanded';
+import { SIMILAR_GROUPS } from './similar-data.js?v=20261015-particles-expanded';
+import { READING_CHOICES } from './reading-choice-data.js?v=20261015-particles-expanded';
+import { WORD_READING_EXCLUSIONS } from './word-reading-exclusions.js?v=20261015-particles-expanded';
 
 const hiragana=s=>s.replace(/[ァ-ヶ]/gu,c=>String.fromCodePoint(c.codePointAt(0)-0x60));
 const kanji=new Map(KANJI.map(k=>[k.char,k]));

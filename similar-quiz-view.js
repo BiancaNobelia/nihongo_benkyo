@@ -1,4 +1,4 @@
-import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261015-particles';
+import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261015-particles-expanded';
 
 export function similarityQuizCallout(id) {
   const count=quizTopicCount(id);

@@ -10,13 +10,13 @@ const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 const find=id=>entries.find(q=>q.id===id);
 
 test('particle bank includes all requested forms, with ten unique authored contexts per topic',()=>{
-  assert.equal(entries.length,130);assert.equal(topics.length,13);
-  assert.deepEqual(topics.filter(t=>t.kind==='basic').map(t=>t.label),['へ','に','で','の','は']);
+  assert.equal(entries.length,210);assert.equal(topics.length,21);
+  assert.deepEqual(topics.filter(t=>t.kind==='basic').map(t=>t.label),['へ','に','で','の','は','も','が','を','と','から','か','しか','とか']);
   assert.deepEqual(topics.filter(t=>t.kind==='combined').map(t=>t.label),['への','での','では','には','へは','のは','のに','のでは']);
   assert.equal(new Set(entries.map(q=>q.id)).size,entries.length);
   assert.equal(new Set(entries.map(q=>q.example)).size,entries.length);
   for(const topic of topics){const pool=particlePool(entries,{topics:[topic.id]});assert.equal(pool.length,10);assert.equal(PARTICLE_EXAMPLES[topic.id].length,10);assert.ok(pool.every(q=>q.answer===topic.label));}
-  for(const q of entries){assert.equal(q.before+q.answer+q.after,q.example);assert.ok(q.translation&&q.note&&q.furigana.length);}
+  for(const q of entries){assert.equal(q.before+q.answer+q.after,q.example);assert.ok(q.translation&&q.note);assert.ok(Array.isArray(q.furigana));}
 });
 
 test('each question has one blank, four different choices and no valid alternative presented as wrong',()=>{
@@ -58,15 +58,15 @@ test('every kanji has correctly placed furigana, while feedback always includes 
 });
 
 test('topic selection, count validation and balanced rotation avoid repeated question IDs',()=>{
-  assert.equal(particlePool(entries,{topics:topics.filter(t=>t.kind==='basic').map(t=>t.id)}).length,50);
+  assert.equal(particlePool(entries,{topics:topics.filter(t=>t.kind==='basic').map(t=>t.id)}).length,130);
   assert.equal(particlePool(entries,{topics:topics.filter(t=>t.kind==='combined').map(t=>t.id)}).length,80);
   assert.equal(particlePool(entries,{topics:['e','e','invalid']}).length,10);
   assert.deepEqual(particlePool(entries,{topics:null}),[]);
   assert.deepEqual(createParticleQuiz(entries,{topics:[]}),[]);
   for(const count of [0,-1,1.1,NaN,Infinity])assert.deepEqual(createParticleQuiz(entries,{count}),[]);
-  for(const count of [1,10,20,50,130,99999]){
-    const questions=createParticleQuiz(entries,{count},{},random(count));assert.equal(questions.length,Math.min(count,130));assert.equal(new Set(questions.map(q=>q.id)).size,questions.length);
-    assert.equal(new Set(questions.slice(0,13).map(q=>q.topic)).size,Math.min(count,13));
+  for(const count of [1,10,20,50,130,210,99999]){
+    const questions=createParticleQuiz(entries,{count},{},random(count));assert.equal(questions.length,Math.min(count,210));assert.equal(new Set(questions.map(q=>q.id)).size,questions.length);
+    assert.equal(new Set(questions.slice(0,21).map(q=>q.topic)).size,Math.min(count,21));
   }
   const questions=createParticleQuiz(entries,{topics:['eno','deno'],count:50},{},random(2));assert.equal(questions.length,20);assert.ok(questions.every(q=>['eno','deno'].includes(q.topic)));
 });
@@ -78,7 +78,36 @@ test('shown questions rotate across sessions without using another quiz history'
   assert.deepEqual(cleanParticleHistory(null,entries),{});assert.deepEqual(cleanParticleHistory({[first[0].id]:-1},entries),{});
   assert.equal(PARTICLE_HISTORY_KEY,'nihongo-benkyo-particle-history-v1');
   const exhausted=entries.reduce((h,q)=>recordParticleShown(h,q.id),{});exhausted[first[0].id]=2;
-  const next=createParticleQuiz(entries,{count:129},exhausted,random(5));assert.ok(next.every(q=>q.id!==first[0].id));
+  const next=createParticleQuiz(entries,{count:entries.length-1},exhausted,random(5));assert.ok(next.every(q=>q.id!==first[0].id));
+});
+
+test('new particles cover different functions and protect valid readings and constructions',()=>{
+  const shika=particlePool(entries,{topics:['shika']});
+  assert.equal(shika.length,10);
+  for(const q of shika){assert.match(q.after,/(ありません|いません|ません|ませんでした)/);assert.match(q.translation,/hanya/i);assert.ok(q.distractors.includes('だけ'));}
+  for(const id of ['particle-mo-05','particle-shika-05','particle-shika-07'])assert.ok(find(id).before.endsWith('に'));
+  for(const id of ['particle-mo-06','particle-shika-06'])assert.ok(find(id).before.endsWith('で'));
+  assert.match(find('particle-mo-07').translation,/seorang pun/);assert.match(find('particle-mo-08').translation,/apa pun/);
+  assert.match(find('particle-mo-10').note,/terasa lama/);
+  assert.match(find('particle-ga-03').note,/kata tanya/);assert.ok(!checkParticleAnswer(find('particle-ga-03'),'は'));
+  assert.match(find('particle-ga-08').note,/dua penilaian/);assert.ok(!find('particle-ga-07').distractors.includes('を'));
+  assert.ok(checkParticleAnswer(find('particle-wo-03'),'で'));assert.ok(checkParticleAnswer(find('particle-wo-08'),'から'));
+  assert.match(find('particle-wo-09').note,/lintasan/);assert.ok(!find('particle-wo-10').distractors.includes('で'));
+  assert.match(find('particle-to-05').note,/kutipan/);assert.match(find('particle-to-08').note,/otomatis/);
+  assert.match(find('particle-kara-01').note,/rentang waktu/);assert.match(find('particle-kara-06').note,/alasan/);assert.match(find('particle-kara-09').note,/urutan/);
+  assert.ok(!find('particle-kara-04').distractors.includes('の'));assert.ok(checkParticleAnswer(find('particle-kara-05'),'に'));
+  assert.match(find('particle-ka-04').note,/alternatif/);assert.match(find('particle-ka-06').note,/belum ditentukan/);assert.match(find('particle-ka-09').note,/tidak langsung/);
+  for(const q of particlePool(entries,{topics:['toka']})){assert.ok(!q.distractors.some(d=>['や','と'].includes(d)));assert.ok(q.after.includes('とか'));}
+});
+
+test('old question history survives expansion and the eighty new questions are served before repeats',()=>{
+  const added=new Set(['mo','ga','wo','to','kara','ka','shika','toka']);
+  const old=entries.filter(q=>!added.has(q.topic));assert.equal(old.length,130);
+  const history=old.reduce((h,q)=>recordParticleShown(h,q.id),{});
+  assert.deepEqual(cleanParticleHistory(history,entries),history);
+  const next=createParticleQuiz(entries,{count:80},history,random(20));
+  assert.equal(next.length,80);assert.equal(new Set(next.map(q=>q.id)).size,80);
+  assert.ok(next.every(q=>added.has(q.topic)));assert.equal(new Set(next.map(q=>q.topic)).size,8);
 });
 
 test('particle scores survive cleanup and navigation links reach the dedicated view',()=>{

@@ -1,6 +1,6 @@
-import {shuffle} from './core.js?v=20261015-particles';
-import {PARTICLE_TOPICS} from './particle-data.js?v=20261015-particles';
-import {cleanBunpouHistory,recordBunpouShown,bunpouPromptMarkup,bunpouSentenceMarkup} from './bunpou-core.js?v=20261015-particles';
+import {shuffle} from './core.js?v=20261015-particles-expanded';
+import {PARTICLE_TOPICS} from './particle-data.js?v=20261015-particles-expanded';
+import {cleanBunpouHistory,recordBunpouShown,bunpouPromptMarkup,bunpouSentenceMarkup} from './bunpou-core.js?v=20261015-particles-expanded';
 
 export const PARTICLE_HISTORY_KEY='nihongo-benkyo-particle-history-v1';
 export const PARTICLE_TOPIC_IDS=PARTICLE_TOPICS.map(t=>t.id);

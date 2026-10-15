@@ -1,7 +1,7 @@
-import { shuffle } from './core.js?v=20261015-particles';
-import { READING_METADATA } from './reading-metadata.js?v=20261015-particles';
-import { readingQuestionKey } from './reading-history.js?v=20261015-particles';
-import { withReadingSentence } from './reading-sentences.js?v=20261015-particles';
+import { shuffle } from './core.js?v=20261015-particles-expanded';
+import { READING_METADATA } from './reading-metadata.js?v=20261015-particles-expanded';
+import { readingQuestionKey } from './reading-history.js?v=20261015-particles-expanded';
+import { withReadingSentence } from './reading-sentences.js?v=20261015-particles-expanded';
 
 export const READING_CATEGORIES = {
   noun:'Kata benda', verb:'Kata kerja', adjective:'Kata sifat', adverb:'Kata keterangan', special:'Hitungan & tanggal',

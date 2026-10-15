@@ -5,8 +5,9 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 
 ## Fitur
 
-- Kuis Partikel di `#partikel`: 130 kalimat dalam 13 topik, mencakup
-  へ・に・で・の・は dan への・での・では・には・へは・のは・のに・のでは.
+- Kuis Partikel di `#partikel`: 210 kalimat dalam 21 topik, mencakup
+  へ・に・で・の・は・も・が・を・と・から・か・しか・とか serta
+  への・での・では・には・へは・のは・のに・のでは.
   Pilih topik, 10/20/50 soal atau custom, dan timer opsional. Setelah menjawab,
   tampil arti Indonesia, furigana, pola, serta alasan pemilihan partikel.
   Soal yang belum tampil didahulukan, dengan skor dan ulasan jawaban.
