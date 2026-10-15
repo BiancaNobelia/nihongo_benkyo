@@ -1,30 +1,30 @@
-import { createBunpouView } from './bunpou-view.js?v=20261015-bunpou-furigana';
-import { KANJI } from './kanji-data.js?v=20261015-bunpou-furigana';
-import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261015-bunpou-furigana';
-import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261015-bunpou-furigana';
-import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261015-bunpou-furigana';
-import { groupsForCharacter } from './similar-core.js?v=20261015-bunpou-furigana';
-import { createSimilarView } from './similar-view.js?v=20261015-bunpou-furigana';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-bunpou-furigana';
-import { familiesForCharacter } from './radical-core.js?v=20261015-bunpou-furigana';
-import { componentNoteMarkup } from './component-note-view.js?v=20261015-bunpou-furigana';
+import { createBunpouView } from './bunpou-view.js?v=20261015-bunpou-expanded';
+import { KANJI } from './kanji-data.js?v=20261015-bunpou-expanded';
+import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261015-bunpou-expanded';
+import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261015-bunpou-expanded';
+import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261015-bunpou-expanded';
+import { groupsForCharacter } from './similar-core.js?v=20261015-bunpou-expanded';
+import { createSimilarView } from './similar-view.js?v=20261015-bunpou-expanded';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-bunpou-expanded';
+import { familiesForCharacter } from './radical-core.js?v=20261015-bunpou-expanded';
+import { componentNoteMarkup } from './component-note-view.js?v=20261015-bunpou-expanded';
 
-import { createReadingQuiz } from './jlpt-reading-core.js?v=20261015-bunpou-furigana';
-import { READING_HISTORY_KEY, cleanReadingHistory, recordReadingShown, readingHistorySummary } from './reading-history.js?v=20261015-bunpou-furigana';
-import { readingOptions } from './reading-options.js?v=20261015-bunpou-furigana';
+import { createReadingQuiz } from './jlpt-reading-core.js?v=20261015-bunpou-expanded';
+import { READING_HISTORY_KEY, cleanReadingHistory, recordReadingShown, readingHistorySummary } from './reading-history.js?v=20261015-bunpou-expanded';
+import { readingOptions } from './reading-options.js?v=20261015-bunpou-expanded';
 
-import { createWritingQuiz } from './writing-core.js?v=20261015-bunpou-furigana';
-import { READING_MODE_NAMES, usesSentence, quizPromptMarkup } from './quiz-prompt.js?v=20261015-bunpou-furigana';
-import { questionTopicLinks } from './similar-quiz-view.js?v=20261015-bunpou-furigana';
+import { createWritingQuiz } from './writing-core.js?v=20261015-bunpou-expanded';
+import { READING_MODE_NAMES, usesSentence, quizPromptMarkup } from './quiz-prompt.js?v=20261015-bunpou-expanded';
+import { questionTopicLinks } from './similar-quiz-view.js?v=20261015-bunpou-expanded';
 
-import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261015-bunpou-furigana';
-import { requestedQuizCount } from './quiz-settings.js?v=20261015-bunpou-furigana';
-import { quizSetupPanel } from './quiz-setup-view.js?v=20261015-bunpou-furigana';
-import { answerDetailsMarkup } from './quiz-feedback.js?v=20261015-bunpou-furigana';
-import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261015-bunpou-furigana';
-import { createKotobaView } from './kotoba-view.js?v=20261015-bunpou-furigana';
-import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261015-bunpou-furigana';
-import { createHenkanView } from './henkan-view.js?v=20261015-bunpou-furigana';
+import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261015-bunpou-expanded';
+import { requestedQuizCount } from './quiz-settings.js?v=20261015-bunpou-expanded';
+import { quizSetupPanel } from './quiz-setup-view.js?v=20261015-bunpou-expanded';
+import { answerDetailsMarkup } from './quiz-feedback.js?v=20261015-bunpou-expanded';
+import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261015-bunpou-expanded';
+import { createKotobaView } from './kotoba-view.js?v=20261015-bunpou-expanded';
+import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261015-bunpou-expanded';
+import { createHenkanView } from './henkan-view.js?v=20261015-bunpou-expanded';
 
 const paths = {
   speaker:'<path d="m11 4-5 4H3v8h3l5 4zM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>',

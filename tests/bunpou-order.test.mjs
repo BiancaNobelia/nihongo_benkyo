@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {BUNPOU_ENTRIES as entries} from '../bunpou-data.js';
+import {BUNPOU_ENTRIES as entries,BUNPOU_PATTERNS as patterns} from '../bunpou-data.js';
 import {BUNPOU_HISTORY_KEY,cleanBunpouHistory,recordBunpouShown,bunpouFeedbackMarkup} from '../bunpou-core.js';
 import {BUNPOU_ORDER_HISTORY_KEY,createBunpouOrderQuiz,shuffleOrderTiles,checkOrderAnswer,orderAnswerText,moveOrderTile,orderHintMarkup,orderFeedbackEntry} from '../bunpou-order-core.js';
 import {cleanProgress} from '../core.js';
@@ -23,7 +23,8 @@ function assemble(q,text,remaining=indices(q)) {
 
 test('all 330 patterns have reviewed tiles matching the source or a documented adaptation',()=>{
   const metadata=JSON.parse(readFileSync(new URL('../data/bunpou-order-variants.json',import.meta.url),'utf8'));
-  assert.equal(entries.filter(q=>q.order).length,330);
+  assert.equal(patterns.filter(q=>q.order).length,330);
+  assert.equal(entries.filter(q=>q.order).length,entries.length);
   assert.equal(new Set(entries.map(q=>q.chapter)).size,50);
   for(const q of entries){
     const o=q.order,override=metadata.overrides[q.id];
@@ -93,7 +94,7 @@ test('order sessions obey selected chapters and counts with no repeats and indep
   const next=createBunpouOrderQuiz(entries,{...settings,count:10},history,seeded(2));
   assert.ok(next.every(q=>q.id!==session[0].id));
   assert.deepEqual(cleanBunpouHistory(history,entries),history);
-  assert.equal(createBunpouOrderQuiz(entries,{chapters:[1],count:50}).length,6);
+  assert.equal(createBunpouOrderQuiz(entries,{chapters:[1],count:50}).length,26);
   assert.deepEqual(createBunpouOrderQuiz(entries,{chapters:[],count:10}),[]);
   assert.deepEqual(createBunpouOrderQuiz(entries,{count:0}),[]);
   assert.equal(JSON.stringify(entries),snapshot);

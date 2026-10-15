@@ -123,7 +123,7 @@ https://BiancaNobelia.github.io/nihongo_benkyo/
 
 ## Kuis Bunpou
 
-Menu `#bunpou` memuat 330 soal melengkapi kalimat dari seluruh 330 pola dalam
+Menu `#bunpou` memuat 1.330 soal melengkapi kalimat dari seluruh 330 pola dalam
 kompilasi Excel Minna no Nihongo bab 1–50. Pilih bab satu per satu, rentang,
 Buku I, atau Buku II; jumlah soal 10, 20, 50, atau custom, dengan timer opsional.
 Setiap soal memiliki empat pilihan dan petunjuk maksud kalimat. Setelah menjawab,
@@ -160,6 +160,23 @@ Timer, jumlah soal, ulasan, dan latihan ulang mengikuti pengaturan Bunpou.
 Riwayat kemunculan soal dipisahkan dari mode Lengkapi Kalimat; hasil tetap
 tercatat di Progres Saya dengan label **Bunpou · Susun kalimat**.
 Validasi: `node --test tests/bunpou*.test.mjs`.
+
+### Tambahan soal per bab
+
+Setiap bab memiliki 20 soal tambahan, sehingga tersedia 25–32 soal per bab
+untuk kedua mode. Semua 330 contoh sumber dan ID riwayat lama dipertahankan.
+Katalog pola tetap berisi 330 pola; jumlah soal ditampilkan terpisah.
+Soal baru memakai kosakata dari bab yang dipilih atau bab sebelumnya dalam
+workbook Kotoba pengguna, dengan perubahan verba sesuai pola Bunpou.
+
+`data/bunpou-wordsets.txt` menyimpan kosakata, bacaan, arti, dan rujukan baris
+Kotoba. `data/bunpou-families.txt` menyimpan konteks latihan dan pilihan jawaban.
+`scripts/build_bunpou_expansion.py` memeriksa batas bab, kelengkapan furigana,
+kalimat unik, dan target jawaban saat build. Alternatif susunan frasa yang
+ditinjau disimpan dalam `data/bunpou-expansion-order.json`.
+Soal dibuat saat build, sehingga latihan tetap bekerja tanpa layanan tambahan.
+Pengacakan meratakan giliran pola dalam kelompok soal dengan jumlah kemunculan
+yang sama, dan tetap mendahulukan soal yang belum pernah tampil.
 
 ## Deployment
 

@@ -1,4 +1,4 @@
-import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261015-bunpou-furigana';
+import { QUIZ_TOPICS, quizTopicCount } from './similar-quiz-core.js?v=20261015-bunpou-expanded';
 
 export function similarityQuizCallout(id) {
   const count=quizTopicCount(id);

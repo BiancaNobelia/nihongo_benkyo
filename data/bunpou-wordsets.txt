@@ -1,0 +1,171 @@
+# set|annotated Japanese / tiles (~Kotoba source row)|Indonesian phrase
+jobs|教師[きょうし]~12|guru
+jobs|学生[がくせい]~13|pelajar
+jobs|会社員[かいしゃいん]~14|karyawan perusahaan
+jobs|銀行員[ぎんこういん]~16|pegawai bank
+jobs|医者[いしゃ]~17|dokter
+goods|本[ほん]~43|buku
+goods|辞書[じしょ]~44|kamus
+goods|時計[とけい]~55|jam
+goods|鞄[かばん]~57|tas
+goods|カメラ~60|kamera
+stationery|本[ほん]~43|buku
+stationery|辞書[じしょ]~44|kamus
+stationery|ノート~47|buku catatan
+stationery|鉛筆[えんぴつ]~51|pensil
+stationery|ボールペン~52|pulpen
+rooms|教室[きょうしつ]~85|ruang kelas
+rooms|食堂[しょくどう]~86|kantin
+rooms|事務所[じむしょ]~87|kantor administrasi
+rooms|会議室[かいぎしつ]~88|ruang rapat
+rooms|部屋[へや]~91|ruangan
+weekdays|月曜日[げつようび]~147|hari Senin
+weekdays|火曜日[かようび]~148|hari Selasa
+weekdays|水曜日[すいようび]~149|hari Rabu
+weekdays|木曜日[もくようび]~150|hari Kamis
+weekdays|金曜日[きんようび]~151|hari Jumat
+places|学校[がっこう]~160|sekolah
+places|会社[かいしゃ]~100|kantor
+places|大学[だいがく]~19|universitas
+places|図書館[としょかん]~125|perpustakaan
+places|スーパー~161|supermarket
+transport|電車[でんしゃ]~165|kereta listrik
+transport|バス~168|bus
+transport|地下鉄[ちかてつ]~166|kereta bawah tanah
+transport|新幹線[しんかんせん]~167|Shinkansen
+transport|タクシー~169|taksi
+countries|日本[にほん]~32|Jepang
+countries|インドネシア~33|Indonesia
+countries|アメリカ~34|Amerika Serikat
+countries|中国[ちゅうごく]~35|Tiongkok
+countries|韓国[かんこく]~36|Korea Selatan
+food|パン~212|roti
+food|卵[たまご]~213|telur
+food|肉[にく]~214|daging
+food|魚[さかな]~215|ikan
+food|野菜[やさい]~216|sayuran
+drinks|水[みず]~218|air
+drinks|お茶[ちゃ]~219|teh Jepang
+drinks|紅茶[こうちゃ]~220|teh hitam
+drinks|牛乳[ぎゅうにゅう]~221|susu
+drinks|ジュース~222|jus
+gifts|本[ほん]~43|buku
+gifts|時計[とけい]~55|jam
+gifts|花[はな]~263|bunga
+gifts|シャツ~264|kemeja
+gifts|プレゼント~265|hadiah
+readables|本[ほん]~43|buku
+readables|辞書[じしょ]~44|kamus
+readables|雑誌[ざっし]~45|majalah
+readables|新聞[しんぶん]~46|surat kabar
+readables|手紙[てがみ]~226|surat
+hobbies|テニス~233|bermain tenis
+hobbies|サッカー~234|bermain sepak bola
+hobbies|料理[りょうり]~327|memasak
+hobbies|ダンス~331|menari
+hobbies|カラオケ~336|berkaraoke
+study|日本語[にほんご]~68|bahasa Jepang
+study|英語[えいご]~69|bahasa Inggris
+study|漢字[かんじ]~340|kanji
+study|ひらがな~341|hiragana
+study|カタカナ~342|katakana
+living|男[おとこ]の人[ひと]~366|seorang laki-laki
+living|女[おんな]の人[ひと]~367|seorang perempuan
+living|男[おとこ]の子[こ]~368|seorang anak laki-laki
+living|犬[いぬ]~370|seekor anjing
+living|猫[ねこ]~371|seekor kucing
+positions|上[うえ]~390|atas
+positions|下[した]~391|bawah
+positions|前[まえ]~392|depan
+positions|後[うし]ろ~393|belakang
+positions|中[なか]~396|dalam
+people|父[ちち]~270|ayah saya
+people|母[はは]~271|ibu saya
+people|兄[あに]~431|kakak laki-laki saya
+people|姉[あね]~432|kakak perempuan saya
+people|友達[ともだち]~173|teman saya
+past|昨日[きのう]~138|kemarin
+past|一昨日[おととい]~137|dua hari lalu
+past|先週[せんしゅう]~178|minggu lalu
+past|先月[せんげつ]~181|bulan lalu
+past|去年[きょねん]~184|tahun lalu
+future|今日[きょう]~139|hari ini
+future|明日[あした]~140|besok
+future|明後日[あさって]~141|lusa
+future|今週[こんしゅう]~179|minggu ini
+future|来週[らいしゅう]~180|minggu depan
+writeables|名前[なまえ]~536|nama
+writeables|住所[じゅうしょ]~537|alamat
+writeables|手紙[てがみ]~226|surat
+writeables|レポート~227|laporan
+writeables|漢字[かんじ]~340|kanji
+tools|パソコン~61|komputer
+tools|カメラ~60|kamera
+tools|ボールペン~52|pulpen
+tools|鉛筆[えんぴつ]~51|pensil
+tools|鋏[はさみ]~254|gunting
+activities|写真[しゃしん]~228 / を / 撮[と]る~205|mengambil foto
+activities|本[ほん]~43 / を / 読[よ]む~202|membaca buku
+activities|音楽[おんがく]~225 / を / 聞[き]く~201|mendengarkan musik
+activities|ピアノ~667 / を / 弾[ひ]く~659|bermain piano
+activities|料理[りょうり]~327 / を / 作[つく]る~556|memasak
+furniture|机[つくえ]~63|meja tulis
+furniture|椅子[いす]~64|kursi
+furniture|テーブル~378|meja
+furniture|ベッド~379|tempat tidur
+furniture|棚[たな]~380|rak
+scenery|山[やま]~311|gunung
+scenery|海[うみ]~466|laut
+scenery|川[かわ]~498|sungai
+scenery|星[ほし]~962|bintang
+scenery|月[つき]~963|bulan
+sounds|音楽[おんがく]~225|musik
+sounds|ピアノ~667|piano
+sounds|ギター~958|gitar
+sounds|声[こえ]~960|suara orang
+sounds|音[おと]~830|bunyi
+machines|時計[とけい]~55|jam
+machines|車[くるま]~62|mobil
+machines|パソコン~61|komputer
+machines|テレビ~58|televisi
+machines|カメラ~60|kamera
+documents|書類[しょるい]~579|dokumen
+documents|申請書[しんせいしょ]~925|formulir permohonan
+documents|手紙[てがみ]~226|surat
+documents|レポート~227|laporan
+documents|宿題[しゅくだい]~232|pekerjaan rumah
+papers|資料[しりょう]~561|materi
+papers|書類[しょるい]~579|dokumen
+papers|説明書[せつめいしょ]~1060|buku petunjuk
+papers|手紙[てがみ]~226|surat
+papers|レポート~227|laporan
+events|試験[しけん]~470|ujian
+events|面接[めんせつ]~1092|wawancara
+events|卒業式[そつぎょうしき]~1089|upacara kelulusan
+events|パーティー~468|pesta
+events|旅行[りょこう]~332|perjalanan
+honored|先生[せんせい]~11|guru
+honored|社長[しゃちょう]~676|direktur
+honored|部長[ぶちょう]~675|kepala departemen
+honored|課長[かちょう]~674|kepala seksi
+honored|お客様[きゃくさま]~1400|tamu
+things|卵[たまご]~213|telur
+things|鍵[かぎ]~54|kunci
+things|消[け]しゴム~261|penghapus
+things|チョコレート~65|cokelat
+things|箱[はこ]~375|kotak
+meals|朝[あさ]ご飯[はん]~209|sarapan
+meals|昼[ひる]ご飯[はん]~210|makan siang
+meals|晩[ばん]ご飯[はん]~211|makan malam
+meals|料理[りょうり]~327|masakan
+meals|お弁当[べんとう]~799|bekal makan
+instructions|レシピ~1182|resep
+instructions|説明書[せつめいしょ]~1060|buku petunjuk
+instructions|手順[てじゅん]~1179|langkah-langkah
+instructions|順番[じゅんばん]~1180|urutan
+instructions|方法[ほうほう]~1181|metode
+borrowable|本[ほん]~43|buku
+borrowable|辞書[じしょ]~44|kamus
+borrowable|自転車[じてんしゃ]~170|sepeda
+borrowable|カメラ~60|kamera
+borrowable|パソコン~61|komputer

@@ -1,4 +1,4 @@
-import { MON_COMPONENT_NOTES } from './mon-components-data.js?v=20261015-bunpou-furigana';
+import { MON_COMPONENT_NOTES } from './mon-components-data.js?v=20261015-bunpou-expanded';
 
 export const componentNoteFor = char => MON_COMPONENT_NOTES[char] || null;
 

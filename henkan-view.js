@@ -1,7 +1,7 @@
-import { HENKAN_VERBS } from './henkan-data.js?v=20261015-bunpou-furigana';
-import { HENKAN_LEVELS, HENKAN_MODES, FORM_LABELS, FORM_MEANINGS, VERB_GROUPS, conjugateVerb, spellForm, formExplanation, henkanPool, createHenkanQuiz, HENKAN_HISTORY_KEY, cleanHenkanHistory, recordHenkanShown } from './henkan-core.js?v=20261015-bunpou-furigana';
-import { requestedQuizCount } from './quiz-settings.js?v=20261015-bunpou-furigana';
-import { shuffle } from './core.js?v=20261015-bunpou-furigana';
+import { HENKAN_VERBS } from './henkan-data.js?v=20261015-bunpou-expanded';
+import { HENKAN_LEVELS, HENKAN_MODES, FORM_LABELS, FORM_MEANINGS, VERB_GROUPS, conjugateVerb, spellForm, formExplanation, henkanPool, createHenkanQuiz, HENKAN_HISTORY_KEY, cleanHenkanHistory, recordHenkanShown } from './henkan-core.js?v=20261015-bunpou-expanded';
+import { requestedQuizCount } from './quiz-settings.js?v=20261015-bunpou-expanded';
+import { shuffle } from './core.js?v=20261015-bunpou-expanded';
 
 export function henkanDetailMarkup(q,escape) {
   const v=q.verb, f=conjugateVerb(v);

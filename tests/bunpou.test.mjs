@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {BUNPOU_ENTRIES as entries,BUNPOU_CHAPTERS as chapters} from '../bunpou-data.js';
+import {BUNPOU_ENTRIES as entries,BUNPOU_PATTERNS as patterns,BUNPOU_CHAPTERS as chapters} from '../bunpou-data.js';
 import {BUNPOU_ALL_CHAPTERS,bunpouPool,createBunpouQuiz,cleanBunpouHistory,recordBunpouShown,bunpouPromptMarkup,bunpouFeedbackMarkup} from '../bunpou-core.js';
 import {cleanProgress} from '../core.js';
 import {KANJI} from '../kanji-data.js';
@@ -11,7 +11,7 @@ const random=seed=>()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/42949672
 
 test('bunpou retains all 330 source rows and reconciles every chapter, example, rule and source location',()=>{
   const rows=read('bunpou-source.json'),manifest=read('bunpou-manifest.json'),overrides=read('bunpou-overrides.json');
-  assert.equal(entries.length,330);assert.equal(entries.length,manifest.entryCount);assert.equal(new Set(entries.map(q=>q.id)).size,330);
+  assert.equal(patterns.length,330);assert.equal(patterns.length,manifest.entryCount);assert.equal(new Set(entries.map(q=>q.id)).size,entries.length);
   assert.deepEqual(chapters.map(c=>c.number),BUNPOU_ALL_CHAPTERS);
   for(const row of rows){
     const q=entries.find(q=>q.id===row.id);assert.ok(q,row.id);const expected={...row,...overrides[row.id]};
@@ -19,7 +19,7 @@ test('bunpou retains all 330 source rows and reconciles every chapter, example, 
     assert.equal(q.before+q.answer+q.after,q.example);assert.ok(q.cue);assert.equal(q.book,q.chapter<=25?1:2);
     assert.ok(!Object.hasOwn(q,'status'),'Workbook memorization status must not become user progress');
   }
-  for(const c of chapters)assert.equal(entries.filter(q=>q.chapter===c.number).length,manifest.chapterCounts[c.number]);
+  for(const c of chapters){assert.equal(patterns.filter(q=>q.chapter===c.number).length,manifest.chapterCounts[c.number]);assert.equal(c.patternCount,manifest.chapterCounts[c.number]);}
   for(const o of Object.values(overrides))assert.ok(o.reason);
 });
 
@@ -47,7 +47,7 @@ test('chapter/book filters compose precisely and custom sessions cap without dup
   assert.equal(JSON.stringify(entries),original);
   for(const count of [0,-1,NaN,Infinity,1.5,'10'])assert.deepEqual(createBunpouQuiz(entries,{count}),[]);
   assert.deepEqual(createBunpouQuiz(entries,{chapters:[]}),[]);assert.deepEqual(bunpouPool(entries,{chapters:null}),[]);
-  assert.equal(bunpouPool(entries,{chapters:[1,1,-1,51,'2']}).length,6);
+  assert.equal(bunpouPool(entries,{chapters:[1,1,-1,51,'2']}).length,26);
 });
 
 test('rotation prioritizes unseen questions, keeps old history, and records only displayed items',()=>{

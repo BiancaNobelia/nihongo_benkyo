@@ -865,3 +865,26 @@ sesuai konteks, misalnya 来ました／来る／来ない, 何の／何を, dan
 Build memastikan teks kalimat tidak berubah dan setiap kanji memiliki
 bacaan. Website menampilkan ruby di kalimat jawaban dan tinjauan setelah
 menjawab, serta contoh pada katalog pola; soal awal tidak diberi furigana.
+
+### Latihan tambahan dengan Kotoba bertahap — 15 Oktober 2026
+
+Ditambahkan 1.000 latihan yang ditulis untuk website (20 per bab), bukan
+kutipan soal tambahan dari buku. Setiap latihan mengacu ke salah satu dari
+330 pola sumber. Contoh sumber, ID lama, dan riwayat tetap dipertahankan;
+total bank menjadi 1.330 soal, yaitu 25–32 per bab. Katalog pola tetap 330.
+
+`data/bunpou-families.txt` memuat 200 konteks latihan, masing-masing dengan
+lima pilihan kosakata yang sesuai dari `data/bunpou-wordsets.txt`. Semua
+kata isi pada kalimat baru memiliki rujukan baris pada `kotoba-data.js`;
+partikel, akhiran, dan konstruksi tata bahasa mengikuti pola terkait.
+Infleksi dan bentuk hormat ditulis sesuai konteks, bukan mengambil bacaan
+kanji secara lepas. Cakupan bab mengikuti workbook kompilasi pengguna,
+bukan klaim daftar resmi lengkap Minna no Nihongo.
+
+Build menolak rujukan kata dari bab yang lebih tinggi, kata tanpa sumber,
+kanji tanpa furigana, kalimat duplikat setelah normalisasi tanda baca,
+atau target jawaban yang tidak unik. Batas kosakata ini berlaku pada
+**soal tambahan**; contoh sumber asli tetap tersimpan sebagaimana sebelumnya.
+Arti Indonesia dan furigana tersedia pada kedua mode. Daftar pertukaran
+frasa di `data/bunpou-expansion-order.json` menerima alternatif susunan
+yang ditinjau dengan tetap menjaga peran partikel.

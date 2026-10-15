@@ -1,5 +1,5 @@
-import {shuffle} from './core.js?v=20261015-bunpou-furigana';
-import {createBunpouQuiz} from './bunpou-core.js?v=20261015-bunpou-furigana';
+import {shuffle} from './core.js?v=20261015-bunpou-expanded';
+import {createBunpouQuiz} from './bunpou-core.js?v=20261015-bunpou-expanded';
 
 export const BUNPOU_ORDER_HISTORY_KEY='nihongo-benkyo-bunpou-order-history-v1';
 

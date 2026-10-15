@@ -1,6 +1,6 @@
-import { selectReadingQuestions } from './reading-balance.js?v=20261015-bunpou-furigana';
-import { readingOptions } from './reading-options.js?v=20261015-bunpou-furigana';
-import { withReadingSentence } from './reading-sentences.js?v=20261015-bunpou-furigana';
+import { selectReadingQuestions } from './reading-balance.js?v=20261015-bunpou-expanded';
+import { readingOptions } from './reading-options.js?v=20261015-bunpou-expanded';
+import { withReadingSentence } from './reading-sentences.js?v=20261015-bunpou-expanded';
 
 export function filterReadingQuestions(bank, level = 'all') {
   return bank.filter(q => level === 'all' || q.level === level);

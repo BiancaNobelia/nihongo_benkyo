@@ -1,5 +1,5 @@
-import { shuffle } from './core.js?v=20261015-bunpou-furigana';
-import { honorificFor, honorificInstruction, honorificExplanation } from './henkan-honorific.js?v=20261015-bunpou-furigana';
+import { shuffle } from './core.js?v=20261015-bunpou-expanded';
+import { honorificFor, honorificInstruction, honorificExplanation } from './henkan-honorific.js?v=20261015-bunpou-expanded';
 
 export const HENKAN_LEVELS = ['N5','N4','N3'];
 export const VERB_GROUPS = {godan:'Golongan I · Godan',ichidan:'Golongan II · Ichidan',suru:'Golongan III · する',kuru:'Golongan III · 来る'};

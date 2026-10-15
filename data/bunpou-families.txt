@@ -1,0 +1,202 @@
+# pattern ID|word set|annotated tiles (~Kotoba source row)|answer / three distractors (empty inherits)|Indonesian translation|specific cue (optional)
+# Each family expands to five reviewed contexts. No runtime sentence generation.
+01-01|jobs|私[わたし]~2 / は / {x} / です / 。||Saya adalah {x}.|
+01-02|jobs|私[わたし]~2 / は / {x} / じゃありません / 。||Saya bukan {x}.|
+01-03|jobs|あの方[かた]~5 / は / {x} / ですか / 。||Apakah orang itu seorang {x}?|
+01-04|jobs|あの人[ひと]~4 / も / {x} / です / 。||Orang itu juga seorang {x}.|
+02-01|stationery|これ~37 / は / 先生[せんせい]~11 / の / {x} / です / 。||Ini adalah {x} milik guru.|
+02-02|goods|その~41 / {x} / は / 私[わたし]~2 / の / です / 。||{X} itu milik saya.|
+02-03|stationery|あれ~39 / は / 私[わたし]~2 / の / {x} / です / 。||Itu adalah {x} milik saya.|
+02-04|goods|この~40 / {x} / は / あの方[かた]~5 / の / です / 。||{X} ini milik orang itu.|
+03-01|rooms|{x} / は / あそこ~79 / です / 。||{X} ada di sana.|
+03-02|rooms|{x} / は / こちら~81 / です / 。||{X} ada di sebelah sini.|
+03-03|rooms|{x} / は / どこ~80 / ですか / 。||Di mana {x}?|Tanyakan lokasi.
+03-05|goods|その~41 / {x} / は / いくら~112 / ですか / 。||Berapa harga {x} itu?|Tanyakan harga.
+04-02|weekdays|休[やす]み~119 / は / {x} / です / 。|は / を / に / へ|Hari liburnya adalah {x}.|
+04-03|weekdays|{x} / は / 勉強[べんきょう]します~120 / 。||Saya belajar pada {x}.|
+04-04|weekdays|{x} / は / 働[はたら]きませんでした~118 / 。|働きませんでした / 働きませんだった / 働かないでした / 働きませんでた|Saya tidak bekerja pada {x} yang lalu.|
+04-07|weekdays|休[やす]み~119 / は / {x} / と / 日曜日[にちようび]~153 / です / 。||Hari liburnya adalah {x} dan hari Minggu.|
+05-01|places|明日[あした]~140 / {x} / へ / 行[い]きます~157 / 。||Besok saya pergi ke {x}.|
+05-02|transport|{x} / で / 学校[がっこう]~160 / へ / 行[い]きます~157 / 。||Saya pergi ke sekolah naik {x}.|
+05-03|countries|友達[ともだち]~173 / と / {x} / へ / 行[い]きます~157 / 。||Saya pergi ke {x} bersama teman.|
+05-06|places|いつ~190 / {x} / へ / 行[い]きます~157 / か / 。||Kapan kamu pergi ke {x}?|Tanyakan waktu pergi.
+06-01|food|{x} / を / 食[た]べます~197 / 。||Saya makan {x}.|
+06-03|rooms|{x} / で / 新聞[しんぶん]~46 / を / 読[よ]みます~202 / 。||Saya membaca surat kabar di {x}.|
+06-05|food|一緒[いっしょ]に~235 / {x} / を / 食[た]べませんか~197 / 。||Maukah kamu makan {x} bersama saya?|
+06-06|drinks|{x} / を / 飲[の]みましょう~198 / 。|飲みましょう / 飲むましょう / 飲みでしょう / 飲みますしょう|Mari minum {x}.|
+07-01|food|ナイフ~252 / で / {x} / を / 切[き]ります~240 / 。||Saya memotong {x} dengan pisau.|
+07-04|gifts|母[はは]~271 / に / {x} / を / あげました~242 / 。|あげました / もらいました / 借りました / 習いました|Saya memberikan {x} kepada ibu saya.|Saya memberi kepada ibu saya.
+07-05|gifts|父[ちち]~270 / から / {x} / を / もらいました~243 / 。|もらいました / あげました / 貸しました / 教えました|Saya menerima {x} dari ayah saya.|Saya menerima dari ayah saya.
+07-07|readables|この~40 / {x} / は / もう~274 / 読[よ]みました~202 / か / 。 / いいえ~26 / 、 / まだ~275 / です / 。||Apakah {x} ini sudah dibaca? Tidak, belum.|Jawab bahwa kegiatan membaca belum dilakukan.
+08-02|rooms|この~40 / {x} / は / 静[しず]か~280 / です / 。||{X} ini tenang.|
+08-04|rooms|その~41 / {x} / は / きれい~279 / じゃありません / 。||{X} itu tidak bersih.|
+08-05|goods|新[あたら]しい~290 / {x} / です / 。||Ini {x} yang baru.|
+08-06|tools|便利[べんり]~286 / な / {x} / です / 。||Ini {x} yang praktis.|
+09-01|hobbies|私[わたし]~2 / は / {x} / が / 好[す]き~323 / です / 。||Saya suka {x}.|
+09-02|food|私[わたし]~2 / は / {x} / が / 嫌[きら]い~324 / です / 。||Saya tidak suka {x}.|
+09-03|hobbies|母[はは]~271 / は / {x} / が / 上手[じょうず]~325 / です / 。||Ibu saya pandai {x}.|
+09-05|study|私[わたし]~2 / は / {x} / が / わかります~321 / 。|がわかります / でわかります / にわかります / へわかります|Saya memahami {x}.|
+10-01|stationery|テーブル~378 / の / 上[うえ]~390 / に / {x} / が / あります~364 / 。||Ada {x} di atas meja.|
+10-02|living|庭[にわ]~231 / に / {x} / が / います~363 / 。||Ada {x} di halaman.|
+10-03|positions|鍵[かぎ]~54 / は / 箱[はこ]~375 / の / {x} / に / あります~364 / 。||Kunci ada di {x} kotak.|
+10-04|rooms|先生[せんせい]~11 / は / {x} / に / います~363 / 。||Guru ada di {x}.|
+11-01|things|{x} / が / 三[みっ]つ~407 / あります~364 / 。||Ada tiga buah {x}.|
+11-02|things|{x} / を / 二[ふた]つ~406 / 買[か]いました~204 / 。||Saya membeli dua buah {x}.|
+11-03|jobs|あそこ~79 / に / {x} / が / 五人[ごにん]~420 / います~402 / 。||Ada lima orang {x} di sana.|
+11-08|places|ここ~77 / から / {x} / まで / どのくらい~440 / かかります~403 / か / 。||Berapa lama perjalanan dari sini ke {x}?|
+12-02|readables|この~40 / {x} / は / 難[むずか]しくなかった~297 / です / 。||{X} ini tidak sulit.|
+12-03|past|私[わたし]~2 / は / {x} / 暇[ひま]~285 / でした / 。||Saya punya waktu luang {x}.|
+12-04|furniture|この~40 / {x} / は / あの~42 / {x} / より / 大[おお]きい~288 / です / 。||{X} ini lebih besar daripada {x} yang di sana.|
+12-08|countries|{x} / の / 生活[せいかつ]~315 / は / どう~317 / でしたか / 。||Bagaimana kehidupan di {x} waktu itu?|
+13-01|goods|私[わたし]~2 / は / {x} / が / 欲[ほ]しい~493 / です / 。||Saya ingin mempunyai {x}.|
+13-02|countries|来年[らいねん]~186 / {x} / へ / 行[い]きたい~157 / です / 。||Tahun depan saya ingin pergi ke {x}.|
+13-04|borrowable|友達[ともだち]~173 / の / 家[いえ]~101 / へ / {x} / を / 借[か]り~245 / に / 行[い]きます~157 / 。||Saya pergi ke rumah teman untuk meminjam {x}.|
+13-04|places|{x} / へ / 友達[ともだち]~173 / に / 会[あ]い~207 / に / 行[い]きます~157 / 。|会いに / 会うに / 会ってに / 会いますに|Saya pergi ke {x} untuk menemui teman.|
+14-01|readables|この~40 / {x} / を / 読[よ]んで~202 / ください / 。||Tolong baca {x} ini.|
+14-02|writeables|{x} / を / 書[か]いて~203 / ください / 。||Tolong tulis {x}.|
+14-03|rooms|{x} / の / 窓[まど]~382 / を / 開[あ]けましょうか~518 / 。||Bolehkah saya bukakan jendela {x}?|
+14-04|writeables|私[わたし]~2 / は / 今[いま]~127 / {x} / を / 書[か]いています~203 / 。||Saya sedang menulis {x} sekarang.|
+15-01|places|{x} / で / 写真[しゃしん]~228 / を / 撮[と]って~205 / も / いい~292 / です / 。||Boleh mengambil foto di {x}.|
+15-02|tools|この~40 / {x} / を / 使[つか]って~554 / も / いい~292 / ですか / 。||Bolehkah saya menggunakan {x} ini?|
+15-04|countries|私[わたし]~2 / は / {x} / に / 住[す]んでいます~559 / 。||Saya tinggal di {x}.|
+15-05|study|学校[がっこう]~160 / で / {x} / を / 教[おし]えています~246 / 。||Saya mengajar {x} di sekolah.|
+16-02|writeables|{x} / を / 書[か]いて~203 / から / 休[やす]みます~119 / 。|書いてから / 書くてから / 書いたてから / 書きてから|Saya beristirahat setelah menulis {x}.|
+16-03|food|この~40 / {x} / は / 安[やす]くて~300 / おいしい~303 / です / 。||{X} ini murah dan enak.|
+16-04|rooms|この~40 / {x} / は / 静[しず]かで~280 / きれい~279 / です / 。||{X} ini tenang dan bersih.|
+16-06|people|{x} / は / 髪[かみ]~603 / が / 長[なが]い~595 / です / 。||Rambut {x} panjang.|
+17-01|places|今日[きょう]~139 / は / {x} / へ / 行[い]かない~157 / です / 。||Hari ini saya tidak pergi ke {x}.|Menyatakan tidak pergi, bukan tidak bisa pergi.
+17-02|rooms|{x} / の / 前[まえ]~392 / に / 自転車[じてんしゃ]~170 / を / 止[と]めないで~522 / ください / 。||Tolong jangan parkir sepeda di depan {x}.|
+17-03|writeables|明日[あした]~140 / までに~651 / {x} / を / 書[か]かなければ~203 / なりません / 。|書かなければ / 書くなければ / 書きなければ / 書かないければ|Saya harus menulis {x} paling lambat besok.|
+17-05|readables|その~41 / {x} / は / まだ~275 / 読[よ]みません~202 / 。||Untuk {x} itu, saya belum akan membacanya.|
+18-02|hobbies|私[わたし]~2 / は / {x} / が / できます~657 / 。||Saya bisa {x}.|
+18-03|activities|私[わたし]~2 / は / {x} / ことが / できます~657 / 。|ことが / ことを / ことに / ことで|Saya bisa {x}.|
+18-04|activities|私[わたし]~2 / の / 趣味[しゅみ]~671 / は / {x} / こと / です / 。|ことです / ことをです / ことにです / ことでです|Hobi saya adalah {x}.|
+18-05|activities|{x} / 前[まえ]~392 / に / 宿題[しゅくだい]~232 / を / します~206 / 。|前に / 前を / 前で / 前と|Saya mengerjakan PR sebelum {x}.|
+19-02|countries|{x} / へ / 行[い]った~157 / ことが / あります~364 / 。|行ったことが / 行きたことが / 行ってことが / 行ったのことが|Saya pernah pergi ke {x}.|
+19-03|weekdays|{x} / は / 掃除[そうじ]したり~692 / 洗濯[せんたく]したり~693 / します~206 / 。||Pada {x}, saya melakukan kegiatan seperti bersih-bersih dan mencuci pakaian.|
+19-04|drinks|{x} / が / 冷[つめ]たく~296 / なりました~695 / 。|冷たく / 冷たいに / 冷たいく / 冷たいで|{X} sudah menjadi dingin.|
+19-05|jobs|私[わたし]~2 / は / 今年[ことし]~185 / {x} / に / なりました~695 / 。||Tahun ini saya menjadi {x}.|
+20-01|places|私[わたし]~2 / は / 明日[あした]~140 / {x} / へ / 行[い]く~157 / 。||Besok saya pergi ke {x}.|
+20-02|places|一昨日[おととい]~137 / は / {x} / へ / 行[い]かなかった~157 / 。||Dua hari lalu saya tidak pergi ke {x}.|
+20-04|rooms|この~40 / {x} / は / 静[しず]か~280 / だ / 。||{X} ini tenang.|
+20-05|people|{x} / は / 忙[いそが]しい~304 / ？||Apakah {x} sibuk?|
+21-01|tools|この~40 / {x} / は / 便利[べんり]~286 / だと / 思[おも]います~755 / 。||Menurut saya, {x} ini praktis.|
+21-02|future|私[わたし]~2 / は / {x} / 雨[あめ]~461 / が / 降[ふ]る~532 / と / 思[おも]います~755 / 。||Menurut saya, {x} akan hujan.|
+21-03|readables|先生[せんせい]~11 / は / 「 / {x} / を / 読[よ]んで~202 / ください / 」 / と / 言[い]いました~756 / 。||Guru berkata, “Tolong baca {x}.”|
+21-05|readables|この~40 / {x} / は / おもしろい~302 / でしょう / 。||{X} ini menarik, kan?|
+22-01|goods|昨日[きのう]~138 / 買[か]った~204 / {x} / は / 高[たか]かった~299 / です / 。||{X} yang saya beli kemarin harganya mahal.|
+22-02|meals|母[はは]~271 / が / 作[つく]った~556 / {x} / を / 食[た]べました~197 / 。||Saya memakan {x} yang dibuat ibu.|
+22-03|people|{x} / が / 撮[と]った~205 / 写真[しゃしん]~228 / を / 見[み]ています~200 / 。||Saya sedang melihat foto yang diambil oleh {x}.|
+22-04|places|{x} / に / 行[い]く~157 / バス~168 / が / 来[き]ました~158 / 。||Bus yang menuju {x} sudah datang.|
+23-01|rooms|出[で]かける~627 / とき / {x} / の / 窓[まど]~382 / を / 閉[し]めます~519 / 。||Saya menutup jendela {x} ketika hendak pergi keluar.|
+23-03|study|学校[がっこう]~160 / へ / 行[い]かない~157 / とき / 家[いえ]~101 / で / {x} / を / 勉強[べんきょう]します~120 / 。||Ketika tidak pergi ke sekolah, saya belajar {x} di rumah.|
+23-04|drinks|眠[ねむ]い~696 / とき / {x} / を / 飲[の]みます~198 / 。||Ketika mengantuk, saya minum {x}.|
+23-05|readables|暇[ひま]~285 / なとき / {x} / を / 読[よ]んでいます~202 / 。||Ketika punya waktu luang, saya membaca {x}.|
+24-01|gifts|友達[ともだち]~173 / が / 私[わたし]~2 / に / {x} / を / くれました~846 / 。||Teman memberikan {x} kepada saya.|Teman memberi sesuatu kepada saya.
+24-02|study|私[わたし]~2 / は / 母[はは]~271 / に / {x} / を / 教[おし]えて~246 / あげました~242 / 。||Saya mengajarkan {x} kepada ibu.|Saya melakukan sesuatu untuk ibu.
+24-03|readables|先生[せんせい]~11 / に / {x} / を / 読[よ]んで~202 / もらいました~243 / 。|読んでもらいました / 読んであげました / 読んでくれました / 読むもらいました|Saya meminta guru membacakan {x} untuk saya.|Saya menerima bantuan dari guru.
+24-04|goods|父[ちち]~270 / が / 私[わたし]~2 / に / {x} / を / 買[か]って~204 / くれました~846 / 。|買ってくれました / 買ってもらいました / 買うくれました / 買ったくれました|Ayah membelikan {x} untuk saya.|Ayah melakukan sesuatu untuk saya.
+25-01|readables|時間[じかん]~346 / が / あったら~364 / {x} / を / 読[よ]みたい~202 / です / 。||Kalau ada waktu, saya ingin membaca {x}.|
+25-02|goods|安[やす]かったら~300 / その~41 / {x} / を / 買[か]います~204 / 。||Kalau murah, saya akan membeli {x} itu.|
+25-05|places|雨[あめ]~461 / が / 降[ふ]って~532 / も / {x} / へ / 行[い]きます~157 / 。||Walaupun hujan, saya tetap pergi ke {x}.|
+25-06|food|高[たか]くて~299 / も / この~40 / {x} / を / 買[か]います~204 / 。||Walaupun mahal, saya tetap membeli {x} ini.|
+26-01|people|{x} / は / 今日[きょう]~139 / 忙[いそが]しい~304 / んです / 。||Soalnya {x} sibuk hari ini.|
+26-04|places|{x} / へ / 行[い]きたい~157 / んですが / 道[みち]~834 / が / わからない~321 / んです / 。|行きたいんですが / 行きたいなんですが / 行きたいだんですが / 行きたくんですが|Saya ingin pergi ke {x}, tetapi saya tidak tahu jalannya.|Jelaskan keinginan dan kendala untuk meminta bantuan.
+26-05|study|{x} / を / 教[おし]えて~246 / いただけませんか / 。|教えていただけませんか / 教えるいただけませんか / 教えたいただけませんか / 教えますいただけませんか|Bisakah Anda mengajarkan {x} kepada saya?|
+26-06|goods|どこ~80 / で / {x} / を / 買[か]ったら~204 / いい~292 / ですか / 。||Di mana sebaiknya saya membeli {x}?|
+27-02|readables|この~40 / {x} / が / 読[よ]めます~202 / 。||Saya bisa membaca {x} ini.|
+27-03|scenery|ここ~77 / から / {x} / が / 見[み]えます~940 / 。||{X} terlihat dari sini.|
+27-04|sounds|今[いま]~127 / 隣[となり]~398 / の / 部屋[へや]~91 / から / {x} / が / 聞[き]こえます~941 / 。||Sekarang terdengar {x} dari kamar sebelah.|
+27-06|stationery|鞄[かばん]~57 / に / {x} / しか / ありません~364 / 。||Di dalam tas hanya ada {x}.|Menyatakan hanya benda ini yang ada di dalam tas.
+28-01|drinks|{x} / を / 飲[の]み~198 / ながら / 勉強[べんきょう]します~120 / 。|飲みながら / 飲むながら / 飲んでながら / 飲んだながら|Saya belajar sambil minum {x}.|
+28-02|places|毎日[まいにち]~146 / {x} / に / 通[かよ]っています~973 / 。|通っています / 通るています / 通りています / 通ったいます|Saya rutin pergi ke {x} setiap hari.|
+28-03|rooms|あの~42 / {x} / は / 広[ひろ]い~495 / し / 明[あか]るい~597 / し / 便利[べんり]~286 / です / 。||{X} yang di sana luas, terang, dan praktis.|
+28-05|goods|この~40 / {x} / は / 安[やす]い~300 / し / それに / 便利[べんり]~286 / です / 。||{X} ini murah, dan selain itu praktis.|
+29-02|machines|この~40 / {x} / は / 壊[こわ]れています~1010 / 。|壊れています / 壊れるています / 壊れたいます / 壊れてまする|{X} ini dalam keadaan rusak.|
+29-03|food|{x} / を / 全部[ぜんぶ]~436 / 食[た]べて~197 / しまいます / 。|食べてしまいます / 食べるしまいます / 食べたしまいます / 食べますしまいます|Saya akan menghabiskan semua {x}.|
+29-04|goods|昨日[きのう]~138 / 大切[たいせつ]~636 / な / {x} / を / なくして~624 / しまいました / 。||Kemarin saya tidak sengaja kehilangan {x} yang berharga.|
+29-05|writeables|その~41 / {x} / は / もう~274 / 書[か]いて~203 / しまいました / 。||Saya sudah selesai menulis {x} itu.|
+30-01|stationery|テーブル~378 / の / 上[うえ]~390 / に / {x} / が / 置[お]いて~555 / あります~364 / 。||{X} sudah diletakkan di atas meja.|
+30-02|papers|{x} / は / 棚[たな]~380 / に / 並[なら]べて~1040 / あります~364 / 。||{X} sudah ditata di rak.|
+30-03|countries|{x} / へ / 行[い]く~157 / 前[まえ]~392 / に / ホテル~464 / を / 予約[よやく]して~665 / おきます / 。||Sebelum pergi ke {x}, saya memesan hotel terlebih dahulu.|
+30-04|rooms|{x} / の / 窓[まど]~382 / を / 閉[し]めて~519 / おきます / 。||Saya akan menutup jendela {x} terlebih dahulu.|
+31-01|readables|週末[しゅうまつ]~502 / は / {x} / を / 読[よ]もう~202 / 。|読もう / 読むよう / 読みようる / 読もうる|Akhir pekan nanti, ayo membaca {x}.|
+31-03|future|私[わたし]~2 / は / {x} / 早[はや]く~360 / 寝[ね]よう~117 / と / 思[おも]います~755 / 。||Saya berniat tidur lebih awal {x}.|
+31-04|food|まだ~275 / {x} / を / 食[た]べていません~197 / 。||Saya belum makan {x}.|
+31-05|places|明日[あした]~140 / {x} / へ / 行[い]く~157 / つもり / です / 。||Besok saya berencana pergi ke {x}.|
+32-01|papers|この~40 / {x} / を / 読[よ]んだ~202 / ほうが / いい~292 / です / 。|読んだほうが / 読みたほうが / 読んでほうが / 読みましたほうが|Sebaiknya kamu membaca {x} ini.|
+32-02|goods|{x} / を / 忘[わす]れない~623 / ほうが / いい~292 / です / 。|忘れないほうが / 忘れなくほうが / 忘れるないほうが / 忘れませんほうが|Sebaiknya kamu tidak lupa membawa {x}.|
+32-03|future|{x} / は / 多分[たぶん]~779 / 晴[は]れる~1103 / でしょう / 。||{X} kemungkinan akan cerah.|
+32-04|transport|今日[きょう]~139 / は / {x} / が / 遅[おく]れる~909 / かもしれません / 。||Hari ini {x} mungkin terlambat.|
+33-01|places|早[はや]く~360 / {x} / へ / 行[い]け~157 / ！|行け / 行くろ / 行きろ / 行ってれ|Cepat pergi ke {x}!|
+33-02|rooms|この~40 / {x} / に / 入[はい]る~486 / な / ！||Jangan masuk ke {x} ini!|
+33-03|places|{x} / の / 前[まえ]~392 / に / 「 / 止[と]まれ~1018 / 」 / と / 書[か]いて~203 / あります~364 / 。||Di depan {x} tertulis “Berhenti!”.|
+33-06|readables|先生[せんせい]~11 / は / 「 / {x} / を / 読[よ]んで~202 / ください / 」 / と / 言[い]っていました~756 / 。|と言っていました / と言ったいました / と言うていました / を言っていました|Guru tadi mengatakan, “Tolong baca {x}.”|
+34-02|instructions|{x} / の / とおりに / 野菜[やさい]~216 / を / 切[き]ります~240 / 。|のとおりに / なとおりに / をとおりに / だとおりに|Saya memotong sayuran sesuai {x}.|
+34-03|food|{x} / を / 買[か]った~204 / あとで / 家[いえ]~101 / に / 帰[かえ]りました~159 / 。|買ったあとで / 買うあとで / 買ってあとで / 買いますあとで|Setelah membeli {x}, saya pulang ke rumah.|
+34-05|goods|{x} / を / 持[も]って~524 / 出[で]かけます~627 / 。||Saya pergi keluar sambil membawa {x}.|
+34-06|food|{x} / を / 食[た]べないで~197 / 学校[がっこう]~160 / へ / 行[い]きました~157 / 。||Saya pergi ke sekolah tanpa makan {x}.|
+35-02|places|雨[あめ]~461 / が / 降[ふ]らなければ~532 / {x} / へ / 行[い]きます~157 / 。||Kalau tidak hujan, saya pergi ke {x}.|
+35-03|goods|その~41 / {x} / が / 安[やす]ければ~300 / 買[か]います~204 / 。||Kalau {x} itu murah, saya akan membelinya.|
+35-04|weekdays|{x} / は / 暇[ひま]~285 / なら / 手伝[てつだ]って~526 / ください / 。||Kalau punya waktu luang pada {x}, tolong bantu saya.|
+35-05|goods|{x} / なら / あの~42 / 店[みせ]~229 / に / あります~364 / 。||Kalau yang dicari {x}, ada di toko itu.|
+36-01|tools|{x} / が / 使[つか]える~554 / ように / 毎日[まいにち]~146 / 練習[れんしゅう]します~694 / 。|使えるように / 使えるような / 使えるのように / 使えるをように|Saya berlatih setiap hari agar bisa menggunakan {x}.|
+36-02|goods|{x} / を / 忘[わす]れない~623 / ように / 確認[かくにん]します~1047 / 。||Saya mengecek agar tidak lupa membawa {x}.|
+36-03|study|{x} / が / 読[よ]める~202 / ように / なりました~695 / 。||Sekarang saya bisa membaca {x}.|
+36-05|readables|毎日[まいにち]~146 / {x} / を / 読[よ]む~202 / ように / しています~206 / 。|読むように / 読みますように / 読んでように / 読むのように|Saya membiasakan diri membaca {x} setiap hari.|
+37-01|readables|この~40 / {x} / は / 先生[せんせい]~11 / に / 読[よ]まれました~202 / 。|読まれました / 読みれました / 読むれました / 読まるました|{X} ini dibaca oleh guru.|
+37-02|people|私[わたし]~2 / は / {x} / に / ほめられました~1256 / 。||Saya dipuji oleh {x}.|
+37-03|goods|私[わたし]~2 / は / {x} / を / 盗[ぬす]まれました~1261 / 。|盗まれました / 盗むれました / 盗みれました / 盗まるました|{X} saya dicuri.|
+37-05|furniture|この~40 / {x} / は / 日本[にほん]~32 / で / 作[つく]られました~556 / 。|作られました / 作りれました / 作るれました / 作らるました|{X} ini dibuat di Jepang.|
+38-01|activities|{x} / のは / 楽[たの]しい~305 / です / 。|のは / をは / がは / にのは|{X} itu menyenangkan.|
+38-02|activities|母[はは]~271 / は / {x} / のが / 好[す]き~323 / です / 。|のが / をが / にはが / がを|Ibu saya suka {x}.|
+38-04|readables|{x} / を / 読[よ]む~202 / のを / 忘[わす]れました~623 / 。|読むのを / 読みますのを / 読んでのを / 読むがを|Saya lupa membaca {x}.|
+38-06|people|{x} / が / 日本[にほん]~32 / に / 来[き]た~158 / のは / 去年[きょねん]~184 / です / 。||Tahun lalulah {x} datang ke Jepang.|
+39-01|people|昨日[きのう]~138 / {x} / に / 会[あ]えて~207 / うれしかった~1343 / です / 。||Kemarin saya senang karena bisa bertemu {x}.|
+39-03|goods|{x} / が / 安[やす]くて~300 / うれしかった~1343 / です / 。|安くて / 安いで / 安いくて / 安いなて|Saya senang karena {x} harganya murah.|
+39-04|rooms|{x} / が / 静[しず]かで~280 / よく~355 / 勉強[べんきょう]できました~120 / 。||Karena {x} tenang, saya bisa belajar dengan baik.|
+39-06|readables|この~40 / {x} / が / 難[むずか]しい~297 / ので / 先生[せんせい]~11 / に / 聞[き]きました~201 / 。|難しいので / 難しいなので / 難しいだので / 難しくので|Karena {x} ini sulit, saya bertanya kepada guru.|
+40-02|study|{x} / が / 読[よ]める~202 / かどうか / 確[たし]かめます~1349 / 。||Saya akan memastikan apakah saya bisa membaca {x} atau tidak.|
+40-03|tools|この~40 / {x} / が / 便利[べんり]~286 / かどうか / 調[しら]べます~724 / 。||Saya akan memeriksa apakah {x} ini praktis atau tidak.|
+40-05|food|この~40 / {x} / を / 食[た]べて~197 / みます / 。||Saya akan mencoba makan {x} ini.|
+40-06|countries|{x} / へ / 行[い]って~157 / みたい / です / 。|行ってみたいです / 行くみたいです / 行きてみたいです / 行ったみたいです|Saya ingin mencoba pergi ke {x}.|
+41-01|gifts|昨日[きのう]~138 / 先生[せんせい]~11 / に / {x} / を / いただきました~1381 / 。||Kemarin saya menerima {x} dari guru.|Gunakan ungkapan merendahkan diri untuk penerima.
+41-02|gifts|先生[せんせい]~11 / が / {x} / を / くださいました~1382 / 。||Guru memberikan {x} kepada saya.|Hormati guru sebagai pemberi kepada saya.
+41-04|study|先生[せんせい]~11 / に / {x} / を / 教[おし]えて~246 / いただきました~1381 / 。|教えていただきました / 教えてくださいました / 教えてあげました / 教えるいただきました|Saya mendapat bantuan guru untuk mempelajari {x}.|Saya menerima bantuan dari guru; gunakan bentuk merendahkan diri.
+41-07|papers|この~40 / {x} / を / 読[よ]んで~202 / くださいませんか / 。||Bersediakah Anda membaca {x} ini?|
+42-01|study|{x} / を / 勉強[べんきょう]する~120 / ために / この~40 / 本[ほん]~43 / を / 買[か]いました~204 / 。|勉強するために / 勉強してために / 勉強しために / 勉強するのために|Saya membeli buku ini untuk belajar {x}.|
+42-02|people|{x} / の / ために / 料理[りょうり]~327 / を / 作[つく]ります~556 / 。||Saya memasak untuk {x}.|
+42-03|study|{x} / を / 覚[おぼ]える~622 / のに / この~40 / ノート~47 / を / 使[つか]います~554 / 。||Saya menggunakan buku catatan ini untuk menghafal {x}.|
+42-05|papers|この~40 / {x} / を / 読[よ]む~202 / のに / 時間[じかん]~346 / が / かかりました~403 / 。|読むのに / 読みのに / 読んでのに / 読むなのに|Saya memerlukan waktu untuk membaca {x} ini.|
+43-02|food|この~40 / {x} / は / おいしそう~303 / です / 。||{X} ini kelihatannya enak.|Perkirakan dari penampilan, bukan kabar dari orang lain.
+43-03|rooms|この~40 / {x} / は / 静[しず]かそう~280 / です / 。||{X} ini kelihatannya tenang.|Perkirakan dari penampilan, bukan kabar dari orang lain.
+43-05|meals|これ~37 / は / おいしそう~303 / な / {x} / ですね / 。||{X} ini kelihatannya enak, ya.|
+43-06|goods|{x} / を / 買[か]って~204 / きます / 。||Saya akan pergi membeli {x}, lalu kembali.|
+44-01|food|昨日[きのう]~138 / {x} / を / 食[た]べ~197 / すぎました / 。||Kemarin saya terlalu banyak makan {x}.|
+44-02|goods|その~41 / {x} / は / 高[たか]すぎます~299 / 。||{X} itu terlalu mahal.|
+44-04|tools|この~40 / {x} / は / 使[つか]いやすい~554 / です / 。|使いやすいです / 使うやすいです / 使ってやすいです / 使ったやすいです|{X} ini mudah digunakan.|
+44-05|readables|この~40 / {x} / は / 読[よ]みにくい~202 / です / 。|読みにくいです / 読むにくいです / 読んでにくいです / 読んだにくいです|{X} ini sulit dibaca.|
+45-01|tools|この~40 / {x} / を / 使[つか]う~554 / 場合[ばあい]~1520 / は / 先生[せんせい]~11 / に / 聞[き]いて~201 / ください / 。||Jika hendak menggunakan {x} ini, tanyakan kepada guru.|
+45-02|goods|{x} / を / なくした~624 / 場合[ばあい]~1520 / は / 先生[せんせい]~11 / に / 連絡[れんらく]して~913 / ください / 。|なくした場合は / なくしました場合は / なくして場合は / なくしたの場合は|Jika kehilangan {x}, hubungi guru.|
+45-03|people|{x} / が / 来[こ]ない~158 / 場合[ばあい]~1520 / は / 待[ま]たないで~521 / 食[た]べます~197 / 。|来ない場合は / 来なく場合は / 来ません場合は / 来ないの場合は|Jika {x} tidak datang, saya makan tanpa menunggu.|
+45-07|rooms|この~40 / {x} / は / 静[しず]か~280 / なのに / 勉強[べんきょう]できません~120 / 。|静かなのに / 静かのに / 静かだのに / 静かにのに|Walaupun {x} ini tenang, saya tidak bisa belajar.|
+46-02|readables|今[いま]~127 / {x} / を / 読[よ]んでいる~202 / ところ / です / 。|読んでいるところです / 読んでいますところです / 読んでところです / 読んでいるのところです|Sekarang saya sedang membaca {x}.|
+46-03|food|たった今[いま]~1557 / {x} / を / 食[た]べた~197 / ところ / です / 。|食べたところです / 食べてところです / 食べましたところです / 食べたのところです|Baru saja saya makan {x}.|
+46-04|transport|{x} / に / 乗[の]った~584 / ばかり / です / 。|乗ったばかりです / 乗るばかりです / 乗ってばかりです / 乗りましたばかりです|Saya baru saja naik {x}.|Menyatakan kejadian yang baru saja terjadi.
+46-05|people|{x} / は / もう~274 / 家[いえ]~101 / に / 着[つ]いた~876 / はず / です / 。||{X} mestinya sudah tiba di rumah.|
+47-01|rooms|この~40 / {x} / は / 静[しず]か~280 / だそう / です / 。|静かだそうです / 静かそうです / 静かなそうです / 静かでそうです|Katanya {x} ini tenang.|Sampaikan kabar dari orang lain, bukan perkiraan berdasarkan penampilan.
+47-01|food|この~40 / {x} / は / おいしい~303 / そう / です / 。|おいしいそうです / おいしそうです / おいしなそうです / おいしくそうです|Katanya {x} ini enak.|Sampaikan kabar dari orang lain, bukan perkiraan berdasarkan penampilan.
+47-03|people|{x} / は / 明日[あした]~140 / 来[こ]ない~158 / そう / です / 。||Katanya {x} tidak datang besok.|Sampaikan kabar bahwa orang ini tidak datang besok.
+47-06|people|{x} / は / 疲[つか]れている~484 / ように / 見[み]えます~940 / 。||{X} tampak lelah.|
+48-03|food|母[はは]~271 / は / 子供[こども]~354 / に / {x} / を / 食[た]べさせました~197 / 。|食べさせました / 食べるさせました / 食べしさせました / 食べられました|Ibu menyuruh anak makan {x}.|Menyatakan tindakan menyuruh anak makan.
+48-03|writeables|先生[せんせい]~11 / は / 学生[がくせい]~13 / に / {x} / を / 書[か]かせました~203 / 。||Guru menyuruh siswa menulis {x}.|Menyatakan tindakan menyuruh siswa menulis.
+48-05|places|父[ちち]~270 / は / 私[わたし]~2 / を / {x} / へ / 行[い]かせて~157 / くれました~846 / 。||Ayah mengizinkan saya pergi ke {x}.|Menyatakan izin dari ayah kepada saya.
+48-06|tools|この~40 / {x} / を / 使[つか]わせて~554 / いただけませんか / 。|使わせていただけませんか / 使いさせていただけませんか / 使うせていただけませんか / 使わせるいただけませんか|Bolehkah saya menggunakan {x} ini?|
+49-04|honored|{x} / は / 教室[きょうしつ]~85 / に / いらっしゃいます~1629 / 。||{X} ada di ruang kelas.|Gunakan bahasa hormat untuk orang yang dibicarakan.
+49-05|drinks|先生[せんせい]~11 / は / {x} / を / 召[め]し上[あ]がります~1633 / 。||Guru minum {x}.|Hormati guru sebagai pelaku tindakan minum.
+49-07|papers|先生[せんせい]~11 / は / この~40 / {x} / を / ご覧[らん]になります~1632 / 。||Guru melihat {x} ini.|Hormati guru sebagai pelaku tindakan melihat.
+49-02|honored|{x} / は / もう~274 / お帰[かえ]りになりました~1636 / 。|お帰りになりました / お帰るになりました / お帰ってになりました / お帰りをなりました|{X} sudah pulang.|Gunakan bentuk hormat o + bentuk masu tanpa masu + ni narimasu.
+50-01|goods|私[わたし]~2 / が / {x} / を / お持[も]ちします~524 / 。||Saya akan membawakan {x}.|Rendahkan diri sebagai pelaku yang membantu orang lain.
+50-03|places|来週[らいしゅう]~180 / {x} / へ / 参[まい]ります~1660 / 。||Minggu depan saya akan pergi ke {x}.|Gunakan bentuk merendahkan diri untuk tindakan saya sendiri.
+50-04|rooms|私[わたし]~2 / は / {x} / に / おります~1661 / 。||Saya berada di {x}.|Gunakan bentuk merendahkan diri untuk saya sendiri.
+50-08|papers|{x} / を / 拝見[はいけん]しました~1666 / 。|拝見しました / ご覧になりました / お目にかかりました / おっしゃいました|Saya sudah melihat {x}.|Rendahkan diri sebagai pelaku tindakan melihat.

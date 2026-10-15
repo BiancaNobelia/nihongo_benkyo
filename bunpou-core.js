@@ -1,4 +1,4 @@
-import {shuffle} from './core.js?v=20261015-bunpou-furigana';
+import {shuffle} from './core.js?v=20261015-bunpou-expanded';
 
 export const BUNPOU_HISTORY_KEY='nihongo-benkyo-bunpou-history-v1';
 export const BUNPOU_ALL_CHAPTERS=Array.from({length:50},(_,i)=>i+1);
@@ -10,7 +10,24 @@ export function bunpouPool(entries,{chapters=BUNPOU_ALL_CHAPTERS}={}) {
 export function createBunpouQuiz(entries,settings={},history={},random=Math.random) {
   const count=settings.count??10;
   if(!Number.isSafeInteger(count)||count<1)return [];
-  const pool=shuffle(bunpouPool(entries,settings),random).sort((a,b)=>(history[a.id]||0)-(history[b.id]||0));
+  const tiers=new Map();
+  for(const q of shuffle(bunpouPool(entries,settings),random)){
+    const exposure=history[q.id]||0;
+    if(!tiers.has(exposure))tiers.set(exposure,new Map());
+    const groups=tiers.get(exposure),pattern=q.patternId||q.id;
+    if(!groups.has(pattern))groups.set(pattern,[]);
+    groups.get(pattern).push(q);
+  }
+  // Rotate patterns within each exposure tier so vocabulary variants do not bunch together.
+  // Previously unseen questions still come before any question already displayed.
+  const pool=[];
+  for(const [,groups] of [...tiers].sort(([a],[b])=>a-b)){
+    let remaining=[...groups.values()];
+    while(remaining.length){
+      for(const group of remaining)pool.push(group.shift());
+      remaining=remaining.filter(group=>group.length);
+    }
+  }
   return pool.slice(0,count).map(q=>({...q,options:shuffle([q.answer,...q.distractors],random)}));
 }
 export function cleanBunpouHistory(raw,entries) {
