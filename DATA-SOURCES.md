@@ -855,3 +855,13 @@ Khusus 33-01, contoh satu kata `止まれ！` diperluas menjadi
 Adaptasi hanya berlaku pada mode Susun Kalimat; contoh Lengkapi tidak berubah.
 `scripts/build_bunpou.py` membangun kedua mode sekaligus dan memastikan
 setiap baris sumber memiliki tepat satu set potongan.
+
+### Furigana Bunpou — 15 Oktober 2026
+
+`data/bunpou-furigana.txt` mencatat bacaan kanji per kalimat untuk semua
+330 contoh, termasuk adaptasi 33-01 pada Susun Kalimat. Bacaan ditinjau
+sesuai konteks, misalnya 来ました／来る／来ない, 何の／何を, dan
+遅く／遅れる. Okurigana tetap berada di luar furigana.
+Build memastikan teks kalimat tidak berubah dan setiap kanji memiliki
+bacaan. Website menampilkan ruby di kalimat jawaban dan tinjauan setelah
+menjawab, serta contoh pada katalog pola; soal awal tidak diberi furigana.

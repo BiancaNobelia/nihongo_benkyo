@@ -66,7 +66,9 @@ test('rotation prioritizes unseen questions, keeps old history, and records only
 test('feedback contains full meaning and grammatical explanation for every source row and escapes content',()=>{
   for(const q of entries){
     const html=bunpouFeedbackMarkup(q,escape);
-    for(const key of ['answer','translation','pattern','meaning','structure','note'])assert.ok(html.includes(escape(q[key])),`${q.id} ${key}`);
+    const base=html.replace(/<rt>.*?<\/rt>/g,'').replace(/<[^>]+>/g,'');
+    assert.ok(base.includes(escape(q.example)),q.id);
+    for(const key of ['translation','pattern','meaning','structure','note'])assert.ok(html.includes(escape(q[key])),`${q.id} ${key}`);
     assert.ok(html.includes(`BAB ${q.chapter}`));
   }
   const q={...entries[0],before:'<script>',after:'"<&',answer:'<img>',pattern:'<svg>',note:'<script>alert(1)</script>'};

@@ -1,4 +1,4 @@
-import {shuffle} from './core.js?v=20261015-bunpou-order';
+import {shuffle} from './core.js?v=20261015-bunpou-furigana';
 
 export const BUNPOU_HISTORY_KEY='nihongo-benkyo-bunpou-history-v1';
 export const BUNPOU_ALL_CHAPTERS=Array.from({length:50},(_,i)=>i+1);
@@ -23,6 +23,24 @@ export function recordBunpouShown(history,id) {
 export function bunpouPromptMarkup(q,escape) {
   return `<span lang="ja">${escape(q.before)}<span class="bunpou-blank" aria-label="Bagian yang harus dilengkapi">（　？　）</span>${escape(q.after)}</span>`;
 }
+export function bunpouSentenceMarkup(q,escape) {
+  const sentence=q.before+q.answer+q.after,start=q.before.length,end=start+q.answer.length;
+  // Highlight the answer independently of word boundaries, keeping a compound's reading intact.
+  const highlight=(text,offset)=>{
+    const a=Math.max(0,start-offset),b=Math.min(text.length,end-offset);
+    if(a>=b)return escape(text);
+    return escape(text.slice(0,a))+`<strong>${escape(text.slice(a,b))}</strong>`+escape(text.slice(b));
+  };
+  const spans=q.example===sentence&&Array.isArray(q.furigana)?q.furigana:[];
+  let html='',cursor=0;
+  for(const [offset,word,reading] of spans){
+    if(offset<cursor||sentence.slice(offset,offset+word.length)!==word)continue;
+    html+=highlight(sentence.slice(cursor,offset),cursor);
+    html+=`<ruby>${highlight(word,offset)}<rt>${escape(reading)}</rt></ruby>`;
+    cursor=offset+word.length;
+  }
+  return html+highlight(sentence.slice(cursor),cursor);
+}
 export function bunpouFeedbackMarkup(q,escape) {
-  return `<div class="answer-details bunpou-detail"><div class="bunpou-complete" lang="ja">${escape(q.before)}<strong>${escape(q.answer)}</strong>${escape(q.after)}</div><div class="answer-meaning"><span>Arti kalimat</span><p>${escape(q.translation)}</p></div><div class="bunpou-rule"><span>POLA · BAB ${q.chapter}</span><h3 lang="ja">${escape(q.pattern)}</h3><p>${escape(q.meaning)}</p><dl><div><dt>Rumus</dt><dd>${escape(q.structure)}</dd></div><div><dt>Catatan</dt><dd>${escape(q.note)}</dd></div></dl></div></div>`;
+  return `<div class="answer-details bunpou-detail"><div class="bunpou-complete" lang="ja">${bunpouSentenceMarkup(q,escape)}</div><div class="answer-meaning"><span>Arti kalimat</span><p>${escape(q.translation)}</p></div><div class="bunpou-rule"><span>POLA · BAB ${q.chapter}</span><h3 lang="ja">${escape(q.pattern)}</h3><p>${escape(q.meaning)}</p><dl><div><dt>Rumus</dt><dd>${escape(q.structure)}</dd></div><div><dt>Catatan</dt><dd>${escape(q.note)}</dd></div></dl></div></div>`;
 }

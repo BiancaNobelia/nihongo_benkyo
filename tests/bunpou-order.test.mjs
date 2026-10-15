@@ -105,7 +105,8 @@ test('order hints reveal the requested Indonesian meaning and pattern but not th
     assert.ok(hint.includes(escape(q.order.translation)),q.id);assert.ok(hint.includes(escape(q.pattern)),q.id);
     assert.ok(hint.includes(escape(q.structure)),q.id);assert.ok(!hint.includes(escape(q.order.example)),q.id);
     const feedback=bunpouFeedbackMarkup(orderFeedbackEntry(q),escape);
-    assert.ok(feedback.includes(escape(q.order.example)),q.id);assert.ok(feedback.includes(escape(q.order.translation)),q.id);
+    const base=feedback.replace(/<rt>.*?<\/rt>/g,'').replace(/<[^>]+>/g,'');
+    assert.ok(base.includes(escape(q.order.example)),q.id);assert.ok(feedback.includes(escape(q.order.translation)),q.id);
   }
   const q=get('33-01');assert.equal(orderFeedbackEntry(q).answer,'すぐにここで止まれ！');
   const malicious={...q,pattern:'<img>',order:{...q.order,translation:'<script>alert(1)</script>'}};

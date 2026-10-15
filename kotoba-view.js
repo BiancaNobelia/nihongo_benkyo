@@ -1,7 +1,7 @@
-import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261015-bunpou-order';
-import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261015-bunpou-order';
-import { requestedQuizCount } from './quiz-settings.js?v=20261015-bunpou-order';
-import { shuffle } from './core.js?v=20261015-bunpou-order';
+import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261015-bunpou-furigana';
+import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261015-bunpou-furigana';
+import { requestedQuizCount } from './quiz-settings.js?v=20261015-bunpou-furigana';
+import { shuffle } from './core.js?v=20261015-bunpou-furigana';
 
 export function createKotobaView({root,escape,icon,heading,activity,recordSession}) {
   let course=kotobaCourse('minna');

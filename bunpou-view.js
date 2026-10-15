@@ -1,9 +1,9 @@
-import {BUNPOU_ORDER_HISTORY_KEY,createBunpouOrderQuiz,shuffleOrderTiles,moveOrderTile,orderAnswerText,checkOrderAnswer,orderHintMarkup,orderFeedbackEntry} from './bunpou-order-core.js?v=20261015-bunpou-order';
-import {BUNPOU_ENTRIES,BUNPOU_CHAPTERS} from './bunpou-data.js?v=20261015-bunpou-order';
-import {BUNPOU_HISTORY_KEY,BUNPOU_ALL_CHAPTERS,bunpouPool,createBunpouQuiz,cleanBunpouHistory,recordBunpouShown,bunpouPromptMarkup,bunpouFeedbackMarkup} from './bunpou-core.js?v=20261015-bunpou-order';
-import {chapterLabel} from './kotoba-core.js?v=20261015-bunpou-order';
-import {requestedQuizCount} from './quiz-settings.js?v=20261015-bunpou-order';
-import {shuffle} from './core.js?v=20261015-bunpou-order';
+import {BUNPOU_ORDER_HISTORY_KEY,createBunpouOrderQuiz,shuffleOrderTiles,moveOrderTile,orderAnswerText,checkOrderAnswer,orderHintMarkup,orderFeedbackEntry} from './bunpou-order-core.js?v=20261015-bunpou-furigana';
+import {BUNPOU_ENTRIES,BUNPOU_CHAPTERS} from './bunpou-data.js?v=20261015-bunpou-furigana';
+import {BUNPOU_HISTORY_KEY,BUNPOU_ALL_CHAPTERS,bunpouPool,createBunpouQuiz,cleanBunpouHistory,recordBunpouShown,bunpouPromptMarkup,bunpouFeedbackMarkup} from './bunpou-core.js?v=20261015-bunpou-furigana';
+import {chapterLabel} from './kotoba-core.js?v=20261015-bunpou-furigana';
+import {requestedQuizCount} from './quiz-settings.js?v=20261015-bunpou-furigana';
+import {shuffle} from './core.js?v=20261015-bunpou-furigana';
 
 export function createBunpouView({root,escape,icon,heading,activity,recordSession}) {
   const preferences={mode:'cloze',chapters:[...BUNPOU_ALL_CHAPTERS],countChoice:'10',customCount:'30',time:0};

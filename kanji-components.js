@@ -1,5 +1,5 @@
-import { KANJI } from './kanji-data.js?v=20261015-bunpou-order';
-import { KANJI_COMPONENTS } from './kanji-components-data.js?v=20261015-bunpou-order';
+import { KANJI } from './kanji-data.js?v=20261015-bunpou-furigana';
+import { KANJI_COMPONENTS } from './kanji-components-data.js?v=20261015-bunpou-furigana';
 
 const meanings = new Map(KANJI.map(k => [k.char, k.meaning]));
 

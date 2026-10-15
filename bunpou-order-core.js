@@ -1,5 +1,5 @@
-import {shuffle} from './core.js?v=20261015-bunpou-order';
-import {createBunpouQuiz} from './bunpou-core.js?v=20261015-bunpou-order';
+import {shuffle} from './core.js?v=20261015-bunpou-furigana';
+import {createBunpouQuiz} from './bunpou-core.js?v=20261015-bunpou-furigana';
 
 export const BUNPOU_ORDER_HISTORY_KEY='nihongo-benkyo-bunpou-order-history-v1';
 
@@ -42,5 +42,6 @@ export function orderHintMarkup(q,escape) {
 }
 
 export function orderFeedbackEntry(q) {
-  return {...q,before:'',answer:q.order.example,after:'',translation:q.order.translation};
+  return {...q,before:'',answer:q.order.example,after:'',example:q.order.example,
+    furigana:q.order.furigana??q.furigana,translation:q.order.translation};
 }
