@@ -1,6 +1,6 @@
-import { selectReadingQuestions } from './reading-balance.js?v=20261015-henkan-forms';
-import { readingOptions } from './reading-options.js?v=20261015-henkan-forms';
-import { withReadingSentence } from './reading-sentences.js?v=20261015-henkan-forms';
+import { selectReadingQuestions } from './reading-balance.js?v=20261015-bunpou';
+import { readingOptions } from './reading-options.js?v=20261015-bunpou';
+import { withReadingSentence } from './reading-sentences.js?v=20261015-bunpou';
 
 export function filterReadingQuestions(bank, level = 'all') {
   return bank.filter(q => level === 'all' || q.level === level);

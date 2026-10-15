@@ -1,0 +1,331 @@
+# source id | target in the example | three reviewed distractors | optional intent cue
+bunpou-01-01|は|を|に|へ
+bunpou-01-02|じゃありません|じゃです|ではます|じゃあります
+bunpou-01-03|ですか|ですを|ですに|ですで
+bunpou-01-04|も|を|ので|へ
+bunpou-01-05|の|を|で|に
+bunpou-01-06|歳|枚|台|冊
+bunpou-02-01|これ|この|ここに|どの
+bunpou-02-02|その|それ|そこ|そちら
+bunpou-02-03|の|を|に|で
+bunpou-02-04|のです|をです|にです|がです
+bunpou-02-05|ですか、|ですに、|ですを、|ですの、
+bunpou-02-06|何の|何を|何に|何で
+bunpou-03-01|あそこ|あの|あそこに|あそこを
+bunpou-03-02|こちら|この|これを|ここに
+bunpou-03-03|どこ|だれ|いつ|いくら|Tanyakan lokasi perpustakaan.
+bunpou-03-04|どこの|どこを|どこに|どこで
+bunpou-03-05|いくら|いつ|だれ|どこ|Tanyakan harga buku ini.
+bunpou-03-06|は|を|に|へ
+bunpou-04-01|三時半|三時間半|三分半|三日半|Nyatakan pukul setengah empat sore, bukan lamanya waktu.
+bunpou-04-02|日曜日|日時間|日週間|日月曜日
+bunpou-04-03|勉強します|勉強ます|勉強しです|勉強するます
+bunpou-04-04|しませんでした|しませんだった|しないでした|しませんでた|Nyatakan bahwa kemarin tidak berolahraga, dengan bentuk sopan.
+bunpou-04-05|に|を|と|が
+bunpou-04-06|から十二時まで|まで十二時から|から十二時から|まで十二時まで
+bunpou-04-07|と|を|に|へ
+bunpou-05-01|へ|を|で|が
+bunpou-05-02|で|に|を|と
+bunpou-05-03|と|を|が|の
+bunpou-05-04|一人で|一人を|一人に|一人と
+bunpou-05-05|どこへも|どこへか|どこのも|どこではも
+bunpou-05-06|いつ|だれ|いくら|どれ|Tanyakan kapan seseorang pulang ke Jepang.
+bunpou-05-07|六月二十日|六日二十月|六時二十分|六年二十人|Nyatakan tanggal ulang tahun: 20 Juni.
+bunpou-06-01|を|に|で|へ
+bunpou-06-02|何を|何に|何で|何が|Tanyakan kegiatan apa yang dilakukan pada hari libur.
+bunpou-06-03|で|に|を|へ
+bunpou-06-04|を|に|で|へ
+bunpou-06-05|食べませんか|食べないましたか|食べますないか|食べませんだか
+bunpou-06-06|休みましょう|休むましょう|休みでしょう|休みますしょう
+bunpou-06-07|何も|何か|どれか|いつか|Nyatakan bahwa kemarin tidak membeli apa pun.
+bunpou-07-01|で|に|を|へ
+bunpou-07-02|で|に|を|と
+bunpou-07-03|日本語で|日本語を|日本語に|日本語が
+bunpou-07-04|あげました|もらいました|いただきました|くれました|Saya memberikan hadiah kepada adik perempuan saya.
+bunpou-07-05|もらいました|あげました|くれました|やりました|Saya menerima buku dari senior.
+bunpou-07-06|もう|まだ|これから|いつか|Nyatakan bahwa PR sudah dikumpulkan.
+bunpou-07-07|まだです|もうです|まだました|まだません
+bunpou-08-01|長いです|長いなです|長くです|長いだです
+bunpou-08-02|静かです|静かなです|静かいです|静かくです
+bunpou-08-03|寒くないです|寒いないです|寒いじゃです|寒くではです
+bunpou-08-04|きれいじゃありません|きれくないです|きれいなありません|きれいくありません
+bunpou-08-05|新しい|新しく|新しいな|新しいの
+bunpou-08-06|便利な|便利い|便利く|便利を
+bunpou-08-07|あまり|とても|たいへん|たくさん|Nyatakan bahwa ujian ini tidak terlalu sulit.
+bunpou-08-08|が、|を、|に、|で、|Hubungkan dua sifat yang berlawanan: luas, tetapi agak gelap.
+bunpou-09-01|が|を|に|へ
+bunpou-09-02|が|を|に|へ
+bunpou-09-03|が|を|に|へ
+bunpou-09-04|が|を|に|へ
+bunpou-09-05|が|で|に|へ
+bunpou-09-06|が|を|で|へ
+bunpou-09-07|から|まで|より|しか|Hubungkan alasan adanya ujian dengan keputusan belajar malam ini.
+bunpou-09-08|どうして|どこで|だれと|いくら|Tanyakan alasan seseorang mengambil cuti.
+bunpou-10-01|あります|います|あるます|いるます
+bunpou-10-02|います|あります|いるます|いです
+bunpou-10-03|にあります|であります|をあります|にいます
+bunpou-10-04|にいます|でいます|をいます|にあります
+bunpou-10-05|の隣に|を隣に|に隣に|で隣に
+bunpou-10-06|や|を|に|へ
+bunpou-11-01|三つ|三人|三台|三冊
+bunpou-11-02|二つ|二人|二台|二冊
+bunpou-11-03|五人|五台|五冊|五枚
+bunpou-11-04|五枚|五人|五台|五歳
+bunpou-11-05|に|を|へ|と
+bunpou-11-06|二時間|二時|二時に|二時間を
+bunpou-11-07|かかります|かけます|かかるます|かかりです
+bunpou-11-08|どのくらい|何人|何冊|何歳|Tanyakan perkiraan lamanya waktu perjalanan.
+bunpou-12-01|暑かったです|暑いでした|暑いかったです|暑くでした
+bunpou-12-02|難しくなかったです|難しいなかったです|難しくないでした|難しくなかったでした
+bunpou-12-03|暇でした|暇かったです|暇なでした|暇くでした
+bunpou-12-04|より|まで|から|だけ
+bunpou-12-05|どちらが|どちらを|どちらに|どちらで
+bunpou-12-06|のほうが|のほうを|のほうに|のほうで
+bunpou-12-07|いちばん|いちど|いっぱい|いっしょ
+bunpou-12-08|どうでしたか|どうかったですか|どうですでしたか|どうなでしたか
+bunpou-13-01|が|に|で|へ
+bunpou-13-02|行きたいです|行くたいです|行きたいだです|行ってたいです
+bunpou-13-03|出たくないです|出たいないです|出たいじゃです|出なくたいです
+bunpou-13-04|借りに|借りてに|借りるに|借りますに
+bunpou-13-05|に|を|で|が
+bunpou-14-01|読んで|読みて|読って|読いて
+bunpou-14-02|書いてください|書きてください|書くください|書いたください
+bunpou-14-03|開けましょうか|開けるましょうか|開けでしょうか|開けますしょうか
+bunpou-14-04|書いています|書きています|書くています|書いたいます
+bunpou-14-05|していますか|するいますか|しるいますか|したいますか
+bunpou-15-01|撮ってもいいです|撮るもいいです|撮りてもいいです|撮ったもいいです
+bunpou-15-02|使ってもいいですか|使うもいいですか|使っていいもですか|使ったもいいですか
+bunpou-15-03|吸ってはいけません|吸うはいけません|吸いではいけません|吸ったはいけません
+bunpou-15-04|住んでいます|住みています|住んています|住むています
+bunpou-15-05|教えています|教えるています|教えたいます|教えるいます
+bunpou-16-01|起きて|起きるて|起きって|起きたて
+bunpou-16-02|してから|するから|したから|しから|Nyatakan urutan: selesai mengerjakan PR dahulu, baru bermain game.
+bunpou-16-03|安くて|安いで|安いくて|安なて
+bunpou-16-04|静かで|静かくて|静かなて|静かいで
+bunpou-16-05|医者で|医者くて|医者いて|医者なて
+bunpou-16-06|が|を|に|へ
+bunpou-17-01|行かない|行きない|行くない|行けない|Gunakan bentuk negatif dari 行く: tidak pergi, bukan tidak bisa pergi.
+bunpou-17-02|止めないで|止めなくて|止めるないで|止めないて
+bunpou-17-03|出さなければ|出すなければ|出しなければ|出さないければ
+bunpou-17-04|脱がなくても|脱ぐなくても|脱ぎなくても|脱がないても
+bunpou-17-05|は|が|に|へ|Jadikan dokumen ini sebagai topik: dokumen ini belum akan saya baca.
+bunpou-18-01|寝る|寝まする|寝ります|寝るます|Gunakan bentuk kamus dari 寝ます.
+bunpou-18-02|できます|できるます|できです|できるです
+bunpou-18-03|読むことが|読みことが|読んでことが|読むのが
+bunpou-18-04|撮ること|撮りこと|撮ってこと|撮りますこと
+bunpou-18-05|寝る前に|寝た前に|寝ます前に|寝て前に
+bunpou-18-06|年前に|年後に|年から|年まで|Nyatakan waktu tiga tahun yang lalu.
+bunpou-19-01|食べた|食べった|食べるた|食べましたた
+bunpou-19-02|登ったことが|登ることが|登りことが|登ってことが|Nyatakan pengalaman pernah mendaki Gunung Fuji.
+bunpou-19-03|掃除したり|掃除してり|掃除するたり|掃除しますたり
+bunpou-19-04|寒く|寒いに|寒いく|寒いで
+bunpou-19-05|に|を|で|が
+bunpou-20-01|行く|行きです|行くだです|行くます
+bunpou-20-02|行かなかった|行かないだった|行きなかった|行くなかった
+bunpou-20-03|暑い|暑いだ|暑く|暑いな
+bunpou-20-04|静かだ|静かなだ|静かい|静かく
+bunpou-20-05|忙しい|忙しいだ|忙しく|忙しいな
+bunpou-20-06|うん|ううん|いいえ|まだ|Jawab dengan persetujuan santai: iya, aku sudah makan.
+bunpou-21-01|便利だと|便利と|便利なと|便利でと
+bunpou-21-02|降ると|降りますと|降ってと|降りと
+bunpou-21-03|と言いました|と言いでした|と言うました|と言いますた
+bunpou-21-04|来ると|来ますと|来てと|来るを
+bunpou-21-05|でしょう|でましょう|だましょう|ですしょう
+bunpou-22-01|買った|買いましたの|買っての|買ったの
+bunpou-22-02|作った|作りましたの|作っての|作ったの
+bunpou-22-03|撮った|撮りましたの|撮っての|撮ったの
+bunpou-22-04|行く|行きますの|行っての|行くの
+bunpou-22-05|行く時間|行きます時間|行って時間|行くの時間
+bunpou-23-01|出かけるとき|出かけますとき|出かけてとき|出かけるのとき
+bunpou-23-02|帰ったとき|帰りましたとき|帰ってとき|帰ったのとき
+bunpou-23-03|行かないとき|行かないのとき|行かなくとき|行きませんとき
+bunpou-23-04|眠いとき|眠くとき|眠いのとき|眠いなとき
+bunpou-23-05|暇なとき|暇のとき|暇だとき|暇くとき
+bunpou-23-06|押すと|押してと|押したと|押しと
+bunpou-23-07|急がないと|急がなくと|急ぎないと|急ぐないと
+bunpou-24-01|くれました|あげました|もらいました|いただきました|Teman memberikan camilan kepada saya; teman adalah pelakunya.
+bunpou-24-02|教えてあげました|教えてくれました|教えてもらいました|教えていただきました|Saya membantu teman dengan mengajarkan kanji; saya pemberi bantuan.
+bunpou-24-03|直してもらいました|直してあげました|直してくれました|直してやりました|Saya menerima bantuan dari dosen untuk mengoreksi karangan.
+bunpou-24-04|運んでくれました|運んであげました|運んでもらいました|運んでいただきました|Senior membantu saya dengan mengangkat barang saya.
+bunpou-24-05|くれました|あげました|もらいました|いただきました|Ibu memberikan buku kepada saya; ibu adalah pemberi.
+bunpou-25-01|あったら|あるたら|あってら|ありたら
+bunpou-25-02|安かったら|安いたら|安くたら|安いだったら
+bunpou-25-03|暇だったら|暇かったら|暇くたら|暇なたら
+bunpou-25-04|日曜日だったら|日曜日かったら|日曜日たら|日曜日くたら
+bunpou-25-05|降っても|降るても|降ったも|降りても
+bunpou-25-06|高くても|高いても|高いでも|高くでも
+bunpou-25-07|休みでも|休みても|休みくても|休みなても
+bunpou-25-08|着いたら|着くたら|着いてら|着きたら
+bunpou-26-01|忙しいんです|忙しいなんです|忙しくんです|忙しいだんです
+bunpou-26-02|したんですか|したなんですか|しただんですか|してなんですか
+bunpou-26-03|休んだんですか|休んだなんですか|休んだだんですか|休みましたんですか
+bunpou-26-04|わからないんですが|わからないなんですが|わからなくんですが|わからないだんですが
+bunpou-26-05|説明していただけませんか|説明するいただけませんか|説明したいただけませんか|説明しいただけませんか
+bunpou-26-06|買ったら|買うたら|買ってら|買いたら
+bunpou-26-07|したいんですが|したいなんですが|したくだんですが|したいだんですが
+bunpou-27-01|話せます|話しれます|話すれます|話さられます
+bunpou-27-02|読めます|読みれます|読むれます|読まれます|Nyatakan kemampuan membaca kanji, bukan bentuk pasif.
+bunpou-27-03|見えます|見えるます|見えります|見るえます
+bunpou-27-04|聞こえます|聞こえるます|聞こえります|聞くこえます
+bunpou-27-05|できました|できるました|できでした|できますた
+bunpou-27-06|しか|だけ|ぐらい|ほど|Nyatakan hanya ada 1.000 yen; perhatikan bentuk negatif ありません.
+bunpou-27-07|は食べません|を食べないました|が食べませんだ|に食べません|Gunakan は untuk membandingkan ikan dan daging.
+bunpou-28-01|聞きながら|聞くながら|聞いてながら|聞いたながら
+bunpou-28-02|走っています|走るています|走りています|走ったいます
+bunpou-28-03|広いし|広いだし|広くし|広いなし
+bunpou-28-04|寒いし|寒いだし|寒くし|寒いなし
+bunpou-28-05|それに|それを|それが|それの|Tambahkan alasan kedua: selain murah, juga dekat stasiun.
+bunpou-29-01|開いています|開けています|開くています|開いてあります|Gunakan verba intransitif 開く untuk keadaan pintu yang terbuka.
+bunpou-29-02|割れています|割っています|割れるています|割れたいます|Gunakan verba intransitif 割れる untuk keadaan jendela yang pecah.
+bunpou-29-03|やってしまいます|やるしまいます|やりてしまいます|やったしまいます
+bunpou-29-04|なくしてしまいました|なくすしまいました|なくしたしまいました|なくししまいました
+bunpou-29-05|書いてしまいました|書くしまいました|書きてしまいました|書いたしまいました
+bunpou-30-01|置いてあります|置くてあります|置いています|置いていますある|Nyatakan hasil tindakan sengaja menaruh dokumen, dengan ～てあります.
+bunpou-30-02|並べてあります|並べるてあります|並べたあります|並べてあるます
+bunpou-30-03|予約しておきます|予約するおきます|予約したおきます|予約しおきます
+bunpou-30-04|閉めておきます|閉めるおきます|閉めたおきます|閉めておくます
+bunpou-30-05|開けておいて|開けるおいて|開けたおいて|開けておくて
+bunpou-30-06|しとく|するっとく|したとく|してとく
+bunpou-31-01|見よう|見るよう|見ろう|見ようる
+bunpou-31-02|受けようと|受けるようと|受けろうと|受けようを
+bunpou-31-03|寝ようと|寝るようと|寝ろうと|寝ようを
+bunpou-31-04|食べていません|食べるていません|食べたいません|食べてありません
+bunpou-31-05|行くつもり|行きつもり|行ってつもり|行きますつもり
+bunpou-31-06|しないつもり|しなくつもり|しないのつもり|しませんつもり
+bunpou-31-07|始まる予定|始まり予定|始まります予定|始まって予定
+bunpou-32-01|休んだほうが|休みたほうが|休んでほうが|休みましたほうが
+bunpou-32-02|飲まないほうが|飲まなくほうが|飲みないほうが|飲みませんほうが
+bunpou-32-03|晴れるでしょう|晴れますでしょう|晴れるだでしょう|晴れてでしょう
+bunpou-32-04|遅れるかもしれません|遅れますかもしれません|遅れてかもしれません|遅れるだかもしれません
+bunpou-32-05|大丈夫でしょうか|大丈夫なでしょうか|大丈夫だでしょうか|大丈夫ででしょうか
+bunpou-33-01|止まれ|止まろ|止まるろ|止まってれ
+bunpou-33-02|入るな|入りな|入れな|入ってな|Gunakan larangan langsung dengan bentuk kamus + な.
+bunpou-33-03|と書いてあります|と書くあります|と書いたあります|と書いてあるます
+bunpou-33-04|と読みます|と読むます|と読んだます|と読みです
+bunpou-33-05|という意味|をいう意味|にいう意味|でいう意味
+bunpou-33-06|あると言っていました|あると言ったいました|あってと言っていました|あるを言っていました
+bunpou-33-07|と伝えて|を伝えて|に伝えて|で伝えて
+bunpou-34-01|言うとおりに|言うをとおりに|言ってとおりに|言うのとおりに
+bunpou-34-02|のとおりに|なとおりに|をとおりに|だとおりに
+bunpou-34-03|書いたあとで|書くあとで|書いてあとで|書きますあとで
+bunpou-34-04|のあとで|なあとで|をあとで|だあとで
+bunpou-34-05|持って|持つて|持ちて|持ったて
+bunpou-34-06|食べないで|食べなくて|食べるないで|食べないて|Nyatakan pergi ke sekolah tanpa melakukan sarapan.
+bunpou-34-07|撮らないで|撮らなくて|撮るないで|撮らないて
+bunpou-35-01|あれば|あるば|あれれば|ありば
+bunpou-35-02|降らなければ|降らないば|降りなければ|降るなければ
+bunpou-35-03|安ければ|安いければ|安くければ|安けるば
+bunpou-35-04|暇なら|暇だなら|暇のなら|暇ななら
+bunpou-35-05|なら|をなら|だなら|ななら
+bunpou-35-06|押せば|押すば|押しば|押さば
+bunpou-35-07|申し込めば|申し込むば|申し込みば|申し込まば
+bunpou-36-01|話せるように|話せるような|話せるのように|話せるをように
+bunpou-36-02|忘れないように|忘れなくように|忘れなくてように|忘れないのように
+bunpou-36-03|読めるように|読めますように|読めてように|読めるのように
+bunpou-36-04|食べなく|食べないに|食べないく|食べないで
+bunpou-36-05|起きるように|起きますように|起きてように|起きるのように
+bunpou-36-06|遅れないように|遅れなくように|遅れないのように|遅れてように
+bunpou-36-07|閉まるように|閉まりますように|閉まってように|閉まるのように
+bunpou-37-01|読まれています|読まるています|読まれてあります|読まれたいます
+bunpou-37-02|ほめられました|ほめれました|ほめるれました|ほめらるました
+bunpou-37-03|壊されました|壊すれました|壊しれました|壊さられました
+bunpou-37-04|降られて|降るれて|降りられて|降らせて
+bunpou-37-05|造られました|造りれました|造るれました|造らるました
+bunpou-37-06|勉強されています|勉強するれています|勉強しれています|勉強さられています
+bunpou-37-07|によって|について|にとって|に対して
+bunpou-38-01|起きるのは|起きますのは|起きてのは|起きるをは
+bunpou-38-02|作るのが|作りますのが|作ってのが|作るをが
+bunpou-38-03|描くのが|描きますのが|描いてのが|描くをが
+bunpou-38-04|閉めるのを|閉めますのを|閉めてのを|閉めるがを
+bunpou-38-05|できたのを|できましたのを|できてのを|できたがを
+bunpou-38-06|来たのは|来ましたのは|来たをは|来てのは
+bunpou-38-07|泳ぐのは|泳ぎますのは|泳いでのは|泳ぐをは
+bunpou-39-01|会えて|会えるて|会えてで|会えたて
+bunpou-39-02|来なくて|来ないくて|来るなくて|来なくで|Nyatakan penyebab kesulitan: bus tidak datang.
+bunpou-39-03|狭くて|狭いで|狭いくて|狭いなて
+bunpou-39-04|静かで|静かくて|静かなて|静かいで
+bunpou-39-05|で|を|と|へ
+bunpou-39-06|あるので|ありので|あるなので|あるだので
+bunpou-39-07|休日なので|休日ので|休日だので|休日なから
+bunpou-40-01|始まるか|始まるが|始まるを|始まるで
+bunpou-40-02|かどうか|がどうが|をどうを|とどうと
+bunpou-40-03|便利かどうか|便利だかどうか|便利なかどうか|便利のかどうか
+bunpou-40-04|いいか|いいが|いいを|いいで
+bunpou-40-05|食べてみます|食べるみます|食べたみます|食べて見るます
+bunpou-40-06|入ってみたいです|入るみたいです|入りてみたいです|入ったみたいです|Nyatakan keinginan mencoba berendam, bukan kesan atau perkiraan.
+bunpou-41-01|いただきました|くださいました|差し上げました|やりました|Saya menerima buku dari dosen; gunakan bentuk rendah hati.
+bunpou-41-02|くださいました|いただきました|差し上げました|あげました|Dosen memberikan dokumen kepada saya; hormati dosen sebagai pemberi.
+bunpou-41-03|やります|いただきます|くださいます|もらいます|Saya memberi air kepada anjing; gunakan やる untuk penerima hewan.
+bunpou-41-04|書いていただきました|書いてくださいました|書いてやりました|書いてあげました|Saya menerima bantuan dosen menulis surat rekomendasi.
+bunpou-41-05|説明してくださいました|説明していただきました|説明してやりました|説明してあげました|Dosen berkenan membantu saya dengan memberi penjelasan.
+bunpou-41-06|連れていってやりました|連れていくやりました|連れていったやりました|連れていってやるました
+bunpou-41-07|読んでくださいませんか|読むくださいませんか|読みてくださいませんか|読んだくださいませんか
+bunpou-42-01|働くために|働きために|働いてために|働くのために
+bunpou-42-02|のために|をために|なために|だために
+bunpou-42-03|覚えるのに|覚えますのに|覚えてのに|覚えるなのに
+bunpou-42-04|に|を|が|と
+bunpou-42-05|歩くのに|歩きのに|歩いてのに|歩くなのに
+bunpou-42-06|に|を|へ|と
+bunpou-42-07|話せるように|話せるのために|話せますように|話せるような
+bunpou-43-01|降りそうです|降るそうです|降ってそうです|降ったそうです|Nyatakan kesan dari tanda yang terlihat: hujan tampaknya akan turun, bukan kabar dari orang lain.
+bunpou-43-02|おいしそうです|おいしいそうです|おいしくそうです|おいしなそうです|Nyatakan kesan dari penampilan kue, bukan kabar dari orang lain.
+bunpou-43-03|静かそうです|静かなそうです|静かくそうです|静かだそうです|Nyatakan kesan bahwa kota tampak tenang, bukan informasi yang didengar.
+bunpou-43-04|楽しそうに|楽しそうな|楽しそうの|楽しそうを
+bunpou-43-05|おいしそうな|おいしそうに|おいしそうの|おいしそうを
+bunpou-43-06|買ってきます|買うきます|買いきます|買ったきます
+bunpou-44-01|食べすぎました|食べるすぎました|食べてすぎました|食べたすぎました
+bunpou-44-02|高すぎます|高いすぎます|高くすぎます|高なすぎます
+bunpou-44-03|静かすぎます|静かなすぎます|静かくすぎます|静かですすぎます
+bunpou-44-04|書きやすいです|書くやすいです|書いてやすいです|書いたやすいです
+bunpou-44-05|覚えにくいです|覚えるにくいです|覚えてにくいです|覚えたにくいです
+bunpou-44-06|小さく|小さいに|小さいく|小さなに
+bunpou-44-07|きれいに|きれく|きれいく|きれいなに
+bunpou-44-08|にします|をします|がします|でします|Nyatakan pilihan minuman: saya memilih teh.
+bunpou-45-01|使う場合は|使います場合は|使って場合は|使うの場合は
+bunpou-45-02|迷った場合は|迷いました場合は|迷って場合は|迷ったの場合は
+bunpou-45-03|できない場合は|できなく場合は|できません場合は|できないの場合は
+bunpou-45-04|高い場合は|高く場合は|高いな場合は|高いの場合は
+bunpou-45-05|緊急の場合は|緊急を場合は|緊急だ場合は|緊急で場合は
+bunpou-45-06|したのに|したなのに|しただのに|してのに
+bunpou-45-07|十月なのに|十月のに|十月だのに|十月にのに
+bunpou-46-01|出発するところです|出発しますところです|出発してところです|出発するのところです
+bunpou-46-02|書いているところです|書いていますところです|書いてところです|書いているのところです
+bunpou-46-03|着いたところです|着いてところです|着きましたところです|着いたのところです
+bunpou-46-04|来たばかりです|来るばかりです|来てばかりです|来ましたばかりです|Nyatakan pengalaman yang masih terasa baru bagi pembicara: datang bulan lalu.
+bunpou-46-05|着いたはずです|着きましたはずです|着いてはずです|着いたのはずです
+bunpou-46-06|忘れるはずが|忘れますはずが|忘れてはずが|忘れるのはずが
+bunpou-46-07|食べたところです|食べてところです|食べましたところです|食べたのところです
+bunpou-47-01|雨だそうです|雨そうです|雨なそうです|雨でそうです
+bunpou-47-02|によると|にとって|に対して|につれて
+bunpou-47-03|来ないそうです|来なさそうです|来るそうです|来たそうです|Sampaikan kabar bahwa dosen besok tidak datang; gunakan bentuk berita negatif, bukan perkiraan dari penampilan.
+bunpou-47-04|やんだようです|やんだのようです|やんだなようです|やみましたようです
+bunpou-47-05|のようです|なようです|だようです|をようです
+bunpou-47-06|疲れているように|疲れているような|疲れているのように|疲れていますように
+bunpou-48-01|発表させました|発表しさせました|発表するせました|発表されました|Dosen menyuruh mahasiswa presentasi; gunakan kausatif, bukan pasif.
+bunpou-48-02|遊ばせました|遊びさせました|遊ぶさせました|遊ばれました|Ibu membiarkan anak bermain; gunakan kausatif.
+bunpou-48-03|書かせました|書きさせました|書くさせました|書かれました|Dosen menyuruh mahasiswa menulis; gunakan kausatif.
+bunpou-48-04|残業させました|残業しさせました|残業するせました|残業されました|Atasan menyuruh bawahan lembur; gunakan kausatif.
+bunpou-48-05|行かせてくれました|行きさせてくれました|行くさせてくれました|行かれてくれました
+bunpou-48-06|帰らせていただけませんか|帰りさせていただけませんか|帰るせていただけませんか|帰らせるいただけませんか
+bunpou-48-07|やらせてください|やりさせてください|やるさせてください|やらせるください
+bunpou-49-01|帰られました|帰りれました|帰るれました|帰らるました
+bunpou-49-02|お帰りになります|お帰るになります|お帰ってになります|お帰りをなります
+bunpou-49-03|ご出発になりました|ご出発するになりました|ご出発をなりました|ご出発でなりました
+bunpou-49-04|いらっしゃいます|参ります|おります|伺います|Hormati keberadaan dosen; dosen adalah orang yang berada di laboratorium.
+bunpou-49-05|召し上がります|いただきます|食べられれます|召し上がるます|Gunakan bentuk hormat khusus untuk makan atau minum yang dilakukan lawan bicara.
+bunpou-49-06|おっしゃいました|申しました|申し上げました|おっしゃるました|Hormati dosen sebagai orang yang berkata.
+bunpou-49-07|ご覧になります|拝見します|ご覧をなります|ご覧するになります|Gunakan bentuk hormat untuk tindakan melihat yang dilakukan lawan bicara.
+bunpou-49-08|お待ちください|お待つください|お待ってください|お待ちるください
+bunpou-49-09|ご記入ください|ご記入するください|ご記入をください|ご記入なください
+bunpou-50-01|お持ちします|お持つします|お持ってします|お持ちるします
+bunpou-50-02|ご連絡します|ご連絡するします|ご連絡なします|ご連絡でします
+bunpou-50-03|参ります|いらっしゃいます|おいでになります|おっしゃいます|Gunakan bentuk rendah hati untuk kedatangan saya sendiri.
+bunpou-50-04|おります|いらっしゃいます|おいでになります|召し上がります|Gunakan bentuk rendah hati untuk menyatakan keberadaan saya sendiri.
+bunpou-50-05|申します|おっしゃいます|なさいます|ご覧になります|Perkenalkan nama saya dengan bentuk rendah hati.
+bunpou-50-06|いたします|なさいます|いらっしゃいます|おっしゃいます|Saya yang menyiapkan; gunakan bentuk rendah hati dari する.
+bunpou-50-07|伺います|いらっしゃいます|お越しになります|召し上がります|Saya mengunjungi dosen; gunakan bentuk rendah hati dari 訪ねる.
+bunpou-50-08|拝見します|ご覧になります|お目にかかります|おっしゃいます|Saya melihat dokumen; gunakan bentuk rendah hati dari 見る.
+bunpou-50-09|存じています|ご存じです|おっしゃっています|ご覧になっています|Saya mengetahui hal tersebut; gunakan bentuk rendah hati dari 知っています.
+bunpou-50-10|お目にかかれて|お目にかかるて|お目にかかりて|お目にかかったて
+bunpou-50-11|でございます|にございます|をございます|がございます
+bunpou-50-12|ございます|でございます|ごございます|ござるます

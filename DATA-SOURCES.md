@@ -803,3 +803,35 @@ konservatif dari pengecoh; pengecualian itu bukan daftar pola yang disarankan.
 Penjelasan Indonesia dan daftar verba untuk tiap pola disusun untuk situs
 ini. Level tetap mengikuti sumber kosakata N5–N3, bukan level tata bahasa.
 Riwayat soal lama tetap memakai ID yang sama ketika enam bentuk ditambahkan.
+
+## Kuis Bunpou — 15 Oktober 2026
+
+Sumber: workbook pengguna `Bunpou_Minna_no_Nihongo_Bab_1-50.xlsx`, sheet
+`Bunpou Bab 1-25` dan `Bunpou Bab 26-50`. Seluruh 330 baris pola dari bab 1–50
+diimpor; tidak ada baris pola yang dilewatkan. SHA-256 workbook:
+`c3c2c8bdc37b6cdf3834768871968dde53d73f7b8fa76c9fb5d9d5d3f71b6761`.
+Ini adalah kompilasi pengguna, bukan klaim daftar resmi penerbit atau JLPT.
+
+`data/bunpou-source.json` menyimpan teks sumber beserta sheet dan nomor baris.
+`data/bunpou-manifest.json` mencatat jumlah per bab dan identitas workbook.
+Tautan Tanosuke pada kolom sumber diwarisi dari workbook; tautan itu bukan
+hasil verifikasi baru atas setiap pola. Status hafalan di Excel tidak
+diimpor sebagai progres pengguna website.
+
+Satu soal isian pilihan ganda disusun untuk setiap pola. Bagian yang dikosongkan,
+tiga pengecoh, dan petunjuk khusus disimpan dalam `data/bunpou-cloze.txt`.
+Petunjuk fungsi atau maksud kalimat membedakan pilihan yang secara struktur
+bisa benar tetapi menyatakan arti, waktu, atau arah pemberian yang berbeda.
+Alternatif yang benar untuk maksud yang sama tidak dipakai sebagai pengecoh.
+Arti contoh, rumus, dan catatan ditampilkan setelah setiap jawaban.
+
+Lima koreksi terbatas dicatat dengan alasan dalam `data/bunpou-overrides.json`:
+contoh どのくらい (11-08), terjemahan negatif nonlampau (17-05), contoh
+Vない＋とき (23-03), rumus な形容詞な／Nの＋場合は (45-05), dan rumus
+ご＋N（tindakan）＋します (50-02). Teks sumber asli tetap tersimpan.
+
+`scripts/build_bunpou.py` membangun `bunpou-data.js` tanpa jaringan dari
+snapshot, koreksi, dan soal terkurasi. Build memeriksa cakupan ID persis sama
+dengan sumber, satu target dalam contoh, dan empat pilihan yang berbeda.
+Pengujian memeriksa seluruh baris sumber, filter bab, batas jumlah soal,
+rotasi riwayat, pembahasan, dan kompatibilitas penyimpanan skor.

@@ -1,0 +1,25 @@
+{
+  "bunpou-11-08": {
+    "example": "ここから駅までどのくらいかかりますか。",
+    "translation": "Kira-kira perlu berapa lama dari sini sampai stasiun?",
+    "note": "どのくらい menanyakan perkiraan durasi. どれくらい juga dapat dipakai dan tidak dijadikan jawaban salah.",
+    "reason": "Contoh diadaptasi agar langsung melatih pola どのくらい yang dicantumkan pada sumber."
+  },
+  "bunpou-17-05": {
+    "translation": "Dokumen ini belum akan saya baca.",
+    "reason": "読みません menyatakan tidak membaca/akan membaca, bukan penyelesaian yang belum terjadi seperti まだ読んでいません."
+  },
+  "bunpou-23-03": {
+    "example": "学校へ行かないとき、家で勉強します。",
+    "translation": "Ketika tidak pergi ke sekolah, saya belajar di rumah.",
+    "reason": "Contoh memakai verba negatif 行かない agar sesuai judul Vない形＋とき."
+  },
+  "bunpou-45-05": {
+    "pattern": "な形容詞な／Nの＋場合は",
+    "reason": "Menyelaraskan judul dengan rumus dan catatan sumber: adjektiva-na memakai な, nomina memakai の."
+  },
+  "bunpou-50-02": {
+    "pattern": "ご＋N（tindakan）＋します",
+    "reason": "Menghapus する berlebih dari judul agar konsisten dengan rumus ご＋N＋します dan contoh ご連絡します."
+  }
+}

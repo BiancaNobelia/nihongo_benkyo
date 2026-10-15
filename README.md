@@ -121,6 +121,26 @@ Bangun ulang data terkurasi tanpa jaringan:
 
 https://BiancaNobelia.github.io/nihongo_benkyo/
 
+## Kuis Bunpou
+
+Menu `#bunpou` memuat 330 soal melengkapi kalimat dari seluruh 330 pola dalam
+kompilasi Excel Minna no Nihongo bab 1–50. Pilih bab satu per satu, rentang,
+Buku I, atau Buku II; jumlah soal 10, 20, 50, atau custom, dengan timer opsional.
+Setiap soal memiliki empat pilihan dan petunjuk maksud kalimat. Setelah menjawab,
+arti kalimat, pola, rumus, dan catatan selalu ditampilkan. Ringkasan pola juga
+bisa dicari sebelum latihan melalui bagian “Jelajahi pola”.
+
+Soal tidak berulang dalam satu sesi, dan soal yang belum tampil diprioritaskan
+pada sesi berikutnya menggunakan riwayat browser. Hasil tersimpan di Progres
+Saya, disertai ulasan dan latihan ulang jawaban salah. Jumlah soal dibatasi
+oleh bank dalam bab yang dipilih.
+
+Bangun ulang secara offline dengan `python scripts/build_bunpou.py`.
+Untuk mengimpor workbook yang diberikan pengguna, tambahkan
+`--workbook "path/Bunpou_Minna_no_Nihongo_Bab_1-50.xlsx"` (memerlukan openpyxl).
+Snapshot sumber, koreksi, dan pilihan jawaban ada di `data/bunpou-*`.
+Validasi: `node --test tests/bunpou.test.mjs`.
+
 ## Deployment
 
 GitHub Pages menggunakan branch `main` dan folder `/` (root).
