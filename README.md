@@ -5,6 +5,15 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 
 ## Fitur
 
+- Tema Light/Dark tersedia di header setiap halaman. Kunjungan awal mengikuti
+  tema perangkat; pilihan manual tersimpan dengan kunci `nihongo-benkyo-theme-v1`
+  dan tidak mengubah progres belajar. `theme.js` diterapkan sebelum stylesheet
+  dimuat untuk menghindari kilatan tema yang salah. Palet bersama ada di
+  `theme.css`; komponen modul menggunakan token warna yang sama.
+- Koleksi kanji menampilkan onyomi dan kunyomi dengan label terpisah, arti
+  yang lebih besar, serta hingga tiga bacaan per jenis tanpa elipsis. Jumlah
+  bacaan tambahan ditampilkan pada kartu; semua bacaan tersedia di detail.
+  Detail kanji dan flashcard juga memakai ukuran bacaan yang lebih besar.
 - Kuis Henkan: pilihan ganda atau ketik sendiri untuk kata kerja, kata sifat,
   dan kata benda. Kata benda menyediakan empat bentuk predikat: negatif,
   lampau, negatif lampau, dan penghubung で. Bank noun mengikuti kosakata

@@ -1,0 +1,323 @@
+/* Shared semantic palette: every learning module uses the same two themes. */
+:root {
+  color-scheme: light;
+  --paper: #f6f5ff;
+  --surface: #ffffff;
+  --surface-soft: #f0f1fa;
+  --surface-hover: #e9e8f7;
+  --ink: #242640;
+  --muted: #626782;
+  --line: #dddfee;
+  --line-strong: #a4a8c5;
+  --accent: #6734cb;
+  --accent-hover: #5425b4;
+  --accent-soft: #eee7ff;
+  --accent-border: #c3aff4;
+  --action: #7140dc;
+  --action-hover: #5f2ec8;
+  --on-accent: #ffffff;
+  --teal: #0d7062;
+  --teal-soft: #e0f7f0;
+  --teal-border: #92d6c6;
+  --blue: #2563b1;
+  --blue-soft: #e6f1ff;
+  --blue-border: #9bc2ee;
+  --amber: #906000;
+  --amber-soft: #fff2d6;
+  --amber-border: #e4c37c;
+  --danger: #b32b4c;
+  --danger-soft: #fff0f3;
+  --danger-border: #eeb0bf;
+  --success: #157348;
+  --success-soft: #e6f7ed;
+  --success-border: #8bc7a4;
+  --red: var(--accent);
+  --red-dark: var(--accent-hover);
+  --green: var(--teal);
+  --shadow-color: #37305f;
+  --shadow: 0 8px 26px #29245709;
+  --inverse: #29283e;
+  --inverse-text: #fff;
+  --hero-start: #6935d1;
+  --hero-end: #176bbd;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #101222;
+  --surface: #1b1e33;
+  --surface-soft: #24273f;
+  --surface-hover: #2d304b;
+  --ink: #f0f1fc;
+  --muted: #b2b8d4;
+  --line: #353954;
+  --line-strong: #646d97;
+  --accent: #bea2ff;
+  --accent-hover: #d0bbff;
+  --accent-soft: #30244d;
+  --accent-border: #8060b6;
+  --action: #7d4be5;
+  --action-hover: #8958ee;
+  --teal: #71dfc4;
+  --teal-soft: #173d3b;
+  --teal-border: #3e8576;
+  --blue: #8ac2ff;
+  --blue-soft: #1b3353;
+  --blue-border: #4f78a4;
+  --amber: #f1ca7c;
+  --amber-soft: #3e3222;
+  --amber-border: #8f7144;
+  --danger: #ff9db1;
+  --danger-soft: #442737;
+  --danger-border: #a95e77;
+  --success: #8be0ae;
+  --success-soft: #1b3c31;
+  --success-border: #4d956e;
+  --shadow-color: #000000;
+  --shadow: 0 8px 30px #00000020;
+  --inverse: #e7e8f8;
+  --inverse-text: #202237;
+  --hero-start: #5930ae;
+  --hero-end: #145991;
+}
+
+html { scroll-padding-top:105px; }
+body { font-size:15px; background:var(--paper); }
+::selection { background:var(--accent); color:var(--paper); }
+:is(button,a,input,select,summary):focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+input,select,textarea { color:var(--ink); accent-color:var(--action); }
+input::placeholder { color:var(--muted); opacity:1; }
+.sidebar { background:var(--surface); }
+.brand-mark { background:linear-gradient(135deg,#874de9,#4e66d8); box-shadow:0 5px 16px #734cda30; }
+.nav-list a { font-size:13px; border-radius:10px; color:var(--muted); }
+.nav-list a:hover { background:var(--surface-soft); color:var(--ink); }
+.nav-list a.active { background:var(--accent-soft); color:var(--accent); }
+.nav-dot { background:var(--teal); }
+.topbar { background:var(--surface); gap:16px; position:sticky; top:0; z-index:25; }
+.topbar-right { gap:18px; }
+.kotoba-settings { top:105px; }
+.profile { background:var(--teal-soft); color:var(--teal); outline-color:var(--teal-border); }
+.breadcrumb strong { font-weight:650; }
+.theme-switch { display:flex; padding:4px; gap:3px; background:var(--surface-soft); border:1px solid var(--line); border-radius:999px; flex-shrink:0; }
+.theme-switch button { display:inline-flex; align-items:center; justify-content:center; gap:6px; min-height:34px; padding:6px 11px; border-radius:999px; font-size:12px; font-weight:650; background:transparent; color:var(--muted); }
+.theme-switch button[aria-pressed="true"] { background:var(--surface); color:var(--accent); box-shadow:0 2px 6px #00000015; }
+.theme-switch svg { width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.primary { background:var(--action); border-color:var(--action); color:var(--on-accent); border-radius:10px; font-size:14px; font-weight:650; box-shadow:0 4px 12px #7140dc20; min-height:44px; }
+.primary:hover { background:var(--action-hover); border-color:var(--action-hover); }
+.secondary { background:var(--surface); border-radius:10px; font-size:13px; min-height:42px; }
+.secondary:hover { background:var(--surface-hover); }
+.text-button { font-size:13px; color:var(--accent); }
+.section-kicker,.eyebrow { font-size:11px; font-weight:700; }
+.section-head p,.view-heading p { font-size:14px; }
+.section-head h2 { font-size:26px; font-weight:650; }
+.view-heading h1 { font-weight:650; }
+
+/* A vivid home with distinct, scannable practice cards. */
+.hero { background:linear-gradient(115deg,var(--hero-start),var(--hero-end)); color:#fff; border:0; border-radius:22px; padding:40px; box-shadow:0 12px 32px #482b9420; }
+.hero h1 { font-weight:650; letter-spacing:-1.5px; font-size:clamp(36px,3.3vw,48px); }
+.hero h1 em { color:#b9f5e8; }
+.hero .eyebrow { color:#eee5ff; letter-spacing:1.2px; }
+.hero-description { color:#edf0ff; font-size:14px; max-width:400px; }
+.hero .primary { background:#fff; border-color:#fff; color:#5531a0; }
+.hero .primary:hover { background:#eee7ff; }
+.hero .text-button { color:#fff; }
+.hero-card { background:#fff; color:#393356; border-color:#ddd8f7; box-shadow:0 14px 30px #20144340; border-radius:14px; }
+.hero-card:before { border-color:#d8d3eb; background:linear-gradient(90deg,transparent calc(50% - .5px),#e4ddf6 calc(50% - .5px),#e4ddf6 calc(50% + .5px),transparent calc(50% + .5px)),linear-gradient(transparent calc(50% - .5px),#e4ddf6 calc(50% - .5px),#e4ddf6 calc(50% + .5px),transparent calc(50% + .5px)); }
+.hero-card-caption { color:#666080; }
+.hero .sun-disc { background:linear-gradient(135deg,#b196ff,#69ddd2); opacity:.9; }
+.orbit,.orbit:after { border-color:#ffffff25; }
+.art-stamp { color:#e4d8ff; border-color:#e4d8ff80; }
+.art-label { color:#eee5ff; }
+.art-caption { background:#fff; color:#37314d; border:0; }
+.art-caption small { color:#666080; }
+.art-caption>span:first-child { background:#e0f7f0; color:#11796a; }
+.stats-strip { border-radius:16px; box-shadow:var(--shadow); }
+.stat-icon { background:var(--accent-soft); color:var(--accent); }
+.stat:nth-child(2) .stat-icon { background:var(--teal-soft); color:var(--teal); }
+.stat:nth-child(3) .stat-icon { background:var(--amber-soft); color:var(--amber); }
+.stat-label { font-size:12px; color:var(--muted); }
+.stat-value { font-size:25px; font-weight:650; color:var(--ink); }
+.stat-value small { font-size:12px; color:var(--muted); }
+.practice-hub { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-bottom:36px; }
+.practice-hub :is(.kotoba-home-banner,.similar-banner) { margin:0; height:100%; min-height:126px; padding:22px; border-radius:16px; gap:16px; align-items:center; border:1px solid var(--line); border-top:3px solid var(--tile-accent,var(--accent)); background:var(--surface); box-shadow:var(--shadow); }
+.practice-hub :is(.kotoba-home-banner,.similar-banner):hover { transform:translateY(-3px); border-color:var(--tile-accent,var(--accent)); }
+.practice-hub .kotoba-home-banner>span:first-child,.practice-hub .similar-banner-glyphs { color:var(--tile-accent,var(--accent)); background:var(--tile-soft,var(--accent-soft)); width:60px; height:60px; border-radius:14px; font-size:26px; display:grid; place-items:center; flex-shrink:0; letter-spacing:0; }
+.practice-hub :is(.kotoba-home-banner,.similar-banner) strong { font-size:16px; line-height:1.5; font-weight:650; color:var(--ink); }
+.practice-hub :is(.kotoba-home-banner,.similar-banner) small { display:block; font-size:12px; line-height:1.8; margin-top:5px; color:var(--muted); }
+.practice-hub .kotoba-home-banner>svg,.practice-hub .similar-banner-arrow { display:none; }
+.practice-hub .henkan-banner { --tile-accent:var(--blue); --tile-soft:var(--blue-soft); }
+.practice-hub .bunpou-banner { --tile-accent:var(--teal); --tile-soft:var(--teal-soft); }
+.practice-hub .particle-banner { --tile-accent:var(--amber); --tile-soft:var(--amber-soft); }
+.practice-hub .transitivity-banner { --tile-accent:var(--danger); --tile-soft:var(--danger-soft); }
+.practice-hub .similar-banner { --tile-accent:var(--blue); --tile-soft:var(--blue-soft); }
+
+/* Readable kanji: both readings are explicit and never ellipsized. */
+.kanji-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+.kanji-card { border-radius:16px; box-shadow:var(--shadow); }
+.kanji-card:hover { border-color:var(--accent-border); box-shadow:0 10px 26px #7140dc15; }
+.kanji-main { padding:22px 16px; min-height:320px; height:100%; }
+.kanji-symbol { font-size:60px; line-height:1.6; }
+.kanji-meaning { font-size:17px; font-weight:650; line-height:1.65; margin:6px 0 16px; overflow-wrap:anywhere; }
+.kanji-readings { display:grid; width:100%; gap:9px; margin-top:auto; text-align:left; }
+.kanji-reading { display:grid; grid-template-columns:minmax(0,1fr); gap:2px; margin:0; white-space:normal; overflow:visible; color:var(--ink); font-size:17px; line-height:1.7; }
+.kanji-reading small { color:var(--accent); font-size:12px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; }
+.kanji-reading:last-child small { color:var(--teal); }
+.kanji-reading [lang="ja"] { overflow-wrap:anywhere; }
+.kanji-more { font-size:12px; line-height:1.6; color:var(--muted); }
+.kanji-level,.similar-level { font-size:10px; font-weight:700; padding:3px 7px; border-radius:6px; }
+.bookmark { padding:10px; color:var(--muted); }
+.bookmark .icon { width:17px; height:17px; }
+.level-tab { padding:9px 14px; font-size:13px; border-radius:9px; }
+.level-tab small { font-size:11px; opacity:1; }
+.level-tab.active { background:var(--accent-soft); color:var(--accent); border-color:var(--accent-border); }
+.search-wrap { border-radius:10px; padding:12px 14px; }
+.search-wrap input { font-size:14px; }
+.collection-select { font-size:13px; color:var(--muted); }
+.library-bottom { font-size:12px; }
+.kanji-level,.similar-level { background:var(--teal-soft); color:var(--teal); }
+:is(.kanji-level,.similar-level).n4 { background:var(--blue-soft); color:var(--blue); }
+:is(.kanji-level,.similar-level).n3 { background:var(--accent-soft); color:var(--accent); }
+:is(.kanji-level,.similar-level).n2 { background:var(--amber-soft); color:var(--amber); }
+:is(.kanji-level,.similar-level).n1 { background:var(--danger-soft); color:var(--danger); }
+dialog { background:var(--surface); max-width:680px; border-radius:22px; }
+dialog::backdrop { background:#0c0c27a6; }
+.modal-close { background:var(--surface-soft); width:40px; height:40px; }
+.detail-glyph { font-size:112px; color:var(--accent); }
+.detail-hero h2 { font-size:28px; line-height:1.5; }
+.detail-meta { font-size:13px; }
+.reading-grid { gap:14px; margin:24px 0; }
+.reading-grid>div { min-width:0; padding:18px; background:var(--accent-soft); border:1px solid var(--accent-border); border-radius:12px; }
+.reading-grid>div:nth-child(2) { background:var(--teal-soft); border-color:var(--teal-border); }
+.reading-grid small { font-size:12px; font-weight:700; letter-spacing:.5px; color:var(--accent); }
+.reading-grid>div:nth-child(2) small { color:var(--teal); }
+.reading-grid p { font-size:24px; line-height:1.9; color:var(--ink); }
+.reading-note { font-size:13px; line-height:1.8; margin-top:0; }
+.example-title { font-size:12px; font-weight:700; color:var(--accent); }
+.example-box { background:var(--surface-soft); }
+.example-box ruby { font-size:32px; line-height:2.1; }
+.example-box rt { font-size:15px; color:var(--teal); }
+.example-box p { font-size:17px; color:var(--ink); }
+.source-gloss { font-size:13px; }
+.flash-answer { font-size:30px; line-height:1.6; }
+.flash-readings { display:block; width:100%; font-size:24px; line-height:1.85; overflow-wrap:anywhere; color:var(--ink); }
+.flash-readings small { display:block; color:var(--accent); font-size:12px; font-family:var(--sans); font-weight:700; letter-spacing:1px; }
+.flash-readings+.flash-readings small { color:var(--teal); }
+.flash-example { font-size:20px; }
+.flash-example small { font-size:16px; }
+.similar-compare-card h2,.radical-kanji-card>strong,.radical-explained-card h3 { font-size:18px; }
+.radical-kanji-reading { font-size:17px; line-height:1.8; }
+.similar-cue p,.shape-explanation p,.shape-part strong { font-size:15px; line-height:1.9; }
+.shape-part small,.shape-explanation .shape-note { font-size:13px; }
+.radical-example-card .radical-example-meaning { font-size:16px; }
+.radical-example-card>p { font-size:14px; }
+.radical-example-card rt { font-size:13px; }
+
+/* Shared interactive and feedback states keep contrast in both themes. */
+:is(.kotoba-panel,.henkan-panel,.setup-panel,.quiz-question,.panel,.similar-group-card,.radical-family-card,.radical-explained-card) { box-shadow:var(--shadow); border-radius:16px; }
+:is(.henkan-kinds,.henkan-modes,.henkan-answer-modes,.kotoba-chapter-grid,.kotoba-modes,.bunpou-mode-grid,.particle-topics,.transitivity-mode-grid) button[aria-pressed="true"],.kotoba-mode[aria-pressed="true"],.kotoba-courses a[aria-current="page"] { background:var(--accent-soft); border-color:var(--accent-border); color:var(--ink); box-shadow:inset 0 0 0 1px var(--accent-border); }
+.henkan-chips button[aria-pressed="true"],.kotoba-ranges button[aria-pressed="true"],.bunpou-view .kotoba-ranges button[aria-pressed="true"],.particle-ranges button[aria-pressed="true"] { background:var(--action)!important; border-color:var(--action)!important; color:var(--on-accent); }
+.flash-actions .primary { background:var(--action); border-color:var(--action); }
+.bunpou-tile.selected { background:var(--action); border-color:var(--action); color:var(--on-accent); }
+.skip-link,.toast { background:var(--inverse); color:var(--inverse-text); }
+.progress-track { height:7px; background:var(--surface-hover); }
+.progress-track span { background:linear-gradient(90deg,#8d5cf1,#21b6a4); }
+.quiz-option:hover:not(:disabled),.similar-answer:hover:not(:disabled) { background:var(--accent-soft); border-color:var(--accent-border); }
+.quiz-option.correct,.similar-answer.correct { background:var(--success-soft); color:var(--success); border-color:var(--success-border); }
+.quiz-option.wrong,.similar-answer.wrong { background:var(--danger-soft); color:var(--danger); border-color:var(--danger-border); }
+.quiz-feedback.success { color:var(--success); }
+.quiz-feedback.error,[role="alert"] { color:var(--danger); }
+.answer-details { background:var(--surface-soft); border-color:var(--line); color:var(--ink); }
+.answer-details .answer-meaning p { font-size:18px; }
+.answer-reading { font-size:19px; color:var(--teal); }
+.answer-details .answer-explanation,.henkan-detail>p { font-size:14px; line-height:1.9; }
+.review-list .answer-meaning p { font-size:16px; }
+.answer-details>div>span { font-size:12px; }
+.kotoba-section-title p,.henkan-small,.field small,.kotoba-field-note { font-size:12px; line-height:1.8; }
+.field label,.henkan-control legend { font-size:13px; }
+.field select { color:var(--ink); border-radius:9px; }
+.henkan-modes button>strong,.henkan-kinds strong { font-size:15px; }
+.henkan-modes button small { font-size:12px; }
+.henkan-nouns .henkan-modes button>span:first-child { font-size:18px; }
+.henkan-hero h1 em,.kotoba-hero h1 em,.similar-hero h1 em { color:var(--accent); }
+.henkan-art,.kotoba-hero-art,.similar-hero-pair { background:var(--accent-soft); border-color:var(--accent-border); color:var(--accent); }
+.henkan-art strong,.henkan-art strong:last-of-type { color:var(--accent); }
+.henkan-art>span,.kotoba-hero-art small { color:var(--muted); }
+.bunpou-hero-art,.particle-hero-art { background:var(--blue-soft); border-color:var(--blue-border); }
+.radical-water { background:var(--blue-soft); --family-color:var(--blue); border-color:var(--blue-border); }
+.radical-travel { background:var(--teal-soft); --family-color:var(--teal); border-color:var(--teal-border); }
+.learning-card { background:var(--teal-soft); border-color:var(--teal-border); }
+.learning-card:nth-child(2) { background:var(--accent-soft); border-color:var(--accent-border); }
+.learning-card p { font-size:13px; color:var(--muted); }
+.footer,.footer button { font-size:11px; }
+
+@media(max-width:1100px) {
+  .kanji-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .topbar .today-tag { display:none; }
+  .practice-hub :is(.kotoba-home-banner,.similar-banner) { padding:18px; }
+}
+@media(max-width:700px) {
+  html { scroll-padding-top:90px; }
+  .topbar { height:74px; padding:0 18px; gap:10px; }
+  .topbar .profile,.breadcrumb>span,.breadcrumb .slash { display:none; }
+  .breadcrumb { font-size:13px; min-width:0; }
+  .breadcrumb strong { overflow-wrap:anywhere; }
+  .theme-switch { padding:3px; }
+  .theme-switch button { padding:6px 9px; min-height:34px; font-size:11px; }
+  .topbar-right { gap:0; }
+  .sidebar { background:color-mix(in srgb,var(--surface) 96%,transparent); border-color:var(--line); }
+  .nav-list a { font-size:8px; border-radius:0; }
+  .nav-list a.active { background:var(--accent-soft); color:var(--accent); box-shadow:inset 0 3px var(--accent); }
+  .hero { padding:26px 23px; min-height:390px; }
+  .hero h1 { font-size:36px; }
+  .hero-description { font-size:13px; max-width:255px; }
+  .hero .eyebrow { font-size:9px; letter-spacing:.8px; }
+  .hero-art { bottom:-60px; right:-55px; }
+  .hero-buttons .primary { font-size:13px; }
+  .hero-buttons .text-button { font-size:12px; }
+  .stats-strip { margin-bottom:26px; }
+  .stat { padding:0 11px; }
+  .stat-label { font-size:11px; }
+  .stat-value { font-size:23px; }
+  .stat-value small { display:block; font-size:10px; margin-left:0; line-height:1.7; }
+  .practice-hub { grid-template-columns:1fr; gap:12px; }
+  .practice-hub :is(.kotoba-home-banner,.similar-banner) { min-height:106px; padding:17px; gap:15px; }
+  .practice-hub :is(.kotoba-home-banner,.similar-banner) strong { font-size:15px; }
+  .practice-hub :is(.kotoba-home-banner,.similar-banner) small { font-size:12px; }
+  .practice-hub .kotoba-home-banner>span:first-child,.practice-hub .similar-banner-glyphs { width:48px; height:54px; font-size:23px; }
+  .section-head h2 { font-size:24px; }
+  .section-head p { font-size:12px; }
+  .collection-select { max-width:130px; font-size:12px; }
+  .kanji-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+  .kanji-main { min-height:280px; padding:20px 12px 18px; }
+  .kanji-symbol { font-size:54px; }
+  .kanji-meaning { font-size:16px; }
+  .kanji-reading { grid-template-columns:1fr; gap:1px; font-size:16px; line-height:1.65; }
+  .kanji-reading small { font-size:12px; }
+  .kanji-readings { gap:8px; }
+  .kanji-level { font-size:9px; }
+  .search-wrap input,.field select { font-size:16px; }
+  .level-tab { font-size:12px; }
+  .level-tab small { font-size:10px; }
+  dialog { padding:28px 20px; }
+  .detail-hero h2 { font-size:25px; }
+  .reading-grid { grid-template-columns:1fr; gap:12px; }
+  .reading-grid>div { padding:16px; }
+  .reading-grid p { font-size:23px; }
+  .reading-grid small { font-size:12px; }
+  .reading-note { font-size:12px; }
+  .example-box { padding:18px; }
+  .example-box p { font-size:16px; }
+  .flash-answer { font-size:26px; }
+  .flash-readings { font-size:22px; }
+  .flash-example { font-size:18px; }
+  .flash-example small { font-size:15px; }
+  .similar-compare-card h2,.radical-kanji-card>strong { font-size:16px; }
+  .similar-cue p { font-size:14px; }
+  .radical-kanji-reading { font-size:16px; }
+  .radical-example-card ruby { font-size:24px; }
+  .radical-example-card>p { font-size:13px; }
+  .radical-example-card .radical-example-meaning { font-size:15px; }
+  .henkan-kinds strong { font-size:12px; }
+  .henkan-nouns .henkan-modes button>span:first-child { font-size:15px; }
+  .henkan-modes button small { font-size:11px; }
+  .answer-reading { font-size:18px; }
+}
