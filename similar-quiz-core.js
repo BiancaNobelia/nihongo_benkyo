@@ -1,7 +1,7 @@
-import { SIMILAR_VOCABULARY } from './similar-quiz-data.js?v=20261015-bunpou';
-import { SIMILAR_GROUPS } from './similar-data.js?v=20261015-bunpou';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-bunpou';
-import { READING_TOPICS } from './special-reading-data.js?v=20261015-bunpou';
+import { SIMILAR_VOCABULARY } from './similar-quiz-data.js?v=20261015-bunpou-order';
+import { SIMILAR_GROUPS } from './similar-data.js?v=20261015-bunpou-order';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-bunpou-order';
+import { READING_TOPICS } from './special-reading-data.js?v=20261015-bunpou-order';
 
 export const QUIZ_TOPICS = [
   ...RADICAL_FAMILIES.map(f => ({id:f.id,kind:'family',label:`${f.symbol} · ${f.title}`,chars:f.members})),

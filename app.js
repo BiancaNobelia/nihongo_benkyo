@@ -1,30 +1,30 @@
-import { createBunpouView } from './bunpou-view.js?v=20261015-bunpou';
-import { KANJI } from './kanji-data.js?v=20261015-bunpou';
-import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261015-bunpou';
-import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261015-bunpou';
-import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261015-bunpou';
-import { groupsForCharacter } from './similar-core.js?v=20261015-bunpou';
-import { createSimilarView } from './similar-view.js?v=20261015-bunpou';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-bunpou';
-import { familiesForCharacter } from './radical-core.js?v=20261015-bunpou';
-import { componentNoteMarkup } from './component-note-view.js?v=20261015-bunpou';
+import { createBunpouView } from './bunpou-view.js?v=20261015-bunpou-order';
+import { KANJI } from './kanji-data.js?v=20261015-bunpou-order';
+import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261015-bunpou-order';
+import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261015-bunpou-order';
+import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261015-bunpou-order';
+import { groupsForCharacter } from './similar-core.js?v=20261015-bunpou-order';
+import { createSimilarView } from './similar-view.js?v=20261015-bunpou-order';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-bunpou-order';
+import { familiesForCharacter } from './radical-core.js?v=20261015-bunpou-order';
+import { componentNoteMarkup } from './component-note-view.js?v=20261015-bunpou-order';
 
-import { createReadingQuiz } from './jlpt-reading-core.js?v=20261015-bunpou';
-import { READING_HISTORY_KEY, cleanReadingHistory, recordReadingShown, readingHistorySummary } from './reading-history.js?v=20261015-bunpou';
-import { readingOptions } from './reading-options.js?v=20261015-bunpou';
+import { createReadingQuiz } from './jlpt-reading-core.js?v=20261015-bunpou-order';
+import { READING_HISTORY_KEY, cleanReadingHistory, recordReadingShown, readingHistorySummary } from './reading-history.js?v=20261015-bunpou-order';
+import { readingOptions } from './reading-options.js?v=20261015-bunpou-order';
 
-import { createWritingQuiz } from './writing-core.js?v=20261015-bunpou';
-import { READING_MODE_NAMES, usesSentence, quizPromptMarkup } from './quiz-prompt.js?v=20261015-bunpou';
-import { questionTopicLinks } from './similar-quiz-view.js?v=20261015-bunpou';
+import { createWritingQuiz } from './writing-core.js?v=20261015-bunpou-order';
+import { READING_MODE_NAMES, usesSentence, quizPromptMarkup } from './quiz-prompt.js?v=20261015-bunpou-order';
+import { questionTopicLinks } from './similar-quiz-view.js?v=20261015-bunpou-order';
 
-import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261015-bunpou';
-import { requestedQuizCount } from './quiz-settings.js?v=20261015-bunpou';
-import { quizSetupPanel } from './quiz-setup-view.js?v=20261015-bunpou';
-import { answerDetailsMarkup } from './quiz-feedback.js?v=20261015-bunpou';
-import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261015-bunpou';
-import { createKotobaView } from './kotoba-view.js?v=20261015-bunpou';
-import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261015-bunpou';
-import { createHenkanView } from './henkan-view.js?v=20261015-bunpou';
+import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261015-bunpou-order';
+import { requestedQuizCount } from './quiz-settings.js?v=20261015-bunpou-order';
+import { quizSetupPanel } from './quiz-setup-view.js?v=20261015-bunpou-order';
+import { answerDetailsMarkup } from './quiz-feedback.js?v=20261015-bunpou-order';
+import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261015-bunpou-order';
+import { createKotobaView } from './kotoba-view.js?v=20261015-bunpou-order';
+import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261015-bunpou-order';
+import { createHenkanView } from './henkan-view.js?v=20261015-bunpou-order';
 
 const paths = {
   speaker:'<path d="m11 4-5 4H3v8h3l5 4zM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>',
@@ -59,6 +59,7 @@ const KEY = 'nihongo-benkyo-progress-v1';
 const viewNames = { beranda:'Beranda', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', kotoba:'Kuis Kotoba', henkan:'Kuis Henkan', bunpou:'Kuis Bunpou', progres:'Progres Saya' };
 const modeNames = { meaning:'Kanji → Arti', kanji:'Arti → Kanji', ...READING_MODE_NAMES, 'hiragana-kanji':'Hiragana → Kanji', 'hiragana-katakana':'Hiragana → Katakana', 'english-katakana':'English → Katakana', ...Object.fromEntries(Object.entries(KOTOBA_MODES).map(([id,m])=>[`kotoba-${id}`,`Kotoba · ${m.label}`])) };
 modeNames.bunpou='Bunpou · Lengkapi kalimat';
+modeNames['bunpou-order']='Bunpou · Susun kalimat';
 modeNames.henkan='Henkan · Perubahan kata kerja';
 let storageAvailable = true;
 let raw;
@@ -125,7 +126,7 @@ function renderLibrary(home = false) {
   root.innerHTML = `${home ? `<section class="hero"><div class="hero-copy"><div class="eyebrow">${icon('leaf')} PERJALANAN KECIL, MAKNA BESAR</div><h1>Satu kanji,<br><em>selangkah lebih dekat.</em></h1><p class="hero-description">Kenali bentuknya, pahami maknanya, dan temukan serunya belajar bahasa Jepang. Mulai dari satu kanji hari ini.</p><div class="hero-buttons"><a class="primary" href="#flashcard">Mulai belajar ${icon('arrow')}</a><a class="text-button" href="#kanji">Jelajahi kanji ${icon('arrow-up')}</a></div></div><div class="hero-art" aria-hidden="true"><span class="orbit"></span><span class="sun-disc"></span><span class="art-stamp">日<br>本</span><div class="hero-card"><span class="hero-kanji" lang="ja">学</span><span class="hero-card-caption">MANABU · BELAJAR</span></div><span class="art-label" lang="ja">学ぶことは、楽しい。</span><div class="art-caption"><span>${icon('leaf')}</span><div>Pelan-pelan, jadi paham.<small>Setiap langkah itu berarti.</small></div></div></div></section>${stats()}` : heading('KOLEKSI KANJI', 'Kenali setiap karakter.', `${KANJI.length.toLocaleString('id-ID')} kanji dari N5 sampai N1 untuk perjalanan belajarmu. Klik kartu untuk mengenal arti, bacaan, dan contoh penggunaannya.`)}
     ${home ? `<a class="kotoba-home-banner" href="#kotoba"><span lang="ja">言葉</span><div><strong>Kuis Kotoba Minna & JLPT N3</strong><small>Minna Bab 1–50 dan 2.276 kosakata N3 · Latih arti atau bacaan.</small></div>${icon('arrow')}</a>` : ''}
     ${home ? `<a class="kotoba-home-banner henkan-banner" href="#henkan"><span lang="ja">変換</span><div><strong>Kuis Henkan · Ubah bentuk kata kerja</strong><small>13 pilihan bentuk, dari te-kei hingga shieki dan sonkei · Level N5–N3.</small></div>${icon('arrow')}</a>` : ''}
-    ${home ? `<a class="kotoba-home-banner bunpou-banner" href="#bunpou"><span lang="ja">文法</span><div><strong>Kuis Bunpou · Pahami pola kalimat</strong><small>330 pola Minna Bab 1–50 · Lengkapi kalimat dan pelajari penjelasannya.</small></div>${icon('arrow')}</a>` : ''}
+    ${home ? `<a class="kotoba-home-banner bunpou-banner" href="#bunpou"><span lang="ja">文法</span><div><strong>Kuis Bunpou · Pahami pola kalimat</strong><small>330 pola Minna Bab 1–50 · Lengkapi atau susun kalimat dengan pola dan arti Indonesia.</small></div>${icon('arrow')}</a>` : ''}
     <a class="similar-banner" href="#mirip"><span class="similar-banner-glyphs" lang="ja">未 末</span><span><strong>Serupa, tapi tidak sama.</strong><small>Bandingkan kanji mirip dan ingat ciri pembeda tiap bentuk.</small></span><span class="similar-banner-arrow">Kanji Mirip ${icon('arrow')}</span></a>
     <section aria-label="Koleksi kanji"><div class="section-head"><div>${home ? '<div class="section-kicker">MULAI DARI RASA INGIN TAHU</div><h2>Kenali, pahami, ingat.</h2><p>Temukan kanji pertamamu. Atau, kenali yang baru.</p>' : '<h2>Jelajahi kanji</h2><p>Belajar sedikit demi sedikit, sesuai levelmu.</p>'}</div><select id="collection" class="collection-select" aria-label="Filter koleksi"><option value="all">Semua kanji</option><option value="saved">Tersimpan</option><option value="known">Sudah dikuasai</option><option value="new">Belum dikuasai</option></select></div>
     <div class="library-actions"><div class="level-tabs" aria-label="Filter level"><button class="level-tab ${filters.level === 'all' ? 'active' : ''}" data-level="all" aria-pressed="${filters.level === 'all'}">Semua level</button>${levels.map(l => `<button class="level-tab ${filters.level === l ? 'active' : ''}" data-level="${l}" aria-label="Level ${l}, ${KANJI.filter(k => k.level === l).length} kanji" aria-pressed="${filters.level === l}">${l}<small>${KANJI.filter(k => k.level === l).length}</small></button>`).join('')}</div><label class="search-wrap">${icon('search')}<input id="kanji-search" type="search" autocomplete="off" placeholder="Cari kanji, bacaan, atau arti..." aria-label="Cari kanji, bacaan, atau arti" value="${escape(filters.query)}"></label></div><div id="kanji-grid" class="kanji-grid"></div><div id="library-bottom" class="library-bottom"></div></section>
@@ -324,7 +325,7 @@ function renderProgress() {
     const total = KANJI.filter(k => k.level === l).length;
     const known = KANJI.filter(k => k.level === l && progress.known.includes(k.char)).length;
     return `<div class="level-progress"><div><span>${l} · ${levelNames[l]}</span><small>${known} / ${total} kanji</small></div><div class="progress-track" role="progressbar" aria-label="Kanji ${l} dikuasai" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${known}"><span style="width:${known / total * 100}%"></span></div></div>`;
-  }).join('')}<a class="text-button" href="#flashcard">Lanjutkan dengan flashcard ${icon('arrow')}</a></section><section class="panel"><h2>Catatan latihan kuis</h2>${progress.history.length ? [...progress.history].reverse().slice(0,5).map(h => `<div class="history-item"><div>${modeNames[h.mode]}<small>${new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(new Date(h.date))} · ${h.total} soal${h.mode.startsWith('kotoba-') && h.course==='n3' ? ' · JLPT N3' : (h.mode.startsWith('kotoba-') || h.mode==='bunpou') && h.chapters?.length ? ` · ${chapterLabel(h.chapters)}` : ''}</small></div><span class="history-score">${h.correct}/${h.total} benar</span></div>`).join('') : `<div class="empty"><h3>Halaman baru untuk ceritamu.</h3><p>Hasil kuis pertamamu akan muncul di sini.</p><a class="text-button" href="#kuis">Mulai kuis ${icon('arrow')}</a></div>`}</section></div><div class="daily"><span lang="ja">歩</span><div><h3>Belajar hari ini, tumbuh setiap hari.</h3><p>${progress.days.includes(localDay()) ? 'Kamu sudah belajar hari ini. Pertahankan langkah kecilmu!' : 'Satu kanji baru hari ini bisa jadi awal kebiasaan baik.'}</p></div><a class="secondary" href="#flashcard">Lanjut belajar ${icon('arrow')}</a></div><p class="storage-note">${icon('lock')}${storageAvailable ? 'Progres tersimpan di browser dan perangkat ini. Menghapus data browser akan menghapus progres.' : 'Penyimpanan browser tidak tersedia. Progres hanya tersimpan selama sesi ini.'}</p>`;
+  }).join('')}<a class="text-button" href="#flashcard">Lanjutkan dengan flashcard ${icon('arrow')}</a></section><section class="panel"><h2>Catatan latihan kuis</h2>${progress.history.length ? [...progress.history].reverse().slice(0,5).map(h => `<div class="history-item"><div>${modeNames[h.mode]}<small>${new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(new Date(h.date))} · ${h.total} soal${h.mode.startsWith('kotoba-') && h.course==='n3' ? ' · JLPT N3' : (h.mode.startsWith('kotoba-') || ['bunpou','bunpou-order'].includes(h.mode)) && h.chapters?.length ? ` · ${chapterLabel(h.chapters)}` : ''}</small></div><span class="history-score">${h.correct}/${h.total} benar</span></div>`).join('') : `<div class="empty"><h3>Halaman baru untuk ceritamu.</h3><p>Hasil kuis pertamamu akan muncul di sini.</p><a class="text-button" href="#kuis">Mulai kuis ${icon('arrow')}</a></div>`}</section></div><div class="daily"><span lang="ja">歩</span><div><h3>Belajar hari ini, tumbuh setiap hari.</h3><p>${progress.days.includes(localDay()) ? 'Kamu sudah belajar hari ini. Pertahankan langkah kecilmu!' : 'Satu kanji baru hari ini bisa jadi awal kebiasaan baik.'}</p></div><a class="secondary" href="#flashcard">Lanjut belajar ${icon('arrow')}</a></div><p class="storage-note">${icon('lock')}${storageAvailable ? 'Progres tersimpan di browser dan perangkat ini. Menghapus data browser akan menghapus progres.' : 'Penyimpanan browser tidak tersedia. Progres hanya tersimpan selama sesi ini.'}</p>`;
 }
 function route() {
   const [next, groupId] = location.hash.slice(1).split('/');
@@ -342,11 +343,11 @@ function route() {
   else if (view === 'flashcard') renderFlash();
   else if (view === 'kotoba') kotobaView.render(groupId || undefined);
   else if (view === 'henkan') henkanView.render();
-  else if (view === 'bunpou') bunpouView.render();
+  else if (view === 'bunpou') bunpouView.render(groupId==='susun'?'order':undefined);
   else if (view === 'kuis') {
     if (groupId === 'jlpt') quizPreferences.mode = 'jlpt-reading';
     else if (groupId === 'hiragana-katakana') quizPreferences.mode = 'english-katakana';
-    else if (Object.hasOwn(modeNames, groupId) && !groupId.startsWith('kotoba-') && groupId!=='henkan' && groupId!=='bunpou') quizPreferences.mode=groupId;
+    else if (Object.hasOwn(modeNames, groupId) && !groupId.startsWith('kotoba-') && groupId!=='henkan' && !groupId.startsWith('bunpou')) quizPreferences.mode=groupId;
     renderQuizSetup();
   }
   else renderProgress();

@@ -141,6 +141,26 @@ Untuk mengimpor workbook yang diberikan pengguna, tambahkan
 Snapshot sumber, koreksi, dan pilihan jawaban ada di `data/bunpou-*`.
 Validasi: `node --test tests/bunpou.test.mjs`.
 
+### Susun Kalimat
+
+Di menu Bunpou, pilih **Susun kalimat**, atau buka `#bunpou/susun`.
+Seluruh 330 pola memiliki latihan menyusun potongan kata/frasa yang diacak.
+Arti Indonesia, pola, rumus, dan bab tampil sebelum menjawab. Ketuk potongan
+untuk menambahkannya; ketuk di area susunan untuk mengembalikan potongan,
+atau gunakan Reset. Cek jawaban aktif setelah semua potongan digunakan.
+
+Identitas potongan tetap berbeda meskipun teksnya sama (misalnya dua `を`),
+tetapi penilaian membandingkan teks sehingga keduanya boleh tertukar.
+Alternatif susunan yang sudah ditinjau turut diterima. Bank tidak memakai
+pemeriksa tata bahasa bebas; alternatif ditambahkan per contoh, dengan
+mempertahankan peran partikel dan makna kalimat. Pengacakan tidak menampilkan
+susunan yang sudah benar sejak awal.
+
+Timer, jumlah soal, ulasan, dan latihan ulang mengikuti pengaturan Bunpou.
+Riwayat kemunculan soal dipisahkan dari mode Lengkapi Kalimat; hasil tetap
+tercatat di Progres Saya dengan label **Bunpou · Susun kalimat**.
+Validasi: `node --test tests/bunpou*.test.mjs`.
+
 ## Deployment
 
 GitHub Pages menggunakan branch `main` dan folder `/` (root).

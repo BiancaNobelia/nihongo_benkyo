@@ -835,3 +835,23 @@ snapshot, koreksi, dan soal terkurasi. Build memeriksa cakupan ID persis sama
 dengan sumber, satu target dalam contoh, dan empat pilihan yang berbeda.
 Pengujian memeriksa seluruh baris sumber, filter bab, batas jumlah soal,
 rotasi riwayat, pembahasan, dan kompatibilitas penyimpanan skor.
+
+### Susun Kalimat — 15 Oktober 2026
+
+Semua 330 contoh Bunpou di atas juga digunakan dalam mode menyusun kalimat.
+`data/bunpou-order.txt` mencatat batas potongan yang ditinjau, termasuk
+kata, partikel, frasa, dan tanda baca. Potongan tidak dibentuk dengan
+memisahkan setiap karakter atau menebak batas kanji/kana secara otomatis.
+Pola, rumus, arti Indonesia, dan atribusi sumber diwarisi dari entri Bunpou.
+
+`data/bunpou-order-variants.json` mencatat perpindahan frasa yang maknanya
+tetap sesuai serta alternatif khusus. Daftar ini merupakan kurasi untuk
+contoh latihan, bukan aturan bahwa semua kata Jepang bebas dipertukarkan.
+Validasi memastikan setiap alternatif dapat dibentuk dari seluruh potongan
+yang tersedia, termasuk jumlah kemunculan potongan berulang.
+
+Khusus 33-01, contoh satu kata `止まれ！` diperluas menjadi
+`すぐにここで止まれ！` (“Segera berhenti di sini!”) agar dapat disusun.
+Adaptasi hanya berlaku pada mode Susun Kalimat; contoh Lengkapi tidak berubah.
+`scripts/build_bunpou.py` membangun kedua mode sekaligus dan memastikan
+setiap baris sumber memiliki tepat satu set potongan.

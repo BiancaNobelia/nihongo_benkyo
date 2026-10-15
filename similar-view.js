@@ -1,7 +1,7 @@
-import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261015-bunpou';
-import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-bunpou';
-import { createRadicalView } from './radical-view.js?v=20261015-bunpou';
-import { similarityQuizCallout } from './similar-quiz-view.js?v=20261015-bunpou';
+import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261015-bunpou-order';
+import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-bunpou-order';
+import { createRadicalView } from './radical-view.js?v=20261015-bunpou-order';
+import { similarityQuizCallout } from './similar-quiz-view.js?v=20261015-bunpou-order';
 
 export function createSimilarView({root, kanji, groups, categories, levels, escape, icon, activity}) {
   const byChar = new Map(kanji.map(k => [k.char, k]));
