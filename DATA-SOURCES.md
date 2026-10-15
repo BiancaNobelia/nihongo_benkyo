@@ -1026,3 +1026,29 @@ yang membedakan struktur objek langsung dan bentuk pasangan, serta
 [資料 意志動詞と無意志動詞, Japan Foundation](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00003/ja/render.do)
 untuk perbedaan kehendak dan kategori kata kerja. Materi tersebut digunakan
 sebagai rujukan konsep; soal latihan baru tidak disalin dari contoh sumber.
+
+### Henkan kata benda — 15 Oktober 2026
+
+`scripts/build_henkan_nouns.mjs` mengambil entri berlabel kata benda atau
+kata benda/kerja (する) dari `kotoba-data.js` dan `kotoba-n3-data.js`.
+Sumber dan ketentuan atribusi workbook Minna I–II dan kompilasi N3 di atas
+tetap berlaku pada data turunannya. Kata aktivitas seperti 勉強 dipakai
+sebagai nomina; latihan ini tidak menambahkan する.
+
+Bank menggabungkan ejaan dan bacaan yang identik pada level sumber paling
+awal (Minna bab 1–25: N5; bab 26–50: N4; kompilasi N3: N3). Ini pembagian
+materi belajar mengikuti sumber, bukan daftar kosakata JLPT resmi.
+`data/henkan-noun-source.json` mencatat asal setiap entri serta alasan
+pengecualian, antara lain partikel, ungkapan utuh, dan nomina terikat yang
+memerlukan konteks. Arti Indonesia mengikuti bank kosakata yang ada;
+keterbatasan terjemahan sumber N3 yang didokumentasikan di atas tetap berlaku.
+
+Empat latihan mengubah **predikat** Nです menjadi Nじゃない, Nだった,
+Nじゃなかった, atau Nで. Bentuk dasar kata benda tidak berubah. Penghubung
+で di sini bukan partikel lokasi atau alat; instruksi meminta akhiran ～で
+secara khusus. Latihan noun tidak memiliki mode adverb atau ～さ.
+Mode ketik juga menerima Nではない／Nでない, Nであった, serta
+Nではなかった／Nでなかった. Pilihan ganda tidak memakai varian yang benar
+sebagai pengecoh. Pembahasan menampilkan arti dasar, aturan, dan empat bentuk.
+Riwayat noun memakai kunci terpisah dan mempertahankan soal belum tampil
+sebagai prioritas, baik pada pilihan ganda maupun mode ketik.

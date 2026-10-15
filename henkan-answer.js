@@ -1,5 +1,6 @@
 import {acceptedAnswers,spellForm} from './henkan-core.js?v=20261015-jidoushi-tadoushi';
 import {adjectiveAcceptedAnswers,conjugateAdjective} from './henkan-adjective-core.js?v=20261015-jidoushi-tadoushi';
+import {nounAcceptedAnswers} from './henkan-noun-core.js?v=20261015-henkan-nouns';
 
 export const HENKAN_ANSWER_MODES={choice:'Pilihan ganda',typing:'Ketik sendiri'};
 
@@ -11,7 +12,9 @@ export function normalizeHenkanAnswer(value) {
 
 export function henkanTypedAnswers(q) {
   let answers;
-  if(q.adjective){
+  if(q.noun){
+    answers=[...nounAcceptedAnswers(q.noun,q.form),...nounAcceptedAnswers(q.noun,q.form,true)];
+  }else if(q.adjective){
     const a=q.adjective,word=conjugateAdjective(a,true)[q.form];
     answers=[...adjectiveAcceptedAnswers(a,q.form),word];
     if(a.group==='na'&&['negative','negativePast'].includes(q.form))answers.push(word.replace(/じゃ(ない|なかった)$/,'では$1'));
