@@ -7,7 +7,11 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 
 - Kuis Kanji → Arti baru menampilkan onyomi/kunyomi di bawah soal setelah
   menjawab atau waktu habis, sekaligus mengungkap kanji serta bacaan pada
-  semua pilihan. Kuis Kotoba juga
+  semua pilihan. Arah Arti → Kanji menampilkan arti dan contoh bacaan setiap
+  pilihan setelah menjawab, tanpa panel jawaban yang berulang. Mode per kata
+  menampilkan arti tepat di bawah soal setelah menjawab. Kuis JLPT menggabungkan
+  onyomi/kunyomi tiap kanji target di bagian jawaban benar, tanpa bagian
+  "Kenali kanji" dan penjelasan pilihan bacaan lain. Kuis Kotoba juga
   menampilkan pasangan kata, bacaan, dan arti untuk seluruh pilihan pada
   kelima mode, termasuk saat waktu habis. Data pilihan tetap terhubung ke
   kata sumber setelah diacak; jawaban belum dibocorkan sebelum dijawab.
@@ -89,7 +93,7 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
   Kalimat boleh berisi beberapa kanji, hanya target digarisbawahi.
   Pada 536 soal, pilihan juga memakai onyomi/kunyomi lain dari kanji yang sama.
   Bacaan kata alternatif yang sah disaring menggunakan JMdict/KANJIDIC2;
-  pembahasan menjelaskan bacaan kanji yang digunakan pada kata soal.
+  jawaban benar menampilkan bacaan kata beserta onyomi/kunyomi kanji target.
   Riwayat soal yang sudah tampil disimpan di browser: soal yang paling jarang
   tampil didahulukan, termasuk setelah reload atau berpindah level. Sesi baru
   menghabiskan soal yang belum mendapat giliran sebelum mengulang. Sesi yang

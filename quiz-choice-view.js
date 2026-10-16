@@ -6,9 +6,9 @@ export function kanjiReadingsMarkup(kanji, escape) {
   return `<dl class="quiz-kanji-readings"><div class="quiz-reading-on"><dt>Onyomi</dt><dd lang="ja">${escape(readingText(kanji.on))}</dd></div><div class="quiz-reading-kun"><dt>Kunyomi</dt><dd lang="ja">${escape(readingText(kanji.kun))}</dd></div></dl>`;
 }
 
-export function kanjiChoiceDetailsMarkup(kanji, escape) {
+export function kanjiChoiceDetailsMarkup(kanji, escape, mode = 'meaning') {
   const readings=[...new Set([kanji.on?.[0],kanji.kun?.[0]].filter(Boolean))];
-  return `<span class="quiz-choice-detail"><strong class="quiz-choice-word quiz-choice-kanji" lang="ja">${escape(kanji.char)}</strong><small class="quiz-choice-reading" lang="ja" title="Contoh bacaan on dan kun">${escape(readingText(readings))}</small></span>`;
+  return `<span class="quiz-choice-detail">${mode==='kanji' ? `<small class="quiz-choice-meaning" lang="id">${escape(kanji.meaning)}</small>` : `<strong class="quiz-choice-word quiz-choice-kanji" lang="ja">${escape(kanji.char)}</strong>`}<small class="quiz-choice-reading" lang="ja" title="Contoh bacaan on dan kun">${escape(readingText(readings))}</small></span>`;
 }
 
 export function kotobaChoiceDetailsMarkup(entry, mode, escape) {

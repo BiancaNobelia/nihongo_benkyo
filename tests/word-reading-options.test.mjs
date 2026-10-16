@@ -122,7 +122,7 @@ test('the full word snapshot excludes valid compound combinations and alternate 
   }
 });
 
-test('per-word sessions keep level scope and explain only kanji in the question after answering',()=>{
+test('per-word sessions keep level scope and review the word without duplicate explanatory sections',()=>{
   for(const level of ['N5','N4','N3','N2','N1']){
     const questions=createQuiz(getQuizPool('reading',level),'reading',50,seeded(42));
     assert.equal(questions.length,50);
@@ -130,10 +130,11 @@ test('per-word sessions keep level scope and explain only kanji in the question 
   }
   const [q]=createQuiz([card('午')],'reading',1,seeded(8));
   const html=answerDetailsMarkup(q,'reading',escape);
-  assert.ok(html.includes('Mengapa ada pilihan bacaan lain?'));
+  assert.ok(!html.includes('Mengapa ada pilihan bacaan lain?'));
+  assert.ok(!html.includes('Kenali kanji pada jawaban'));
+  assert.ok(!html.includes('answer-explanation'));
   assert.ok(html.includes(q.meaning));
   assert.ok(!html.includes('Kalimat lengkap'));
   assert.ok(q.readingAlternatives.every(c=>q.word.includes(c.char)));
-  assert.equal((html.match(/前<\/span> juga/g)||[]).length,1,'Repeated component notes are deduplicated');
   assert.ok(!answerDetailsMarkup({...q,readingAlternatives:[{char:'<script>',type:'kun',sourceReading:'<x>',from:'<y>'}]},'reading',escape).includes('<script>'));
 });

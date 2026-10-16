@@ -9,13 +9,18 @@ import { answerDetailsMarkup } from '../quiz-feedback.js';
 
 const escape = text => String(text).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 
-test('聞 explains the gate and ear inside, without distractor kanji in either direction', () => {
+test('writing feedback keeps components while JLPT feedback puts readings under the correct answer', () => {
   for (const mode of ['jlpt-reading','hiragana-kanji']) {
     const pool = PRACTICE_BANKS[mode].filter(q => (q.word || q.answer) === '聞く');
     assert.equal(pool.length, 1);
     const [q] = (mode === 'jlpt-reading' ? createReadingQuiz : createWritingQuiz)(pool, 1);
     const html = answerDetailsMarkup(q, mode, escape);
-    for (const text of ['門', 'gerbang', '耳', 'telinga', 'di dalam', 'Arti kalimat']) assert.ok(html.includes(text), text);
+    assert.ok(html.includes('Arti kalimat'));
+    if(mode==='hiragana-kanji')for (const text of ['門', 'gerbang', '耳', 'telinga', 'di dalam']) assert.ok(html.includes(text), text);
+    else {
+      assert.ok(!html.includes('answer-components'));
+      assert.ok(html.includes('Onyomi') && html.includes('Kunyomi'));
+    }
     for (const char of ['間','問','閑']) assert.ok(!html.includes(char), char);
   }
 });

@@ -24,6 +24,13 @@
 .quiz-choice-reading{display:block;font:400 16px/1.9 var(--serif);color:inherit;margin-top:3px}
 .quiz-choice-meaning{display:block;font:400 14px/1.8 var(--sans);color:inherit;margin-top:6px}
 .quiz-choice-result{display:block;font:650 11px/1.7 var(--sans);margin-top:10px}
+.quiz-option.reveal-option .quiz-choice-kanji-label{font:500 34px/1.4 var(--serif)}
+.word-reading-question .quiz-prompt{margin-bottom:18px}
+.quiz-prompt-meaning{font:550 18px/1.7 var(--sans);color:var(--ink);margin:0 0 26px;text-align:center}
+.answer-kanji-readings{display:grid;gap:10px;margin-top:12px}
+.answer-kanji-reading{display:flex;gap:12px;align-items:baseline}
+.answer-kanji-reading>b{font:500 23px/1.6 var(--serif);flex-shrink:0}
+.answer-kanji-reading .quiz-kanji-readings{justify-content:flex-start;flex:1;min-width:0;margin:0}
 @media(max-width:480px){.kanji-meaning-question .quiz-options{grid-template-columns:1fr}.quiz-kanji-readings{gap:8px}.quiz-kanji-readings>div{flex-basis:100%;padding:10px 12px}.quiz-kanji-readings dd{font-size:17px}}
 .reading-category{display:table;margin:0 auto 12px;border:1px solid var(--line);border-radius:20px;background:var(--surface-soft);color:var(--muted);padding:5px 12px;font-size:11px;font-weight:600}
 .reading-composition{grid-column:1/-1;border-top:1px solid var(--line);padding-top:20px}.reading-composition h4{font-size:13px;margin:0 0 12px}.reading-composition>div{display:grid;grid-template-columns:repeat(auto-fit,minmax(94px,1fr));gap:8px}.reading-composition>div>span{padding:10px;background:color-mix(in srgb,var(--surface) 70.2%,transparent);border-radius:6px;font-size:10px;color:var(--muted)}.reading-composition strong{display:block;font-size:14px;font-weight:550;color:var(--ink);margin-top:5px}.reading-composition>p{font-size:10px;margin:13px 0 0}

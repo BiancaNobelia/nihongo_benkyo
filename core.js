@@ -42,7 +42,7 @@ export function createQuiz(pool, mode, count, random = Math.random) {
       prompt: mode === 'kanji' ? k.meaning : mode === 'reading' ? k.example.word : k.char,
       ...(wordChoices ? {readingAlternatives:wordChoices.readingAlternatives,wordDistractors:wordChoices.wordDistractors} : {}),
       answer, options,
-      ...(mode==='meaning' ? {optionDetails:options.map(value=>value===answer ? k : candidates.find(other=>getAnswer(other)===value))} : {}) };
+      ...(['meaning','kanji'].includes(mode) ? {optionDetails:options.map(value=>value===answer ? k : candidates.find(other=>getAnswer(other)===value))} : {}) };
   });
 }
 export function localDay(date = new Date()) {

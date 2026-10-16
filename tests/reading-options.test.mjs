@@ -75,17 +75,21 @@ test('alternate accepted readings and exact kun forms never become wrong answers
   assert.ok(!week.alternatives.some(c=>c.value==='ましゅう'));
 });
 
-test('answer feedback explains only readings of kanji in the question and preserves meaning',()=>{
+test('JLPT answer feedback shows full on and kun readings only for the target word and preserves its meaning',()=>{
   const [q]=createReadingQuiz([pool.find(q=>q.word==='新聞')],1,seeded(1));
   const html=answerDetailsMarkup(q,'jlpt-reading',escape);
-  assert.ok(html.includes('Mengapa ada pilihan bacaan lain?'));
+  assert.ok(!html.includes('Mengapa ada pilihan bacaan lain?'));
+  assert.ok(!html.includes('Kenali kanji pada jawaban'));
+  assert.ok(!html.includes('answer-explanation'));
   assert.ok(html.includes('Arti kata'));
   assert.ok(html.includes(q.meaning));
-  for(const c of q.readingAlternatives){
-    assert.ok(q.prompt.includes(c.char));
-    assert.ok(html.includes(c.sourceReading.replace(/[.-]/g,'')));
+  const readings=html.match(/<div class="answer-kanji-readings">(.*?)<div class="answer-meaning">/s)[1];
+  assert.equal((readings.match(/<dt>Onyomi<\/dt>/g)||[]).length,2);
+  assert.equal((readings.match(/<dt>Kunyomi<\/dt>/g)||[]).length,2);
+  for(const c of KANJI.filter(k=>q.prompt.includes(k.char))){
+    for(const reading of [...c.on,...c.kun])assert.ok(readings.includes(escape(reading.replace('.', '（')+(reading.includes('.')?'）':''))));
   }
-  assert.ok(!answerDetailsMarkup({...q,readingAlternatives:[]},'jlpt-reading',escape).includes('Mengapa ada pilihan bacaan lain?'));
+  assert.equal(answerDetailsMarkup({...q,readingAlternatives:[]},'jlpt-reading',escape),html);
   const unsafe={...q,readingAlternatives:[{char:'<script>',type:'on',sourceReading:'<x>',from:'<y>'}]};
   assert.ok(!answerDetailsMarkup(unsafe,'jlpt-reading',escape).includes('<script>'));
 });

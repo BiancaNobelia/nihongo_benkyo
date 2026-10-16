@@ -9,14 +9,14 @@ import {kanjiReadingsMarkup,kanjiChoiceDetailsMarkup,kotobaChoiceDetailsMarkup} 
 const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const seeded=()=>{let seed=127;return ()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);};
 
-test('every shuffled kanji meaning choice retains a matching source card at all levels',()=>{
-  for(const level of ['N5','N4','N3','N2','N1']){
+test('every shuffled kanji or meaning choice retains a matching source card at all levels',()=>{
+  for(const mode of ['meaning','kanji'])for(const level of ['N5','N4','N3','N2','N1']){
     const pool=KANJI.filter(k=>k.level===level);
-    for(const q of createQuiz(pool,'meaning',30,seeded())){
+    for(const q of createQuiz(pool,mode,30,seeded())){
       assert.equal(q.optionDetails.length,q.options.length);
       q.optionDetails.forEach((card,i)=>{
-        assert.ok(pool.includes(card));assert.equal(card.meaning,q.options[i]);
-        assert.ok(kanjiChoiceDetailsMarkup(card,escape).includes(card.char));
+        assert.ok(pool.includes(card));assert.equal(mode==='meaning'?card.meaning:card.char,q.options[i]);
+        assert.ok(kanjiChoiceDetailsMarkup(card,escape,mode).includes(escape(mode==='meaning'?card.char:card.meaning)));
         if(q.options[i]===q.answer)assert.equal(card,q.kanji);
       });
     }
