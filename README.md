@@ -5,6 +5,14 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 
 ## Fitur
 
+- Kuis Dokkai di `#dokkai`: 15 bacaan adaptasi KCよむよむ dan 60 soal
+  pilihan ganda. Level latihan N5/N4/N3 masing-masing 20 soal (perkiraan
+  editorial, bukan padanan resmi JF Standard atau soal resmi JLPT).
+  Pilih 10/20/50/kustom, timer bebas/3/5 menit per bacaan, dan furigana.
+  Semua pertanyaan dalam satu bacaan diperiksa bersama sebelum terjemahan
+  dan bukti paragraf dibuka. Ada riwayat tampil, skor, ulasan, dan ulangi salah.
+  Sumber, penulis, perubahan, dan lisensi CC BY-NC 2.1 JP ditautkan per bacaan.
+  Validasi: `node --test tests/dokkai.test.mjs`.
 - Tema Light/Dark tersedia di header setiap halaman. Kunjungan awal mengikuti
   tema perangkat; pilihan manual tersimpan dengan kunci `nihongo-benkyo-theme-v1`
   dan tidak mengubah progres belajar. `theme.js` diterapkan sebelum stylesheet

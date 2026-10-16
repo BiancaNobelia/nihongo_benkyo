@@ -1052,3 +1052,45 @@ Nではなかった／Nでなかった. Pilihan ganda tidak memakai varian yang 
 sebagai pengecoh. Pembahasan menampilkan arti dasar, aturan, dan empat bentuk.
 Riwayat noun memakai kunci terpisah dan mempertahankan soal belum tampil
 sebagai prioritas, baik pada pilihan ganda maupun mode ketik.
+### Dokkai — 16 Oktober 2026
+
+`dokkai-data.js` memuat 15 bacaan adaptasi dan 60 pertanyaan baru, bersumber
+dari [KCよむよむ, Japan Foundation Japanese-Language Institute, Kansai](https://www.jpf.go.jp/j/kansai/clip/yomyom/).
+Sumber menyediakan teks di bawah [CC BY-NC 2.1 JP](https://creativecommons.org/licenses/by-nc/2.1/jp/).
+Kredit penulis asli, judul, dan tautan PDF dicantumkan pada setiap bacaan.
+`data/dokkai-sources.json` merekam URL, judul, SHA-256 PDF yang diperiksa,
+jumlah halaman, dan tanggal pengambilan. Teks asli tetap milik penulis
+masing-masing dan Japan Foundation. Ilustrasi, foto, serta audio tidak disalin.
+
+Perubahan: teks diringkas, kosakata/susunan kalimat disesuaikan, sebagian
+informasi visual dijelaskan dengan kata-kata, lalu ditambahkan furigana,
+terjemahan Indonesia, kosakata kunci, pertanyaan pilihan ganda, dan
+pembahasan. Adaptasi dan materi latihan tambahan dibuat oleh Nihongo Benkyo
+dan tersedia untuk penggunaan nonkomersial dengan atribusi di bawah
+CC BY-NC 2.1 JP. Ini bukan produk resmi atau dukungan dari Japan Foundation.
+
+Pilihan N5/N4/N3 merupakan perkiraan editorial untuk latihan pada aplikasi.
+Level sumber sebenarnya adalah A1, A2, atau A2/B1, bukan level JLPT.
+Teks tidak dimaksudkan sebagai informasi operasional terkini tentang
+perpustakaan, kebun binatang, atau acara. Klaim kesehatan dari teks
+かぼちゃ dan klaim lama tentang koleksi hewan tidak dimasukkan.
+Isi surat penggemar pada アイドルやめたい diperiksa secara visual pada
+halaman PDF 10–12 karena teksnya berada di dalam gambar.
+
+| Bacaan | Penulis teks asli | Level sumber | Level latihan |
+| --- | --- | --- | --- |
+| 図書館 | 畠中朋子 | A1 | N5 |
+| 天王寺動物園 | 安達祥子 | A1 | N5 |
+| 私の一日 | 東健太郎 | A1 | N5 |
+| はじめまして、私はアインです | 大西薫 | A1 | N5 |
+| アインさんインタビュー | 大西薫 | A1 | N5 |
+| 月見 | 畠中朋子 | A2 | N4 |
+| 季節 | 野畑理佳 | A2 | N4 |
+| 非常口 | 戸田淑子・畠中朋子 | A2 | N4 |
+| かぼちゃ | 戸田淑子・畠中朋子 | A2 | N4 |
+| ヤドカリにげた | 三浦睦月 | A2 | N4 |
+| あなたへの3つのおねがい | 田中哲哉 | A2 | N3 |
+| コンサートに行こう！ | 湯本かほり | A2 | N3 |
+| 結婚式 | 香月裕介 | A2 | N3 |
+| アインさんアルバイトをする？ | 大西薫 | A2 | N3 |
+| アイドルやめたい | 湯本かほり | A2/B1 | N3 |

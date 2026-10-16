@@ -1,0 +1,107 @@
+[
+  {
+    "title": "図書館",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/003_toshokan.pdf",
+    "sha256": "454018dd39c07534f82817ee3c5c6c8c2bdc8f4ebc685fb1cbf64df602be4ecf",
+    "accessed": "2026-10-16",
+    "pages": 11
+  },
+  {
+    "title": "天王寺動物園",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/004_tennoji.pdf",
+    "sha256": "7f542a9e8304d6728f22ff0d125bb26d3055e85a5d9e48744cc6d246fc348863",
+    "accessed": "2026-10-16",
+    "pages": 11
+  },
+  {
+    "title": "私の一日",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/005_watashi.pdf",
+    "sha256": "382aaf18861429ed5204d9591ce431d7076a33649dddcfda9dfb6e64a7129852",
+    "accessed": "2026-10-16",
+    "pages": 12
+  },
+  {
+    "title": "はじめまして、私はアインです",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/024_hajimemashite.pdf",
+    "sha256": "79112b35c092bb2b2b0352f01202ce1e160b68a57bddf314b1fadcdd9b45ea9b",
+    "accessed": "2026-10-16",
+    "pages": 16
+  },
+  {
+    "title": "アインさんインタビュー",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/025_anhsaninterview.pdf",
+    "sha256": "f1a86e7f9d7c71f1b61bc65d520bedc4566748ec4276a25598f77ef8890cd6f1",
+    "accessed": "2026-10-16",
+    "pages": 13
+  },
+  {
+    "title": "月見",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/002_tsukimi.pdf",
+    "sha256": "fbe74c549602e96119d10fdacf7d1086103db8ef3bb40c533d720fe04132594d",
+    "accessed": "2026-10-16",
+    "pages": 11
+  },
+  {
+    "title": "季節",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/006_kisetsu.pdf",
+    "sha256": "5181be67523644227e53681b8ed708677c6bf3609dcfc0accb817ce33d73c001",
+    "accessed": "2026-10-16",
+    "pages": 13
+  },
+  {
+    "title": "非常口",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/008_hijoguchi.pdf",
+    "sha256": "a96e30dc95f0ba0d7555a43e5dda6f9effaa349d3a85e0e4d8229374d94cf0f4",
+    "accessed": "2026-10-16",
+    "pages": 13
+  },
+  {
+    "title": "かぼちゃ",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/009_kabocha.pdf",
+    "sha256": "2600dd1a657bfc8013cd8f2a9feeef26e898ca2fd16f7dd5968b20aef9cc612e",
+    "accessed": "2026-10-16",
+    "pages": 12
+  },
+  {
+    "title": "ヤドカリにげた",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/011_yadokari.pdf",
+    "sha256": "8d621a1929321991bf60a428f8c85bac6556d19807112c0eaa3938bf07b9bf91",
+    "accessed": "2026-10-16",
+    "pages": 10
+  },
+  {
+    "title": "あなたへの3つのおねがい",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/016_anata.pdf",
+    "sha256": "792cbe29f73310c834ff776f3dd22142831b9af1df6fe8c958198fd9e3617fce",
+    "accessed": "2026-10-16",
+    "pages": 22
+  },
+  {
+    "title": "コンサートに行こう！",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/017_concert.pdf",
+    "sha256": "6bda38c6f101a02cdb6e2a0f179b842f9ce19a8063d6129e6bafd3b46fb69f31",
+    "accessed": "2026-10-16",
+    "pages": 13
+  },
+  {
+    "title": "結婚式",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/026_kekkonshiki.pdf",
+    "sha256": "bf837519d4f8c96c8b675dae17baed4b41ce8b7bcec9952be13fac25419c040e",
+    "accessed": "2026-10-16",
+    "pages": 13
+  },
+  {
+    "title": "アインさんアルバイトをする？",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/027_anhsanarbeitwosuru.pdf",
+    "sha256": "798c8204a6d65c2e3a2f66c6edf520358b395862ecfd85f182b7080f05f4eaa0",
+    "accessed": "2026-10-16",
+    "pages": 15
+  },
+  {
+    "title": "アイドルやめたい",
+    "url": "https://www.jpf.go.jp/j/kansai/clip/images/page/yomyom/022_idolyametai.pdf",
+    "sha256": "1a5bcbdc4780a01ea5f58123c48a605c6622656f33bc06726c0ed57483806b2f",
+    "accessed": "2026-10-16",
+    "pages": 15
+  }
+]

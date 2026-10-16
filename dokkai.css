@@ -1,0 +1,117 @@
+.dokkai-view [hidden],.dokkai-session [hidden] { display:none!important; }
+.dokkai-hero { display:flex; align-items:center; justify-content:space-between; gap:36px; padding:38px; border:1px solid var(--teal-border); border-radius:22px; background:linear-gradient(115deg,var(--teal-soft),var(--blue-soft)); margin-bottom:28px; }
+.dokkai-hero .section-kicker { color:var(--teal); }
+.dokkai-hero h1 { font-size:clamp(32px,3.6vw,48px); letter-spacing:-1.5px; margin:12px 0 20px; }
+.dokkai-hero em { font-style:normal; color:var(--teal); }
+.dokkai-hero p { max-width:630px; font-size:16px; color:var(--muted); }
+.dokkai-hero-art { padding:26px; border:1px solid var(--teal-border); border-radius:16px; background:var(--surface); flex-shrink:0; width:190px; transform:rotate(4deg); box-shadow:var(--shadow); }
+.dokkai-hero-art>span { display:block; font:500 54px/1.7 var(--serif); color:var(--teal); text-align:center; margin-bottom:14px; }
+.dokkai-hero-art>div { height:4px; border-radius:8px; background:var(--teal-border); margin:10px 0; }
+.dokkai-hero-art>div:nth-last-child(2) { width:66%; }
+.dokkai-hero-art small { display:block; font-size:8px; color:var(--muted); letter-spacing:1px; margin-top:24px; text-align:center; }
+.dokkai-setup { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch; }
+.dokkai-levels { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+.dokkai-levels button { padding:14px 6px; background:var(--surface-soft); border:1px solid var(--line); border-radius:12px; }
+.dokkai-levels strong { display:block; font-size:21px; margin-bottom:4px; }
+.dokkai-levels small { color:var(--muted); font-size:10px; }
+.dokkai-levels button[aria-pressed=true] { background:var(--teal-soft); color:var(--teal); border-color:var(--teal); box-shadow:inset 0 0 0 1px var(--teal); }
+.dokkai-note { color:var(--muted); font-size:12px; line-height:1.8; margin:14px 0 0; }
+.dokkai-how { border-left:3px solid var(--teal); background:var(--teal-soft); border-radius:0 10px 10px 0; padding:17px; margin:22px 0; }
+.dokkai-how strong { color:var(--teal); font-size:14px; }
+.dokkai-how p { font-size:13px; margin:7px 0 0; }
+.dokkai-furigana-setting { display:flex; gap:10px; align-items:center; font-size:13px; cursor:pointer; }
+.dokkai-furigana-setting input { width:18px; height:18px; accent-color:var(--teal); }
+.dokkai-setting-label { font-size:13px; margin:20px 0 10px; }
+.dokkai-pills { display:flex; flex-wrap:wrap; gap:8px; }
+.dokkai-pills button { padding:9px 18px; min-height:42px; font-size:13px; border:1px solid var(--line-strong); background:var(--surface); border-radius:999px; }
+.dokkai-pills button[aria-pressed=true] { color:var(--on-accent); background:var(--action); border-color:var(--action); }
+.dokkai-custom { margin-top:14px; }
+.dokkai-custom input { width:100%; border:1px solid var(--line-strong); background:var(--surface); border-radius:8px; padding:10px; }
+.dokkai-custom small { color:var(--danger); }
+.dokkai-catalog { margin-top:38px; }
+#dokkai-catalog-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+#dokkai-catalog-list article { display:flex; gap:12px; align-items:flex-start; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px; min-width:0; }
+#dokkai-catalog-list article>div { min-width:0; }
+#dokkai-catalog-list h3 { font:600 19px/1.8 var(--serif); margin-bottom:8px; overflow-wrap:anywhere; }
+#dokkai-catalog-list p { color:var(--muted); font-size:13px; margin-bottom:8px; }
+#dokkai-catalog-list small { color:var(--muted); font-size:11px; }
+#dokkai-catalog-list a { margin-left:auto; color:var(--teal); padding:4px; }
+.dokkai-level { display:inline-block; white-space:nowrap; font-size:11px; font-weight:700; border:1px solid var(--teal-border); background:var(--teal-soft); color:var(--teal); border-radius:6px; padding:4px 7px; }
+.dokkai-source-note { font-size:12px; color:var(--muted); line-height:1.9; margin-top:26px; }
+.dokkai-source-note a,.dokkai-source a { color:var(--teal); text-decoration:underline; text-underline-offset:3px; }
+.dokkai-reading-layout { display:grid; grid-template-columns:1.1fr 1fr; gap:26px; align-items:start; margin-top:24px; }
+.dokkai-reading { background:var(--surface); border:1px solid var(--line); border-top:4px solid var(--teal); border-radius:16px; padding:25px; position:sticky; top:105px; max-height:calc(100dvh - 125px); overflow:auto; scrollbar-width:thin; }
+.dokkai-reading-head { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.dokkai-furigana-button { color:var(--teal); background:var(--teal-soft); padding:8px 12px; border:1px solid var(--teal-border); border-radius:8px; font-size:11px; }
+.dokkai-furigana-button:disabled { opacity:1; }
+.dokkai-reading h2 { font:600 27px/1.7 var(--serif); margin:18px 0 20px; }
+.dokkai-reading h2:focus { outline:none; }
+.dokkai-passage { font:400 21px/2.25 var(--serif); overflow-wrap:anywhere; }
+.dokkai-passage>p { display:flex; align-items:baseline; gap:12px; margin:0 0 22px; }
+.dokkai-paragraph-number { font:500 10px var(--sans); color:var(--muted); flex-shrink:0; }
+.dokkai-passage>p>span:last-child { min-width:0; }
+.dokkai-session rt { font:400 10px/1.2 var(--sans); color:var(--muted); }
+.dokkai-source { border-top:1px solid var(--line); margin-top:20px; padding-top:15px; font-size:11px; color:var(--muted); }
+.dokkai-source summary { cursor:pointer; font-size:12px; color:var(--teal); }
+.dokkai-source p { margin:12px 0 0; overflow-wrap:anywhere; }
+.dokkai-source .icon { width:13px; height:13px; }
+.dokkai-question-intro { background:var(--teal-soft); border:1px solid var(--teal-border); border-radius:12px; padding:16px 18px; font-size:13px; margin-bottom:18px; }
+.dokkai-question-intro strong { color:var(--teal); }
+.dokkai-question-intro p { margin:6px 0 0; }
+.dokkai-question { background:var(--surface); padding:22px; border:1px solid var(--line); border-radius:14px; margin-bottom:18px; }
+.dokkai-question h3,.dokkai-review-question h3 { font:500 19px/1.9 var(--serif); margin:10px 0 18px; overflow-wrap:anywhere; }
+.dokkai-options { display:grid; gap:9px; }
+.dokkai-options .quiz-option { width:100%; font:400 17px/1.8 var(--serif); gap:12px; min-width:0; padding:12px; text-align:left; }
+.dokkai-options .quiz-option>span:first-child { font:600 11px var(--sans); flex-shrink:0; }
+.dokkai-options .quiz-option>span:last-child { min-width:0; overflow-wrap:anywhere; }
+.dokkai-options .quiz-option[aria-pressed=true]:not(:disabled) { border-color:var(--accent); background:var(--accent-soft); box-shadow:inset 0 0 0 1px var(--accent); }
+.dokkai-options .quiz-option:disabled { opacity:1; }
+.dokkai-options .quiz-option.correct { border-color:var(--success); background:var(--success-soft); color:var(--success); }
+.dokkai-options .quiz-option.wrong { border-color:var(--danger); background:var(--danger-soft); color:var(--danger); }
+.dokkai-submit-status { color:var(--muted); font-size:13px; margin:14px 0; }
+.dokkai-submit { width:100%; }
+.dokkai-exit { margin-top:28px; }
+.dokkai-feedback { border-top:1px solid var(--line); margin-top:20px; padding-top:18px; font-size:13px; line-height:1.9; scroll-margin-top:110px; }
+.dokkai-feedback:focus { outline:none; }
+.dokkai-answer-status { display:flex; align-items:center; gap:6px; font-size:14px; font-weight:700; }
+.dokkai-answer-status.success { color:var(--success); }.dokkai-answer-status.error { color:var(--danger); }
+.dokkai-feedback blockquote,.dokkai-review blockquote { border-left:3px solid var(--teal); padding:12px 15px; margin:16px 0 0; background:var(--teal-soft); border-radius:0 8px 8px 0; }
+.dokkai-feedback blockquote>span,.dokkai-review blockquote>span { font:650 9px var(--sans); letter-spacing:1px; color:var(--teal); }
+.dokkai-feedback blockquote p,.dokkai-review blockquote p { font:400 17px/2.3 var(--serif); margin:12px 0 0; overflow-wrap:anywhere; }
+.dokkai-translation { border-top:1px solid var(--line); margin-top:26px; padding-top:22px; }
+.dokkai-translation h3 { font:650 15px var(--sans); color:var(--teal); margin-bottom:16px; }
+.dokkai-translation>p { font-size:14px; line-height:1.9; display:flex; gap:12px; }
+.dokkai-translation>p>span { font-size:10px; color:var(--muted); padding-top:3px; }
+.dokkai-translation dl>div { padding:10px 0; border-top:1px solid var(--line); }
+.dokkai-translation dt { font-size:18px; }.dokkai-translation dt small { font-size:12px; color:var(--muted); margin-left:5px; }
+.dokkai-translation dd { margin:3px 0 0; font-size:13px; }
+.dokkai-review { max-width:820px; margin:30px auto; }
+.dokkai-review>details { padding:22px; border:1px solid var(--line); background:var(--surface); border-radius:14px; margin-bottom:14px; }
+.dokkai-review>details>summary { display:flex; align-items:center; flex-wrap:wrap; gap:12px; cursor:pointer; }
+.dokkai-review summary>span { color:var(--teal); font-size:12px; }.dokkai-review summary>strong { font:500 20px var(--serif); }
+.dokkai-review summary>small { margin-left:auto; color:var(--muted); }
+.dokkai-review>details[open]>.dokkai-passage { margin-top:30px; }
+.dokkai-review-question { padding:24px 0; border-top:1px solid var(--line); font-size:14px; }
+.dokkai-banner>span:first-child { background:var(--teal-soft); color:var(--teal); }
+@media(max-width:1100px) {
+  .dokkai-hero-art { display:none; }
+  #dokkai-catalog-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .dokkai-reading-layout { gap:18px; }
+  .dokkai-reading,.dokkai-question { padding:19px; }
+}
+@media(max-width:900px) {
+  .dokkai-setup,.dokkai-reading-layout { grid-template-columns:1fr; }
+  .dokkai-reading { position:static; max-height:none; overflow:visible; }
+}
+@media(max-width:700px) {
+  .dokkai-hero { padding:26px 22px; border-radius:16px; }
+  .dokkai-hero h1 { font-size:33px; letter-spacing:-1px; }
+  .dokkai-hero p { font-size:14px; }
+  .dokkai-levels { gap:7px; }
+  .dokkai-pills button { padding:9px 15px; }
+  .dokkai-reading h2 { font-size:25px; }
+  .dokkai-passage { font-size:21px; }
+  .dokkai-feedback { scroll-margin-top:90px; }
+  #dokkai-catalog-list { grid-template-columns:1fr; }
+  .dokkai-review>details { padding:18px; }
+}

@@ -264,6 +264,7 @@ dialog::backdrop { background:#0c0c27a6; }
   .theme-switch button { padding:6px 9px; min-height:34px; font-size:11px; }
   .topbar-right { gap:0; }
   .sidebar { background:color-mix(in srgb,var(--surface) 96%,transparent); border-color:var(--line); }
+  .nav-list { grid-template-columns:repeat(7,minmax(0,1fr)); }
   .nav-list a { font-size:8px; border-radius:0; }
   .nav-list a.active { background:var(--accent-soft); color:var(--accent); box-shadow:inset 0 3px var(--accent); }
   .hero { padding:26px 23px; min-height:390px; }

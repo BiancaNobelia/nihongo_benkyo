@@ -3,9 +3,10 @@ import {TRANSITIVITY_PAIRS,TRANSITIVITY_ENTRIES} from './transitivity-data.js?v=
 import {PARTICLE_ENTRIES,PARTICLE_TOPICS} from './particle-data.js?v=20261015-jidoushi-tadoushi';
 import { createBunpouView } from './bunpou-view.js?v=20261015-jidoushi-tadoushi';
 import { createMateriView } from './materi-view.js?v=20261016-materi';
+import { createDokkaiView } from './dokkai-view.js?v=20261016-dokkai';
 import { KANJI } from './kanji-data.js?v=20261015-jidoushi-tadoushi';
 import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261015-jidoushi-tadoushi';
-import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261015-jidoushi-tadoushi';
+import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261016-dokkai';
 import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261015-jidoushi-tadoushi';
 import { groupsForCharacter } from './similar-core.js?v=20261015-jidoushi-tadoushi';
 import { createSimilarView } from './similar-view.js?v=20261015-jidoushi-tadoushi';
@@ -62,9 +63,10 @@ const root = document.querySelector('#view-root');
 const modal = document.querySelector('#modal');
 const modalContent = document.querySelector('#modal-content');
 const KEY = 'nihongo-benkyo-progress-v1';
-const viewNames = { beranda:'Beranda', materi:'List Materi', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', kotoba:'Kuis Kotoba', henkan:'Kuis Henkan', bunpou:'Kuis Bunpou', partikel:'Kuis Partikel', jidoushi:'Jidōshi–Tadōshi', progres:'Progres Saya' };
+const viewNames = { beranda:'Beranda', materi:'List Materi', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', kotoba:'Kuis Kotoba', henkan:'Kuis Henkan', bunpou:'Kuis Bunpou', dokkai:'Kuis Dokkai', partikel:'Kuis Partikel', jidoushi:'Jidōshi–Tadōshi', progres:'Progres Saya' };
 const modeNames = { meaning:'Kanji → Arti', kanji:'Arti → Kanji', ...READING_MODE_NAMES, 'hiragana-kanji':'Hiragana → Kanji', 'hiragana-katakana':'Hiragana → Katakana', 'english-katakana':'English → Katakana', ...Object.fromEntries(Object.entries(KOTOBA_MODES).map(([id,m])=>[`kotoba-${id}`,`Kotoba · ${m.label}`])) };
 modeNames.bunpou='Bunpou · Lengkapi kalimat';
+modeNames.dokkai='Dokkai · Pemahaman bacaan';
 modeNames['bunpou-order']='Bunpou · Susun kalimat';
 modeNames.henkan='Henkan · Perubahan kata kerja';
 modeNames['transitivity-word']='Jidōshi–Tadōshi · Pilih kata kerja';
@@ -87,6 +89,9 @@ let quizTimer;
 let toastTimeout;
 const similarView = createSimilarView({root, kanji:KANJI, groups:SIMILAR_GROUPS, categories:SIMILAR_CATEGORIES, levels, escape, icon, activity});
 const materiView = createMateriView({root,escape,icon});
+const dokkaiView = createDokkaiView({root,escape,icon,heading,activity,recordSession(entry){
+  progress.history.push(entry);progress.history=progress.history.slice(-50);activity();
+}});
 const kotobaView = createKotobaView({root,escape,icon,heading,activity,recordSession(entry){
   progress.history.push(entry);progress.history=progress.history.slice(-50);activity();
 }});
@@ -145,6 +150,7 @@ function renderLibrary(home = false) {
     ${home ? `<a class="kotoba-home-banner" href="#kotoba"><span lang="ja">言葉</span><div><strong>Kuis Kotoba Minna & JLPT N3</strong><small>Minna Bab 1–50 dan 2.276 kosakata N3 · Latih arti atau bacaan.</small></div>${icon('arrow')}</a>` : ''}
     ${home ? `<a class="kotoba-home-banner henkan-banner" href="#henkan"><span lang="ja">変換</span><div><strong>Kuis Henkan · Kata kerja, sifat & benda</strong><small>Kata kerja: 13 bentuk · Kata sifat: 6 bentuk · Kata benda: 4 bentuk · N5–N3.</small></div>${icon('arrow')}</a>` : ''}
     ${home ? `<a class="kotoba-home-banner bunpou-banner" href="#bunpou"><span lang="ja">文法</span><div><strong>Kuis Bunpou · Pahami pola kalimat</strong><small>330 pola Minna Bab 1–50 · Lengkapi atau susun kalimat dengan pola dan arti Indonesia.</small></div>${icon('arrow')}</a>` : ''}
+    ${home ? `<a class="kotoba-home-banner dokkai-banner" href="#dokkai"><span lang="ja">読解</span><div><strong>Kuis Dokkai · Pahami isi bacaan</strong><small>15 bacaan · 60 soal N5–N3 · Sumber Japan Foundation, arti, dan pembahasan Indonesia.</small></div>${icon('arrow')}</a>` : ''}
     ${home ? `<a class="kotoba-home-banner particle-banner" href="#partikel"><span lang="ja">助詞</span><div><strong>Kuis Partikel · Pahami hubungan antarkata</strong><small>${PARTICLE_ENTRIES.length} kalimat · ${PARTICLE_TOPICS.length} topik partikel & gabungan · Arti dan penjelasan.</small></div>${icon('arrow')}</a>` : ''}
     ${home ? `<a class="kotoba-home-banner transitivity-banner" href="#jidoushi"><span lang="ja">自他</span><div><strong>Kuis Jidōshi–Tadōshi</strong><small>${TRANSITIVITY_PAIRS.length} pasangan · ${TRANSITIVITY_ENTRIES.length} soal Indonesia · Dua pilihan.</small></div>${icon('arrow')}</a>` : ''}
     <a class="similar-banner" href="#mirip"><span class="similar-banner-glyphs" lang="ja">未 末</span><span><strong>Serupa, tapi tidak sama.</strong><small>Bandingkan kanji mirip dan ingat ciri pembeda tiap bentuk.</small></span><span class="similar-banner-arrow">Kanji Mirip ${icon('arrow')}</span></a>
@@ -358,6 +364,7 @@ function route() {
   henkanView.dispose();
   bunpouView.dispose();
   materiView.dispose();
+  dokkaiView.dispose();
   particleView.dispose();
   transitivityView.dispose();
   clearInterval(quizTimer); quiz = null;
@@ -366,6 +373,7 @@ function route() {
   document.title = `${viewNames[view]} — Nihongo Benkyo`;
   if (view === 'beranda' || view === 'kanji') renderLibrary(view === 'beranda');
   else if (view === 'materi') materiView.render(groupId);
+  else if (view === 'dokkai') dokkaiView.render();
   else if (view === 'mirip') similarView.render(groupId);
   else if (view === 'flashcard') renderFlash();
   else if (view === 'kotoba') kotobaView.render(groupId || undefined);
@@ -376,7 +384,7 @@ function route() {
   else if (view === 'kuis') {
     if (groupId === 'jlpt') quizPreferences.mode = 'jlpt-reading';
     else if (groupId === 'hiragana-katakana') quizPreferences.mode = 'english-katakana';
-    else if (Object.hasOwn(modeNames, groupId) && !groupId.startsWith('kotoba-') && !['henkan','particle','transitivity-word','transitivity-type'].includes(groupId) && !groupId.startsWith('bunpou')) quizPreferences.mode=groupId;
+    else if (Object.hasOwn(modeNames, groupId) && !groupId.startsWith('kotoba-') && !['henkan','particle','transitivity-word','transitivity-type','dokkai'].includes(groupId) && !groupId.startsWith('bunpou')) quizPreferences.mode=groupId;
     renderQuizSetup();
   }
   else renderProgress();
