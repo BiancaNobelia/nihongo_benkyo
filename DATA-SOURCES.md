@@ -22,6 +22,13 @@ progres yang tersimpan tetap dipertahankan berdasarkan karakter.
 
 ## Asal data dan atribusi
 
+- Bacaan dan arti 23 kanji tambahan pada pilihan pengecoh Hiragana → Kanji:
+  KANJIDIC2 melalui [kanjiapi.dev](https://kanjiapi.dev/), diambil 16 Oktober 2026.
+  Respons sumber disimpan di `data/writing-choice-kanji-source.json`; arti Indonesia
+  disunting di `writing-choice-kanji-data.js`. Data tambahan ini melengkapi pilihan
+  kuis, tanpa mengubah koleksi atau level JLPT. Pilihan yang berupa ejaan buatan
+  hanya diberi bacaan/arti per kanji, bukan diperlakukan sebagai kata yang sah.
+
 - Bacaan, arti sumber Inggris, dan jumlah goresan:
   [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), melalui OpenJLPT.
 - Contoh kata dan bacaan: daftar Jonathan Waller dan

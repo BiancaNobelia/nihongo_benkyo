@@ -18,15 +18,15 @@ import { createReadingQuiz } from './jlpt-reading-core.js?v=20261015-jidoushi-ta
 import { READING_HISTORY_KEY, cleanReadingHistory, recordReadingShown, readingHistorySummary } from './reading-history.js?v=20261015-jidoushi-tadoushi';
 import { readingOptions } from './reading-options.js?v=20261015-jidoushi-tadoushi';
 
-import { createWritingQuiz } from './writing-core.js?v=20261015-jidoushi-tadoushi';
-import { READING_MODE_NAMES, usesSentence, quizPromptMarkup } from './quiz-prompt.js?v=20261015-jidoushi-tadoushi';
+import { createWritingQuiz } from './writing-core.js?v=20261016-writing-feedback';
+import { READING_MODE_NAMES, usesSentence, quizPromptMarkup } from './quiz-prompt.js?v=20261016-writing-feedback';
 import { questionTopicLinks } from './similar-quiz-view.js?v=20261015-jidoushi-tadoushi';
 
 import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261015-jidoushi-tadoushi';
 import { requestedQuizCount } from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
-import { quizSetupPanel } from './quiz-setup-view.js?v=20261015-henkan-nouns';
+import { quizSetupPanel } from './quiz-setup-view.js?v=20261016-writing-feedback';
 import { answerDetails, answerDetailsMarkup } from './quiz-feedback.js?v=20261016-compact-feedback';
-import { kanjiReadingsMarkup, kanjiChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261016-compact-feedback';
+import { kanjiReadingsMarkup, kanjiChoiceDetailsMarkup, writingChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261016-writing-feedback';
 import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261015-jidoushi-tadoushi';
 import { createKotobaView } from './kotoba-view.js?v=20261016-choice-feedback';
 import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261016-choice-feedback';
@@ -65,7 +65,7 @@ const modal = document.querySelector('#modal');
 const modalContent = document.querySelector('#modal-content');
 const KEY = 'nihongo-benkyo-progress-v1';
 const viewNames = { beranda:'Beranda', materi:'List Materi', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', kotoba:'Kuis Kotoba', henkan:'Kuis Henkan', bunpou:'Kuis Bunpou', dokkai:'Kuis Dokkai', partikel:'Kuis Partikel', jidoushi:'Jidōshi–Tadōshi', progres:'Progres Saya' };
-const modeNames = { meaning:'Kanji → Arti', kanji:'Arti → Kanji', ...READING_MODE_NAMES, 'hiragana-kanji':'Hiragana → Kanji', 'hiragana-katakana':'Hiragana → Katakana', 'english-katakana':'English → Katakana', ...Object.fromEntries(Object.entries(KOTOBA_MODES).map(([id,m])=>[`kotoba-${id}`,`Kotoba · ${m.label}`])) };
+const modeNames = { meaning:'Kanji → Arti Indonesia', kanji:'Arti Indonesia → Kanji', ...READING_MODE_NAMES, 'hiragana-kanji':'Hiragana → Kanji', 'hiragana-katakana':'Hiragana → Katakana', 'english-katakana':'English → Katakana', ...Object.fromEntries(Object.entries(KOTOBA_MODES).map(([id,m])=>[`kotoba-${id}`,`Kotoba · ${m.label}`])) };
 modeNames.bunpou='Bunpou · Lengkapi kalimat';
 modeNames.dokkai='Dokkai · Pemahaman bacaan';
 modeNames['bunpou-order']='Bunpou · Susun kalimat';
@@ -300,14 +300,14 @@ function renderQuestion() {
   const q = quiz.questions[quiz.index]; quiz.answered = false;
   if (quiz.mode==='jlpt-reading') rememberReadingQuestion(q);
   const isEnglish = quiz.mode==='english-katakana';
-  const revealChoices = ['meaning','kanji'].includes(quiz.mode);
+  const revealChoices = ['meaning','kanji','hiragana-kanji'].includes(quiz.mode);
   const isWriting = ['hiragana-kanji','english-katakana'].includes(quiz.mode);
   const hasSentence = usesSentence(q,quiz.mode);
   const questionTitle = practiceBanks[quiz.mode] || quiz.mode==='reading' ? modeNames[quiz.mode] : 'Kuis Kanji';
   const caption = isEnglish ? 'Pilih penulisan katakana yang sesuai dengan kata Inggris berikut.' : isWriting ? `Pilih penulisan ${quiz.mode === 'hiragana-kanji' ? 'kanji' : 'katakana'} untuk bagian bergaris bawah.` : hasSentence ? 'Baca kalimatnya, lalu pilih bacaan kata yang digarisbawahi.' : quiz.mode === 'meaning' ? 'Apa arti kanji ini?' : quiz.mode === 'kanji' ? 'Kanji mana yang sesuai dengan arti ini?' : 'Pilih bacaan hiragana untuk kata ini. Artinya muncul setelah menjawab.';
   const prompt = quizPromptMarkup(q,quiz.mode,escape);
   const category=quiz.mode==='jlpt-reading' ? `<span class="reading-category">${escape(READING_CATEGORIES[q.readingCategory] || 'Kosakata')} · ${q.level}</span>` : '';
-  root.innerHTML = `<div class="study-panel">${heading('WAKTUNYA MELATIH INGATAN', questionTitle, `${modeNames[quiz.mode]} · ${quiz.level === 'all' ? 'Semua level' : quiz.level}`)}<div class="study-top"><span>Soal <strong>${quiz.index + 1}</strong> / ${quiz.questions.length}</span>${quiz.time ? `<span class="timer">${icon('clock')}<span id="timer-value" role="timer">${quiz.time} dtk</span></span>` : '<span>Pelan-pelan juga boleh.</span>'}</div><div class="progress-track" role="progressbar" aria-label="Progres kuis" aria-valuemin="0" aria-valuemax="${quiz.questions.length}" aria-valuenow="${quiz.index}"><span style="width:${quiz.index / quiz.questions.length * 100}%"></span></div><div class="quiz-question ${revealChoices ? 'kanji-meaning-question' : ''} ${quiz.mode==='reading' ? 'word-reading-question' : ''} ${practiceBanks[quiz.mode] || quiz.mode==='reading' ? 'reading-question' : ''} ${hasSentence ? `writing-question ${quiz.mode}` : ''}">${category}<span class="quiz-caption">${caption}</span><div tabindex="-1" class="quiz-prompt ${quiz.mode === 'kanji' ? 'meaning-prompt' : ''} ${isEnglish ? 'english-cue' : ''} ${hasSentence ? 'sentence-prompt' : ''}" ${isEnglish ? 'lang="en"' : quiz.mode !== 'kanji' ? 'lang="ja"' : ''}>${prompt}</div><div class="quiz-options ${(practiceBanks[quiz.mode] || quiz.mode==='reading') && q.options.some(a => a.length > (isEnglish ? 5 : 6)) ? 'long-readings' : ''}">${q.options.map((answer,i) => `<button class="quiz-option ${revealChoices ? 'reveal-option' : ''}" data-answer="${i}"><span>${'ABCD'[i]}</span>${revealChoices ? `<span class="quiz-choice-content"><span class="quiz-choice-label ${quiz.mode==='kanji' ? 'quiz-choice-kanji-label' : ''}" lang="${quiz.mode==='meaning' ? 'id' : 'ja'}">${escape(answer)}</span></span>` : `<span lang="ja">${escape(answer)}</span>`}</button>`).join('')}</div><div id="quiz-feedback" class="quiz-feedback" role="status">Pilih satu jawaban yang paling tepat.</div></div><div class="quiz-next"><button class="text-button" data-action="quiz-exit">Akhiri latihan</button><button class="primary" data-action="quiz-next" disabled>${quiz.index === quiz.questions.length - 1 ? 'Lihat hasil' : 'Soal berikutnya'} ${icon('arrow')}</button></div></div>`;
+  root.innerHTML = `<div class="study-panel">${heading('WAKTUNYA MELATIH INGATAN', questionTitle, `${modeNames[quiz.mode]} · ${quiz.level === 'all' ? 'Semua level' : quiz.level}`)}<div class="study-top"><span>Soal <strong>${quiz.index + 1}</strong> / ${quiz.questions.length}</span>${quiz.time ? `<span class="timer">${icon('clock')}<span id="timer-value" role="timer">${quiz.time} dtk</span></span>` : '<span>Pelan-pelan juga boleh.</span>'}</div><div class="progress-track" role="progressbar" aria-label="Progres kuis" aria-valuemin="0" aria-valuemax="${quiz.questions.length}" aria-valuenow="${quiz.index}"><span style="width:${quiz.index / quiz.questions.length * 100}%"></span></div><div class="quiz-question ${['meaning','kanji'].includes(quiz.mode) ? 'kanji-meaning-question' : ''} ${quiz.mode==='reading' ? 'word-reading-question' : ''} ${practiceBanks[quiz.mode] || quiz.mode==='reading' ? 'reading-question' : ''} ${hasSentence ? `writing-question ${quiz.mode}` : ''}">${category}<span class="quiz-caption">${caption}</span><div tabindex="-1" class="quiz-prompt ${quiz.mode === 'kanji' ? 'meaning-prompt' : ''} ${isEnglish ? 'english-cue' : ''} ${hasSentence ? 'sentence-prompt' : ''}" ${isEnglish ? 'lang="en"' : quiz.mode !== 'kanji' ? 'lang="ja"' : ''}>${prompt}</div><div class="quiz-options ${(practiceBanks[quiz.mode] || quiz.mode==='reading') && q.options.some(a => a.length > (isEnglish ? 5 : 6)) ? 'long-readings' : ''}">${q.options.map((answer,i) => `<button class="quiz-option ${revealChoices ? 'reveal-option' : ''}" data-answer="${i}"><span>${'ABCD'[i]}</span>${revealChoices ? `<span class="quiz-choice-content"><span class="quiz-choice-label ${quiz.mode!=='meaning' ? 'quiz-choice-kanji-label' : ''}" lang="${quiz.mode==='meaning' ? 'id' : 'ja'}">${escape(answer)}</span></span>` : `<span lang="ja">${escape(answer)}</span>`}</button>`).join('')}</div><div id="quiz-feedback" class="quiz-feedback" role="status">Pilih satu jawaban yang paling tepat.</div></div><div class="quiz-next"><button class="text-button" data-action="quiz-exit">Akhiri latihan</button><button class="primary" data-action="quiz-next" disabled>${quiz.index === quiz.questions.length - 1 ? 'Lihat hasil' : 'Soal berikutnya'} ${icon('arrow')}</button></div></div>`;
   window.scrollTo({top:0, behavior:'instant'});
   document.querySelector('.quiz-prompt').focus({preventScroll:true});
   if (quiz.time) {
@@ -327,22 +327,25 @@ function answerQuiz(index) {
   quiz.answers.push({ chosen, correct:chosen === q.answer });
   if (quiz.mode==='meaning') document.querySelector('.quiz-prompt').insertAdjacentHTML('afterend',kanjiReadingsMarkup(q.kanji,escape));
   if (quiz.mode==='reading') document.querySelector('.quiz-prompt').insertAdjacentHTML('afterend',`<p class="quiz-prompt-meaning" lang="id">${escape(answerDetails(q,quiz.mode).meaning)}</p>`);
+  if (quiz.mode==='hiragana-kanji') document.querySelector('.quiz-prompt').insertAdjacentHTML('afterend',`<p class="quiz-prompt-translation" lang="id">${escape(q.sentenceMeaning)}</p>`);
   document.querySelectorAll('[data-answer]').forEach(b => {
     b.disabled = true;
     const answer = q.options[Number(b.dataset.answer)];
     if (answer === q.answer) b.classList.add('correct');
     else if (answer === chosen) b.classList.add('wrong');
-    if (['meaning','kanji'].includes(quiz.mode)) {
-      b.querySelector('.quiz-choice-content').insertAdjacentHTML('beforeend',kanjiChoiceDetailsMarkup(q.optionDetails[Number(b.dataset.answer)],escape,quiz.mode)+choiceResultMarkup(answer===q.answer,answer===chosen));
+    if (['meaning','kanji','hiragana-kanji'].includes(quiz.mode)) {
+      const detail=q.optionDetails[Number(b.dataset.answer)];
+      const markup=quiz.mode==='hiragana-kanji' ? writingChoiceDetailsMarkup(detail,escape) : kanjiChoiceDetailsMarkup(detail,escape,quiz.mode);
+      b.querySelector('.quiz-choice-content').insertAdjacentHTML('beforeend',markup+choiceResultMarkup(answer===q.answer,answer===chosen));
     }
   });
   const feedback = document.querySelector('#quiz-feedback');
   feedback.className = `quiz-feedback ${chosen === q.answer ? 'success' : 'error'}`;
   const message=chosen===q.answer ? 'Tepat! Satu langkah lebih paham.' : chosen===null ? 'Waktunya habis. Yuk, pahami jawabannya.' : 'Belum tepat, tidak apa-apa. Yuk, pahami jawabannya.';
-  feedback.innerHTML=`<p class="answer-status">${escape(message)}</p>${['meaning','kanji','reading'].includes(quiz.mode) ? '' : answerDetailsMarkup(q,quiz.mode,escape)}`;
+  feedback.innerHTML=`<p class="answer-status">${escape(message)}</p>${['meaning','kanji','reading','hiragana-kanji'].includes(quiz.mode) ? '' : answerDetailsMarkup(q,quiz.mode,escape)}`;
   feedback.insertAdjacentHTML('afterend',questionTopicLinks(q,escape));
   document.querySelector('[data-action="quiz-next"]').disabled = false;
-  if(!['meaning','kanji','reading'].includes(quiz.mode))feedback.scrollIntoView({block:'nearest',behavior:'smooth'});
+  if(!['meaning','kanji','reading','hiragana-kanji'].includes(quiz.mode))feedback.scrollIntoView({block:'nearest',behavior:'smooth'});
 }
 function finishQuiz() {
   clearInterval(quizTimer);

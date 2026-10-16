@@ -1,11 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import {createQuiz} from '../core.js';
 import {KANJI} from '../kanji-data.js';
 import {KOTOBA_ENTRIES} from '../kotoba-data.js';
 import {KOTOBA_N3_ENTRIES} from '../kotoba-n3-data.js';
 import {createKotobaQuiz,KOTOBA_MODES,getKotobaPool} from '../kotoba-core.js';
-import {kanjiReadingsMarkup,kanjiChoiceDetailsMarkup,kotobaChoiceDetailsMarkup} from '../quiz-choice-view.js';
+import {kanjiReadingsMarkup,kanjiChoiceDetailsMarkup,kotobaChoiceDetailsMarkup,writingChoiceDetailsMarkup} from '../quiz-choice-view.js';
+import {createWritingQuiz} from '../writing-core.js';
+import {PRACTICE_BANKS} from '../practice-banks.js';
+import {WRITING_CHOICE_KANJI} from '../writing-choice-kanji-data.js';
 const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const seeded=()=>{let seed=127;return ()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);};
 
@@ -26,6 +30,47 @@ test('every shuffled kanji or meaning choice retains a matching source card at a
 test('identical Indonesian meanings never replace the question kanji with another kanji',()=>{
   const pool=[{char:'林',meaning:'Hutan'},{char:'森',meaning:'Hutan'},{char:'川',meaning:'Sungai'},{char:'山',meaning:'Gunung'},{char:'火',meaning:'Api'}];
   for(const q of createQuiz(pool,'meaning',pool.length,seeded()))assert.equal(q.optionDetails[q.options.indexOf(q.answer)].char,q.kanji.char);
+});
+
+test('all writing options retain their own meanings and readings without inventing readings for distractor words',()=>{
+  const pool=PRACTICE_BANKS['hiragana-kanji'];
+  for(const q of createWritingQuiz(pool,pool.length,seeded())){
+    assert.equal(q.optionDetails.length,q.options.length);
+    q.optionDetails.forEach((detail,i)=>{
+      assert.equal(detail.word,q.options[i]);
+      const markup=writingChoiceDetailsMarkup(detail,escape);
+      if(detail.word===q.answer){
+        assert.equal(detail.reading,q.prompt);
+        assert.equal(detail.meaning,q.meaning);
+        assert.ok(markup.includes(escape(q.meaning)));
+      }else{
+        const characters=[...new Set([...detail.word].filter(char=>/\p{Unified_Ideograph}/u.test(char)))];
+        assert.deepEqual(detail.characters.map(card=>card.char),characters);
+        assert.ok(!detail.reading && !detail.meaning,'No fabricated whole-word reading or meaning');
+        for(const card of detail.characters){
+          assert.ok(card.meaning && (card.on.length || card.kun.length));
+          assert.ok(markup.includes(escape(card.meaning)));
+        }
+        if(detail.word!==characters[0])assert.ok(markup.includes('Bacaan & arti per kanji'));
+      }
+    });
+  }
+  const drink=createWritingQuiz(pool,pool.length,seeded()).find(q=>q.answer==='飲みました');
+  const rice=drink.optionDetails.find(detail=>detail.word==='飯みました');
+  assert.deepEqual(rice.characters.map(card=>card.char),['飯']);
+  assert.notEqual(rice.characters[0].meaning,drink.meaning);
+});
+
+test('additional writing distractor kanji retain readings from the recorded KANJIDIC2 source',()=>{
+  const source=JSON.parse(readFileSync(new URL('../data/writing-choice-kanji-source.json',import.meta.url),'utf8').replace(/^\uFEFF/,''));
+  assert.equal(source.entries.length,23);
+  assert.equal(WRITING_CHOICE_KANJI.length,source.entries.length);
+  for(const card of WRITING_CHOICE_KANJI){
+    const original=source.entries.find(entry=>entry.kanji===card.char);
+    assert.ok(original && card.meaning);
+    assert.deepEqual(card.on,original.on_readings);
+    assert.deepEqual(card.kun,original.kun_readings);
+  }
 });
 
 test('all kotoba modes preserve the exact word and reading for every shuffled option in both courses',()=>{
@@ -72,7 +117,7 @@ test('reading hints handle missing readings and make okurigana readable without 
 
 test('choice details escape source text in every display direction',()=>{
   const raw='<img src=x onerror=alert(1)>';
-  for(const html of [kanjiReadingsMarkup({on:[raw],kun:[raw]},escape),kanjiChoiceDetailsMarkup({char:raw,on:[raw]},escape),...Object.keys(KOTOBA_MODES).map(mode=>kotobaChoiceDetailsMarkup({word:raw,reading:'<kana>',meaning:'<arti>'},mode,escape))]){
+  for(const html of [kanjiReadingsMarkup({on:[raw],kun:[raw]},escape),kanjiChoiceDetailsMarkup({char:raw,on:[raw]},escape),writingChoiceDetailsMarkup({word:raw,reading:'<kana>',meaning:'<arti>'},escape),writingChoiceDetailsMarkup({word:raw,characters:[{char:raw,meaning:'<arti>',on:['<kana>'],kun:[]}]},escape),...Object.keys(KOTOBA_MODES).map(mode=>kotobaChoiceDetailsMarkup({word:raw,reading:'<kana>',meaning:'<arti>'},mode,escape))]){
     assert.doesNotMatch(html,/<img|<kana>|<arti>/);assert.match(html,/&lt;/);
   }
 });

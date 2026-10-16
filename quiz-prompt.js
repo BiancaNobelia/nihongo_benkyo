@@ -1,6 +1,6 @@
 export const READING_MODE_NAMES = {
-  'jlpt-reading':'JLPT · Bacaan dalam kalimat',
-  reading:'Kata/Kanji → Hiragana',
+  'jlpt-reading':'Kanji → Hiragana (JLPT)',
+  reading:'Kanji → Hiragana (Per kata)',
 };
 
 export function usesSentence(question, mode) {

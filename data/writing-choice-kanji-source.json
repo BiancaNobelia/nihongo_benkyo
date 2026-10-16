@@ -1,0 +1,572 @@
+{
+  "retrieved": "2026-10-16",
+  "source": "KANJIDIC2 via kanjiapi.dev",
+  "entries": [
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "朿",
+      "kun_readings": [
+        "とげ"
+      ],
+      "meanings": [
+        "thorn"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "シ"
+      ],
+      "stroke_count": 6,
+      "unicode": "673F",
+      "url": "https://kanjiapi.dev/v1/kanji/%E6%9C%BF"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "竟",
+      "kun_readings": [
+        "おわ.る",
+        "ついに",
+        "わた.る"
+      ],
+      "meanings": [
+        "end",
+        "finally"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "キョウ",
+        "ケイ"
+      ],
+      "stroke_count": 11,
+      "unicode": "7ADF",
+      "url": "https://kanjiapi.dev/v1/kanji/%E7%AB%9F"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "耍",
+      "kun_readings": [
+        "すばや.い"
+      ],
+      "meanings": [
+        "frolic",
+        "play",
+        "amuse",
+        "play with"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "サ",
+        "シャ"
+      ],
+      "stroke_count": 9,
+      "unicode": "800D",
+      "url": "https://kanjiapi.dev/v1/kanji/%E8%80%8D"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "戌",
+      "kun_readings": [
+        "いぬ"
+      ],
+      "meanings": [
+        "sign of the dog",
+        "7-9PM",
+        "eleventh sign of Chinese zodiac"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "ジュツ"
+      ],
+      "stroke_count": 6,
+      "unicode": "620C",
+      "url": "https://kanjiapi.dev/v1/kanji/%E6%88%8C"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "躁",
+      "kun_readings": [
+        "さわ.ぐ"
+      ],
+      "meanings": [
+        "noisy"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "ソウ"
+      ],
+      "stroke_count": 20,
+      "unicode": "8E81",
+      "url": "https://kanjiapi.dev/v1/kanji/%E8%BA%81"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": 1606,
+      "grade": 9,
+      "heisig_en": "oak",
+      "jlpt": null,
+      "kanji": "柏",
+      "kun_readings": [
+        "かしわ"
+      ],
+      "meanings": [
+        "oak",
+        "cypress"
+      ],
+      "name_readings": [
+        "かい",
+        "かし"
+      ],
+      "notes": [],
+      "on_readings": [
+        "ハク",
+        "ヒャク",
+        "ビャク"
+      ],
+      "stroke_count": 9,
+      "unicode": "67CF",
+      "url": "https://kanjiapi.dev/v1/kanji/%E6%9F%8F"
+    },
+    {
+      "alternate_stroke_counts": [
+        19
+      ],
+      "freq_mainichi_shinbun": null,
+      "grade": null,
+      "heisig_en": "link up",
+      "jlpt": null,
+      "kanji": "繋",
+      "kun_readings": [
+        "つな.ぐ",
+        "かか.る",
+        "か.ける"
+      ],
+      "meanings": [
+        "tie",
+        "fasten",
+        "chain",
+        "tether",
+        "connect"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "ケイ"
+      ],
+      "stroke_count": 17,
+      "unicode": "7E4B",
+      "url": "https://kanjiapi.dev/v1/kanji/%E7%B9%8B"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "銜",
+      "kun_readings": [
+        "くつわ",
+        "くわ.える"
+      ],
+      "meanings": [
+        "horse's bit"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "カン"
+      ],
+      "stroke_count": 14,
+      "unicode": "929C",
+      "url": "https://kanjiapi.dev/v1/kanji/%E9%8A%9C"
+    },
+    {
+      "alternate_stroke_counts": [
+        19
+      ],
+      "freq_mainichi_shinbun": 2367,
+      "grade": 9,
+      "heisig_en": "on the verge of",
+      "jlpt": null,
+      "kanji": "瀕",
+      "kun_readings": [
+        "ほとり"
+      ],
+      "meanings": [
+        "shore",
+        "brink",
+        "verge"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "ヒン"
+      ],
+      "stroke_count": 20,
+      "unicode": "7015",
+      "url": "https://kanjiapi.dev/v1/kanji/%E7%80%95"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "諳",
+      "kun_readings": [
+        "そら.んじる"
+      ],
+      "meanings": [
+        "memorize",
+        "recite from memory"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "アン",
+        "オン"
+      ],
+      "stroke_count": 16,
+      "unicode": "8AF3",
+      "url": "https://kanjiapi.dev/v1/kanji/%E8%AB%B3"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": 2140,
+      "grade": 9,
+      "heisig_en": "stop short",
+      "jlpt": null,
+      "kanji": "已",
+      "kun_readings": [
+        "や.む",
+        "すで.に",
+        "のみ",
+        "はなはだ"
+      ],
+      "meanings": [
+        "stop",
+        "halt",
+        "previously",
+        "already",
+        "long ago"
+      ],
+      "name_readings": [
+        "み"
+      ],
+      "notes": [],
+      "on_readings": [
+        "イ"
+      ],
+      "stroke_count": 3,
+      "unicode": "5DF2",
+      "url": "https://kanjiapi.dev/v1/kanji/%E5%B7%B2"
+    },
+    {
+      "alternate_stroke_counts": [
+        5,
+        7
+      ],
+      "freq_mainichi_shinbun": null,
+      "grade": 9,
+      "heisig_en": "detour",
+      "jlpt": null,
+      "kanji": "迂",
+      "kun_readings": [],
+      "meanings": [
+        "roundabout way"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "ウ"
+      ],
+      "stroke_count": 6,
+      "unicode": "8FC2",
+      "url": "https://kanjiapi.dev/v1/kanji/%E8%BF%82"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "夭",
+      "kun_readings": [
+        "わか.い",
+        "わかじに",
+        "わざわい"
+      ],
+      "meanings": [
+        "early death",
+        "calamity"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "ヨウ",
+        "オウ",
+        "カ"
+      ],
+      "stroke_count": 4,
+      "unicode": "592D",
+      "url": "https://kanjiapi.dev/v1/kanji/%E5%A4%AD"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": 2042,
+      "grade": 9,
+      "heisig_en": "crow",
+      "jlpt": null,
+      "kanji": "烏",
+      "kun_readings": [
+        "からす",
+        "いずくんぞ",
+        "なんぞ"
+      ],
+      "meanings": [
+        "crow",
+        "raven"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "ウ",
+        "オ"
+      ],
+      "stroke_count": 10,
+      "unicode": "70CF",
+      "url": "https://kanjiapi.dev/v1/kanji/%E7%83%8F"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "閂",
+      "kun_readings": [
+        "かんぬき"
+      ],
+      "meanings": [
+        "gate bar"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "サン",
+        "セン"
+      ],
+      "stroke_count": 9,
+      "unicode": "9582",
+      "url": "https://kanjiapi.dev/v1/kanji/%E9%96%82"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "熾",
+      "kun_readings": [
+        "おこ.る",
+        "おこ.す",
+        "さかん"
+      ],
+      "meanings": [
+        "kindling fire"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "シ"
+      ],
+      "stroke_count": 16,
+      "unicode": "71BE",
+      "url": "https://kanjiapi.dev/v1/kanji/%E7%86%BE"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": 2302,
+      "grade": 9,
+      "heisig_en": "old Kyoto",
+      "jlpt": null,
+      "kanji": "洛",
+      "kun_readings": [],
+      "meanings": [
+        "Kyoto",
+        "the capital"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "ラク"
+      ],
+      "stroke_count": 9,
+      "unicode": "6D1B",
+      "url": "https://kanjiapi.dev/v1/kanji/%E6%B4%9B"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "怡",
+      "kun_readings": [
+        "よろこ.ぶ"
+      ],
+      "meanings": [
+        "rejoice",
+        "enjoy"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "イ"
+      ],
+      "stroke_count": 8,
+      "unicode": "6021",
+      "url": "https://kanjiapi.dev/v1/kanji/%E6%80%A1"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": 9,
+      "heisig_en": "bellflower",
+      "jlpt": null,
+      "kanji": "桔",
+      "kun_readings": [],
+      "meanings": [
+        "used in plant names"
+      ],
+      "name_readings": [
+        "き"
+      ],
+      "notes": [],
+      "on_readings": [
+        "キツ",
+        "ケツ"
+      ],
+      "stroke_count": 10,
+      "unicode": "6854",
+      "url": "https://kanjiapi.dev/v1/kanji/%E6%A1%94"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": 9,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "徽",
+      "kun_readings": [
+        "しるし"
+      ],
+      "meanings": [
+        "good",
+        "beautiful",
+        "badge"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "キ"
+      ],
+      "stroke_count": 17,
+      "unicode": "5FBD",
+      "url": "https://kanjiapi.dev/v1/kanji/%E5%BE%BD"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": null,
+      "grade": 9,
+      "heisig_en": "sprinkle",
+      "jlpt": null,
+      "kanji": "撒",
+      "kun_readings": [
+        "ま.く"
+      ],
+      "meanings": [
+        "scatter",
+        "sprinkle",
+        "give them the slip"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "サン",
+        "サツ"
+      ],
+      "stroke_count": 15,
+      "unicode": "6492",
+      "url": "https://kanjiapi.dev/v1/kanji/%E6%92%92"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": 2484,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "轍",
+      "kun_readings": [
+        "わだちい",
+        "わだち"
+      ],
+      "meanings": [
+        "rut",
+        "wheel track"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "テツ"
+      ],
+      "stroke_count": 19,
+      "unicode": "8F4D",
+      "url": "https://kanjiapi.dev/v1/kanji/%E8%BD%8D"
+    },
+    {
+      "alternate_stroke_counts": [],
+      "freq_mainichi_shinbun": 2493,
+      "grade": null,
+      "heisig_en": null,
+      "jlpt": null,
+      "kanji": "杞",
+      "kun_readings": [],
+      "meanings": [
+        "river willow"
+      ],
+      "name_readings": [],
+      "notes": [],
+      "on_readings": [
+        "コ",
+        "キ"
+      ],
+      "stroke_count": 7,
+      "unicode": "675E",
+      "url": "https://kanjiapi.dev/v1/kanji/%E6%9D%9E"
+    }
+  ]
+}

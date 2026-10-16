@@ -27,6 +27,15 @@
 .quiz-option.reveal-option .quiz-choice-kanji-label{font:500 34px/1.4 var(--serif)}
 .word-reading-question .quiz-prompt{margin-bottom:18px}
 .quiz-prompt-meaning{font:550 18px/1.7 var(--sans);color:var(--ink);margin:0 0 26px;text-align:center}
+.quiz-prompt-translation{font:500 16px/1.8 var(--sans);text-align:left;color:var(--muted);margin:-12px 0 26px}
+.quiz-choice-character{display:block;text-align:left}
+.quiz-choice-character+.quiz-choice-character{border-top:1px solid var(--line);margin-top:10px;padding-top:8px}
+.quiz-choice-character .quiz-choice-meaning{font-size:14px;margin:0 0 5px}
+.quiz-choice-character .quiz-choice-meaning b{font:550 21px/1.6 var(--serif)}
+.quiz-choice-character .quiz-choice-reading{font-size:15px;line-height:1.7}
+.quiz-choice-character .quiz-choice-reading>span:first-child{font:600 11px var(--sans)}
+.quiz-character-note{display:block;font:500 11px/1.8 var(--sans);margin-bottom:8px}
+.hiragana-kanji .quiz-option.reveal-option .quiz-choice-kanji-label{font-size:30px}
 .answer-kanji-readings{display:grid;gap:10px;margin-top:12px}
 .answer-kanji-reading{display:flex;gap:12px;align-items:baseline}
 .answer-kanji-reading>b{font:500 23px/1.6 var(--serif);flex-shrink:0}

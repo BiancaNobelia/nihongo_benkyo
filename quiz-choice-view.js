@@ -18,6 +18,12 @@ export function kotobaChoiceDetailsMarkup(entry, mode, escape) {
   return `<span class="quiz-choice-detail">${showWord?`<strong class="quiz-choice-word" lang="ja">${escape(entry.word)}</strong>`:''}${showReading?`<small class="quiz-choice-reading" lang="ja">${escape(entry.reading)}</small>`:''}${!meaningChoice?`<small class="quiz-choice-meaning" lang="id">${escape(entry.meaning)}</small>`:''}</span>`;
 }
 
+export function writingChoiceDetailsMarkup(detail, escape) {
+  if(detail.reading)return `<span class="quiz-choice-detail"><small class="quiz-choice-reading" lang="ja">${escape(detail.reading)}</small><small class="quiz-choice-meaning" lang="id">${escape(detail.meaning)}</small></span>`;
+  const single=detail.characters.length===1 && detail.word===detail.characters[0].char;
+  return `<span class="quiz-choice-detail">${single ? '' : '<small class="quiz-character-note">Bacaan & arti per kanji</small>'}${detail.characters.map(card=>`<span class="quiz-choice-character"><small class="quiz-choice-meaning" lang="id">${single ? '' : `<b lang="ja">${escape(card.char)}</b> · `}${escape(card.meaning)}</small><small class="quiz-choice-reading"><span>On:</span> <span lang="ja">${escape(readingText(card.on))}</span></small><small class="quiz-choice-reading"><span>Kun:</span> <span lang="ja">${escape(readingText(card.kun))}</span></small></span>`).join('')}</span>`;
+}
+
 export function choiceResultMarkup(correct, chosen) {
   return correct ? '<small class="quiz-choice-result">✓ Jawaban benar</small>' : chosen ? '<small class="quiz-choice-result">× Pilihanmu</small>' : '';
 }

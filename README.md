@@ -11,7 +11,10 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
   pilihan setelah menjawab, tanpa panel jawaban yang berulang. Mode per kata
   menampilkan arti tepat di bawah soal setelah menjawab. Kuis JLPT menggabungkan
   onyomi/kunyomi tiap kanji target di bagian jawaban benar, tanpa bagian
-  "Kenali kanji" dan penjelasan pilihan bacaan lain. Kuis Kotoba juga
+  "Kenali kanji" dan penjelasan pilihan bacaan lain. Hiragana → Kanji menampilkan
+  terjemahan kalimat di bawah soal serta bacaan dan arti pada semua pilihan setelah
+  menjawab atau waktu habis. Ejaan pengecoh dijelaskan per kanji, tanpa membuat
+  bacaan atau arti kata gabungan yang tidak sah. Kuis Kotoba juga
   menampilkan pasangan kata, bacaan, dan arti untuk seluruh pilihan pada
   kelima mode, termasuk saat waktu habis. Data pilihan tetap terhubung ke
   kata sumber setelah diacak; jawaban belum dibocorkan sebelum dijawab.
