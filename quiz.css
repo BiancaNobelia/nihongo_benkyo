@@ -7,6 +7,24 @@
 #quiz-count-error{font-size:11px;line-height:1.7;color:var(--red)}
 .quiz-level-note{font-size:11px;line-height:1.8;color:var(--muted);margin:20px 0 0;padding:12px 15px;border-left:3px solid var(--line-strong);background:var(--surface-soft)}
 .quiz-feedback{scroll-margin-block:24px 105px}
+.kanji-meaning-question .quiz-prompt{line-height:1.35;margin:8px 0 15px}
+.quiz-kanji-readings{display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap;gap:10px;margin:0 0 22px}
+.quiz-kanji-readings>div{display:flex;align-items:baseline;gap:10px;min-width:0;max-width:100%;padding:6px 12px;border:1px solid var(--accent-border);border-radius:9px;background:var(--accent-soft);color:var(--accent)}
+.quiz-kanji-readings>.quiz-reading-kun{background:var(--blue-soft);border-color:var(--blue-border);color:var(--blue)}
+.quiz-kanji-readings dt{font:600 12px/1.5 var(--sans);white-space:nowrap}
+.quiz-kanji-readings dd{font:500 17px/1.9 var(--serif);margin:0;min-width:0;overflow-wrap:anywhere}
+.kanji-meaning-question .quiz-options{grid-template-columns:repeat(2,minmax(0,1fr))}
+.quiz-option.reveal-option{align-items:flex-start;min-width:0}
+.quiz-option.reveal-option>span:first-child{flex-shrink:0;margin-top:2px}
+.quiz-option.reveal-option .quiz-choice-content{display:block;flex:1;min-width:0;text-align:center}
+.quiz-option.reveal-option .quiz-choice-label{display:block;font:inherit;font-weight:550;line-height:1.7;color:inherit;background:transparent;border-radius:0;padding:0;overflow-wrap:anywhere}
+.quiz-option.reveal-option .quiz-choice-detail{display:block;border-top:1px solid var(--line-strong);padding-top:10px;margin-top:10px;overflow-wrap:anywhere}
+.quiz-choice-word{display:block;font:550 26px/1.6 var(--serif);color:inherit}
+.quiz-choice-word.quiz-choice-kanji{font-size:34px;line-height:1.4}
+.quiz-choice-reading{display:block;font:400 16px/1.9 var(--serif);color:inherit;margin-top:3px}
+.quiz-choice-meaning{display:block;font:400 14px/1.8 var(--sans);color:inherit;margin-top:6px}
+.quiz-choice-result{display:block;font:650 11px/1.7 var(--sans);margin-top:10px}
+@media(max-width:480px){.kanji-meaning-question .quiz-options{grid-template-columns:1fr}.quiz-kanji-readings{gap:8px}.quiz-kanji-readings>div{flex-basis:100%;padding:10px 12px}.quiz-kanji-readings dd{font-size:17px}}
 .reading-category{display:table;margin:0 auto 12px;border:1px solid var(--line);border-radius:20px;background:var(--surface-soft);color:var(--muted);padding:5px 12px;font-size:11px;font-weight:600}
 .reading-composition{grid-column:1/-1;border-top:1px solid var(--line);padding-top:20px}.reading-composition h4{font-size:13px;margin:0 0 12px}.reading-composition>div{display:grid;grid-template-columns:repeat(auto-fit,minmax(94px,1fr));gap:8px}.reading-composition>div>span{padding:10px;background:color-mix(in srgb,var(--surface) 70.2%,transparent);border-radius:6px;font-size:10px;color:var(--muted)}.reading-composition strong{display:block;font-size:14px;font-weight:550;color:var(--ink);margin-top:5px}.reading-composition>p{font-size:10px;margin:13px 0 0}
 .answer-status{font-size:13px;line-height:1.8;margin:0 0 14px}

@@ -84,15 +84,17 @@ export function createKotobaQuiz(entries, settings, random=Math.random) {
     const sameType=shuffle(safe.filter(other=>intersects(q.types,other.types)),random);
     const others=shuffle(safe.filter(other=>!intersects(q.types,other.types)),random);
     const answer=answerOf(q);
+    const detailByAnswer=new Map([[answer,q]]);
     const distractors=[], used=new Set([normalize(answer)]);
     for(const candidate of [...sameType,...others]) {
       const value=answerOf(candidate), key=normalize(value);
       if(used.has(key)) continue;
-      used.add(key);distractors.push(value);
+      used.add(key);distractors.push(value);detailByAnswer.set(value,candidate);
       if(distractors.length===3) break;
     }
     if(distractors.length<3) continue;
-    questions.push({...q,mode,answer,options:shuffle([answer,...distractors],random),
+    const options=shuffle([answer,...distractors],random);
+    questions.push({...q,mode,answer,options,optionDetails:options.map(value=>detailByAnswer.get(value)),
       prompt:isMeaning || isReading ? q.word : q.meaning,
       audioText:mode==='audio-jp' ? q.reading : q.meaning,
     });

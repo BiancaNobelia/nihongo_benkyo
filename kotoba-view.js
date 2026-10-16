@@ -1,5 +1,6 @@
 import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261015-jidoushi-tadoushi';
-import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261015-jidoushi-tadoushi';
+import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261016-choice-feedback';
+import { kotobaChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261016-choice-feedback';
 import { requestedQuizCount } from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
 import { shuffle } from './core.js?v=20261015-jidoushi-tadoushi';
 
@@ -132,7 +133,7 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
       <div class="quiz-question kotoba-question"><div class="kotoba-question-tags"><span>${wordScope(q)}</span><span>${escape(q.types.join(' · '))}</span></div><p class="quiz-caption">${mode.caption}</p>
         <div class="kotoba-prompt ${session.mode==='id-jp' ? 'kotoba-meaning-prompt' : ''}" tabindex="-1" ${mode.audio ? '' : `lang="${session.mode==='id-jp' ? 'id' : 'ja'}"`}>${mode.audio ? `<button class="kotoba-listen" data-kotoba="listen">${icon('speaker')}<span>Dengarkan soal</span></button><p id="kotoba-speech-status" class="kotoba-small" role="status">Tekan untuk memutar suara.</p>` : escape(q.prompt)}</div>
         ${session.mode==='jp-id' && q.word!==q.reading ? `<p class="kotoba-prompt-reading" lang="ja">${escape(q.reading)}</p>` : ''}
-        <div class="quiz-options kotoba-options ${mode.answerLanguage==='id' ? 'kotoba-meaning-options' : ''}">${q.options.map((a,i)=>`<button class="quiz-option" data-kotoba-answer="${i}" ${mode.audio ? 'disabled' : ''}><span>${'ABCD'[i]}</span><span lang="${mode.answerLanguage}">${escape(a)}</span></button>`).join('')}</div>
+        <div class="quiz-options kotoba-options ${mode.answerLanguage==='id' ? 'kotoba-meaning-options' : ''}">${q.options.map((a,i)=>`<button class="quiz-option reveal-option" data-kotoba-answer="${i}" ${mode.audio ? 'disabled' : ''}><span>${'ABCD'[i]}</span><span class="quiz-choice-content"><span class="quiz-choice-label" lang="${mode.answerLanguage}">${escape(a)}</span></span></button>`).join('')}</div>
         <div class="quiz-feedback" id="kotoba-feedback" role="status">${mode.audio ? 'Dengarkan soal untuk membuka pilihan jawaban.' : 'Pilih satu jawaban yang paling tepat.'}</div>
       </div><div class="quiz-next"><button class="text-button" data-kotoba="exit">Akhiri latihan</button><button class="primary" data-kotoba="next" disabled>${session.index===session.questions.length-1 ? 'Lihat hasil' : 'Soal berikutnya'} ${icon('arrow')}</button></div><div id="kotoba-exit-confirm" hidden></div></div>`;
     window.scrollTo({top:0,behavior:'instant'});find('.kotoba-prompt').focus({preventScroll:true});
@@ -182,12 +183,12 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
     root.querySelectorAll('[data-kotoba-answer]').forEach(b=>{
       b.disabled=true;const value=q.options[Number(b.dataset.kotobaAnswer)];
       b.classList.toggle('correct',value===q.answer);b.classList.toggle('wrong',value===chosen && value!==q.answer);
+      b.querySelector('.quiz-choice-content').insertAdjacentHTML('beforeend',kotobaChoiceDetailsMarkup(q.optionDetails[Number(b.dataset.kotobaAnswer)],session.mode,escape)+choiceResultMarkup(value===q.answer,value===chosen));
     });
     const feedback=find('#kotoba-feedback');
     feedback.className=`quiz-feedback ${chosen===q.answer ? 'success' : 'error'}`;
-    feedback.innerHTML=`<p class="answer-status">${chosen===q.answer ? 'Tepat! Kamu sudah mengenali kata ini.' : chosen===null ? 'Waktunya habis. Yuk, pahami jawabannya.' : 'Belum tepat. Yuk, ingat lagi kata ini.'}</p><p>Jawaban benar: <strong lang="${KOTOBA_MODES[session.mode].answerLanguage}">${escape(q.answer)}</strong></p>${detail(q)}${voice('ja') ? `<button class="text-button" data-kotoba="pronounce">${icon('speaker')} Dengarkan pelafalan</button>` : ''}`;
+    feedback.innerHTML=`<p class="answer-status">${chosen===q.answer ? 'Tepat! Kamu sudah mengenali kata ini.' : chosen===null ? 'Waktunya habis. Yuk, pahami jawabannya.' : 'Belum tepat. Yuk, ingat lagi kata ini.'}</p>${q.meaningsEn.length ? `<details class="kotoba-reference"><summary>Arti Inggris rujukan untuk jawaban benar</summary><p lang="en">${escape(q.meaningsEn.join('; '))}</p></details>` : ''}${voice('ja') ? `<button class="text-button" data-kotoba="pronounce">${icon('speaker')} Dengarkan pelafalan</button>` : ''}`;
     find('[data-kotoba="next"]').disabled=false;
-    feedback.scrollIntoView({block:'nearest',behavior:'smooth'});
   }
 
   function finish() {

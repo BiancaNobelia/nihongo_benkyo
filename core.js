@@ -34,13 +34,15 @@ export function createQuiz(pool, mode, count, random = Math.random) {
     const candidates = wordChoices ? [] : eligible.filter(other => other.char !== k.char
       && ![...meaningSets.get(k.char)].some(sense => meaningSets.get(other.char).has(sense)));
     const distractors = wordChoices?.distractors || shuffle([...new Set(candidates.map(getAnswer))].filter(a => !accepted.has(a)),random).slice(0,3);
+    const options = shuffle([answer, ...distractors], random);
     return { kanji:k, level:k.quizLevel || k.level,
       word:mode==='reading' ? k.example.word : k.char,
       meaning:mode==='reading' ? k.example.meaning : k.meaning,
       reading:mode==='reading' ? k.example.reading : '',
       prompt: mode === 'kanji' ? k.meaning : mode === 'reading' ? k.example.word : k.char,
       ...(wordChoices ? {readingAlternatives:wordChoices.readingAlternatives,wordDistractors:wordChoices.wordDistractors} : {}),
-      answer, options: shuffle([answer, ...distractors], random) };
+      answer, options,
+      ...(mode==='meaning' ? {optionDetails:options.map(value=>value===answer ? k : candidates.find(other=>getAnswer(other)===value))} : {}) };
   });
 }
 export function localDay(date = new Date()) {

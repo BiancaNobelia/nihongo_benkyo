@@ -6,7 +6,7 @@ import { createMateriView } from './materi-view.js?v=20261016-materi';
 import { createDokkaiView } from './dokkai-view.js?v=20261016-dokkai';
 import { KANJI } from './kanji-data.js?v=20261015-jidoushi-tadoushi';
 import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261015-jidoushi-tadoushi';
-import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261016-dokkai';
+import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261016-choice-feedback';
 import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261015-jidoushi-tadoushi';
 import { groupsForCharacter } from './similar-core.js?v=20261015-jidoushi-tadoushi';
 import { createSimilarView } from './similar-view.js?v=20261015-jidoushi-tadoushi';
@@ -26,9 +26,10 @@ import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.j
 import { requestedQuizCount } from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
 import { quizSetupPanel } from './quiz-setup-view.js?v=20261015-henkan-nouns';
 import { answerDetailsMarkup } from './quiz-feedback.js?v=20261015-jidoushi-tadoushi';
+import { kanjiReadingsMarkup, kanjiChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261016-choice-feedback';
 import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261015-jidoushi-tadoushi';
-import { createKotobaView } from './kotoba-view.js?v=20261015-jidoushi-tadoushi';
-import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261015-jidoushi-tadoushi';
+import { createKotobaView } from './kotoba-view.js?v=20261016-choice-feedback';
+import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261016-choice-feedback';
 import { createHenkanView } from './henkan-view.js?v=20261015-henkan-nouns';
 import { createParticleView } from './particle-view.js?v=20261015-jidoushi-tadoushi';
 
@@ -305,7 +306,7 @@ function renderQuestion() {
   const caption = isEnglish ? 'Pilih penulisan katakana yang sesuai dengan kata Inggris berikut.' : isWriting ? `Pilih penulisan ${quiz.mode === 'hiragana-kanji' ? 'kanji' : 'katakana'} untuk bagian bergaris bawah.` : hasSentence ? 'Baca kalimatnya, lalu pilih bacaan kata yang digarisbawahi.' : quiz.mode === 'meaning' ? 'Apa arti kanji ini?' : quiz.mode === 'kanji' ? 'Kanji mana yang sesuai dengan arti ini?' : 'Pilih bacaan hiragana untuk kata ini. Artinya muncul setelah menjawab.';
   const prompt = quizPromptMarkup(q,quiz.mode,escape);
   const category=quiz.mode==='jlpt-reading' ? `<span class="reading-category">${escape(READING_CATEGORIES[q.readingCategory] || 'Kosakata')} · ${q.level}</span>` : '';
-  root.innerHTML = `<div class="study-panel">${heading('WAKTUNYA MELATIH INGATAN', questionTitle, `${modeNames[quiz.mode]} · ${quiz.level === 'all' ? 'Semua level' : quiz.level}`)}<div class="study-top"><span>Soal <strong>${quiz.index + 1}</strong> / ${quiz.questions.length}</span>${quiz.time ? `<span class="timer">${icon('clock')}<span id="timer-value" role="timer">${quiz.time} dtk</span></span>` : '<span>Pelan-pelan juga boleh.</span>'}</div><div class="progress-track" role="progressbar" aria-label="Progres kuis" aria-valuemin="0" aria-valuemax="${quiz.questions.length}" aria-valuenow="${quiz.index}"><span style="width:${quiz.index / quiz.questions.length * 100}%"></span></div><div class="quiz-question ${practiceBanks[quiz.mode] || quiz.mode==='reading' ? 'reading-question' : ''} ${hasSentence ? `writing-question ${quiz.mode}` : ''}">${category}<span class="quiz-caption">${caption}</span><div tabindex="-1" class="quiz-prompt ${quiz.mode === 'kanji' ? 'meaning-prompt' : ''} ${isEnglish ? 'english-cue' : ''} ${hasSentence ? 'sentence-prompt' : ''}" ${isEnglish ? 'lang="en"' : quiz.mode !== 'kanji' ? 'lang="ja"' : ''}>${prompt}</div><div class="quiz-options ${(practiceBanks[quiz.mode] || quiz.mode==='reading') && q.options.some(a => a.length > (isEnglish ? 5 : 6)) ? 'long-readings' : ''}">${q.options.map((answer,i) => `<button class="quiz-option" data-answer="${i}"><span>${'ABCD'[i]}</span><span ${quiz.mode !== 'meaning' ? 'lang="ja"' : ''}>${escape(answer)}</span></button>`).join('')}</div><div id="quiz-feedback" class="quiz-feedback" role="status">Pilih satu jawaban yang paling tepat.</div></div><div class="quiz-next"><button class="text-button" data-action="quiz-exit">Akhiri latihan</button><button class="primary" data-action="quiz-next" disabled>${quiz.index === quiz.questions.length - 1 ? 'Lihat hasil' : 'Soal berikutnya'} ${icon('arrow')}</button></div></div>`;
+  root.innerHTML = `<div class="study-panel">${heading('WAKTUNYA MELATIH INGATAN', questionTitle, `${modeNames[quiz.mode]} · ${quiz.level === 'all' ? 'Semua level' : quiz.level}`)}<div class="study-top"><span>Soal <strong>${quiz.index + 1}</strong> / ${quiz.questions.length}</span>${quiz.time ? `<span class="timer">${icon('clock')}<span id="timer-value" role="timer">${quiz.time} dtk</span></span>` : '<span>Pelan-pelan juga boleh.</span>'}</div><div class="progress-track" role="progressbar" aria-label="Progres kuis" aria-valuemin="0" aria-valuemax="${quiz.questions.length}" aria-valuenow="${quiz.index}"><span style="width:${quiz.index / quiz.questions.length * 100}%"></span></div><div class="quiz-question ${quiz.mode==='meaning' ? 'kanji-meaning-question' : ''} ${practiceBanks[quiz.mode] || quiz.mode==='reading' ? 'reading-question' : ''} ${hasSentence ? `writing-question ${quiz.mode}` : ''}">${category}<span class="quiz-caption">${caption}</span><div tabindex="-1" class="quiz-prompt ${quiz.mode === 'kanji' ? 'meaning-prompt' : ''} ${isEnglish ? 'english-cue' : ''} ${hasSentence ? 'sentence-prompt' : ''}" ${isEnglish ? 'lang="en"' : quiz.mode !== 'kanji' ? 'lang="ja"' : ''}>${prompt}</div>${quiz.mode==='meaning' ? kanjiReadingsMarkup(q.kanji,escape) : ''}<div class="quiz-options ${(practiceBanks[quiz.mode] || quiz.mode==='reading') && q.options.some(a => a.length > (isEnglish ? 5 : 6)) ? 'long-readings' : ''}">${q.options.map((answer,i) => `<button class="quiz-option ${quiz.mode==='meaning' ? 'reveal-option' : ''}" data-answer="${i}"><span>${'ABCD'[i]}</span>${quiz.mode==='meaning' ? `<span class="quiz-choice-content"><span class="quiz-choice-label" lang="id">${escape(answer)}</span></span>` : `<span lang="ja">${escape(answer)}</span>`}</button>`).join('')}</div><div id="quiz-feedback" class="quiz-feedback" role="status">Pilih satu jawaban yang paling tepat.</div></div><div class="quiz-next"><button class="text-button" data-action="quiz-exit">Akhiri latihan</button><button class="primary" data-action="quiz-next" disabled>${quiz.index === quiz.questions.length - 1 ? 'Lihat hasil' : 'Soal berikutnya'} ${icon('arrow')}</button></div></div>`;
   window.scrollTo({top:0, behavior:'instant'});
   document.querySelector('.quiz-prompt').focus({preventScroll:true});
   if (quiz.time) {
@@ -328,14 +329,17 @@ function answerQuiz(index) {
     const answer = q.options[Number(b.dataset.answer)];
     if (answer === q.answer) b.classList.add('correct');
     else if (answer === chosen) b.classList.add('wrong');
+    if (quiz.mode==='meaning') {
+      b.querySelector('.quiz-choice-content').insertAdjacentHTML('beforeend',kanjiChoiceDetailsMarkup(q.optionDetails[Number(b.dataset.answer)],escape)+choiceResultMarkup(answer===q.answer,answer===chosen));
+    }
   });
   const feedback = document.querySelector('#quiz-feedback');
   feedback.className = `quiz-feedback ${chosen === q.answer ? 'success' : 'error'}`;
   const message=chosen===q.answer ? 'Tepat! Satu langkah lebih paham.' : chosen===null ? 'Waktunya habis. Yuk, pahami jawabannya.' : 'Belum tepat, tidak apa-apa. Yuk, pahami jawabannya.';
-  feedback.innerHTML=`<p class="answer-status">${escape(message)}</p>${answerDetailsMarkup(q,quiz.mode,escape)}`;
+  feedback.innerHTML=`<p class="answer-status">${escape(message)}</p>${quiz.mode==='meaning' ? '' : answerDetailsMarkup(q,quiz.mode,escape)}`;
   feedback.insertAdjacentHTML('afterend',questionTopicLinks(q,escape));
   document.querySelector('[data-action="quiz-next"]').disabled = false;
-  feedback.scrollIntoView({block:'nearest',behavior:'smooth'});
+  if(quiz.mode!=='meaning')feedback.scrollIntoView({block:'nearest',behavior:'smooth'});
 }
 function finishQuiz() {
   clearInterval(quizTimer);

@@ -5,6 +5,11 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 
 ## Fitur
 
+- Kuis Kanji → Arti menampilkan onyomi/kunyomi di bawah soal dan mengungkap
+  kanji serta bacaan pada semua pilihan setelah menjawab. Kuis Kotoba juga
+  menampilkan pasangan kata, bacaan, dan arti untuk seluruh pilihan pada
+  kelima mode, termasuk saat waktu habis. Data pilihan tetap terhubung ke
+  kata sumber setelah diacak; jawaban belum dibocorkan sebelum dijawab.
 - Kuis Dokkai di `#dokkai`: 15 bacaan adaptasi KCよむよむ dan 60 soal
   pilihan ganda. Level latihan N5/N4/N3 masing-masing 20 soal (perkiraan
   editorial, bukan padanan resmi JF Standard atau soal resmi JLPT).
