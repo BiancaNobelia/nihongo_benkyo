@@ -1,6 +1,6 @@
 import { componentDetailsMarkup } from './kanji-components.js?v=20261015-jidoushi-tadoushi';
 import { KANJI } from './kanji-data.js?v=20261015-jidoushi-tadoushi';
-import { kanjiReadingsMarkup } from './quiz-choice-view.js?v=20261016-compact-feedback';
+import { kanjiReadingsMarkup } from './quiz-choice-view.js?v=20261016-jlpt-furigana';
 
 const kanjiByCharacter=new Map(KANJI.map(k=>[k.char,k]));
 
@@ -30,5 +30,5 @@ export function answerDetails(question, mode) {
 export function answerDetailsMarkup(question, mode, escape) {
   const detail=answerDetails(question,mode);
   const compact=['meaning','kanji','jlpt-reading','reading'].includes(mode);
-  return `<div class="answer-details"><div class="answer-word"><span>Jawaban benar</span><strong lang="ja">${escape(detail.word)}${detail.reading ? ` <span class="answer-reading">（${escape(detail.reading)}）</span>` : ''}</strong>${mode==='jlpt-reading' ? wordReadingsMarkup(detail.word,escape) : ''}</div>${detail.english ? `<div class="answer-english"><span>Kata Inggris</span><p lang="en">${escape(detail.english)}</p></div>` : ''}${detail.meaning ? `<div class="answer-meaning"><span>${detail.meaningLabel}</span><p>${escape(detail.meaning)}</p></div>` : ''}${detail.sentence ? `<div class="answer-sentence"><span>Kalimat lengkap</span><p lang="ja">${escape(detail.sentence)}</p></div>` : ''}${detail.sentenceMeaning ? `<div class="answer-translation"><span>Arti kalimat</span><p>${escape(detail.sentenceMeaning)}</p></div>` : ''}${compact ? '' : componentDetailsMarkup(detail.word,escape)}${detail.explanation && !compact ? `<p class="answer-explanation">${escape(detail.explanation)}</p>` : ''}</div>`;
+  return `<div class="answer-details"><div class="answer-word"><span>Jawaban benar</span><strong lang="ja">${escape(detail.word)}${detail.reading ? ` <span class="answer-reading">（${escape(detail.reading)}）</span>` : ''}</strong>${mode==='jlpt-reading' ? wordReadingsMarkup(detail.word,escape) : ''}</div>${detail.english ? `<div class="answer-english"><span>Kata Inggris</span><p lang="en">${escape(detail.english)}</p></div>` : ''}${detail.meaning ? `<div class="answer-meaning"><span>${detail.meaningLabel}</span><p>${escape(detail.meaning)}</p></div>` : ''}${detail.sentence && mode!=='jlpt-reading' ? `<div class="answer-sentence"><span>Kalimat lengkap</span><p lang="ja">${escape(detail.sentence)}</p></div>` : ''}${detail.sentenceMeaning ? `<div class="answer-translation"><span>Arti kalimat</span><p>${escape(detail.sentenceMeaning)}</p></div>` : ''}${compact ? '' : componentDetailsMarkup(detail.word,escape)}${detail.explanation && !compact ? `<p class="answer-explanation">${escape(detail.explanation)}</p>` : ''}</div>`;
 }

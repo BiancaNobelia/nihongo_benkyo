@@ -39,6 +39,7 @@ test('all writing options retain their own meanings and readings without inventi
     q.optionDetails.forEach((detail,i)=>{
       assert.equal(detail.word,q.options[i]);
       const markup=writingChoiceDetailsMarkup(detail,escape);
+      assert.doesNotMatch(markup,/On:|Kun:|Onyomi|Kunyomi/);
       if(detail.word===q.answer){
         assert.equal(detail.reading,q.prompt);
         assert.equal(detail.meaning,q.meaning);
@@ -51,7 +52,7 @@ test('all writing options retain their own meanings and readings without inventi
           assert.ok(card.meaning && (card.on.length || card.kun.length));
           assert.ok(markup.includes(escape(card.meaning)));
         }
-        if(detail.word!==characters[0])assert.ok(markup.includes('Bacaan & arti per kanji'));
+        if(detail.word!==characters[0])assert.ok(markup.includes('Arti per kanji'));
       }
     });
   }

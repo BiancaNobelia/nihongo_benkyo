@@ -78,3 +78,7 @@
 .answer-other-readings p{font-size:11px;color:var(--muted)}
 .review-item{align-items:flex-start}.review-item>div{flex:1}.review-list .answer-details{padding:14px;margin-top:8px}.review-list .answer-word strong{font-size:17px}.review-list .answer-meaning p{font-size:13px}.review-list .answer-sentence p{font-size:15px}.review-list .answer-translation p{font-size:12px}
 @media(max-width:700px){.quiz-custom-count input{font-size:16px}.answer-details{padding:16px}.answer-word strong{font-size:20px}.answer-reading{font-size:14px}.answer-meaning p{font-size:15px}.answer-sentence p{font-size:16px}.answer-translation{padding:12px}.answer-translation p{font-size:13px}.review-item{gap:10px}.review-char{min-width:30px;font-size:19px}.review-list .answer-details{padding:12px}}
+
+/* Readings appear on the original JLPT sentence only after an answer. */
+.jlpt-reading .sentence-prompt ruby{ruby-position:over;ruby-align:center}
+.jlpt-reading .sentence-prompt rt{font:500 .5em/1.2 var(--serif);color:var(--muted);letter-spacing:0}

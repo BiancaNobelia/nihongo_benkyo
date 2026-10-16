@@ -47,7 +47,7 @@ test('every JLPT level renders one highlighted target, without exposing answers 
       const feedback=answerDetailsMarkup(q,'jlpt-reading',escape);
       assert.ok(feedback.includes(escape(q.sentenceMeaning)));
       assert.ok(feedback.includes(escape(q.meaning)));
-      assert.ok(feedback.includes(escape(q.sentence.replace('{target}',q.prompt))));
+      assert.doesNotMatch(feedback,/Kalimat lengkap|class="answer-sentence"/);
     }
   }
 });

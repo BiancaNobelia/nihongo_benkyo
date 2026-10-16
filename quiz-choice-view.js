@@ -21,7 +21,7 @@ export function kotobaChoiceDetailsMarkup(entry, mode, escape) {
 export function writingChoiceDetailsMarkup(detail, escape) {
   if(detail.reading)return `<span class="quiz-choice-detail"><small class="quiz-choice-reading" lang="ja">${escape(detail.reading)}</small><small class="quiz-choice-meaning" lang="id">${escape(detail.meaning)}</small></span>`;
   const single=detail.characters.length===1 && detail.word===detail.characters[0].char;
-  return `<span class="quiz-choice-detail">${single ? '' : '<small class="quiz-character-note">Bacaan & arti per kanji</small>'}${detail.characters.map(card=>`<span class="quiz-choice-character"><small class="quiz-choice-meaning" lang="id">${single ? '' : `<b lang="ja">${escape(card.char)}</b> · `}${escape(card.meaning)}</small><small class="quiz-choice-reading"><span>On:</span> <span lang="ja">${escape(readingText(card.on))}</span></small><small class="quiz-choice-reading"><span>Kun:</span> <span lang="ja">${escape(readingText(card.kun))}</span></small></span>`).join('')}</span>`;
+  return `<span class="quiz-choice-detail">${single ? '' : '<small class="quiz-character-note">Arti per kanji</small>'}${detail.characters.map(card=>`<span class="quiz-choice-character"><small class="quiz-choice-meaning" lang="id">${single ? '' : `<b lang="ja">${escape(card.char)}</b> · `}${escape(card.meaning)}</small></span>`).join('')}</span>`;
 }
 
 export function choiceResultMarkup(correct, chosen) {

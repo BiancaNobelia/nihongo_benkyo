@@ -19,14 +19,14 @@ import { READING_HISTORY_KEY, cleanReadingHistory, recordReadingShown, readingHi
 import { readingOptions } from './reading-options.js?v=20261015-jidoushi-tadoushi';
 
 import { createWritingQuiz } from './writing-core.js?v=20261016-writing-feedback';
-import { READING_MODE_NAMES, usesSentence, quizPromptMarkup } from './quiz-prompt.js?v=20261016-writing-feedback';
+import { READING_MODE_NAMES, usesSentence, quizPromptMarkup } from './quiz-prompt.js?v=20261016-jlpt-furigana';
 import { questionTopicLinks } from './similar-quiz-view.js?v=20261015-jidoushi-tadoushi';
 
 import { PRACTICE_BANKS as practiceBanks, getQuizPool } from './practice-banks.js?v=20261015-jidoushi-tadoushi';
 import { requestedQuizCount } from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
-import { quizSetupPanel } from './quiz-setup-view.js?v=20261016-writing-feedback';
-import { answerDetails, answerDetailsMarkup } from './quiz-feedback.js?v=20261016-compact-feedback';
-import { kanjiReadingsMarkup, kanjiChoiceDetailsMarkup, writingChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261016-writing-feedback';
+import { quizSetupPanel } from './quiz-setup-view.js?v=20261016-jlpt-furigana';
+import { answerDetails, answerDetailsMarkup } from './quiz-feedback.js?v=20261016-jlpt-furigana';
+import { kanjiReadingsMarkup, kanjiChoiceDetailsMarkup, writingChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261016-jlpt-furigana';
 import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261015-jidoushi-tadoushi';
 import { createKotobaView } from './kotoba-view.js?v=20261016-choice-feedback';
 import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261016-choice-feedback';
@@ -325,6 +325,7 @@ function answerQuiz(index) {
   quiz.answered = true; clearInterval(quizTimer);
   const q = quiz.questions[quiz.index]; const chosen = index === null ? null : q.options[index];
   quiz.answers.push({ chosen, correct:chosen === q.answer });
+  if (quiz.mode==='jlpt-reading') document.querySelector('.quiz-prompt').innerHTML=quizPromptMarkup(q,quiz.mode,escape,true);
   if (quiz.mode==='meaning') document.querySelector('.quiz-prompt').insertAdjacentHTML('afterend',kanjiReadingsMarkup(q.kanji,escape));
   if (quiz.mode==='reading') document.querySelector('.quiz-prompt').insertAdjacentHTML('afterend',`<p class="quiz-prompt-meaning" lang="id">${escape(answerDetails(q,quiz.mode).meaning)}</p>`);
   if (quiz.mode==='hiragana-kanji') document.querySelector('.quiz-prompt').insertAdjacentHTML('afterend',`<p class="quiz-prompt-translation" lang="id">${escape(q.sentenceMeaning)}</p>`);
@@ -345,7 +346,7 @@ function answerQuiz(index) {
   feedback.innerHTML=`<p class="answer-status">${escape(message)}</p>${['meaning','kanji','reading','hiragana-kanji'].includes(quiz.mode) ? '' : answerDetailsMarkup(q,quiz.mode,escape)}`;
   feedback.insertAdjacentHTML('afterend',questionTopicLinks(q,escape));
   document.querySelector('[data-action="quiz-next"]').disabled = false;
-  if(!['meaning','kanji','reading','hiragana-kanji'].includes(quiz.mode))feedback.scrollIntoView({block:'nearest',behavior:'smooth'});
+  if(!['meaning','kanji','reading','hiragana-kanji','jlpt-reading'].includes(quiz.mode))feedback.scrollIntoView({block:'nearest',behavior:'smooth'});
 }
 function finishQuiz() {
   clearInterval(quizTimer);

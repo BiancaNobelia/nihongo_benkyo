@@ -1101,3 +1101,18 @@ halaman PDF 10–12 karena teksnya berada di dalam gambar.
 | 結婚式 | 香月裕介 | A2 | N3 |
 | アインさんアルバイトをする？ | 大西薫 | A2 | N3 |
 | アイドルやめたい | 湯本かほり | A2/B1 | N3 |
+
+## Furigana kalimat kuis kanji JLPT
+
+Furigana untuk 863 soal memakai bacaan target dari bank soal yang sudah ada.
+Bacaan kata lain disusun dalam `data/jlpt-furigana-readings.json`, berdasarkan
+kosakata dan anotasi bunpou yang sudah tersedia, lalu diperiksa terhadap konteks
+kalimat. Stem dengan beberapa bacaan (misalnya 降りる / 降る dan 足 / 足りる)
+dibedakan dalam `scripts/build_jlpt_furigana.mjs`. Ini anotasi editorial aplikasi.
+
+Jalankan `node scripts/build_jlpt_furigana.mjs` setelah mengubah kalimat atau
+bacaan target. Hasilnya disimpan di `jlpt-furigana-data.js`; kunci memuat kalimat,
+kata target, dan bacaan agar anotasi lama tidak diterapkan pada kalimat yang
+berubah. Tes memeriksa cakupan seluruh kanji, posisi anotasi, okurigana, dan
+bacaan khusus tanggal/hitungan. Furigana baru ditampilkan setelah menjawab
+atau waktu habis.
