@@ -5,8 +5,9 @@ menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
 
 ## Fitur
 
-- Kuis Kanji → Arti menampilkan onyomi/kunyomi di bawah soal dan mengungkap
-  kanji serta bacaan pada semua pilihan setelah menjawab. Kuis Kotoba juga
+- Kuis Kanji → Arti baru menampilkan onyomi/kunyomi di bawah soal setelah
+  menjawab atau waktu habis, sekaligus mengungkap kanji serta bacaan pada
+  semua pilihan. Kuis Kotoba juga
   menampilkan pasangan kata, bacaan, dan arti untuk seluruh pilihan pada
   kelima mode, termasuk saat waktu habis. Data pilihan tetap terhubung ke
   kata sumber setelah diacak; jawaban belum dibocorkan sebelum dijawab.
