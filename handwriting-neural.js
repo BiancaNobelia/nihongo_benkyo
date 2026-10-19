@@ -1,4 +1,6 @@
 import * as ort from './vendor/onnxruntime/ort.wasm.min.js';
+import {createHandwritingAssetReader} from './handwriting-cache.js?v=20261020-handwriting-cache';
+import {HANDWRITING_ASSETS} from './handwriting-assets.js?v=20261020-handwriting-cache';
 
 const SIDE=64;
 // The model uses white ink on black. Rasterize the paths rather than the visible
@@ -54,12 +56,9 @@ export function rankPredictions(probabilities,labels,allowed,limit=30){
   return [...best].map(([char,score])=>({char,score})).sort((a,b)=>b.score-a.score||a.char.codePointAt(0)-b.char.codePointAt(0)).slice(0,limit);
 }
 
-export async function createNeuralRecognizer(allowed,{readAsset,initTimeout=60000}={}){
-  const read=readAsset||async function(path,text=false){
-    const response=await fetch(new URL(path,import.meta.url),{signal:AbortSignal.timeout(60000)});
-    if(!response.ok)throw new Error('Recognition asset unavailable');
-    return text?response.text():new Uint8Array(await response.arrayBuffer());
-  };
+export async function createNeuralRecognizer(allowed,{readAsset,initTimeout=60000,onDownload}={}){
+  const cached=readAsset?null:createHandwritingAssetReader({onDownload});
+  const read=readAsset||cached.read;
   ort.env.wasm.numThreads=1; // GitHub Pages does not require cross-origin isolation.
   ort.env.wasm.proxy=false; // Already inside our own worker.
   ort.env.wasm.initTimeout=initTimeout;
@@ -67,11 +66,17 @@ export async function createNeuralRecognizer(allowed,{readAsset,initTimeout=6000
   // Windows incorrectly serve .mjs as text/plain, which browsers refuse to load.
   ort.env.wasm.wasmPaths={mjs:new URL('./vendor/onnxruntime/ort-wasm-simd-threaded.js',import.meta.url).href,
     wasm:new URL('./vendor/onnxruntime/ort-wasm-simd-threaded.wasm',import.meta.url).href};
-  const [model,text]=await Promise.all([read('./data/handwriting/dakanji-v2.onnx'),read('./data/handwriting/dakanji-v2-labels.txt',true)]);
+  const [model,text,wasm]=await Promise.all([read(HANDWRITING_ASSETS.model.path),read(HANDWRITING_ASSETS.labels.path,true),read(HANDWRITING_ASSETS.wasm.path)]);
   const labels=Array.from(text.trim());
   if(labels.length!==6507||new Set(labels).size!==labels.length)throw new Error('Invalid recognition labels');
-  const session=await ort.InferenceSession.create(model,{executionProviders:['wasm'],graphOptimizationLevel:'all'});
+  // Pass cached bytes directly: otherwise ORT fetches the 14 MB WASM itself,
+  // bypassing Cache Storage even when the 2 MB model is already cached.
+  ort.env.wasm.wasmBinary=wasm;
+  let session;
+  try{session=await ort.InferenceSession.create(model,{executionProviders:['wasm'],graphOptimizationLevel:'all'});}
+  finally{ort.env.wasm.wasmBinary=undefined;}
   return {
+    cacheStatus:cached?.status(),
     async recognize(strokes){
       const normal=rasterizeWriting(strokes);
       if(!normal)return [];

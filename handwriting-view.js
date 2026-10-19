@@ -66,7 +66,7 @@ export function mountHandwriting(root,kanji,escape) {
     if(worker||disposed)return;
     failed=false;retry.hidden=true;status.textContent='Menyiapkan pencarian… Kamu sudah bisa menggambar.';
     try {
-      worker=new Worker(new URL('./handwriting-worker.js?v=20261020-handwriting-neural',import.meta.url),{type:'module'});
+      worker=new Worker(new URL('./handwriting-worker.js?v=20261020-handwriting-cache',import.meta.url),{type:'module'});
       loadTimeout=setTimeout(fail,30000);
       worker.onerror=fail;
       worker.onmessage=({data})=>{
@@ -74,7 +74,10 @@ export function mountHandwriting(root,kanji,escape) {
         if(data.type==='model'){
           if(data.reason)console.warn('Advanced handwriting recognition unavailable:',data.reason);
           retry.hidden=data.state!=='unavailable';
-          engineStatus.textContent=data.state==='ready'?'Pengenalan lanjutan siap.':data.state==='loading'?'Memuat pengenalan lanjutan (±16 MB saat pertama kali). Pencarian dasar sudah tersedia.':'Pengenalan lanjutan belum tersedia. Pencarian dasar tetap aktif.';
+          if(data.state==='ready'){
+            const cacheText=data.cacheStatus==='cached'?'Model dimuat dari cache perangkat.':data.cacheStatus==='saved'?'Model tersimpan di perangkat untuk kunjungan berikutnya.':'Browser belum bisa menyimpan model. Unduhan mungkin diperlukan lagi.';
+            engineStatus.textContent=`Pengenalan lanjutan siap. ${cacheText}`;
+          }else engineStatus.textContent=data.state==='loading'?'Menyiapkan pengenalan lanjutan… Memeriksa cache perangkat.':data.state==='downloading'?'Mengunduh data yang belum tersimpan (±16 MB saat pertama kali). Pencarian dasar sudah tersedia.':'Pengenalan lanjutan belum tersedia. Pencarian dasar tetap aktif.';
           return;
         }
         if(data.type==='ready'){clearTimeout(loadTimeout);ready=true;changed();return;}

@@ -1143,8 +1143,12 @@ Character recognition powered by machine learning from Dariyooo (DaAppLab).
 Inferensi memakai [ONNX Runtime Web 1.30.0](https://onnxruntime.ai/) (MIT), WASM
 satu thread di Web Worker. Seluruh aset disimpan di situs ini; tidak ada API
 pengenalan eksternal. Model beserta runtime memerlukan unduhan awal sekitar
-16,6 MB, hanya setelah panel tulisan tangan dibuka. Cache HTTP dapat dipakai
-pada kunjungan berikutnya. Data geometri dasar tetap tersedia selama pemuatan
+16,6 MB, hanya setelah panel tulisan tangan dibuka. Model, label dan WASM
+disimpan dengan Cache Storage melalui `handwriting-cache.js`, kemudian dibaca
+langsung pada kunjungan berikutnya tanpa permintaan jaringan untuk ketiga aset
+itu. WASM diteruskan ke ONNX Runtime sebagai `wasmBinary` agar tidak diunduh
+lagi oleh runtime. Modul JS kecil tetap memakai pemuatan browser biasa.
+Data geometri dasar tetap tersedia selama pemuatan
 model, saat unduhan gagal, atau jika browser tidak mendukung runtime.
 
 Model, label, runtime, lisensi MIT, dan pemberitahuan pihak ketiga dipin dengan
@@ -1152,6 +1156,17 @@ SHA-256 di `data/handwriting-neural-source.json`. Pulihkan lewat
 `python scripts/build_handwriting_neural.py`. Berkas JS upstream tidak diubah
 isinya; ekstensi `.mjs` disajikan sebagai `.js` untuk kompatibilitas MIME server
 statis Windows. `.gitattributes` mempertahankan byte aset saat checkout.
+
+Kunci cache memakai SHA-256 isi aset, dihasilkan sebagai `handwriting-assets.js`
+oleh script pemulihan aset. Pembaruan aplikasi biasa tidak mengunduh ulang
+model yang sama. Aset lama hanya dibuang setelah penggantinya lolos checksum
+dan berhasil disimpan; pembersihan hanya menyentuh aset pada cache proyek ini.
+Cache penuh, ditolak, atau tidak tersedia tidak menggagalkan pengenalan. File
+rusak diunduh ulang. Browser dapat menghapus cache saat data situs dibersihkan
+atau penyimpanan tertekan, sehingga cache bukan jaminan penyimpanan permanen.
+Tidak ada service worker atau cache halaman untuk menjadikan seluruh situs
+offline. Lihat [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache).
+Tes: `node --test tests/handwriting-cache.test.mjs tests/handwriting-neural.test.mjs`.
 
 Gambar disusun dari koordinat goresan menjadi raster antialias 64 × 64 dengan
 padding, sehingga tidak bergantung tema maupun resolusi layar. Prediksi dua

@@ -26,9 +26,13 @@ try {
   // Loading or inference failure must never disable the geometric fallback.
   self.postMessage({type:'model',state:'loading'});
   try{
-    const {createNeuralRecognizer}=await import('./handwriting-neural.js?v=20261020-handwriting-neural');
-    hybrid.setModel(await createNeuralRecognizer(new Set(templates.map(t=>t.char))));
-    self.postMessage({type:'model',state:'ready'});
+    const {createNeuralRecognizer}=await import('./handwriting-neural.js?v=20261020-handwriting-cache');
+    let downloading=false;
+    const model=await createNeuralRecognizer(new Set(templates.map(t=>t.char)),{onDownload:()=>{
+      if(!downloading){downloading=true;self.postMessage({type:'model',state:'downloading'});}
+    }});
+    hybrid.setModel(model);
+    self.postMessage({type:'model',state:'ready',cacheStatus:model.cacheStatus});
     queue.refresh();
   }catch(error){self.postMessage({type:'model',state:'unavailable',reason:String(error.message||error)});}
 } catch {

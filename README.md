@@ -11,6 +11,11 @@ DaKanji dan ONNX Runtime Web yang disimpan bersama situs.
   jari, stylus, dan hingga 128 goresan terpisah. Model dimuat saat panel dibuka;
   pencarian dasar tetap bekerja selama pemuatan atau jika model gagal. Gambar
   diproses di perangkat. Klik kandidat untuk melihat arti dan bacaannya.
+  Model, label, dan mesin WASM (sekitar 16,5 MB) disimpan dalam Cache Storage
+  browser. Kunjungan berikutnya membaca cache tanpa mengunduh ulang aset itu.
+  Versi file mengikuti SHA-256; hanya aset yang berubah/hilang yang diunduh lagi.
+  Status membedakan model baru tersimpan, dimuat dari cache, dan penyimpanan
+  tidak tersedia. Cache ini tidak menyimpan seluruh situs untuk akses offline.
   Character recognition powered by machine learning from Dariyooo (DaAppLab).
 - Aset pengenalan dipin beserta lisensinya di `data/handwriting-neural-source.json`.
   Pulihkan dengan `python scripts/build_handwriting_neural.py`; tidak memerlukan

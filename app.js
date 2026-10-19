@@ -1,4 +1,4 @@
-import {handwritingMarkup,mountHandwriting} from './handwriting-view.js?v=20261020-handwriting-neural';
+import {handwritingMarkup,mountHandwriting} from './handwriting-view.js?v=20261020-handwriting-cache';
 import {createTransitivityView} from './transitivity-view.js?v=20261015-jidoushi-tadoushi';
 import {TRANSITIVITY_PAIRS,TRANSITIVITY_ENTRIES} from './transitivity-data.js?v=20261015-jidoushi-tadoushi';
 import {PARTICLE_ENTRIES,PARTICLE_TOPICS} from './particle-data.js?v=20261015-jidoushi-tadoushi';
