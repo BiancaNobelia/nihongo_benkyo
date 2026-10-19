@@ -33,3 +33,11 @@ explained separately from historical etymology. The adapted structure remains
 CC BY-SA 3.0; no vector paths or dictionary passages are reproduced.
 See `data/radical-source.json` for the source URL and SHA-256 checksum, and
 `scripts/build_radicals.py` for the extraction procedure.
+
+`data/handwriting-templates.json` adapts the stroke geometry from the same
+pinned release, sampled on 20 October 2026 by `scripts/build_handwriting.py`.
+Each stroke is reduced to 12 points and quantized to unsigned 8-bit coordinates
+for local shape matching. All 2,383 catalog characters are covered. This
+adapted geometry remains available under CC BY-SA 3.0, with source and output
+checksums in `data/handwriting-source.json`. The recognition and UI code are
+original implementation, separate from the licensed geometry.

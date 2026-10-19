@@ -1,3 +1,4 @@
+import {handwritingMarkup,mountHandwriting} from './handwriting-view.js?v=20261020-handwriting';
 import {createTransitivityView} from './transitivity-view.js?v=20261015-jidoushi-tadoushi';
 import {TRANSITIVITY_PAIRS,TRANSITIVITY_ENTRIES} from './transitivity-data.js?v=20261015-jidoushi-tadoushi';
 import {PARTICLE_ENTRIES,PARTICLE_TOPICS} from './particle-data.js?v=20261015-jidoushi-tadoushi';
@@ -80,6 +81,7 @@ let progress = cleanProgress(raw, KANJI);
 let readingHistory = {};
 try { readingHistory = cleanReadingHistory(JSON.parse(localStorage.getItem(READING_HISTORY_KEY)), practiceBanks['jlpt-reading']); } catch { /* Remember in memory if browser storage is unavailable. */ }
 let view = '';
+let disposeHandwriting=()=>{};
 let filters = { level:'all', query:'', collection:'all' };
 const PAGE_SIZE = 24;
 let currentPage = 1;
@@ -147,6 +149,7 @@ function heading(kicker, title, description) {
 }
 function renderLibrary(home = false) {
   root.innerHTML = `${home ? `<section class="hero"><div class="hero-copy"><div class="eyebrow">${icon('leaf')} PERJALANAN KECIL, MAKNA BESAR</div><h1>Satu kanji,<br><em>selangkah lebih dekat.</em></h1><p class="hero-description">Kenali bentuknya, pahami maknanya, dan temukan serunya belajar bahasa Jepang. Mulai dari satu kanji hari ini.</p><div class="hero-buttons"><a class="primary" href="#flashcard">Mulai belajar ${icon('arrow')}</a><a class="text-button" href="#kanji">Jelajahi kanji ${icon('arrow-up')}</a></div></div><div class="hero-art" aria-hidden="true"><span class="orbit"></span><span class="sun-disc"></span><span class="art-stamp">日<br>本</span><div class="hero-card"><span class="hero-kanji" lang="ja">学</span><span class="hero-card-caption">MANABU · BELAJAR</span></div><span class="art-label" lang="ja">学ぶことは、楽しい。</span><div class="art-caption"><span>${icon('leaf')}</span><div>Pelan-pelan, jadi paham.<small>Setiap langkah itu berarti.</small></div></div></div></section>${stats()}` : heading('KOLEKSI KANJI', 'Kenali setiap karakter.', `${KANJI.length.toLocaleString('id-ID')} kanji dari N5 sampai N1 untuk perjalanan belajarmu. Klik kartu untuk mengenal arti, bacaan, dan contoh penggunaannya.`)}
+    ${home ? '' : handwritingMarkup(icon,KANJI.length)}
     ${home ? '<div class="section-head"><div><div class="section-kicker">BELAJAR DENGAN CARA FAVORITMU</div><h2>Pilih latihanmu.</h2></div></div><section class="practice-hub" aria-label="Pilihan latihan">' : ''}
     ${home ? `<a class="kotoba-home-banner" href="#kotoba"><span lang="ja">言葉</span><div><strong>Kuis Kotoba Minna & JLPT N3</strong><small>Minna Bab 1–50 dan 2.276 kosakata N3 · Latih arti atau bacaan.</small></div>${icon('arrow')}</a>` : ''}
     ${home ? `<a class="kotoba-home-banner henkan-banner" href="#henkan"><span lang="ja">変換</span><div><strong>Kuis Henkan · Kata kerja, sifat & benda</strong><small>Kata kerja: 13 bentuk · Kata sifat: 6 bentuk · Kata benda: 4 bentuk · N5–N3.</small></div>${icon('arrow')}</a>` : ''}
@@ -164,6 +167,7 @@ function renderLibrary(home = false) {
   document.querySelector('#collection').addEventListener('change', e => { filters.collection = e.target.value; currentPage = 1; renderGrid(); });
   document.querySelector('#kanji-search').addEventListener('input', e => { filters.query = e.target.value; currentPage = 1; renderGrid(); });
   renderGrid();
+  if(!home)disposeHandwriting=mountHandwriting(root,KANJI,escape);
 }
 function renderGrid() {
   const result = filterKanji(KANJI, { ...filters, ...progress });
@@ -378,6 +382,7 @@ function route() {
   dokkaiView.dispose();
   particleView.dispose();
   transitivityView.dispose();
+  disposeHandwriting();disposeHandwriting=()=>{};
   clearInterval(quizTimer); quiz = null;
   document.querySelectorAll('[data-nav]').forEach(a => { a.classList.toggle('active', a.dataset.nav === view); a.toggleAttribute('aria-current', a.dataset.nav === view); if (a.dataset.nav === view) a.setAttribute('aria-current','page'); });
   document.querySelector('#breadcrumb-current').textContent = viewNames[view];

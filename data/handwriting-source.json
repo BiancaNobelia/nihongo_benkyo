@@ -1,0 +1,9 @@
+{
+  "sourceUrl": "https://github.com/KanjiVG/kanjivg/releases/download/r20260714/kanjivg-20260714.xml.gz",
+  "sourceSha256": "d4a8e5e11533fe6a5d81a158b2c153964322641d2982c90a919461f3c06dca6b",
+  "generated": "2026-10-20",
+  "count": 2383,
+  "format": "[character, ...base64 strokes]; each stroke has 12 interleaved uint8 x/y points in 0..255",
+  "license": "CC-BY-SA-3.0",
+  "sha256": "b5c04141e858ab1793b84c40cb1668fbbff4d34c509a1393fcb7cc05be9b8fd1"
+}

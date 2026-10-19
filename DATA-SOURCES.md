@@ -1116,3 +1116,21 @@ kata target, dan bacaan agar anotasi lama tidak diterapkan pada kalimat yang
 berubah. Tes memeriksa cakupan seluruh kanji, posisi anotasi, okurigana, dan
 bacaan khusus tanggal/hitungan. Furigana baru ditampilkan setelah menjawab
 atau waktu habis.
+
+## Pencarian kanji dengan tulisan tangan
+
+`data/handwriting-templates.json` berisi adaptasi geometri goresan untuk semua
+2.383 kanji katalog, dari KanjiVG r20260714 oleh Ulrich Apel dan kontributor,
+berlisensi [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Sumber: [KanjiVG](https://kanjivg.tagaini.net/). Setiap goresan disampel menjadi
+12 titik; format, versi, dan checksum dicatat di `data/handwriting-source.json`.
+Bangun ulang dengan `python scripts/build_handwriting.py` menggunakan arsip
+KanjiVG yang checksum-nya sudah dipin di `data/radical-source.json`.
+
+Pencocokan bentuk dan penempatan goresan berjalan dalam Web Worker di browser.
+Urutan serta arah goresan tidak diwajibkan; jumlah goresan hanya menjadi
+pertimbangan tambahan. Hasil adalah 20 kandidat terdekat dari katalog, bukan
+penilaian benar/salah tulisan atau jaminan pengenalan semua variasi tulisan
+tangan. Kandidat tidak dibatasi filter level/koleksi pada pencarian teks.
+Data bentuk baru dimuat saat panel dibuka; tulisan pengguna tidak dikirim
+ke server. Klik kandidat membuka detail kanji dari katalog yang sudah ada.
