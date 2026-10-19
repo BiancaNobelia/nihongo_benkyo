@@ -6,13 +6,13 @@ export function handwritingMarkup(icon,count) {
     <div class="handwriting-body">
       <div class="handwriting-drawing"><div class="handwriting-pad"><canvas width="512" height="512" id="handwriting-canvas" aria-label="Area menulis satu kanji dengan mouse, jari, atau stylus" aria-describedby="handwriting-help">Gunakan pencarian teks di bawah untuk mencari kanji, bacaan, atau arti.</canvas><span class="handwriting-placeholder" aria-hidden="true"><b lang="ja">書</b>Tulis satu kanji di sini</span></div>
         <div class="handwriting-tools"><span id="handwriting-count">0 goresan</span><button type="button" class="secondary" data-handwriting="undo" disabled aria-label="Hapus goresan terakhir">${icon('back')} Urungkan</button><button type="button" class="secondary" data-handwriting="clear" disabled>Bersihkan</button></div>
-        <p id="handwriting-help">Angkat mouse atau jari untuk mengakhiri satu goresan. Urutan goresan boleh berbeda.</p>
+        <p id="handwriting-help">Gambar satu kanji sampai selesai. Urutan goresan boleh berbeda; goresan yang terputus tetap dicocokkan dari bentuknya.</p>
       </div>
       <div class="handwriting-results"><div class="handwriting-results-heading"><div><span class="section-kicker">TEMUKAN KARAKTERNYA</span><h3>Kandidat kanji</h3></div><span class="handwriting-local">${icon('lock')} Di perangkatmu</span></div><p class="handwriting-scope">Mencari di semua ${count.toLocaleString('id-ID')} kanji N5–N1. Klik kandidat untuk melihat arti dan bacaannya.</p>
         <p id="handwriting-status" role="status" aria-live="polite">Mulai menggambar untuk melihat kandidat.</p><div id="handwriting-candidates" class="handwriting-candidates" aria-label="Kandidat hasil tulisan tangan"></div>
         <button type="button" class="secondary handwriting-retry" data-handwriting="retry" hidden>Coba muat lagi</button>
         <p class="handwriting-tip">Belum menemukan yang cocok? Lengkapi bentuknya atau urungkan goresan yang kurang pas.</p>
-        <small class="handwriting-source">Bentuk goresan: <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> · Ulrich Apel & kontributor · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a></small>
+        <small class="handwriting-source">Pola tulisan: <a href="https://github.com/asdfjkl/kanjicanvas" target="_blank" rel="noopener">Kanji Canvas</a> · Dominik Klein & kontributor · <a href="./data/licenses/KanjiCanvas-LICENSE.txt" target="_blank" rel="noopener">MIT</a><br>Bentuk goresan: <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> · Ulrich Apel & kontributor · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a></small>
       </div>
     </div>
   </details>`;
@@ -64,7 +64,7 @@ export function mountHandwriting(root,kanji,escape) {
     if(worker||disposed)return;
     failed=false;retry.hidden=true;status.textContent='Menyiapkan pencarian… Kamu sudah bisa menggambar.';
     try {
-      worker=new Worker(new URL('./handwriting-worker.js?v=20261020-handwriting',import.meta.url),{type:'module'});
+      worker=new Worker(new URL('./handwriting-worker.js?v=20261020-handwriting-accuracy',import.meta.url),{type:'module'});
       loadTimeout=setTimeout(fail,30000);
       worker.onerror=fail;
       worker.onmessage=({data})=>{

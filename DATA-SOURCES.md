@@ -1127,9 +1127,39 @@ Sumber: [KanjiVG](https://kanjivg.tagaini.net/). Setiap goresan disampel menjadi
 Bangun ulang dengan `python scripts/build_handwriting.py` menggunakan arsip
 KanjiVG yang checksum-nya sudah dipin di `data/radical-source.json`.
 
-Pencocokan bentuk dan penempatan goresan berjalan dalam Web Worker di browser.
-Urutan serta arah goresan tidak diwajibkan; jumlah goresan hanya menjadi
-pertimbangan tambahan. Hasil adalah 20 kandidat terdekat dari katalog, bukan
+`data/handwriting-variants.json` menambahkan 2.177 pola tulisan independen dari
+[Kanji Canvas](https://github.com/asdfjkl/kanjicanvas), commit
+`a9214105f156def3b96930e5fcf10b7652b7a1f7`, oleh Dominik Klein dan kontributor.
+Pola tersebut memakai lisensi MIT dengan syarat backlink; teks lisensi lengkap
+ada di `data/licenses/KanjiCanvas-LICENSE.txt`. Pola dinormalisasi dan disampel
+ulang menjadi 12 titik per goresan. Sumber serta checksum ada di
+`data/handwriting-variants-source.json`; bangun ulang dengan
+`python scripts/build_handwriting_variants.py`. Data ini terpisah dari geometri
+KanjiVG yang berlisensi CC BY-SA. Algoritme Kanji Canvas tidak disalin.
+
+Pencocokan berjalan dalam Web Worker di browser. Dua peringkat digabungkan:
+pencocokan penempatan goresan dan pencocokan bentuk berarah yang tidak memakai
+jumlah angkatan pena. Yang kedua tetap mempertimbangkan garis horizontal,
+vertikal, dan diagonal meski goresannya terputus/tersambung. Rasio bentuk juga
+dilonggarkan untuk tulisan lebih lebar/sempit. Urutan serta arah penulisan tidak
+diwajibkan. Varian karakter dideduplikasi sebelum peringkat digabungkan.
+
+Regresi 強 diuji dengan goresan normal, terputus, tersambung, dibalik, serta
+proporsi lebar/sempit. Benchmark tambahan terdiri dari 20 gambar uji kasar buatan
+sendiri × 5 variasi (100 input), terpisah dari pola acuan. Jalankan
+`node scripts/benchmark_handwriting.mjs --compare d50ad37c8bfecd03cbc357f3e41f1007c6456323`
+untuk membandingkan versi awal dan perbaikan. Ini kumpulan uji terbatas, bukan
+estimasi akurasi seluruh tulisan pengguna atau perbandingan terukur dengan SLJFAQ.
+
+Hasil pada kumpulan uji tersebut (20 Oktober 2026):
+
+| Peringkat kanji tujuan | Versi awal | Perbaikan |
+| --- | ---: | ---: |
+| Pertama | 66/100 | 75/100 |
+| Lima teratas | 73/100 | 93/100 |
+| Dua puluh teratas | 73/100 | 95/100 |
+
+Hasil adalah 20 kandidat terdekat dari katalog, bukan
 penilaian benar/salah tulisan atau jaminan pengenalan semua variasi tulisan
 tangan. Kandidat tidak dibatasi filter level/koleksi pada pencarian teks.
 Data bentuk baru dimuat saat panel dibuka; tulisan pengguna tidak dikirim

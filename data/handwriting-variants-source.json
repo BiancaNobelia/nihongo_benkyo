@@ -1,0 +1,10 @@
+{
+  "sourceUrl": "https://raw.githubusercontent.com/asdfjkl/kanjicanvas/a9214105f156def3b96930e5fcf10b7652b7a1f7/docs/resources/javascript/ref-patterns.js",
+  "revision": "a9214105f156def3b96930e5fcf10b7652b7a1f7",
+  "sourceSha256": "e1770a3f32ce18cc1c0eff67c539e663a3e2b0437172bde66abc3336aedf06c7",
+  "count": 2177,
+  "generated": "2026-10-20",
+  "license": "MIT",
+  "format": "[character, ...base64 strokes]; 12 interleaved uint8 x/y points per stroke; bounding-box normalized preserving aspect",
+  "sha256": "761f2fd4cf04138a829e63a42f1b58dcd5a4385fb65387e698fed47ea5fab20e"
+}

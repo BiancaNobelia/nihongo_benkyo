@@ -7,7 +7,10 @@ import {decodeTemplate,prepareTemplates,recognize} from '../handwriting-core.js'
 import {createStrokeInput} from '../handwriting-input.js';
 
 const raw=readFileSync(new URL('../data/handwriting-templates.json',import.meta.url));
-const data=JSON.parse(raw),templates=prepareTemplates(data.templates);
+const data=JSON.parse(raw);
+const variantRaw=readFileSync(new URL('../data/handwriting-variants.json',import.meta.url));
+const variants=JSON.parse(variantRaw),templates=prepareTemplates([...data.templates,...variants.templates]);
+const evaluation=JSON.parse(readFileSync(new URL('./fixtures/handwriting-drawings.json',import.meta.url))).drawings;
 // Independently drawn simplified shapes; not copied from the source templates.
 const drawings={
   一:[[[15,50],[85,50]]],
@@ -36,6 +39,48 @@ test('pinned handwriting geometry covers every catalog kanji, with no missing or
     assert.ok(decoded.strokes.length>0&&decoded.strokes.length<=64);
     for(const stroke of decoded.strokes){assert.equal(stroke.length,12);assert.ok(stroke.flat().every(n=>Number.isInteger(n)&&n>=0&&n<=255));}
   }
+});
+
+test('additional handwriting references have pinned provenance and never remove or duplicate result characters',()=>{
+  const manifest=JSON.parse(readFileSync(new URL('../data/handwriting-variants-source.json',import.meta.url)));
+  assert.equal(createHash('sha256').update(variantRaw).digest('hex'),manifest.sha256);
+  assert.equal(variants.license,'MIT');assert.equal(manifest.count,variants.templates.length);
+  assert.match(manifest.sourceUrl,/a9214105f156def3b96930e5fcf10b7652b7a1f7/);
+  assert.equal(new Set(variants.templates.map(r=>r[0])).size,variants.templates.length);
+  for(const row of variants.templates){
+    assert.ok(KANJI.some(k=>k.char===row[0]));
+    for(const stroke of decodeTemplate(row).strokes)assert.equal(stroke.length,12);
+  }
+  assert.equal(new Set(templates.map(t=>t.char)).size,KANJI.length);
+});
+
+test('reported 強 failure: split/connected strokes, different proportions and reversed order stay in the first three results',()=>{
+  const original=evaluation['強'];
+  const split=original.flatMap(s=>s.slice(1).map((p,i)=>[s[i],p]));
+  const connected=[original.slice(0,3).flat(),...original.slice(3)];
+  for(const strokes of [original,split,connected,split.toReversed().map(s=>s.toReversed()),
+    original.map(s=>s.map(([x,y])=>[x*1.5,y])),original.map(s=>s.map(([x,y])=>[x*.65,y]))]){
+    const results=recognize(strokes,templates);
+    assert.ok(results.slice(0,3).some(r=>r.char==='強'),results.map(r=>r.char).join(''));
+    assert.equal(results.length,20);assert.equal(new Set(results.map(r=>r.char)).size,20);
+  }
+});
+
+test('independent rough handwriting benchmark retains top-five/top-twenty coverage across 100 inputs',()=>{
+  let top5=0,top20=0,count=0;
+  for(const [char,original] of Object.entries(evaluation)){
+    const inputs=[original,original.map(s=>s.map(([x,y])=>[x*1.5,y])),
+      original.map(s=>s.map(([x,y])=>[x*.65,y])),
+      original.flatMap(s=>s.slice(1).map((p,i)=>[s[i],p])),
+      original.map((s,n)=>s.map(([x,y],i)=>[x+Math.sin(i+n)*2,y+Math.cos(i-n)*3]))];
+    for(const strokes of inputs){
+      const index=recognize(strokes,templates).findIndex(r=>r.char===char);
+      count++;if(index>=0){top20++;if(index<5)top5++;}
+    }
+  }
+  assert.equal(count,100);
+  assert.ok(top5>=90,`${top5}/100 top five`);
+  assert.ok(top20>=95,`${top20}/100 top twenty`);
 });
 
 test('hand-drawn shapes find their intended kanji among the first five candidates',()=>{
@@ -70,7 +115,7 @@ test('geometry from every level still matches after small independent handwritin
 test('a split stroke remains searchable, and empty or accidental taps do not produce arbitrary matches',()=>{
   const split=[[[22,20],[22,82]],[[23,21],[80,21]],[[80,21],[80,82]],[[22,81],[80,81]]];
   assert.ok(recognize(split,templates).some(r=>r.char==='口'));
-  for(const invalid of [[],[[]],[[[5,5]]],[[[NaN,4],[Infinity,8]]],null])assert.deepEqual(recognize(invalid,templates),[]);
+  for(const invalid of [[],[[]],[[[5,5]]],[[[1,1]],[[10,10]]],[[[NaN,4],[Infinity,8]]],null])assert.deepEqual(recognize(invalid,templates),[]);
 });
 
 const rect={left:10,top:20,width:256,height:256};
