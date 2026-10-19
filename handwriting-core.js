@@ -130,10 +130,12 @@ export function prepareTemplates(rows) {
 }
 
 export function recognize(strokes,templates,limit=20) {
-  if(!Array.isArray(strokes)||strokes.length>64)return [];
+  if(!Array.isArray(strokes)||strokes.length>128)return [];
   const input=shape(strokes),free=shape(strokes,true);
   if(!input)return [];
-  const strokeResults=templates.map(candidate=>{
+  // Many pen lifts can split a complex character into dozens of fragments.
+  // Use whole-shape matching then, avoiding cubic assignment on 128 strokes.
+  const strokeResults=input.count>64?[]:templates.map(candidate=>{
     let forward=0,backward=0;
     for(const p of input.pixels)forward+=candidate.distance[p];
     for(const p of candidate.pixels)backward+=input.distance[p];

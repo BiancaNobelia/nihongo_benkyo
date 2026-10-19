@@ -1,0 +1,4 @@
+# Pinned upstream assets must keep their original bytes for SHA-256 validation.
+vendor/onnxruntime/** -text
+data/handwriting/dakanji-* -text
+data/licenses/DaKanji-LICENSE.txt -text

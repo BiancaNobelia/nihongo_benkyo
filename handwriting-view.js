@@ -1,4 +1,4 @@
-import {createStrokeInput} from './handwriting-input.js?v=20261020-handwriting';
+import {createStrokeInput} from './handwriting-input.js?v=20261020-handwriting-neural';
 
 export function handwritingMarkup(icon,count) {
   return `<details class="handwriting-search" id="handwriting-search">
@@ -6,13 +6,14 @@ export function handwritingMarkup(icon,count) {
     <div class="handwriting-body">
       <div class="handwriting-drawing"><div class="handwriting-pad"><canvas width="512" height="512" id="handwriting-canvas" aria-label="Area menulis satu kanji dengan mouse, jari, atau stylus" aria-describedby="handwriting-help">Gunakan pencarian teks di bawah untuk mencari kanji, bacaan, atau arti.</canvas><span class="handwriting-placeholder" aria-hidden="true"><b lang="ja">書</b>Tulis satu kanji di sini</span></div>
         <div class="handwriting-tools"><span id="handwriting-count">0 goresan</span><button type="button" class="secondary" data-handwriting="undo" disabled aria-label="Hapus goresan terakhir">${icon('back')} Urungkan</button><button type="button" class="secondary" data-handwriting="clear" disabled>Bersihkan</button></div>
-        <p id="handwriting-help">Gambar satu kanji sampai selesai. Urutan goresan boleh berbeda; goresan yang terputus tetap dicocokkan dari bentuknya.</p>
+        <p id="handwriting-help">Gambar satu kanji sampai selesai. Urutan goresan boleh berbeda. Tulisan kurang rapi dan goresan terputus tetap dicocokkan dari bentuk keseluruhannya.</p>
       </div>
       <div class="handwriting-results"><div class="handwriting-results-heading"><div><span class="section-kicker">TEMUKAN KARAKTERNYA</span><h3>Kandidat kanji</h3></div><span class="handwriting-local">${icon('lock')} Di perangkatmu</span></div><p class="handwriting-scope">Mencari di semua ${count.toLocaleString('id-ID')} kanji N5–N1. Klik kandidat untuk melihat arti dan bacaannya.</p>
+        <p id="handwriting-engine" class="handwriting-scope" role="status"></p>
         <p id="handwriting-status" role="status" aria-live="polite">Mulai menggambar untuk melihat kandidat.</p><div id="handwriting-candidates" class="handwriting-candidates" aria-label="Kandidat hasil tulisan tangan"></div>
         <button type="button" class="secondary handwriting-retry" data-handwriting="retry" hidden>Coba muat lagi</button>
         <p class="handwriting-tip">Belum menemukan yang cocok? Lengkapi bentuknya atau urungkan goresan yang kurang pas.</p>
-        <small class="handwriting-source">Pola tulisan: <a href="https://github.com/asdfjkl/kanjicanvas" target="_blank" rel="noopener">Kanji Canvas</a> · Dominik Klein & kontributor · <a href="./data/licenses/KanjiCanvas-LICENSE.txt" target="_blank" rel="noopener">MIT</a><br>Bentuk goresan: <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> · Ulrich Apel & kontributor · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a></small>
+        <small class="handwriting-source">Pengenalan tulisan: <a href="https://github.com/dariyooo/DaKanji-Single-Kanji-Recognition" target="_blank" rel="noopener">DaKanji</a> · Dariyooo (DaAppLab) · <a href="./data/licenses/DaKanji-LICENSE.txt" target="_blank" rel="noopener">MIT</a><br>Pola tulisan: <a href="https://github.com/asdfjkl/kanjicanvas" target="_blank" rel="noopener">Kanji Canvas</a> · Dominik Klein & kontributor · <a href="./data/licenses/KanjiCanvas-LICENSE.txt" target="_blank" rel="noopener">MIT</a><br>Bentuk goresan: <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> · Ulrich Apel & kontributor · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a></small>
       </div>
     </div>
   </details>`;
@@ -23,6 +24,7 @@ export function mountHandwriting(root,kanji,escape) {
   if(!panel)return ()=>{};
   const canvas=panel.querySelector('canvas'),ctx=canvas.getContext('2d');
   const status=panel.querySelector('#handwriting-status'),candidates=panel.querySelector('#handwriting-candidates');
+  const engineStatus=panel.querySelector('#handwriting-engine');
   const undo=panel.querySelector('[data-handwriting="undo"]'),clear=panel.querySelector('[data-handwriting="clear"]'),retry=panel.querySelector('[data-handwriting="retry"]');
   if(!ctx){status.textContent='Browser ini belum mendukung area gambar. Gunakan pencarian teks di bawah.';canvas.hidden=true;return ()=>{};}
   const cards=new Map(kanji.map(k=>[k.char,k])),events=new AbortController();
@@ -58,17 +60,23 @@ export function mountHandwriting(root,kanji,escape) {
   function fail(){
     if(disposed)return;
     clearTimeout(loadTimeout);invalidate();ready=false;failed=true;worker?.terminate();worker=null;
-    status.textContent='Data pencarian belum bisa dimuat. Coba lagi, atau gunakan pencarian teks di bawah.';retry.hidden=false;
+    status.textContent='Data pencarian belum bisa dimuat. Coba lagi, atau gunakan pencarian teks di bawah.';engineStatus.textContent='';retry.hidden=false;
   }
   function startWorker(){
     if(worker||disposed)return;
     failed=false;retry.hidden=true;status.textContent='Menyiapkan pencarian… Kamu sudah bisa menggambar.';
     try {
-      worker=new Worker(new URL('./handwriting-worker.js?v=20261020-handwriting-accuracy',import.meta.url),{type:'module'});
+      worker=new Worker(new URL('./handwriting-worker.js?v=20261020-handwriting-neural',import.meta.url),{type:'module'});
       loadTimeout=setTimeout(fail,30000);
       worker.onerror=fail;
       worker.onmessage=({data})=>{
         if(disposed)return;
+        if(data.type==='model'){
+          if(data.reason)console.warn('Advanced handwriting recognition unavailable:',data.reason);
+          retry.hidden=data.state!=='unavailable';
+          engineStatus.textContent=data.state==='ready'?'Pengenalan lanjutan siap.':data.state==='loading'?'Memuat pengenalan lanjutan (±16 MB saat pertama kali). Pencarian dasar sudah tersedia.':'Pengenalan lanjutan belum tersedia. Pencarian dasar tetap aktif.';
+          return;
+        }
         if(data.type==='ready'){clearTimeout(loadTimeout);ready=true;changed();return;}
         if(data.type==='error'){if(data.id===undefined||data.id===request)fail();return;}
         if(data.type!=='results'||data.id!==request||input.activeId!==undefined)return;
@@ -83,7 +91,7 @@ export function mountHandwriting(root,kanji,escape) {
   listen(canvas,'pointerdown',event=>{
     if(input.start(event,canvas.getBoundingClientRect())){
       event.preventDefault();invalidate();status.textContent='Lanjutkan tulisanmu…';canvas.setPointerCapture(event.pointerId);
-    }else if(input.strokes.length>=64)status.textContent='Kotak sudah penuh. Bersihkan untuk menulis kanji berikutnya.';
+    }else if(input.strokes.length>=128)status.textContent='Kotak sudah penuh. Bersihkan untuk menulis kanji berikutnya.';
   });
   listen(canvas,'pointermove',event=>{if(input.move(event,canvas.getBoundingClientRect()))event.preventDefault();});
   listen(canvas,'pointerup',event=>{
@@ -93,7 +101,8 @@ export function mountHandwriting(root,kanji,escape) {
   });
   listen(canvas,'pointercancel',event=>input.cancel(event));
   listen(canvas,'lostpointercapture',event=>input.cancel(event));
-  listen(undo,'click',()=>input.undo());listen(clear,'click',()=>input.clear());listen(retry,'click',startWorker);
+  listen(undo,'click',()=>input.undo());listen(clear,'click',()=>input.clear());
+  listen(retry,'click',()=>{invalidate();worker?.terminate();worker=null;ready=false;engineStatus.textContent='';startWorker();});
   const resize=new ResizeObserver(draw);resize.observe(canvas);
   const theme=new MutationObserver(draw);theme.observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
   return ()=>{disposed=true;clearTimeout(debounce);clearTimeout(loadTimeout);events.abort();resize.disconnect();theme.disconnect();worker?.terminate();};

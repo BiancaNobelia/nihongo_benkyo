@@ -1137,30 +1137,58 @@ ulang menjadi 12 titik per goresan. Sumber serta checksum ada di
 `python scripts/build_handwriting_variants.py`. Data ini terpisah dari geometri
 KanjiVG yang berlisensi CC BY-SA. Algoritme Kanji Canvas tidak disalin.
 
-Pencocokan berjalan dalam Web Worker di browser. Dua peringkat digabungkan:
-pencocokan penempatan goresan dan pencocokan bentuk berarah yang tidak memakai
-jumlah angkatan pena. Yang kedua tetap mempertimbangkan garis horizontal,
-vertikal, dan diagonal meski goresannya terputus/tersambung. Rasio bentuk juga
-dilonggarkan untuk tulisan lebih lebar/sempit. Urutan serta arah penulisan tidak
-diwajibkan. Varian karakter dideduplikasi sebelum peringkat digabungkan.
+Pengenalan utama memakai [DaKanji v2.0](https://github.com/dariyooo/DaKanji-Single-Kanji-Recognition),
+model CNN int8 ONNX 2,23 MB berlisensi MIT, dengan 6.507 label karakter.
+Character recognition powered by machine learning from Dariyooo (DaAppLab).
+Inferensi memakai [ONNX Runtime Web 1.30.0](https://onnxruntime.ai/) (MIT), WASM
+satu thread di Web Worker. Seluruh aset disimpan di situs ini; tidak ada API
+pengenalan eksternal. Model beserta runtime memerlukan unduhan awal sekitar
+16,6 MB, hanya setelah panel tulisan tangan dibuka. Cache HTTP dapat dipakai
+pada kunjungan berikutnya. Data geometri dasar tetap tersedia selama pemuatan
+model, saat unduhan gagal, atau jika browser tidak mendukung runtime.
 
-Regresi 強 diuji dengan goresan normal, terputus, tersambung, dibalik, serta
-proporsi lebar/sempit. Benchmark tambahan terdiri dari 20 gambar uji kasar buatan
-sendiri × 5 variasi (100 input), terpisah dari pola acuan. Jalankan
-`node scripts/benchmark_handwriting.mjs --compare d50ad37c8bfecd03cbc357f3e41f1007c6456323`
-untuk membandingkan versi awal dan perbaikan. Ini kumpulan uji terbatas, bukan
-estimasi akurasi seluruh tulisan pengguna atau perbandingan terukur dengan SLJFAQ.
+Model, label, runtime, lisensi MIT, dan pemberitahuan pihak ketiga dipin dengan
+SHA-256 di `data/handwriting-neural-source.json`. Pulihkan lewat
+`python scripts/build_handwriting_neural.py`. Berkas JS upstream tidak diubah
+isinya; ekstensi `.mjs` disajikan sebagai `.js` untuk kompatibilitas MIME server
+statis Windows. `.gitattributes` mempertahankan byte aset saat checkout.
+
+Gambar disusun dari koordinat goresan menjadi raster antialias 64 × 64 dengan
+padding, sehingga tidak bergantung tema maupun resolusi layar. Prediksi dua
+rendering (proporsi asli dan proporsi sedikit dilonggarkan) dirata-ratakan.
+Garis agak lebih tebal pada rendering kedua membantu celah kecil; garis yang
+terpisah tidak disambungkan secara sembarang. Label model disaring ke katalog
+2.383 kanji; varian JIS 剥/剝, 填/塡, 頬/頰, dan 叱/𠮟 dipadankan dengan kode
+karakter katalog. Prediksi nol tidak ditampilkan sebagai kandidat acak.
+
+Pencocokan geometri menjadi cadangan dan melengkapi kandidat model. Dua
+peringkat geometri digabungkan: penempatan goresan dan bentuk berarah tanpa
+penalti jumlah angkatan pena. Untuk lebih dari 64 fragmen, hanya pencocokan
+bentuk yang digunakan agar perhitungan tetap ringan. Input menerima hingga
+128 goresan. Urutan dan arah penulisan tidak diwajibkan; hasil dideduplikasi.
+Antrian inferensi menyimpan gambar terbaru dan membuang hasil yang sudah usang.
+
+Evaluasi terpisah dari pola acuan: 24 gambar kasar buatan sendiri, termasuk 強,
+曜, 議, 識, 機, dan 夢, masing-masing dengan tujuh variasi (168 input): normal,
+lebar, sempit, angkatan pena tambahan, titik tidak rata, celah 16% di tengah
+segmen, dan tremor. Jalankan
+`node scripts/benchmark_handwriting.mjs --compare c46aac3`.
+Baseline memuat kedua dataset geometri yang benar-benar digunakan versi lama.
+Ini kumpulan uji terbatas, bukan estimasi akurasi semua tulisan pengguna atau
+perbandingan terukur dengan SLJFAQ.
 
 Hasil pada kumpulan uji tersebut (20 Oktober 2026):
 
-| Peringkat kanji tujuan | Versi awal | Perbaikan |
+| Peringkat kanji tujuan | Versi sebelumnya (c46aac3) | Model + geometri |
 | --- | ---: | ---: |
-| Pertama | 66/100 | 75/100 |
-| Lima teratas | 73/100 | 93/100 |
-| Dua puluh teratas | 73/100 | 95/100 |
+| Pertama | 127/168 | 157/168 |
+| Lima teratas | 157/168 | 168/168 |
+| Dua puluh teratas | 161/168 | 168/168 |
+| Lima teratas, subset dengan celah nyata | 20/24 | 24/24 |
 
-Hasil adalah 20 kandidat terdekat dari katalog, bukan
-penilaian benar/salah tulisan atau jaminan pengenalan semua variasi tulisan
-tangan. Kandidat tidak dibatasi filter level/koleksi pada pencarian teks.
-Data bentuk baru dimuat saat panel dibuka; tulisan pengguna tidak dikirim
-ke server. Klik kandidat membuka detail kanji dari katalog yang sudah ada.
+Tes otomatis menjalankan berkas model dan WASM yang sama dengan situs, menguji
+cakupan label katalog, checksum, input kosong, 90 fragmen untuk 強, fallback
+saat error, dan hasil usang dari inferensi asinkron. Hasil berupa 20 kandidat
+terdekat, bukan penilaian benar/salah tulisan atau jaminan pengenalan semua
+variasi tulisan. Kandidat tidak dibatasi filter level pada pencarian teks.
+Tulisan pengguna tidak dikirim ke server. Klik kandidat membuka detail katalog.

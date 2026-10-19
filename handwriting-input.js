@@ -7,7 +7,7 @@ export function createStrokeInput({onChange=()=>{},onPreview=()=>{}}={}) {
       Math.max(0,Math.min(256,(event.clientY-rect.top)*256/rect.height))];
   }
   function start(event,rect) {
-    if(active || event.isPrimary===false || event.button>0 || !rect.width || !rect.height || strokes.length>=64)return false;
+    if(active || event.isPrimary===false || event.button>0 || !rect.width || !rect.height || strokes.length>=128)return false;
     active={id:event.pointerId,points:[point(event,rect)]};onPreview();return true;
   }
   function move(event,rect) {

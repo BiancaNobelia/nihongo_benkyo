@@ -1,0 +1,53 @@
+"""Restore pinned, self-hosted recognition assets (Python standard library only)."""
+import hashlib
+import io
+import json
+from pathlib import Path
+import tarfile
+import urllib.request
+import zipfile
+
+ROOT = Path(__file__).resolve().parents[1]
+MANIFEST = ROOT / 'data/handwriting-neural-source.json'
+
+
+def checked(data, expected):
+    if hashlib.sha256(data).hexdigest() != expected:
+        raise ValueError('Recognition asset checksum mismatch')
+    return data
+
+
+def main():
+    manifest = json.loads(MANIFEST.read_text('utf-8'))
+    cache = ROOT / '.cache/handwriting-neural'
+    cache.mkdir(parents=True, exist_ok=True)
+    for asset in manifest['assets']:
+        # Avoid downloading the full npm package when all vendored files match.
+        if all((ROOT / f['path']).is_file() and hashlib.sha256((ROOT / f['path']).read_bytes()).hexdigest() == f['sha256'] for f in asset['files']):
+            continue
+        cached = cache / asset['sha256']
+        if not cached.exists():
+            request = urllib.request.Request(asset['url'], headers={'User-Agent': 'Nihongo-Benkyo-assets'})
+            with urllib.request.urlopen(request, timeout=90) as response:
+                data = checked(response.read(), asset['sha256'])
+            cached.write_bytes(data)
+        data = checked(cached.read_bytes(), asset['sha256'])
+        for entry in asset['files']:
+            if entry['member'] is None:
+                content = data
+            elif asset['url'].endswith('.zip'):
+                with zipfile.ZipFile(io.BytesIO(data)) as archive:
+                    content = archive.read(entry['member'])
+            else:
+                with tarfile.open(fileobj=io.BytesIO(data), mode='r:gz') as archive:
+                    content = archive.extractfile(entry['member']).read()
+            destination = (ROOT / entry['path']).resolve()
+            if not destination.is_relative_to(ROOT):
+                raise ValueError('Invalid asset destination')
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(checked(content, entry['sha256']))
+    print('Verified DaKanji v2.0 and ONNX Runtime Web 1.30.0 assets.')
+
+
+if __name__ == '__main__':
+    main()

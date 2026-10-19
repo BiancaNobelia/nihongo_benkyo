@@ -1,11 +1,15 @@
-import {prepareTemplates,recognize} from './handwriting-core.js?v=20261020-handwriting-accuracy';
+import {prepareTemplates,recognize} from './handwriting-core.js?v=20261020-handwriting-neural';
+import {createHybridRecognizer,createRecognitionQueue} from './handwriting-engine.js?v=20261020-handwriting-neural';
 
 let templates;
+const hybrid=createHybridRecognizer({geometric:strokes=>recognize(strokes,templates),onUnavailable:()=>self.postMessage({type:'model',state:'unavailable'})});
+const queue=createRecognitionQueue({
+  recognize:strokes=>hybrid.recognize(strokes),
+  publish:message=>self.postMessage(message),
+  onError:id=>self.postMessage({type:'error',id})
+});
 self.onmessage=({data})=>{
-  if(data.type==='recognize' && templates){
-    try {self.postMessage({type:'results',id:data.id,results:recognize(data.strokes,templates)});}
-    catch {self.postMessage({type:'error',id:data.id});}
-  }
+  if(data.type==='recognize'&&templates)queue.submit(data);
 };
 
 try {
@@ -18,6 +22,15 @@ try {
   }));
   templates=prepareTemplates(datasets.flat());
   self.postMessage({type:'ready',count:new Set(templates.map(t=>t.char)).size});
+  // The first search stays usable while the larger optional engine downloads.
+  // Loading or inference failure must never disable the geometric fallback.
+  self.postMessage({type:'model',state:'loading'});
+  try{
+    const {createNeuralRecognizer}=await import('./handwriting-neural.js?v=20261020-handwriting-neural');
+    hybrid.setModel(await createNeuralRecognizer(new Set(templates.map(t=>t.char))));
+    self.postMessage({type:'model',state:'ready'});
+    queue.refresh();
+  }catch(error){self.postMessage({type:'model',state:'unavailable',reason:String(error.message||error)});}
 } catch {
   self.postMessage({type:'error'});
 }

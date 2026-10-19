@@ -1,10 +1,21 @@
 # Nihongo Benkyo
 
 Website belajar kanji berbahasa Indonesia dengan desain responsif, dibuat
-menggunakan HTML, CSS, dan JavaScript tanpa dependensi aplikasi.
+menggunakan HTML, CSS, dan JavaScript. Pencarian tulisan tangan memakai model
+DaKanji dan ONNX Runtime Web yang disimpan bersama situs.
 
 ## Fitur
 
+- Pencarian tulisan tangan di Jelajahi Kanji mengenali bentuk secara utuh dengan
+  DaKanji v2, dibantu pencocokan geometri KanjiVG/Kanji Canvas. Mendukung mouse,
+  jari, stylus, dan hingga 128 goresan terpisah. Model dimuat saat panel dibuka;
+  pencarian dasar tetap bekerja selama pemuatan atau jika model gagal. Gambar
+  diproses di perangkat. Klik kandidat untuk melihat arti dan bacaannya.
+  Character recognition powered by machine learning from Dariyooo (DaAppLab).
+- Aset pengenalan dipin beserta lisensinya di `data/handwriting-neural-source.json`.
+  Pulihkan dengan `python scripts/build_handwriting_neural.py`; tidak memerlukan
+  instalasi paket untuk menjalankan situs atau tes. Evaluasi model WASM dan
+  perbandingan versi sebelumnya: `node scripts/benchmark_handwriting.mjs --compare c46aac3`.
 - Kuis Kanji → Arti baru menampilkan onyomi/kunyomi di bawah soal setelah
   menjawab atau waktu habis, sekaligus mengungkap kanji serta bacaan pada
   semua pilihan. Arah Arti → Kanji menampilkan arti dan contoh bacaan setiap
