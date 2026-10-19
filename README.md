@@ -6,6 +6,11 @@ DaKanji dan ONNX Runtime Web yang disimpan bersama situs.
 
 ## Fitur
 
+- Kolom pencarian kanji menerima romaji onyomi, kunyomi, dan bacaan contoh
+  kata, misalnya `tsuyoi`, `mizu`, `gaku`, dan `gakusei`. Mendukung ejaan umum
+  seperti `shi/si`, `chi/ti`, `tsu/tu`, serta `kyou/kyō/kyoo`. Bacaan yang
+  cocok persis muncul lebih dahulu; filter level dan koleksi tetap berlaku.
+  Pencocokan lokal tanpa model tambahan. Validasi: `node --test tests/kanji-search.test.mjs tests/core.test.mjs`.
 - Pencarian tulisan tangan di Jelajahi Kanji mengenali bentuk secara utuh dengan
   DaKanji v2, dibantu pencocokan geometri KanjiVG/Kanji Canvas. Mendukung mouse,
   jari, stylus, dan hingga 128 goresan terpisah. Model dimuat saat panel dibuka;

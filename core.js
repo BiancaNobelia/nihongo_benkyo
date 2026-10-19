@@ -1,4 +1,5 @@
 import { wordReadingDistractors } from './word-reading-options.js?v=20261015-jidoushi-tadoushi';
+import { createKanjiSearch } from './kanji-search.js?v=20261020-romaji-search';
 
 export function shuffle(items, random = Math.random) {
   const result = [...items];
@@ -9,12 +10,14 @@ export function shuffle(items, random = Math.random) {
   return result;
 }
 export function filterKanji(data, { query = '', level = 'all', collection = 'all', known = [], saved = [] } = {}) {
-  const search = query.trim().toLocaleLowerCase('id');
-  return data.filter(k => (level === 'all' || k.level === level)
+  const score = createKanjiSearch(query);
+  const eligible = data.filter(k => (level === 'all' || k.level === level)
     && (collection !== 'saved' || saved.includes(k.char))
     && (collection !== 'known' || known.includes(k.char))
-    && (collection !== 'new' || !known.includes(k.char))
-    && (!search || [k.char, k.meaning, ...(k.meaningsEn || []), ...k.on, ...k.kun, ...k.kun.map(r => r.replaceAll('.', '')), k.example?.word, k.example?.reading, k.example?.meaning].join(' ').toLocaleLowerCase('id').includes(search)));
+    && (collection !== 'new' || !known.includes(k.char)));
+  if(!query.trim())return eligible;
+  return eligible.map(card=>({card,score:score(card)})).filter(result=>result.score>0)
+    .sort((a,b)=>b.score-a.score).map(result=>result.card);
 }
 export function eligibleQuizCards(pool, mode) {
   return pool.filter(k => mode !== 'reading' || (k.example?.word && k.example?.reading));
