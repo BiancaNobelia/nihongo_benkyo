@@ -1,0 +1,31 @@
+.stroke-order { margin:24px 0; padding:20px; background:var(--surface-soft); border:1px solid var(--line); border-radius:16px; }
+.stroke-order-heading { display:flex; align-items:baseline; flex-wrap:wrap; justify-content:space-between; gap:8px; margin-bottom:16px; }
+.stroke-order-heading h3 { margin:0; font-size:19px; }
+.stroke-order-heading>span { color:var(--muted); font-size:13px; }
+.stroke-order-body { display:grid; grid-template-columns:minmax(0,220px) minmax(0,1fr); gap:20px; align-items:start; }
+.stroke-stage { border:1px solid var(--line-strong); border-radius:14px; background:var(--surface); overflow:hidden; aspect-ratio:1; }
+.stroke-diagram { display:block; width:100%; height:100%; }
+.stroke-guide { stroke:var(--line); stroke-width:.5; stroke-dasharray:2 2; fill:none; }
+.stroke-ghost,.stroke-ink { fill:none; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+.stroke-ghost { stroke:var(--muted); opacity:.18; }
+.stroke-ink { stroke:var(--ink); }
+.stroke-ink path { stroke-dasharray:1; stroke-dashoffset:0; }
+.stroke-ink .is-current { stroke:var(--accent); }
+.stroke-diagram [hidden] { display:none; }
+.stroke-start { fill:var(--teal); stroke:var(--surface); stroke-width:.65; }
+.stroke-status { margin:0 0 8px; font-size:17px; font-weight:700; color:var(--accent); }
+.stroke-help { margin:0 0 14px; font-size:13px; line-height:1.7; color:var(--muted); }
+.stroke-controls { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0; }
+.stroke-controls button { min-height:44px; padding:9px 11px; font-size:13px; }
+.stroke-steps { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+.stroke-steps button { width:38px; min-height:38px; border:1px solid var(--line-strong); border-radius:8px; background:var(--surface); color:var(--ink); font-weight:600; }
+.stroke-steps button[aria-current] { background:var(--accent); border-color:var(--accent); color:white; }
+.stroke-credit { margin:18px 0 0; font-size:11px; line-height:1.7; color:var(--muted); }
+.stroke-credit a { text-decoration:underline; text-underline-offset:2px; }
+@media(max-width:580px) {
+  .stroke-order { padding:16px; }
+  .stroke-order-body { grid-template-columns:1fr; }
+  .stroke-stage { width:min(100%,250px); justify-self:center; }
+  .stroke-controls button { flex:1; }
+  .stroke-steps button { width:42px; min-height:44px; }
+}

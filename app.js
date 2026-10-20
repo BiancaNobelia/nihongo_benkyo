@@ -1,4 +1,5 @@
 import {handwritingMarkup,mountHandwriting} from './handwriting-view.js?v=20261020-handwriting-cache';
+import {strokeOrderMarkup,mountStrokeOrder} from './stroke-order-view.js?v=20261021-stroke-order';
 import {createTransitivityView} from './transitivity-view.js?v=20261015-jidoushi-tadoushi';
 import {TRANSITIVITY_PAIRS,TRANSITIVITY_ENTRIES} from './transitivity-data.js?v=20261015-jidoushi-tadoushi';
 import {PARTICLE_ENTRIES,PARTICLE_TOPICS} from './particle-data.js?v=20261015-jidoushi-tadoushi';
@@ -82,6 +83,7 @@ let readingHistory = {};
 try { readingHistory = cleanReadingHistory(JSON.parse(localStorage.getItem(READING_HISTORY_KEY)), practiceBanks['jlpt-reading']); } catch { /* Remember in memory if browser storage is unavailable. */ }
 let view = '';
 let disposeHandwriting=()=>{};
+let disposeStrokeOrder=()=>{};
 let filters = { level:'all', query:'', collection:'all' };
 const PAGE_SIZE = 24;
 let currentPage = 1;
@@ -182,13 +184,14 @@ function renderGrid() {
   document.querySelector('#library-bottom').innerHTML = `<span role="status">Menampilkan ${result.length ? start+1 : 0}–${Math.min(start+pageSize, result.length)} dari ${result.length.toLocaleString('id-ID')} kanji</span>${paging}`;
   document.querySelector('#page-select')?.addEventListener('change', e => { currentPage = Number(e.target.value); renderGrid(); document.querySelector('#page-select')?.focus({preventScroll:true}); });
 }
-function openModal(html) { modalContent.innerHTML = html; modalContent.dataset.char = ''; if (!modal.open) modal.showModal(); }
+function openModal(html) { disposeStrokeOrder();disposeStrokeOrder=()=>{}; modalContent.innerHTML = html; modalContent.dataset.char = ''; if (!modal.open) modal.showModal(); modal.scrollTop=0; }
 function detail(char, record = true) {
   const k = KANJI.find(k => k.char === char); if (!k) return;
   const related = groupsForCharacter(SIMILAR_GROUPS, char);
   const families = familiesForCharacter(RADICAL_FAMILIES,char);
   if (record) activity();
   openModal(`<div class="detail-hero"><span class="detail-glyph" lang="ja">${k.char}</span><h2 id="modal-title">${escape(k.meaning)}</h2><div class="detail-meta">${k.level} · ${levelNames[k.level]} <span class="footer-separator">/</span> ${k.strokes} goresan</div>${k.meaningsEn ? `<p class="source-gloss" lang="en">${escape(k.meaningsEn.join('; '))}</p>` : ''}</div>
+    ${strokeOrderMarkup(k)}
     <div class="reading-grid"><div><small>ONYOMI · BACAAN ON</small><p lang="ja">${escape(k.on.join('、') || '—')}</p></div><div><small>KUNYOMI · BACAAN KUN</small><p lang="ja">${escape(k.kun.join('、') || '—')}</p></div></div>
     <p class="reading-note">Titik memisahkan bacaan kanji dan akhiran hiragana (okurigana).</p>
     <div class="example-box"><span class="example-title">TEMUKAN DALAM KATA</span>${k.example ? `<ruby lang="ja">${escape(k.example.word)}<rt>${escape(k.example.reading)}</rt></ruby><p>${escape(k.example.meaning)}</p>${k.example.meaningEn ? `<small class="source-gloss" lang="en">${escape(k.example.meaningEn)}</small>` : ''}` : '<p>Contoh kosakata belum tersedia untuk karakter ini. Bacaan on dan kun tetap dapat dipelajari.</p>'}</div>
@@ -197,6 +200,7 @@ function detail(char, record = true) {
     ${families.length ? `<div class="similar-related"><h3>Keluarga radikal & komponen</h3>${families.map(f => `<a href="#mirip/${f.id}" class="radical-related-link"><span lang="ja">${f.symbol}</span><span>${escape(f.title)}<small>${f.members.length} kanji dalam keluarga</small></span>${icon('arrow')}</a>`).join('')}</div>` : ''}
     <div class="modal-actions"><button class="secondary" data-save="${k.char}">${icon('bookmark')} ${progress.saved.includes(char) ? 'Tersimpan' : 'Simpan kanji'}</button><button class="primary" data-known="${k.char}">${icon('check')} ${progress.known.includes(char) ? 'Sudah dikuasai' : 'Tandai dikuasai'}</button></div>`);
   modalContent.dataset.char = char;
+  disposeStrokeOrder=mountStrokeOrder(modalContent,k,escape);
 }
 function levelOptions(selected = 'all', all = true) {
   return `${all ? '<option value="all">Semua level</option>' : ''}${levels.map(l => `<option value="${l}" ${l === selected ? 'selected' : ''}>${l} · ${levelNames[l]} (${KANJI.filter(k => k.level === l).length})</option>`).join('')}`;
@@ -452,6 +456,7 @@ document.addEventListener('click', e => {
   if (action === 'sources') openModal(`<div class="prose"><div class="section-kicker">MATERI YANG KITA PELAJARI</div><h2 id="modal-title">Tentang koleksi kanji</h2><p>Koleksi mencakup seluruh ${KANJI.length.toLocaleString('id-ID')} kanji dalam snapshot OpenJLPT yang digunakan, dari N5 sampai N1. Pembagian level mengikuti daftar komunitas Jonathan Waller dan tambahan joyo dari OpenJLPT, bukan daftar resmi JLPT. Seluruh arti Indonesia dan contoh kata ditinjau ulang secara editorial oleh AI pada 13 Oktober 2026 agar lebih jelas dan sesuai konteks. Arti pada kartu diringkas untuk belajar; arti Inggris tersedia sebagai pembanding. Rincian tinjauan dan rujukan kamus tersedia dalam catatan data.</p><p>Bacaan dan jumlah goresan bersumber dari <a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project" target="_blank" rel="noopener">KANJIDIC2</a>, hak cipta James William Breen dan Electronic Dictionary Research and Development Group, melalui <a href="https://github.com/evanclan/OpenJLPT" target="_blank" rel="noopener">OpenJLPT</a>. Contoh kata berasal dari JMdict dan daftar Jonathan Waller melalui OpenJLPT serta <a href="https://kanjiapi.dev/" target="_blank" rel="noopener">kanjiapi.dev</a>.</p><p>Data adaptasi dalam koleksi ini tersedia dengan <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Lihat <a href="https://www.edrdg.org/edrdg/licence.html" target="_blank" rel="noopener">ketentuan sumber</a> dan <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">catatan data</a>.</p><p>Keluarga radikal dan pembahasan bentuk kanji pada kuis menggunakan label komponen dari <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> oleh Ulrich Apel dan kontributor. Ekstrak komponen ini memakai <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>. Pengelompokan dan penjelasan Indonesia ditambahkan untuk membantu belajar.</p><p>Materi tersedia langsung di website. Progres dan simpanan disimpan di browser ini, tanpa akun.</p></div>`);
 });
 modal.addEventListener('click', e => { if (e.target === modal) { const box = modal.getBoundingClientRect(); if (e.clientX < box.left || e.clientX > box.right || e.clientY < box.top || e.clientY > box.bottom) modal.close(); } });
+modal.addEventListener('close',()=>{disposeStrokeOrder();disposeStrokeOrder=()=>{};});
 window.addEventListener('hashchange', route);
 window.addEventListener('storage', e => { if (e.key === KEY) { try { progress = cleanProgress(JSON.parse(e.newValue), KANJI); if (view === 'progres') renderProgress(); else if (view === 'beranda' || view === 'kanji') renderLibrary(view === 'beranda'); } catch { /* Keep the current valid session. */ } } });
 window.addEventListener('storage', e => {

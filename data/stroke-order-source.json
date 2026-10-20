@@ -1,0 +1,13 @@
+{
+  "sourceUrl": "https://github.com/KanjiVG/kanjivg/releases/download/r20260714/kanjivg-20260714.xml.gz",
+  "sourceSha256": "d4a8e5e11533fe6a5d81a158b2c153964322641d2982c90a919461f3c06dca6b",
+  "generated": "2026-10-21",
+  "count": 253,
+  "levels": {
+    "N5": 84,
+    "N4": 169
+  },
+  "format": "Unmodified SVG path d strings in KanjiVG stroke order; 109 × 109 viewBox",
+  "license": "CC-BY-SA-3.0",
+  "sha256": "4ada7f5ea9a38adc66f9e1cb74553b086e2789bb4eef90cf45fac7627364d9e7"
+}

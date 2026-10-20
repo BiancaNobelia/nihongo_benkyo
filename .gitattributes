@@ -2,3 +2,4 @@
 vendor/onnxruntime/** -text
 data/handwriting/dakanji-* -text
 data/licenses/DaKanji-LICENSE.txt -text
+data/stroke-order.json text eol=lf

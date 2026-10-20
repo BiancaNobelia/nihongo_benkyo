@@ -6,6 +6,14 @@ DaKanji dan ONNX Runtime Web yang disimpan bersama situs.
 
 ## Fitur
 
+- Detail seluruh 253 kanji N5–N4 (84 N5, 169 N4) menampilkan cara menulis:
+  animasi goresan, Putar/Jeda, langkah sebelumnya/berikutnya, ulang dari awal,
+  dan pilihan nomor goresan. Titik hijau menandai awal goresan aktif.
+  Data SVG KanjiVG dimuat hanya saat detail N5/N4 dibuka, terpisah dari model
+  pencarian tulisan tangan. Animasi berhenti ketika dialog ditutup dan mengikuti
+  preferensi reduced motion. Data N3–N1 tidak disertakan.
+  Bangun data: `python scripts/build_stroke_order.py`.
+  Validasi: `node --test tests/stroke-order.test.mjs`.
 - Kolom pencarian kanji menerima romaji onyomi, kunyomi, dan bacaan contoh
   kata, misalnya `tsuyoi`, `mizu`, `gaku`, dan `gakusei`. Mendukung ejaan umum
   seperti `shi/si`, `chi/ti`, `tsu/tu`, serta `kyou/kyō/kyoo`. Bacaan yang

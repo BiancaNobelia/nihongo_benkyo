@@ -1117,6 +1117,29 @@ berubah. Tes memeriksa cakupan seluruh kanji, posisi anotasi, okurigana, dan
 bacaan khusus tanggal/hitungan. Furigana baru ditampilkan setelah menjawab
 atau waktu habis.
 
+## Urutan goresan N5 dan N4
+
+`data/stroke-order.json` memuat seluruh 84 kanji N5 dan 169 kanji N4 dalam
+katalog aplikasi. Sumbernya adalah KanjiVG r20260714 oleh Ulrich Apel dan
+kontributor, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+Menurut [dokumentasi format KanjiVG](https://kanjivg.tagaini.net/svg-format.html),
+urutan path adalah urutan goresan. Ekstraksi mempertahankan string SVG `d`
+serta arah dan urutannya tanpa mengubah koordinat. ID harus berurutan dari
+`s1` hingga `sN`; jumlahnya diperiksa terhadap jumlah goresan katalog.
+
+Bangun dengan `python scripts/build_stroke_order.py` memakai arsip yang dipin
+di `data/radical-source.json`. Metadata dan checksum hasil ada di
+`data/stroke-order-source.json`; atribusi dan perubahan dijelaskan dalam
+`data/licenses/KanjiVG-NOTICE.md`. UI menambahkan grid, warna, titik awal,
+animasi dan tombol langkah. Pembagian N5/N4 mengikuti katalog komunitas yang
+dipakai situs, bukan daftar resmi JLPT.
+
+File 169 KB hanya dimuat saat detail N5/N4 dibuka dan digunakan kembali selama
+sesi halaman. Ini tidak memerlukan model pengenalan tulisan tangan. Pemutaran
+dimulai atas permintaan pengguna dan berhenti saat dialog ditutup/diganti.
+Preferensi reduced motion menonaktifkan gerakan menggambar, sambil tetap
+menampilkan langkahnya. Tes: `node --test tests/stroke-order.test.mjs`.
+
 ## Pencarian kanji dengan tulisan tangan
 
 `data/handwriting-templates.json` berisi adaptasi geometri goresan untuk semua

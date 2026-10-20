@@ -41,3 +41,13 @@ for local shape matching. All 2,383 catalog characters are covered. This
 adapted geometry remains available under CC BY-SA 3.0, with source and output
 checksums in `data/handwriting-source.json`. The recognition and UI code are
 original implementation, separate from the licensed geometry.
+
+`data/stroke-order.json` contains the unmodified SVG path strings for the 253
+N5/N4 catalog characters, extracted on 21 October 2026 using
+`scripts/build_stroke_order.py`. Paths retain their original drawing direction
+and order, checked against consecutive KanjiVG stroke IDs. Component grouping
+and other XML metadata are omitted. The UI adds grid lines, colors, a starting
+point, animation, step controls and Indonesian labels. This extracted geometry
+remains CC BY-SA 3.0; provenance and checksums are in
+`data/stroke-order-source.json`. The UI and playback code are separate original
+implementation.
