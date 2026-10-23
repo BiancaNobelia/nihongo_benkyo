@@ -7,6 +7,7 @@ import {KANJI} from '../kanji-data.js';
 import {kanjiExamples} from '../kanji-examples.js';
 
 const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const originRecords=JSON.parse(readFileSync(new URL('../data/kanji-origins.json',import.meta.url))).entries;
 const records=JSON.parse(readFileSync(new URL('../data/kanji-sentences.json',import.meta.url))).entries;
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
 
@@ -45,11 +46,11 @@ test('context sources decode kanji links, retry loading, and ignore completion a
   let retry,resolvePending,loads=0;
   const panel={innerHTML:'',className:'',querySelector(){return {addEventListener(event,handler){retry=handler;}};}};
   const root={innerHTML:'',querySelector(){return panel;}};
-  const view=createCreditsView({root,escape,kanji:KANJI,load(){loads++;return loads===1?Promise.reject(new Error('offline')):Promise.resolve(records);}});
+  const view=createCreditsView({root,escape,kanji:KANJI,loadOrigins:async()=>originRecords,load(){loads++;return loads===1?Promise.reject(new Error('offline')):Promise.resolve(records);}});
   view.render('kanji-%E5%AD%A6');await flush();
   assert.match(panel.innerHTML,/Coba lagi/);
   await retry();assert.match(panel.innerHTML,/Sumber contoh kalimat/);
-  const pending=createCreditsView({root,escape,kanji:KANJI,load:()=>new Promise(resolve=>resolvePending=resolve)});
+  const pending=createCreditsView({root,escape,kanji:KANJI,loadOrigins:async()=>originRecords,load:()=>new Promise(resolve=>resolvePending=resolve)});
   pending.render('kanji-学');pending.dispose();
   panel.innerHTML='new page';resolvePending(records);await flush();
   assert.equal(panel.innerHTML,'new page');

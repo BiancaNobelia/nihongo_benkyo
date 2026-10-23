@@ -1352,3 +1352,71 @@ saat error, dan hasil usang dari inferensi asinkron. Hasil berupa 20 kandidat
 terdekat, bukan penilaian benar/salah tulisan atau jaminan pengenalan semua
 variasi tulisan. Kandidat tidak dibatasi filter level pada pencarian teks.
 Tulisan pengguna tidak dikirim ke server. Klik kandidat membuka detail katalog.
+
+## Cara mengingat dan asal-usul kanji — 24 Oktober 2026
+
+Seluruh 2.383 karakter katalog memiliki dua bagian yang sengaja dibedakan:
+
+- **Pengingat bentuk modern:** 121 cerita belajar (termasuk seluruh 84 kanji
+  N5), 1.180 uraian kelompok bentuk, 947 petunjuk bagian bentuk, dan 135 latihan
+  asosiasi kata. Setiap pengingat memiliki kata nyata, bacaan, dan arti dari
+  bank kosakata yang sudah digunakan situs. Cerita adalah alat belajar buatan,
+  bukan bukti asal-usul sejarah.
+- **Asal-usul:** 668 rujukan [Kanjipedia](https://www.kanjipedia.jp/), dengan
+  penjelasan kamus *角川新字源 改訂新版* (KADOKAWA), dan 1.715 rujukan
+  [Chinese Lexicon oleh Peter Olson](https://github.com/peterolson/chinese-lexicon/tree/de64ca4c5d3fef6694a1270f943726c5f622bb03).
+  Karakter dapat berubah bentuk, dipinjam untuk makna lain, atau memiliki
+  beberapa penafsiran. Catatan tidak menganggap setiap komponen modern sebagai
+  radikal atau penjumlahan makna harfiah. Bunyi historis tidak sama dengan
+  seluruh bacaan on/kun bahasa Jepang.
+
+Catatan faktual Kanjipedia diparafrasakan dalam bahasa Indonesia; teks lengkap
+entri dan gambar milik kamus tidak disalin. Tautan entri per karakter disimpan
+di `data/kanji-origin-source.json`. Sebanyak 440 penjelasan mendapat ringkasan
+editorial khusus di `data/kanji-origin-editorial.tsv`; sisanya menggunakan
+fakta peran komponen dari sumber. Deskripsi terbuka lainnya disimpan beserta
+teks sumber Inggris dan 427 terjemahan Indonesia yang disunting dari draf
+Google Translate. Bagian yang khusus menjelaskan pemakaian bahasa Mandarin
+modern dihilangkan jika tidak menjelaskan karakter Jepang yang ditampilkan.
+Materi belum ditinjau seluruhnya oleh ahli etimologi; tafsiran yang belum
+pasti dipertahankan sebagai ketidakpastian, bukan cerita yang dianggap pasti.
+
+Chinese Lexicon menyatakan lisensi ISC pada `package.json` di revisi
+`de64ca4c5d3fef6694a1270f943726c5f622bb03`. Perubahan: pemilihan karakter dan
+peran komponen, pengaitan bentuk Jepang, peringkasan, penerjemahan, serta
+penggantian sejumlah uraian dengan rujukan kamus Jepang. Tidak ada gambar
+aksara kuno dari repositori tersebut yang digunakan. Lihat
+`data/licenses/ChineseLexicon-ISC.txt`. SHA-256 berkas sumber dan revisinya
+dicatat dalam manifest. Data Make Me a Hanzi yang sempat dibandingkan saat
+riset **tidak** disertakan atau digunakan pada hasil terbit.
+
+Pemetaan bentuk lama/varian memakai
+[kyujipy](https://github.com/cjkvsoft/kyujipy/tree/11b9c6f2a9ec1e303cc6ca52cb0a417735e300c4)
+oleh Emmanuel Ternon (MIT), revisi
+`11b9c6f2a9ec1e303cc6ca52cb0a417735e300c4`; lisensi aslinya ada di
+`data/licenses/Kyujipy-MIT.txt`. Pemetaan bukan asumsi bahwa semua karakter
+yang mirip memiliki sejarah sama. Misalnya, 弁 menggabungkan beberapa
+riwayat bentuk, sedangkan 机 Jepang tidak diterangkan sebagai bentuk singkat
+機 bahasa Mandarin.
+
+Petunjuk komponen visual berasal dari KanjiVG r20260714, © Ulrich Apel dan
+kontributor, CC BY-SA 3.0. `scripts/build_memory_anchors.py` memeriksa checksum
+arsip pada manifest lama, lalu memilih komponen lengkap bernama. Komponen
+parsial, potongan terpisah, serta goresan tanpa nama tidak direka-reka.
+Petunjuk sebagian bentuk ditandai sebagai **bukan seluruh penyusun kanji**.
+Glos Indonesia berasal dari katalog yang ditinjau dan kamus komponen lokal.
+Adaptasi komponen mengikuti CC BY-SA 3.0; ringkasan dan cerita original
+Nihongo Benkyo disediakan dengan CC BY-SA 4.0. Sumber pihak ketiga tetap
+memiliki lisensi dan hak masing-masing.
+
+Bangun ulang data asal-usul dengan `python scripts/build_kanji_origins.py`.
+Proses ini deterministik, memakai berkas sumber lokal yang telah disunting,
+dan tidak mengunduh atau menerjemahkan ulang. `data/kanji-origins.json`
+dimuat ketika panel sejarah dibuka dan digunakan bersama selama halaman
+aktif; kegagalan jaringan dapat dicoba ulang. Tidak ada API etimologi yang
+dihubungi browser. Referensi dan lisensi dikumpulkan di `#kredit/memory`,
+sedangkan `#kredit/kanji-<karakter>` menyertakan rujukan khusus karakter.
+
+Validasi mencakup kesetaraan persis dengan 2.383 karakter katalog, kaitan
+kata nyata, pembedaan cerita dengan sejarah, keamanan render, pemuatan
+sekali, percobaan ulang, dan pembatalan pembaruan dialog yang sudah ditutup.

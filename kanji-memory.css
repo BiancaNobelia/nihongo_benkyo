@@ -1,0 +1,23 @@
+.kanji-memory{margin:24px 0;padding:22px;border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line));border-radius:14px;background:linear-gradient(130deg,color-mix(in srgb,var(--accent) 7%,var(--surface)),var(--surface));text-align:left}
+.kanji-memory header{display:flex;align-items:center;gap:12px}
+.kanji-memory h3{font-size:18px;line-height:1.4;margin:0;color:var(--ink)}
+.memory-icon{display:grid;place-items:center;flex-shrink:0;width:40px;height:40px;border-radius:12px;background:var(--accent-soft,var(--surface-soft));color:var(--accent);font-size:24px}
+.memory-method{font-size:12px;color:var(--muted)}
+.memory-story{margin:16px 0;font-size:16px;line-height:1.9;color:var(--ink);overflow-wrap:anywhere}
+.memory-word{display:flex;flex-direction:column;gap:4px;padding:12px 15px;border-left:3px solid var(--teal);background:var(--surface-soft);border-radius:0 8px 8px 0}
+.memory-word>span:first-child{font-size:11px;text-transform:uppercase;letter-spacing:.9px;font-weight:650;color:var(--muted)}
+.memory-word strong{font-size:21px;line-height:1.6;font-weight:550;overflow-wrap:anywhere}
+.memory-word strong small{font-size:16px;font-weight:400;color:var(--teal)}
+.memory-word>span:last-child{font-size:14px;color:var(--ink)}
+.memory-note{font-size:12px;line-height:1.7;color:var(--muted);margin:12px 0 18px}
+.kanji-origin{border-top:1px solid var(--line);padding-top:3px}
+.kanji-origin summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;padding:14px 0 2px;font-size:15px;font-weight:600;color:var(--ink);min-height:44px}
+.kanji-origin summary::-webkit-details-marker{display:none}
+.kanji-origin summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:3px}
+.origin-toggle{font-size:23px;line-height:1;color:var(--accent);transition:transform .15s}
+.kanji-origin[open] .origin-toggle{transform:rotate(45deg)}
+.origin-body{padding-top:14px}
+.origin-label{font-size:12px;color:var(--accent);font-weight:550}
+.origin-body>p{font-size:15px;line-height:1.9;margin:9px 0 0;overflow-wrap:anywhere}
+.origin-body .origin-note{font-size:12px;color:var(--muted);margin-top:13px}
+@media(max-width:600px){.kanji-memory{padding:17px;margin:20px 0}.kanji-memory h3{font-size:17px}.memory-story{font-size:15px}.memory-word strong{font-size:20px}.memory-word strong small{display:block}.origin-body>p{font-size:14px}}

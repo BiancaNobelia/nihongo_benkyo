@@ -1,4 +1,5 @@
-import {createCreditsView} from './credits-view.js?v=20261024-credits';
+import {memoryMarkup,mountKanjiMemory} from './kanji-memory-view.js?v=20261024-memory';
+import {createCreditsView} from './credits-view.js?v=20261024-memory';
 import {handwritingMarkup,mountHandwriting} from './handwriting-view.js?v=20261024-credits';
 import {strokeOrderMarkup,mountStrokeOrder} from './stroke-order-view.js?v=20261024-credits';
 import {kanjiExamplesMarkup} from './kanji-examples-view.js?v=20261024-credits';
@@ -88,6 +89,7 @@ let view = '';
 let disposeHandwriting=()=>{};
 let disposeStrokeOrder=()=>{};
 let disposeKanjiSentences=()=>{};
+let disposeKanjiMemory=()=>{};
 let filters = { level:'all', query:'', collection:'all' };
 const PAGE_SIZE = 24;
 let currentPage = 1;
@@ -155,7 +157,7 @@ function heading(kicker, title, description) {
   return `<div class="view-heading"><div class="section-kicker">${kicker}</div><h1>${title}</h1><p>${description}</p></div>`;
 }
 function renderLibrary(home = false) {
-  root.innerHTML = `${home ? `<section class="hero"><div class="hero-copy"><div class="eyebrow">${icon('leaf')} PERJALANAN KECIL, MAKNA BESAR</div><h1>Satu kanji,<br><em>selangkah lebih dekat.</em></h1><p class="hero-description">Kenali bentuknya, pahami maknanya, dan temukan serunya belajar bahasa Jepang. Mulai dari satu kanji hari ini.</p><div class="hero-buttons"><a class="primary" href="#flashcard">Mulai belajar ${icon('arrow')}</a><a class="text-button" href="#kanji">Jelajahi kanji ${icon('arrow-up')}</a></div></div><div class="hero-art" aria-hidden="true"><span class="orbit"></span><span class="sun-disc"></span><span class="art-stamp">日<br>本</span><div class="hero-card"><span class="hero-kanji" lang="ja">学</span><span class="hero-card-caption">MANABU · BELAJAR</span></div><span class="art-label" lang="ja">学ぶことは、楽しい。</span><div class="art-caption"><span>${icon('leaf')}</span><div>Pelan-pelan, jadi paham.<small>Setiap langkah itu berarti.</small></div></div></div></section>${stats()}` : heading('KOLEKSI KANJI', 'Kenali setiap karakter.', `${KANJI.length.toLocaleString('id-ID')} kanji dari N5 sampai N1 untuk perjalanan belajarmu. Klik kartu untuk mengenal arti, bacaan, dan contoh penggunaannya.`)}
+  root.innerHTML = `${home ? `<section class="hero"><div class="hero-copy"><div class="eyebrow">${icon('leaf')} PERJALANAN KECIL, MAKNA BESAR</div><h1>Satu kanji,<br><em>selangkah lebih dekat.</em></h1><p class="hero-description">Kenali bentuknya, pahami maknanya, dan temukan serunya belajar bahasa Jepang. Mulai dari satu kanji hari ini.</p><div class="hero-buttons"><a class="primary" href="#flashcard">Mulai belajar ${icon('arrow')}</a><a class="text-button" href="#kanji">Jelajahi kanji ${icon('arrow-up')}</a></div></div><div class="hero-art" aria-hidden="true"><span class="orbit"></span><span class="sun-disc"></span><span class="art-stamp">日<br>本</span><div class="hero-card"><span class="hero-kanji" lang="ja">学</span><span class="hero-card-caption">MANABU · BELAJAR</span></div><span class="art-label" lang="ja">学ぶことは、楽しい。</span><div class="art-caption"><span>${icon('leaf')}</span><div>Pelan-pelan, jadi paham.<small>Setiap langkah itu berarti.</small></div></div></div></section>${stats()}` : heading('KOLEKSI KANJI', 'Kenali setiap karakter.', `${KANJI.length.toLocaleString('id-ID')} kanji dari N5 sampai N1 untuk perjalanan belajarmu. Klik kartu untuk melihat bacaan, cara mengingat, asal-usul, dan contoh penggunaannya.`)}
     ${home ? '' : handwritingMarkup(icon,KANJI.length)}
     ${home ? '<div class="section-head"><div><div class="section-kicker">BELAJAR DENGAN CARA FAVORITMU</div><h2>Pilih latihanmu.</h2></div></div><section class="practice-hub" aria-label="Pilihan latihan">' : ''}
     ${home ? `<a class="kotoba-home-banner" href="#kotoba"><span lang="ja">言葉</span><div><strong>Kuis Kotoba Minna & JLPT N3</strong><small>Minna Bab 1–50 dan 2.276 kosakata N3 · Latih arti atau bacaan.</small></div>${icon('arrow')}</a>` : ''}
@@ -189,7 +191,7 @@ function renderGrid() {
   document.querySelector('#library-bottom').innerHTML = `<span role="status">Menampilkan ${result.length ? start+1 : 0}–${Math.min(start+pageSize, result.length)} dari ${result.length.toLocaleString('id-ID')} kanji</span>${paging}`;
   document.querySelector('#page-select')?.addEventListener('change', e => { currentPage = Number(e.target.value); renderGrid(); document.querySelector('#page-select')?.focus({preventScroll:true}); });
 }
-function openModal(html) { disposeStrokeOrder();disposeStrokeOrder=()=>{}; disposeKanjiSentences();disposeKanjiSentences=()=>{}; modalContent.innerHTML = html; modalContent.dataset.char = ''; if (!modal.open) modal.showModal(); modal.scrollTop=0; }
+function openModal(html) { disposeStrokeOrder();disposeStrokeOrder=()=>{}; disposeKanjiSentences();disposeKanjiSentences=()=>{};disposeKanjiMemory();disposeKanjiMemory=()=>{}; modalContent.innerHTML = html; modalContent.dataset.char = ''; if (!modal.open) modal.showModal(); modal.scrollTop=0; }
 function detail(char, record = true) {
   const k = KANJI.find(k => k.char === char); if (!k) return;
   const related = groupsForCharacter(SIMILAR_GROUPS, char);
@@ -199,6 +201,7 @@ function detail(char, record = true) {
     ${strokeOrderMarkup(k)}
     <div class="reading-grid"><div><small>ONYOMI · BACAAN ON</small><p lang="ja">${escape(k.on.join('、') || '—')}</p></div><div><small>KUNYOMI · BACAAN KUN</small><p lang="ja">${escape(k.kun.join('、') || '—')}</p></div></div>
     <p class="reading-note">Titik memisahkan bacaan kanji dan akhiran hiragana (okurigana).</p>
+    ${memoryMarkup(k,escape)}
     ${kanjiExamplesMarkup(k,escape)}
     ${componentNoteMarkup(k.char,escape)}
     ${related.length ? `<div class="similar-related"><h3>Jangan tertukar dengan...</h3>${related.map(group => `<a href="#mirip/${group.id}" class="similar-related-link"><span lang="ja">${group.members.map(m => m.char).join(' · ')}</span><span>Bandingkan ${icon('arrow')}</span></a>`).join('')}</div>` : ''}
@@ -208,6 +211,7 @@ function detail(char, record = true) {
   modalContent.dataset.char = char;
   disposeStrokeOrder=mountStrokeOrder(modalContent,k,escape);
   disposeKanjiSentences=mountKanjiSentences(modalContent,escape);
+  disposeKanjiMemory=mountKanjiMemory(modalContent,k,escape);
 }
 function levelOptions(selected = 'all', all = true) {
   return `${all ? '<option value="all">Semua level</option>' : ''}${levels.map(l => `<option value="${l}" ${l === selected ? 'selected' : ''}>${l} · ${levelNames[l]} (${KANJI.filter(k => k.level === l).length})</option>`).join('')}`;
@@ -465,7 +469,7 @@ document.addEventListener('click', e => {
   if (action === 'sources') location.hash='kredit';
 });
 modal.addEventListener('click', e => { if (e.target === modal) { const box = modal.getBoundingClientRect(); if (e.clientX < box.left || e.clientX > box.right || e.clientY < box.top || e.clientY > box.bottom) modal.close(); } });
-modal.addEventListener('close',()=>{disposeStrokeOrder();disposeStrokeOrder=()=>{};disposeKanjiSentences();disposeKanjiSentences=()=>{};});
+modal.addEventListener('close',()=>{disposeStrokeOrder();disposeStrokeOrder=()=>{};disposeKanjiSentences();disposeKanjiSentences=()=>{};disposeKanjiMemory();disposeKanjiMemory=()=>{};});
 window.addEventListener('hashchange', route);
 window.addEventListener('storage', e => { if (e.key === KEY) { try { progress = cleanProgress(JSON.parse(e.newValue), KANJI); if (view === 'progres') renderProgress(); else if (view === 'beranda' || view === 'kanji') renderLibrary(view === 'beranda'); } catch { /* Keep the current valid session. */ } } });
 window.addEventListener('storage', e => {
