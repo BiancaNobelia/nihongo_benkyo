@@ -1,4 +1,4 @@
-const DATA_URL = new URL('./data/kanji-sentences.json?v=20261023-sentences',import.meta.url);
+const DATA_URL = new URL('./data/kanji-sentences.json?v=20261023-full-kanji',import.meta.url);
 let pending;
 
 export function loadKanjiSentences(fetcher=fetch) {

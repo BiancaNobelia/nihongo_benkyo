@@ -5,6 +5,7 @@ The committed selected-source/translation files make rebuilding reproducible.
 Offsets on disk use JavaScript UTF-16, including supplementary kanji such as 𠮟.
 """
 from prepare_kanji_sentences import *
+from sentence_orthography import revise_sentence
 
 def utf16(text):return len(text.encode('utf-16-le'))//2
 
@@ -15,15 +16,22 @@ def main():
     authored=load('.cache/kanji-sentence-authored.json')
     translations=load('data/kanji-sentence-translations.json')
     editorial=load('data/kanji-sentence-editorial.json')
+    orthography=load('data/kanji-sentence-orthography.json')
+    assert orthography['version']==1
+    revisions=orthography['revisions']
+    used_sources=set()
     result={}
     for e in words:
         key=e['word']+'|'+e['reading']
         record=dict(authored.get(key) or selected[key])
+        source_text=record['text']
+        used_sources.add(source_text)
+        translation=editorial.get(source_text) or record.get('translation') or translations[source_text]
+        record=revise_sentence(record,revisions,orthography['readingVariants'].get(key))
         text=record['text'];spans=record['furigana']
         assert valid_spans(text,spans),key
         start=target_at(text,spans,e['word'],e['reading'])
         assert start is not None,key
-        translation=editorial.get(text) or record.get('translation') or translations[text]
         assert translation.strip() and translation!=text and not re.search('[ぁ-ゖァ-ヺ]',translation),(key,translation)
         assert not any(c in translation for c in ['{','}']) and not re.search(r'(?<!\d)%',translation),key
         output={k:record[k] for k in ['text','origin','reference']}
@@ -31,6 +39,8 @@ def main():
         for k in ['adapted','sourceText']:
             if k in record:output[k]=record[k]
         result[key]=output
+    assert not set(revisions)-used_sources, ('Stale orthography revisions',set(revisions)-used_sources)
+    assert not set(orthography['readingVariants'])-set(result), 'Stale reading variant'
     assert all(c['keys'] and all(k in result for k in c['keys']) for c in cards)
     metadata={'kanji':len(cards),'wordReadings':len(result),'associations':sum(len(c['keys']) for c in cards),'origins':dict(Counter(v['origin'] for v in result.values()))}
     bundle={'version':1,'updated':'2026-10-23','coverage':metadata,'license':'CC BY-SA 4.0; Tatoeba sentences: CC BY 2.0 FR','entries':result}

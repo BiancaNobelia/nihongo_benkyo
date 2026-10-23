@@ -1,8 +1,8 @@
 """Compile explicitly assigned original contexts; refuse to silently fill gaps."""
 from prepare_kanji_sentences import *
 
-# Unambiguous recurring context words. The rest intentionally stays in kana to
-# keep the context approachable; the target always preserves its exact spelling.
+# Initial source annotations. Reviewed, sentence-specific kanji spellings are
+# applied by build_kanji_sentences.py without changing the vocabulary target.
 CONTEXT_KANJI={
  'せんせい':'先生','ともだち':'友達','がっこう':'学校','だいがく':'大学',
  'にほんご':'日本語','インドネシア':'インドネシア','あした':'明日','らいねん':'来年',

@@ -96,8 +96,8 @@ Asal kalimat yang dipublikasikan:
 
 - 1.735 contoh asli, ditulis/disunting oleh AI untuk situs ini. Penugasan
   konteks per kata dan terjemahannya disimpan dalam `data/kanji-sentence-contexts*.tsv`.
-  Konteks dasar sengaja tetap memakai sebagian kana agar mudah dibaca. Istilah
-  teknis dan sastra memperoleh konteks yang sesuai, termasuk pembahasan istilah.
+  Kata dalam konteks menggunakan ejaan kanji yang lazim dengan furigana.
+  Istilah teknis dan sastra memperoleh konteks yang sesuai, termasuk pembahasan istilah.
 - 721 contoh bank JLPT dan 223 contoh bunpou yang sebelumnya telah digunakan
   situs ini, beserta terjemahannya. Sumber asal masing-masing bank tetap berlaku.
 - 2.150 contoh dari **Tatoeba dan para kontributornya**, melalui berkas kosakata
@@ -116,6 +116,18 @@ pada waktu penyiapan data, lalu diperiksa secara struktural dan disunting pada
 kasus yang ditemukan; **belum seluruhnya ditinjau oleh pengajar bahasa Jepang**.
 Koreksi terpisah tercatat dalam `data/kanji-sentence-editorial.json`.
 Kalimat dan terjemahan disimpan lokal, bukan diterjemahkan ketika pengguna membuka halaman.
+
+Ejaan konteks disunting melalui `data/kanji-sentence-orthography.json`, dengan
+anotasi yang terikat pada kalimat sumber persis. Kata seperti 人, 大学, 食べる,
+dan 飲む tidak lagi dibiarkan dalam hiragana; partikel, akhiran, kata bantu,
+dan ungkapan yang lazim berkana tetap memakai kana. Pemenggalan kata dibantu
+[SudachiPy](https://github.com/WorksApplications/sudachi.rs) saat penyiapan,
+lalu homofon dan hasil pemenggalan diperiksa dalam konteks. Model/kamus ini
+tidak dikirim ke browser dan tidak diperlukan untuk membangun ulang data.
+Builder menolak perubahan bacaan kalimat, target yang hilang, anotasi tidak
+lengkap, atau suntingan yang sumbernya sudah berubah. Varian seperti
+日本（にほん／にっぽん）tetap mempertahankan bacaan tiap kartu.
+Adaptasi ejaan Tatoeba mempertahankan teks sumber, kredit, dan ID kalimat.
 
 Lima contoh tambahan di `kanji-rare-examples.js`:
 

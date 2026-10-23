@@ -65,6 +65,54 @@ test('sentences distinguish homographs and document rare names instead of invent
   for(const char of ['彪','晟'])assert.match(kanjiExamples(KANJI.find(k=>k.char===char))[0].note,/名前|nama/i);
 });
 
+test('context words use kanji with readings, while homophones keep their contextual meaning',()=>{
+  const cases=[
+    ['学生|がくせい','あの 人は 大学の 学生 です。'],
+    ['一杯|いっぱい','お茶を 一杯 飲みました。'],
+    ['乾かす|かわかす','ドライヤーで、髪を乾かす。'],
+    ['押える|おさえる','風で飛ばないように、紙を押える。'],
+    ['奉る|たてまつる','神様に、供物を奉る。'],
+    ['鼻水|はなみず','風邪を引いて、鼻水が出ます。'],
+    ['冷ます|さます','熱いスープを、少し冷ます。'],
+    ['縮みます|ちぢみます','熱いお湯で洗うと、服が縮みます。'],
+    ['飲む|のむ','暑い 日は 水を たくさん 飲む。'],
+    ['載る|のる','この記事は、明日の新聞に載る。'],
+    ['艶|つや','この生地には、艶があります。'],
+    ['土砂崩れ|どしゃくずれ','大雨で、土砂崩れが起きました。'],
+    ['引き出し|ひきだし','それは引き出しに入れておきました。'],
+    ['主宰|しゅさい','先生の主宰する勉強会に、参加します。'],
+    ['生える|はえる','庭に草が生える。'],
+    ['向かい|むかい','その店は通りの向かいにあります。'],
+  ];
+  for(const [key,text] of cases)assert.equal(data.entries[key].text,text,key);
+  const student=data.entries['学生|がくせい'];
+  for(const [base,reading] of [['人','ひと'],['大学','だいがく'],['学生','がくせい']]){
+    assert.ok(student.furigana.some(([,w,r])=>w===base&&r===reading),base);
+  }
+});
+
+test('orthography revisions preserve alternate target readings and adapted-source credits',()=>{
+  for(const [word,readings] of [
+    ['日本',['にほん','にっぽん']],['明後日',['あさって','みょうごにち']],
+    ['下す',['おろす','くだす']],['梅雨',['つゆ','ばいう']],
+    ['工場',['こうじょう','こうば']],['文字',['もじ','もんじ']],
+    ['注ぐ',['そそぐ','つぐ']],['得る',['うる','える']],
+    ['球',['きゅう','たま']],['管',['くだ','かん']],
+    ['故郷',['ふるさと','こきょう']],['碑',['いしぶみ','ひ']],
+  ]){
+    for(const reading of readings){
+      const e=data.entries[`${word}|${reading}`];
+      assert.ok(e.furigana.some(([,w,r])=>w===word&&r===reading),`${word}|${reading}`);
+    }
+  }
+  const adapted=Object.values(data.entries).filter(e=>e.origin==='tatoeba'&&e.adapted);
+  assert.ok(adapted.length>100);
+  for(const e of adapted){
+    assert.ok(e.sourceText?.length);
+    assert.ok(Number.isSafeInteger(e.reference)&&e.reference>0);
+  }
+});
+
 test('sentence view escapes content, renders ruby and highlights only the target',()=>{
   const e={text:'𠮟る、母。',furigana:[[0,'𠮟る','しかる'],[4,'母','はは']],translation:'<script>x</script>',targetStart:0,targetLength:3,origin:'tatoeba',reference:42};
   const html=exampleSentenceMarkup(e,escape);
