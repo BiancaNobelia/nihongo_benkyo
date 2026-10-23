@@ -1,19 +1,20 @@
-import {handwritingMarkup,mountHandwriting} from './handwriting-view.js?v=20261020-handwriting-cache';
-import {strokeOrderMarkup,mountStrokeOrder} from './stroke-order-view.js?v=20261021-stroke-order';
-import {kanjiExamplesMarkup} from './kanji-examples-view.js?v=20261023-full-kanji';
-import {mountKanjiSentences} from './kanji-sentence-view.js?v=20261023-full-kanji';
+import {createCreditsView} from './credits-view.js?v=20261024-credits';
+import {handwritingMarkup,mountHandwriting} from './handwriting-view.js?v=20261024-credits';
+import {strokeOrderMarkup,mountStrokeOrder} from './stroke-order-view.js?v=20261024-credits';
+import {kanjiExamplesMarkup} from './kanji-examples-view.js?v=20261024-credits';
+import {mountKanjiSentences} from './kanji-sentence-view.js?v=20261024-credits';
 import {createTransitivityView} from './transitivity-view.js?v=20261015-jidoushi-tadoushi';
 import {TRANSITIVITY_PAIRS,TRANSITIVITY_ENTRIES} from './transitivity-data.js?v=20261015-jidoushi-tadoushi';
 import {PARTICLE_ENTRIES,PARTICLE_TOPICS} from './particle-data.js?v=20261015-jidoushi-tadoushi';
 import { createBunpouView } from './bunpou-view.js?v=20261015-jidoushi-tadoushi';
 import { createMateriView } from './materi-view.js?v=20261016-materi';
-import { createDokkaiView } from './dokkai-view.js?v=20261016-dokkai';
+import { createDokkaiView } from './dokkai-view.js?v=20261024-credits';
 import { KANJI } from './kanji-data.js?v=20261015-jidoushi-tadoushi';
 import { LEVELS as levels, LEVEL_NAMES as levelNames } from './levels.js?v=20261015-jidoushi-tadoushi';
 import { shuffle, filterKanji, createQuiz, cleanProgress, localDay } from './core.js?v=20261020-romaji-search';
 import { SIMILAR_GROUPS, SIMILAR_CATEGORIES } from './similar-data.js?v=20261015-jidoushi-tadoushi';
 import { groupsForCharacter } from './similar-core.js?v=20261015-jidoushi-tadoushi';
-import { createSimilarView } from './similar-view.js?v=20261015-jidoushi-tadoushi';
+import { createSimilarView } from './similar-view.js?v=20261024-credits';
 import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-jidoushi-tadoushi';
 import { familiesForCharacter } from './radical-core.js?v=20261015-jidoushi-tadoushi';
 import { componentNoteMarkup } from './component-note-view.js?v=20261015-jidoushi-tadoushi';
@@ -68,7 +69,7 @@ const root = document.querySelector('#view-root');
 const modal = document.querySelector('#modal');
 const modalContent = document.querySelector('#modal-content');
 const KEY = 'nihongo-benkyo-progress-v1';
-const viewNames = { beranda:'Beranda', materi:'List Materi', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', kotoba:'Kuis Kotoba', henkan:'Kuis Henkan', bunpou:'Kuis Bunpou', dokkai:'Kuis Dokkai', partikel:'Kuis Partikel', jidoushi:'Jidōshi–Tadōshi', progres:'Progres Saya' };
+const viewNames = { kredit:'Kredit & Sumber', beranda:'Beranda', materi:'List Materi', kanji:'Jelajahi Kanji', mirip:'Kanji Mirip', flashcard:'Flashcard', kuis:'Kuis Kanji', kotoba:'Kuis Kotoba', henkan:'Kuis Henkan', bunpou:'Kuis Bunpou', dokkai:'Kuis Dokkai', partikel:'Kuis Partikel', jidoushi:'Jidōshi–Tadōshi', progres:'Progres Saya' };
 const modeNames = { meaning:'Kanji → Arti Indonesia', kanji:'Arti Indonesia → Kanji', ...READING_MODE_NAMES, 'hiragana-kanji':'Hiragana → Kanji', 'hiragana-katakana':'Hiragana → Katakana', 'english-katakana':'English → Katakana', ...Object.fromEntries(Object.entries(KOTOBA_MODES).map(([id,m])=>[`kotoba-${id}`,`Kotoba · ${m.label}`])) };
 modeNames.bunpou='Bunpou · Lengkapi kalimat';
 modeNames.dokkai='Dokkai · Pemahaman bacaan';
@@ -96,6 +97,7 @@ let quizPreferences = {level:'N5',mode:'jlpt-reading',count:10,countChoice:'10',
 let quizTimer;
 let toastTimeout;
 const similarView = createSimilarView({root, kanji:KANJI, groups:SIMILAR_GROUPS, categories:SIMILAR_CATEGORIES, levels, escape, icon, activity});
+const creditsView = createCreditsView({root,escape,kanji:KANJI});
 const materiView = createMateriView({root,escape,icon});
 const dokkaiView = createDokkaiView({root,escape,icon,heading,activity,recordSession(entry){
   progress.history.push(entry);progress.history=progress.history.slice(-50);activity();
@@ -201,6 +203,7 @@ function detail(char, record = true) {
     ${componentNoteMarkup(k.char,escape)}
     ${related.length ? `<div class="similar-related"><h3>Jangan tertukar dengan...</h3>${related.map(group => `<a href="#mirip/${group.id}" class="similar-related-link"><span lang="ja">${group.members.map(m => m.char).join(' · ')}</span><span>Bandingkan ${icon('arrow')}</span></a>`).join('')}</div>` : ''}
     ${families.length ? `<div class="similar-related"><h3>Keluarga radikal & komponen</h3>${families.map(f => `<a href="#mirip/${f.id}" class="radical-related-link"><span lang="ja">${f.symbol}</span><span>${escape(f.title)}<small>${f.members.length} kanji dalam keluarga</small></span>${icon('arrow')}</a>`).join('')}</div>` : ''}
+    <p class="detail-credits"><a class="credit-link" href="#kredit/kanji-${encodeURIComponent(k.char)}">Kredit &amp; sumber</a></p>
     <div class="modal-actions"><button class="secondary" data-save="${k.char}">${icon('bookmark')} ${progress.saved.includes(char) ? 'Tersimpan' : 'Simpan kanji'}</button><button class="primary" data-known="${k.char}">${icon('check')} ${progress.known.includes(char) ? 'Sudah dikuasai' : 'Tandai dikuasai'}</button></div>`);
   modalContent.dataset.char = char;
   disposeStrokeOrder=mountStrokeOrder(modalContent,k,escape);
@@ -387,6 +390,7 @@ function route() {
   henkanView.dispose();
   bunpouView.dispose();
   materiView.dispose();
+  creditsView.dispose();
   dokkaiView.dispose();
   particleView.dispose();
   transitivityView.dispose();
@@ -396,6 +400,7 @@ function route() {
   document.querySelector('#breadcrumb-current').textContent = viewNames[view];
   document.title = `${viewNames[view]} — Nihongo Benkyo`;
   if (view === 'beranda' || view === 'kanji') renderLibrary(view === 'beranda');
+  else if (view === 'kredit') creditsView.render(groupId);
   else if (view === 'materi') materiView.render(groupId);
   else if (view === 'dokkai') dokkaiView.render();
   else if (view === 'mirip') similarView.render(groupId);
@@ -457,7 +462,7 @@ document.addEventListener('click', e => {
   if (action === 'quiz-exit') openModal(`<div class="prose"><h2 id="modal-title">Akhiri latihan ini?</h2><p>Skor sesi yang belum selesai tidak akan masuk ke riwayat kuis. ${quiz?.mode==='jlpt-reading' ? 'Soal yang sudah tampil tetap diingat untuk sesi berikutnya.' : 'Kamu bisa memulai sesi baru kapan saja.'}</p><div class="modal-actions"><button class="secondary" data-action="close">Lanjutkan kuis</button><button class="primary" data-action="quiz-confirm-exit">Akhiri latihan</button></div></div>`);
   if (action === 'quiz-confirm-exit') { modal.close(); renderQuizSetup(); }
   if (action === 'guide') openModal(`<div class="prose"><div class="section-kicker">BELAJAR DENGAN RITMEMU</div><h2 id="modal-title">Mulai dari satu kanji.</h2><ol><li><strong>Kenali.</strong> Buka Jelajahi Kanji, mulai dari level N5. Klik kartu untuk melihat arti, bacaan, dan contoh kata.</li><li><strong>Bedakan.</strong> Buka Kanji Mirip untuk membandingkan bentuk, melihat ciri pembeda, dan berlatih memilih kanji dari petunjuk visual.</li><li><strong>Ingat.</strong> Gunakan flashcard. Balik kartunya, lalu pilih “Sudah ingat” atau “Masih belajar”.</li><li><strong>Latih.</strong> Uji pemahaman lewat kuis arti atau bacaan kata. Mode Bacaan ala JLPT melatihmu membedakan pilihan hiragana yang mirip. Gunakan Hiragana → Kanji dan English → Katakana untuk melatih penulisan dengan pilihan bentuk yang mirip. Buka Kuis Kotoba untuk melatih kosakata Minna no Nihongo per bab dan jenis kata. Tinjau jawabanmu di akhir sesi.</li><li><strong>Ulangi.</strong> Simpan kanji yang ingin dipelajari lagi. Lihat perkembanganmu di Progres Saya.</li></ol><p>Onyomi adalah bacaan yang berasal dari bahasa Tionghoa. Kunyomi adalah bacaan asli Jepang. Bacaan yang digunakan bergantung pada kata, jadi selalu pelajari contoh penggunaannya.</p><button class="primary" data-action="close">Siap belajar ${icon('arrow')}</button></div>`);
-  if (action === 'sources') openModal(`<div class="prose"><div class="section-kicker">MATERI YANG KITA PELAJARI</div><h2 id="modal-title">Tentang koleksi kanji</h2><p>Koleksi mencakup seluruh ${KANJI.length.toLocaleString('id-ID')} kanji dalam snapshot OpenJLPT yang digunakan, dari N5 sampai N1. Pembagian level mengikuti daftar komunitas Jonathan Waller dan tambahan joyo dari OpenJLPT, bukan daftar resmi JLPT. Seluruh arti Indonesia dan contoh kata ditinjau ulang secara editorial oleh AI pada 13 Oktober 2026 agar lebih jelas dan sesuai konteks. Arti pada kartu diringkas untuk belajar; arti Inggris tersedia sebagai pembanding. Rincian tinjauan dan rujukan kamus tersedia dalam catatan data.</p><p>Bacaan dan jumlah goresan bersumber dari <a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project" target="_blank" rel="noopener">KANJIDIC2</a>, hak cipta James William Breen dan Electronic Dictionary Research and Development Group, melalui <a href="https://github.com/evanclan/OpenJLPT" target="_blank" rel="noopener">OpenJLPT</a>. Contoh kata berasal dari JMdict dan daftar Jonathan Waller melalui OpenJLPT serta <a href="https://kanjiapi.dev/" target="_blank" rel="noopener">kanjiapi.dev</a>.</p><p>Data adaptasi dalam koleksi ini tersedia dengan <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Lihat <a href="https://www.edrdg.org/edrdg/licence.html" target="_blank" rel="noopener">ketentuan sumber</a> dan <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">catatan data</a>.</p><p>Keluarga radikal dan pembahasan bentuk kanji pada kuis menggunakan label komponen dari <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> oleh Ulrich Apel dan kontributor. Ekstrak komponen ini memakai <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>. Pengelompokan dan penjelasan Indonesia ditambahkan untuk membantu belajar.</p><p>Materi tersedia langsung di website. Progres dan simpanan disimpan di browser ini, tanpa akun.</p></div>`);
+  if (action === 'sources') location.hash='kredit';
 });
 modal.addEventListener('click', e => { if (e.target === modal) { const box = modal.getBoundingClientRect(); if (e.clientX < box.left || e.clientX > box.right || e.clientY < box.top || e.clientY > box.bottom) modal.close(); } });
 modal.addEventListener('close',()=>{disposeStrokeOrder();disposeStrokeOrder=()=>{};disposeKanjiSentences();disposeKanjiSentences=()=>{};});

@@ -7,7 +7,6 @@ export function strokeOrderMarkup(card) {
   return `<section class="stroke-order" aria-label="Cara menulis kanji">
     <div class="stroke-order-heading"><h3>Urutan goresan</h3><span>${card.strokes} goresan · ${card.level}</span></div>
     <div class="stroke-order-body"><p role="status">Menyiapkan cara menulis…</p></div>
-    <p class="stroke-credit">Diagram: <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> · Ulrich Apel & kontributor · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a></p>
   </section>`;
 }
 

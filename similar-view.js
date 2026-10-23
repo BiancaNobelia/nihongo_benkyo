@@ -1,6 +1,6 @@
 import { filterSimilarGroups, createSimilarPractice } from './similar-core.js?v=20261015-jidoushi-tadoushi';
 import { RADICAL_FAMILIES } from './radical-data.js?v=20261015-jidoushi-tadoushi';
-import { createRadicalView } from './radical-view.js?v=20261015-jidoushi-tadoushi';
+import { createRadicalView } from './radical-view.js?v=20261024-credits';
 import { similarityQuizCallout } from './similar-quiz-view.js?v=20261015-jidoushi-tadoushi';
 
 export function createSimilarView({root, kanji, groups, categories, levels, escape, icon, activity}) {

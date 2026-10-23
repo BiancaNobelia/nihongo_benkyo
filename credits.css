@@ -1,0 +1,32 @@
+.credits-page { max-width:900px; margin:0 auto; }
+.credits-sections { display:grid; gap:12px; margin:28px 0; }
+.credits-section { border:1px solid var(--line); border-radius:14px; background:var(--surface); overflow:hidden; }
+.credits-section>summary { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:22px 24px; cursor:pointer; list-style:none; }
+.credits-section>summary::-webkit-details-marker { display:none; }
+.credits-section>summary strong { display:block; font-size:17px; color:var(--ink); }
+.credits-section>summary small { display:block; margin-top:5px; color:var(--muted); font-size:13px; }
+.credits-section[open]>summary { border-bottom:1px solid var(--line); background:var(--surface-soft); }
+.credits-toggle { font-size:24px; color:var(--accent); }
+.credits-section[open] .credits-toggle { transform:rotate(45deg); }
+.credits-body { padding:8px 24px 20px; font-size:14px; line-height:1.9; color:var(--muted); }
+.credits-body p { margin:14px 0; }
+.credits-body ul { padding-left:20px; }
+.credits-body li+li { margin-top:12px; }
+.credits-page a { text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
+.credits-page a:hover,.credit-link:hover { color:var(--accent); }
+.credits-reading-list span { display:block; }
+.credits-reading-list .credits-current { border-left:3px solid var(--accent); padding-left:12px; }
+.credits-context { padding:24px; background:var(--surface); border:1px solid var(--line); border-radius:14px; margin-bottom:24px; }
+.credits-context h2 { font-size:20px; margin:0 0 20px; }
+.credits-sentence-list { list-style:none; padding:0; margin:0; }
+.credits-sentence-list>li+li { margin-top:20px; padding-top:20px; border-top:1px solid var(--line); }
+.credits-sentence-list strong { font-size:17px; }
+.credits-sentence-list p { font-size:16px; line-height:1.9; margin:8px 0; }
+.credits-sentence-list small,.credits-sentence-list summary,.credits-notes { font-size:13px; color:var(--muted); line-height:1.9; }
+.credits-sentence-list details { margin-top:8px; }
+.credits-sentence-list summary { cursor:pointer; }
+.credit-link { font-size:12px; color:var(--muted); text-decoration:underline; text-underline-offset:3px; }
+.detail-credits { text-align:right; margin:20px 0 14px; }
+.footer>a { align-self:flex-start; white-space:nowrap; }
+.credits-page summary:focus-visible,.credits-page a:focus-visible,.credit-link:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+@media(max-width:700px) { .credits-section>summary { padding:18px; } .credits-body { padding:4px 18px 16px; } .credits-context { padding:18px; } .credits-section>summary small { font-size:12px; } }

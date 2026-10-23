@@ -13,7 +13,7 @@ export function handwritingMarkup(icon,count) {
         <p id="handwriting-status" role="status" aria-live="polite">Mulai menggambar untuk melihat kandidat.</p><div id="handwriting-candidates" class="handwriting-candidates" aria-label="Kandidat hasil tulisan tangan"></div>
         <button type="button" class="secondary handwriting-retry" data-handwriting="retry" hidden>Coba muat lagi</button>
         <p class="handwriting-tip">Belum menemukan yang cocok? Lengkapi bentuknya atau urungkan goresan yang kurang pas.</p>
-        <small class="handwriting-source">Pengenalan tulisan: <a href="https://github.com/dariyooo/DaKanji-Single-Kanji-Recognition" target="_blank" rel="noopener">DaKanji</a> · Dariyooo (DaAppLab) · <a href="./data/licenses/DaKanji-LICENSE.txt" target="_blank" rel="noopener">MIT</a><br>Pola tulisan: <a href="https://github.com/asdfjkl/kanjicanvas" target="_blank" rel="noopener">Kanji Canvas</a> · Dominik Klein & kontributor · <a href="./data/licenses/KanjiCanvas-LICENSE.txt" target="_blank" rel="noopener">MIT</a><br>Bentuk goresan: <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> · Ulrich Apel & kontributor · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a></small>
+        <a class="credit-link" href="#kredit/handwriting">Kredit &amp; sumber</a>
       </div>
     </div>
   </details>`;

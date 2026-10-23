@@ -20,6 +20,16 @@ dan 172 kanji joyo tambahan dari OpenJLPT. Label ini merupakan panduan belajar,
 Pengelompokan lama situs diperbarui mengikuti sumber lima level ini;
 progres yang tersimpan tetap dipertahankan berdasarkan karakter.
 
+## Halaman kredit — 24 Oktober 2026
+
+Atribusi antarmuka dikumpulkan di halaman `#kredit` (Kredit & Sumber),
+dengan akses dari footer serta tautan ringkas pada materi terkait. Kredit
+yang berulang di panel tulisan tangan, goresan, dan contoh kalimat dipindahkan
+ke halaman tersebut. `#kredit/kanji-<karakter>` tetap mencantumkan ID/tautan
+Tatoeba dan teks asal setiap contoh yang diadaptasi. Kredit dokkai tetap
+mencantumkan penulis, PDF sumber, lisensi, dan perubahan untuk setiap bacaan.
+Seluruh data atribusi dan berkas lisensi asli dipertahankan.
+
 ## Asal data dan atribusi
 
 - Bacaan dan arti 23 kanji tambahan pada pilihan pengecoh Hiragana → Kanji:

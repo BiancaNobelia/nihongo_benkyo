@@ -120,8 +120,7 @@ test('sentence view escapes content, renders ruby and highlights only the target
   assert.match(html,/<rt>はは<\/rt>/);
   assert.doesNotMatch(html,/<script>|<mark[^>]*><ruby>母/);
   assert.match(html,/&lt;script&gt;/);
-  assert.match(html,/tatoeba.org\/en\/sentences\/show\/42/);
-  assert.match(exampleSentenceMarkup({...e,adapted:true},escape),/diadaptasi/);
+  assert.doesNotMatch(html,/example-sentence-source|Tatoeba|diadaptasi/);
 });
 
 function fixture(key='水|みず'){

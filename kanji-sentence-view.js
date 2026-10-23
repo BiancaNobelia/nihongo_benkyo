@@ -30,9 +30,7 @@ export function exampleSentenceMarkup(record,escape) {
     cursor=start+word.length;
   }
   html+=plain(text.slice(cursor),cursor);
-  const source=record.origin==='tatoeba' && Number.isSafeInteger(record.reference)
-    ? `<a class="example-sentence-source" href="https://tatoeba.org/en/sentences/show/${record.reference}" target="_blank" rel="noopener noreferrer">Tatoeba · ${record.adapted?'diadaptasi dari sumber':'sumber kalimat'}</a>` : '';
-  return `<span class="example-sentence-label">CONTOH KALIMAT</span><p class="example-sentence-text" lang="ja">${html}</p><p class="example-sentence-translation">${escape(translation)}</p>${source}`;
+  return `<span class="example-sentence-label">CONTOH KALIMAT</span><p class="example-sentence-text" lang="ja">${html}</p><p class="example-sentence-translation">${escape(translation)}</p>`;
 }
 
 export function mountKanjiSentences(root,escape,{load=loadKanjiSentences}={}) {
