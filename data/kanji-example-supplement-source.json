@@ -1,0 +1,1323 @@
+{
+  "source": "JMdict via kanjiapi.dev",
+  "retrieved": "2026-10-23",
+  "license": "CC BY-SA 4.0",
+  "entries": [
+    {
+      "word": "右手",
+      "reading": "みぎて",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%8F%B3",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "right hand"
+              ]
+            },
+            {
+              "glosses": [
+                "right-hand side",
+                "right-hand direction",
+                "(on) the right"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news1",
+                "nf08"
+              ],
+              "pronounced": "みぎて",
+              "written": "右手"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "駅前",
+      "reading": "えきまえ",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E9%A7%85",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "in front of a station"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news1",
+                "nf06"
+              ],
+              "pronounced": "えきまえ",
+              "written": "駅前"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "駅員",
+      "reading": "えきいん",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E9%A7%85",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "(train) station attendant",
+                "station employee",
+                "station staff"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news1",
+                "nf18"
+              ],
+              "pronounced": "えきいん",
+              "written": "駅員"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "春休み",
+      "reading": "はるやすみ",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E6%98%A5",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "spring break",
+                "spring vacation"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news1",
+                "nf24"
+              ],
+              "pronounced": "はるやすみ",
+              "written": "春休み"
+            },
+            {
+              "priorities": [],
+              "pronounced": "はるやすみ",
+              "written": "春休"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "春風",
+      "reading": "はるかぜ",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E6%98%A5",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "spring breeze"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [],
+              "pronounced": "はるかぜ",
+              "written": "春風"
+            },
+            {
+              "priorities": [
+                "news2",
+                "nf27"
+              ],
+              "pronounced": "しゅんぷう",
+              "written": "春風"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "夏休み",
+      "reading": "なつやすみ",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%A4%8F",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "summer vacation",
+                "summer holiday"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news1",
+                "nf05"
+              ],
+              "pronounced": "なつやすみ",
+              "written": "夏休み"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "真夏",
+      "reading": "まなつ",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E7%9C%9F",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "middle of summer",
+                "height of summer",
+                "midsummer"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news1",
+                "nf14"
+              ],
+              "pronounced": "まなつ",
+              "written": "真夏"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "秋風",
+      "reading": "あきかぜ",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E7%A7%8B",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "autumn breeze",
+                "fall breeze"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news2",
+                "nf29"
+              ],
+              "pronounced": "あきかぜ",
+              "written": "秋風"
+            },
+            {
+              "priorities": [],
+              "pronounced": "しゅうふう",
+              "written": "秋風"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "秋祭り",
+      "reading": "あきまつり",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E7%A7%8B",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "autumn festival",
+                "fall festival",
+                "autumn matsuri"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news2",
+                "nf46"
+              ],
+              "pronounced": "あきまつり",
+              "written": "秋祭り"
+            },
+            {
+              "priorities": [],
+              "pronounced": "あきまつり",
+              "written": "秋まつり"
+            },
+            {
+              "priorities": [],
+              "pronounced": "あきまつり",
+              "written": "秋祭"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "冬休み",
+      "reading": "ふゆやすみ",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%86%AC",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "winter vacation",
+                "winter holidays"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news2",
+                "nf29"
+              ],
+              "pronounced": "ふゆやすみ",
+              "written": "冬休み"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "真冬",
+      "reading": "まふゆ",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E7%9C%9F",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "midwinter",
+                "dead of winter"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news2",
+                "nf26",
+                "spec2"
+              ],
+              "pronounced": "まふゆ",
+              "written": "真冬"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "北口",
+      "reading": "きたぐち",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%8C%97",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "north entrance",
+                "north exit"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news1",
+                "nf23"
+              ],
+              "pronounced": "きたぐち",
+              "written": "北口"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "北風",
+      "reading": "きたかぜ",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%8C%97",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "north wind",
+                "northerly wind"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news2",
+                "nf25"
+              ],
+              "pronounced": "きたかぜ",
+              "written": "北風"
+            },
+            {
+              "priorities": [],
+              "pronounced": "ほくふう",
+              "written": "北風"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "南口",
+      "reading": "みなみぐち",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%8D%97",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "south entrance",
+                "south exit"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news1",
+                "nf21"
+              ],
+              "pronounced": "みなみぐち",
+              "written": "南口"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "南米",
+      "reading": "なんべい",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%8D%97",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "South America"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news1",
+                "nf07"
+              ],
+              "pronounced": "なんべい",
+              "written": "南米"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "誰も",
+      "reading": "だれも",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E8%AA%B0",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "everyone",
+                "anyone"
+              ]
+            },
+            {
+              "glosses": [
+                "no one",
+                "nobody"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "spec1"
+              ],
+              "pronounced": "だれも",
+              "written": "誰も"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "貼り紙",
+      "reading": "はりがみ",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E8%B2%BC",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "paper patch attached to something",
+                "paper backing",
+                "sticker",
+                "label"
+              ]
+            },
+            {
+              "glosses": [
+                "notice",
+                "poster"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news1",
+                "nf20"
+              ],
+              "pronounced": "はりがみ",
+              "written": "張り紙"
+            },
+            {
+              "priorities": [],
+              "pronounced": "はりがみ",
+              "written": "貼り紙"
+            },
+            {
+              "priorities": [],
+              "pronounced": "はりがみ",
+              "written": "貼紙"
+            },
+            {
+              "priorities": [],
+              "pronounced": "はりがみ",
+              "written": "はり紙"
+            },
+            {
+              "priorities": [],
+              "pronounced": "はりがみ",
+              "written": "張紙"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "貼り付ける",
+      "reading": "はりつける",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E8%B2%BC",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "to paste",
+                "to stick",
+                "to affix"
+              ]
+            },
+            {
+              "glosses": [
+                "to station",
+                "to post"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "spec1"
+              ],
+              "pronounced": "はりつける",
+              "written": "貼り付ける"
+            },
+            {
+              "priorities": [],
+              "pronounced": "はりつける",
+              "written": "張り付ける"
+            },
+            {
+              "priorities": [],
+              "pronounced": "はりつける",
+              "written": "貼付ける"
+            },
+            {
+              "priorities": [],
+              "pronounced": "はりつける",
+              "written": "貼りつける"
+            },
+            {
+              "priorities": [],
+              "pronounced": "はりつける",
+              "written": "張りつける"
+            },
+            {
+              "priorities": [],
+              "pronounced": "はりつける",
+              "written": "張付ける"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "京都",
+      "reading": "きょうと",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E4%BA%AC",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "Kyoto (city, prefecture)"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news1",
+                "nf01"
+              ],
+              "pronounced": "きょうと",
+              "written": "京都"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "町長",
+      "reading": "ちょうちょう",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E7%94%BA",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "town mayor"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news1",
+                "nf06"
+              ],
+              "pronounced": "ちょうちょう",
+              "written": "町長"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "町内",
+      "reading": "ちょうない",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E7%94%BA",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "neighborhood",
+                "neighbourhood",
+                "street",
+                "block",
+                "town"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news1",
+                "nf09"
+              ],
+              "pronounced": "ちょうない",
+              "written": "町内"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "民族",
+      "reading": "みんぞく",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E6%B0%91",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "people",
+                "race",
+                "nation",
+                "ethnic group",
+                "ethnos"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news1",
+                "nf01"
+              ],
+              "pronounced": "みんぞく",
+              "written": "民族"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "王族",
+      "reading": "おうぞく",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E7%8E%8B",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "royalty",
+                "royal family"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news1",
+                "nf22"
+              ],
+              "pronounced": "おうぞく",
+              "written": "王族"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "講堂",
+      "reading": "こうどう",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E8%AC%9B",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "auditorium",
+                "lecture hall"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news1",
+                "nf10"
+              ],
+              "pronounced": "こうどう",
+              "written": "講堂"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "公会堂",
+      "reading": "こうかいどう",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%85%AC",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "town hall",
+                "public hall"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news1",
+                "nf13"
+              ],
+              "pronounced": "こうかいどう",
+              "written": "公会堂"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "小鳥",
+      "reading": "ことり",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%B0%8F",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "small bird",
+                "little bird"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news1",
+                "nf18"
+              ],
+              "pronounced": "ことり",
+              "written": "小鳥"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "焼き鳥",
+      "reading": "やきとり",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E7%84%BC",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "yakitori",
+                "chicken pieces (or sometimes beef or pork offal) grilled on a skewer"
+              ]
+            },
+            {
+              "glosses": [
+                "grilled and skewered bird (esp. sparrow)"
+              ]
+            },
+            {
+              "glosses": [
+                "failing to win a single hand during a half-game"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news2",
+                "nf27"
+              ],
+              "pronounced": "やきとり",
+              "written": "焼き鳥"
+            },
+            {
+              "priorities": [
+                "ichi1",
+                "news2",
+                "nf27"
+              ],
+              "pronounced": "やきとり",
+              "written": "焼鳥"
+            },
+            {
+              "priorities": [],
+              "pronounced": "やきとり",
+              "written": "焼き鶏"
+            },
+            {
+              "priorities": [],
+              "pronounced": "やきとり",
+              "written": "焼鶏"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "金魚",
+      "reading": "きんぎょ",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E9%87%91",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "goldfish (Carassius auratus)"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news1",
+                "nf19"
+              ],
+              "pronounced": "きんぎょ",
+              "written": "金魚"
+            },
+            {
+              "priorities": [],
+              "pronounced": "キンギョ",
+              "written": "金魚"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "魚屋",
+      "reading": "さかなや",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E9%AD%9A",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "fish market",
+                "fish dealer",
+                "fishmonger"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news2",
+                "nf25",
+                "spec2"
+              ],
+              "pronounced": "さかなや",
+              "written": "魚屋"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "子犬",
+      "reading": "こいぬ",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%AD%90",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "puppy"
+              ]
+            },
+            {
+              "glosses": [
+                "small dog"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "spec1"
+              ],
+              "pronounced": "こいぬ",
+              "written": "子犬"
+            },
+            {
+              "priorities": [],
+              "pronounced": "こいぬ",
+              "written": "仔犬"
+            },
+            {
+              "priorities": [],
+              "pronounced": "こいぬ",
+              "written": "小犬"
+            },
+            {
+              "priorities": [],
+              "pronounced": "こいぬ",
+              "written": "子いぬ"
+            },
+            {
+              "priorities": [],
+              "pronounced": "こいぬ",
+              "written": "子イヌ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "番犬",
+      "reading": "ばんけん",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E7%95%AA",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "watchdog",
+                "guard dog"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news2",
+                "nf42",
+                "spec2"
+              ],
+              "pronounced": "ばんけん",
+              "written": "番犬"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "漢方",
+      "reading": "かんぽう",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E6%BC%A2",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "kampō",
+                "traditional (herbal) medicine based on ancient Chinese medicine"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "news1",
+                "nf23"
+              ],
+              "pronounced": "かんぽう",
+              "written": "漢方"
+            },
+            {
+              "priorities": [],
+              "pronounced": "かんぽう",
+              "written": "漢法"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "漢語",
+      "reading": "かんご",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E6%BC%A2",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "Japanese word of Chinese origin",
+                "Sino-Japanese word"
+              ]
+            },
+            {
+              "glosses": [
+                "language of the Han people",
+                "Chinese"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news2",
+                "nf37"
+              ],
+              "pronounced": "かんご",
+              "written": "漢語"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "坊主",
+      "reading": "ぼうず",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%9D%8A",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "Buddhist priest",
+                "bonze"
+              ]
+            },
+            {
+              "glosses": [
+                "close-cropped hair",
+                "crew cut",
+                "person with a shorn head"
+              ]
+            },
+            {
+              "glosses": [
+                "boy",
+                "sonny",
+                "lad"
+              ]
+            },
+            {
+              "glosses": [
+                "not catching anything",
+                "getting skunked"
+              ]
+            },
+            {
+              "glosses": [
+                "the August 20-point card"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news2",
+                "nf28"
+              ],
+              "pronounced": "ぼうず",
+              "written": "坊主"
+            },
+            {
+              "priorities": [],
+              "pronounced": "ぼんず",
+              "written": "坊主"
+            },
+            {
+              "priorities": [],
+              "pronounced": "ぼうず",
+              "written": "房主"
+            },
+            {
+              "priorities": [],
+              "pronounced": "ぼんず",
+              "written": "房主"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "赤ん坊",
+      "reading": "あかんぼう",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E8%B5%A4",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "baby",
+                "infant"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1",
+                "news1",
+                "nf14"
+              ],
+              "pronounced": "あかんぼう",
+              "written": "赤ん坊"
+            },
+            {
+              "priorities": [],
+              "pronounced": "あかんぼ",
+              "written": "赤ん坊"
+            },
+            {
+              "priorities": [],
+              "pronounced": "あかんぼ",
+              "written": "赤んぼ"
+            },
+            {
+              "priorities": [],
+              "pronounced": "あかんぼう",
+              "written": "赤んぼう"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "凄まじい",
+      "reading": "すさまじい",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%87%84",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "terrible",
+                "dreadful",
+                "awful",
+                "horrible",
+                "ghastly"
+              ]
+            },
+            {
+              "glosses": [
+                "tremendous",
+                "terrific",
+                "enormous",
+                "prodigious",
+                "stupendous",
+                "amazing"
+              ]
+            },
+            {
+              "glosses": [
+                "appalling",
+                "shocking",
+                "staggering",
+                "absurd"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [
+                "ichi1"
+              ],
+              "pronounced": "すさまじい",
+              "written": "凄まじい"
+            },
+            {
+              "priorities": [],
+              "pronounced": "すさまじい",
+              "written": "凄じい"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "凄腕",
+      "reading": "すごうで",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E5%87%84",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "remarkable ability",
+                "mastery",
+                "brilliant technique"
+              ]
+            },
+            {
+              "glosses": [
+                "go-getter",
+                "resourceful person",
+                "wizard",
+                "virtuoso"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [],
+              "pronounced": "すごうで",
+              "written": "凄腕"
+            },
+            {
+              "priorities": [],
+              "pronounced": "すごうで",
+              "written": "スゴ腕"
+            },
+            {
+              "priorities": [],
+              "pronounced": "すごうで",
+              "written": "すご腕"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "word": "痩せ細る",
+      "reading": "やせほそる",
+      "sourceUrl": "https://kanjiapi.dev/v1/words/%E7%97%A9",
+      "entries": [
+        {
+          "meanings": [
+            {
+              "glosses": [
+                "to lose weight",
+                "to become thin",
+                "to wither away"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "priorities": [],
+              "pronounced": "やせほそる",
+              "written": "やせ細る"
+            },
+            {
+              "priorities": [],
+              "pronounced": "やせほそる",
+              "written": "痩せ細る"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

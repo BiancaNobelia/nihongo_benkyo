@@ -1,5 +1,6 @@
 import {handwritingMarkup,mountHandwriting} from './handwriting-view.js?v=20261020-handwriting-cache';
 import {strokeOrderMarkup,mountStrokeOrder} from './stroke-order-view.js?v=20261021-stroke-order';
+import {kanjiExamplesMarkup} from './kanji-examples-view.js?v=20261023-examples';
 import {createTransitivityView} from './transitivity-view.js?v=20261015-jidoushi-tadoushi';
 import {TRANSITIVITY_PAIRS,TRANSITIVITY_ENTRIES} from './transitivity-data.js?v=20261015-jidoushi-tadoushi';
 import {PARTICLE_ENTRIES,PARTICLE_TOPICS} from './particle-data.js?v=20261015-jidoushi-tadoushi';
@@ -194,7 +195,7 @@ function detail(char, record = true) {
     ${strokeOrderMarkup(k)}
     <div class="reading-grid"><div><small>ONYOMI · BACAAN ON</small><p lang="ja">${escape(k.on.join('、') || '—')}</p></div><div><small>KUNYOMI · BACAAN KUN</small><p lang="ja">${escape(k.kun.join('、') || '—')}</p></div></div>
     <p class="reading-note">Titik memisahkan bacaan kanji dan akhiran hiragana (okurigana).</p>
-    <div class="example-box"><span class="example-title">TEMUKAN DALAM KATA</span>${k.example ? `<ruby lang="ja">${escape(k.example.word)}<rt>${escape(k.example.reading)}</rt></ruby><p>${escape(k.example.meaning)}</p>${k.example.meaningEn ? `<small class="source-gloss" lang="en">${escape(k.example.meaningEn)}</small>` : ''}` : '<p>Contoh kosakata belum tersedia untuk karakter ini. Bacaan on dan kun tetap dapat dipelajari.</p>'}</div>
+    ${kanjiExamplesMarkup(k,escape)}
     ${componentNoteMarkup(k.char,escape)}
     ${related.length ? `<div class="similar-related"><h3>Jangan tertukar dengan...</h3>${related.map(group => `<a href="#mirip/${group.id}" class="similar-related-link"><span lang="ja">${group.members.map(m => m.char).join(' · ')}</span><span>Bandingkan ${icon('arrow')}</span></a>`).join('')}</div>` : ''}
     ${families.length ? `<div class="similar-related"><h3>Keluarga radikal & komponen</h3>${families.map(f => `<a href="#mirip/${f.id}" class="radical-related-link"><span lang="ja">${f.symbol}</span><span>${escape(f.title)}<small>${f.members.length} kanji dalam keluarga</small></span>${icon('arrow')}</a>`).join('')}</div>` : ''}

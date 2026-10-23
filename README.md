@@ -6,6 +6,13 @@ DaKanji dan ONNX Runtime Web yang disimpan bersama situs.
 
 ## Fitur
 
+- Detail kanji menampilkan beberapa contoh dalam **Temukan dalam kata**:
+  7.742 pasangan kanji–contoh, termasuk minimal tiga contoh untuk setiap N5/N4.
+  Misalnya 学 memiliki 37 contoh dan 水 memiliki 12. Enam contoh tampil dahulu;
+  daftar sisanya dapat dibuka/ditutup. Setiap contoh menampilkan furigana,
+  arti Indonesia, dan sorotan karakter yang dipelajari. Contoh utama lama tetap
+  di urutan pertama; contoh tambahan memakai kosakata lokal dan 38 kata kamus
+  tambahan, tanpa unduhan model. Validasi: `node --test tests/kanji-examples.test.mjs`.
 - Detail seluruh 253 kanji N5–N4 (84 N5, 169 N4) menampilkan cara menulis:
   animasi goresan, Putar/Jeda, langkah sebelumnya/berikutnya, ulang dari awal,
   dan pilihan nomor goresan. Titik hijau menandai awal goresan aktif.

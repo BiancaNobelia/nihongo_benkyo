@@ -51,6 +51,37 @@ Perubahan dari sumber: struktur disederhanakan, satu contoh kata kamus dipilih
 per kanji, tambahan contoh dari kanjiapi.dev, arti Indonesia ditambahkan,
 dan 110 kartu lama dipertahankan.
 
+## Perluasan contoh pada detail kanji — 23 Oktober 2026
+
+Bagian **Temukan dalam kata** kini mengindeks kosakata dari `kanji-data.js`,
+`kotoba-data.js` (workbook Minna pengguna), `kotoba-n3-data.js` (workbook N3
+pengguna), dan jawaban benar bank bacaan JLPT yang sumbernya dijelaskan di bawah.
+Pilihan pengecoh tidak digunakan. Ejaan dan bacaan yang sama digabungkan;
+bacaan berbeda untuk satu ejaan tetap dipertahankan. Contoh harus benar-benar
+mengandung karakter yang dibuka. Bacaan seluruh kata ditampilkan sebagai ruby,
+tanpa menebak pembagian bacaan per karakter.
+
+`kanji-example-supplements.js` menambahkan 38 kosakata untuk kanji yang masih
+sedikit contohnya. Semua pasangan ejaan–bacaan dicocokkan dengan JMdict melalui
+[kanjiapi.dev](https://kanjiapi.dev/); respons kamus yang relevan tersimpan di
+`data/kanji-example-supplement-source.json`. Arti Indonesianya disunting secara
+editorial dari arti kamus. Data adaptasi ini mengikuti CC BY-SA 4.0 dan atribusi
+EDRDG di atas. Berkas yang sama memperjelas tujuh arti impor, antara lain
+学期 sebagai semester, 学問 sebagai kajian akademis, serta 中学 sebagai SMP.
+
+Hasilnya 7.742 pasangan kanji–contoh (satu kata dapat muncul pada beberapa
+kanji), dari 4.747 ejaan berbeda. Semua 84 N5 dan 169 N4 memiliki minimal tiga
+contoh; 354 N3, 273 N2, dan 311 N1 memiliki lebih dari satu. Lima kanji langka
+N1 yang sebelumnya belum memiliki contoh tetap menampilkan pemberitahuan;
+contoh untuk karakter tersebut tidak dibuat-buat. Tidak ada klaim bahwa semua
+contoh kosakata memiliki level JLPT yang sama dengan kartu kanjinya.
+
+Contoh utama lama tetap tampil pertama, dilanjutkan contoh dari materi dasar
+lebih dahulu. Enam contoh tampil langsung dan sisanya dapat dibuka. Indeks
+dibangun sekali dari data lokal ketika detail pertama kali dibuka; tidak
+memanggil API kamus atau mengunduh model saat digunakan. Pengujian:
+`node --test tests/kanji-examples.test.mjs`.
+
 ## Tinjauan bahasa Indonesia — 13 Oktober 2026
 
 Seluruh **2.383 arti kanji dan 2.378 contoh kata** telah dibaca dan ditinjau
