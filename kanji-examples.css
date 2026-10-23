@@ -26,6 +26,21 @@
   border-bottom:1px solid var(--line);
 }
 .kanji-example-row:last-child { border-bottom:0; }
+.kanji-example-sentence,.kanji-example-note { grid-column:1/-1; }
+.kanji-example-sentence { margin:2px 0 8px; padding:15px 16px; border-radius:10px; background:var(--surface); border:1px solid var(--line); }
+.kanji-example-sentence:empty { display:none; }
+.kanji-examples .kanji-example-note { font-size:13px; color:var(--muted); }
+.example-sentence-label { font-size:10px; letter-spacing:1.2px; color:var(--muted); font-weight:700; }
+.kanji-examples .kanji-example-sentence .example-sentence-text { font-size:21px; line-height:2.4; margin:12px 0 8px; font-family:var(--serif); }
+.kanji-example-sentence .example-sentence-text ruby { font-size:inherit; line-height:inherit; }
+.kanji-example-sentence .example-sentence-text rt { font-size:12px; }
+.kanji-examples .kanji-example-sentence .example-sentence-translation { font-size:15px; line-height:1.75; }
+.example-sentence-target { color:var(--teal); background:var(--teal-soft); border-radius:3px; }
+.example-sentence-source { display:inline-block; font-size:11px; margin-top:10px; color:var(--muted); text-decoration:underline; text-underline-offset:3px; }
+.example-sentence-source:hover { color:var(--accent); }
+.kanji-examples .example-sentences-status { font-size:14px; color:var(--muted); }
+.kanji-examples .example-sentence-credits { margin-top:16px; font-size:11px; color:var(--muted); line-height:1.8; }
+.example-sentence-credits a { text-decoration:underline; text-underline-offset:3px; }
 .kanji-example-row ruby { justify-self:start; max-width:100%; overflow-wrap:anywhere; line-height:1.6; }
 .kanji-example-row ruby strong { color:var(--accent); font-weight:600; }
 .kanji-example-row rt { overflow-wrap:anywhere; }
@@ -46,4 +61,6 @@
 @media(max-width:600px) {
   .kanji-example-row { grid-template-columns:minmax(0,1fr); gap:3px; padding:16px 0; }
   .kanji-examples .kanji-example-row ruby { font-size:28px; }
+  .kanji-examples .kanji-example-sentence .example-sentence-text ruby { font-size:inherit; }
+  .kanji-example-sentence { padding:12px; }
 }

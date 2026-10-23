@@ -40,8 +40,9 @@ progres yang tersimpan tetap dipertahankan berdasarkan karakter.
   [ketentuan lisensi EDRDG](https://www.edrdg.org/edrdg/licence.html).
 - OpenJLPT dan kontributornya: penyusunan data serta perbaikan sumber.
   [NOTICE asli](data/licenses/OpenJLPT-NOTICE.md) disertakan utuh.
-  Situs ini tidak memakai kalimat Tatoeba, diagram KanjiVG, atau materi tata
-  bahasa yang turut disebut dalam NOTICE tersebut.
+  Contoh kalimat Tatoeba kini digunakan pada detail kosakata; lihat bagian
+  contoh kalimat di bawah. Diagram KanjiVG N5/N4 dijelaskan pada bagian urutan
+  goresan dalam dokumen ini.
 
 Data adaptasi (`kanji-data.js` dan berkas data turunannya) didistribusikan
 dengan [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
@@ -69,18 +70,86 @@ editorial dari arti kamus. Data adaptasi ini mengikuti CC BY-SA 4.0 dan atribusi
 EDRDG di atas. Berkas yang sama memperjelas tujuh arti impor, antara lain
 学期 sebagai semester, 学問 sebagai kajian akademis, serta 中学 sebagai SMP.
 
-Hasilnya 7.742 pasangan kanji–contoh (satu kata dapat muncul pada beberapa
+Hasil awalnya 7.742 pasangan kanji–contoh (satu kata dapat muncul pada beberapa
 kanji), dari 4.747 ejaan berbeda. Semua 84 N5 dan 169 N4 memiliki minimal tiga
 contoh; 354 N3, 273 N2, dan 311 N1 memiliki lebih dari satu. Lima kanji langka
-N1 yang sebelumnya belum memiliki contoh tetap menampilkan pemberitahuan;
-contoh untuk karakter tersebut tidak dibuat-buat. Tidak ada klaim bahwa semua
-contoh kosakata memiliki level JLPT yang sama dengan kartu kanjinya.
+N1 kemudian dilengkapi pada pembaruan kalimat berikut. Tidak ada klaim bahwa
+semua contoh kosakata memiliki level JLPT yang sama dengan kartu kanjinya.
 
 Contoh utama lama tetap tampil pertama, dilanjutkan contoh dari materi dasar
 lebih dahulu. Enam contoh tampil langsung dan sisanya dapat dibuka. Indeks
 dibangun sekali dari data lokal ketika detail pertama kali dibuka; tidak
 memanggil API kamus atau mengunduh model saat digunakan. Pengujian:
 `node --test tests/kanji-examples.test.mjs`.
+
+## Contoh kalimat untuk setiap kosakata — 23 Oktober 2026
+
+`data/kanji-sentences.json` menyediakan **4.829 pasangan kata–bacaan** dan
+**7.747 pasangan kanji–contoh**, mencakup seluruh **2.383 kanji** tanpa kartu
+kosong. Setiap contoh memiliki kalimat Jepang, furigana seluruh kanji, arti
+Indonesia, dan penanda kata yang dipelajari. Kata dengan ejaan sama tetapi
+bacaan berbeda tetap mendapat konteks masing-masing. Data baru dimuat sekali
+ketika detail dibuka; tidak ada API kamus atau penerjemah yang dipanggil oleh
+browser. Kegagalan unduhan menampilkan tombol coba lagi.
+
+Asal kalimat yang dipublikasikan:
+
+- 1.735 contoh asli, ditulis/disunting oleh AI untuk situs ini. Penugasan
+  konteks per kata dan terjemahannya disimpan dalam `data/kanji-sentence-contexts*.tsv`.
+  Konteks dasar sengaja tetap memakai sebagian kana agar mudah dibaca. Istilah
+  teknis dan sastra memperoleh konteks yang sesuai, termasuk pembahasan istilah.
+- 721 contoh bank JLPT dan 223 contoh bunpou yang sebelumnya telah digunakan
+  situs ini, beserta terjemahannya. Sumber asal masing-masing bank tetap berlaku.
+- 2.150 contoh dari **Tatoeba dan para kontributornya**, melalui berkas kosakata
+  OpenJLPT N5–N1 pada snapshot yang dicatat di `data/source-lock.json`.
+  Kalimat dipilih hanya jika ejaan dan bacaannya cocok; seluruh kanji harus
+  memiliki anotasi. Sejumlah ejaan/bentuk sopan diadaptasi tanpa mengubah kala;
+  teks asal dan ID kalimat tetap disimpan. Tautan di setiap contoh menuju
+  halaman sumber beserta nama kontributornya.
+
+Kalimat Tatoeba mengikuti [CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/)
+dan [ketentuan pemakaian korpus](https://en.wiki.tatoeba.org/articles/show/using-the-tatoeba-corpus).
+Kompilasi, anotasi, adaptasi, dan terjemahan mengikuti CC BY-SA 4.0 sebagaimana
+data OpenJLPT. Teks sumber tidak diklaim sebagai karya asli situs ini.
+Draf terjemahan Indonesia untuk kalimat Tatoeba dibuat dengan Google Translate
+pada waktu penyiapan data, lalu diperiksa secara struktural dan disunting pada
+kasus yang ditemukan; **belum seluruhnya ditinjau oleh pengajar bahasa Jepang**.
+Koreksi terpisah tercatat dalam `data/kanji-sentence-editorial.json`.
+Kalimat dan terjemahan disimpan lokal, bukan diterjemahkan ketika pengguna membuka halaman.
+
+Lima contoh tambahan di `kanji-rare-examples.js`:
+
+- 赳赳（きゅうきゅう）, ungkapan sastra “gagah berani”:
+  [Digital Daijisen melalui Kotobank](https://kotobank.jp/word/赳赳-2028748).
+- 舜（しゅん）, nama raja dalam legenda Tiongkok:
+  [Kotobank](https://kotobank.jp/word/舜-78515).
+- 彪（たけし）, salah satu bacaan nama orang:
+  [Digital Daijisen melalui Kotobank](https://kotobank.jp/word/彪-613057).
+- 崚嶒（りょうそう）, gunung menjulang, istilah sastra:
+  [arsip Perpustakaan Kuki](https://adeac.jp/kuki-lib/texthtml/d200020/mp220000-200020/ht000040).
+- 晟（あきら）, salah satu bacaan nama orang:
+  [Kanji Jiten](https://kanjitisiki.com/zinmei/199.html).
+
+Contoh 彪 dan 晟 menggunakan tokoh fiktif; diberi catatan sebagai **contoh bacaan
+nama**, bukan kosakata sehari-hari atau satu-satunya bacaan nama tersebut.
+Beberapa arti impor yang tidak sesuai konteks juga diperbaiki dalam
+`KANJI_EXAMPLE_GLOSSES`, misalnya 仕舞い “akhir/selesai”, 今日（こんにち）
+“dewasa ini”, dan 直に（じかに）“secara langsung”.
+
+Rebuild tanpa jaringan (memakai snapshot sumber dan terjemahan yang disertakan):
+
+```text
+node scripts/export_kanji_sentence_inputs.mjs
+python scripts/build_authored_kanji_sentences.py
+python scripts/build_kanji_sentences.py
+node --test tests/kanji-examples.test.mjs tests/kanji-sentences.test.mjs
+```
+
+Builder gagal jika ada pasangan yang belum lengkap. Pengujian memeriksa
+kesetaraan seluruh indeks kosakata, furigana tiap kanji, bacaan kata target,
+offset UTF-16 untuk karakter seperti 𠮟, terjemahan, pemuatan ulang setelah gagal,
+dan pencegahan hasil unduhan masuk ke dialog yang sudah ditutup. Statistik
+hasil build disimpan dalam `data/kanji-sentence-coverage.json`.
 
 ## Tinjauan bahasa Indonesia — 13 Oktober 2026
 

@@ -1,6 +1,7 @@
 import {handwritingMarkup,mountHandwriting} from './handwriting-view.js?v=20261020-handwriting-cache';
 import {strokeOrderMarkup,mountStrokeOrder} from './stroke-order-view.js?v=20261021-stroke-order';
-import {kanjiExamplesMarkup} from './kanji-examples-view.js?v=20261023-examples';
+import {kanjiExamplesMarkup} from './kanji-examples-view.js?v=20261023-sentences';
+import {mountKanjiSentences} from './kanji-sentence-view.js?v=20261023-sentences';
 import {createTransitivityView} from './transitivity-view.js?v=20261015-jidoushi-tadoushi';
 import {TRANSITIVITY_PAIRS,TRANSITIVITY_ENTRIES} from './transitivity-data.js?v=20261015-jidoushi-tadoushi';
 import {PARTICLE_ENTRIES,PARTICLE_TOPICS} from './particle-data.js?v=20261015-jidoushi-tadoushi';
@@ -85,6 +86,7 @@ try { readingHistory = cleanReadingHistory(JSON.parse(localStorage.getItem(READI
 let view = '';
 let disposeHandwriting=()=>{};
 let disposeStrokeOrder=()=>{};
+let disposeKanjiSentences=()=>{};
 let filters = { level:'all', query:'', collection:'all' };
 const PAGE_SIZE = 24;
 let currentPage = 1;
@@ -185,7 +187,7 @@ function renderGrid() {
   document.querySelector('#library-bottom').innerHTML = `<span role="status">Menampilkan ${result.length ? start+1 : 0}–${Math.min(start+pageSize, result.length)} dari ${result.length.toLocaleString('id-ID')} kanji</span>${paging}`;
   document.querySelector('#page-select')?.addEventListener('change', e => { currentPage = Number(e.target.value); renderGrid(); document.querySelector('#page-select')?.focus({preventScroll:true}); });
 }
-function openModal(html) { disposeStrokeOrder();disposeStrokeOrder=()=>{}; modalContent.innerHTML = html; modalContent.dataset.char = ''; if (!modal.open) modal.showModal(); modal.scrollTop=0; }
+function openModal(html) { disposeStrokeOrder();disposeStrokeOrder=()=>{}; disposeKanjiSentences();disposeKanjiSentences=()=>{}; modalContent.innerHTML = html; modalContent.dataset.char = ''; if (!modal.open) modal.showModal(); modal.scrollTop=0; }
 function detail(char, record = true) {
   const k = KANJI.find(k => k.char === char); if (!k) return;
   const related = groupsForCharacter(SIMILAR_GROUPS, char);
@@ -202,6 +204,7 @@ function detail(char, record = true) {
     <div class="modal-actions"><button class="secondary" data-save="${k.char}">${icon('bookmark')} ${progress.saved.includes(char) ? 'Tersimpan' : 'Simpan kanji'}</button><button class="primary" data-known="${k.char}">${icon('check')} ${progress.known.includes(char) ? 'Sudah dikuasai' : 'Tandai dikuasai'}</button></div>`);
   modalContent.dataset.char = char;
   disposeStrokeOrder=mountStrokeOrder(modalContent,k,escape);
+  disposeKanjiSentences=mountKanjiSentences(modalContent,escape);
 }
 function levelOptions(selected = 'all', all = true) {
   return `${all ? '<option value="all">Semua level</option>' : ''}${levels.map(l => `<option value="${l}" ${l === selected ? 'selected' : ''}>${l} · ${levelNames[l]} (${KANJI.filter(k => k.level === l).length})</option>`).join('')}`;
@@ -457,7 +460,7 @@ document.addEventListener('click', e => {
   if (action === 'sources') openModal(`<div class="prose"><div class="section-kicker">MATERI YANG KITA PELAJARI</div><h2 id="modal-title">Tentang koleksi kanji</h2><p>Koleksi mencakup seluruh ${KANJI.length.toLocaleString('id-ID')} kanji dalam snapshot OpenJLPT yang digunakan, dari N5 sampai N1. Pembagian level mengikuti daftar komunitas Jonathan Waller dan tambahan joyo dari OpenJLPT, bukan daftar resmi JLPT. Seluruh arti Indonesia dan contoh kata ditinjau ulang secara editorial oleh AI pada 13 Oktober 2026 agar lebih jelas dan sesuai konteks. Arti pada kartu diringkas untuk belajar; arti Inggris tersedia sebagai pembanding. Rincian tinjauan dan rujukan kamus tersedia dalam catatan data.</p><p>Bacaan dan jumlah goresan bersumber dari <a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project" target="_blank" rel="noopener">KANJIDIC2</a>, hak cipta James William Breen dan Electronic Dictionary Research and Development Group, melalui <a href="https://github.com/evanclan/OpenJLPT" target="_blank" rel="noopener">OpenJLPT</a>. Contoh kata berasal dari JMdict dan daftar Jonathan Waller melalui OpenJLPT serta <a href="https://kanjiapi.dev/" target="_blank" rel="noopener">kanjiapi.dev</a>.</p><p>Data adaptasi dalam koleksi ini tersedia dengan <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Lihat <a href="https://www.edrdg.org/edrdg/licence.html" target="_blank" rel="noopener">ketentuan sumber</a> dan <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">catatan data</a>.</p><p>Keluarga radikal dan pembahasan bentuk kanji pada kuis menggunakan label komponen dari <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> oleh Ulrich Apel dan kontributor. Ekstrak komponen ini memakai <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>. Pengelompokan dan penjelasan Indonesia ditambahkan untuk membantu belajar.</p><p>Materi tersedia langsung di website. Progres dan simpanan disimpan di browser ini, tanpa akun.</p></div>`);
 });
 modal.addEventListener('click', e => { if (e.target === modal) { const box = modal.getBoundingClientRect(); if (e.clientX < box.left || e.clientX > box.right || e.clientY < box.top || e.clientY > box.bottom) modal.close(); } });
-modal.addEventListener('close',()=>{disposeStrokeOrder();disposeStrokeOrder=()=>{};});
+modal.addEventListener('close',()=>{disposeStrokeOrder();disposeStrokeOrder=()=>{};disposeKanjiSentences();disposeKanjiSentences=()=>{};});
 window.addEventListener('hashchange', route);
 window.addEventListener('storage', e => { if (e.key === KEY) { try { progress = cleanProgress(JSON.parse(e.newValue), KANJI); if (view === 'progres') renderProgress(); else if (view === 'beranda' || view === 'kanji') renderLibrary(view === 'beranda'); } catch { /* Keep the current valid session. */ } } });
 window.addEventListener('storage', e => {

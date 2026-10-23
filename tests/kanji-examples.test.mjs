@@ -14,6 +14,7 @@ test('every N5 and N4 kanji has at least three examples, with no lost original e
   for(const k of KANJI) {
     const entries=kanjiExamples(k);
     total+=entries.length;
+    assert.ok(entries.length>0,`${k.char} must not be left without an example`);
     if(['N5','N4'].includes(k.level)) assert.ok(entries.length>=3,k.char);
     if(k.example) assert.deepEqual(entries[0],{...k.example,meaning:KANJI_EXAMPLE_GLOSSES[`${k.example.word}|${k.example.reading}`] ?? k.example.meaning},k.char);
     assert.equal(new Set(entries.map(e=>`${e.word}|${e.reading}`)).size,entries.length,k.char);
@@ -69,7 +70,8 @@ test('view previews six examples, offers the remainder, and supports small and e
   assert.match(html,/<rt>がくせい<\/rt>/);
   assert.match(html,/Tampilkan lebih sedikit/);
   assert.doesNotMatch(kanjiExamplesMarkup(card('駅'),escape),/<details/);
-  assert.match(kanjiExamplesMarkup(card('赳'),escape),/belum tersedia/);
+  assert.match(kanjiExamplesMarkup({char:'㐂'},escape),/belum tersedia/);
+  assert.match(kanjiExamplesMarkup(card('赳'),escape),/きゅうきゅう/);
 });
 
 test('example meanings are escaped before rendering',()=>{

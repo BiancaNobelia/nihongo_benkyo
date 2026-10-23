@@ -2,7 +2,8 @@ import {KANJI} from './kanji-data.js?v=20261015-jidoushi-tadoushi';
 import {KOTOBA_ENTRIES} from './kotoba-data.js?v=20261015-jidoushi-tadoushi';
 import {KOTOBA_N3_ENTRIES} from './kotoba-n3-data.js?v=20261015-jidoushi-tadoushi';
 import {PRACTICE_BANKS} from './practice-banks.js?v=20261015-jidoushi-tadoushi';
-import {KANJI_EXAMPLE_SUPPLEMENTS,KANJI_EXAMPLE_GLOSSES} from './kanji-example-supplements.js?v=20261023-examples';
+import {KANJI_EXAMPLE_SUPPLEMENTS,KANJI_EXAMPLE_GLOSSES} from './kanji-example-supplements.js?v=20261023-sentences';
+import {KANJI_RARE_EXAMPLES} from './kanji-rare-examples.js?v=20261023-sentences';
 
 const levelRank = {N5:0, N4:1, N3:2, N2:3, N1:4};
 const keyOf = e => `${e.word}\0${e.reading}`;
@@ -22,7 +23,7 @@ export function buildKanjiExampleIndex(cards, vocabulary) {
     if (unique.has(key)) {
       unique.get(key).rank = Math.min(unique.get(key).rank, rank);
     } else {
-      unique.set(key, {word:e.word, reading:e.reading, meaning:e.meaning, rank});
+      unique.set(key, {word:e.word, reading:e.reading, meaning:e.meaning, rank, ...(e.note ? {note:e.note} : {})});
     }
   }
   const index = new Map(cards.map(k => [k.char, []]));
@@ -40,6 +41,7 @@ export function kanjiExamples(card) {
     ...KOTOBA_ENTRIES.map(e => ({word:e.spelling, reading:e.reading, meaning:e.meaning, rank:e.chapter<=25 ? 0 : 1})),
     ...KOTOBA_N3_ENTRIES.map(e => ({word:e.spelling, reading:e.reading, meaning:e.meaning, rank:2})),
     ...KANJI_EXAMPLE_SUPPLEMENTS,
+    ...KANJI_RARE_EXAMPLES,
   ]);
   const entries = index.get(card.char) || [];
   // Keep the familiar example at the top, while preserving distinct readings.
