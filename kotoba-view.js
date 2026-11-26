@@ -1,6 +1,7 @@
 import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261126-kotoba-photo-50';
-import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261126-kotoba-materials';
+import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261126-kotoba-sentences';
 import { kotobaChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261126-kotoba-materials';
+import { showKotobaSentence } from './kotoba-sentence-view.js?v=20261126-kotoba-sentences';
 import { requestedQuizCount } from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
 import { shuffle } from './core.js?v=20261015-jidoushi-tadoushi';
 
@@ -135,6 +136,7 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
         ${session.mode==='jp-id' && q.word!==q.reading ? `<p class="kotoba-prompt-reading" lang="ja">${escape(q.reading)}</p>` : ''}
         <div class="quiz-options kotoba-options ${mode.answerLanguage==='id' ? 'kotoba-meaning-options' : ''}">${q.options.map((a,i)=>`<button class="quiz-option reveal-option" data-kotoba-answer="${i}" ${mode.audio ? 'disabled' : ''}><span>${'ABCD'[i]}</span><span class="quiz-choice-content"><span class="quiz-choice-label" lang="${mode.answerLanguage}">${escape(a)}</span></span></button>`).join('')}</div>
         <div class="quiz-feedback" id="kotoba-feedback" role="status">${mode.audio ? 'Dengarkan soal untuk membuka pilihan jawaban.' : 'Pilih satu jawaban yang paling tepat.'}</div>
+        <div class="kotoba-sentence" id="kotoba-sentence" aria-live="polite" hidden></div>
       </div><div class="quiz-next"><button class="text-button" data-kotoba="exit">Akhiri latihan</button><button class="primary" data-kotoba="next" disabled>${session.index===session.questions.length-1 ? 'Lihat hasil' : 'Soal berikutnya'} ${icon('arrow')}</button></div><div id="kotoba-exit-confirm" hidden></div></div>`;
     window.scrollTo({top:0,behavior:'instant'});find('.kotoba-prompt').focus({preventScroll:true});
     if(!mode.audio) startTimer();
@@ -188,6 +190,7 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
     const feedback=find('#kotoba-feedback');
     feedback.className=`quiz-feedback ${chosen===q.answer ? 'success' : 'error'}`;
     feedback.innerHTML=`<p class="answer-status">${chosen===q.answer ? 'Tepat! Kamu sudah mengenali kata ini.' : chosen===null ? 'Waktunya habis. Yuk, pahami jawabannya.' : 'Belum tepat. Yuk, ingat lagi kata ini.'}</p>${q.meaningsEn.length ? `<details class="kotoba-reference"><summary>Arti Inggris rujukan untuk jawaban benar</summary><p lang="en">${escape(q.meaningsEn.join('; '))}</p></details>` : ''}${voice('ja') ? `<button class="text-button" data-kotoba="pronounce">${icon('speaker')} Dengarkan pelafalan</button>` : ''}`;
+    showKotobaSentence(find('#kotoba-sentence'), q, escape);
     find('[data-kotoba="next"]').disabled=false;
   }
 

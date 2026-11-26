@@ -1443,3 +1443,16 @@ diri yang hanya menjadi rujukan cerita, tempat, atau acara. Kuis Kotoba Minna
 memakai daftar ini untuk soal dan pilihan jawaban. Golongan kata kerja mengikuti
 penanda I, II, dan III pada foto.
 Cek dengan `node --test tests/materi.test.mjs`.
+
+### Contoh kalimat setelah menjawab Kuis Kotoba
+
+Kuis Minna dan N3 menampilkan satu contoh untuk kosakata jawaban benar jika
+tersedia. Contoh berasal dari bank kalimat kanji, latihan Bunpou dan JLPT, dan
+kalimat tambahan untuk Kotoba di `data/kotoba-sentences-editorial.tsv`. Bank
+kanji menyertakan sumber Tatoeba seperti dijelaskan di bagian Contoh Kalimat,
+dengan tautan per contoh. Furigana ditampilkan sesuai anotasi sumber.
+
+Indeks dibuat dengan `node scripts/build_kotoba_sentences.mjs` tanpa jaringan.
+Pemilihan mempertimbangkan bentuk kata, bacaan, arti Indonesia, dan konteks
+entri dalam bab yang dipilih. Contoh baru tidak disajikan jika tidak ada
+padanan yang memadai. Data dimuat saat jawaban pertama diperiksa.

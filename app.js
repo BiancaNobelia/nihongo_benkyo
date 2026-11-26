@@ -34,8 +34,8 @@ import { quizSetupPanel } from './quiz-setup-view.js?v=20261016-jlpt-furigana';
 import { answerDetails, answerDetailsMarkup } from './quiz-feedback.js?v=20261016-jlpt-furigana';
 import { kanjiReadingsMarkup, kanjiChoiceDetailsMarkup, writingChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261016-jlpt-furigana';
 import { READING_CATEGORIES, readingComposition } from './reading-balance.js?v=20261015-jidoushi-tadoushi';
-import { createKotobaView } from './kotoba-view.js?v=20261126-kotoba-photo-50';
-import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261126-kotoba-materials';
+import { createKotobaView } from './kotoba-view.js?v=20261126-kotoba-sentences';
+import { KOTOBA_MODES, chapterLabel } from './kotoba-core.js?v=20261126-kotoba-sentences';
 import { createHenkanView } from './henkan-view.js?v=20261015-henkan-nouns';
 import { createParticleView } from './particle-view.js?v=20261015-jidoushi-tadoushi';
 

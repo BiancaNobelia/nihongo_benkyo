@@ -33,10 +33,11 @@ export function getKotobaPool(entries, { chapters=null, type='all', mode='jp-id'
     // A suffix placeholder cannot be pronounced as an independent word.
     if (mode==='audio-jp' && /[～〜]/u.test(e.reading)) continue;
     const key=`${normalize(word)}|${kanaKey(e.reading)}`;
-    if (!grouped.has(key)) grouped.set(key,{id:key,word,reading:e.reading,meanings:[],chapters:[],types:[],sourceRows:[],levels:[],sourceGroups:[],meaningsEn:[]});
+    if (!grouped.has(key)) grouped.set(key,{id:key,word,reading:e.reading,meanings:[],chapters:[],types:[],entryIds:[],sourceRows:[],levels:[],sourceGroups:[],meaningsEn:[]});
     const q=grouped.get(key);
     q.meanings.push(e.meaning); if(e.chapter) q.chapters.push(e.chapter);
     q.types.push(e.type);
+    q.entryIds.push(e.id);
     if (Number.isInteger(e.sourceRow)) q.sourceRows.push(e.sourceRow);
     if(e.level) q.levels.push(e.level);
     if(e.sourceGroup) q.sourceGroups.push(e.sourceGroup);
