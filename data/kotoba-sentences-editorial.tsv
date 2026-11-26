@@ -175,7 +175,7 @@ CD	シーディー	好きな歌手の【CD】を買いました。	Saya membeli 
 じゃ、また。	じゃ、また。	「もう帰ります」「【じゃ、また】」。	“Saya pulang dulu.” “Baik, sampai jumpa.”
 もらいます	もらいます	友達にプレゼントを【もらいました】。	Saya menerima hadiah dari teman.
 貸します	かします	友達に本を【貸します】。	Saya meminjamkan buku kepada teman.
-教えます	おしえます	学校で日本語を【教えます】。	Saya mengajar bahasa Jepang di sekolah.
+教えます	おしえます	学校で日本語を【教えます】。	Saya mengajar bahasa Jepang di sekolah.	mengajar
 習います	ならいます	父に料理を【習います】。	Saya belajar memasak dari ayah.
 スプーン	スプーン	【スプーン】でスープを飲みます。	Saya makan sup dengan sendok.
 ナイフ	ナイフ	【ナイフ】でパンを切ります。	Saya memotong roti dengan pisau.
@@ -318,3 +318,41 @@ ATM	エーティーエム	コンビニの中に【ATM】があります。	Ada A
 お帰りなさい。	おかえりなさい。	「ただいま」「【お帰りなさい】」。	“Saya pulang.” “Sudah pulang, ya.”
 わあ、すごい人ですね。	わあ、すごいひとですね。	会場を見て、「【わあ、すごい人ですね】」と言いました。	Saat melihat tempat acaranya, saya berkata, “Wah, banyak sekali orang, ya.”
 疲れました。	つかれました。	三時間歩きました。とても【疲れました】。	Saya berjalan selama tiga jam. Saya sangat lelah.
+疲れます	つかれます	たくさん歩きました。とても【疲れました】。	Saya banyak berjalan kaki. Saya sangat lelah.
+狭い	せまい	この部屋は少し【狭い】です。	Kamar ini agak sempit.
+美術	びじゅつ	大学で【美術】を勉強します。	Saya belajar seni rupa di universitas.
+釣り	つり	週末、川で【釣り】をします。	Akhir pekan saya akan memancing di sungai.
+～ごろ	～ごろ	七時【ごろ】に帰ります。	Saya akan pulang sekitar pukul tujuh.
+何か	なにか	【何か】食べたいです。	Saya ingin makan sesuatu.
+どこか	どこか	週末、【どこか】へ行きませんか。	Mau pergi ke suatu tempat akhir pekan ini?
+のどがかわきます	のどがかわきます	たくさん歩いて、【のどがかわきました】。	Saya haus setelah banyak berjalan kaki.
+おなかがすきます	おなかがすきます	【おなかがすきました】。何か食べましょう。	Saya lapar. Ayo makan sesuatu.
+そうしましょう。	そうしましょう。	「駅の近くで食事しましょう」「ええ、【そうしましょう】」。	“Ayo makan di dekat stasiun.” “Ya, mari.”
+ご注文は？	ごちゅうもんは？	「【ご注文は】？」「魚の定食をお願いします」。	“Mau pesan apa?” “Menu paket ikan, tolong.”
+定食	ていしょく	昼ごはんに魚の【定食】を食べました。	Saya makan menu paket ikan untuk makan siang.
+牛どん	ぎゅうどん	【牛どん】を一つお願いします。	Tolong satu porsi gyūdon.
+～でございます。	～でございます。	こちらは本日の定食【でございます】。	Ini menu paket hari ini.
+つけます	つけます	暗いですから、電気を【つけます】。	Karena gelap, saya menyalakan lampu.	menyalakan
+取ります	とります	棚から本を【取ります】。	Saya mengambil buku dari rak.	misalnya barang
+止めます	とめます	店の前に車を【止めます】。	Saya memarkir mobil di depan toko.	memarkir
+教えます	おしえます	友達に新しい住所を【教えます】。	Saya memberi tahu teman alamat baru saya.	memberi tahu
+立ちます	たちます	先生が来ました。みんなが【立ちました】。	Guru datang. Semua orang berdiri.
+入ります	はいります	雨ですから、喫茶店に【入ります】。	Karena hujan, saya masuk ke kedai kopi.	masuk ke kedai kopi
+出ます	でます	食事が終わりましたから、喫茶店を【出ます】。	Saya keluar dari kedai kopi karena sudah selesai makan.	keluar dari kedai kopi
+コピーします	コピーします	この資料を二枚【コピーします】。	Saya memfotokopi dua lembar dokumen ini.
+～方	～かた	この料理の作り【方】を教えてください。	Tolong ajari saya cara membuat masakan ini.
+もう～	もう～	【もう一つ】ください。	Tolong beri saya satu lagi.
+あれ？	あれ？	【あれ】？ 鍵がありません。	Eh? Kuncinya tidak ada.
+信号を右へ曲がってください。	しんごうをみぎへまがってください。	まっすぐ行って、【信号を右へ曲がってください】。	Jalan lurus, lalu belok kanan di lampu lalu lintas.
+これでお願いします。	これでおねがいします。	「五百円です」「【これでお願いします】」。	“Lima ratus yen.” “Tolong pakai uang ini.”
+作ります	つくります	晩ごはんにカレーを【作ります】。	Saya membuat kari untuk makan malam.	misalnya makanan
+造ります	つくります	この工場では船を【造ります】。	Pabrik ini membuat kapal.
+カタログ	カタログ	新しい製品の【カタログ】を見ます。	Saya melihat katalog produk baru.
+時刻表	じこくひょう	駅で電車の【時刻表】を見ます。	Saya melihat jadwal kereta di stasiun.
+製品	せいひん	この会社の【製品】を使っています。	Saya menggunakan produk perusahaan ini.
+ソフト	ソフト	パソコンに新しい【ソフト】を入れました。	Saya memasang perangkat lunak baru di komputer.
+電子辞書	でんしじしょ	【電子辞書】で漢字を調べます。	Saya mencari kanji di kamus elektronik.
+市役所	しやくしょ	明日、書類を出しに【市役所】へ行きます。	Besok saya pergi ke kantor wali kota untuk menyerahkan dokumen.
+高校	こうこう	弟は【高校】で英語を勉強しています。	Adik laki-laki saya belajar bahasa Inggris di SMA.
+皆さん	みなさん	【皆さん】、おはようございます。	Selamat pagi, semuanya.
+いらっしゃいます	いらっしゃいます	田中先生は事務所に【いらっしゃいます】。	Pak Tanaka ada di kantor.	ada; berada

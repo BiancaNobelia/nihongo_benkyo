@@ -12,7 +12,7 @@ test('Kotoba example records link to real entries and highlight text within the 
   const entries = Object.values(KOTOBA_COURSES).flatMap(course => course.entries);
   const ids = new Set(entries.map(entry => entry.id));
   assert.ok(Object.keys(data.entries).every(id => ids.has(id)));
-  for (const entry of entries.filter(e => e.chapter <= 12 || e.chapter >= 49)) {
+  for (const entry of entries.filter(e => e.chapter <= 15 || e.chapter >= 49)) {
     assert.ok(findKotobaSentence(data, [entry.id]), entry.id);
   }
   for (const record of data.records) {
@@ -38,11 +38,16 @@ test('examples follow the selected chapter and course rather than a shared spell
     [8, 'そうですね。', /bagaimana ya/],
     [9, '～から', /karena/],
     [5, '～年', /pada tahun 2027/],
+    [7, '教えます', /mengajar bahasa Jepang/],
     [11, '～年', /selama dua tahun/],
     [11, 'かかります', /perlu sepuluh menit/],
     [3, 'どちら', /di sebelah mana/],
     [12, 'どちら', /musim panas atau musim dingin/],
     [12, 'いい', /Saya pilih kopi/],
+    [14, '教えます', /alamat baru/],
+    [14, '出ます', /keluar dari kedai kopi/],
+    [15, '作ります', /membuat kari/],
+    [15, '造ります', /membuat kapal/],
   ]) {
     const entry = minna.find(e => e.chapter === chapter && e.spelling === word);
     assert.match(findKotobaSentence(data, [entry.id]).translation, expected);

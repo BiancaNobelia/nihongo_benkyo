@@ -80,16 +80,17 @@ test('pagination covers all material entries once and clamps after filters chang
 });
 
 
-test('Kotoba materials use only the photographed entries in chapters 1–12 and 26–50', () => {
+test('Kotoba materials use only the photographed entries in chapters 1–15 and 26–50', () => {
   const entries = MATERIAL_KOTOBA_ENTRIES;
   const ids = new Set(entries.map(entry => entry.id));
   assert.equal(ids.size, entries.length);
-  const outsidePhotos = entry => entry.chapter >= 13 && entry.chapter < 26;
+  const outsidePhotos = entry => entry.chapter >= 16 && entry.chapter < 26;
   assert.deepEqual(entries.filter(outsidePhotos), KOTOBA_ENTRIES.filter(outsidePhotos));
   for (const [chapter, count] of [
     [1, 30], [2, 46], [3, 43], [4, 53], [5, 59], [6, 51],
     [7, 45], [8, 56], [9, 55],
     [10, 47], [11, 61], [12, 50],
+    [13, 31], [14, 45], [15, 23],
     [26, 48], [27, 50], [28, 49], [29, 45], [30, 54], [31, 42], [32, 57], [33, 54],
     [34, 52], [35, 44], [36, 47], [37, 48], [38, 44], [39, 43],
     [40, 62], [41, 54], [42, 51], [43, 30], [44, 41], [45, 34],
@@ -138,6 +139,17 @@ test('Kotoba materials use only the photographed entries in chapters 1–12 and 
     [12, '温かい', '温かい', undefined],
     [12, '生け花', '生け花', undefined],
     [12, 'お帰りなさい', 'お帰りなさい。', undefined],
+    [13, '公園を散歩します', '散歩します', 'Golongan III · する'],
+    [13, 'のどがかわきました', 'のどがかわきます', 'Golongan I · Godan'],
+    [13, 'ご注文は', 'ご注文は？', undefined],
+    [13, '牛どん', '牛どん', undefined],
+    [14, 'つけます', 'つけます', 'Golongan II · Ichidan'],
+    [14, '喫茶店に入ります', '入ります', 'Golongan I · Godan'],
+    [14, '喫茶店を出ます', '出ます', 'Golongan II · Ichidan'],
+    [14, 'お釣り', 'お釣り', undefined],
+    [15, '造ります', '造ります', 'Golongan I · Godan'],
+    [15, '電子辞書', '電子辞書', undefined],
+    [15, 'いらっしゃいます', 'いらっしゃいます', 'Golongan I · Godan'],
     [26, '診ます', '見ます・診ます', 'Golongan II · Ichidan'],
     [26, '片づきます', '片づきます', 'Golongan I · Godan'],
     [26, '宇宙飛行士', '宇宙飛行士', undefined],
@@ -234,6 +246,9 @@ test('Kotoba materials use only the photographed entries in chapters 1–12 and 
     [10, ['東京ディズニーランド', 'アジアストア', 'おく']],
     [11, ['オーストラリア', '三人', '一冊']],
     [12, ['祇園祭', 'ホンコン', 'シンガポール', 'ABCストア', '試験']],
+    [13, ['アキックス', 'おはようテレビ', '出します', '入ります', '寂しい']],
+    [14, ['みどり町', '横断歩道', '始めます']],
+    [15, ['日本橋', 'みんなのインタビュー', '専門', 'ご存じです']],
     [26, ['NHK', 'エドヤストア', '土井隆雄', '見つけます', '書類', 'お忙しい']],
     [27, ['関西空港', '秋葉原', '伊豆', 'ドラえもん', '走れます', 'ピアノ', 'ようやく']],
     [28, ['育てます']],
