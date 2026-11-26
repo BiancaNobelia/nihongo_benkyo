@@ -131,7 +131,7 @@ CD	シーディー	好きな歌手の【CD】を買いました。	Saya membeli 
 おととい	おととい	【おととい】、図書館へ行きました。	Dua hari yang lalu, saya pergi ke perpustakaan.
 昼休み	ひるやすみ	【昼休み】に友達とごはんを食べます。	Saat istirahat siang, saya makan dengan teman.
 土曜日	どようび	【土曜日】に映画を見ます。	Saya akan menonton film pada hari Sabtu.
-～から	～から	郵便局は九時【から】です。	Kantor pos buka mulai pukul sembilan.
+～から	～から	郵便局は九時【から】です。	Kantor pos buka mulai pukul sembilan.	dari
 ～まで	～まで	図書館は六時【まで】です。	Perpustakaan buka sampai pukul enam.
 ～と～	～と～	机の上に【本とノート】があります。	Ada buku dan buku catatan di atas meja.
 大変ですね。	たいへんですね。	「毎晩十時まで働きます」「【大変ですね】」。	“Saya bekerja sampai pukul sepuluh setiap malam.” “Wah, berat juga, ya.”
@@ -155,7 +155,7 @@ CD	シーディー	好きな歌手の【CD】を買いました。	Saya membeli 
 20日	はつか	試験は六月【20日】です。	Ujiannya tanggal dua puluh Juni.
 24日	にじゅうよっか	来月の【24日】に家族と旅行します。	Saya akan bepergian bersama keluarga tanggal dua puluh empat bulan depan.
 ～日	～にち	旅行は六月十一【日】からです。	Perjalanan dimulai tanggal sebelas Juni.
-そうですね。	そうですね。	「電車のほうが早いです」「【そうですね】」。	“Naik kereta lebih cepat.” “Ya, betul.”
+そうですね。	そうですね。	「電車のほうが早いです」「【そうですね】」。	“Naik kereta lebih cepat.” “Ya, betul.”	menyatakan setuju
 どうもありがとうございました。	どうもありがとうございました。	案内してくださって、【どうもありがとうございました】。	Terima kasih banyak sudah mengantar dan menunjukkan jalannya.
 どういたしまして。	どういたしまして。	「ありがとうございました」「【どういたしまして】」。	“Terima kasih.” “Sama-sama.”
 ～番線	～ばんせん	次の電車は三【番線】から出ます。	Kereta berikutnya berangkat dari peron tiga.
@@ -173,3 +173,68 @@ CD	シーディー	好きな歌手の【CD】を買いました。	Saya membeli 
 ええ	ええ	「写真を撮りますか」「【ええ】、撮ります」。	“Mau ambil foto?” “Ya.”
 わかりました。	わかりました。	「六時に駅へ来てください」「【わかりました】」。	“Tolong datang ke stasiun pukul enam.” “Baik, saya mengerti.”
 じゃ、また。	じゃ、また。	「もう帰ります」「【じゃ、また】」。	“Saya pulang dulu.” “Baik, sampai jumpa.”
+もらいます	もらいます	友達にプレゼントを【もらいました】。	Saya menerima hadiah dari teman.
+貸します	かします	友達に本を【貸します】。	Saya meminjamkan buku kepada teman.
+教えます	おしえます	学校で日本語を【教えます】。	Saya mengajar bahasa Jepang di sekolah.
+習います	ならいます	父に料理を【習います】。	Saya belajar memasak dari ayah.
+スプーン	スプーン	【スプーン】でスープを飲みます。	Saya makan sup dengan sendok.
+ナイフ	ナイフ	【ナイフ】でパンを切ります。	Saya memotong roti dengan pisau.
+ケータイ	ケータイ	【ケータイ】で写真を撮ります。	Saya mengambil foto dengan ponsel.
+メール	メール	先生に【メール】を送りました。	Saya mengirim surel kepada guru.
+年賀状	ねんがじょう	友達に【年賀状】を送ります。	Saya mengirim kartu ucapan Tahun Baru kepada teman.
+パンチ	パンチ	【パンチ】で紙に穴を開けます。	Saya melubangi kertas dengan pelubang kertas.
+ホッチキス	ホッチキス	この書類を【ホッチキス】で留めます。	Saya menyatukan lembar-lembar dokumen ini dengan stapler.
+セロテープ	セロテープ	写真を【セロテープ】で壁に貼ります。	Saya menempelkan foto ke dinding dengan selotip.
+消しゴム	けしゴム	【消しゴム】を貸してください。	Tolong pinjamkan penghapus.
+父	ちち	【父】にネクタイをあげました。	Saya memberi ayah saya dasi.
+お父さん	おとうさん	田中さんの【お父さん】は先生です。	Ayah Tanaka seorang guru.
+お母さん	おかあさん	田中さんの【お母さん】に花をあげました。	Saya memberi bunga kepada ibu Tanaka.
+まだ	まだ	宿題は【まだ】終わっていません。	PR saya belum selesai.	belum
+これから	これから	【これから】日本語を勉強します。	Saya akan belajar bahasa Jepang mulai sekarang.
+～、すてきですね。	～、すてきですね。	そのシャツ、【すてきですね】。	Kemeja itu bagus, ya.
+いらっしゃい。	いらっしゃい。	「こんにちは」「【いらっしゃい】。どうぞ入ってください」。	“Selamat siang.” “Selamat datang. Silakan masuk.”
+どうぞお上がりください。	どうぞおあがりください。	玄関で「【どうぞお上がりください】」と言いました。	Di pintu depan, saya berkata, “Silakan masuk.”
+失礼します。	しつれいします。	「どうぞお上がりください」「【失礼します】」。	“Silakan masuk.” “Permisi.”
+～はいかがですか。	～はいかがですか。	【お茶はいかがですか】。	Mau minum teh?
+いただきます。	いただきます。	ご飯を食べる前に「【いただきます】」と言います。	Sebelum makan, kita mengucapkan “Selamat makan.”
+ごちそうさまでした。	ごちそうさまでした。	【ごちそうさまでした】。とてもおいしかったです。	Terima kasih atas hidangannya. Enak sekali.
+ハンサム	ハンサム	田中さんは【ハンサム】です。	Tanaka tampan.
+元気	げんき	祖母は今日も【元気】です。	Nenek saya hari ini sehat dan bugar.
+すてき	すてき	これは【すてき】なプレゼントですね。	Ini hadiah yang bagus, ya.
+低い	ひくい	この机は少し【低い】です。	Meja ini agak rendah.
+青い	あおい	【青い】シャツを買いました。	Saya membeli kemeja biru.
+どんな～	どんな～	【どんな】町ですか。	Kotanya seperti apa?
+そして	そして	この町は静かです。【そして】、とてもきれいです。	Kota ini tenang. Selain itu, kotanya sangat bersih.
+～が、～	～が、～	この店は小さいです【が】、とてもにぎやかです。	Toko ini kecil, tetapi sangat ramai.
+そうですね。	そうですね。	「日本の生活はどうですか」「【そうですね】。楽しいです」。	“Bagaimana kehidupan di Jepang?” “Hmm, bagaimana ya? Menyenangkan.”	sebelum menjawab
+～、もう一杯いかがですか。	～、もういっぱいいかがですか。	【コーヒー、もう一杯いかがですか】。	Mau tambah secangkir kopi lagi?
+いいえ、けっこうです。	いいえ、けっこうです。	「お茶、もう一杯いかがですか」「【いいえ、けっこうです】」。	“Mau tambah secangkir teh lagi?” “Tidak, terima kasih. Saya sudah cukup.”
+もう～ですね。	もう～ですね。	【もう九時ですね】。	Sudah pukul sembilan, ya.
+そろそろ失礼します。	そろそろしつれいします。	もう九時ですね。【そろそろ失礼します】。	Sudah pukul sembilan, ya. Maaf, saya pamit dulu.
+いいえ。	いいえ。	「今日はどうもありがとうございました」「【いいえ】。また来てください」。	“Terima kasih banyak untuk hari ini.” “Sama-sama. Silakan datang lagi.”
+またいらっしゃってください。	またいらっしゃってください。	「今日はありがとうございました」「【またいらっしゃってください】」。	“Terima kasih untuk hari ini.” “Silakan datang lagi.”
+好き	すき	私はジャズが【好き】です。	Saya suka musik jaz.
+料理	りょうり	母の【料理】が好きです。	Saya suka masakan ibu.
+スポーツ	スポーツ	どんな【スポーツ】が好きですか。	Anda suka olahraga apa?
+野球	やきゅう	日曜日に友達と【野球】をします。	Hari Minggu saya bermain bisbol bersama teman.
+ダンス	ダンス	姉は【ダンス】が上手です。	Kakak perempuan saya pandai menari.
+旅行	りょこう	来月、家族と【旅行】します。	Bulan depan saya akan bepergian bersama keluarga.
+クラシック	クラシック	父はよく【クラシック】を聞きます。	Ayah saya sering mendengarkan musik klasik.
+ジャズ	ジャズ	私は【ジャズ】が好きです。	Saya suka musik jaz.
+カラオケ	カラオケ	土曜日に友達と【カラオケ】に行きます。	Saya akan pergi berkaraoke bersama teman pada hari Sabtu.
+ご主人	ごしゅじん	田中さんの【ご主人】はどんなスポーツが好きですか。	Olahraga apa yang disukai suami Tanaka?
+主人	しゅじん	【主人】は会社員です。	Suami saya karyawan perusahaan.	suami sendiri
+奥さん	おくさん	田中さんの【奥さん】は料理が上手です。	Istri Tanaka pandai memasak.
+家内	かない	【家内】は音楽が好きです。	Istri saya suka musik.
+よく	よく	先生の話が【よく】わかります。	Saya memahami dengan baik apa yang dijelaskan guru.
+だいたい	だいたい	駅まで【だいたい】十分です。	Ke stasiun kira-kira sepuluh menit.
+速く	はやく	妹はとても【速く】走ります。	Adik perempuan saya berlari sangat cepat.
+～から	～から	明日は用事があります【から】、行きません。	Saya tidak akan pergi karena besok ada keperluan.	karena
+貸してください。	かしてください。	消しゴムを【貸してください】。	Tolong pinjamkan penghapus.
+いいですよ。	いいですよ。	「この辞書を借りてもいいですか」「【いいですよ】」。	“Boleh saya pinjam kamus ini?” “Boleh.”
+残念です（が）。	ざんねんです（が）。	【残念ですが】、明日のコンサートには行けません。	Sayang sekali, saya tidak bisa datang ke konser besok.
+ああ	ああ	「田中さんですね」「【ああ】、山田さん。お元気ですか」。	“Anda Tanaka, ya?” “Oh, Yamada. Apa kabar?”
+いっしょにいかがですか。	いっしょにいかがですか。	「日曜日にコンサートに行きます。【いっしょにいかがですか】」。	“Hari Minggu saya mau pergi ke konser. Bagaimana kalau kita pergi bersama?”
+～はちょっと……。	～はちょっと……。	「土曜日に映画を見ませんか」「すみません、【土曜日はちょっと……】」。	“Mau nonton film hari Sabtu?” “Maaf, hari Sabtu saya tidak bisa.”
+だめですか。	だめですか。	「明日はちょっと……」「そうですか。土曜日も【だめですか】」。	“Besok saya belum bisa.” “Oh, begitu. Sabtu juga tidak bisa?”
+また今度お願いします。	またこんどおねがいします。	「今晩、いっしょに食べませんか」「今日は用事があります。【また今度お願いします】」。	“Mau makan bersama malam ini?” “Hari ini saya ada keperluan. Maaf, lain kali saja, ya.”

@@ -1428,9 +1428,10 @@ sekali, percobaan ulang, dan pembatalan pembaruan dialog yang sudah ditutup.
 Foto pengguna untuk Minna no Nihongo menjadi rujukan kosakata utama,
 Latihan C, percakapan, dan bacaan dalam `materi-kotoba-data.js`. Buku I
 mencakup Bab 1 (30 entri), Bab 2 (46 entri), Bab 3 (hlm. 22–23, 43 entri),
-Bab 4 (hlm. 28–29, 53 entri), Bab 5 (hlm. 34–35, 59 entri), dan Bab 6
-(hlm. 40–41, 51 entri). Bentuk alternatif yang ditampilkan bersama kosakata
-utama dapat dilatih secara terpisah. Daftar Buku II mencakup Bab 26
+Bab 4 (hlm. 28–29, 53 entri), Bab 5 (hlm. 34–35, 59 entri), Bab 6
+(hlm. 40–41, 51 entri), Bab 7 (hlm. 46–47, 45 entri), Bab 8 (hlm. 52–53,
+56 entri), dan Bab 9 (hlm. 58–59, 55 entri). Bentuk alternatif yang ditampilkan
+bersama kosakata utama dapat dilatih secara terpisah. Daftar Buku II mencakup Bab 26
 (hlm. 4–5, 48 entri), Bab 27 (hlm. 10–11, 50 entri), Bab 28 (hlm. 16–17,
 49 entri), Bab 29 (hlm. 22–23, 45 entri), Bab 30 (hlm. 28–29, 54 entri),
 Bab 31 (hlm. 34–35, 42 entri), Bab 32 (hlm. 40–41, 57 entri), dan Bab 33
