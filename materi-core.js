@@ -1,3 +1,14 @@
+import {VERB_GROUPS} from './henkan-core.js?v=20261015-jidoushi-tadoushi';
+import {HENKAN_VERBS} from './henkan-data.js?v=20261015-jidoushi-tadoushi';
+
+const minnaVerbGroups = new Map(HENKAN_VERBS.flatMap(verb =>
+  verb.sources.filter(source => source.startsWith('minna-row-'))
+    .map(source => [source, VERB_GROUPS[verb.group]])));
+
+export function materialVerbGroup(entry) {
+  return entry.type === 'kata kerja' ? minnaVerbGroups.get(entry.id) : undefined;
+}
+
 // Keep chapter-specific entries, including vocabulary revisited in later chapters.
 export function materialSearchKey(value) {
   return String(value ?? '').normalize('NFKC').toLocaleLowerCase('id')

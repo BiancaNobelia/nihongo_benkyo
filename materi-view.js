@@ -1,7 +1,7 @@
 import {BUNPOU_PATTERNS, BUNPOU_CHAPTERS} from './bunpou-data.js?v=20261015-jidoushi-tadoushi';
 import {KOTOBA_ENTRIES, KOTOBA_CHAPTERS} from './kotoba-data.js?v=20261015-jidoushi-tadoushi';
 import {bunpouSentenceMarkup} from './bunpou-core.js?v=20261015-jidoushi-tadoushi';
-import {materialPool, materialPage} from './materi-core.js?v=20261016-materi';
+import {materialPool, materialPage, materialVerbGroup} from './materi-core.js?v=20261126-materi-verb-groups';
 
 export function createMateriView({root, escape, icon}) {
   const state = {kind: 'bunpou', book: 1, chapter: 1, query: '', page: 1};
@@ -57,7 +57,9 @@ export function createMateriView({root, escape, icon}) {
   }
 
   function wordCard(entry, index) {
-    return `<article class="materi-word"><div class="materi-word-number">${index}</div><div class="materi-word-japanese"><h3 lang="ja">${escape(entry.spelling || entry.reading)}</h3><p lang="ja">${escape(entry.reading)}</p></div><div class="materi-word-meaning"><p>${escape(entry.meaning)}</p><div><span class="materi-word-type">${escape(entry.type)}</span><span class="materi-badge">Bab ${entry.chapter}</span></div></div></article>`;
+    const group = materialVerbGroup(entry);
+    const type = group ? `${entry.type} · ${group}` : entry.type;
+    return `<article class="materi-word"><div class="materi-word-number">${index}</div><div class="materi-word-japanese"><h3 lang="ja">${escape(entry.spelling || entry.reading)}</h3><p lang="ja">${escape(entry.reading)}</p></div><div class="materi-word-meaning"><p>${escape(entry.meaning)}</p><div><span class="materi-word-type">${escape(type)}</span><span class="materi-badge">Bab ${entry.chapter}</span></div></div></article>`;
   }
 
   function renderResults() {

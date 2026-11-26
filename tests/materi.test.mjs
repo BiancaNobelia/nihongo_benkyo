@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {materialPool, materialPage} from '../materi-core.js';
+import {materialPool, materialPage, materialVerbGroup} from '../materi-core.js';
 import {BUNPOU_PATTERNS} from '../bunpou-data.js';
 import {KOTOBA_ENTRIES} from '../kotoba-data.js';
 
@@ -19,6 +19,28 @@ test('material library includes the existing Minna references for every chapter'
     assert.ok(firstBook.every(row => row.chapter <= 25));
     assert.ok(secondBook.every(row => row.chapter >= 26));
     assert.equal(firstBook.length + secondBook.length, entries.length);
+  }
+});
+
+test('every Minna verb has a Henkan group and non-verbs have no group', () => {
+  for (const entry of KOTOBA_ENTRIES) {
+    const group = materialVerbGroup(entry);
+    if (entry.type === 'kata kerja') {
+      assert.match(group ?? '', /^Golongan (I|II|III) · /, entry.id);
+    } else {
+      assert.equal(group, undefined, entry.id);
+    }
+  }
+
+  const examples = [
+    ['帰ります', 'Golongan I · Godan'],
+    ['食べます', 'Golongan II · Ichidan'],
+    ['勉強します', 'Golongan III · する'],
+    ['来ます', 'Golongan III · 来る'],
+  ];
+  for (const [spelling, group] of examples) {
+    const entry = KOTOBA_ENTRIES.find(row => row.spelling === spelling);
+    assert.equal(materialVerbGroup(entry), group, spelling);
   }
 });
 
