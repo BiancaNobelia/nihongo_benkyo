@@ -1,5 +1,5 @@
 import { KOTOBA_CHAPTERS } from './kotoba-data.js?v=20261015-jidoushi-tadoushi';
-import { MATERIAL_KOTOBA_ENTRIES } from './materi-kotoba-data.js?v=20261126-kotoba-photo-48';
+import { MATERIAL_KOTOBA_ENTRIES } from './materi-kotoba-data.js?v=20261126-kotoba-photo-50';
 import { KOTOBA_N3_ENTRIES } from './kotoba-n3-data.js?v=20261015-jidoushi-tadoushi';
 
 const minnaChapterCounts = new Map();

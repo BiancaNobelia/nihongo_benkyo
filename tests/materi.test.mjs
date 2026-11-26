@@ -80,17 +80,17 @@ test('pagination covers all material entries once and clamps after filters chang
 });
 
 
-test('Kotoba materials use only the photographed entries in chapters 26 through 48', () => {
+test('Kotoba materials use only the photographed entries in chapters 26 through 50', () => {
   const entries = MATERIAL_KOTOBA_ENTRIES;
   const ids = new Set(entries.map(entry => entry.id));
   assert.equal(ids.size, entries.length);
-  const outsidePhotos = entry => entry.chapter < 26 || entry.chapter > 48;
+  const outsidePhotos = entry => entry.chapter < 26;
   assert.deepEqual(entries.filter(outsidePhotos), KOTOBA_ENTRIES.filter(outsidePhotos));
   for (const [chapter, count] of [
     [26, 48], [27, 50], [28, 49], [29, 45], [30, 54], [31, 42], [32, 57], [33, 54],
     [34, 52], [35, 44], [36, 47], [37, 48], [38, 44], [39, 43],
     [40, 62], [41, 54], [42, 51], [43, 30], [44, 41], [45, 34],
-    [46, 32], [47, 35], [48, 32],
+    [46, 32], [47, 35], [48, 32], [49, 40], [50, 44],
   ]) {
     assert.equal(materialPool(entries, {chapter}).length, count);
   }
@@ -165,6 +165,14 @@ test('Kotoba materials use only the photographed entries in chapters 26 through 
     [48, '下ろします', '降ろします・下ろします', 'Golongan I · Godan'],
     [48, '競走します', '競走します', 'Golongan III · する'],
     [48, '心をとらえます', 'とらえます', 'Golongan II · Ichidan'],
+    [49, '会社に勤めます', '勤めます', 'Golongan II · Ichidan'],
+    [49, '熱を出します', '出します', 'Golongan I · Godan'],
+    [49, '受賞します', '受賞します', 'Golongan III · する'],
+    [49, '～でいらっしゃいます', '～でいらっしゃいます', 'Golongan I · Godan'],
+    [50, '存じます', '存じます', 'Golongan II · Ichidan'],
+    [50, '夢がかないます', 'かないます', 'Golongan I · Godan'],
+    [50, '感謝します', '感謝します', 'Golongan III · する'],
+    [50, '敬具', '敬具', undefined],
   ];
   for (const [chapter, query, spelling, group] of examples) {
     const [entry] = materialPool(entries, {chapter, query});
@@ -195,6 +203,8 @@ test('Kotoba materials use only the photographed entries in chapters 26 through 
     [46, ['出来上がります', '仕上がります']],
     [47, ['バリ島', 'イラン', 'カリフォルニア', 'グアム', '報道します']],
     [48, ['働かせます', '休ませます']],
+    [49, ['ひまわり小学校', '大江', '東京大学', 'ノーベル文学賞', 'おいでになります']],
+    [50, ['江戸東京博物館', 'ミュンヘン', '差し上げます']],
   ]) {
     for (const query of excluded) assert.equal(materialPool(entries, {chapter, query}).length, 0);
   }
