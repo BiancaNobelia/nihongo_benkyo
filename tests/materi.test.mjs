@@ -80,17 +80,18 @@ test('pagination covers all material entries once and clamps after filters chang
 });
 
 
-test('Kotoba materials use only the photographed entries in chapters 1–15 and 26–50', () => {
+test('Kotoba materials use only the photographed entries in chapters 1–18 and 26–50', () => {
   const entries = MATERIAL_KOTOBA_ENTRIES;
   const ids = new Set(entries.map(entry => entry.id));
   assert.equal(ids.size, entries.length);
-  const outsidePhotos = entry => entry.chapter >= 16 && entry.chapter < 26;
+  const outsidePhotos = entry => entry.chapter >= 19 && entry.chapter < 26;
   assert.deepEqual(entries.filter(outsidePhotos), KOTOBA_ENTRIES.filter(outsidePhotos));
   for (const [chapter, count] of [
     [1, 30], [2, 46], [3, 43], [4, 53], [5, 59], [6, 51],
     [7, 45], [8, 56], [9, 55],
     [10, 47], [11, 61], [12, 50],
     [13, 31], [14, 45], [15, 23],
+    [16, 51], [17, 35], [18, 27],
     [26, 48], [27, 50], [28, 49], [29, 45], [30, 54], [31, 42], [32, 57], [33, 54],
     [34, 52], [35, 44], [36, 47], [37, 48], [38, 44], [39, 43],
     [40, 62], [41, 54], [42, 51], [43, 30], [44, 41], [45, 34],
@@ -150,6 +151,19 @@ test('Kotoba materials use only the photographed entries in chapters 1–15 and 
     [15, '造ります', '造ります', 'Golongan I · Godan'],
     [15, '電子辞書', '電子辞書', undefined],
     [15, 'いらっしゃいます', 'いらっしゃいます', 'Golongan I · Godan'],
+    [16, '電車を降ります', '降ります', 'Golongan II · Ichidan'],
+    [16, 'お金を下ろします', '下ろします', 'Golongan I · Godan'],
+    [16, '大学を出ます', '出ます', 'Golongan II · Ichidan'],
+    [16, '鼻', '鼻', undefined],
+    [16, '暗証番号', '暗証番号', undefined],
+    [17, '持って来ます', '持って来ます', 'Golongan III · 来る'],
+    [17, '薬を飲みます', '飲みます', 'Golongan I · Godan'],
+    [17, 'おふろに入ります', '入ります', 'Golongan I · Godan'],
+    [17, '2、3日', '2、3日', undefined],
+    [17, 'お大事に', 'お大事に。', undefined],
+    [18, 'できます', 'できます', 'Golongan II · Ichidan'],
+    [18, '～メートル', '～メートル', undefined],
+    [18, 'なかなか', 'なかなか', undefined],
     [26, '診ます', '見ます・診ます', 'Golongan II · Ichidan'],
     [26, '片づきます', '片づきます', 'Golongan I · Godan'],
     [26, '宇宙飛行士', '宇宙飛行士', undefined],
@@ -249,6 +263,9 @@ test('Kotoba materials use only the photographed entries in chapters 1–15 and 
     [13, ['アキックス', 'おはようテレビ', '出します', '入ります', '寂しい']],
     [14, ['みどり町', '横断歩道', '始めます']],
     [15, ['日本橋', 'みんなのインタビュー', '専門', 'ご存じです']],
+    [16, ['雪祭り', 'バンドン', '梅田', '大学前', '辞めます', '頭がいい']],
+    [17, ['問題', '答え', 'めまい', '咳']],
+    [18, ['故郷', 'ビートルズ', '秋葉原', '見学します', '国際', 'ホームページ']],
     [26, ['NHK', 'エドヤストア', '土井隆雄', '見つけます', '書類', 'お忙しい']],
     [27, ['関西空港', '秋葉原', '伊豆', 'ドラえもん', '走れます', 'ピアノ', 'ようやく']],
     [28, ['育てます']],
