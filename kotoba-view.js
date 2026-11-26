@@ -1,4 +1,4 @@
-import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261126-kotoba-photo-42';
+import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261126-kotoba-photo-45';
 import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261126-kotoba-materials';
 import { kotobaChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261126-kotoba-materials';
 import { requestedQuizCount } from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
