@@ -80,14 +80,14 @@ test('pagination covers all material entries once and clamps after filters chang
 });
 
 
-test('Kotoba materials use only the photographed entries in chapters 1–3 and 26–50', () => {
+test('Kotoba materials use only the photographed entries in chapters 1–6 and 26–50', () => {
   const entries = MATERIAL_KOTOBA_ENTRIES;
   const ids = new Set(entries.map(entry => entry.id));
   assert.equal(ids.size, entries.length);
-  const outsidePhotos = entry => entry.chapter >= 4 && entry.chapter < 26;
+  const outsidePhotos = entry => entry.chapter >= 7 && entry.chapter < 26;
   assert.deepEqual(entries.filter(outsidePhotos), KOTOBA_ENTRIES.filter(outsidePhotos));
   for (const [chapter, count] of [
-    [1, 30], [2, 46], [3, 43],
+    [1, 30], [2, 46], [3, 43], [4, 53], [5, 59], [6, 51],
     [26, 48], [27, 50], [28, 49], [29, 45], [30, 54], [31, 42], [32, 57], [33, 54],
     [34, 52], [35, 44], [36, 47], [37, 48], [38, 44], [39, 43],
     [40, 62], [41, 54], [42, 51], [43, 30], [44, 41], [45, 34],
@@ -102,6 +102,15 @@ test('Kotoba materials use only the photographed entries in chapters 1–3 and 2
     [2, '違います', '違います。', 'Golongan I · Godan'],
     [3, '～階', '～階', undefined],
     [3, 'いらっしゃいませ', 'いらっしゃいませ。', undefined],
+    [4, '起きます', '起きます', 'Golongan II · Ichidan'],
+    [4, '～ぷん', '～分', undefined],
+    [4, '昼休み', '昼休み', undefined],
+    [5, '来ます', '来ます', 'Golongan III · 来る'],
+    [5, 'ついたち', '1日', undefined],
+    [5, 'にじゅうよっか', '24日', undefined],
+    [6, '写真を撮ります', '撮ります', 'Golongan I · Godan'],
+    [6, 'ミルク', 'ミルク', undefined],
+    [6, 'お花見', 'お花見', undefined],
     [26, '診ます', '見ます・診ます', 'Golongan II · Ichidan'],
     [26, '片づきます', '片づきます', 'Golongan I · Godan'],
     [26, '宇宙飛行士', '宇宙飛行士', undefined],
@@ -190,6 +199,9 @@ test('Kotoba materials use only the photographed entries in chapters 1–3 and 2
     [1, ['～君', '皆さん', 'IMC', 'パワー電気', '神戸病院', '富士大学']],
     [2, ['パソコン', 'どういたしまして']],
     [3, ['一階', '二階', '新大阪', 'ジャカルタ', 'フランス']],
+    [4, ['ニューヨーク', 'ロンドン', 'アップル銀行', 'みどり図書館']],
+    [5, ['甲子園', '大阪城']],
+    [6, ['メキシコ', '大屋デパート', 'フランス屋', '毎日屋', 'レストラン']],
     [26, ['NHK', 'エドヤストア', '土井隆雄', '見つけます', '書類', 'お忙しい']],
     [27, ['関西空港', '秋葉原', '伊豆', 'ドラえもん', '走れます', 'ピアノ', 'ようやく']],
     [28, ['育てます']],
