@@ -21,6 +21,17 @@
 @media(max-width:1100px){.kotoba-layout{grid-template-columns:1fr}.kotoba-settings{position:static}.kotoba-chapter-grid{grid-template-columns:repeat(10,minmax(0,1fr))}.kotoba-modes{grid-template-columns:repeat(3,minmax(0,1fr))}.kotoba-modes button:first-child{grid-column:auto}.kotoba-hero-art{min-width:190px;min-height:200px}}
 @media(max-width:700px){.nav-list{grid-template-columns:repeat(7,minmax(0,1fr))}.kotoba-hero{padding:5px 0 23px;gap:10px;margin-bottom:22px;align-items:flex-start}.kotoba-hero h1{font-size:32px}.kotoba-hero p{font-size:12px;max-width:100%;margin-bottom:18px}.kotoba-hero-art{display:none}.kotoba-metrics{gap:15px;font-size:10px}.kotoba-metrics strong{font-size:17px}.kotoba-panel{padding:19px}.kotoba-section-title h2{font-size:17px}.kotoba-chapter-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}.kotoba-chapter-grid button{min-height:65px}.kotoba-ranges{gap:6px}.kotoba-ranges button{font-size:10px;padding:7px 9px}.kotoba-modes{grid-template-columns:1fr 1fr}.kotoba-modes button:first-child{grid-column:1/-1}.kotoba-options{grid-template-columns:1fr;gap:10px}.kotoba-options .quiz-option{font-size:22px;padding:13px 12px}.kotoba-meaning-options .quiz-option{font-size:14px}.kotoba-question{padding:23px 16px}.kotoba-prompt{font-size:39px}.kotoba-prompt-reading{font-size:15px}.kotoba-question .answer-word>strong{font-size:23px}.kotoba-source-note{font-size:10px}.kotoba-home-banner{padding:15px;gap:12px}.kotoba-home-banner strong{font-size:12px}.kotoba-home-banner small{font-size:10px}.kotoba-review-pagination{gap:9px}.kotoba-review-pagination .secondary{padding:10px;font-size:11px}.kotoba-review-item{padding:18px}.kotoba-session .view-heading h1{font-size:26px}}
 
+.kotoba-type-filter {
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.kotoba-type-filter legend { padding: 0; font-size: 13px; font-weight: 600; }
+.kotoba-type-filter .kotoba-small { margin: 4px 0 9px; }
+.kotoba-type-options { margin-bottom: 0; }
+.kotoba-type-options button { min-height: 36px; font-size: 12px; }
+
 .kotoba-sentence {
   margin-top: 12px;
   padding: 13px 16px;

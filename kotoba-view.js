@@ -1,5 +1,5 @@
 import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261126-kotoba-photo-22-25';
-import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261126-kotoba-sentences';
+import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261126-kotoba-word-types';
 import { kotobaChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261126-kotoba-materials';
 import { showKotobaSentence } from './kotoba-sentence-view.js?v=20261126-kotoba-photo-22-25';
 import { requestedQuizCount } from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
@@ -7,13 +7,14 @@ import { shuffle } from './core.js?v=20261015-jidoushi-tadoushi';
 
 export function createKotobaView({root,escape,icon,heading,activity,recordSession}) {
   let course=kotobaCourse('minna');
-  const preferences={course:'minna',chapters:[...ALL_CHAPTERS],sourceGroup:'all',type:'all',mode:'jp-id',countChoice:'10',customCount:'30',time:0};
+  const preferences={course:'minna',chapters:[...ALL_CHAPTERS],sourceGroup:'all',types:null,mode:'jp-id',countChoice:'10',customCount:'30',time:0};
   const courseSelections=new Map();
   const speech=window.speechSynthesis;
   const canSpeak=Boolean(speech && window.SpeechSynthesisUtterance);
   let active=false, session=null, timer=null, speechToken=0, reviewPage=0, lastSession=null;
   const find=selector=>root.querySelector(selector);
   const countText=n=>n.toLocaleString('id-ID');
+  const typeLabel=type=>type[0].toUpperCase()+type.slice(1);
   const voice=language=>canSpeak ? matchingVoice(speech.getVoices(),language) : null;
   const selectedPool=()=>getKotobaPool(course.entries,preferences);
   const scopeLabel=(value=preferences)=>value.course==='n3' ? `JLPT N3 · ${KOTOBA_SOURCE_GROUPS[value.sourceGroup] || KOTOBA_SOURCE_GROUPS.all}` : chapterLabel(value.chapters);
@@ -24,12 +25,12 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
   function render(courseId=preferences.course) {
     const next=kotobaCourse(courseId);
     if(next.id!==course.id) {
-      courseSelections.set(course.id,{chapters:preferences.chapters,type:preferences.type,sourceGroup:preferences.sourceGroup});
-      Object.assign(preferences,{course:next.id,chapters:next.id==='minna' ? [...ALL_CHAPTERS] : null,type:'all',sourceGroup:'all'},courseSelections.get(next.id));
+      courseSelections.set(course.id,{chapters:preferences.chapters,types:preferences.types,sourceGroup:preferences.sourceGroup});
+      Object.assign(preferences,{course:next.id,chapters:next.id==='minna' ? [...ALL_CHAPTERS] : null,types:null,sourceGroup:'all'},courseSelections.get(next.id));
       course=next;
     }
     const isN3=course.id==='n3';
-    const types=[...new Set(course.entries.map(e=>e.type))];
+    const types=[...new Set(course.entries.map(e=>e.type))].sort((a,b)=>a.localeCompare(b,'id'));
     stop(); active=true;session=null;lastSession=null;
     root.innerHTML=`<div class="kotoba-view">
       <nav class="kotoba-courses" aria-label="Materi kuis kotoba">${Object.values(KOTOBA_COURSES).map(c=>`<a href="#kotoba/${c.id}" ${c.id===course.id ? 'aria-current="page"' : ''}><strong>${c.short}</strong><span>${c.subtitle} · ${countText(c.entries.length)} entri</span></a>`).join('')}</nav>
@@ -39,7 +40,7 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
         <div class="kotoba-ranges" aria-label="Pilihan rentang bab">${[['1-50','Semua bab'],['1-25','Buku I · 1–25'],['26-50','Buku II · 26–50'],['1-10','1–10'],['11-20','11–20'],['21-25','21–25'],['26-35','26–35'],['36-45','36–45'],['46-50','46–50']].map(([range,label])=>`<button data-kotoba-range="${range}" aria-pressed="false">${label}</button>`).join('')}</div>
         <div class="kotoba-chapter-grid" aria-label="Bab latihan">${course.chapters.map(c=>`<button data-kotoba-chapter="${c.number}" aria-pressed="false" aria-label="Bab ${c.number}, ${c.count} kosakata" title="${escape(c.title)}"><small>BAB</small><strong>${c.number}</strong><span>${c.count} kata</span></button>`).join('')}</div>
         <div class="kotoba-selection"><span id="kotoba-selection" role="status"></span><button class="text-button" data-kotoba="clear-chapters">Kosongkan</button></div>`}
-        <div class="field"><label for="kotoba-type">Jenis kata</label><select id="kotoba-type"><option value="all">Semua jenis kata</option>${types.map(t=>`<option value="${escape(t)}">${escape(t[0].toUpperCase()+t.slice(1))}</option>`).join('')}</select></div>
+        <fieldset class="kotoba-type-filter"><legend>Jenis kata</legend><p class="kotoba-small">Pilih satu atau beberapa jenis kata.</p><div class="kotoba-ranges kotoba-type-options"><button type="button" data-kotoba-type="all" aria-pressed="false">Semua jenis kata</button>${types.map(t=>`<button type="button" data-kotoba-type="${escape(t)}" aria-pressed="false">${escape(typeLabel(t))}</button>`).join('')}</div></fieldset>
         <details class="kotoba-glossary"><summary>Lihat kosakata dalam pilihan ini</summary><label for="kotoba-search">Cari kata, bacaan, atau arti</label><input id="kotoba-search" type="search" placeholder="Misalnya: belajar, 学生, がくせい"><div id="kotoba-word-list"></div></details>
       </section><section class="kotoba-panel kotoba-settings"><div class="kotoba-section-title"><span class="kotoba-step">02</span><div><h2>Atur latihanmu</h2><p>Pilih cara yang ingin kamu latih.</p></div></div>
         <div class="kotoba-modes" aria-label="Mode latihan kotoba">${Object.entries(KOTOBA_MODES).map(([id,m])=>`<button data-kotoba-mode="${id}" aria-pressed="false"><strong>${m.short}</strong><span>${m.label}</span></button>`).join('')}</div>
@@ -50,7 +51,6 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
         <button class="primary kotoba-start" data-kotoba="start">Mulai kuis kotoba ${icon('arrow')}</button><p class="kotoba-small">Arti dan bacaan ditampilkan setelah setiap jawaban. Hasil sesi tersimpan di Progres Saya pada browser ini.</p>
       </section></div><p class="kotoba-source-note">${isN3 ? 'Materi mengikuti kompilasi N3 dari OpenJLPT, Open Anki, dan Waller. Arti Indonesia berasal dari terjemahan otomatis dengan sejumlah koreksi; arti Inggris rujukan tersedia setelah menjawab. Pengelompokan level mengikuti sumber komunitas.' : 'Kuis Minna no Nihongo memakai kosakata yang sama dengan List Materi → Kotoba.'} <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">Tentang sumber materi ${icon('arrow-up')}</a></p></div>`;
     if(isN3) find('#kotoba-source-group').value=preferences.sourceGroup;
-    find('#kotoba-type').value=preferences.type;
     find('#kotoba-count').value=preferences.countChoice;
     find('#kotoba-custom').value=preferences.customCount;
     find('#kotoba-time').value=String(preferences.time);
@@ -69,7 +69,6 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
   }
 
   function updateSetup() {
-    preferences.type=find('#kotoba-type').value;
     preferences.countChoice=find('#kotoba-count').value;
     preferences.customCount=find('#kotoba-custom').value;
     preferences.time=Number(find('#kotoba-time').value);
@@ -81,23 +80,28 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
       b.setAttribute('aria-pressed',String(selected.size===end-start+1 && ALL_CHAPTERS.slice(start-1,end).every(n=>selected.has(n))));
     });
     root.querySelectorAll('[data-kotoba-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.kotobaMode===preferences.mode)));
+    root.querySelectorAll('[data-kotoba-type]').forEach(b=>{
+      const type=b.dataset.kotobaType;
+      b.setAttribute('aria-pressed',String(type==='all' ? preferences.types===null : preferences.types?.includes(type) ?? false));
+    });
     find('#kotoba-selection').textContent=course.id==='n3' ? scopeLabel() : selected.size ? `${selected.size} bab dipilih · ${chapterLabel(preferences.chapters)}` : 'Pilih minimal satu bab untuk memulai.';
     const pool=selectedPool();
     const count=requestedQuizCount(preferences.countChoice,preferences.customCount);
-    const rawCount=course.entries.filter(e=>(course.id==='n3' || selected.has(e.chapter)) && (preferences.type==='all' || e.type===preferences.type) && (preferences.sourceGroup==='all' || e.sourceGroup===preferences.sourceGroup)).length;
+    const hasDuplicates=pool.some(word=>word.entryIds.length>1);
+    const emptyMessage=preferences.types?.length===0 ? 'Pilih minimal satu jenis kata atau Semua jenis kata.' : 'Tidak ada kosakata untuk pilihan ini. Coba cakupan atau jenis kata lain.';
     find('#kotoba-custom-field').hidden=preferences.countChoice!=='custom';
     find('#kotoba-count-error').hidden=count!==null;
     find('#kotoba-custom').setAttribute('aria-invalid',String(count===null));
-    find('#kotoba-session-summary').innerHTML=`<strong>${countText(pool.length)} kosakata tersedia</strong><span>${count===null ? 'Isi jumlah soal yang valid.' : !pool.length ? 'Tidak ada kosakata untuk pilihan ini. Coba cakupan atau jenis kata lain.' : `${Math.min(count,pool.length)} soal acak · ${preferences.time ? `${preferences.time} detik per soal` : 'Tanpa timer'}`}</span><small>${preferences.mode==='reading' ? 'Mode bacaan hanya memakai kata dengan penulisan kanji.' : rawCount>pool.length ? 'Kata yang sama antarbab digabung agar tidak berulang dalam satu sesi.' : 'Kosakata soal mengikuti materi dan jenis kata pilihanmu.'}${count>pool.length && pool.length ? ' Jumlah soal disesuaikan dengan kosakata yang tersedia.' : ''}</small>`;
+    find('#kotoba-session-summary').innerHTML=`<strong>${countText(pool.length)} kosakata tersedia</strong><span>${count===null ? 'Isi jumlah soal yang valid.' : !pool.length ? emptyMessage : `${Math.min(count,pool.length)} soal acak · ${preferences.time ? `${preferences.time} detik per soal` : 'Tanpa timer'}`}</span><small>${preferences.mode==='reading' ? 'Mode bacaan hanya memakai kata dengan penulisan kanji.' : hasDuplicates ? 'Kata yang sama antarbab digabung agar tidak berulang dalam satu sesi.' : 'Kosakata soal mengikuti materi dan jenis kata pilihanmu.'}${count>pool.length && pool.length ? ' Jumlah soal disesuaikan dengan kosakata yang tersedia.' : ''}</small>`;
     updateVoices();
     const mode=KOTOBA_MODES[preferences.mode];
     find('[data-kotoba="start"]').disabled=count===null || !pool.length || Boolean(mode.audio && !voice(mode.audio));
-    updateWordList();
+    updateWordList(pool);
   }
 
-  function updateWordList() {
+  function updateWordList(words=selectedPool()) {
     const search=find('#kotoba-search').value.trim().toLocaleLowerCase('id');
-    const pool=selectedPool().filter(q=>[q.word,q.reading,q.meaning].join(' ').toLocaleLowerCase('id').includes(search));
+    const pool=words.filter(q=>[q.word,q.reading,q.meaning].join(' ').toLocaleLowerCase('id').includes(search));
     find('#kotoba-word-list').innerHTML=`<p class="kotoba-small">${countText(pool.length)} kosakata${pool.length>60 ? ' · Menampilkan 60 pertama; ketik untuk mencari kata lainnya.' : ''}</p><div class="kotoba-word-list">${pool.slice(0,60).map(q=>`<div><span lang="ja"><strong>${escape(q.word)}</strong>${q.word!==q.reading ? `<small>${escape(q.reading)}</small>` : ''}</span><span>${escape(q.meaning)}<small>${wordScope(q)} · ${escape(q.types.join(', '))}</small></span></div>`).join('') || '<p>Tidak ada kata yang cocok.</p>'}</div>`;
   }
 
@@ -111,7 +115,7 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
     }
     if(!questions.length) return;
     session={mode:preferences.mode,questions,index:0,answers:[],answered:false,time:preferences.time,
-      course:course.id,sourceGroup:preferences.sourceGroup,chapters:[...(preferences.chapters || [])],type:preferences.type,deadline:null};
+      course:course.id,sourceGroup:preferences.sourceGroup,chapters:[...(preferences.chapters || [])],types:preferences.types?.slice() ?? null,deadline:null};
     lastSession=null; activity(); renderQuestion();
   }
 
@@ -129,7 +133,7 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
   function renderQuestion() {
     stop();session.answered=false;session.deadline=null;session.audioReady=false;
     const q=session.questions[session.index], mode=KOTOBA_MODES[session.mode];
-    root.innerHTML=`<div class="study-panel kotoba-session">${heading('KUIS KOTOBA',mode.label,`${scopeLabel(session)} · ${escape(session.type==='all' ? 'Semua jenis kata' : session.type)}`)}
+    root.innerHTML=`<div class="study-panel kotoba-session">${heading('KUIS KOTOBA',mode.label,`${scopeLabel(session)} · ${escape(session.types?.map(typeLabel).join(', ') ?? 'Semua jenis kata')}`)}
       <div class="study-top"><span>Soal <strong>${session.index+1}</strong> / ${session.questions.length}</span><span id="kotoba-timer" role="timer">${session.time ? mode.audio ? 'Timer setelah audio' : `${session.time} dtk` : 'Tanpa timer'}</span></div><div class="progress-track" role="progressbar" aria-label="Progres kuis kotoba" aria-valuemin="0" aria-valuemax="${session.questions.length}" aria-valuenow="${session.index}"><span style="width:${session.index/session.questions.length*100}%"></span></div>
       <div class="quiz-question kotoba-question"><div class="kotoba-question-tags"><span>${wordScope(q)}</span><span>${escape(q.types.join(' · '))}</span></div><p class="quiz-caption">${mode.caption}</p>
         <div class="kotoba-prompt ${session.mode==='id-jp' ? 'kotoba-meaning-prompt' : ''}" tabindex="-1" ${mode.audio ? '' : `lang="${session.mode==='id-jp' ? 'id' : 'ja'}"`}>${mode.audio ? `<button class="kotoba-listen" data-kotoba="listen">${icon('speaker')}<span>Dengarkan soal</span></button><p id="kotoba-speech-status" class="kotoba-small" role="status">Tekan untuk memutar suara.</p>` : escape(q.prompt)}</div>
@@ -197,7 +201,7 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
   function finish() {
     stop(); const correct=session.answers.filter(a=>a.correct).length;
     const total=session.questions.length;
-    recordSession({date:new Date().toISOString(),correct,total,mode:`kotoba-${session.mode}`,course:session.course,sourceGroup:session.sourceGroup,chapters:session.chapters,type:session.type});
+    recordSession({date:new Date().toISOString(),correct,total,mode:`kotoba-${session.mode}`,course:session.course,sourceGroup:session.sourceGroup,chapters:session.chapters,types:session.types});
     lastSession=session;session=null;reviewPage=0;
     root.innerHTML=`<div class="study-panel kotoba-results"><div class="results"><div class="section-kicker">LATIHAN KOTOBA SELESAI</div><div class="result-circle">${Math.round(correct/total*100)}%<small>JAWABAN BENAR</small></div><h1>${correct===total ? 'Semua kata berhasil kamu kenali!' : 'Sedikit demi sedikit, makin ingat.'}</h1><p>${correct} dari ${total} jawaban benar · ${scopeLabel(lastSession)}</p><div class="result-buttons"><button class="primary" data-kotoba="setup">Latihan baru ${icon('arrow')}</button>${correct<total ? '<button class="secondary" data-kotoba="retry-wrong">Ulangi yang salah</button>' : ''}<a href="#progres" class="text-button">Lihat progres ${icon('arrow')}</a></div></div><section class="kotoba-review"><h2>Tinjau jawabanmu</h2><div id="kotoba-review-list"></div><div class="kotoba-review-pagination"><button class="secondary" data-kotoba="review-prev">Sebelumnya</button><span id="kotoba-review-page"></span><button class="secondary" data-kotoba="review-next">Berikutnya</button></div></section></div>`;
     renderReview();window.scrollTo({top:0,behavior:'instant'});
@@ -226,6 +230,12 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
       const [start,end]=b.dataset.kotobaRange.split('-').map(Number);
       preferences.chapters=ALL_CHAPTERS.slice(start-1,end);updateSetup();return;
     }
+    if(b.dataset.kotobaType) {
+      const type=b.dataset.kotobaType;
+      const types=preferences.types ?? [];
+      preferences.types=type==='all' ? null : types.includes(type) ? types.filter(t=>t!==type) : [...types,type];
+      updateSetup();return;
+    }
     if(b.dataset.kotobaMode) {preferences.mode=b.dataset.kotobaMode;updateSetup();return;}
     if(b.dataset.kotobaAnswer!==undefined) {answer(Number(b.dataset.kotobaAnswer));return;}
     const action=b.dataset.kotoba;
@@ -251,7 +261,7 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
     if(action==='review-prev' || action==='review-next') {reviewPage+=action==='review-next' ? 1 : -1;renderReview();find('.kotoba-review').scrollIntoView({block:'start'});}
   });
   root.addEventListener('change',e=>{
-    if(active && !session && ['kotoba-type','kotoba-count','kotoba-time','kotoba-source-group'].includes(e.target.id)) updateSetup();
+    if(active && !session && ['kotoba-count','kotoba-time','kotoba-source-group'].includes(e.target.id)) updateSetup();
   });
   root.addEventListener('input',e=>{
     if(!active || session)return;

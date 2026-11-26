@@ -42,6 +42,39 @@ test('chapter and word-type filters keep complete source membership while mergin
   assert.equal(chapterLabel([50,1,2,3,5,5]),'Bab 1–3, 5, 50');
 });
 
+test('multiple word types combine within the selected Minna chapters or N3 source group',()=>{
+  const types=['kata kerja','kata benda','kata sifat-i'];
+  for(const [courseId, scope, inScope] of [
+    ['minna',{chapters:[6,8]},e=>[6,8].includes(e.chapter)],
+    ['n3',{sourceGroup:'core'},e=>e.sourceGroup==='core'],
+  ]) {
+    const {entries}=kotobaCourse(courseId);
+    const expected=entries.filter(e=>inScope(e) && types.includes(e.type));
+    const pool=getKotobaPool(entries,{...scope,types});
+    assert.deepEqual(new Set(pool.flatMap(q=>q.entryIds)),new Set(expected.map(e=>e.id)),courseId);
+    assert.deepEqual(new Set(pool.flatMap(q=>q.types)),new Set(types),courseId);
+    const allowed=new Set(pool.map(q=>q.id));
+    for(const mode of Object.keys(KOTOBA_MODES)) {
+      const quiz=createKotobaQuiz(entries,{...scope,types,mode,count:25},seeded());
+      assert.equal(quiz.length,25,`${courseId} ${mode}`);
+      assert.ok(quiz.every(q=>allowed.has(q.id) && q.optionDetails.every(word=>allowed.has(word.id))),`${courseId} ${mode}`);
+    }
+    assert.deepEqual(getKotobaPool(entries,{...scope,types:null}),getKotobaPool(entries,scope));
+    assert.deepEqual(getKotobaPool(entries,{...scope,types:[]}),[]);
+    assert.deepEqual(createKotobaQuiz(entries,{...scope,types:[]}),[]);
+  }
+});
+
+test('rare selected word types can use distractors from other types within the same scope',()=>{
+  const {entries}=kotobaCourse('minna');
+  const scope={chapters:[1],types:['akhiran / pola']};
+  const pool=getKotobaPool(entries,scope);
+  const quiz=createKotobaQuiz(entries,{...scope,count:10},seeded());
+  assert.ok(pool.length>0);
+  assert.deepEqual(new Set(quiz.map(q=>q.id)),new Set(pool.map(q=>q.id)));
+  assert.ok(quiz.every(q=>q.options.length===4 && q.optionDetails.every(word=>word.chapters.length===1 && word.chapters[0]===1)));
+});
+
 test('all five modes can quiz their full pool with four unique choices and no repeat',()=>{
   for(const mode of Object.keys(KOTOBA_MODES)) {
     const settings={mode,count:5000};

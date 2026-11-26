@@ -22,11 +22,12 @@ export function meaningKeys(value) {
 }
 const intersects = (a,b) => a.some(value=>b.includes(value));
 
-export function getKotobaPool(entries, { chapters=null, type='all', mode='jp-id', sourceGroup='all' }={}) {
+export function getKotobaPool(entries, { chapters=null, types=null, type='all', mode='jp-id', sourceGroup='all' }={}) {
   const selected = Array.isArray(chapters) ? new Set(chapters) : null;
+  const selectedTypes = Array.isArray(types) ? new Set(types) : type==='all' ? null : new Set([type]);
   const grouped = new Map();
   for (const e of entries) {
-    if ((selected && !selected.has(e.chapter)) || (type!=='all' && type!==e.type)
+    if ((selected && !selected.has(e.chapter)) || (selectedTypes && !selectedTypes.has(e.type))
       || (sourceGroup!=='all' && sourceGroup!==e.sourceGroup)) continue;
     const word=e.spelling || e.reading;
     if (mode==='reading' && !/\p{Script=Han}/u.test(word)) continue;
@@ -72,8 +73,13 @@ export function createKotobaQuiz(entries, settings, random=Math.random) {
   const { mode='jp-id', count=10 }=settings;
   if (!Object.hasOwn(KOTOBA_MODES,mode) || !Number.isSafeInteger(count) || count<1) return [];
   const targets=shuffle(getKotobaPool(entries,settings),random);
-  // Distractors may use other word types, but always stay in the selected chapters.
-  const candidates=getKotobaPool(entries,{chapters:settings.chapters,sourceGroup:settings.sourceGroup});
+  if (!targets.length) return [];
+  // Prefer selected word types, with other types available for small pools.
+  const scope={chapters:settings.chapters,sourceGroup:settings.sourceGroup};
+  const candidates=getKotobaPool(entries,{...scope,types:settings.types});
+  const selectedIds=new Set(candidates.map(word=>word.id));
+  const fallback=Array.isArray(settings.types)
+    ? getKotobaPool(entries,scope).filter(word=>!selectedIds.has(word.id)) : [];
   const complete=getKotobaPool(entries);
   const isMeaning=mode==='jp-id' || mode==='audio-jp';
   const isReading=mode==='reading';
@@ -85,17 +91,23 @@ export function createKotobaQuiz(entries, settings, random=Math.random) {
     const validReadings=new Set(equivalents.map(other=>other.readingKey));
     const validSenses=[...new Set(equivalents.flatMap(other=>other.senses))];
     const validEnglishSenses=[...new Set(equivalents.flatMap(other=>other.englishSenses))];
-    const safe=candidates.filter(other=>!validWords.has(other.wordKey) && !validReadings.has(other.readingKey)
-      && !intersects(validSenses,other.senses) && !intersects(validEnglishSenses,other.englishSenses));
+    const isSafe=other=>!validWords.has(other.wordKey) && !validReadings.has(other.readingKey)
+      && !intersects(validSenses,other.senses) && !intersects(validEnglishSenses,other.englishSenses);
+    const safe=candidates.filter(isSafe);
     const sameType=shuffle(safe.filter(other=>intersects(q.types,other.types)),random);
     const others=shuffle(safe.filter(other=>!intersects(q.types,other.types)),random);
     const answer=answerOf(q);
     const detailByAnswer=new Map([[answer,q]]);
     const distractors=[], used=new Set([normalize(answer)]);
-    for(const candidate of [...sameType,...others]) {
-      const value=answerOf(candidate), key=normalize(value);
-      if(used.has(key)) continue;
-      used.add(key);distractors.push(value);detailByAnswer.set(value,candidate);
+    const preferred=[...sameType,...others];
+    for(const group of [preferred,fallback]) {
+      const options=group===fallback ? shuffle(fallback.filter(isSafe),random) : group;
+      for(const candidate of options) {
+        const value=answerOf(candidate), key=normalize(value);
+        if(used.has(key)) continue;
+        used.add(key);distractors.push(value);detailByAnswer.set(value,candidate);
+        if(distractors.length===3) break;
+      }
       if(distractors.length===3) break;
     }
     if(distractors.length<3) continue;
