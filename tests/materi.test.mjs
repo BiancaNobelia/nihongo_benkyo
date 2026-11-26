@@ -80,15 +80,16 @@ test('pagination covers all material entries once and clamps after filters chang
 });
 
 
-test('Kotoba materials use only the photographed entries in chapters 1–9 and 26–50', () => {
+test('Kotoba materials use only the photographed entries in chapters 1–12 and 26–50', () => {
   const entries = MATERIAL_KOTOBA_ENTRIES;
   const ids = new Set(entries.map(entry => entry.id));
   assert.equal(ids.size, entries.length);
-  const outsidePhotos = entry => entry.chapter >= 10 && entry.chapter < 26;
+  const outsidePhotos = entry => entry.chapter >= 13 && entry.chapter < 26;
   assert.deepEqual(entries.filter(outsidePhotos), KOTOBA_ENTRIES.filter(outsidePhotos));
   for (const [chapter, count] of [
     [1, 30], [2, 46], [3, 43], [4, 53], [5, 59], [6, 51],
     [7, 45], [8, 56], [9, 55],
+    [10, 47], [11, 61], [12, 50],
     [26, 48], [27, 50], [28, 49], [29, 45], [30, 54], [31, 42], [32, 57], [33, 54],
     [34, 52], [35, 44], [36, 47], [37, 48], [38, 44], [39, 43],
     [40, 62], [41, 54], [42, 51], [43, 30], [44, 41], [45, 34],
@@ -123,6 +124,20 @@ test('Kotoba materials use only the photographed entries in chapters 1–9 and 2
     [9, '家内', '家内', undefined],
     [9, '速く', '速く', undefined],
     [9, 'また今度', 'また今度お願いします。', undefined],
+    [10, 'benda mati', 'あります', 'Golongan I · Godan'],
+    [10, 'orang atau hewan', 'います', 'Golongan II · Ichidan'],
+    [10, 'エーティーエム', 'ATM', undefined],
+    [10, 'kecap ikan', 'ナンプラー', undefined],
+    [11, '子どもがいます', 'います', 'Golongan II · Ichidan'],
+    [11, '日本にいます', 'います', 'Golongan II · Ichidan'],
+    [11, 'とお', '10', undefined],
+    [11, '～週間', '～週間', undefined],
+    [11, '船便', '船便', undefined],
+    [12, '速い', '速い', undefined],
+    [12, '早い', '早い', undefined],
+    [12, '温かい', '温かい', undefined],
+    [12, '生け花', '生け花', undefined],
+    [12, 'お帰りなさい', 'お帰りなさい。', undefined],
     [26, '診ます', '見ます・診ます', 'Golongan II · Ichidan'],
     [26, '片づきます', '片づきます', 'Golongan I · Godan'],
     [26, '宇宙飛行士', '宇宙飛行士', undefined],
@@ -216,6 +231,9 @@ test('Kotoba materials use only the photographed entries in chapters 1–9 and 2
     [6, ['メキシコ', '大屋デパート', 'フランス屋', '毎日屋', 'レストラン']],
     [7, ['スペイン', 'ファクス', 'ワープロ']],
     [8, ['シャンハイ', '金閣寺', '奈良公園', '富士山', '七人の侍']],
+    [10, ['東京ディズニーランド', 'アジアストア', 'おく']],
+    [11, ['オーストラリア', '三人', '一冊']],
+    [12, ['祇園祭', 'ホンコン', 'シンガポール', 'ABCストア', '試験']],
     [26, ['NHK', 'エドヤストア', '土井隆雄', '見つけます', '書類', 'お忙しい']],
     [27, ['関西空港', '秋葉原', '伊豆', 'ドラえもん', '走れます', 'ピアノ', 'ようやく']],
     [28, ['育てます']],

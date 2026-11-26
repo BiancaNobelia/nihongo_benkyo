@@ -139,7 +139,7 @@ CD	シーディー	好きな歌手の【CD】を買いました。	Saya membeli 
 そちら	そちら	【そちら】は今何時ですか。	Sekarang pukul berapa di tempat Anda?	di tempat anda
 電車	でんしゃ	毎朝【電車】で学校へ行きます。	Setiap pagi saya pergi ke sekolah dengan kereta listrik.
 歩いて	あるいて	きょうは駅まで【歩いて】行きます。	Hari ini saya pergi ke stasiun dengan berjalan kaki.
-～年	～ねん	2027【年】に大学へ行きます。	Saya akan masuk universitas pada tahun 2027.
+～年	～ねん	2027【年】に大学へ行きます。	Saya akan masuk universitas pada tahun 2027.	tahun ～
 何年	なんねん	今は【何年】ですか。	Sekarang tahun berapa?
 ～月	～がつ	わたしの誕生日は九【月】です。	Ulang tahun saya pada bulan September.
 1日	ついたち	来月の【1日】に学校が始まります。	Sekolah mulai pada tanggal satu bulan depan.
@@ -238,3 +238,83 @@ CD	シーディー	好きな歌手の【CD】を買いました。	Saya membeli 
 ～はちょっと……。	～はちょっと……。	「土曜日に映画を見ませんか」「すみません、【土曜日はちょっと……】」。	“Mau nonton film hari Sabtu?” “Maaf, hari Sabtu saya tidak bisa.”
 だめですか。	だめですか。	「明日はちょっと……」「そうですか。土曜日も【だめですか】」。	“Besok saya belum bisa.” “Oh, begitu. Sabtu juga tidak bisa?”
 また今度お願いします。	またこんどおねがいします。	「今晩、いっしょに食べませんか」「今日は用事があります。【また今度お願いします】」。	“Mau makan bersama malam ini?” “Hari ini saya ada keperluan. Maaf, lain kali saja, ya.”
+あります	あります	テーブルの上に本が【あります】。	Ada buku di atas meja.	untuk benda mati
+います	います	机の下に猫が【います】。	Ada kucing di bawah meja.	untuk orang atau hewan
+いろいろ	いろいろ	この店には【いろいろ】な本があります。	Ada berbagai macam buku di toko ini.
+男の人	おとこのひと	駅の前に【男の人】がいます。	Ada seorang pria di depan stasiun.
+女の人	おんなのひと	公園に【女の人】がいます。	Ada seorang wanita di taman.
+パンダ	パンダ	動物園で【パンダ】を見ました。	Saya melihat panda di kebun binatang.
+ポスト	ポスト	手紙を【ポスト】に入れます。	Saya memasukkan surat ke kotak pos.
+ATM	エーティーエム	コンビニの中に【ATM】があります。	Ada ATM di dalam minimarket.
+公園	こうえん	学校の隣に【公園】があります。	Ada taman di sebelah sekolah.
+～屋	～や	駅の前に花【屋】があります。	Ada toko bunga di depan stasiun.
+県	けん	姉は千葉【県】に住んでいます。	Kakak perempuan saya tinggal di Prefektur Chiba.
+うしろ	うしろ	学校の【うしろ】に公園があります。	Ada taman di belakang sekolah.
+間	あいだ	銀行と郵便局の【間】に花屋があります。	Ada toko bunga di antara bank dan kantor pos.
+～や～など	～や～など	冷蔵庫に【卵や野菜など】があります。	Ada telur, sayur, dan lain-lain di kulkas.
+どうもすみません。	どうもすみません。	「ここが調味料のコーナーです」「【どうもすみません】」。	“Ini bagian bumbu.” “Terima kasih banyak.”
+ナンプラー	ナンプラー	この料理に【ナンプラー】を入れます。	Saya menambahkan kecap ikan ke masakan ini.
+コーナー	コーナー	野菜の【コーナー】はどこですか。	Di mana bagian penjualan sayur?
+いちばん下	いちばんした	ナンプラーは棚の【いちばん下】にあります。	Kecap ikan ada di bagian paling bawah rak.
+います	います	私には子どもが二人【います】。	Saya mempunyai dua anak.	mempunyai anak
+います	います	兄は今、日本に【います】。	Kakak laki-laki saya sekarang berada di Jepang.	berada di suatu tempat
+かかります	かかります	家から駅まで十分【かかります】。	Dari rumah ke stasiun perlu sepuluh menit.	memerlukan waktu
+1つ	ひとつ	りんごを【1つ】ください。	Tolong beri saya satu apel.
+3つ	みっつ	サンドイッチを【3つ】買いました。	Saya membeli tiga roti lapis.
+4つ	よっつ	箱の中にみかんが【4つ】あります。	Ada empat jeruk mandarin di dalam kotak.
+6つ	むっつ	卵を【6つ】買いました。	Saya membeli enam telur.
+7つ	ななつ	袋の中にりんごが【7つ】あります。	Ada tujuh apel di dalam kantong.
+8つ	やっつ	机の上に箱が【8つ】あります。	Ada delapan kotak di atas meja.
+9つ	ここのつ	おにぎりを【9つ】作りました。	Saya membuat sembilan onigiri.
+10	とお	みかんを【十】ください。	Tolong beri saya sepuluh jeruk mandarin.
+いくつ	いくつ	りんごを【いくつ】買いましたか。	Berapa buah apel yang Anda beli?
+1人	ひとり	教室に先生が【1人】います。	Ada seorang guru di ruang kelas.
+2人	ふたり	公園に子どもが【2人】います。	Ada dua anak di taman.
+～人	～にん	このクラスに学生が十【人】います。	Ada sepuluh siswa di kelas ini.
+～台	～だい	うちには車が二【台】あります。	Di rumah kami ada dua mobil.
+～枚	～まい	切手を三【枚】ください。	Tolong beri saya tiga lembar perangko.
+～回	～かい	一週間に二【回】テニスをします。	Saya bermain tenis dua kali seminggu.
+みかん	みかん	おやつに【みかん】を食べました。	Saya makan jeruk mandarin sebagai camilan.
+サンドイッチ	サンドイッチ	昼ごはんに【サンドイッチ】を食べます。	Saya makan roti lapis untuk makan siang.
+カレーライス	カレーライス	きのう、食堂で【カレーライス】を食べました。	Kemarin saya makan nasi kari di kantin.
+はがき	はがき	友達に【はがき】を送りました。	Saya mengirim kartu pos kepada teman.
+兄弟	きょうだい	【兄弟】は何人いますか。	Anda punya berapa saudara kandung?
+お兄さん	おにいさん	田中さんの【お兄さん】は大学生です。	Kakak laki-laki Tanaka seorang mahasiswa.
+お姉さん	おねえさん	田中さんの【お姉さん】は先生です。	Kakak perempuan Tanaka seorang guru.
+弟	おとうと	【弟】は高校生です。	Adik laki-laki saya siswa SMA.
+弟さん	おとうとさん	田中さんの【弟さん】は何歳ですか。	Berapa umur adik laki-laki Tanaka?
+妹さん	いもうとさん	田中さんの【妹さん】はどんなスポーツが好きですか。	Adik perempuan Tanaka suka olahraga apa?
+～時間	～じかん	毎日、日本語を二【時間】勉強します。	Setiap hari saya belajar bahasa Jepang selama dua jam.
+～週間	～しゅうかん	日本に二【週間】います。	Saya berada di Jepang selama dua minggu.
+～か月	～かげつ	大阪に三【か月】住んでいました。	Saya pernah tinggal di Osaka selama tiga bulan.
+～年	～ねん	日本語を二【年】勉強しました。	Saya belajar bahasa Jepang selama dua tahun.	selama
+～ぐらい	～ぐらい	駅まで歩いて十分【ぐらい】です。	Ke stasiun kira-kira sepuluh menit jalan kaki.
+どのくらい	どのくらい	日本に【どのくらい】いますか。	Berapa lama Anda akan berada di Jepang?
+全部で	ぜんぶで	【全部で】いくらですか。	Berapa harga semuanya?
+～だけ	～だけ	切手を一枚【だけ】買いました。	Saya membeli satu lembar perangko saja.
+かしこまりました。	かしこまりました。	「この荷物を航空便でお願いします」「【かしこまりました】」。	“Tolong kirim paket ini lewat pos udara.” “Baik.”
+いいお天気ですね。	いいおてんきですね。	今日は【いいお天気ですね】。	Cuaca hari ini bagus, ya.
+お出かけですか。	おでかけですか。	「【お出かけですか】」「ええ、ちょっと郵便局まで」。	“Mau keluar?” “Ya, ke kantor pos sebentar.”
+ちょっと～まで。	ちょっと～まで。	「お出かけですか」「ええ、【ちょっと郵便局まで】」。	“Mau keluar?” “Ya, ke kantor pos sebentar.”
+行ってらっしゃい。	いってらっしゃい。	「行ってきます」「【行ってらっしゃい】」。	“Saya berangkat dulu.” “Hati-hati di jalan.”
+行ってきます。	いってきます。	「【行ってきます】」「行ってらっしゃい」。	“Saya berangkat dulu.” “Hati-hati di jalan.”
+船便	ふなびん	この荷物を【船便】で送ります。	Saya mengirim paket ini lewat pos laut.
+航空便	こうくうびん	この封筒を【航空便】で送ってください。	Tolong kirim amplop ini lewat pos udara.
+エアメール	エアメール	友達に【エアメール】を送りました。	Saya mengirim surat lewat pos udara kepada teman.
+速い	はやい	バスより電車のほうが【速い】です。	Kereta lebih cepat daripada bus.
+早い	はやい	集合は朝六時です。ちょっと【早い】ですね。	Kita berkumpul pukul enam pagi. Agak awal, ya.
+遅い	おそい	このバスは電車より【遅い】です。	Bus ini lebih lambat daripada kereta.
+少ない	すくない	今日は公園に人が【少ない】です。	Hari ini hanya ada sedikit orang di taman.
+軽い	かるい	このかばんはとても【軽い】です。	Tas ini sangat ringan.
+いい	いい	「紅茶とコーヒーと、どちらがいいですか」「コーヒーが【いい】です」。	“Anda pilih teh atau kopi?” “Saya pilih kopi.”	lebih baik
+おすし	おすし	家族と【おすし】を食べました。	Saya makan sushi bersama keluarga.
+とり肉	とりにく	このカレーには【とり肉】が入っています。	Kari ini berisi daging ayam.
+生け花	いけばな	姉は【生け花】を習っています。	Kakak perempuan saya sedang belajar ikebana.
+紅葉	もみじ	秋になると、庭の【紅葉】が赤くなります。	Saat musim gugur tiba, daun mapel di halaman berubah menjadi merah.
+どちら	どちら	夏と冬と、【どちら】が好きですか。	Anda lebih suka musim panas atau musim dingin?	dari dua pilihan
+どちらも	どちらも	コーヒーと紅茶は【どちらも】好きです。	Saya suka keduanya, kopi dan teh.
+ずっと	ずっと	今日はきのうより【ずっと】暖かいです。	Hari ini jauh lebih hangat daripada kemarin.	dalam perbandingan
+ただいま。	ただいま。	「【ただいま】」「お帰りなさい」。	“Saya pulang.” “Sudah pulang, ya.”
+お帰りなさい。	おかえりなさい。	「ただいま」「【お帰りなさい】」。	“Saya pulang.” “Sudah pulang, ya.”
+わあ、すごい人ですね。	わあ、すごいひとですね。	会場を見て、「【わあ、すごい人ですね】」と言いました。	Saat melihat tempat acaranya, saya berkata, “Wah, banyak sekali orang, ya.”
+疲れました。	つかれました。	三時間歩きました。とても【疲れました】。	Saya berjalan selama tiga jam. Saya sangat lelah.
