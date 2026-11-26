@@ -117,7 +117,7 @@ test('Minna quizzes and chapter counts use the same vocabulary as List Materi',(
   assert.deepEqual(entries,MATERIAL_KOTOBA_ENTRIES);
   for(const chapter of chapters) {
     assert.equal(chapter.count,entries.filter(entry=>entry.chapter===chapter.number).length);
-    if(chapter.number<26 || chapter.number>45) continue;
+    if(chapter.number<26 || chapter.number>48) continue;
 
     const scope=[chapter.number];
     const allowed=new Set(getKotobaPool(entries,{chapters:scope}).map(word=>word.id));
@@ -135,6 +135,10 @@ test('Minna quizzes and chapter counts use the same vocabulary as List Materi',(
   const bab26=getKotobaPool(entries,{chapters:[26]});
   assert.ok(bab26.some(word=>word.word==='宇宙飛行士'));
   assert.ok(!bab26.some(word=>word.word==='見つけます'));
+  const departureCards=getKotobaPool(entries,{chapters:[46]}).filter(word=>word.word==='出ます');
+  assert.equal(departureCards.length,1);
+  assert.match(departureCards[0].meaning,/バスが出ます/);
+  assert.match(departureCards[0].meaning,/本が出ます/);
 });
 
 test('Japanese examples stay out of the quiz prompt and options until feedback',()=>{

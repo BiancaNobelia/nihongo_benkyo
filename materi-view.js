@@ -1,6 +1,6 @@
 import {BUNPOU_PATTERNS, BUNPOU_CHAPTERS} from './bunpou-data.js?v=20261015-jidoushi-tadoushi';
 import {KOTOBA_CHAPTERS} from './kotoba-data.js?v=20261015-jidoushi-tadoushi';
-import {MATERIAL_KOTOBA_ENTRIES} from './materi-kotoba-data.js?v=20261126-kotoba-photo-45';
+import {MATERIAL_KOTOBA_ENTRIES} from './materi-kotoba-data.js?v=20261126-kotoba-photo-48';
 import {bunpouSentenceMarkup} from './bunpou-core.js?v=20261015-jidoushi-tadoushi';
 import {materialPool, materialPage, materialVerbGroup} from './materi-core.js?v=20261126-materi-photo-33';
 
