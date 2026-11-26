@@ -80,14 +80,15 @@ test('pagination covers all material entries once and clamps after filters chang
 });
 
 
-test('Kotoba materials use only the photographed entries in chapters 26 through 33', () => {
+test('Kotoba materials use only the photographed entries in chapters 26 through 36', () => {
   const entries = MATERIAL_KOTOBA_ENTRIES;
   const ids = new Set(entries.map(entry => entry.id));
   assert.equal(ids.size, entries.length);
-  const outsidePhotos = entry => entry.chapter < 26 || entry.chapter > 33;
+  const outsidePhotos = entry => entry.chapter < 26 || entry.chapter > 36;
   assert.deepEqual(entries.filter(outsidePhotos), KOTOBA_ENTRIES.filter(outsidePhotos));
   for (const [chapter, count] of [
     [26, 48], [27, 50], [28, 49], [29, 45], [30, 54], [31, 42], [32, 57], [33, 54],
+    [34, 52], [35, 44], [36, 47],
   ]) {
     assert.equal(materialPool(entries, {chapter}).length, count);
   }
@@ -116,6 +117,15 @@ test('Kotoba materials use only the photographed entries in chapters 26 through 
     [33, '非常口', '非常口', undefined],
     [33, '電報を打ちます', '打ちます', 'Golongan I · Godan'],
     [33, '利用します', '利用します', 'Golongan III · する'],
+    [34, '歯を磨きます', '磨きます', 'Golongan I · Godan'],
+    [34, '火にかけます', '火にかけます', 'Golongan II · Ichidan'],
+    [34, '親子どんぶり', '親子どんぶり', undefined],
+    [35, '交わります', '交わります', 'Golongan I · Godan'],
+    [35, '仲よくします', '仲よくします', 'Golongan III · する'],
+    [35, '旅行社', '旅行社', undefined],
+    [36, '試合に出ます', '出ます', 'Golongan II · Ichidan'],
+    [36, 'チャレンジします', 'チャレンジします', 'Golongan III · する'],
+    [36, 'まいねん', '毎年', undefined],
   ];
   for (const [chapter, query, spelling, group] of examples) {
     const [entry] = materialPool(entries, {chapter, query});
@@ -131,6 +141,9 @@ test('Kotoba materials use only the photographed entries in chapters 26 through 
     [31, ['ピカソ', '上野公園', '決めます']],
     [32, ['オリンピック', '治します']],
     [33, ['叫びます', '禁止します']],
+    [34, ['混ぜます', '茹でます']],
+    [35, ['箱根', '日光', '白馬', 'アフリカ', '草津', '志賀高原', '比べます']],
+    [36, ['ショパン', 'ライト兄弟', '努めます']],
   ]) {
     for (const query of excluded) assert.equal(materialPool(entries, {chapter, query}).length, 0);
   }
