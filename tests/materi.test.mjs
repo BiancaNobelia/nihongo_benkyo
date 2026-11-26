@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {materialPool, materialPage, materialVerbGroup} from '../materi-core.js';
 import {BUNPOU_PATTERNS} from '../bunpou-data.js';
 import {KOTOBA_ENTRIES} from '../kotoba-data.js';
+import {MATERIAL_KOTOBA_ENTRIES} from '../materi-kotoba-data.js';
 
 test('material library includes the existing Minna references for every chapter', () => {
   assert.equal(materialPool(BUNPOU_PATTERNS).length, 330);
@@ -76,4 +77,35 @@ test('pagination covers all material entries once and clamps after filters chang
   assert.equal(last.page, last.pages);
   assert.equal(last.to, chapter.length);
   assert.deepEqual(materialPage([], 12), {rows: [], page: 1, pages: 1, from: 0, to: 0});
+});
+
+
+test('Kotoba materials add the photographed chapters without dropping existing entries', () => {
+  const entries = MATERIAL_KOTOBA_ENTRIES;
+  const ids = new Set(entries.map(entry => entry.id));
+  assert.equal(ids.size, entries.length);
+  assert.ok(KOTOBA_ENTRIES.every(entry => ids.has(entry.id)));
+  assert.equal(entries.length, KOTOBA_ENTRIES.length + 86);
+  const examples = [
+    [26, '診ます', '見ます・診ます', 'Golongan II · Ichidan'],
+    [26, '片づきます', '片づきます', 'Golongan I · Godan'],
+    [26, '宇宙飛行士', '宇宙飛行士', undefined],
+    [27, '開きます', '開きます', 'Golongan I · Godan'],
+    [27, '付けます', '付けます', 'Golongan II · Ichidan'],
+    [27, '主人公', '主人公', undefined],
+  ];
+  for (const [chapter, query, spelling, group] of examples) {
+    const [entry] = materialPool(entries, {chapter, query});
+    assert.equal(entry?.spelling, spelling, query);
+    if (entry) assert.equal(materialVerbGroup(entry), group, query);
+  }
+  for (const [chapter, names] of [
+    [26, ['NHK', 'エドヤストア', '土井隆雄']],
+    [27, ['関西空港', '秋葉原', '伊豆', 'ドラえもん']],
+  ]) {
+    for (const query of names) assert.equal(materialPool(entries, {chapter, query}).length, 0);
+  }
+  for (const entry of entries.filter(entry => entry.type === 'kata kerja')) {
+    assert.match(materialVerbGroup(entry) ?? '', /^Golongan (I|II|III) · /, entry.id);
+  }
 });

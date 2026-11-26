@@ -1,14 +1,15 @@
 import {BUNPOU_PATTERNS, BUNPOU_CHAPTERS} from './bunpou-data.js?v=20261015-jidoushi-tadoushi';
-import {KOTOBA_ENTRIES, KOTOBA_CHAPTERS} from './kotoba-data.js?v=20261015-jidoushi-tadoushi';
+import {KOTOBA_CHAPTERS} from './kotoba-data.js?v=20261015-jidoushi-tadoushi';
+import {MATERIAL_KOTOBA_ENTRIES} from './materi-kotoba-data.js?v=20261126-materi-photo';
 import {bunpouSentenceMarkup} from './bunpou-core.js?v=20261015-jidoushi-tadoushi';
-import {materialPool, materialPage, materialVerbGroup} from './materi-core.js?v=20261126-materi-verb-groups';
+import {materialPool, materialPage, materialVerbGroup} from './materi-core.js?v=20261126-materi-photo';
 
 export function createMateriView({root, escape, icon}) {
   const state = {kind: 'bunpou', book: 1, chapter: 1, query: '', page: 1};
   let active = false;
   const find = selector => root.querySelector(selector);
   const num = value => value.toLocaleString('id-ID');
-  const entries = () => state.kind === 'bunpou' ? BUNPOU_PATTERNS : KOTOBA_ENTRIES;
+  const entries = () => state.kind === 'bunpou' ? BUNPOU_PATTERNS : MATERIAL_KOTOBA_ENTRIES;
   const chapters = () => state.kind === 'bunpou' ? BUNPOU_CHAPTERS : KOTOBA_CHAPTERS;
   const unit = () => state.kind === 'bunpou' ? 'pola' : 'kotoba';
   const bookName = () => state.book ? `Minna no Nihongo ${state.book === 1 ? 'I' : 'II'}` : 'Minna no Nihongo I & II';
@@ -19,7 +20,7 @@ export function createMateriView({root, escape, icon}) {
     }
     active = true;
     root.innerHTML = `<div class="materi-view">
-      <section class="materi-hero"><div><div class="section-kicker">RAK BELAJARMU · BAB 1–50</div><h1>Catatan kecil,<br><em>pemahaman besar.</em></h1><p>List materi Minna no Nihongo I & II. Temukan pola kalimat dan kosakata yang ingin kamu pelajari, satu bab setiap kali.</p><div class="materi-metrics"><span><strong>${num(BUNPOU_PATTERNS.length)}</strong> pola bunpou</span><span><strong>${num(KOTOBA_ENTRIES.length)}</strong> entri kotoba</span><span><strong>50</strong> bab</span></div></div><div class="materi-hero-mark" aria-hidden="true"><span lang="ja">学ぶ</span><small>BACA · PAHAMI · LATIH</small></div></section>
+      <section class="materi-hero"><div><div class="section-kicker">RAK BELAJARMU · BAB 1–50</div><h1>Catatan kecil,<br><em>pemahaman besar.</em></h1><p>List materi Minna no Nihongo I & II. Temukan pola kalimat dan kosakata yang ingin kamu pelajari, satu bab setiap kali.</p><div class="materi-metrics"><span><strong>${num(BUNPOU_PATTERNS.length)}</strong> pola bunpou</span><span><strong>${num(MATERIAL_KOTOBA_ENTRIES.length)}</strong> entri kotoba</span><span><strong>50</strong> bab</span></div></div><div class="materi-hero-mark" aria-hidden="true"><span lang="ja">学ぶ</span><small>BACA · PAHAMI · LATIH</small></div></section>
       <nav class="materi-tabs" aria-label="Jenis materi">
         <a href="#materi/bunpou" ${state.kind === 'bunpou' ? 'aria-current="page"' : ''}><span class="materi-tab-symbol" lang="ja">文法</span><span><strong>Bunpou</strong><small>Pola, rumus & contoh kalimat</small></span>${icon('arrow')}</a>
         <a href="#materi/kotoba" ${state.kind === 'kotoba' ? 'aria-current="page"' : ''}><span class="materi-tab-symbol" lang="ja">言葉</span><span><strong>Kotoba</strong><small>Kosakata, bacaan & arti</small></span>${icon('arrow')}</a>
@@ -34,7 +35,7 @@ export function createMateriView({root, escape, icon}) {
         <div class="materi-results-heading"><div><div id="materi-book-label" class="section-kicker"></div><h2 id="materi-title" tabindex="-1"></h2><p id="materi-chapter-title"></p></div><span id="materi-count" role="status" aria-live="polite"></span></div>
         <div id="materi-results"></div>
         <div class="materi-pagination" aria-label="Halaman materi"><button class="secondary" data-materi-action="prev" aria-label="Halaman materi sebelumnya">${icon('back')} Sebelumnya</button><span id="materi-page" role="status"></span><button class="secondary" data-materi-action="next" aria-label="Halaman materi berikutnya">Berikutnya ${icon('arrow')}</button></div>
-      </section></div><p class="materi-source">Materi mengikuti daftar belajar yang dipakai dalam kuis: 330 pola bunpou dan 1.690 entri kotoba bab 1–50. Kata yang diperkenalkan kembali di bab lain tetap dicantumkan. <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">Sumber materi ${icon('arrow-up')}</a></p>
+      </section></div><p class="materi-source">Daftar ini memuat ${num(BUNPOU_PATTERNS.length)} pola bunpou dan ${num(MATERIAL_KOTOBA_ENTRIES.length)} entri kotoba dari bab 1–50. Kata yang diperkenalkan kembali di bab lain tetap dicantumkan. <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">Sumber materi ${icon('arrow-up')}</a></p>
     </div>`;
     update();
   }

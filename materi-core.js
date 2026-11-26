@@ -6,7 +6,7 @@ const minnaVerbGroups = new Map(HENKAN_VERBS.flatMap(verb =>
     .map(source => [source, VERB_GROUPS[verb.group]])));
 
 export function materialVerbGroup(entry) {
-  return entry.type === 'kata kerja' ? minnaVerbGroups.get(entry.id) : undefined;
+  return entry.type === 'kata kerja' ? (VERB_GROUPS[entry.verbGroup] ?? minnaVerbGroups.get(entry.id)) : undefined;
 }
 
 // Keep chapter-specific entries, including vocabulary revisited in later chapters.

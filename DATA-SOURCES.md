@@ -1420,3 +1420,15 @@ sedangkan `#kredit/kanji-<karakter>` menyertakan rujukan khusus karakter.
 Validasi mencakup kesetaraan persis dengan 2.383 karakter katalog, kaitan
 kata nyata, pembedaan cerita dengan sejarah, keamanan render, pemuatan
 sekali, percobaan ulang, dan pembatalan pembaruan dialog yang sudah ditutup.
+
+
+## Tambahan List Materi Kotoba Bab 26–27
+
+Foto pengguna untuk Minna no Nihongo II Bab 26 (hlm. 4–5) dan Bab 27
+(hlm. 10–11) menjadi rujukan daftar kosakata utama, percakapan, dan bacaan.
+Sebanyak 98 entri foto dirangkum dalam `materi-kotoba-data.js`. Dua belas entri
+memakai kembali ID baris workbook dan 86 entri ditambahkan khusus ke List
+Materi. Kosakata lama tetap tersedia dan bank Kuis Kotoba tetap memakai data
+workbook. Nama diri yang hanya menjadi rujukan cerita atau tempat dilewati.
+Golongan kata kerja pada entri foto mengikuti penanda I, II, dan III di halaman
+sumber. Cek dengan `node --test tests/materi.test.mjs`.
