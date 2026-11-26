@@ -575,7 +575,7 @@ Jumlah setiap bab direkonsiliasi dengan sheet `Ringkasan`.
 
 Sheet `Panduan` menyebut sumber sebagai kompilasi latihan orisinal yang mengikuti
 topik Minna no Nihongo I dan II, bukan transkripsi atau daftar resmi lengkap buku.
-Kuis Minna memakai daftar yang sama dengan List Materi. Kosakata Bab 26–36
+Kuis Minna memakai daftar yang sama dengan List Materi. Kosakata Bab 26–39
 mengikuti foto yang dijelaskan di bawah, dan bab lainnya memakai data workbook.
 Atribusi dan lisensi sumber kanji di atas tidak berlaku otomatis untuk sumber
 kosakata pengguna. Workbook asli tidak diubah atau diunggah.
@@ -1423,7 +1423,7 @@ kata nyata, pembedaan cerita dengan sejarah, keamanan render, pemuatan
 sekali, percobaan ulang, dan pembatalan pembaruan dialog yang sudah ditutup.
 
 
-## List Materi Kotoba Bab 26–36
+## List Materi Kotoba Bab 26–39
 
 Foto pengguna untuk Minna no Nihongo II menjadi rujukan kosakata utama,
 percakapan, dan bacaan dalam `materi-kotoba-data.js`. Daftar mencakup Bab 26
@@ -1431,9 +1431,9 @@ percakapan, dan bacaan dalam `materi-kotoba-data.js`. Daftar mencakup Bab 26
 49 entri), Bab 29 (hlm. 22–23, 45 entri), Bab 30 (hlm. 28–29, 54 entri),
 Bab 31 (hlm. 34–35, 42 entri), Bab 32 (hlm. 40–41, 57 entri), dan Bab 33
 (hlm. 46–47, 54 entri), Bab 34 (hlm. 52–53, 52 entri), Bab 35 (hlm. 58–59,
-44 entri), dan Bab 36 (hlm. 64–65, 47 entri). List Materi pada bab-bab ini
+44 entri), Bab 36 (hlm. 64–65, 47 entri), Bab 37 (hlm. 70–71, 48 entri),
+Bab 38 (hlm. 76–77, 44 entri), dan Bab 39 (hlm. 82–83, 43 entri). List Materi
 mengikuti foto dan melewati nama diri yang hanya menjadi rujukan cerita, tempat,
-atau acara. Kuis
-Kotoba Minna memakai daftar ini untuk soal dan pilihan jawaban. Golongan kata
+atau acara. Kuis Kotoba Minna memakai daftar ini untuk soal dan pilihan jawaban. Golongan kata
 kerja mengikuti penanda I, II, dan III pada foto.
 Cek dengan `node --test tests/materi.test.mjs`.
