@@ -1,8 +1,8 @@
 import {BUNPOU_PATTERNS, BUNPOU_CHAPTERS} from './bunpou-data.js?v=20261015-jidoushi-tadoushi';
 import {KOTOBA_CHAPTERS} from './kotoba-data.js?v=20261015-jidoushi-tadoushi';
-import {MATERIAL_KOTOBA_ENTRIES} from './materi-kotoba-data.js?v=20261126-materi-photo-30';
+import {MATERIAL_KOTOBA_ENTRIES} from './materi-kotoba-data.js?v=20261126-materi-photo-33';
 import {bunpouSentenceMarkup} from './bunpou-core.js?v=20261015-jidoushi-tadoushi';
-import {materialPool, materialPage, materialVerbGroup} from './materi-core.js?v=20261126-materi-photo-30';
+import {materialPool, materialPage, materialVerbGroup} from './materi-core.js?v=20261126-materi-photo-33';
 
 export function createMateriView({root, escape, icon}) {
   const state = {kind: 'bunpou', book: 1, chapter: 1, query: '', page: 1};
