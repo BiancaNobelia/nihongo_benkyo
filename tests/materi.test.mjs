@@ -80,14 +80,15 @@ test('pagination covers all material entries once and clamps after filters chang
 });
 
 
-test('Kotoba materials use only the photographed entries in chapters 26 and 27', () => {
+test('Kotoba materials use only the photographed entries in chapters 26 through 30', () => {
   const entries = MATERIAL_KOTOBA_ENTRIES;
   const ids = new Set(entries.map(entry => entry.id));
   assert.equal(ids.size, entries.length);
-  const outsidePhotos = entry => entry.chapter !== 26 && entry.chapter !== 27;
+  const outsidePhotos = entry => entry.chapter < 26 || entry.chapter > 30;
   assert.deepEqual(entries.filter(outsidePhotos), KOTOBA_ENTRIES.filter(outsidePhotos));
-  assert.equal(materialPool(entries, {chapter: 26}).length, 48);
-  assert.equal(materialPool(entries, {chapter: 27}).length, 50);
+  for (const [chapter, count] of [[26, 48], [27, 50], [28, 49], [29, 45], [30, 54]]) {
+    assert.equal(materialPool(entries, {chapter}).length, count);
+  }
   const examples = [
     [26, '診ます', '見ます・診ます', 'Golongan II · Ichidan'],
     [26, '片づきます', '片づきます', 'Golongan I · Godan'],
@@ -95,6 +96,15 @@ test('Kotoba materials use only the photographed entries in chapters 26 and 27',
     [27, '開きます', '開きます', 'Golongan I · Godan'],
     [27, '付けます', '付けます', 'Golongan II · Ichidan'],
     [27, '主人公', '主人公', undefined],
+    [28, 'おしゃべりします', 'おしゃべりします', 'Golongan III · する'],
+    [28, '歌手', '歌手', undefined],
+    [29, 'あきます', '開きます', 'Golongan I · Godan'],
+    [29, 'ポケットが付きます', '付きます', 'Golongan I · Godan'],
+    [29, '電気がつきます', 'つきます', 'Golongan I · Godan'],
+    [29, '倒れます', '倒れます', 'Golongan II · Ichidan'],
+    [30, 'そのままにします', 'そのままにします', 'Golongan III · する'],
+    [30, '目が覚めます', '目が覚めます', 'Golongan II · Ichidan'],
+    [30, '丸い', '丸い', undefined],
   ];
   for (const [chapter, query, spelling, group] of examples) {
     const [entry] = materialPool(entries, {chapter, query});
@@ -104,6 +114,9 @@ test('Kotoba materials use only the photographed entries in chapters 26 and 27',
   for (const [chapter, excluded] of [
     [26, ['NHK', 'エドヤストア', '土井隆雄', '見つけます', '書類', 'お忙しい']],
     [27, ['関西空港', '秋葉原', '伊豆', 'ドラえもん', '走れます', 'ピアノ', 'ようやく']],
+    [28, ['育てます']],
+    [29, ['四ツ谷', '三宮', '濡れます']],
+    [30, ['ブロードウェイ', '組み立てます']],
   ]) {
     for (const query of excluded) assert.equal(materialPool(entries, {chapter, query}).length, 0);
   }

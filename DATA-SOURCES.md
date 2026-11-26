@@ -1422,14 +1422,13 @@ kata nyata, pembedaan cerita dengan sejarah, keamanan render, pemuatan
 sekali, percobaan ulang, dan pembatalan pembaruan dialog yang sudah ditutup.
 
 
-## List Materi Kotoba Bab 26–27
+## List Materi Kotoba Bab 26–30
 
-Foto pengguna untuk Minna no Nihongo II Bab 26 (hlm. 4–5) dan Bab 27
-(hlm. 10–11) menjadi rujukan daftar kosakata utama, percakapan, dan bacaan.
-Sebanyak 98 entri foto dirangkum dalam `materi-kotoba-data.js`. Dua belas entri
-memakai kembali ID baris workbook dan 86 entri berasal dari tambahan foto.
-Untuk kedua bab ini, List Materi hanya menampilkan entri yang ada di foto.
-Nama diri yang hanya menjadi rujukan cerita atau tempat dilewati. Bank Kuis
-Kotoba tetap memakai data workbook.
-Golongan kata kerja pada entri foto mengikuti penanda I, II, dan III di halaman
-sumber. Cek dengan `node --test tests/materi.test.mjs`.
+Foto pengguna untuk Minna no Nihongo II menjadi rujukan kosakata utama,
+percakapan, dan bacaan dalam `materi-kotoba-data.js`. Daftar mencakup Bab 26
+(hlm. 4–5, 48 entri), Bab 27 (hlm. 10–11, 50 entri), Bab 28 (hlm. 16–17,
+49 entri), Bab 29 (hlm. 22–23, 45 entri), dan Bab 30 (hlm. 28–29, 54 entri).
+List Materi pada kelima bab ini mengikuti foto dan melewati nama diri yang
+hanya menjadi rujukan cerita atau tempat. Bank Kuis Kotoba memakai data
+workbook. Golongan kata kerja mengikuti penanda I, II, dan III pada foto.
+Cek dengan `node --test tests/materi.test.mjs`.
