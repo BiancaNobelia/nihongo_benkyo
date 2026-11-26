@@ -117,9 +117,9 @@ const photographedEntries = Object.entries(photoRows).flatMap(([chapter, rows]) 
       type: verbGroup ? 'kata kerja' : kind, verbGroup,
     };
   }));
-const replacedIds = new Set(photographedEntries.map(entry => entry.id));
+const photographedChapters = new Set(Object.keys(photoRows).map(Number));
 
 export const MATERIAL_KOTOBA_ENTRIES = [
   ...photographedEntries,
-  ...KOTOBA_ENTRIES.filter(entry => !replacedIds.has(entry.id)),
+  ...KOTOBA_ENTRIES.filter(entry => !photographedChapters.has(entry.chapter)),
 ].sort((a, b) => a.chapter - b.chapter);

@@ -80,12 +80,14 @@ test('pagination covers all material entries once and clamps after filters chang
 });
 
 
-test('Kotoba materials add the photographed chapters without dropping existing entries', () => {
+test('Kotoba materials use only the photographed entries in chapters 26 and 27', () => {
   const entries = MATERIAL_KOTOBA_ENTRIES;
   const ids = new Set(entries.map(entry => entry.id));
   assert.equal(ids.size, entries.length);
-  assert.ok(KOTOBA_ENTRIES.every(entry => ids.has(entry.id)));
-  assert.equal(entries.length, KOTOBA_ENTRIES.length + 86);
+  const outsidePhotos = entry => entry.chapter !== 26 && entry.chapter !== 27;
+  assert.deepEqual(entries.filter(outsidePhotos), KOTOBA_ENTRIES.filter(outsidePhotos));
+  assert.equal(materialPool(entries, {chapter: 26}).length, 48);
+  assert.equal(materialPool(entries, {chapter: 27}).length, 50);
   const examples = [
     [26, '診ます', '見ます・診ます', 'Golongan II · Ichidan'],
     [26, '片づきます', '片づきます', 'Golongan I · Godan'],
@@ -99,11 +101,11 @@ test('Kotoba materials add the photographed chapters without dropping existing e
     assert.equal(entry?.spelling, spelling, query);
     if (entry) assert.equal(materialVerbGroup(entry), group, query);
   }
-  for (const [chapter, names] of [
-    [26, ['NHK', 'エドヤストア', '土井隆雄']],
-    [27, ['関西空港', '秋葉原', '伊豆', 'ドラえもん']],
+  for (const [chapter, excluded] of [
+    [26, ['NHK', 'エドヤストア', '土井隆雄', '見つけます', '書類', 'お忙しい']],
+    [27, ['関西空港', '秋葉原', '伊豆', 'ドラえもん', '走れます', 'ピアノ', 'ようやく']],
   ]) {
-    for (const query of names) assert.equal(materialPool(entries, {chapter, query}).length, 0);
+    for (const query of excluded) assert.equal(materialPool(entries, {chapter, query}).length, 0);
   }
   for (const entry of entries.filter(entry => entry.type === 'kata kerja')) {
     assert.match(materialVerbGroup(entry) ?? '', /^Golongan (I|II|III) · /, entry.id);
