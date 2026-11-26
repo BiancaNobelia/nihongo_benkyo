@@ -1434,8 +1434,10 @@ Bab 4 (hlm. 28–29, 53 entri), Bab 5 (hlm. 34–35, 59 entri), Bab 6
 Bab 11 (hlm. 70–71, 61 entri), Bab 12 (hlm. 76–77, 50 entri), Bab 13
 (hlm. 82–83, 31 entri), Bab 14 (hlm. 88–89, 45 entri), Bab 15 (hlm. 94–95,
 23 entri), Bab 16 (hlm. 100–101, 51 entri), Bab 17 (hlm. 106–107, 35 entri),
-dan Bab 18 (hlm. 112–113, 27 entri). Bentuk alternatif yang ditampilkan bersama
-kosakata utama dapat dilatih secara terpisah. Daftar Buku II mencakup Bab 26
+Bab 18 (hlm. 112–113, 27 entri), Bab 19 (hlm. 118–119, 25 entri), Bab 20
+(hlm. 124–125, 22 entri), dan Bab 21 (hlm. 130–131, 41 entri). Bentuk alternatif
+yang ditampilkan bersama kosakata utama dapat dilatih secara terpisah.
+Daftar Buku II mencakup Bab 26
 (hlm. 4–5, 48 entri), Bab 27 (hlm. 10–11, 50 entri), Bab 28 (hlm. 16–17,
 49 entri), Bab 29 (hlm. 22–23, 45 entri), Bab 30 (hlm. 28–29, 54 entri),
 Bab 31 (hlm. 34–35, 42 entri), Bab 32 (hlm. 40–41, 57 entri), dan Bab 33

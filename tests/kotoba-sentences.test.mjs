@@ -12,7 +12,7 @@ test('Kotoba example records link to real entries and highlight text within the 
   const entries = Object.values(KOTOBA_COURSES).flatMap(course => course.entries);
   const ids = new Set(entries.map(entry => entry.id));
   assert.ok(Object.keys(data.entries).every(id => ids.has(id)));
-  for (const entry of entries.filter(e => e.chapter <= 18 || e.chapter >= 49)) {
+  for (const entry of entries.filter(e => e.chapter <= 21 || e.chapter >= 49)) {
     assert.ok(findKotobaSentence(data, [entry.id]), entry.id);
   }
   for (const record of data.records) {
@@ -33,15 +33,18 @@ test('examples follow the selected chapter and course rather than a shared spell
     assert.match(findKotobaSentence(data,question.entryIds).translation, expected);
   }
   for (const [chapter, word, expected] of [
+    [3, 'どちら', /di sebelah mana/],
     [4, '～から', /mulai pukul/],
     [5, 'そうですね。', /Ya, betul/],
+    [5, '～年', /pada tahun 2027/],
+    [6, 'お茶', /teh/],
+    [7, '教えます', /mengajar bahasa Jepang/],
     [8, 'そうですね。', /bagaimana ya/],
     [9, '～から', /karena/],
-    [5, '～年', /pada tahun 2027/],
-    [7, '教えます', /mengajar bahasa Jepang/],
+    [10, 'あります', /buku di atas meja/],
+    [10, 'いろいろ', /berbagai macam buku/],
     [11, '～年', /selama dua tahun/],
     [11, 'かかります', /perlu sepuluh menit/],
-    [3, 'どちら', /di sebelah mana/],
     [12, 'どちら', /musim panas atau musim dingin/],
     [12, 'いい', /Saya pilih kopi/],
     [14, '教えます', /alamat baru/],
@@ -55,6 +58,11 @@ test('examples follow the selected chapter and course rather than a shared spell
     [17, '飲みます', /minum obat/],
     [17, '～までに', /paling lambat hari Jumat/],
     [18, 'できます', /bisa bermain piano/],
+    [19, '登ります', /mendaki gunung/],
+    [19, '上ります', /naik tangga/],
+    [19, 'お茶', /belajar upacara minum teh/],
+    [20, 'いろいろ', /berbagai hal dengan teman/],
+    [21, 'あります', /ada festival/],
   ]) {
     const entry = minna.find(e => e.chapter === chapter && e.spelling === word);
     assert.match(findKotobaSentence(data, [entry.id]).translation, expected);
