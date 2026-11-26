@@ -80,13 +80,14 @@ test('pagination covers all material entries once and clamps after filters chang
 });
 
 
-test('Kotoba materials use only the photographed entries in chapters 26 through 50', () => {
+test('Kotoba materials use only the photographed entries in chapters 1–3 and 26–50', () => {
   const entries = MATERIAL_KOTOBA_ENTRIES;
   const ids = new Set(entries.map(entry => entry.id));
   assert.equal(ids.size, entries.length);
-  const outsidePhotos = entry => entry.chapter < 26;
+  const outsidePhotos = entry => entry.chapter >= 4 && entry.chapter < 26;
   assert.deepEqual(entries.filter(outsidePhotos), KOTOBA_ENTRIES.filter(outsidePhotos));
   for (const [chapter, count] of [
+    [1, 30], [2, 46], [3, 43],
     [26, 48], [27, 50], [28, 49], [29, 45], [30, 54], [31, 42], [32, 57], [33, 54],
     [34, 52], [35, 44], [36, 47], [37, 48], [38, 44], [39, 43],
     [40, 62], [41, 54], [42, 51], [43, 30], [44, 41], [45, 34],
@@ -95,6 +96,12 @@ test('Kotoba materials use only the photographed entries in chapters 26 through 
     assert.equal(materialPool(entries, {chapter}).length, count);
   }
   const examples = [
+    [1, '～歳', '～歳', undefined],
+    [1, 'どなた', 'どなた', undefined],
+    [2, 'コンピューター', 'コンピューター', undefined],
+    [2, '違います', '違います。', 'Golongan I · Godan'],
+    [3, '～階', '～階', undefined],
+    [3, 'いらっしゃいませ', 'いらっしゃいませ。', undefined],
     [26, '診ます', '見ます・診ます', 'Golongan II · Ichidan'],
     [26, '片づきます', '片づきます', 'Golongan I · Godan'],
     [26, '宇宙飛行士', '宇宙飛行士', undefined],
@@ -180,6 +187,9 @@ test('Kotoba materials use only the photographed entries in chapters 26 through 
     if (entry) assert.equal(materialVerbGroup(entry), group, query);
   }
   for (const [chapter, excluded] of [
+    [1, ['～君', '皆さん', 'IMC', 'パワー電気', '神戸病院', '富士大学']],
+    [2, ['パソコン', 'どういたしまして']],
+    [3, ['一階', '二階', '新大阪', 'ジャカルタ', 'フランス']],
     [26, ['NHK', 'エドヤストア', '土井隆雄', '見つけます', '書類', 'お忙しい']],
     [27, ['関西空港', '秋葉原', '伊豆', 'ドラえもん', '走れます', 'ピアノ', 'ようやく']],
     [28, ['育てます']],

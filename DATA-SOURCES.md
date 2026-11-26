@@ -575,7 +575,7 @@ Jumlah setiap bab direkonsiliasi dengan sheet `Ringkasan`.
 
 Sheet `Panduan` menyebut sumber sebagai kompilasi latihan orisinal yang mengikuti
 topik Minna no Nihongo I dan II, bukan transkripsi atau daftar resmi lengkap buku.
-Kuis Minna memakai daftar yang sama dengan List Materi. Kosakata Bab 26–50
+Kuis Minna memakai daftar yang sama dengan List Materi. Kosakata Bab 1–3 dan 26–50
 mengikuti foto yang dijelaskan di bawah, dan bab lainnya memakai data workbook.
 Atribusi dan lisensi sumber kanji di atas tidak berlaku otomatis untuk sumber
 kosakata pengguna. Workbook asli tidak diubah atau diunggah.
@@ -1423,10 +1423,13 @@ kata nyata, pembedaan cerita dengan sejarah, keamanan render, pemuatan
 sekali, percobaan ulang, dan pembatalan pembaruan dialog yang sudah ditutup.
 
 
-## List Materi Kotoba Bab 26–50
+## List Materi Kotoba dari foto pengguna
 
-Foto pengguna untuk Minna no Nihongo II menjadi rujukan kosakata utama,
-percakapan, dan bacaan dalam `materi-kotoba-data.js`. Daftar mencakup Bab 26
+Foto pengguna untuk Minna no Nihongo menjadi rujukan kosakata utama,
+Latihan C, percakapan, dan bacaan dalam `materi-kotoba-data.js`. Buku I
+mencakup Bab 1 (30 entri), Bab 2 (46 entri), dan Bab 3 (hlm. 22–23,
+43 entri). Bentuk sopan yang ditampilkan bersama kosakata utama dapat
+dilatih secara terpisah. Daftar Buku II mencakup Bab 26
 (hlm. 4–5, 48 entri), Bab 27 (hlm. 10–11, 50 entri), Bab 28 (hlm. 16–17,
 49 entri), Bab 29 (hlm. 22–23, 45 entri), Bab 30 (hlm. 28–29, 54 entri),
 Bab 31 (hlm. 34–35, 42 entri), Bab 32 (hlm. 40–41, 57 entri), dan Bab 33

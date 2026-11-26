@@ -1,6 +1,6 @@
 import {exampleSentenceMarkup} from './kanji-sentence-view.js?v=20261024-credits';
 
-const DATA_URL = new URL('./data/kotoba-sentences.json?v=20261126-kotoba-sentences', import.meta.url);
+const DATA_URL = new URL('./data/kotoba-sentences.json?v=20261126-kotoba-photo-1-3', import.meta.url);
 let pending;
 
 function loadKotobaSentences() {
