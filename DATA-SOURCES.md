@@ -567,7 +567,7 @@ npm test
 
 ### Kuis Kotoba Bab 1–50
 
-Data dasar berasal dari workbook pengguna `Minna_No_Nihongo_Latihan_Bab_1-50_Jenis_Kata.xlsx`,
+Data referensi berasal dari workbook pengguna `Minna_No_Nihongo_Latihan_Bab_1-50_Jenis_Kata.xlsx`,
 sheet `Kotoba Bab 1-50`, sel A2:E1691. Seluruh **1.690 entri** dipertahankan,
 termasuk bacaan, penulisan, arti Indonesia, bab, dan jenis kata: 904 entri
 Bab 1–25 dan 786 entri Bab 26–50, dengan 12 kategori jenis kata.
@@ -575,8 +575,8 @@ Jumlah setiap bab direkonsiliasi dengan sheet `Ringkasan`.
 
 Sheet `Panduan` menyebut sumber sebagai kompilasi latihan orisinal yang mengikuti
 topik Minna no Nihongo I dan II, bukan transkripsi atau daftar resmi lengkap buku.
-Kuis Minna memakai daftar yang sama dengan List Materi. Kosakata Bab 1–6 dan 26–50
-mengikuti foto yang dijelaskan di bawah, dan bab lainnya memakai data workbook.
+List Materi dan Kuis Kotoba Minna memakai daftar Bab 1–50 dari foto pengguna
+yang dijelaskan di bawah. Entri yang sepadan mempertahankan nomor baris workbook.
 Atribusi dan lisensi sumber kanji di atas tidak berlaku otomatis untuk sumber
 kosakata pengguna. Workbook asli tidak diubah atau diunggah.
 
@@ -1435,7 +1435,9 @@ Bab 11 (hlm. 70–71, 61 entri), Bab 12 (hlm. 76–77, 50 entri), Bab 13
 (hlm. 82–83, 31 entri), Bab 14 (hlm. 88–89, 45 entri), Bab 15 (hlm. 94–95,
 23 entri), Bab 16 (hlm. 100–101, 51 entri), Bab 17 (hlm. 106–107, 35 entri),
 Bab 18 (hlm. 112–113, 27 entri), Bab 19 (hlm. 118–119, 25 entri), Bab 20
-(hlm. 124–125, 22 entri), dan Bab 21 (hlm. 130–131, 41 entri). Bentuk alternatif
+(hlm. 124–125, 22 entri), Bab 21 (hlm. 130–131, 41 entri), Bab 22
+(hlm. 136–137, 28 entri), Bab 23 (hlm. 142–143, 23 entri), Bab 24
+(hlm. 148–149, 20 entri), dan Bab 25 (hlm. 154–155, 16 entri). Bentuk alternatif
 yang ditampilkan bersama kosakata utama dapat dilatih secara terpisah.
 Daftar Buku II mencakup Bab 26
 (hlm. 4–5, 48 entri), Bab 27 (hlm. 10–11, 50 entri), Bab 28 (hlm. 16–17,

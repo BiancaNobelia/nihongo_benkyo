@@ -1,7 +1,7 @@
-import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261126-kotoba-photo-19-21';
+import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261126-kotoba-photo-22-25';
 import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261126-kotoba-sentences';
 import { kotobaChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261126-kotoba-materials';
-import { showKotobaSentence } from './kotoba-sentence-view.js?v=20261126-kotoba-photo-19-21';
+import { showKotobaSentence } from './kotoba-sentence-view.js?v=20261126-kotoba-photo-22-25';
 import { requestedQuizCount } from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
 import { shuffle } from './core.js?v=20261015-jidoushi-tadoushi';
 

@@ -117,8 +117,6 @@ test('Minna quizzes and chapter counts use the same vocabulary as List Materi',(
   assert.deepEqual(entries,MATERIAL_KOTOBA_ENTRIES);
   for(const chapter of chapters) {
     assert.equal(chapter.count,entries.filter(entry=>entry.chapter===chapter.number).length);
-    if(chapter.number>=22 && chapter.number<26) continue;
-
     const scope=[chapter.number];
     const allowed=new Set(getKotobaPool(entries,{chapters:scope}).map(word=>word.id));
     for(const mode of Object.keys(KOTOBA_MODES)) {

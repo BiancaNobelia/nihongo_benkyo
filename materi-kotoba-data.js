@@ -1,5 +1,3 @@
-import {KOTOBA_ENTRIES} from './kotoba-data.js?v=20261015-jidoushi-tadoushi';
-
 // Minna no Nihongo I and II, photos supplied by the user. Page references are in DATA-SOURCES.md.
 // Rows are in page order. Numeric references retain the corresponding workbook entry ID.
 const photoRows = {
@@ -940,6 +938,101 @@ const photoRows = {
     ['もちろん', 'もちろん', 'tentu saja', 'kata keterangan'],
     ['もう帰らないと……。', 'もうかえらないと……。', 'Saya harus pulang sekarang…', 'ungkapan / frasa'],
     ['カンガルー', 'カンガルー', 'kanguru'],
+  ],
+  22: [
+    ['着ます', 'きます', 'memakai pakaian bagian atas (misalnya kemeja)', 'ichidan', 787],
+    ['はきます', 'はきます', 'memakai sepatu atau celana', 'godan', 788],
+    ['かぶります', 'かぶります', 'memakai topi atau penutup kepala', 'godan', 789],
+    ['かけます', 'かけます', 'memakai kacamata (眼鏡をかけます)', 'ichidan', 790],
+    ['します', 'します', 'memakai aksesori (ネクタイをします: memakai dasi)', 'suru', 791],
+    ['生まれます', 'うまれます', 'lahir', 'ichidan', 792],
+    ['わたしたち', 'わたしたち', 'kami; kita', 'kata ganti / penunjuk'],
+    ['コート', 'コート', 'mantel', 'kata benda', 793],
+    ['セーター', 'セーター', 'sweter; baju hangat', 'kata benda', 795],
+    ['スーツ', 'スーツ', 'pakaian setelan; setelan jas', 'kata benda', 794],
+    ['帽子', 'ぼうし', 'topi', 'kata benda', 796],
+    ['眼鏡', 'めがね', 'kacamata', 'kata benda', 797],
+    ['ケーキ', 'ケーキ', 'kue; bolu', 'kata benda', 798],
+    ['お弁当', 'おべんとう', 'bekal makanan (juga 弁当・べんとう)', 'kata benda', 799],
+    ['ロボット', 'ロボット', 'robot', 'kata benda', 800],
+    ['ユーモア', 'ユーモア', 'humor; kelucuan'],
+    ['都合', 'つごう', 'kondisi; keadaan yang berkaitan dengan jadwal atau keperluan'],
+    ['よく', 'よく', 'sering kali', 'kata keterangan', 805],
+    ['えーと', 'えーと', 'Ehm… (saat berpikir atau mencari kata)', 'ungkapan / frasa'],
+    ['おめでとうございます。', 'おめでとうございます。', 'Selamat! (misalnya untuk ulang tahun, pernikahan, atau Tahun Baru, juga おめでとう)', 'ungkapan / frasa', 806],
+    ['お探しですか。', 'おさがしですか。', 'Anda sedang mencari apa?', 'ungkapan / frasa'],
+    ['では', 'では', 'kalau begitu', 'kata sambung'],
+    ['こちら', 'こちら', 'ini (bentuk sopan dari これ saat memperkenalkan atau menunjukkan sesuatu)', 'kata ganti / penunjuk'],
+    ['家賃', 'やちん', 'biaya sewa rumah atau kamar'],
+    ['ダイニングキッチン', 'ダイニングキッチン', 'ruang makan yang menyatu dengan dapur'],
+    ['和室', 'わしつ', 'kamar bergaya Jepang'],
+    ['押し入れ', 'おしいれ', 'lemari dinding bergaya Jepang'],
+    ['布団', 'ふとん', 'futon; kasur tipis atau selimut ala Jepang'],
+  ],
+  23: [
+    ['聞きます', 'ききます', 'bertanya (先生に聞きます: bertanya kepada guru)', 'godan', 818],
+    ['回します', 'まわします', 'memutar', 'godan', 819],
+    ['引きます', 'ひきます', 'menarik', 'godan', 820],
+    ['変えます', 'かえます', 'mengubah', 'ichidan', 821],
+    ['触ります', 'さわります', 'menyentuh (ドアに触ります: menyentuh pintu)', 'godan', 822],
+    ['出ます', 'でます', 'keluar (お釣りが出ます: uang kembalian keluar)', 'ichidan', 823],
+    ['歩きます', 'あるきます', 'berjalan kaki', 'godan', 825],
+    ['渡ります', 'わたります', 'menyeberang (橋を渡ります: menyeberangi jembatan)', 'godan', 826],
+    ['曲がります', 'まがります', 'berbelok (右へ曲がります: belok ke kanan)', 'godan', 523],
+    ['寂しい', 'さびしい', 'sepi; kesepian', 'kata sifat-i', 494],
+    ['お湯', 'おゆ', 'air panas (juga 湯・ゆ)'],
+    ['音', 'おと', 'bunyi; suara', 'kata benda', 830],
+    ['サイズ', 'サイズ', 'ukuran'],
+    ['故障', 'こしょう', 'kerusakan; gangguan (故障します: rusak)', 'kata benda', 833],
+    ['道', 'みち', 'jalan', 'kata benda', 834],
+    ['交差点', 'こうさてん', 'persimpangan; perempatan', 'kata benda', 835],
+    ['信号', 'しんごう', 'lampu lalu lintas', 'kata benda', 836],
+    ['角', 'かど', 'sudut; pojok jalan', 'kata benda', 837],
+    ['橋', 'はし', 'jembatan', 'kata benda', 838],
+    ['駐車場', 'ちゅうしゃじょう', 'tempat parkir', 'kata benda', 839],
+    ['建物', 'たてもの', 'gedung; bangunan', 'kata benda', 840],
+    ['何回も', 'なんかいも', 'berkali-kali', 'kata keterangan'],
+    ['～目', '～め', 'yang ke-～ (menyatakan urutan)', 'akhiran / pola'],
+  ],
+  24: [
+    ['くれます', 'くれます', 'memberi kepada saya atau orang di pihak saya', 'ichidan', 846],
+    ['直します', 'なおします', 'mengoreksi; membetulkan', 'godan', 725],
+    ['連れて行きます', 'つれていきます', 'membawa atau mengajak pergi (orang atau hewan)', 'godan', 847],
+    ['連れて来ます', 'つれてきます', 'membawa kemari atau mengajak datang (orang atau hewan)', 'kuru', 848],
+    ['送ります', 'おくります', 'mengantar orang (人を送ります)', 'godan', 849],
+    ['紹介します', 'しょうかいします', 'memperkenalkan', 'suru', 850],
+    ['案内します', 'あんないします', 'mengantarkan; memandu berkeliling', 'suru', 851],
+    ['説明します', 'せつめいします', 'menjelaskan; menerangkan', 'suru', 852],
+    ['おじいさん', 'おじいさん', 'kakek', 'kata benda', 854],
+    ['おじいちゃん', 'おじいちゃん', 'kakek (sapaan akrab)'],
+    ['おばあさん', 'おばあさん', 'nenek', 'kata benda', 855],
+    ['おばあちゃん', 'おばあちゃん', 'nenek (sapaan akrab)'],
+    ['準備', 'じゅんび', 'persiapan (準備します atau 準備をします: mempersiapkan)', 'kata benda', 856],
+    ['引っ越し', 'ひっこし', 'pindah rumah (引っ越しします atau 引っ越しをします: pindah rumah)', 'kata benda', 888],
+    ['お菓子', 'おかし', 'kue; camilan (juga 菓子・かし)', 'kata benda', 858],
+    ['ホームステイ', 'ホームステイ', 'homestay; tinggal bersama keluarga tuan rumah'],
+    ['全部', 'ぜんぶ', 'semua; semuanya', 'kata keterangan', 859],
+    ['自分で', 'じぶんで', 'sendiri; dengan usaha sendiri', 'kata keterangan', 860],
+    ['ほかに', 'ほかに', 'selain itu; yang lain', 'kata keterangan', 861],
+    ['母の日', 'ははのひ', 'Hari Ibu'],
+  ],
+  25: [
+    ['考えます', 'かんがえます', 'berpikir; memikirkan', 'ichidan', 875],
+    ['着きます', 'つきます', 'tiba; sampai', 'godan', 876],
+    ['取ります', 'とります', 'bertambah usia; menjadi lebih tua (年を取ります)', 'godan', 877],
+    ['足ります', 'たります', 'cukup; mencukupi', 'ichidan', 878],
+    ['田舎', 'いなか', 'desa; daerah pedesaan; kampung halaman', 'kata benda', 879],
+    ['チャンス', 'チャンス', 'kesempatan; peluang untuk melakukan sesuatu', 'kata benda', 880],
+    ['億', 'おく', 'seratus juta; satuan ratus juta', 'bilangan / penyukat', 881],
+    ['もし', 'もし', 'kalau; seandainya (dipakai dengan pola ～たら)', 'kata keterangan', 882],
+    ['意味', 'いみ', 'arti; makna', 'kata benda', 857],
+    ['もしもし', 'もしもし', 'halo (saat menelepon)', 'ungkapan / frasa'],
+    ['転勤', 'てんきん', 'mutasi atau pindah penempatan kerja (転勤します: pindah kantor atau cabang)', 'kata benda', 885],
+    ['こと', 'こと', 'hal; perkara (～のこと: hal tentang ～)'],
+    ['暇', 'ひま', 'waktu luang; waktu senggang', 'kata benda'],
+    ['いろいろお世話になりました。', 'いろいろおせわになりました。', 'Terima kasih atas segala bantuan selama ini. (bisa juga お世話になりました)', 'ungkapan / frasa', 904],
+    ['頑張ります', 'がんばります', 'berusaha; bekerja keras', 'godan', 889],
+    ['どうぞお元気で。', 'どうぞおげんきで。', 'Semoga sehat selalu. (saat berpisah untuk waktu lama)', 'ungkapan / frasa'],
   ],
   26: [
     ['見ます・診ます', 'みます', 'melihat; memeriksa pasien', 'ichidan'],
@@ -2126,7 +2219,7 @@ const photoRows = {
 };
 
 const verbGroups = new Set(['godan', 'ichidan', 'suru', 'kuru']);
-const photographedEntries = Object.entries(photoRows).flatMap(([chapter, rows]) =>
+export const MATERIAL_KOTOBA_ENTRIES = Object.entries(photoRows).flatMap(([chapter, rows]) =>
   rows.map(([spelling, reading, meaning, kind = 'kata benda', sourceRow], index) => {
     const verbGroup = verbGroups.has(kind) ? kind : undefined;
     return {
@@ -2135,9 +2228,3 @@ const photographedEntries = Object.entries(photoRows).flatMap(([chapter, rows]) 
       type: verbGroup ? 'kata kerja' : kind, verbGroup,
     };
   }));
-const photographedChapters = new Set(Object.keys(photoRows).map(Number));
-
-export const MATERIAL_KOTOBA_ENTRIES = [
-  ...photographedEntries,
-  ...KOTOBA_ENTRIES.filter(entry => !photographedChapters.has(entry.chapter)),
-].sort((a, b) => a.chapter - b.chapter);

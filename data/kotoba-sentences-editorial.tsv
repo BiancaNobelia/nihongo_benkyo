@@ -226,7 +226,7 @@ CD	シーディー	好きな歌手の【CD】を買いました。	Saya membeli 
 主人	しゅじん	【主人】は会社員です。	Suami saya karyawan perusahaan.	suami sendiri
 奥さん	おくさん	田中さんの【奥さん】は料理が上手です。	Istri Tanaka pandai memasak.
 家内	かない	【家内】は音楽が好きです。	Istri saya suka musik.
-よく	よく	先生の話が【よく】わかります。	Saya memahami dengan baik apa yang dijelaskan guru.
+よく	よく	先生の話が【よく】わかります。	Saya memahami dengan baik apa yang dijelaskan guru.	dengan baik
 だいたい	だいたい	駅まで【だいたい】十分です。	Ke stasiun kira-kira sepuluh menit.
 速く	はやく	妹はとても【速く】走ります。	Adik perempuan saya berlari sangat cepat.
 ～から	～から	明日は用事があります【から】、行きません。	Saya tidak akan pergi karena besok ada keperluan.	karena
@@ -448,3 +448,49 @@ ATM	エーティーエム	コンビニの中に【ATM】があります。	Ada A
 もちろん	もちろん	「手伝ってくれる？」「【もちろん】」。	“Mau membantuku?” “Tentu saja.”
 もう帰らないと……。	もうかえらないと……。	あっ、もう九時だ。【もう帰らないと……】。	Ah, sudah pukul sembilan. Aku harus pulang sekarang…
 カンガルー	カンガルー	動物園で【カンガルー】を見ました。	Saya melihat kanguru di kebun binatang.
+着ます	きます	毎朝、白いシャツを【着ます】。	Setiap pagi saya memakai kemeja putih.	pakaian bagian atas
+はきます	はきます	出かける前に靴を【はきます】。	Sebelum keluar, saya memakai sepatu.
+かぶります	かぶります	外に出るとき、帽子を【かぶります】。	Saat keluar, saya memakai topi.
+かけます	かけます	本を読むとき、眼鏡を【かけます】。	Saat membaca buku, saya memakai kacamata.	memakai kacamata
+します	します	仕事に行くとき、ネクタイを【します】。	Saat berangkat kerja, saya memakai dasi.	memakai aksesori
+生まれます	うまれます	妹は大阪で【生まれました】。	Adik perempuan saya lahir di Osaka.
+スーツ	スーツ	面接には【スーツ】を着て行きます。	Saya akan memakai setelan jas untuk wawancara.
+お弁当	おべんとう	毎朝、【お弁当】を作ります。	Setiap pagi saya menyiapkan bekal makanan.
+ユーモア	ユーモア	兄の話には【ユーモア】があります。	Cerita kakak laki-laki saya penuh humor.	kelucuan
+よく	よく	週末は【よく】ケーキを作ります。	Saya sering membuat kue pada akhir pekan.	sering kali
+えーと	えーと	【えーと】、次の電車は何時でしたか。	Ehm… pukul berapa kereta berikutnya, ya?
+おめでとうございます。	おめでとうございます。	お誕生日【おめでとうございます】。	Selamat ulang tahun!
+お探しですか。	おさがしですか。	店員が「何か【お探しですか】」と聞きました。	Pegawai toko bertanya, “Anda sedang mencari sesuatu?”
+こちら	こちら	【こちら】が和室です。	Ini kamar bergaya Jepang.	bentuk sopan dari これ
+家賃	やちん	この部屋の【家賃】は月六万円です。	Sewa kamar ini 60.000 yen per bulan.	biaya sewa
+ダイニングキッチン	ダイニングキッチン	この家には広い【ダイニングキッチン】があります。	Rumah ini punya ruang makan yang luas dan menyatu dengan dapur.
+和室	わしつ	今夜は【和室】で寝ます。	Malam ini saya akan tidur di kamar bergaya Jepang.
+押し入れ	おしいれ	布団は【押し入れ】に入れてください。	Tolong simpan futon di lemari dinding.
+聞きます	ききます	わからないときは、先生に【聞きます】。	Kalau tidak mengerti, saya bertanya kepada guru.	bertanya kepada guru
+触ります	さわります	このドアに【触らないで】ください。	Tolong jangan sentuh pintu ini.	menyentuh pintu
+出ます	でます	お金を入れると、お釣りが【出ます】。	Saat uang dimasukkan, uang kembaliannya keluar.	uang kembalian keluar
+渡ります	わたります	駅へ行くとき、この橋を【渡ります】。	Saat pergi ke stasiun, saya menyeberangi jembatan ini.	menyeberangi jembatan
+サイズ	サイズ	この靴は【サイズ】が合いません。	Ukuran sepatu ini tidak pas.
+角	かど	次の【角】を右に曲がってください。	Tolong belok kanan di pojok jalan berikutnya.	pojok jalan
+何回も	なんかいも	この歌を【何回も】聞きました。	Saya mendengarkan lagu ini berkali-kali.
+～目	～め	二つ【目】の信号を右へ曲がってください。	Tolong belok kanan di lampu lalu lintas kedua.
+くれます	くれます	友達が私にお菓子を【くれました】。	Teman memberi saya camilan.	memberi kepada saya
+連れて来ます	つれてきます	明日、妹をここに【連れて来ます】。	Besok saya akan mengajak adik perempuan saya kemari.
+送ります	おくります	車で友達を駅まで【送ります】。	Saya mengantar teman ke stasiun dengan mobil.	mengantar orang
+案内します	あんないします	私が皆さんを工場に【案内します】。	Saya akan memandu Anda semua berkeliling pabrik.
+おじいさん	おじいさん	日曜日に【おじいさん】と散歩します。	Saya berjalan-jalan dengan kakek pada hari Minggu.
+おじいちゃん	おじいちゃん	【おじいちゃん】、いっしょに公園へ行こう。	Kek, ayo ke taman bersama.
+おばあちゃん	おばあちゃん	【おばあちゃん】、お誕生日おめでとう。	Nek, selamat ulang tahun.
+引っ越し	ひっこし	来月、【引っ越し】をします。	Bulan depan saya akan pindah rumah.	引っ越しをします
+ホームステイ	ホームステイ	去年、日本で【ホームステイ】をしました。	Tahun lalu saya tinggal bersama keluarga tuan rumah di Jepang.	homestay
+ほかに	ほかに	【ほかに】質問はありますか。	Ada pertanyaan lain?
+母の日	ははのひ	【母の日】に母に花をあげます。	Saya memberi ibu bunga pada Hari Ibu.
+取ります	とります	年を【取って】も、毎日散歩したいです。	Meski bertambah usia, saya ingin tetap berjalan kaki setiap hari.	bertambah usia
+田舎	いなか	夏休みは【田舎】の祖母の家に行きます。	Saat libur musim panas, saya pergi ke rumah nenek di desa.
+チャンス	チャンス	日本語で話す【チャンス】がありました。	Saya mendapat kesempatan untuk berbicara dalam bahasa Jepang.	peluang untuk melakukan sesuatu
+もし	もし	【もし】時間があったら、遊びに来てください。	Kalau ada waktu, mampirlah.	～たら
+もしもし	もしもし	【もしもし】、田中です。	Halo, saya Tanaka.
+転勤	てんきん	父は来月、大阪に【転勤】します。	Ayah saya akan pindah penempatan kerja ke Osaka bulan depan.	pindah penempatan kerja
+暇	ひま	【暇】があったら、映画を見に行きます。	Kalau punya waktu luang, saya akan pergi menonton film.	waktu senggang
+いろいろお世話になりました。	いろいろおせわになりました。	明日、国へ帰ります。【いろいろお世話になりました】。	Besok saya pulang ke negara asal. Terima kasih atas segala bantuan selama ini.
+どうぞお元気で。	どうぞおげんきで。	また会えるといいですね。【どうぞお元気で】。	Semoga kita bisa bertemu lagi. Semoga Anda selalu sehat.

@@ -80,12 +80,10 @@ test('pagination covers all material entries once and clamps after filters chang
 });
 
 
-test('Kotoba materials use only the photographed entries in chapters 1–21 and 26–50', () => {
+test('Kotoba materials use the photographed entries for all 50 chapters', () => {
   const entries = MATERIAL_KOTOBA_ENTRIES;
   const ids = new Set(entries.map(entry => entry.id));
   assert.equal(ids.size, entries.length);
-  const outsidePhotos = entry => entry.chapter >= 22 && entry.chapter < 26;
-  assert.deepEqual(entries.filter(outsidePhotos), KOTOBA_ENTRIES.filter(outsidePhotos));
   for (const [chapter, count] of [
     [1, 30], [2, 46], [3, 43], [4, 53], [5, 59], [6, 51],
     [7, 45], [8, 56], [9, 55],
@@ -93,6 +91,7 @@ test('Kotoba materials use only the photographed entries in chapters 1–21 and 
     [13, 31], [14, 45], [15, 23],
     [16, 51], [17, 35], [18, 27],
     [19, 25], [20, 22], [21, 41],
+    [22, 28], [23, 23], [24, 20], [25, 16],
     [26, 48], [27, 50], [28, 49], [29, 45], [30, 54], [31, 42], [32, 57], [33, 54],
     [34, 52], [35, 44], [36, 47], [37, 48], [38, 44], [39, 43],
     [40, 62], [41, 54], [42, 51], [43, 30], [44, 41], [45, 34],
@@ -176,6 +175,19 @@ test('Kotoba materials use only the photographed entries in chapters 1–21 and 
     [21, '会社をやめます', 'やめます', 'Golongan II · Ichidan'],
     [21, '留学します', '留学します', 'Golongan III · する'],
     [21, 'カンガルー', 'カンガルー', undefined],
+    [22, '着ます', '着ます', 'Golongan II · Ichidan'],
+    [22, 'ネクタイをします', 'します', 'Golongan III · する'],
+    [22, '眼鏡をかけます', 'かけます', 'Golongan II · Ichidan'],
+    [22, '押し入れ', '押し入れ', undefined],
+    [23, '先生に聞きます', '聞きます', 'Golongan I · Godan'],
+    [23, 'お釣りが出ます', '出ます', 'Golongan II · Ichidan'],
+    [23, '～目', '～目', undefined],
+    [24, '連れて来ます', '連れて来ます', 'Golongan III · 来る'],
+    [24, 'おじいちゃん', 'おじいちゃん', undefined],
+    [24, '母の日', '母の日', undefined],
+    [25, '年を取ります', '取ります', 'Golongan I · Godan'],
+    [25, 'もしもし', 'もしもし', undefined],
+    [25, 'お世話になりました', 'いろいろお世話になりました。', undefined],
     [26, '診ます', '見ます・診ます', 'Golongan II · Ichidan'],
     [26, '片づきます', '片づきます', 'Golongan I · Godan'],
     [26, '宇宙飛行士', '宇宙飛行士', undefined],
@@ -281,6 +293,10 @@ test('Kotoba materials use only the photographed entries in chapters 1–21 and 
     [19, ['東京スカイツリー', '葛飾北斎', 'パチンコ', '温泉']],
     [20, ['俺', 'あたし', '電話します']],
     [21, ['アインシュタイン', '天神祭', '吉野山', 'ヨーネン', '首相', 'スピーチ']],
+    [22, ['パリ', '万里の長城', 'みんなのアンケート', 'ポケット', '信じます']],
+    [23, ['聖徳太子', '法隆寺', '元気茶', '本田駅', '図書館前', '電気屋']],
+    [24, ['入れます', '同僚', '両親']],
+    [25, ['ベトナム', '故郷', '引っ越し', '話し合います']],
     [26, ['NHK', 'エドヤストア', '土井隆雄', '見つけます', '書類', 'お忙しい']],
     [27, ['関西空港', '秋葉原', '伊豆', 'ドラえもん', '走れます', 'ピアノ', 'ようやく']],
     [28, ['育てます']],
