@@ -32,7 +32,7 @@ test('N3 is separate from Minna and filters use only matching N3 source/type ent
   assert.equal(kotobaCourse('invalid'),KOTOBA_COURSES.minna);
   assert.equal(kotobaCourse('__proto__'),KOTOBA_COURSES.minna);
   assert.equal(kotobaCourse('constructor'),KOTOBA_COURSES.minna);
-  assert.equal(KOTOBA_COURSES.minna.entries.length,1690);
+  assert.ok(KOTOBA_COURSES.minna.entries.every(entry=>entry.chapter>=1 && entry.chapter<=50));
   assert.equal(KOTOBA_COURSES.n3.chapters.length,0);
   for(const group of ['all','core','extra']) {
     for(const type of ['all',...Object.keys(manifest.types)]) {

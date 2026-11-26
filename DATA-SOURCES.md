@@ -567,7 +567,7 @@ npm test
 
 ### Kuis Kotoba Bab 1–50
 
-Sumber adalah workbook pengguna `Minna_No_Nihongo_Latihan_Bab_1-50_Jenis_Kata.xlsx`,
+Data dasar berasal dari workbook pengguna `Minna_No_Nihongo_Latihan_Bab_1-50_Jenis_Kata.xlsx`,
 sheet `Kotoba Bab 1-50`, sel A2:E1691. Seluruh **1.690 entri** dipertahankan,
 termasuk bacaan, penulisan, arti Indonesia, bab, dan jenis kata: 904 entri
 Bab 1–25 dan 786 entri Bab 26–50, dengan 12 kategori jenis kata.
@@ -575,9 +575,10 @@ Jumlah setiap bab direkonsiliasi dengan sheet `Ringkasan`.
 
 Sheet `Panduan` menyebut sumber sebagai kompilasi latihan orisinal yang mengikuti
 topik Minna no Nihongo I dan II, bukan transkripsi atau daftar resmi lengkap buku.
-Website mempertahankan batas cakupan itu. Data ini berasal dari file pengguna,
-bukan OpenJLPT/JMdict; atribusi dan lisensi sumber kanji di atas tidak otomatis
-diterapkan pada workbook ini. Workbook asli tidak diubah atau diunggah.
+Kuis Minna memakai daftar yang sama dengan List Materi. Kosakata Bab 26–33
+mengikuti foto yang dijelaskan di bawah, dan bab lainnya memakai data workbook.
+Atribusi dan lisensi sumber kanji di atas tidak berlaku otomatis untuk sumber
+kosakata pengguna. Workbook asli tidak diubah atau diunggah.
 
 `scripts/build_kotoba.py` membaca XLSX menggunakan pustaka standar Python.
 Hasilnya `kotoba-data.js` dan manifest `data/kotoba-source.json`; manifest mencatat
@@ -590,16 +591,16 @@ npm test
 ```
 
 Kata dengan penulisan dan bacaan yang sama digabung saat membentuk sesi;
-arti, jenis kata, nomor baris, dan babnya tetap dipertahankan. Seluruh bab
-menghasilkan 1.571 kartu kosakata unik. Mode bacaan hanya menguji kata yang
-memiliki kanji (1.316 kartu); kana tidak ditampilkan sebagai petunjuk jawaban.
-Mode dengar Jepang mengecualikan lima pola berpenanda ～ yang bukan kata mandiri.
+arti, jenis kata, bab, dan nomor baris workbook yang tersedia tetap dipertahankan.
+Mode bacaan hanya menguji kata yang memiliki kanji. Mode dengar Jepang
+mengecualikan pola berpenanda ～. Contoh berbahasa Jepang dalam arti
+ditampilkan setelah menjawab agar tidak menjadi petunjuk jawaban.
 Jumlah yang tampil selalu mengikuti bab, jenis kata, dan mode yang dipilih.
 
 Pilihan salah tetap berasal dari bab yang dipilih, mengutamakan jenis kata yang
 sama. Penulisan sama, homofon, bacaan alternatif, dan arti Indonesia yang saling
 tumpang tindih disaring agar tidak menjadi jawaban salah. Pencocokan arti bersifat
-konservatif berdasarkan padanan dalam workbook; ini bukan pemeriksaan kamus
+konservatif berdasarkan padanan dalam daftar materi; ini bukan pemeriksaan kamus
 menyeluruh untuk semua kemungkinan makna. Pengguna dapat memilih 10/20/50 soal
 atau jumlah custom; permintaan besar dibatasi ke jumlah kartu tanpa pengulangan.
 
@@ -1430,6 +1431,7 @@ percakapan, dan bacaan dalam `materi-kotoba-data.js`. Daftar mencakup Bab 26
 49 entri), Bab 29 (hlm. 22–23, 45 entri), Bab 30 (hlm. 28–29, 54 entri),
 Bab 31 (hlm. 34–35, 42 entri), Bab 32 (hlm. 40–41, 57 entri), dan Bab 33
 (hlm. 46–47, 54 entri). List Materi pada bab-bab ini mengikuti foto dan
-melewati nama diri yang hanya menjadi rujukan cerita, tempat, atau acara. Bank
-Kuis Kotoba memakai data workbook. Golongan kata kerja mengikuti penanda I, II, dan III pada foto.
+melewati nama diri yang hanya menjadi rujukan cerita, tempat, atau acara. Kuis
+Kotoba Minna memakai daftar ini untuk soal dan pilihan jawaban. Golongan kata
+kerja mengikuti penanda I, II, dan III pada foto.
 Cek dengan `node --test tests/materi.test.mjs`.

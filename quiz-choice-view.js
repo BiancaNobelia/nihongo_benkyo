@@ -11,11 +11,11 @@ export function kanjiChoiceDetailsMarkup(kanji, escape, mode = 'meaning') {
   return `<span class="quiz-choice-detail">${mode==='kanji' ? `<small class="quiz-choice-meaning" lang="id">${escape(kanji.meaning)}</small>` : `<strong class="quiz-choice-word quiz-choice-kanji" lang="ja">${escape(kanji.char)}</strong>`}<small class="quiz-choice-reading" lang="ja" title="Contoh bacaan on dan kun">${escape(readingText(readings))}</small></span>`;
 }
 
-export function kotobaChoiceDetailsMarkup(entry, mode, escape) {
+export function kotobaChoiceDetailsMarkup(entry, mode, escape, label = entry.meaning) {
   const meaningChoice=['jp-id','audio-jp'].includes(mode);
   const showWord=meaningChoice || (mode==='reading' && entry.word!==entry.reading);
   const showReading=mode!=='reading' && entry.word!==entry.reading;
-  return `<span class="quiz-choice-detail">${showWord?`<strong class="quiz-choice-word" lang="ja">${escape(entry.word)}</strong>`:''}${showReading?`<small class="quiz-choice-reading" lang="ja">${escape(entry.reading)}</small>`:''}${!meaningChoice?`<small class="quiz-choice-meaning" lang="id">${escape(entry.meaning)}</small>`:''}</span>`;
+  return `<span class="quiz-choice-detail">${showWord?`<strong class="quiz-choice-word" lang="ja">${escape(entry.word)}</strong>`:''}${showReading?`<small class="quiz-choice-reading" lang="ja">${escape(entry.reading)}</small>`:''}${!meaningChoice || label!==entry.meaning ?`<small class="quiz-choice-meaning" lang="id">${escape(entry.meaning)}</small>`:''}</span>`;
 }
 
 export function writingChoiceDetailsMarkup(detail, escape) {

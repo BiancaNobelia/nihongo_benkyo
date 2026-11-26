@@ -2,6 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {KOTOBA_ENTRIES, KOTOBA_CHAPTERS} from '../kotoba-data.js';
+import {MATERIAL_KOTOBA_ENTRIES} from '../materi-kotoba-data.js';
+import {kotobaCourse} from '../kotoba-courses.js';
+import {kotobaChoiceDetailsMarkup} from '../quiz-choice-view.js';
 import {ALL_CHAPTERS,KOTOBA_MODES,getKotobaPool,createKotobaQuiz,chapterLabel,meaningKeys,matchingVoice} from '../kotoba-core.js';
 import {cleanProgress} from '../core.js';
 import {KANJI} from '../kanji-data.js';
@@ -106,4 +109,49 @@ test('Kotoba history survives reload alongside kanji history, with safe chapter 
   const cleaned=cleanProgress({history},KANJI);
   assert.equal(cleaned.history.length,6);
   assert.deepEqual(cleaned.history[0].chapters,[1,25,50]);
+});
+
+
+test('Minna quizzes and chapter counts use the same vocabulary as List Materi',()=>{
+  const {entries,chapters}=kotobaCourse('minna');
+  assert.deepEqual(entries,MATERIAL_KOTOBA_ENTRIES);
+  for(const chapter of chapters) {
+    assert.equal(chapter.count,entries.filter(entry=>entry.chapter===chapter.number).length);
+    if(chapter.number<26 || chapter.number>33) continue;
+
+    const scope=[chapter.number];
+    const allowed=new Set(getKotobaPool(entries,{chapters:scope}).map(word=>word.id));
+    for(const mode of Object.keys(KOTOBA_MODES)) {
+      const settings={mode,chapters:scope,count:100};
+      const questions=createKotobaQuiz(entries,settings,seeded());
+      assert.deepEqual(new Set(questions.map(q=>q.id)),new Set(getKotobaPool(entries,settings).map(q=>q.id)));
+      for(const q of questions) {
+        assert.equal(q.options.length,4);
+        assert.equal(new Set(q.options).size,4);
+        assert.ok(q.optionDetails.every(word=>allowed.has(word.id)));
+      }
+    }
+  }
+  const bab26=getKotobaPool(entries,{chapters:[26]});
+  assert.ok(bab26.some(word=>word.word==='宇宙飛行士'));
+  assert.ok(!bab26.some(word=>word.word==='見つけます'));
+});
+
+test('Japanese examples stay out of the quiz prompt and options until feedback',()=>{
+  const {entries}=kotobaCourse('minna');
+  const settings={chapters:[31],count:100};
+  for(const mode of ['jp-id','audio-jp','id-jp','audio-id']) {
+    const q=createKotobaQuiz(entries,{...settings,mode},seeded()).find(q=>q.word==='始まります');
+    assert.ok(q);
+    assert.match(q.meaning,/式が始まります/);
+    if(mode==='id-jp' || mode==='audio-id') {
+      assert.equal(q.prompt,'mulai');
+      assert.equal(q.audioText,'mulai');
+    } else {
+      assert.equal(q.answer,'mulai');
+      assert.ok(q.options.every(option=>!/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(option)));
+    }
+    const detail=q.optionDetails[q.options.indexOf(q.answer)];
+    assert.match(kotobaChoiceDetailsMarkup(detail,mode,String,q.answer),/式が始まります/);
+  }
 });

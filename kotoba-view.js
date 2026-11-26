@@ -1,6 +1,6 @@
-import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261015-jidoushi-tadoushi';
-import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261016-choice-feedback';
-import { kotobaChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261016-choice-feedback';
+import { KOTOBA_COURSES, KOTOBA_SOURCE_GROUPS, kotobaCourse } from './kotoba-courses.js?v=20261126-kotoba-materials';
+import { ALL_CHAPTERS, KOTOBA_MODES, getKotobaPool, createKotobaQuiz, chapterLabel, matchingVoice } from './kotoba-core.js?v=20261126-kotoba-materials';
+import { kotobaChoiceDetailsMarkup, choiceResultMarkup } from './quiz-choice-view.js?v=20261126-kotoba-materials';
 import { requestedQuizCount } from './quiz-settings.js?v=20261015-jidoushi-tadoushi';
 import { shuffle } from './core.js?v=20261015-jidoushi-tadoushi';
 
@@ -47,7 +47,7 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
         <div class="field kotoba-custom" id="kotoba-custom-field" hidden><label for="kotoba-custom">Jumlah soal custom</label><input id="kotoba-custom" type="number" min="1" step="1" inputmode="numeric" aria-describedby="kotoba-count-error"><small id="kotoba-count-error" role="alert" hidden>Isi bilangan bulat minimal 1.</small></div>
         <div class="kotoba-session-summary" id="kotoba-session-summary" role="status"></div>
         <button class="primary kotoba-start" data-kotoba="start">Mulai kuis kotoba ${icon('arrow')}</button><p class="kotoba-small">Arti dan bacaan ditampilkan setelah setiap jawaban. Hasil sesi tersimpan di Progres Saya pada browser ini.</p>
-      </section></div><p class="kotoba-source-note">${isN3 ? 'Materi mengikuti kompilasi N3 dari OpenJLPT, Open Anki, dan Waller. Arti Indonesia berasal dari terjemahan otomatis dengan sejumlah koreksi; arti Inggris rujukan tersedia setelah menjawab. Pengelompokan level mengikuti sumber komunitas.' : 'Materi mengikuti seluruh kompilasi latihan Bab 1–50 yang diberikan, bukan daftar resmi lengkap Minna no Nihongo.'} <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">Tentang sumber materi ${icon('arrow-up')}</a></p></div>`;
+      </section></div><p class="kotoba-source-note">${isN3 ? 'Materi mengikuti kompilasi N3 dari OpenJLPT, Open Anki, dan Waller. Arti Indonesia berasal dari terjemahan otomatis dengan sejumlah koreksi; arti Inggris rujukan tersedia setelah menjawab. Pengelompokan level mengikuti sumber komunitas.' : 'Kuis Minna no Nihongo memakai kosakata yang sama dengan List Materi → Kotoba.'} <a href="./DATA-SOURCES.md" target="_blank" rel="noopener">Tentang sumber materi ${icon('arrow-up')}</a></p></div>`;
     if(isN3) find('#kotoba-source-group').value=preferences.sourceGroup;
     find('#kotoba-type').value=preferences.type;
     find('#kotoba-count').value=preferences.countChoice;
@@ -183,7 +183,7 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
     root.querySelectorAll('[data-kotoba-answer]').forEach(b=>{
       b.disabled=true;const value=q.options[Number(b.dataset.kotobaAnswer)];
       b.classList.toggle('correct',value===q.answer);b.classList.toggle('wrong',value===chosen && value!==q.answer);
-      b.querySelector('.quiz-choice-content').insertAdjacentHTML('beforeend',kotobaChoiceDetailsMarkup(q.optionDetails[Number(b.dataset.kotobaAnswer)],session.mode,escape)+choiceResultMarkup(value===q.answer,value===chosen));
+      b.querySelector('.quiz-choice-content').insertAdjacentHTML('beforeend',kotobaChoiceDetailsMarkup(q.optionDetails[Number(b.dataset.kotobaAnswer)],session.mode,escape,value)+choiceResultMarkup(value===q.answer,value===chosen));
     });
     const feedback=find('#kotoba-feedback');
     feedback.className=`quiz-feedback ${chosen===q.answer ? 'success' : 'error'}`;
@@ -239,7 +239,10 @@ export function createKotobaView({root,escape,icon,heading,activity,recordSessio
     if(action==='continue') find('#kotoba-exit-confirm').hidden=true;
     if(action==='setup') {render();window.scrollTo({top:0,behavior:'instant'});}
     if(action==='retry-wrong' && lastSession) {
-      const questions=shuffle(lastSession.questions.filter((q,i)=>!lastSession.answers[i].correct)).map(q=>({...q,options:shuffle(q.options)}));
+      const questions=shuffle(lastSession.questions.filter((q,i)=>!lastSession.answers[i].correct)).map(q=>{
+        const order=shuffle(q.options.map((_,i)=>i));
+        return {...q,options:order.map(i=>q.options[i]),optionDetails:order.map(i=>q.optionDetails[i])};
+      });
       start(questions);
     }
     if(action==='review-prev' || action==='review-next') {reviewPage+=action==='review-next' ? 1 : -1;renderReview();find('.kotoba-review').scrollIntoView({block:'start'});}

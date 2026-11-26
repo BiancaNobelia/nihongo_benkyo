@@ -395,7 +395,7 @@ const photoRows = {
     ['もう', 'もう', 'tidak lagi (dengan bentuk negatif)', 'kata keterangan'],
     ['あと～', 'あと～', 'tinggal ～ lagi', 'ungkapan / frasa'],
     ['駐車違反', 'ちゅうしゃいはん', 'pelanggaran parkir'],
-    ['そりゃあ', 'そりゃあ', 'hal itu; bentuk percakapan dari それは', 'ungkapan / frasa'],
+    ['そりゃあ', 'そりゃあ', 'hal itu (bentuk percakapan dari それは)', 'ungkapan / frasa'],
     ['～以内', '～いない', 'dalam batas ～; dalam waktu ～', 'akhiran / pola'],
     ['警察', 'けいさつ', 'polisi; kepolisian'],
     ['罰金', 'ばっきん', 'denda'],
@@ -426,7 +426,7 @@ const photographedEntries = Object.entries(photoRows).flatMap(([chapter, rows]) 
     const verbGroup = verbGroups.has(kind) ? kind : undefined;
     return {
       id: sourceRow ? `minna-row-${sourceRow}` : `photo-${chapter}-${index + 1}`,
-      chapter: Number(chapter), spelling, reading, meaning,
+      chapter: Number(chapter), spelling, reading, meaning, sourceRow,
       type: verbGroup ? 'kata kerja' : kind, verbGroup,
     };
   }));

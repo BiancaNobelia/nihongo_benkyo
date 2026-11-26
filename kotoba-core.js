@@ -36,7 +36,8 @@ export function getKotobaPool(entries, { chapters=null, type='all', mode='jp-id'
     if (!grouped.has(key)) grouped.set(key,{id:key,word,reading:e.reading,meanings:[],chapters:[],types:[],sourceRows:[],levels:[],sourceGroups:[],meaningsEn:[]});
     const q=grouped.get(key);
     q.meanings.push(e.meaning); if(e.chapter) q.chapters.push(e.chapter);
-    q.types.push(e.type); q.sourceRows.push(e.sourceRow);
+    q.types.push(e.type);
+    if (Number.isInteger(e.sourceRow)) q.sourceRows.push(e.sourceRow);
     if(e.level) q.levels.push(e.level);
     if(e.sourceGroup) q.sourceGroups.push(e.sourceGroup);
     if(e.meaningEn) q.meaningsEn.push(e.meaningEn);
@@ -62,6 +63,10 @@ export function chapterLabel(chapters) {
   return `Bab ${ranges.join(', ')}`;
 }
 
+// Japanese examples can expose the answer in a translation prompt. Keep them
+// in the source meanings for the glossary and feedback.
+const quizMeaning = meaning => meaning.replace(/\s*[（(][^()（）]*[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}][^()（）]*[)）]/gu, '').trim();
+
 export function createKotobaQuiz(entries, settings, random=Math.random) {
   const { mode='jp-id', count=10 }=settings;
   if (!Object.hasOwn(KOTOBA_MODES,mode) || !Number.isSafeInteger(count) || count<1) return [];
@@ -71,7 +76,7 @@ export function createKotobaQuiz(entries, settings, random=Math.random) {
   const complete=getKotobaPool(entries);
   const isMeaning=mode==='jp-id' || mode==='audio-jp';
   const isReading=mode==='reading';
-  const answerOf=q=>isMeaning ? q.meaning : isReading ? q.reading : q.word;
+  const answerOf=q=>isMeaning ? quizMeaning(q.meaning) : isReading ? q.reading : q.word;
   const questions=[];
   for(const q of targets) {
     const equivalents=complete.filter(other=>other.wordKey===q.wordKey || other.readingKey===q.readingKey || intersects(q.senses,other.senses) || intersects(q.englishSenses,other.englishSenses));
@@ -95,8 +100,8 @@ export function createKotobaQuiz(entries, settings, random=Math.random) {
     if(distractors.length<3) continue;
     const options=shuffle([answer,...distractors],random);
     questions.push({...q,mode,answer,options,optionDetails:options.map(value=>detailByAnswer.get(value)),
-      prompt:isMeaning || isReading ? q.word : q.meaning,
-      audioText:mode==='audio-jp' ? q.reading : q.meaning,
+      prompt:isMeaning || isReading ? q.word : quizMeaning(q.meaning),
+      audioText:mode==='audio-jp' ? q.reading : quizMeaning(q.meaning),
     });
     if(questions.length>=count) break;
   }
